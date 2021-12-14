@@ -22,3 +22,6 @@ Route::get('/', function () {
 
 // SPSM CMS route
 Route::get('/spsm', [HomeController::class, 'index']);
+
+// Application index
+// Route::get('/application',[])
