@@ -19,6 +19,10 @@ class RouteServiceProvider extends ServiceProvider
      */
     public const HOME = '/home';
 
+    // SPSM
+
+    public const SPSM = '/spsm';
+
     /**
      * The controller namespace for the application.
      *

@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ApplicationController;
+use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,7 +23,16 @@ Route::get('/', function () {
 });
 
 // SPSM CMS route
-Route::get('/spsm', [HomeController::class, 'index']);
+Route::get('/spsm', [HomeController::class, 'index'])->middleware('auth');
 
 // Application index
-// Route::get('/application',[])
+Route::get('/spsm/application', [ApplicationController::class, 'index']);
+
+// Login Route
+Route::get('/spsm/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
+
+// User login route
+Route::post('/spsm/login', [LoginController::class, 'authenticate']);
+
+// User logout route
+Route::post('/spsm/logout', [LoginController::class, 'logout']);

@@ -9,6 +9,8 @@ class HomeController extends Controller
     // Index Controller
     public function index()
     {
-        return view('spsm.index');
+        return view('spsm.index', [
+            'title' => 'Dashboard v2'
+        ]);
     }
 }
