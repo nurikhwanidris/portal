@@ -39,6 +39,6 @@ class LoginController extends Controller
 
         $request->session()->regenerateToken();
 
-        return redirect('/spsm/login');
+        return redirect('/spsm/login')->with('success', 'Sesi anda berjaya ditamatkan.');
     }
 }

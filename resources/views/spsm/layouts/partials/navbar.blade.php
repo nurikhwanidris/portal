@@ -38,6 +38,7 @@
             </div>
         </li>
 
+        {{--
         <!-- Messages Dropdown Menu -->
         <li class="nav-item dropdown">
             <a class="nav-link" data-toggle="dropdown" href="#">
@@ -95,7 +96,7 @@
                 <div class="dropdown-divider"></div>
                 <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
             </div>
-        </li>
+        </li> --}}
         <!-- Notifications Dropdown Menu -->
         <li class="nav-item dropdown">
             <a class="nav-link" data-toggle="dropdown" href="#">
@@ -120,20 +121,20 @@
                     <span class="float-right text-muted text-sm">2 days</span>
                 </a>
                 <div class="dropdown-divider"></div>
+                <form action="/spsm/logout" method="post">
+                    @csrf
+                    <button type="submit" class="dropdown-item"><i class="fas fa-sign-out-alt mr-2"></i>
+                        Logout</a></button>
+                </form>
+                <div class="dropdown-divider"></div>
                 <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
             </div>
         </li>
-        <li class="nav-item">
-            <form action="/spsm/logout" method="POST">
-                @csrf
-                <button type="submit" class="nav-link">
-                    <i class="fas fa-sign-out-alt"></i>
-                </button>
-                {{-- <a class="nav-link" data-widget="fullscreen" href="#" role="button">
-                    <i class="fas fa-expand-arrows-alt"></i>
-                </a> --}}
-            </form>
-        </li>
+        {{-- <li class="nav-item">
+            <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+                <i class="fas fa-expand-arrows-alt"></i>
+            </a>
+        </li> --}}
         <li class="nav-item">
             <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
                 <i class="fas fa-th-large"></i>

@@ -19,15 +19,16 @@
 
 <body class="hold-transition login-page">
     <div class="login-box">
-        {{-- Error alert --}}
+        {{-- Success alert --}}
         @if (session()->has('success'))
-        <div class="alert alert-success" role="alert">
+        <div class="alert alert-secondary" role="alert">
             <div class="text-center">
                 {{ session('success') }}
             </div>
         </div>
         @endif
 
+        {{-- Error alert --}}
         @if (session()->has('loginError'))
         <div class="alert alert-danger" role="alert">
             <div class="text-center">

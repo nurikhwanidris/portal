@@ -3,6 +3,7 @@
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ApplicationController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\Admin\PagesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -36,3 +37,6 @@ Route::post('/spsm/login', [LoginController::class, 'authenticate']);
 
 // User logout route
 Route::post('/spsm/logout', [LoginController::class, 'logout']);
+
+// Page route
+Route::get('/halaman', [PagesController::class, 'index']);
