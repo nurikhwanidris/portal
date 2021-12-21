@@ -28,7 +28,11 @@ class PagesController extends Controller
      */
     public function create()
     {
-        //
+        return view('halaman.create', [
+            'leadCrumbs' => 'Halaman',
+            'title' => 'Cipta Halaman Baru',
+            'text' => 'This is just a test page for now',
+        ]);
     }
 
     /**

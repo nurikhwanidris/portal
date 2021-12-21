@@ -17,7 +17,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
 // Landing page route
 Route::get('/', function () {
     return view('welcome');
@@ -39,4 +38,7 @@ Route::post('/spsm/login', [LoginController::class, 'authenticate']);
 Route::post('/spsm/logout', [LoginController::class, 'logout']);
 
 // Page route
-Route::get('/halaman', [PagesController::class, 'index']);
+// Route::get('/halaman', [PagesController::class, 'index']);
+
+// Add page route
+Route::get('/halaman/tambah', [PagesController::class, 'create']);
