@@ -38,7 +38,16 @@ Route::post('/spsm/login', [LoginController::class, 'authenticate']);
 Route::post('/spsm/logout', [LoginController::class, 'logout']);
 
 // Page route
-// Route::get('/halaman', [PagesController::class, 'index']);
+Route::get('/spsm/admin/page', [PagesController::class, 'index']);
 
-// Add page route
-Route::get('/halaman/tambah', [PagesController::class, 'create']);
+// Check slug MY
+Route::get('/spsm/admin/page/checkSlugMy', [PagesController::class, 'checkSlugMy'])->middleware('auth');
+
+// Check slug En
+Route::get('/spsm/admin/page/checkSlugEn', [PagesController::class, 'checkSlugEn'])->middleware('auth');
+
+// Create page route
+// Route::post('/spsm/admin/page/create', [PagesController::class, 'store']);
+
+// CRUD page route
+Route::resource('/spsm/admin/page', PagesController::class)->middleware('auth');

@@ -5,6 +5,9 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Page;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Storage;
+use \Cviebrock\EloquentSluggable\Services\SlugService;
 
 class PagesController extends Controller
 {
@@ -15,7 +18,9 @@ class PagesController extends Controller
      */
     public function index()
     {
-        return view('halaman.index', [
+        return view('spsm.admin.page.index', [
+            'link' => '',
+            'leadCrumbs' => '',
             'title' => 'Test page',
             'text' => 'This is just a test page for now',
         ]);
@@ -28,7 +33,8 @@ class PagesController extends Controller
      */
     public function create()
     {
-        return view('halaman.create', [
+        return view('spsm.admin.page.create', [
+            'link' => '/spsm/admin/page',
             'leadCrumbs' => 'Halaman',
             'title' => 'Cipta Halaman Baru',
             'text' => 'This is just a test page for now',
@@ -43,7 +49,23 @@ class PagesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validateData = $request->validate([
+            'title_my' => 'required|max:100',
+            'title_en' => 'required|max:100',
+            'slug_en' => 'required|max:100',
+            'slug_my' => 'required|max:100',
+            'content_my' => 'required',
+            'content_en' => 'required',
+            'status' => 'required',
+            'type' => 'required',
+            // 'type'=> 'required',
+        ]);
+
+        $validateData['user_id'] = auth()->user()->id;
+
+        Page::create($validateData);
+
+        return redirect('/spsm/admin/page') - with('success', 'Satu halaman baru berjaya ditambah.');
     }
 
     /**
@@ -89,5 +111,21 @@ class PagesController extends Controller
     public function destroy(Page $page)
     {
         //
+    }
+
+
+    // Check for used slugs
+    public function checkSlugMy(Request $request)
+    {
+        // Check for MY slug
+        $slug_my = SlugService::createSlug(Page::class, 'slug_my', $request->title_my);
+        return response()->json(['slug_my' => $slug_my]);
+    }
+
+    public function checkSlugEn(Request $request)
+    {
+        // Check for EN slug
+        $slug_en = SlugService::createSlug(Page::class, 'slug_en', $request->title_en);
+        return response()->json(['slug_en' => $slug_en]);
     }
 }

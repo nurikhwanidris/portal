@@ -10,7 +10,9 @@ class HomeController extends Controller
     public function index()
     {
         return view('spsm.index', [
-            'title' => 'Dashboard v2'
+            'leadCrumbs' => '',
+            'title' => 'Dashboard v2',
+            'active' => 'active',
         ]);
     }
 }

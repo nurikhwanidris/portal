@@ -2,7 +2,7 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="/spsm" class="brand-link">
-        <img src="https://lh3.googleusercontent.com/proxy/igEAfT31KngLabOqma-FYsjIIg-WMwiP92QFecQyhVo9KrGn_PWUImWCIQb_KYqGYzVtImR4PXmao67UvlfjubK1TSVFJRaKcldb"
+        <img src="http://jawatankosongkerajaanterkini.net/wp-content/uploads/2020/10/Jawatan-Kosong-Jabatan-Ukur-dan-Pemetaan-Malaysia-Oktober-2020.png"
             alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
         <span class="brand-text font-weight-light">JUPEM - SPSM</span>
     </a>
@@ -55,13 +55,13 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="/halaman/tambah" class="nav-link">
+                            <a href="spsm/admin/page/create" class="nav-link">
                                 <i class="fas fa-dot-circle nav-icon"></i>
                                 <p>Tambah Baru</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/halaman/senarai" class="nav-link">
+                            <a href="spsm/admin/page/lists" class="nav-link">
                                 <i class="fas fa-dot-circle nav-icon"></i>
                                 <p>Senarai Halaman</p>
                             </a>
