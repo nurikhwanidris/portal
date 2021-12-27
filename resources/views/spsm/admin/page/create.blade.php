@@ -133,29 +133,22 @@
     const slug_en = document.querySelector('#slug_en');
 
     title_my.addEventListener('change', function () {
-        fetch('/spsm/admin/page/checkSlugMy?title_my='+title_my.value)
-        .then(reponse => reponse.json())
-        .then(data => slug_my.value = data.slug_my)
+        fetch('/spsm/admin/page/checkSlugMy?title_my=' + title_my.value)
+            .then(reponse => reponse.json())
+            .then(data => slug_my.value = data.slug_my)
     });
 
     title_en.addEventListener('change', function () {
-    fetch('/spsm/admin/page/checkSlugEn?title_en='+title_en.value)
-    .then(reponse => reponse.json())
-    .then(data => slug_en.value = data.slug_en)
+        fetch('/spsm/admin/page/checkSlugEn?title_en=' + title_en.value)
+            .then(reponse => reponse.json())
+            .then(data => slug_en.value = data.slug_en)
     });
-    
+
     // Editor MY
-    ClassicEditor
-    .create( document.querySelector( '#content_my' ) )
-    .catch( error => {
-    console.error( error );
-    } );
-    
+    ClassicEditor.create(document.querySelector('#content_my'));
+
     // Editor EN
-    ClassicEditor
-    .create( document.querySelector( '#content_en' ) )
-    .catch( error => {
-    console.error( error );
-    } );
+    ClassicEditor.create(document.querySelector('#content_en'));
+
 </script>
 @endsection
