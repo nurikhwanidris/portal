@@ -61,7 +61,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/spsm/admin/page/lists" class="nav-link">
+                            <a href="/spsm/admin/page/" class="nav-link">
                                 <i class="fas fa-dot-circle nav-icon"></i>
                                 <p>Senarai Halaman</p>
                             </a>
