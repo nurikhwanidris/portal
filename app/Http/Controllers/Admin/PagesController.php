@@ -52,20 +52,19 @@ class PagesController extends Controller
         $validateData = $request->validate([
             'title_my' => 'required|max:100',
             'title_en' => 'required|max:100',
-            'slug_en' => 'required|max:100',
-            'slug_my' => 'required|max:100',
+            'slug_en' => 'required|unique:pages',
+            'slug_my' => 'required|unique:pages',
             'content_my' => 'required',
             'content_en' => 'required',
             'status' => 'required',
             'type' => 'required',
-            // 'type'=> 'required',
         ]);
 
         $validateData['user_id'] = auth()->user()->id;
 
         Page::create($validateData);
 
-        return redirect('/spsm/admin/page') - with('success', 'Satu halaman baru berjaya ditambah.');
+        return redirect('/spsm/admin/page/create')->with('success', 'Satu halaman baru berjaya ditambah.');
     }
 
     /**

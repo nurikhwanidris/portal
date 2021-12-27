@@ -24,7 +24,7 @@ class CreatePageTable extends Migration
             $table->text('content_en');
             $table->string('status', 40);
             $table->string('type', 20);
-            $table->string('parent_id', 20);
+            $table->string('parent_id', 20)->nullable();
             $table->timestamps();
         });
     }
