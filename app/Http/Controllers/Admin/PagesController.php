@@ -23,7 +23,7 @@ class PagesController extends Controller
             'leadCrumbs' => '',
             'title' => 'Test page',
             'text' => 'This is just a test page for now',
-            'pages' => Page::all(),
+            'pages' => Page::with('user')->get(),
         ]);
     }
 

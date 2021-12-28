@@ -34,7 +34,7 @@
                     {{ $page->type }}
                 </td>
                 <td class="align-middle text-center">
-                    {{ $page->user_id }}
+                    {{ $page->user->name }}
                 </td>
                 <td class="align-middle text-center">
                     {{ $page->created_at }}
