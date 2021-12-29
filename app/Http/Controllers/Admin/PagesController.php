@@ -21,8 +21,8 @@ class PagesController extends Controller
         return view('spsm.admin.page.index', [
             'link' => '',
             'leadCrumbs' => '',
-            'title' => 'Test page',
-            'text' => 'This is just a test page for now',
+            'title' => 'List of Pages',
+            // 'text' => 'This is just a test page for now',
             'pages' => Page::with('user')->get(),
         ]);
     }
@@ -127,5 +127,27 @@ class PagesController extends Controller
         // Check for EN slug
         $slug_en = SlugService::createSlug(Page::class, 'slug_en', $request->title_en);
         return response()->json(['slug_en' => $slug_en]);
+    }
+
+    public function getPageMy($slug_my)
+    {
+        $page = Page::where('slug_my', $slug_my)->first();
+
+        return view('spsm.layouts.page.index', [
+            'title' => $page->title_my,
+            'body' => $page->content_my,
+            'lastModified' => 'Terakhir diubah suai : ' . $page->updated_at,
+        ]);
+    }
+
+    public function getPageEn($slug_en)
+    {
+        $page = Page::where('slug_en', $slug_en)->first();
+
+        return view('spsm.layouts.page.index', [
+            'title' => $page->title_en,
+            'body' => $page->content_en,
+            'lastModified' => 'Last modified : ' . $page->updated_at,
+        ]);
     }
 }

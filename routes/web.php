@@ -45,3 +45,9 @@ Route::get('/spsm/admin/page/checkSlugEn', [PagesController::class, 'checkSlugEn
 
 // CRUD page route
 Route::resource('/spsm/admin/page', PagesController::class)->middleware('auth');
+
+// Halaman Bahasa route
+Route::get('halaman/{slug_my}', [PagesController::class, 'getPageMy']);
+
+// Halaman Bahasa route
+Route::get('page/{slug_en}', [PagesController::class, 'getPageEn']);
