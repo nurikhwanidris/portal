@@ -16,7 +16,7 @@
     <!-- Theme style -->
     <link rel="stylesheet" href="/spsm/css/adminlte.min.css">
     <!-- CKeditor 5 -->
-    <script src="https://cdn.ckeditor.com/ckeditor5/31.1.0/classic/ckeditor.js"></script>
+    <script src="/spsm/js/ckeditor/ckeditor.js"></script>
     <!-- DataTables -->
     <link rel="stylesheet" href="../../plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="../../plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
@@ -127,15 +127,6 @@
                 "ordering": false,
                 "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
             }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-            // $('#example2').DataTable({
-            //     "paging": true,
-            //     "lengthChange": false,
-            //     "searching": false,
-            //     "ordering": true,
-            //     "info": true,
-            //     "autoWidth": false,
-            //     "responsive": true,
-            // });
         });
 
     </script>

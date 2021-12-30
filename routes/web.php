@@ -51,3 +51,6 @@ Route::get('halaman/{slug_my}', [PagesController::class, 'getPageMy']);
 
 // Halaman Bahasa route
 Route::get('page/{slug_en}', [PagesController::class, 'getPageEn']);
+
+// Page controller upload
+Route::post('/upload', [PagesController::class, 'upload'])->name('upload');

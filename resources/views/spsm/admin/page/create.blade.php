@@ -41,8 +41,8 @@
             <div class="form-group row">
                 <label for="content_my" class="col-sm-2 col-form-label">Kandungan</label>
                 <div class="col-sm-10">
-                    <textarea class="form-control" id="content_my" placeholder="Enter the Description" name="content_my"
-                        rows="4">{{ old('content_my') }}</textarea>
+                    <textarea class="form-control content_my" id="content_my" placeholder="Enter the Description"
+                        name="content_my" rows="4">{{ old('content_my') }}</textarea>
                 </div>
             </div>
             <hr>
@@ -145,10 +145,16 @@
     });
 
     // Editor MY
-    ClassicEditor.create(document.querySelector('#content_my'));
-
+    CKEDITOR.replace( 'content_my', {
+    filebrowserUploadUrl: "{{route('upload', ['_token' => csrf_token() ])}}",
+    filebrowserUploadMethod: 'form',
+    });
+    
     // Editor EN
-    ClassicEditor.create(document.querySelector('#content_en'));
+    CKEDITOR.replace( 'content_en', {
+    filebrowserUploadUrl: "{{route('upload', ['_token' => csrf_token() ])}}",
+    filebrowserUploadMethod: 'form',
+    });
 
 </script>
 @endsection
