@@ -45,9 +45,10 @@
                         </p>
                     </a>
                 </li>
+                {{-- Halaman --}}
                 <li class="nav-item">
                     <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-file"></i>
+                        <i class="nav-icon far fa-file"></i>
                         <p>
                             Halaman
                             <i class="fas fa-angle-left right"></i>
@@ -56,24 +57,486 @@
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
                             <a href="/spsm/admin/page/create" class="nav-link">
-                                <i class="fas fa-dot-circle nav-icon"></i>
+                                <i class="fas fa-plus nav-icon"></i>
                                 <p>Tambah Baru</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="/spsm/admin/page/" class="nav-link">
-                                <i class="fas fa-dot-circle nav-icon"></i>
+                                <i class="fas fa-list-alt nav-icon"></i>
                                 <p>Senarai Halaman</p>
                             </a>
                         </li>
                     </ul>
                 </li>
-                <li class="nav-header">Settings</li>
+                {{-- Media --}}
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-photo-video"></i>
+                        <p>
+                            Media
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="/spsm/admin/page/create" class="nav-link">
+                                <i class="fas fa-plus nav-icon"></i>
+                                <p>Tambah Media</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/spsm/admin/page/" class="nav-link">
+                                <i class="fas fa-list-ul nav-icon"></i>
+                                <p>Koleksi Media</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                {{-- Slider --}}
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-scroll"></i>
+                        <p>
+                            Slider
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="/spsm/admin/page/create" class="nav-link">
+                                <i class="fas fa-plus nav-icon"></i>
+                                <p>Tambah Slider</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/spsm/admin/page/" class="nav-link">
+                                <i class="fas fa-list-alt nav-icon"></i>
+                                <p>Senarai Slider</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                {{-- Popup --}}
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-bullhorn"></i>
+                        <p>
+                            Popup
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="/spsm/admin/page/create" class="nav-link">
+                                <i class="fas fa-plus nav-icon"></i>
+                                <p>Tambah Popup</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/spsm/admin/page/" class="nav-link">
+                                <i class="fas fa-list-alt nav-icon"></i>
+                                <p>Senarai Popup</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                {{-- Direktori Pegawai --}}
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-users"></i>
+                        <p>
+                            Direktori Pegawai
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="/spsm/admin/page/create" class="nav-link">
+                                <i class="fas fa-plus nav-icon"></i>
+                                <p>Tambah Pegawai</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/spsm/admin/page/" class="nav-link">
+                                <i class="fas fa-list-alt nav-icon"></i>
+                                <p>Senarai Pegawai</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/spsm/admin/page/" class="nav-link">
+                                <i class="fas fa-list-ul nav-icon"></i>
+                                <p>Jabatan/Unit</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/spsm/admin/page/" class="nav-link">
+                                <i class="fas fa-list-ul nav-icon"></i>
+                                <p>Susunan Jabatan/Staf</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/spsm/admin/page/" class="nav-link">
+                                <i class="fas fa-list-ul nav-icon"></i>
+                                <p>Gred Pegawai</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                {{-- Pertukaran Pegawai --}}
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-exchange-alt"></i>
+                        <p>
+                            Pertukaran Pegawai
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="/spsm/admin/page/create" class="nav-link">
+                                <i class="fas fa-plus nav-icon"></i>
+                                <p>Tambah Pertukaran</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/spsm/admin/page/" class="nav-link">
+                                <i class="fas fa-list-alt nav-icon"></i>
+                                <p>Senarai Pegawai</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                {{-- Keratan Akhbar --}}
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-newspaper"></i>
+                        <p>
+                            Keratan Akhbar
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="/spsm/admin/page/create" class="nav-link">
+                                <i class="fas fa-plus nav-icon"></i>
+                                <p>Tambah Keratan Akbar</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/spsm/admin/page/" class="nav-link">
+                                <i class="fas fa-list-alt nav-icon"></i>
+                                <p>Senarai Keratan Akhbar</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/spsm/admin/page/" class="nav-link">
+                                <i class="fas fa-list-alt nav-icon"></i>
+                                <p>Sumber Keratan Akbar</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                {{-- Pekeliling --}}
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-exclamation-circle"></i>
+                        <p>
+                            Pekeliling
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="/spsm/admin/page/create" class="nav-link">
+                                <i class="fas fa-plus nav-icon"></i>
+                                <p>Tambah Pekeliling</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/spsm/admin/page/create" class="nav-link">
+                                <i class="far fa-square nav-icon"></i>
+                                <p>Kategori Pekeliling</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/spsm/admin/page/" class="nav-link">
+                                <i class="fas fa-list-alt nav-icon"></i>
+                                <p>Senarai Pekeliling</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                {{-- Sebut Harga --}}
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-comment-dollar"></i>
+                        <p>
+                            Sebut Harga
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="/spsm/admin/page/create" class="nav-link">
+                                <i class="fas fa-plus nav-icon"></i>
+                                <p>Tambah Sebut Harga</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/spsm/admin/page/" class="nav-link">
+                                <i class="fas fa-list-alt nav-icon"></i>
+                                <p>Senarai Sebut Harga</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                {{-- Tender --}}
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon far fa-object-ungroup"></i>
+                        <p>
+                            Tender
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="/spsm/admin/page/create" class="nav-link">
+                                <i class="fas fa-plus nav-icon"></i>
+                                <p>Tambah Tender</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/spsm/admin/page/" class="nav-link">
+                                <i class="fas fa-list-alt nav-icon"></i>
+                                <p>Senarai Tender</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                {{-- Buletin GIS --}}
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon far fa-comment-alt"></i>
+                        <p>
+                            Buletin GIS
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="/spsm/admin/page/create" class="nav-link">
+                                <i class="fas fa-plus nav-icon"></i>
+                                <p>Tambah Buletin GIS</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/spsm/admin/page/" class="nav-link">
+                                <i class="fas fa-list-alt nav-icon"></i>
+                                <p>Senarai Buletin GIS</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                {{-- Laporan Tahunan --}}
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon far fa-file-alt"></i>
+                        <p>
+                            Laporan Tahunan
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="/spsm/admin/page/create" class="nav-link">
+                                <i class="fas fa-plus nav-icon"></i>
+                                <p>Tambah Laporan</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/spsm/admin/page/" class="nav-link">
+                                <i class="fas fa-list-alt nav-icon"></i>
+                                <p>Senarai Laporan</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                {{-- Laporan Mesyuarat --}}
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon far fa-file-alt"></i>
+                        <p>
+                            Laporan Mesyuarat
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="/spsm/admin/page/create" class="nav-link">
+                                <i class="fas fa-plus nav-icon"></i>
+                                <p>Tambah Laporan</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/spsm/admin/page/" class="nav-link">
+                                <i class="fas fa-list-alt nav-icon"></i>
+                                <p>Senarai Laporan</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                {{-- Berita Ukur --}}
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon far fa-comment-alt"></i>
+                        <p>
+                            Berita Ukur
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="/spsm/admin/page/create" class="nav-link">
+                                <i class="fas fa-plus nav-icon"></i>
+                                <p>Tambah Berita</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/spsm/admin/page/" class="nav-link">
+                                <i class="fas fa-list-alt nav-icon"></i>
+                                <p>Senarai Berita</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                {{-- Kertas Kerja --}}
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon far fa-file-pdf"></i>
+                        <p>
+                            Kertas Kerja
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="/spsm/admin/page/create" class="nav-link">
+                                <i class="fas fa-plus nav-icon"></i>
+                                <p>Tambah</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/spsm/admin/page/" class="nav-link">
+                                <i class="fas fa-list-alt nav-icon"></i>
+                                <p>Senarai</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                {{-- Piagam Pelanggan --}}
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fab fa-creative-commons-nd"></i>
+                        <p>
+                            Piagam Pelanggan
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="/spsm/admin/page/create" class="nav-link">
+                                <i class="fas fa-plus nav-icon"></i>
+                                <p>Tambah</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/spsm/admin/page/" class="nav-link">
+                                <i class="fas fa-list-alt nav-icon"></i>
+                                <p>Senarai</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                {{-- Jadual Peperiksaan --}}
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon far fa-calendar-alt"></i>
+                        <p>
+                            Jadual Peperiksaan
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="/spsm/admin/page/create" class="nav-link">
+                                <i class="fas fa-plus nav-icon"></i>
+                                <p>Tambah</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/spsm/admin/page/" class="nav-link">
+                                <i class="fas fa-list-alt nav-icon"></i>
+                                <p>Senarai</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                {{-- Buku --}}
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-book"></i>
+                        <p>
+                            Buku
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="/spsm/admin/page/create" class="nav-link">
+                                <i class="fas fa-plus nav-icon"></i>
+                                <p>Tambah</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/spsm/admin/page/" class="nav-link">
+                                <i class="fas fa-list-alt nav-icon"></i>
+                                <p>Senarai</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                {{-- Galeri --}}
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-photo-video"></i>
+                        <p>
+                            Galeri
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="/spsm/admin/page/create" class="nav-link">
+                                <i class="fas fa-plus nav-icon"></i>
+                                <p>Tambah Galeri</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/spsm/admin/page/" class="nav-link">
+                                <i class="fas fa-list-alt nav-icon"></i>
+                                <p>Senarai Galeri</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-header">Tetapan</li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-cog"></i>
                         <p>
-                            Settings
+                            Umum
                             <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
@@ -89,13 +552,13 @@
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
                                     <a href="#" class="nav-link">
-                                        <i class="far fa-dot-circle nav-icon"></i>
+                                        <i class="far fa-list-ul nav-icon"></i>
                                         <p>Tambah</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="#" class="nav-link">
-                                        <i class="far fa-dot-circle nav-icon"></i>
+                                        <i class="far fa-list-ul nav-icon"></i>
                                         <p>Senarai</p>
                                     </a>
                                 </li>
@@ -112,13 +575,53 @@
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
                                     <a href="#" class="nav-link">
-                                        <i class="far fa-dot-circle nav-icon"></i>
+                                        <i class="far fa-plus nav-icon"></i>
                                         <p>Tambah</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="#" class="nav-link">
-                                        <i class="far fa-dot-circle nav-icon"></i>
+                                        <i class="far fa-list-ul nav-icon"></i>
+                                        <p>Senarai</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-users-cog nav-icon"></i>
+                                <p>
+                                    Users
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="fas fa-plus nav-icon"></i>
+                                        <p>Tambah</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="fas fa-list-ul nav-icon"></i>
+                                        <p>Senarai</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-clipboard-list nav-icon"></i>
+                                <p>
+                                    Log
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="fas fa-list-ul nav-icon"></i>
                                         <p>Senarai</p>
                                     </a>
                                 </li>
