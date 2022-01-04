@@ -51,10 +51,10 @@
                             {{ $page->created_at }}
                         </td>
                         <td class="align-middle text-center">
-                            <a href="/spsm/admin/page/{{ $page->slug_my }}" class="badge bg-info"><i
+                            <a href="/halaman/{{ $page->slug_my }}" target="_blank" class="badge bg-info"><i
                                     class="far fa-eye"></i></a>
-                            <a href="/spsm/admin/page/{{ $page->slug_my }}/edit" class="badge bg-warning"><i
-                                    class="far fa-edit"></i></a>
+                            <a href="/spsm/admin/page/{{ $page->slug_my }}/edit" target="_blank"
+                                class="badge bg-warning"><i class="far fa-edit"></i></a>
                             <form action="/spsm/admin/page/{{ $page->slug_my }}" method="POST" class="d-inline">
                                 @csrf
                                 @method('delete')

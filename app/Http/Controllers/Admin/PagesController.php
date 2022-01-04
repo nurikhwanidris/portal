@@ -87,7 +87,13 @@ class PagesController extends Controller
      */
     public function edit(Page $page)
     {
-        //
+        return view('spsm.admin.page.edit', [
+            'link' => '/spsm/admin/page',
+            'leadCrumbs' => 'Halaman',
+            'title' => 'Cipta Halaman Baru',
+            'text' => 'This is just a test page for now',
+            'page' => $page,
+        ]);
     }
 
     /**
@@ -99,7 +105,30 @@ class PagesController extends Controller
      */
     public function update(Request $request, Page $page)
     {
-        //
+        // Create rules for inputs
+        $rules = [
+            'title_my' => 'required|max:100',
+            'title_en' => 'required|max:100',
+            'slug_en' => 'required|unique:pages',
+            'slug_my' => 'required|unique:pages',
+            'content_my' => 'required',
+            'content_en' => 'required',
+            'status' => 'required',
+            'type' => 'required',
+        ];
+
+        // Check for request first
+        if ($request->slug_my != $page->slug_my) {
+            $rules['slug_my'] = 'required|unique:pages';
+        }
+
+        // Validate the request
+        $validate['user_id'] = auth()->user()->id;
+
+        // Update the table
+        Page::where('id', $page->id)->update($validate);
+
+        return redirect('/spsm/admin/page/')->with('success', $rules['title_my'] . ' telah berjaya diubah.');
     }
 
     /**
@@ -110,7 +139,10 @@ class PagesController extends Controller
      */
     public function destroy(Page $page)
     {
-        //
+        // Delete page
+        Page::destroy($page->id);
+
+        return redirect('/spsm/admin/page')->with('success', 'Satu halaman telah dihapuskan');
     }
 
     public function upload(Request $request)
@@ -178,5 +210,10 @@ class PagesController extends Controller
             'body' => $page->content_en,
             'lastModified' => 'Last modified : ' . $page->updated_at,
         ]);
+    }
+
+    public function testPage()
+    {
+        return view('spsm.test');
     }
 }

@@ -52,5 +52,8 @@ Route::get('halaman/{slug_my}', [PagesController::class, 'getPageMy']);
 // Halaman Bahasa route
 Route::get('page/{slug_en}', [PagesController::class, 'getPageEn']);
 
-// Page controller upload
+// Page upload route
 Route::post('/upload', [PagesController::class, 'upload'])->name('upload');
+
+// Page index
+Route::get('/spsm/admin/page/test', [PagesController::class, 'testPage'])->middleware('auth');
