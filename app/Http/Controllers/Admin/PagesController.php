@@ -23,7 +23,8 @@ class PagesController extends Controller
             'leadCrumbs' => '',
             'title' => 'List of Pages',
             // 'text' => 'This is just a test page for now',
-            'pages' => Page::with('user')->get(),
+            // 'pages' => Page::with('user')->get(),
+            'pages' => Page::with('user')->latest()->paginate(10),
         ]);
     }
 
@@ -74,9 +75,15 @@ class PagesController extends Controller
      * @param  \App\Models\Page  $page
      * @return \Illuminate\Http\Response
      */
-    public function show(Page $page)
+    public function show(Page $page, $slug_my)
     {
-        //
+        $page = Page::where('slug_my', $slug_my)->first();
+
+        return view('spsm.admin.page.show', [
+            'title' => $page->title_my,
+            'body' => $page->content_my,
+            'lastModified' => 'Kemaskini terakhir : ' . $page->updated_at,
+        ]);
     }
 
     /**
@@ -210,10 +217,5 @@ class PagesController extends Controller
             'body' => $page->content_en,
             'lastModified' => 'Last modified : ' . $page->updated_at,
         ]);
-    }
-
-    public function testPage()
-    {
-        return view('spsm.test');
     }
 }

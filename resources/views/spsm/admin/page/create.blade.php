@@ -2,6 +2,7 @@
 
 @section('content')
 
+{{-- Alert --}}
 @if (session()->has('success'))
 <div class="alert alert-success alert-dismissible">
     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
@@ -9,6 +10,7 @@
 </div>
 @endif
 
+{{-- Content --}}
 <div class="card">
     <form method="POST" class="form-horizontal" action="/spsm/admin/page" enctype="multipart/form-data">
         @csrf
@@ -146,13 +148,13 @@
 
     // Editor MY
     CKEDITOR.replace( 'content_my', {
-    filebrowserUploadUrl: "{{route('upload', ['_token' => csrf_token() ])}}",
+    filebrowserUploadUrl: "{{route('pageUpload', ['_token' => csrf_token() ])}}",
     filebrowserUploadMethod: 'form',
     });
     
     // Editor EN
     CKEDITOR.replace( 'content_en', {
-    filebrowserUploadUrl: "{{route('upload', ['_token' => csrf_token() ])}}",
+    filebrowserUploadUrl: "{{route('pageUpload', ['_token' => csrf_token() ])}}",
     filebrowserUploadMethod: 'form',
     });
 

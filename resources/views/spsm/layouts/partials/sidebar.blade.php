@@ -80,13 +80,13 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="/spsm/admin/page/create" class="nav-link">
+                            <a href="/spsm/admin/media/upload" class="nav-link">
                                 <i class="fas fa-plus nav-icon"></i>
                                 <p>Tambah Media</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/spsm/admin/page/" class="nav-link">
+                            <a href="/spsm/admin/media/" class="nav-link">
                                 <i class="fas fa-list-ul nav-icon"></i>
                                 <p>Koleksi Media</p>
                             </a>

@@ -4,6 +4,8 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ApplicationController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\Admin\PagesController;
+use App\Http\Controllers\MediaController;
+use App\Models\Media;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -47,13 +49,13 @@ Route::get('/spsm/admin/page/checkSlugEn', [PagesController::class, 'checkSlugEn
 Route::resource('/spsm/admin/page', PagesController::class)->middleware('auth');
 
 // Halaman Bahasa route
-Route::get('halaman/{slug_my}', [PagesController::class, 'getPageMy']);
+Route::get('/halaman/{slug_my}', [PagesController::class, 'getPageMy']);
 
 // Halaman Bahasa route
-Route::get('page/{slug_en}', [PagesController::class, 'getPageEn']);
+Route::get('/page/{slug_en}', [PagesController::class, 'getPageEn']);
 
 // Page upload route
-Route::post('/upload', [PagesController::class, 'upload'])->name('upload');
+// Route::post('/upload/img', [PagesController::class, 'upload'])->name('pageUpload');
 
-// Page index
-Route::get('/spsm/admin/page/test', [PagesController::class, 'testPage'])->middleware('auth');
+// Media main route
+Route::resource('/spsm/admin/media', MediaController::class)->middleware('auth');
