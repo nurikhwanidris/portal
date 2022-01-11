@@ -55,14 +55,23 @@ class MediaController extends Controller
             'mediaUpload' => 'required|image|max:512',
         ]);
 
-        $name = $request->file('mediaUpload')->getClientOriginalName();
+        $filenamewithextension = $request->file('mediaUpload')->getClientOriginalName();
 
-        $path = $request->file('mediaUpload')->store('public/upload/img');
+        //get filename without extension
+        $filename = pathinfo($filenamewithextension, PATHINFO_FILENAME);
+
+        //get file extension
+        $extension = $request->file('mediaUpload')->getClientOriginalExtension();
+
+        //filename to store
+        $filenametostore = $filename . '-' . time() . '.' . $extension;
+
+        $path = $request->file('mediaUpload')->storeAs('public/upload/img', $filenametostore);
 
         $save = new Media;
 
         $save->user_id = 1;
-        $save->filename = $name;
+        $save->filename = $filenametostore;
         $save->path = $path;
 
         $save->save();
