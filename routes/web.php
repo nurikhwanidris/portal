@@ -58,7 +58,7 @@ Route::get('/page/{slug_en}', [PagesController::class, 'getPageEn']);
 Route::post('/upload/img', [PagesController::class, 'upload'])->name('pageUpload');
 
 // Media index route
-Route::get('/spsm/admin/media', [MediaController::class, 'index']);
+Route::get('/spsm/admin/media', [MediaController::class, 'index'])->middleware('auth');
 
 // Media upload route
-Route::post('/spsm/admin/media/upload', [MediaController::class, 'store']);
+Route::post('/spsm/admin/media/upload', [MediaController::class, 'store'])->middleware('auth');

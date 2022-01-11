@@ -37,17 +37,21 @@
                     <div class="row my-2">
                         @foreach ($images as $image)
                         <a href="#" class="col-md-1 text-center">
-                            <img class="m-1" src="{{ $image->path }}" alt="" style="height:100px; width:auto;"
+                            <img class="m-1" src="{{ $image->path }}" alt="" style="height:auto%; width:80%;"
                                 class="mx-auto d-block">
                         </a>
                         {{-- <span>{{ $image->filename }}</span> --}}
                         @endforeach
                     </div>
                     <div class="row my-2">
-                        <div class="col-md-12">
-                            <div class="mx-auto">
+                        <div class="col-md-6">
+                            <div class="float-left">
                                 {{ $images->links() }}
                             </div>
+                        </div>
+                        <div class="col-md-6">
+                            <span class="text-muted float-right">Memaparkan <b>{{ $images->total() }}</b>
+                                media</span>
                         </div>
                     </div>
                 </div>

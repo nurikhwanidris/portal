@@ -71,14 +71,14 @@
                 </li>
                 {{-- Media --}}
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="/spsm/admin/media/" class="nav-link">
                         <i class="nav-icon fas fa-photo-video"></i>
                         <p>
                             Media
-                            <i class="fas fa-angle-left right"></i>
+                            {{-- <i class="fas fa-angle-left right"></i> --}}
                         </p>
                     </a>
-                    <ul class="nav nav-treeview">
+                    {{-- <ul class="nav nav-treeview">
                         <li class="nav-item">
                             <a href="/spsm/admin/media/upload" class="nav-link">
                                 <i class="fas fa-plus nav-icon"></i>
@@ -91,7 +91,7 @@
                                 <p>Koleksi Media</p>
                             </a>
                         </li>
-                    </ul>
+                    </ul> --}}
                 </li>
                 {{-- Slider --}}
                 <li class="nav-item">

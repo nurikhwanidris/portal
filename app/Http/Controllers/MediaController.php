@@ -23,7 +23,7 @@ class MediaController extends Controller
             'leadCrumbs' => 'Media',
             'title' => 'Koleksi Media',
             'text' => '',
-            'images' => DB::table('media')->paginate(72),
+            'images' => DB::table('media')->orderBy('created_at', 'desc')->paginate(72),
         ]);
     }
 
@@ -64,15 +64,19 @@ class MediaController extends Controller
         $extension = $request->file('mediaUpload')->getClientOriginalExtension();
 
         //filename to store
-        $filenametostore = $filename . '-' . time() . '.' . $extension;
+        $filenametostore = str_replace(' ', '-', $filename) . '-' . time() . '.' . $extension;
 
-        $path = $request->file('mediaUpload')->storeAs('public/upload/img', $filenametostore);
+        // Store with filename
+        $request->file('mediaUpload')->storeAs('public/upload/img', $filenametostore);
+
+        // Upload directory
+        $path = '/storage/upload/img/';
 
         $save = new Media;
 
-        $save->user_id = 1;
+        $save->user_id = $request->user()->id;
         $save->filename = $filenametostore;
-        $save->path = $path;
+        $save->path = $path . $filenametostore;
 
         $save->save();
 
