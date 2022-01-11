@@ -16,11 +16,12 @@
         <div class="col-sm-12">
             <div class="row">
                 <div class="col-md-6">
-                    <form class="form-inline" method="POST" action="/spsm/admin/media" enctype="multipart/form-data">
+                    <form class="form-inline" method="POST" action="/spsm/admin/media/upload"
+                        enctype="multipart/form-data">
                         @csrf
                         <label for="mediaUpload" class="m-2">Muatnaik media</label>
                         <input type="file" class="form-control m-2 @error('mediaUpload') is-invalid @enderror"
-                            id="mediaUpload" name="mediaUpload">
+                            id="mediaUpload" name="mediaUpload" accept="image/png, image/gif, image/jpeg">
                         @error('mediaUpload')
                         <div class="invalid-feedback">
                             {{ $message }}

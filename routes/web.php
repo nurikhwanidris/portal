@@ -55,7 +55,10 @@ Route::get('/halaman/{slug_my}', [PagesController::class, 'getPageMy']);
 Route::get('/page/{slug_en}', [PagesController::class, 'getPageEn']);
 
 // Page upload route
-// Route::post('/upload/img', [PagesController::class, 'upload'])->name('pageUpload');
+Route::post('/upload/img', [PagesController::class, 'upload'])->name('pageUpload');
 
-// Media main route
-Route::resource('/spsm/admin/media', MediaController::class)->middleware('auth');
+// Media index route
+Route::get('/spsm/admin/media', [MediaController::class, 'index']);
+
+// Media upload route
+Route::post('/spsm/admin/media/upload', [MediaController::class, 'store']);

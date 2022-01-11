@@ -5,9 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Media;
 use App\Http\Requests\StoreMediaRequest;
 use App\Http\Requests\UpdateMediaRequest;
-use App\Models\Page;
-use Illuminate\Auth\Events\Validated;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Http\Request;
 
 class MediaController extends Controller
 {
@@ -23,7 +22,7 @@ class MediaController extends Controller
             'link' => '/spsm/admin/media',
             'leadCrumbs' => 'Media',
             'title' => 'Koleksi Media',
-            'text' => 'This is just a test page for now',
+            'text' => '',
             'images' => DB::table('media')->paginate(72),
         ]);
     }
@@ -39,7 +38,7 @@ class MediaController extends Controller
             'link' => '/spsm/admin/media',
             'leadCrumbs' => 'Media',
             'title' => 'Muatnaik Media Baru',
-            'text' => 'This is just a test page for now',
+            'text' => '',
         ]);
     }
 
@@ -51,12 +50,22 @@ class MediaController extends Controller
      */
     public function store(StoreMediaRequest $request)
     {
-        // Store the data
-        Media::create([
-            'user_id' => $request['user_id'] = auth()->user()->id,
-            'filename' => 'asd',
-            'path' => 'asd/asd/asd',
+        // Validate Data
+        $validateData = $request->validate([
+            'mediaUpload' => 'required|image|max:512',
         ]);
+
+        $name = $request->file('mediaUpload')->getClientOriginalName();
+
+        $path = $request->file('mediaUpload')->store('public/upload/img');
+
+        $save = new Media;
+
+        $save->user_id = 1;
+        $save->filename = $name;
+        $save->path = $path;
+
+        $save->save();
 
         return redirect('/spsm/admin/media')->with('success', 'Satu media baharu telah berjaya disimpan.');
     }
