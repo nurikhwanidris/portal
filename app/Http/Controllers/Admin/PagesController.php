@@ -181,7 +181,6 @@ class PagesController extends Controller
         }
     }
 
-
     // Check for used slugs
     public function checkSlugMy(Request $request)
     {

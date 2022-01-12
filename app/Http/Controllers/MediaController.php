@@ -23,7 +23,7 @@ class MediaController extends Controller
             'leadCrumbs' => 'Media',
             'title' => 'Koleksi Media',
             'text' => '',
-            'images' => DB::table('media')->orderBy('created_at', 'desc')->paginate(72),
+            'images' => Media::with('user')->orderBy('created_at', 'desc')->paginate(72),
         ]);
     }
 

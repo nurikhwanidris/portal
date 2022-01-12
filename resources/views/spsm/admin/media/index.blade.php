@@ -16,31 +16,38 @@
         <div class="col-sm-12">
             <div class="row">
                 <div class="col-md-6">
-                    <form class="form-inline" method="POST" action="/spsm/admin/media/upload"
-                        enctype="multipart/form-data">
+                    <form class="form" method="POST" action="/spsm/admin/media/upload" enctype="multipart/form-data">
                         @csrf
                         <label for="mediaUpload" class="m-2">Muatnaik media</label>
-                        <input type="file" class="form-control m-2 @error('mediaUpload') is-invalid @enderror"
-                            id="mediaUpload" name="mediaUpload" accept="image/png, image/gif, image/jpeg">
-                        @error('mediaUpload')
-                        <div class="invalid-feedback">
-                            {{ $message }}
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <input type="file" class="form-control m-2 @error('mediaUpload') is-invalid @enderror"
+                                    id="mediaUpload" name="mediaUpload" accept="image/png, image/gif, image/jpeg">
+                                @error('mediaUpload')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                                @enderror
+                            </div>
+                            <div class="col-sm-4">
+                                <button type="submit" class="btn btn-md btn-primary m-2">Submit</button>
+                            </div>
                         </div>
-                        @enderror
-                        <button type="submit" class="btn btn-sm btn-primary m-2">Submit</button>
                     </form>
                 </div>
             </div>
             <hr>
-            <div class=" row">
+            <div class="row">
                 <div class="col-md-12">
                     <div class="row my-2">
                         @foreach ($images as $image)
-                        <a href="#" class="col-md-1 text-center">
-                            <img class="m-1" src="{{ $image->path }}" alt="" style="height:auto%; width:80%;"
-                                class="mx-auto d-block">
+                        <a href="#" id="viewDetail" class="col-md-1 text-center" data-toggle="modal"
+                            data-target="#mediaLibrary" data-filename="{{ $image->filename }}"
+                            data-created="{{ $image->created_at }}" data-createdby="{{ $image->user->name }}"
+                            data-path="{{ $image->path }}">
+                            <img class="my-3 mx-auto" src="{{ $image->path }}" alt=""
+                                style="max-height:90px; width:80%;" class="mx-auto d-block">
                         </a>
-                        {{-- <span>{{ $image->filename }}</span> --}}
                         @endforeach
                     </div>
                     <div class="row my-2">
@@ -59,4 +66,72 @@
         </div>
     </div>
 </div>
+
+<!-- Modal -->
+<div class="modal fade" id="mediaLibrary" tabindex="-1" role="dialog" aria-labelledby="mediaLibraryTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">View</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img id="image" src="/storage/upload/img/Hebahan-Meja-Bantuan-JUPEM-1641912266.png" alt=""
+                                style="height:auto" width="100%">
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <label for="" class="col-form-label col-form-label-sm">Filename</label>
+                                <input type="text" name="filename" id="filename" class="form-control form-control-sm"
+                                    readonly>
+                            </div>
+                            <div class="row">
+                                <label for="" class="col-form-label col-form-label-sm">Path</label>
+                                <input type="text" name="path" id="path" class="form-control form-control-sm" readonly>
+                            </div>
+                            <div class="row">
+                                <label for="" class="col-form-label col-form-label-sm">Created by</label>
+                                <input type="text" name="createdby" id="createdby" class="form-control form-control-sm"
+                                    readonly>
+                            </div>
+                            <div class="row">
+                                <label for="" class="col-form-label col-form-label-sm">Created at</label>
+                                <input type="text" name="created" id="created" class="form-control form-control-sm"
+                                    readonly>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-danger float-left"><i class="fas fa-trash"></i></button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Modal on click media
+    $(document).on('click','#viewDetail', function () {
+        var filename = $(this).data("filename");
+        var path = $(this).data("path");
+        var createdby = $(this).data("createdby");
+        var created = $(this).data("created");
+
+        // Display inside the inputs
+        $("#filename").val(filename);
+        $("#path").val(path);
+        $("#createdby").val(createdby);
+        $("#created").val(created);
+        $("#image").attr('src',path);
+    });
+</script>
 @endsection

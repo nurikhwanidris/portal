@@ -21,6 +21,15 @@
     <link rel="stylesheet" href="../../plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="../../plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
     <link rel="stylesheet" href="../../plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+
+    <!-- REQUIRED SCRIPTS -->
+
+    <!-- jQuery -->
+    <script src="/spsm/plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="/spsm/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE -->
+    <script src="/spsm/js/adminlte.js"></script>
 </head>
 <!--
 `body` tag options:
@@ -86,15 +95,6 @@
         </footer>
     </div>
     <!-- ./wrapper -->
-
-    <!-- REQUIRED SCRIPTS -->
-
-    <!-- jQuery -->
-    <script src="/spsm/plugins/jquery/jquery.min.js"></script>
-    <!-- Bootstrap -->
-    <script src="/spsm/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- AdminLTE -->
-    <script src="/spsm/js/adminlte.js"></script>
 
     <!-- OPTIONAL SCRIPTS -->
     <script src="/spsm/plugins/chart.js/Chart.min.js"></script>
