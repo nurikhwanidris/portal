@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Media;
 use App\Http\Requests\StoreMediaRequest;
 use App\Http\Requests\UpdateMediaRequest;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
@@ -125,6 +126,13 @@ class MediaController extends Controller
      */
     public function destroy(Media $media)
     {
-        //
+        // Delete from dir
+        Storage::delete($media);
+
+        // Delete from table
+        Media::destroy($media);
+
+        // // Redirect with message
+        // return redirect('/spsm/admin/media')->with('success', 'A media has been deleted from the database and directory');
     }
 }

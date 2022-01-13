@@ -62,3 +62,6 @@ Route::get('/spsm/admin/media', [MediaController::class, 'index'])->middleware('
 
 // Media upload route
 Route::post('/spsm/admin/media/upload', [MediaController::class, 'store'])->middleware('auth');
+
+// Media delete route
+Route::post('/spsm/admin/media/delete', [MediaController::class, 'destroy'])->middleware('auth');

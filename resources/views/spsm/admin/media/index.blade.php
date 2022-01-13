@@ -41,10 +41,10 @@
                 <div class="col-md-12">
                     <div class="row my-2">
                         @foreach ($images as $image)
-                        <a href="#" id="viewDetail" class="col-md-1 text-center" data-toggle="modal"
-                            data-target="#mediaLibrary" data-filename="{{ $image->filename }}"
-                            data-created="{{ $image->created_at }}" data-createdby="{{ $image->user->name }}"
-                            data-path="{{ $image->path }}">
+                        <a href="#" id="viewMedia" class="col-md-1 text-center" data-toggle="modal"
+                            data-target="#mediaLibrary" data-id="{{ $image->id }}"
+                            data-filename="{{ $image->filename }}" data-created="{{ $image->created_at }}"
+                            data-createdby="{{ $image->user->name }}" data-path="{{ $image->path }}">
                             <img class="my-3 mx-auto" src="{{ $image->path }}" alt=""
                                 style="max-height:90px; width:80%;" class="mx-auto d-block">
                         </a>
@@ -68,70 +68,85 @@
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="mediaLibrary" tabindex="-1" role="dialog" aria-labelledby="mediaLibraryTitle"
-    aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">View</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div class="col-md-12">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <img id="image" src="/storage/upload/img/Hebahan-Meja-Bantuan-JUPEM-1641912266.png" alt=""
-                                style="height:auto" width="100%">
-                        </div>
-                        <div class="col-md-6">
-                            <div class="row">
-                                <label for="" class="col-form-label col-form-label-sm">Filename</label>
-                                <input type="text" name="filename" id="filename" class="form-control form-control-sm"
-                                    readonly>
+<form action="" id="deleteForm" method="post">
+    <div class="modal fade" id="mediaLibrary" tabindex="-1" role="dialog" aria-labelledby="mediaLibraryTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">View</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img id="image" src="/storage/upload/img/Hebahan-Meja-Bantuan-JUPEM-1641912266.png"
+                                    alt="" style="height:auto" width="100%">
                             </div>
-                            <div class="row">
-                                <label for="" class="col-form-label col-form-label-sm">Path</label>
-                                <input type="text" name="path" id="path" class="form-control form-control-sm" readonly>
-                            </div>
-                            <div class="row">
-                                <label for="" class="col-form-label col-form-label-sm">Created by</label>
-                                <input type="text" name="createdby" id="createdby" class="form-control form-control-sm"
-                                    readonly>
-                            </div>
-                            <div class="row">
-                                <label for="" class="col-form-label col-form-label-sm">Created at</label>
-                                <input type="text" name="created" id="created" class="form-control form-control-sm"
-                                    readonly>
+                            <div class="col-md-6">
+                                <div class="row d-none">
+                                    <label for="" class="col-form-label col-form-label-md">ID</label>
+                                    <input type="text" name="mediaId" id="mediaId" class="form-control form-control-md"
+                                        readonly>
+                                </div>
+                                <div class="row">
+                                    <label for="" class="col-form-label col-form-label-sm">Filename</label>
+                                    <input type="text" name="filename" id="filename"
+                                        class="form-control form-control-sm" readonly>
+                                </div>
+                                <div class="row">
+                                    <label for="" class="col-form-label col-form-label-sm">Path</label>
+                                    <input type="text" name="path" id="path" class="form-control form-control-sm"
+                                        readonly>
+                                </div>
+                                <div class="row">
+                                    <label for="" class="col-form-label col-form-label-sm">Created by</label>
+                                    <input type="text" name="createdby" id="createdby"
+                                        class="form-control form-control-sm" readonly>
+                                </div>
+                                <div class="row">
+                                    <label for="" class="col-form-label col-form-label-sm">Created at</label>
+                                    <input type="text" name="created" id="created" class="form-control form-control-sm"
+                                        readonly>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-danger float-left"><i class="fas fa-trash"></i></button>
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save</button>
+                <div class="modal-footer">
+                    <button class="btn btn-danger float-left" id="deleteMedia"><i class="fas fa-trash"></i></button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</form>
 
 <script>
-    // Modal on click media
-    $(document).on('click','#viewDetail', function () {
+    // View on click media
+    $(document).on('click','#viewMedia', function () {
+        var mediaId = $(this).data("mediaId");
         var filename = $(this).data("filename");
         var path = $(this).data("path");
         var createdby = $(this).data("createdby");
         var created = $(this).data("created");
 
         // Display inside the inputs
+        $("#mediaId").val(mediaId);
         $("#filename").val(filename);
         $("#path").val(path);
         $("#createdby").val(createdby);
         $("#created").val(created);
         $("#image").attr('src',path);
+    });
+
+    $(document).on('click','#deleteMedia', function () {
+        var mediaId = $(this).data('mediaId');
+        $("#deleteForm").action = "/spsm/admin/media/delete/" + mediaId;
     });
 </script>
 @endsection
