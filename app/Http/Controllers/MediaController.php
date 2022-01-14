@@ -126,13 +126,15 @@ class MediaController extends Controller
      */
     public function destroy(Media $media)
     {
-        // Delete from dir
-        Storage::delete($media);
+        // Delete from directory
+        if ($media->images) {
+            Storage::delete($media->images);
+        }
 
         // Delete from table
-        Media::destroy($media);
+        Media::destroy($media->id);
 
-        // // Redirect with message
-        // return redirect('/spsm/admin/media')->with('success', 'A media has been deleted from the database and directory');
+        // Redirect with message
+        return redirect('/spsm/admin/media')->with('success', 'A media has been deleted from the database and directory');
     }
 }

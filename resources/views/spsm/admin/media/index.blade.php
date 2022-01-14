@@ -68,67 +68,68 @@
 </div>
 
 <!-- Modal -->
-<form action="" id="deleteForm" method="post">
-    <div class="modal fade" id="mediaLibrary" tabindex="-1" role="dialog" aria-labelledby="mediaLibraryTitle"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">View</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="col-md-12">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <img id="image" src="/storage/upload/img/Hebahan-Meja-Bantuan-JUPEM-1641912266.png"
-                                    alt="" style="height:auto" width="100%">
+<div class="modal fade" id="mediaLibrary" tabindex="-1" role="dialog" aria-labelledby="mediaLibraryTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">View</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img id="image" src="" alt="" style="height:auto" width="100%">
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row d-none">
+                                <label for="" class="col-form-label col-form-label-sm">ID</label>
+                                <input type="text" name="mediaId" id="mediaId" class="form-control form-control-sm"
+                                    readonly>
                             </div>
-                            <div class="col-md-6">
-                                <div class="row d-none">
-                                    <label for="" class="col-form-label col-form-label-md">ID</label>
-                                    <input type="text" name="mediaId" id="mediaId" class="form-control form-control-md"
-                                        readonly>
-                                </div>
-                                <div class="row">
-                                    <label for="" class="col-form-label col-form-label-sm">Filename</label>
-                                    <input type="text" name="filename" id="filename"
-                                        class="form-control form-control-sm" readonly>
-                                </div>
-                                <div class="row">
-                                    <label for="" class="col-form-label col-form-label-sm">Path</label>
-                                    <input type="text" name="path" id="path" class="form-control form-control-sm"
-                                        readonly>
-                                </div>
-                                <div class="row">
-                                    <label for="" class="col-form-label col-form-label-sm">Created by</label>
-                                    <input type="text" name="createdby" id="createdby"
-                                        class="form-control form-control-sm" readonly>
-                                </div>
-                                <div class="row">
-                                    <label for="" class="col-form-label col-form-label-sm">Created at</label>
-                                    <input type="text" name="created" id="created" class="form-control form-control-sm"
-                                        readonly>
-                                </div>
+                            <div class="row d-none">
+                                <label for="" class="col-form-label col-form-label-md">CSRF Token</label>
+                                <input type="text" name="csrf" id="csrf" class="form-control form-control-sm"
+                                    value="@csrf">
+                            </div>
+                            <div class="row">
+                                <label for="" class="col-form-label col-form-label-sm">Filename</label>
+                                <input type="text" name="filename" id="filename" class="form-control form-control-sm"
+                                    readonly>
+                            </div>
+                            <div class="row">
+                                <label for="" class="col-form-label col-form-label-sm">Path</label>
+                                <input type="text" name="path" id="path" class="form-control form-control-sm" readonly>
+                            </div>
+                            <div class="row">
+                                <label for="" class="col-form-label col-form-label-sm">Created by</label>
+                                <input type="text" name="createdby" id="createdby" class="form-control form-control-sm"
+                                    readonly>
+                            </div>
+                            <div class="row">
+                                <label for="" class="col-form-label col-form-label-sm">Created at</label>
+                                <input type="text" name="created" id="created" class="form-control form-control-sm"
+                                    readonly>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="modal-footer">
-                    <button class="btn btn-danger float-left" id="deleteMedia"><i class="fas fa-trash"></i></button>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save</button>
-                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-danger float-left" id="deleteMedia"><i class="fas fa-trash"></i></button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save</button>
             </div>
         </div>
     </div>
-</form>
+</div>
 
 <script>
     // View on click media
-    $(document).on('click','#viewMedia', function () {
+    $(document).on('click', '#viewMedia', function () {
         var mediaId = $(this).data("mediaId");
         var filename = $(this).data("filename");
         var path = $(this).data("path");
@@ -141,12 +142,24 @@
         $("#path").val(path);
         $("#createdby").val(createdby);
         $("#created").val(created);
-        $("#image").attr('src',path);
+        $("#image").attr('src', path);
     });
 
-    $(document).on('click','#deleteMedia', function () {
-        var mediaId = $(this).data('mediaId');
-        $("#deleteForm").action = "/spsm/admin/media/delete/" + mediaId;
+    $(document).on('click', '#deleteMedia', function () {
+        var id = $(this).data("mediaId");
+        var csrf = $(this).data("csrf");
+        if (confirm("Are you sure you want to remove this media?")) {
+            $.ajax({
+                method: "POST",
+                url: "/spsm/admin/media/delete",
+                data: {
+                    id: id
+                },
+                dataType: "json",
+                encode: true,
+            });
+        }
     });
+
 </script>
 @endsection
