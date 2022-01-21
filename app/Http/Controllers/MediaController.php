@@ -138,6 +138,15 @@ class MediaController extends Controller
         return redirect('/spsm/admin/media')->with('success', 'A media has been deleted from the database and directory');
     }
 
+    public function sliderCreate()
+    {
+        return view('spsm.admin.media.createslider', [
+            'title' => 'Create Slider',
+            'leadCrumbs' => 'Slider',
+            'link' => '/spsm/admin/slider/',
+        ]);
+    }
+
     public function sliderList()
     {
         return view('spsm.admin.media.listslider', [
