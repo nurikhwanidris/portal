@@ -12,9 +12,21 @@ class Status extends Model
 
     protected $guarded = ['id'];
 
-    // Page status
+    // Page
     public function page()
     {
         return $this->hasMany(Page::class);
+    }
+
+    // User
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    // Slider
+    public function slider()
+    {
+        return $this->hasMany(Slider::class);
     }
 }

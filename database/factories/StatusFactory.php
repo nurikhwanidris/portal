@@ -14,7 +14,8 @@ class StatusFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'user_id' => rand(1, 5),
+            'status' => 'Published',
         ];
     }
 }

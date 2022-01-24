@@ -6,6 +6,8 @@ use App\Models\Media;
 use App\Http\Requests\StoreMediaRequest;
 use App\Http\Requests\UpdateMediaRequest;
 use Illuminate\Support\Facades\Storage;
+use App\Models\Slider;
+use App\Models\Status;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
@@ -144,7 +146,43 @@ class MediaController extends Controller
             'title' => 'Create Slider',
             'leadCrumbs' => 'Slider',
             'link' => '/spsm/admin/slider/',
+            // 'statuses' => Status::with('status')->get(),
         ]);
+    }
+
+    public function sliderSave(Slider $request)
+    {
+        // Validate Data
+        $validateData = $request->validate([
+            'sliderImage' => 'required|image|max:512',
+        ]);
+
+        $filenamewithextension = $request->file('sliderImage')->getClientOriginalName();
+
+        //get filename without extension
+        $filename = pathinfo($filenamewithextension, PATHINFO_FILENAME);
+
+        //get file extension
+        $extension = $request->file('sliderImage')->getClientOriginalExtension();
+
+        //filename to store
+        $filenametostore = str_replace(' ', '-', $filename) . '-' . time() . '.' . $extension;
+
+        // Store with filename
+        $request->file('sliderImage')->storeAs('public/upload/img', $filenametostore);
+
+        // Upload directory
+        $path = '/storage/upload/img/';
+
+        $save = new Slider;
+
+        $save->user_id = $request->user()->id;
+        $save->filename = $filenametostore;
+        $save->path = $path . $filenametostore;
+
+        $save->save();
+
+        return redirect('/spsm/admin/slider/list')->with('success', 'Satu media baharu telah berjaya disimpan.');
     }
 
     public function sliderList()
