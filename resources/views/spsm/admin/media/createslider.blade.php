@@ -15,7 +15,7 @@
         <div class="col-sm-12">
             <div class="row">
                 <div class="col-sm-6">
-                    <form action="/spsm/admin/media/slidersave" method="post" enctype="multipart/form-data">
+                    <form action="/spsm/admin/slider/save" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="row mb-3">
                             <label for="" class="col-sm-3 col-form-label col-form-label-sm">Gambar</label>
@@ -54,9 +54,9 @@
                             <div class="col-sm-8">
                                 <select name="status" id="" class="form-control form-control-sm">
                                     <option value="">Sila Pilih</option>
-                                    <option value="1">Publish</option>
-                                    <option value="2">Draft</option>
-                                    <option value="3">Inactive</option>
+                                    @foreach ($statuses as $status)
+                                    <option value="{{ $status->id }}">{{ $status->status }}</option>
+                                    @endforeach
                                 </select>
                             </div>
                         </div>
@@ -86,10 +86,15 @@
                         </div>
                     </form>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-6 ">
+                    <div class="row mb-3 ">
+                        <div class="col-sm-12">
+                            <span class="float-right">Slider Preview</span>
+                        </div>
+                    </div>
                     <div class="row mb-3">
-                        <div class="col-sm-12 text-center">
-                            <img class="img-preview img-fluid mb-3" style="width:  600px; height: 150px;">
+                        <div class="col-sm-12">
+                            <img class="img-preview img-fluid mb-3 float-right" style="width: auto; height: 150px;">
                         </div>
                     </div>
                 </div>

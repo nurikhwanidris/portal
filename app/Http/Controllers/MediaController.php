@@ -3,13 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Media;
+use App\Models\Slider;
+use App\Models\Status;
 use App\Http\Requests\StoreMediaRequest;
 use App\Http\Requests\UpdateMediaRequest;
 use Illuminate\Support\Facades\Storage;
-use App\Models\Slider;
-use App\Models\Status;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Http\Request;
 
 class MediaController extends Controller
 {
@@ -146,14 +144,14 @@ class MediaController extends Controller
             'title' => 'Create Slider',
             'leadCrumbs' => 'Slider',
             'link' => '/spsm/admin/slider/',
-            // 'statuses' => Status::with('status')->get(),
+            'statuses' => Status::all(),
         ]);
     }
 
     public function sliderSave(Slider $request)
     {
         // Validate Data
-        $validateData = $request->validate([
+        $request->validate([
             'sliderImage' => 'required|image|max:512',
         ]);
 
@@ -178,7 +176,7 @@ class MediaController extends Controller
 
         $save->user_id = $request->user()->id;
         $save->filename = $filenametostore;
-        $save->path = $path . $filenametostore;
+        $save->link = $path . $filenametostore;
 
         $save->save();
 

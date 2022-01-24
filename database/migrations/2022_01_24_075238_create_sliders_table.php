@@ -16,7 +16,7 @@ class CreateSlidersTable extends Migration
         Schema::create('sliders', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained();
-            $table->string('fileName');
+            $table->string('filename');
             $table->string('link');
             $table->smallInteger('status_id');
             $table->dateTime('show');

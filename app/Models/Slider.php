@@ -15,8 +15,8 @@ class Slider extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function status()
+    public function statuses()
     {
-        return $this->belongsTo(Status::class);
+        return $this->belongsTo(Status::class, 'status_id');
     }
 }
