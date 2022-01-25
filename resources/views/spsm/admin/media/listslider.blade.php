@@ -22,7 +22,7 @@
     <div class="card-body">
         <div class="col-sm-12">
             <div class="table-responsive">
-                <table class="table table-hover table-border table-sm">
+                <table class="table table-hover table-sm">
                     <thead class="thead-dark">
                         <tr>
                             <th class="text-center">#</th>
@@ -47,7 +47,7 @@
                                 <img src="/upload/img/{{ $slider->filename }}" alt="" srcset="" class="img-fluid"
                                     style="width: auto; height: 150px;">
                             </td>
-                            <td class="align-middle text-left">
+                            <td class="align-middle text-left text-wrap">
                                 <a href="{{ $slider->link }}" target="_blank" rel="noopener noreferrer">{{ $slider->link
                                     }}</a>
                             </td>
@@ -71,12 +71,14 @@
                             </td>
                             <td class="align-middle text-center">
                                 <div class="form-inline text-center">
-                                    <a href="/spsm/admin/slider/{{ $slider->id }}/edit"
+                                    <a href="/spsm/admin/slider/edit/{{ $slider->id }}"
                                         class="text-decoration-none text-center"><i
                                             class="far fa-edit"></i></a>&nbsp;&nbsp;
                                     <form action="/spsm/admin/slider/delete/{{ $slider->id }}" method="post">
                                         @csrf
-                                        <button type="submit" class="btn btn-link"><i class="fas fa-trash"></i></button>
+                                        @method('delete')
+                                        <button class="btn-link btn" onclick="return confirm('Are you sure?')"><i
+                                                class="fas fa-trash"></i></button></button>
                                     </form>
                                 </div>
                             </td>

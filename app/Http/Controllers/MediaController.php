@@ -7,6 +7,7 @@ use App\Models\Slider;
 use App\Models\Status;
 use App\Http\Requests\StoreMediaRequest;
 use App\Http\Requests\UpdateMediaRequest;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
 class MediaController extends Controller
@@ -127,8 +128,8 @@ class MediaController extends Controller
     public function destroy(Media $media)
     {
         // Delete from directory
-        if ($media->images) {
-            Storage::delete($media->images);
+        if ($media->filename) {
+            Storage::delete($media->filename);
         }
 
         // Delete from table
@@ -148,12 +149,14 @@ class MediaController extends Controller
         ]);
     }
 
-    public function sliderSave(StoreMediaRequest $request)
+    public function sliderSave(Request $request)
     {
         // Validate Data
         $validateData = $request->validate([
             'sliderImage' => 'required|image|max:1024',
         ]);
+
+        // Check data
         if ($validateData) {
             $filenamewithextension = $request->file('sliderImage')->getClientOriginalName();
 
@@ -182,7 +185,7 @@ class MediaController extends Controller
 
             $save->save();
 
-            return redirect('/spsm/admin/slider/list')->with('success', 'Satu media baharu telah berjaya disimpan.');
+            return redirect('/spsm/admin/slider/list')->with('success', 'Satu slider baharu telah berjaya disimpan.');
         } else {
             return redirect('/spsm/admin/slider/list')->with('error', 'Something went wrong');
         }
@@ -198,11 +201,20 @@ class MediaController extends Controller
         ]);
     }
 
-    public function sliderDelete(Slider $request)
+    // public function sliderEdit(Request $request, Slider $slider)
+    // {
+    //     // Validate Data
+    //     $validateData = $request->validate([
+    //         'sliderImage' => 'required|image|max:1024',
+    //     ]);
+
+    // }
+
+    public function sliderDelete(Request $request)
     {
         // Delete from directory
-        if ($request->images) {
-            Storage::delete($request->images);
+        if ($request->filename) {
+            Storage::delete($request->filename);
         }
 
         // Delete from table
