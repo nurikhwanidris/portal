@@ -71,7 +71,7 @@
                             </td>
                             <td class="align-middle text-center">
                                 <div class="form-inline text-center">
-                                    <a href="/spsm/admin/slider/edit/{{ $slider->id }}"
+                                    <a href="/spsm/admin/slider/view/{{ $slider->id }}"
                                         class="text-decoration-none text-center"><i
                                             class="far fa-edit"></i></a>&nbsp;&nbsp;
                                     <form action="/spsm/admin/slider/delete/{{ $slider->id }}" method="post">

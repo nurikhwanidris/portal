@@ -201,7 +201,18 @@ class MediaController extends Controller
         ]);
     }
 
-    // public function sliderEdit(Request $request, Slider $slider)
+    public function sliderEdit(Slider $slider)
+    {
+        return view('spsm.admin.media.editslider', [
+            'title' => 'Edit Slider',
+            'leadCrumbs' => 'Slider',
+            'link' => '/spsm/admin/slider/',
+            'slider' => $slider,
+            'statuses' => Status::all(),
+        ]);
+    }
+
+    // public function sliderUpdate(Request $request, Slider $slider)
     // {
     //     // Validate Data
     //     $validateData = $request->validate([
@@ -210,15 +221,17 @@ class MediaController extends Controller
 
     // }
 
-    public function sliderDelete(Request $request)
+    public function sliderDelete(Slider $slider)
     {
         // Delete from directory
-        if ($request->filename) {
-            Storage::delete($request->filename);
+        if ($slider->filename) {
+            Storage::delete($slider->filename);
+        } else {
+            return redirect('/spsm/admin/slider/list')->with('error', 'Couldn\'t delete the image');
         }
 
         // Delete from table
-        if (Slider::destroy($request->id)) {
+        if (Slider::destroy($slider->id)) {
             return redirect('/spsm/admin/slider/list')->with('success', 'Satu media baharu telah berjaya dipadam.');
         } else {
             return redirect('/spsm/admin/slider/list')->with('error', 'Something went wrong');
