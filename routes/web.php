@@ -71,6 +71,9 @@ Route::get('/spsm/admin/slider/create', [MediaController::class, 'sliderCreate']
 
 // Slider store route
 Route::post('/spsm/admin/slider/save', [MediaController::class, 'sliderSave'])->middleware('auth');
-    
+
 // Slider list route
 Route::get('/spsm/admin/slider/list', [MediaController::class, 'sliderList'])->middleware('auth');
+
+// Slider delete route
+Route::post('/spsm/admin/slider/delete/{id}', [MediaController::class, 'sliderDelete'])->middleware('auth');

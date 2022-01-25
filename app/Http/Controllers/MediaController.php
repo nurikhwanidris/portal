@@ -148,11 +148,11 @@ class MediaController extends Controller
         ]);
     }
 
-    public function sliderSave(Slider $request)
+    public function sliderSave(StoreMediaRequest $request)
     {
         // Validate Data
         $request->validate([
-            'sliderImage' => 'required|image|max:512',
+            'sliderImage' => 'required|image|max:1024',
         ]);
 
         $filenamewithextension = $request->file('sliderImage')->getClientOriginalName();
@@ -169,14 +169,16 @@ class MediaController extends Controller
         // Store with filename
         $request->file('sliderImage')->storeAs('public/upload/img', $filenametostore);
 
-        // Upload directory
-        $path = '/storage/upload/img/';
-
+        // Save into the database
         $save = new Slider;
 
         $save->user_id = $request->user()->id;
         $save->filename = $filenametostore;
-        $save->link = $path . $filenametostore;
+        $save->link = $request['link'];
+        $save->status_id = $request['status'];
+        $save->show = $request['show'];
+        $save->hide = $request['hide'];
+        $save->susunan = $request['susunan'];
 
         $save->save();
 
@@ -188,7 +190,23 @@ class MediaController extends Controller
         return view('spsm.admin.media.listslider', [
             'title' => 'List of Slider',
             'leadCrumbs' => 'Slider',
-            'link' => '/spsm/admin/slider/'
+            'link' => '/spsm/admin/slider/',
+            'sliders' => Slider::with('statuses')->get(),
         ]);
+    }
+
+    public function sliderDelete(Slider $request)
+    {
+        // Delete from directory
+        if ($request->images) {
+            Storage::delete($request->images);
+        }
+
+        // Delete from table
+        if (Slider::destroy($request->id)) {
+            return redirect('/spsm/admin/slider/list')->with('success', 'Satu media baharu telah berjaya dipadam.');
+        } else {
+            return redirect('/spsm/admin/slider/list')->with('error', 'Something went wrong');
+        }
     }
 }

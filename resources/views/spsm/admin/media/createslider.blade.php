@@ -29,23 +29,22 @@
                             <label for="" class="col-sm-3 col-form-label-sm">Pautan</label>
                             <span class="col-sm-1">:</span>
                             <div class="col-sm-8">
-                                <input type="text" name="linkSlider" id="" class="form-control form-control-sm">
+                                <input type="text" name="link" id="" class="form-control form-control-sm"
+                                    placeholder="https://www.google.com">
                             </div>
                         </div>
                         <div class="row mb-3">
                             <label for="" class="col-sm-3 col-form-label col-form-label-sm">Tarikh Mula Paparan</label>
                             <span class="col-sm-1">:</span>
                             <div class="col-sm-8">
-                                <input type="datetime-local" name="tarikhMulaPapar" id=""
-                                    class="form-control form-control-sm">
+                                <input type="datetime-local" name="show" id="" class="form-control form-control-sm">
                             </div>
                         </div>
                         <div class="row mb-3">
                             <label for="" class="col-sm-3 col-form-label col-form-label-sm">Tarikh Akhir Paparan</label>
                             <span class="col-sm-1">:</span>
                             <div class="col-sm-8">
-                                <input type="datetime-local" name="tarikhAkhirPaparan" id=""
-                                    class="form-control form-control-sm">
+                                <input type="datetime-local" name="hide" id="" class="form-control form-control-sm">
                             </div>
                         </div>
                         <div class="row mb-3">
@@ -64,7 +63,7 @@
                             <label for="" class="col-sm-3 col-form-label col-form-label-sm">Sususan</label>
                             <span class="col-sm-1">:</span>
                             <div class="col-sm-8">
-                                <select name="sususan" id="" class="form-control form-control-sm">
+                                <select name="susunan" id="" class="form-control form-control-sm">
                                     <option value="">Sila Pilih</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>

@@ -21,6 +21,7 @@ class CreateSlidersTable extends Migration
             $table->smallInteger('status_id');
             $table->dateTime('show');
             $table->dateTime('hide');
+            $table->smallInteger('susunan');
             $table->timestamps();
         });
     }
