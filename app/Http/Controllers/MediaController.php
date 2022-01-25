@@ -151,38 +151,41 @@ class MediaController extends Controller
     public function sliderSave(StoreMediaRequest $request)
     {
         // Validate Data
-        $request->validate([
+        $validateData = $request->validate([
             'sliderImage' => 'required|image|max:1024',
         ]);
+        if ($validateData) {
+            $filenamewithextension = $request->file('sliderImage')->getClientOriginalName();
 
-        $filenamewithextension = $request->file('sliderImage')->getClientOriginalName();
+            //get filename without extension
+            $filename = pathinfo($filenamewithextension, PATHINFO_FILENAME);
 
-        //get filename without extension
-        $filename = pathinfo($filenamewithextension, PATHINFO_FILENAME);
+            //get file extension
+            $extension = $request->file('sliderImage')->getClientOriginalExtension();
 
-        //get file extension
-        $extension = $request->file('sliderImage')->getClientOriginalExtension();
+            //filename to store
+            $filenametostore = str_replace(' ', '-', $filename) . '-' . time() . '.' . $extension;
 
-        //filename to store
-        $filenametostore = str_replace(' ', '-', $filename) . '-' . time() . '.' . $extension;
+            // Store with filename
+            $request->file('sliderImage')->storeAs('public/upload/img', $filenametostore);
 
-        // Store with filename
-        $request->file('sliderImage')->storeAs('public/upload/img', $filenametostore);
+            // Save into the database
+            $save = new Slider;
 
-        // Save into the database
-        $save = new Slider;
+            $save->user_id = $request->user()->id;
+            $save->filename = $filenametostore;
+            $save->link = $request['link'];
+            $save->status_id = $request['status'];
+            $save->show = $request['show'];
+            $save->hide = $request['hide'];
+            $save->susunan = $request['susunan'];
 
-        $save->user_id = $request->user()->id;
-        $save->filename = $filenametostore;
-        $save->link = $request['link'];
-        $save->status_id = $request['status'];
-        $save->show = $request['show'];
-        $save->hide = $request['hide'];
-        $save->susunan = $request['susunan'];
+            $save->save();
 
-        $save->save();
-
-        return redirect('/spsm/admin/slider/list')->with('success', 'Satu media baharu telah berjaya disimpan.');
+            return redirect('/spsm/admin/slider/list')->with('success', 'Satu media baharu telah berjaya disimpan.');
+        } else {
+            return redirect('/spsm/admin/slider/list')->with('error', 'Something went wrong');
+        }
     }
 
     public function sliderList()

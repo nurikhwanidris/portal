@@ -21,8 +21,14 @@
                             <label for="" class="col-sm-3 col-form-label col-form-label-sm">Gambar</label>
                             <span class="col-sm-1">:</span>
                             <div class="col-sm-8">
-                                <input type="file" name="sliderImage" id="image" class="form-control form-control-sm"
+                                <input type="file" name="sliderImage" id="image"
+                                    class="form-control form-control-sm @error('sliderImage') is-invalid @enderror"
                                     accept="image/png, image/jpeg, image/jpg" onchange="previewImage()">
+                                @error('sliderImage')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                                @enderror
                             </div>
                         </div>
                         <div class="row mb-3">
@@ -30,21 +36,23 @@
                             <span class="col-sm-1">:</span>
                             <div class="col-sm-8">
                                 <input type="text" name="link" id="" class="form-control form-control-sm"
-                                    placeholder="https://www.google.com">
+                                    placeholder="https://www.google.com" value="{{ old('link') }}">
                             </div>
                         </div>
                         <div class="row mb-3">
                             <label for="" class="col-sm-3 col-form-label col-form-label-sm">Tarikh Mula Paparan</label>
                             <span class="col-sm-1">:</span>
                             <div class="col-sm-8">
-                                <input type="datetime-local" name="show" id="" class="form-control form-control-sm">
+                                <input type="datetime-local" name="show" id="" class="form-control form-control-sm"
+                                    value="{{ old('show') }}">
                             </div>
                         </div>
                         <div class="row mb-3">
                             <label for="" class="col-sm-3 col-form-label col-form-label-sm">Tarikh Akhir Paparan</label>
                             <span class="col-sm-1">:</span>
                             <div class="col-sm-8">
-                                <input type="datetime-local" name="hide" id="" class="form-control form-control-sm">
+                                <input type="datetime-local" name="hide" id="" class="form-control form-control-sm"
+                                    value="{{ old('hide') }}">
                             </div>
                         </div>
                         <div class="row mb-3">
@@ -54,7 +62,11 @@
                                 <select name="status" id="" class="form-control form-control-sm">
                                     <option value="">Sila Pilih</option>
                                     @foreach ($statuses as $status)
+                                    @if (old('status') == $status->id)
+                                    <option value="{{ $status->id }}" selected>{{ $status->status }}</option>
+                                    @else
                                     <option value="{{ $status->id }}">{{ $status->status }}</option>
+                                    @endif
                                     @endforeach
                                 </select>
                             </div>
@@ -65,16 +77,16 @@
                             <div class="col-sm-8">
                                 <select name="susunan" id="" class="form-control form-control-sm">
                                     <option value="">Sila Pilih</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                    <option value="8">8</option>
-                                    <option value="9">9</option>
-                                    <option value="10">10</option>
+                                    <option value="1" @if (old('susunan')==1) selected @endif>1</option>
+                                    <option value="2" @if (old('susunan')==2) selected @endif>2</option>
+                                    <option value="3" @if (old('susunan')==3) selected @endif>3</option>
+                                    <option value="4" @if (old('susunan')==4) selected @endif>4</option>
+                                    <option value="5" @if (old('susunan')==5) selected @endif>5</option>
+                                    <option value="6" @if (old('susunan')==6) selected @endif>6</option>
+                                    <option value="7" @if (old('susunan')==7) selected @endif>7</option>
+                                    <option value="8" @if (old('susunan')==8) selected @endif>8</option>
+                                    <option value="9" @if (old('susunan')==9) selected @endif>9</option>
+                                    <option value="10" @if (old('susunan')==10) selected @endif>10</option>
                                 </select>
                             </div>
                         </div>
@@ -116,5 +128,6 @@
             imgPreview.src = oFREvent.target.result;
         }
     }
+
 </script>
 @endsection
