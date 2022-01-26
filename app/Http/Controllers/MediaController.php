@@ -53,7 +53,7 @@ class MediaController extends Controller
     public function store(StoreMediaRequest $request)
     {
         // Validate Data
-        $validateData = $request->validate([
+        $request->validate([
             'mediaUpload' => 'required|image|max:512',
         ]);
 
@@ -154,6 +154,9 @@ class MediaController extends Controller
         // Validate Data
         $validateData = $request->validate([
             'sliderImage' => 'required|image|max:1024',
+            'hide' => 'required',
+            'status' => 'required',
+            'susunan' => 'required'
         ]);
 
         // Check data
@@ -175,7 +178,7 @@ class MediaController extends Controller
             // Save into the database
             $save = new Slider;
 
-            $save->user_id = $request->user()->id;
+            $save->user_id = auth()->user()->id;
             $save->filename = $filenametostore;
             $save->link = $request['link'];
             $save->status_id = $request['status'];

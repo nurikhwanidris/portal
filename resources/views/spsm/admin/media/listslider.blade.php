@@ -48,8 +48,12 @@
                                     style="width: auto; height: 150px;">
                             </td>
                             <td class="align-middle text-left text-wrap">
+                                @if ($slider->link == NULL)
+                                <span class="badge badge-dark">No link</span>
+                                @else
                                 <a href="{{ $slider->link }}" target="_blank" rel="noopener noreferrer">{{ $slider->link
                                     }}</a>
+                                @endif
                             </td>
                             <td class="align-middle text-left">
                                 @if ($slider->status_id == 1)
@@ -58,18 +62,20 @@
                                 <span class="badge badge-warning">{{ $slider->statuses->status }}</span>
                                 @elseif($slider->status_id == 3)
                                 <span class="badge badge-info">{{ $slider->statuses->status }}</span>
-                                @elseif($slider->status_id == 4)
-                                <span class="badge badge-danger">{{ $slider->statuses->status }}</span>
                                 @endif
                             </td>
                             <td class="align-middle text-left">
+                                @if ($slider->show == NULL)
+                                <span class="badge badge-primary">Instantly</span>
+                                @else
                                 {{ $slider->show }}
+                                @endif
                             </td>
                             <td class="align-middle text-left">
                                 {{ $slider->hide }}
                             </td>
                             <td class="align-middle text-center">
-                                {{ $slider->susunan }}
+                                <span class="badge badge-light">{{ $slider->susunan }}</span>
                             </td>
                             <td class="align-middle text-left">
                                 {{ $slider->created_at }}

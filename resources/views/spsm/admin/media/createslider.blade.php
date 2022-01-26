@@ -51,15 +51,22 @@
                             <label for="" class="col-sm-3 col-form-label col-form-label-sm">Tarikh Akhir Paparan</label>
                             <span class="col-sm-1">:</span>
                             <div class="col-sm-8">
-                                <input type="datetime-local" name="hide" id="" class="form-control form-control-sm"
+                                <input type="datetime-local" name="hide" id=""
+                                    class="form-control form-control-sm @error('hide') is-invalid @enderror"
                                     value="{{ old('hide') }}">
+                                @error('hide')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                                @enderror
                             </div>
                         </div>
                         <div class="row mb-3">
                             <label for="" class="col-sm-3 col-form-label col-form-label-sm">Status</label>
                             <span class="col-sm-1">:</span>
                             <div class="col-sm-8">
-                                <select name="status" id="" class="form-control form-control-sm">
+                                <select name="status" id=""
+                                    class="form-control form-control-sm @error('status') is-invalid @enderror">
                                     <option value="">Sila Pilih</option>
                                     @foreach ($statuses as $status)
                                     @if (old('status') == $status->id)
@@ -69,13 +76,19 @@
                                     @endif
                                     @endforeach
                                 </select>
+                                @error('status')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                                @enderror
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <label for="" class="col-sm-3 col-form-label col-form-label-sm">Sususan</label>
+                            <label for="" class="col-sm-3 col-form-label col-form-label-sm">Susunan</label>
                             <span class="col-sm-1">:</span>
                             <div class="col-sm-8">
-                                <select name="susunan" id="" class="form-control form-control-sm">
+                                <select name="susunan" id=""
+                                    class="form-control form-control-sm @error('susunan') is-invalid @enderror">
                                     <option value="">Sila Pilih</option>
                                     <option value="1" @if (old('susunan')==1) selected @endif>1</option>
                                     <option value="2" @if (old('susunan')==2) selected @endif>2</option>
@@ -88,6 +101,11 @@
                                     <option value="9" @if (old('susunan')==9) selected @endif>9</option>
                                     <option value="10" @if (old('susunan')==10) selected @endif>10</option>
                                 </select>
+                                @error('susunan')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                                @enderror
                             </div>
                         </div>
                         <div class="row mb-3">

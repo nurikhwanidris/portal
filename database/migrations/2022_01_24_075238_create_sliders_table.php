@@ -17,9 +17,9 @@ class CreateSlidersTable extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained();
             $table->string('filename');
-            $table->string('link');
+            $table->string('link')->nullable();
             $table->smallInteger('status_id');
-            $table->dateTime('show');
+            $table->dateTime('show')->nullable();
             $table->dateTime('hide');
             $table->smallInteger('susunan');
             $table->timestamps();
