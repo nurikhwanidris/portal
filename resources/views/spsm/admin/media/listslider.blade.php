@@ -27,13 +27,13 @@
                         <tr>
                             <th class="text-center">#</th>
                             <th class="text-center">Image</th>
-                            <th>Link</th>
-                            <th>Status</th>
-                            <th>Mula</th>
-                            <th>Tamat</th>
+                            <th class="text-left">Link</th>
+                            <th class="text-left">Status</th>
+                            <th class="text-left">Mula</th>
+                            <th class="text-left">Tamat</th>
                             <th class="text-center">Susunan</th>
-                            <th>Created</th>
-                            <th>Modified</th>
+                            <th class="text-left">Created</th>
+                            <th class="text-left">Modified</th>
                             <th class="text-center">Actions</th>
                         </tr>
                     </thead>
@@ -52,7 +52,15 @@
                                     }}</a>
                             </td>
                             <td class="align-middle text-left">
-                                {{ $slider->statuses->status }}
+                                @if ($slider->status_id == 1)
+                                <span class="badge badge-success">{{ $slider->statuses->status }}</span>
+                                @elseif($slider->status_id == 2)
+                                <span class="badge badge-warning">{{ $slider->statuses->status }}</span>
+                                @elseif($slider->status_id == 3)
+                                <span class="badge badge-info">{{ $slider->statuses->status }}</span>
+                                @elseif($slider->status_id == 4)
+                                <span class="badge badge-danger">{{ $slider->statuses->status }}</span>
+                                @endif
                             </td>
                             <td class="align-middle text-left">
                                 {{ $slider->show }}

@@ -212,20 +212,69 @@ class MediaController extends Controller
         ]);
     }
 
-    // public function sliderUpdate(Request $request, Slider $slider)
-    // {
-    //     // Validate Data
-    //     $validateData = $request->validate([
-    //         'sliderImage' => 'required|image|max:1024',
-    //     ]);
+    public function sliderUpdate(Request $request, Slider $slider)
+    {
 
-    // }
+        if ($request['sliderImage'] != '') {
+
+            // Validate the file first
+            $request->validate(['sliderImage' => 'required|image|max:1024']);
+
+            // Delete old file first
+            if ($request->file('sliderImage')) {
+                Storage::delete('/public/upload/img/' . $request->oldImage);
+            } else {
+                $validateData['sliderImage'] = $request->file('sliderImage');
+            }
+
+            // Get the filename
+            $filenamewithextension = $request->file('sliderImage')->getClientOriginalName();
+
+            //get filename without extension
+            $filename = pathinfo($filenamewithextension, PATHINFO_FILENAME);
+
+            //get file extension
+            $extension = $request->file('sliderImage')->getClientOriginalExtension();
+
+            //filename to store
+            $filenametostore = str_replace(' ', '-', $filename) . '-' . time() . '.' . $extension;
+
+            // Store with filename
+            $request->file('sliderImage')->storeAs('public/upload/img', $filenametostore);
+
+            // Save it in an array
+            $validateData['user_id'] = auth()->user()->id;
+            $validateData['filename'] = $filenametostore;
+            $validateData['link'] = $request['link'];
+            $validateData['status_id'] = $request['status'];
+            $validateData['show'] = $request['show'];
+            $validateData['hide'] = $request['hide'];
+            $validateData['susunan'] = $request['susunan'];
+
+            Slider::where('id', $slider->id)->update($validateData);
+
+            return redirect('/spsm/admin/slider/view/' . $slider->id)->with('success', 'Satu slider baharu telah berjaya disimpan.');
+        } else {
+            // Save it in an array
+            $validateData['user_id'] = auth()->user()->id;
+            $validateData['filename'] = $request['oldImage'];
+            $validateData['link'] = $request['link'];
+            $validateData['status_id'] = $request['status'];
+            $validateData['show'] = $request['show'];
+            $validateData['hide'] = $request['hide'];
+            $validateData['susunan'] = $request['susunan'];
+
+            Slider::where('id', $slider->id)->update($validateData);
+
+            return redirect('/spsm/admin/slider/view/' . $slider->id)->with('success', 'Satu slider baharu telah berjaya disimpan.');
+        }
+    }
 
     public function sliderDelete(Slider $slider)
     {
         // Delete from directory
         if ($slider->filename) {
-            Storage::delete($slider->filename);
+            Storage::delete('/public/upload/img/' . $slider->filename);
         } else {
             return redirect('/spsm/admin/slider/list')->with('error', 'Couldn\'t delete the image');
         }

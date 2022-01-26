@@ -2,11 +2,19 @@
 
 @section('content')
 
-{{-- Alert --}}
+{{-- Success --}}
 @if (session()->has('success'))
 <div class="alert alert-success alert-dismissible">
     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
     {{ session('success') }}
+</div>
+@endif
+
+{{-- Error --}}
+@if (session()->has('error'))
+<div class="alert alert-danger alert-dismissible">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    {{ session('error') }}
 </div>
 @endif
 
@@ -17,6 +25,7 @@
                 <div class="col-sm-6">
                     <form action="/spsm/admin/slider/update/{{ $slider->id }}" method="post"
                         enctype="multipart/form-data">
+                        @method('put')
                         @csrf
                         <div class="row mb-3">
                             <label for="" class="col-sm-3 col-form-label col-form-label-sm">Gambar</label>
