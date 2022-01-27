@@ -5,6 +5,7 @@ use App\Http\Controllers\ApplicationController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\Admin\PagesController;
 use App\Http\Controllers\MediaController;
+use App\Http\Controllers\PopupController;
 use App\Models\Media;
 use Illuminate\Support\Facades\Route;
 
@@ -83,3 +84,6 @@ Route::put('/spsm/admin/slider/update/{slider}', [MediaController::class, 'slide
 
 // Slider delete route
 Route::delete('/spsm/admin/slider/delete/{slider}', [MediaController::class, 'sliderDelete'])->middleware('auth');
+
+// Popup Route
+Route::resource('/spsm/admin/popup', PopupController::class)->middleware('auth');

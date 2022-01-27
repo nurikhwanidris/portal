@@ -75,7 +75,7 @@
                                 {{ $slider->hide }}
                             </td>
                             <td class="align-middle text-center">
-                                <span class="badge badge-light">{{ $slider->susunan }}</span>
+                                <span class="text-white badge badge-secondary">{{ $slider->susunan }}</span>
                             </td>
                             <td class="align-middle text-left">
                                 {{ $slider->created_at }}

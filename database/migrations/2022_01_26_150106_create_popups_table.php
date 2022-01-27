@@ -15,6 +15,12 @@ class CreatePopupsTable extends Migration
     {
         Schema::create('popups', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained();
+            $table->string('tajuk');
+            $table->dateTime('show')->nullable();
+            $table->dateTime('hide')->nullable();
+            $table->smallInteger('status_id');
+            $table->text('content');
             $table->timestamps();
         });
     }

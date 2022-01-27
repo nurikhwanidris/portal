@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Page;
+use App\Models\Status;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
@@ -40,6 +41,7 @@ class PagesController extends Controller
             'leadCrumbs' => 'Halaman',
             'title' => 'Cipta Halaman Baru',
             'text' => 'This is just a test page for now',
+            'statuses' => Status::all(),
         ]);
     }
 
