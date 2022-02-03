@@ -87,3 +87,6 @@ Route::delete('/spsm/admin/slider/delete/{slider}', [MediaController::class, 'sl
 
 // Popup Route
 Route::resource('/spsm/admin/popup', PopupController::class)->middleware('auth');
+
+// Direktori Pegawai Route
+Route::resource('/spsm/admin/pegawai', DirecktoriPegawaiController::class)->middleware('auth');
