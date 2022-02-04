@@ -4,6 +4,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ApplicationController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\Admin\PagesController;
+use App\Http\Controllers\KeratanAkhbarController;
 use App\Http\Controllers\MediaController;
 use App\Http\Controllers\PopupController;
 use App\Models\Media;
@@ -88,5 +89,10 @@ Route::delete('/spsm/admin/slider/delete/{slider}', [MediaController::class, 'sl
 // Popup Route
 Route::resource('/spsm/admin/popup', PopupController::class)->middleware('auth');
 
-// Direktori Pegawai Route
-Route::resource('/spsm/admin/pegawai', DirecktoriPegawaiController::class)->middleware('auth');
+// Direktori Pegawai route
+Route::resource('/spsm/admin/pegawai', DirecktoriPegawaiController::class)->middleware('auth'); // Sambung dkt sini nanti
+
+// Petukaran Pegawai route
+
+// Keratan Akhbar route
+Route::resource('/spsm/admin/newspaper', KeratanAkhbarController::class)->middleware('auth');

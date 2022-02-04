@@ -209,8 +209,8 @@
                     </ul>
                 </li>
                 {{-- Keratan Akhbar --}}
-                <li class="nav-item {{ (request()->is('spsm/admin/paper/*')) ? 'menu-open' : ''}}">
-                    <a href="#" class="nav-link {{ (request()->is('spsm/admin/paper/*')) ? 'active' : ''}}">
+                <li class="nav-item {{ (request()->is('spsm/admin/newspaper/*')) ? 'menu-open' : ''}}">
+                    <a href="#" class="nav-link {{ (request()->is('spsm/admin/newspaper/*')) ? 'active' : ''}}">
                         <i class="nav-icon fas fa-newspaper"></i>
                         <p>
                             Keratan Akhbar
@@ -219,23 +219,23 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="/spsm/admin/page/create" class="nav-link">
+                            <a href="/spsm/admin/newspaper/create" class="nav-link">
                                 <i class="fas fa-plus nav-icon"></i>
                                 <p>Tambah Keratan Akbar</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/spsm/admin/page/" class="nav-link">
+                            <a href="/spsm/admin/newspaper/" class="nav-link">
                                 <i class="fas fa-list-alt nav-icon"></i>
                                 <p>Senarai Keratan Akhbar</p>
                             </a>
                         </li>
-                        <li class="nav-item">
+                        {{-- <li class="nav-item">
                             <a href="/spsm/admin/page/" class="nav-link">
                                 <i class="fas fa-list-alt nav-icon"></i>
                                 <p>Sumber Keratan Akbar</p>
                             </a>
-                        </li>
+                        </li> --}}
                     </ul>
                 </li>
                 {{-- Pekeliling --}}
