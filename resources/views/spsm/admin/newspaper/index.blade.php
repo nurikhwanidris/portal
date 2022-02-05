@@ -24,15 +24,62 @@
                 <thead class="thead-dark">
                     <tr>
                         <th class="align-middle text-center">#</th>
+                        <th class="align-middle text-center">Gambar</th>
                         <th class="align-middle">Tajuk</th>
-                        <th class="align-middle">Sumber</th>
-                        <th class="align-middle">Tarikh Terbitan</th>
+                        <th class="align-middle text-center">Sumber</th>
+                        <th class="align-middle text-center">Tarikh Terbitan</th>
                         <th class="align-middle text-center">Status</th>
-                        <th class="align-middle text-center">Actions</th>
+                        <th class="align-middle text-left">Actions</th>
                     </tr>
                 </thead>
+                <tbody>
+                    @foreach ($newsArticles as $newsArticle)
+                    <tr>
+                        <td class="align-middle text-center">
+                            {{ $loop->iteration }}
+                        </td>
+                        <td class="align-middle text-center">
+                            <img src="{{ asset('storage/'.$newsArticle->keratanAkhbar) }}" alt="" srcset="">
+                        </td>
+                        <td class="align-middle text-left">
+                            {{ $newsArticle->tajukKeratanAkhbar }}
+                        </td>
+                        <td class="align-middle text-center">
+                            {{ $newsArticle->sumberKeratanAkhbar }}
+                        </td>
+                        <td class="align-middle text-center">
+                            {{ $newsArticle->tarikhTerbitanAkhbar }}
+                        </td>
+                        <td class="align-middle text-center">
+                            {{ $newsArticle->status->status }}
+                        </td>
+
+                        <td class="align-middle text-left">
+                            <form action="/spsm/admin/newspaper/{{ $newsArticle->id }}" class="form-inline"
+                                method="post">
+                                @csrf
+                                @method('delete')
+                                <a href="/spsm/admin/newspaper/{{ $newsArticle->id }}/edit" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <i class="far fa-edit"></i>
+                                </a>
+                                <button type="submit" class="btn btn-link">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                    @endforeach
+                </tbody>
             </table>
         </div>
     </div>
 </div>
+
+<script>
+    $(document).on('click', '[data-toggle="lightbox"]', function (event) {
+    event.preventDefault();
+    $(this).ekkoLightbox();
+    });
+</script>
 @endsection

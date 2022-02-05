@@ -18,6 +18,7 @@ class CreateKeratanAkhbarsTable extends Migration
             $table->foreignId('user_id')->constrained();
             $table->string('keratanAkhbar');
             $table->string('tajukKeratanAkhbar');
+            $table->string('sumberKeratanAkhbar');
             $table->date('tarikhTerbitanAkhbar');
             $table->smallInteger('status_id');
             $table->timestamps();

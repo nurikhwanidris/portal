@@ -19,7 +19,7 @@ class KeratanAkhbarController extends Controller
             'title' => 'Senarai Keratan Akbar',
             'leadCrumbs' => 'Keratan Akhbar',
             'link' => '/spsm/admin/newspaper',
-            // 'articles'=> KeratanAkbar::with('status')->get(),
+            'newsArticles' => KeratanAkhbar::with('status')->get(),
         ]);
     }
 
@@ -47,15 +47,24 @@ class KeratanAkhbarController extends Controller
     public function store(Request $request)
     {
         $validateData = $request->validate([
-            'keratanAkhbar' => 'required',
+            'keratanAkhbar' => 'required|image|max:1024',
             'tajukKeratanAkhbar' => 'required',
-            'tarikhTerbitan' => 'required',
-            'status' => 'required',
+            'sumberKeratanAkhbar' => 'required',
+            'tarikhTerbitanAkhbar' => 'required',
+            'status_id' => 'required',
         ]);
 
-        KeratanAkhbar::create($validateData);
+        if ($validateData) {
+            $validateData['keratanAkhbar'] = $request->file('keratanAkhbar')->store('public/upload/img');
 
-        return redirect('/spsm/admin/newspaper/create')->with('success', 'Satu Keratan Akhbar telah berjaya ditambah');
+            $validateData['user_id'] = auth()->user()->id;
+
+            KeratanAkhbar::create($validateData);
+
+            return redirect('/spsm/admin/newspaper/create')->with('success', 'Satu Keratan Akhbar telah berjaya ditambah');
+        } else {
+            return redirect('/spsm/admin/newspaper/create')->with('error', 'An error has occurred');
+        }
     }
 
     /**

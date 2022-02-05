@@ -16,7 +16,7 @@ class KeratanAkhbar extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function statuses()
+    public function status()
     {
         return $this->belongsTo(Status::class);
     }
