@@ -23,7 +23,6 @@
             <table class="table table-striped table-sm">
                 <thead class="thead-dark">
                     <tr>
-                        <th class="align-middle text-center">#</th>
                         <th class="align-middle text-center">Gambar</th>
                         <th class="align-middle">Tajuk</th>
                         <th class="align-middle text-center">Sumber</th>
@@ -33,41 +32,40 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($newsArticles as $newsArticle)
+                    @foreach ($keratanAkhbars as $keratanAkhbar)
                     <tr>
                         <td class="align-middle text-center">
-                            {{ $loop->iteration }}
-                        </td>
-                        <td class="align-middle text-center w-25">
-                            <img src="{{ asset('upload/img/'.$newsArticle->keratanAkhbar) }}"
-                                alt="{{ $newsArticle->tajukKeratanAkhbar }}" srcset="" class="img-fluid img-thumbnail">
+                            <a href="{{ asset('upload/img/'.$keratanAkhbar->filename) }}" data-toggle="lightbox">
+                                <img src="{{ asset('upload/img/'.$keratanAkhbar->filename) }}"
+                                    alt="{{ $keratanAkhbar->tajukKeratanAkhbar }}" srcset=""
+                                    class="img-fluid img-thumbnail" style="height:auto; width:150px;">
+                            </a>
                         </td>
                         <td class="align-middle text-left">
-                            {{ $newsArticle->tajukKeratanAkhbar }}
+                            {{ $keratanAkhbar->tajukKeratanAkhbar }}
                         </td>
                         <td class="align-middle text-center">
-                            {{ $newsArticle->sumberKeratanAkhbar }}
+                            {{ $keratanAkhbar->sumberKeratanAkhbar }}
                         </td>
                         <td class="align-middle text-center">
-                            {{ $newsArticle->tarikhTerbitanAkhbar }}
+                            {{ $keratanAkhbar->tarikhTerbitanAkhbar }}
                         </td>
                         <td class="align-middle text-center">
-                            {{ $newsArticle->status->status }}
+                            {{ $keratanAkhbar->status->status }}
                         </td>
 
-                        <td class="align-middle text-left">
-                            <form action="/spsm/admin/newspaper/{{ $newsArticle->id }}" class="form-inline"
-                                method="post">
-                                @csrf
-                                @method('delete')
-                                <a href="/spsm/admin/newspaper/{{ $newsArticle->id }}/edit" target="_blank"
-                                    rel="noopener noreferrer">
-                                    <i class="far fa-edit"></i>
-                                </a>
-                                <button type="submit" class="btn btn-link">
-                                    <i class="fas fa-trash"></i>
-                                </button>
-                            </form>
+                        <td class="align-middle text-center">
+                            <div class="form-inline">
+                                <a href="/spsm/admin/newspaper/{{ $keratanAkhbar->id }}/edit"
+                                    class="text-decoration-none text-center"><i class="far fa-edit"></i></a>&nbsp;&nbsp;
+                                <form action="/spsm/admin/newspaper/{{ $keratanAkhbar->id }}" method="post">
+                                    @csrf
+                                    @method('delete')
+                                    <button class="btn-link btn" type="submit"
+                                        onclick="return confirm('Are you sure?')"><i
+                                            class="fas fa-trash"></i></button></button>
+                                </form>
+                            </div>
                         </td>
                     </tr>
                     @endforeach

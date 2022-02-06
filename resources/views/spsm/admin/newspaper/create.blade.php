@@ -29,9 +29,9 @@
                                 Akhbar</label>
                             <span class="col-md-1">:</span>
                             <div class="col-md-8">
-                                <input type="file" name="keratanAkhbar" id="image" class="form-control form-control-sm"
+                                <input type="file" name="filename" id="image" class="form-control form-control-sm"
                                     accept="image/png, image/jpg, image/jpeg" onchange="previewImage()">
-                                @error('keratanAkhbar')
+                                @error('filename')
                                 <div class="invalid-feedback">
                                     {{ $message }}
                                 </div>

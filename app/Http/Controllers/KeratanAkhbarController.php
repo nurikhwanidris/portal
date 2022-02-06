@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\KeratanAkhbar;
 use App\Models\Status;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class KeratanAkhbarController extends Controller
 {
@@ -19,7 +20,7 @@ class KeratanAkhbarController extends Controller
             'title' => 'Senarai Keratan Akbar',
             'leadCrumbs' => 'Keratan Akhbar',
             'link' => '/spsm/admin/newspaper',
-            'newsArticles' => KeratanAkhbar::with('status')->get(),
+            'keratanAkhbars' => KeratanAkhbar::with('status')->orderBy('id', 'desc')->get(),
         ]);
     }
 
@@ -47,7 +48,7 @@ class KeratanAkhbarController extends Controller
     public function store(Request $request)
     {
         $validateData = $request->validate([
-            'keratanAkhbar' => 'required|image|max:1024',
+            'filename' => 'required|image|max:1024',
             'tajukKeratanAkhbar' => 'required',
             'sumberKeratanAkhbar' => 'required',
             'tarikhTerbitanAkhbar' => 'required',
@@ -57,25 +58,25 @@ class KeratanAkhbarController extends Controller
         if ($validateData) {
 
             // Get filename with extension
-            $filenamewithextension = $request->file('keratanAkhbar')->getClientOriginalName();
+            $filenamewithextension = $request->file('filename')->getClientOriginalName();
 
             // Filter out the extension
             $filename = pathinfo($filenamewithextension, PATHINFO_FILENAME);
 
             // Filter out the filename
-            $extension = $request->file('keratanAkhbar')->getClientOriginalExtension();
+            $extension = $request->file('filename')->getClientOriginalExtension();
 
             // Remove all white spaces
-            $filenametostore = str_replace(' ', '-', $filename) . '.' . $extension;
+            $filenametostore = str_replace(' ', '-', $filename) . '-' . time() . '.' . $extension;
 
             // Store with filename
-            $request->file('keratanAkhbar')->storeAs('public/upload/img', $filenametostore);
+            $request->file('filename')->storeAs('public/upload/img', $filenametostore);
 
             // Save inside the database
             $save = new KeratanAkhbar;
 
             $save->user_id = auth()->user()->id;
-            $save->keratanAkhbar = $filenametostore;
+            $save->filename = $filenametostore;
             $save->tajukKeratanAkhbar = $validateData['tajukKeratanAkhbar'];
             $save->sumberKeratanAkhbar = $validateData['sumberKeratanAkhbar'];
             $save->tarikhTerbitanAkhbar = $validateData['tarikhTerbitanAkhbar'];
@@ -133,6 +134,18 @@ class KeratanAkhbarController extends Controller
      */
     public function destroy(KeratanAkhbar $keratanAkhbar)
     {
-        //
+        // Delete file from storage
+        if ($keratanAkhbar->filename) {
+            Storage::delete('public/upload/img/' . $keratanAkhbar->filename);
+        } else {
+            return redirect('/spsm/admin/newspaper')->with('error', 'Couldn\'t delete the file');
+        }
+
+        // Delete row from table
+        if (KeratanAkhbar::destroy($keratanAkhbar->id)) {
+            return redirect('/spsm/admin/newspaper/')->with('success', 'Satu keratan akhbar telah berjaya dipadam');
+        } else {
+            return redirect('/spsm/admin/newspaper/')->with('error', 'Something went wrong');
+        }
     }
 }
