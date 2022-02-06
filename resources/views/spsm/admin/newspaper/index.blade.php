@@ -38,8 +38,9 @@
                         <td class="align-middle text-center">
                             {{ $loop->iteration }}
                         </td>
-                        <td class="align-middle text-center">
-                            <img src="{{ asset('storage/'.$newsArticle->keratanAkhbar) }}" alt="" srcset="">
+                        <td class="align-middle text-center w-25">
+                            <img src="{{ asset('upload/img/'.$newsArticle->keratanAkhbar) }}"
+                                alt="{{ $newsArticle->tajukKeratanAkhbar }}" srcset="" class="img-fluid img-thumbnail">
                         </td>
                         <td class="align-middle text-left">
                             {{ $newsArticle->tajukKeratanAkhbar }}

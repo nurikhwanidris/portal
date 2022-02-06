@@ -106,8 +106,7 @@
                         <div class="row mb-3">
                             <div class="col-md-12 text-center">
                                 <a href="" id="imgModal" data-toggle="lightbox">
-                                    <img src="" alt="" srcset="" style="height: auto; width: 30%" class="img-thumbnail"
-                                        id="img-preview">
+                                    <img src="" alt="" srcset="" class="img-thumbnail img-fluid w-100" id="img-preview">
                                 </a>
                             </div>
                         </div>

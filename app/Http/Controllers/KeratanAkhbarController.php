@@ -55,14 +55,38 @@ class KeratanAkhbarController extends Controller
         ]);
 
         if ($validateData) {
-            $validateData['keratanAkhbar'] = $request->file('keratanAkhbar')->store('public/upload/img');
 
-            $validateData['user_id'] = auth()->user()->id;
+            // Get filename with extension
+            $filenamewithextension = $request->file('keratanAkhbar')->getClientOriginalName();
 
-            KeratanAkhbar::create($validateData);
+            // Filter out the extension
+            $filename = pathinfo($filenamewithextension, PATHINFO_FILENAME);
 
+            // Filter out the filename
+            $extension = $request->file('keratanAkhbar')->getClientOriginalExtension();
+
+            // Remove all white spaces
+            $filenametostore = str_replace(' ', '-', $filename) . '.' . $extension;
+
+            // Store with filename
+            $request->file('keratanAkhbar')->storeAs('public/upload/img', $filenametostore);
+
+            // Save inside the database
+            $save = new KeratanAkhbar;
+
+            $save->user_id = auth()->user()->id;
+            $save->keratanAkhbar = $filenametostore;
+            $save->tajukKeratanAkhbar = $validateData['tajukKeratanAkhbar'];
+            $save->sumberKeratanAkhbar = $validateData['sumberKeratanAkhbar'];
+            $save->tarikhTerbitanAkhbar = $validateData['tarikhTerbitanAkhbar'];
+            $save->status_id = $validateData['status_id'];
+
+            $save->save();
+
+            // Relay the success message
             return redirect('/spsm/admin/newspaper/create')->with('success', 'Satu Keratan Akhbar telah berjaya ditambah');
         } else {
+            // Relay the error message
             return redirect('/spsm/admin/newspaper/create')->with('error', 'An error has occurred');
         }
     }
