@@ -165,16 +165,25 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/spsm/admin/page/" class="nav-link">
+                            <a href="#" class="nav-link">
                                 <i class="fas fa-list-ul nav-icon"></i>
                                 <p>Jabatan/Unit</p>
+                                <i class="fas fa-angle-left right"></i>
                             </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/spsm/admin/page/" class="nav-link">
-                                <i class="fas fa-list-ul nav-icon"></i>
-                                <p>Susunan Jabatan/Staf</p>
-                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="/spsm/admin/jabatan/" class="nav-link">
+                                        <i class="fas fa-list-alt nav-icon"></i>
+                                        <p>Senarai Jabatan</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/spsm/admin/page/" class="nav-link">
+                                        <i class="fas fa-list-ul nav-icon"></i>
+                                        <p>Susunan Jabatan/Staf</p>
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="nav-item">
                             <a href="/spsm/admin/page/" class="nav-link">

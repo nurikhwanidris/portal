@@ -4,9 +4,11 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ApplicationController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\Admin\PagesController;
+use App\Http\Controllers\JabatanUnitController;
 use App\Http\Controllers\KeratanAkhbarController;
 use App\Http\Controllers\MediaController;
 use App\Http\Controllers\PopupController;
+use App\Models\JabatanUnit;
 use App\Models\Media;
 use Illuminate\Support\Facades\Route;
 
@@ -91,6 +93,9 @@ Route::resource('/spsm/admin/popup', PopupController::class)->middleware('auth')
 
 // Direktori Pegawai route
 Route::resource('/spsm/admin/pegawai', DirecktoriPegawaiController::class)->middleware('auth'); // Sambung dkt sini nanti
+
+// Jabatan route
+Route::resource('/spsm/admin/jabatan', JabatanUnitController::class)->middleware('auth');
 
 // Petukaran Pegawai route
 
