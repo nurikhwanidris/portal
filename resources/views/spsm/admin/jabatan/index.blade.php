@@ -44,7 +44,7 @@
                                 Pejabat Ketua Pengarah Ukur Dan Pemetaan Malaysia
                             </td>
                             <td class="align-middle">
-Office Of The Director General Of Survey And Mapping Malaysia
+                                Office Of The Director General Of Survey And Mapping Malaysia
                             </td>
                             <td class="align-middle">
 
