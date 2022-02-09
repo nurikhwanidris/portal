@@ -46,11 +46,13 @@
                             <td class="align-middle">
                                 Office Of The Director General Of Survey And Mapping Malaysia
                             </td>
-                            <td class="align-middle">
-
+                            <td class="align-middle text-center">
+                                <span class="badge badge-success">Published</span>
                             </td>
-                            <td class="align-middle">
-
+                            <td class="align-middle text-center">
+                                <a href="#" class="">
+                                    <i class="fa fa-edit"></i>
+                                </a>
                             </td>
                         </tr>
                     </tbody>

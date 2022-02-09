@@ -14,9 +14,9 @@ class MediaFactory extends Factory
     public function definition()
     {
         return [
-            'user_id'=> rand(1,5),
-            'filename'=> 'something.jpg',
-            'path'=> 'https://dummyimage.com/400x400/000/fff',
+            'user_id' => 1,
+            'filename' => 'something.jpg',
+            'path' => 'https://dummyimage.com/400x400/000/fff',
         ];
     }
 }

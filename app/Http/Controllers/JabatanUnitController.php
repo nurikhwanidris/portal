@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\JabatanUnit;
 use Illuminate\Http\Request;
+use App\Models\Status;
 
 class JabatanUnitController extends Controller
 {
@@ -28,11 +29,11 @@ class JabatanUnitController extends Controller
      */
     public function create()
     {
-        return view('spsm.admin.jabatan.create',[
-            'title'=>'Cipta Jabatan & Unit',
-            'leadCrumbs'=>'Jabatan & Unit',
-            'link'=>'/spsm/admin/jabatan',
-            
+        return view('spsm.admin.jabatan.create', [
+            'title' => 'Cipta Jabatan & Unit',
+            'leadCrumbs' => 'Jabatan & Unit',
+            'link' => '/spsm/admin/jabatan',
+            'statuses' => Status::all(),
         ]);
     }
 
@@ -44,7 +45,13 @@ class JabatanUnitController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validateData = $request->validate([
+            'namaJabatan' => 'required',
+            'departmentName' => 'required',
+            'parentId' => 'required',
+            'sortOrder' => 'required',
+            'status_id' => 'required',
+        ]);
     }
 
     /**

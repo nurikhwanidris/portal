@@ -19,7 +19,7 @@ class CreateJabatanUnitsTable extends Migration
             $table->string('namaJabatan');
             $table->string('departmentName');
             $table->string('parentId');
-            $table->string('sortOrder');
+            $table->string('sortOrder')->nullable();
             $table->smallInteger('status_id');
             $table->timestamps();
         });
