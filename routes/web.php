@@ -1,15 +1,12 @@
 <?php
 
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\ApplicationController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\Admin\PagesController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\JabatanUnitController;
 use App\Http\Controllers\KeratanAkhbarController;
 use App\Http\Controllers\MediaController;
 use App\Http\Controllers\PopupController;
-use App\Models\JabatanUnit;
-use App\Models\Media;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,8 +28,8 @@ Route::get('/', function () {
 // SPSM CMS route
 Route::get('/spsm', [HomeController::class, 'index'])->middleware('auth');
 
-// Application index
-Route::get('/spsm/application', [ApplicationController::class, 'index']);
+// Admin route
+Route::get('/spsm/admin')->middleware('auth');
 
 // Login Route
 Route::get('/spsm/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
