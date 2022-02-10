@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\PagesController;
 use App\Http\Controllers\JabatanUnitController;
 use App\Http\Controllers\KeratanAkhbarController;
 use App\Http\Controllers\MediaController;
+use App\Http\Controllers\PengumumanController;
 use App\Http\Controllers\PopupController;
 use App\Models\JabatanUnit;
 use App\Models\Media;
@@ -101,3 +102,6 @@ Route::resource('/spsm/admin/jabatan', JabatanUnitController::class)->middleware
 
 // Keratan Akhbar route
 Route::resource('/spsm/admin/newspaper', KeratanAkhbarController::class)->middleware('auth');
+
+// Pengumuman
+Route::resource('/spsm/admin/pengumuman/', PengumumanController::class)->middleware('auth');
