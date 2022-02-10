@@ -121,7 +121,7 @@
                 {{-- Popup --}}
                 <li class="nav-item {{ (request()->is('spsm/admin/popup/*')) ? 'menu-open' : ''}}">
                     <a href="#" class="nav-link {{ (request()->is('spsm/admin/popup/*')) ? 'active' : ''}}">
-                        <i class="nav-icon fas fa-bullhorn"></i>
+                        <i class="nav-icon fas fa-asterisk"></i>
                         <p>
                             Popup
                             <i class="fas fa-angle-left right"></i>
@@ -144,7 +144,7 @@
                 </li>
                 <li class="nav-item {{ (request()->is('spsm/admin/pengumuman/*')) ? 'menu-open' : ''}}">
                     <a href="#" class="nav-link {{ (request()->is('spsm/admin/pengumuman/*')) ? 'active' : ''}}">
-                        <i class="nav-icon fas fa-megaphone"></i>
+                        <i class="nav-icon fas fa-bullhorn"></i>
                         <p>
                             Pengumuman
                             <i class="fas fa-angle-left right"></i>

@@ -28,7 +28,11 @@ class PengumumanController extends Controller
      */
     public function create()
     {
-        //
+        return view('spsm.admin.annoucement.create', [
+            'title' => 'Cipta Pengumuman Baru',
+            'leadCrumbs' => 'Pengumuman',
+            'link' => '/spsm/admin/pengumuman'
+        ]);
     }
 
     /**
