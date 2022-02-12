@@ -30,5 +30,10 @@ class DatabaseSeeder extends Seeder
 
         // Create Status
         Status::insert($statuses);
+
+        // Create default user
+        $this->call([
+            AdminUserSeeder::class,
+        ]);
     }
 }
