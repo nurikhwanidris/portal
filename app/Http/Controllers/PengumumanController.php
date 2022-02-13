@@ -69,7 +69,11 @@ class PengumumanController extends Controller
      */
     public function show(Pengumuman $pengumuman)
     {
-        //
+        return view('spsm.admin.annoucement.show', [
+            'title' => $pengumuman->tajukPengumuman,
+            'leadCrumbs' => 'Pengumuman',
+            'link' => '/spsm/admin/pengumuman',
+        ]);
     }
 
     /**
@@ -80,7 +84,11 @@ class PengumumanController extends Controller
      */
     public function edit(Pengumuman $pengumuman)
     {
-        //
+        return view('spsm.admin.annoucement.edit', [
+            'title' => $pengumuman->tajukPengumuman,
+            'leadCrumbs' => 'Pengumuman',
+            'link' => '/spsm/admin/pengumuman',
+        ]);
     }
 
     /**

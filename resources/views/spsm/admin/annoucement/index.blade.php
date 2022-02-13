@@ -30,7 +30,10 @@
                         @foreach ($annoucements as $annoucement)
                         <tr>
                             <td class="align-middle">{{ $loop->iteration }}</td>
-                            <td class="align-middle">{{ $annoucement->tajukPengumuman }}</td>
+                            <td class="align-middle">
+                                <a href="/spsm/admin/pengumuman/{{ $annoucement->id }}" target="_blank"
+                                    rel="noopener noreferrer">{{ $annoucement->tajukPengumuman }}</a>
+                            </td>
                             <td class="align-middle">{{ $annoucement->paparanMula }}</td>
                             <td class="align-middle">{{ $annoucement->paparanTamat }}</td>
                             <td class="align-middle">13 Jam</td>
@@ -42,10 +45,11 @@
                                     @method('delete')
                                     @csrf
                                     <div class="row-inline">
-                                        <a href="#" class="btn btn-link">
+                                        <a href="/spsm/admin/pengumuman/{{ $annoucement->id }}/edit"
+                                            class="btn btn-link">
                                             <i class="fa fa-edit"></i>
                                         </a>
-                                        <button type="submit" class="btn btn-link">
+                                        <button type="submit" class="btn btn-link text-danger">
                                             <i class="fa fa-trash"></i>
                                         </button>
                                     </div>

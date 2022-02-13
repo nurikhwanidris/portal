@@ -24,27 +24,28 @@
                                 <label for="" class="col-sm-2 col-form-label col-form-label-sm">Tajuk Pengumuman</label>
                                 <span class="col-sm-1">:</span>
                                 <div class="col-sm-9">
-                                    <input type="text" name="tajukPengumuman" id="" class="form-control form-control-sm"
+                                    <input type="text" name="tajukPengumuman" id=""
+                                        class="form-control form-control-sm @error ('tajukPengumuman') is-invalid @enderror"
                                         placeholder="Masukkan tajuk pengumuman">
+                                    @error('tajukPengumuman')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
                                 </div>
-                                @error('tajukPegumuman')
-                                <div class="invalid-feedback">
-                                    {{ $message }}
-                                </div>
-                                @enderror
                             </div>
                             <div class="row mb-3">
                                 <label for="" class="col-sm-2 col-form-label col-form-label-sm">Isi Pengumuman</label>
                                 <span class="col-sm-1">:</span>
                                 <div class="col-sm-9">
-                                    <textarea name="isiPengumuman" id="" cols="30" rows="10"
-                                        class="form-control"></textarea>
+                                    <textarea name="isiPengumuman" id="" cols="30" rows="5"
+                                        class="form-control @error('isiPengumuman') is-invalid @enderror"></textarea>
+                                    @error('isiPengumuman')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
                                 </div>
-                                @error('isiPengumuman')
-                                <div class="invalid-feedback">
-                                    {{ $message }}
-                                </div>
-                                @enderror
                             </div>
                             <div class="row mb-3">
                                 <label for="" class="col-sm-2 col-form-label col-form-label-sm">Mula Paparan</label>
@@ -66,18 +67,19 @@
                                 <label for="" class="col-sm-2 col-form-label col-form-label-sm">Status</label>
                                 <span class="col-sm-1">:</span>
                                 <div class="col-sm-2">
-                                    <select name="status_id" id="" class="form-control form-control-sm">
+                                    <select name="status_id" id=""
+                                        class="form-control form-control-sm @error('status_id') is-invalid @enderror">
                                         <option value="">Sila Pilih</option>
                                         @foreach ($statuses as $status)
                                         <option value="{{ $status->id }}">{{ $status->status }}</option>
                                         @endforeach
                                     </select>
+                                    @error('status_id')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
                                 </div>
-                                @error('status_id')
-                                <div class="invalid-feedback">
-                                    {{ $message }}
-                                </div>
-                                @enderror
                             </div>
                             <div class="row mb-3">
                                 <div class="col-sm-12">

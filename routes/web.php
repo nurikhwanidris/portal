@@ -89,11 +89,11 @@ Route::delete('/spsm/admin/slider/delete/{slider}', [MediaController::class, 'sl
 // Popup Route
 Route::resource('/spsm/admin/popup', PopupController::class)->middleware('auth');
 
-// Direktori Pegawai route
-Route::resource('/spsm/admin/pegawai', DirecktoriPegawaiController::class)->middleware('auth'); // Sambung dkt sini nanti
+// // Direktori Pegawai route
+// Route::resource('/spsm/admin/pegawai', DirecktoriPegawaiController::class)->middleware('auth'); // Sambung dkt sini nanti
 
-// Jabatan route
-Route::resource('/spsm/admin/jabatan', JabatanUnitController::class)->middleware('auth');
+// // Jabatan route
+// Route::resource('/spsm/admin/jabatan', JabatanUnitController::class)->middleware('auth');
 
 // Petukaran Pegawai route
 
@@ -101,4 +101,4 @@ Route::resource('/spsm/admin/jabatan', JabatanUnitController::class)->middleware
 Route::resource('/spsm/admin/newspaper', KeratanAkhbarController::class)->middleware('auth');
 
 // Pengumuman
-Route::resource('/spsm/admin/pengumuman/', PengumumanController::class)->middleware('auth');
+Route::resource('/spsm/admin/pengumuman', PengumumanController::class)->middleware('auth');
