@@ -33,7 +33,7 @@ class DatabaseSeeder extends Seeder
 
         // Create default user
         $this->call([
-            AdminUserSeeder::class,
+            DefaultUserSeeder::class,
         ]);
     }
 }
