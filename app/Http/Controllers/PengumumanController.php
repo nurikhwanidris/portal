@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Pengumuman;
 use Illuminate\Http\Request;
+use App\Models\Status;
 
 class PengumumanController extends Controller
 {
@@ -18,6 +19,7 @@ class PengumumanController extends Controller
             'title' => 'Senarai Pengumuman',
             'leadCrumbs' => 'Pengumuman',
             'link' => '/spsm/admin/pengumuman',
+            'annoucements' => Pengumuman::with('status')->get(),
         ]);
     }
 
@@ -31,7 +33,8 @@ class PengumumanController extends Controller
         return view('spsm.admin.annoucement.create', [
             'title' => 'Cipta Pengumuman Baru',
             'leadCrumbs' => 'Pengumuman',
-            'link' => '/spsm/admin/pengumuman'
+            'link' => '/spsm/admin/pengumuman',
+            'statuses' => Status::all(),
         ]);
     }
 
@@ -43,7 +46,19 @@ class PengumumanController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validateData = $request->validate([
+            'tajukPengumuman' => 'required',
+            'isiPengumuman' => 'required',
+            'status_id' => 'required',
+        ]);
+
+        $validateData['user_id'] = auth()->user()->id;
+        $validateData['paparanMula'] = $request->paparanMula;
+        $validateData['paparanTamat'] = $request->paparanTamat;
+
+        Pengumuman::create($validateData);
+
+        return redirect('/spsm/admin/pengumuman')->with('success', 'Satu pengumuman telah berjaya disimpan dan akan mula dipaparkan pada ' . '<b>' . $validateData['paparanMula'] . '</b>.');
     }
 
     /**

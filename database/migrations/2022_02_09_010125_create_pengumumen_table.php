@@ -13,13 +13,13 @@ class CreatePengumumenTable extends Migration
      */
     public function up()
     {
-        Schema::create('pengumuman', function (Blueprint $table) {
+        Schema::create('pengumumen', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained();
             $table->string('tajukPengumuman');
             $table->text('isiPengumuman');
-            $table->dateTime('startAt');
-            $table->dateTime('expiredAt');
+            $table->dateTime('paparanMula')->nullable();
+            $table->dateTime('paparanTamat')->nullable();
             $table->smallInteger('status_id');
             $table->timestamps();
         });
@@ -32,6 +32,6 @@ class CreatePengumumenTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pengumuman');
+        Schema::dropIfExists('pengumumen');
     }
 }

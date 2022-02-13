@@ -20,6 +20,6 @@ class Popup extends Model
 
     public function status()
     {
-        return $this->belongsTo(Status::class, 'status_id');
+        $this->belongsTo(Status::class, 'status_id');
     }
 }
