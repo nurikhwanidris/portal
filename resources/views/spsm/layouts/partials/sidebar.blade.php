@@ -311,13 +311,13 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="/spsm/admin/page/create" class="nav-link">
+                            <a href="/spsm/admin/quote/create" class="nav-link">
                                 <i class="fas fa-plus nav-icon"></i>
                                 <p>Tambah Sebut Harga</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/spsm/admin/page/" class="nav-link">
+                            <a href="/spsm/admin/quote/" class="nav-link">
                                 <i class="fas fa-list-alt nav-icon"></i>
                                 <p>Senarai Sebut Harga</p>
                             </a>
@@ -335,13 +335,13 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="/spsm/admin/page/create" class="nav-link">
+                            <a href="/spsm/admin/tender/create" class="nav-link">
                                 <i class="fas fa-plus nav-icon"></i>
                                 <p>Tambah Tender</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/spsm/admin/page/" class="nav-link">
+                            <a href="/spsm/admin/tender/" class="nav-link">
                                 <i class="fas fa-list-alt nav-icon"></i>
                                 <p>Senarai Tender</p>
                             </a>

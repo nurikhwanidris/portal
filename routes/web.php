@@ -8,6 +8,7 @@ use App\Http\Controllers\KeratanAkhbarController;
 use App\Http\Controllers\MediaController;
 use App\Http\Controllers\PengumumanController;
 use App\Http\Controllers\PopupController;
+use App\Http\Controllers\TenderController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -102,3 +103,6 @@ Route::resource('/spsm/admin/newspaper', KeratanAkhbarController::class)->middle
 
 // Pengumuman
 Route::resource('/spsm/admin/pengumuman', PengumumanController::class)->middleware('auth');
+
+// Tender route
+Route::resource('/spsm/admin/tender', TenderController::class)->middleware('auth');
