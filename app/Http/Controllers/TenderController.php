@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Tender;
+use App\Models\Status;
 use Illuminate\Http\Request;
 
 class TenderController extends Controller
@@ -14,7 +15,12 @@ class TenderController extends Controller
      */
     public function index()
     {
-        //
+        return view('spsm.admin.tender.index', [
+            'title' => 'Senarai Tender',
+            'leadCrumbs' => 'Tender',
+            'link' => '/spsm/admin/tender',
+            'tenders' => Tender::with('status')->get(),
+        ]);
     }
 
     /**
@@ -24,7 +30,12 @@ class TenderController extends Controller
      */
     public function create()
     {
-        //
+        return view('spsm.admin.tender.create', [
+            'title' => 'Cipta Tender',
+            'leadCrumbs' => 'Tender',
+            'link' => '/spsm/admin/tender',
+            'statuses' => Status::all(),
+        ]);
     }
 
     /**

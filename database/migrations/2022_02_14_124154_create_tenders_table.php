@@ -18,7 +18,10 @@ class CreateTendersTable extends Migration
             $table->foreignId('user_id')->constrained();
             $table->string('title_my');
             $table->string('title_en');
+            $table->string('kod');
             $table->string('harga');
+            $table->string('tempoh');
+            $table->string('masa');
             $table->string('taklimat');
             $table->string('pertanyaan');
             $table->string('filename');
