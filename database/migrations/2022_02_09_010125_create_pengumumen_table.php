@@ -16,8 +16,10 @@ class CreatePengumumenTable extends Migration
         Schema::create('pengumumen', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained();
-            $table->string('tajukPengumuman');
-            $table->text('isiPengumuman');
+            $table->string('title_my');
+            $table->string('title_en');
+            $table->text('content_my');
+            $table->text('content_en');
             $table->dateTime('paparanMula')->nullable();
             $table->dateTime('paparanTamat')->nullable();
             $table->smallInteger('status_id');

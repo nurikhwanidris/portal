@@ -47,8 +47,10 @@ class PengumumanController extends Controller
     public function store(Request $request)
     {
         $validateData = $request->validate([
-            'tajukPengumuman' => 'required',
-            'isiPengumuman' => 'required',
+            'title_my' => 'required',
+            'title_en' => 'required',
+            'content_my' => 'required',
+            'content_en' => 'required',
             'status_id' => 'required',
         ]);
 
@@ -70,9 +72,10 @@ class PengumumanController extends Controller
     public function show(Pengumuman $pengumuman)
     {
         return view('spsm.admin.annoucement.show', [
-            'title' => $pengumuman->tajukPengumuman,
+            'title' => 'Pengumuman',
             'leadCrumbs' => 'Pengumuman',
             'link' => '/spsm/admin/pengumuman',
+            'annoucement' => $pengumuman,
         ]);
     }
 
@@ -85,9 +88,11 @@ class PengumumanController extends Controller
     public function edit(Pengumuman $pengumuman)
     {
         return view('spsm.admin.annoucement.edit', [
-            'title' => $pengumuman->tajukPengumuman,
+            'title' => $pengumuman->title_my,
             'leadCrumbs' => 'Pengumuman',
             'link' => '/spsm/admin/pengumuman',
+            'annoucement' => $pengumuman,
+            'statuses' => Status::all(),
         ]);
     }
 
@@ -100,7 +105,21 @@ class PengumumanController extends Controller
      */
     public function update(Request $request, Pengumuman $pengumuman)
     {
-        //
+        $validateData = $request->validate([
+            'title_my' => 'required',
+            'title_en' => 'required',
+            'content_my' => 'required',
+            'content_en' => 'required',
+            'status_id' => 'required',
+        ]);
+
+        $validateData['user_id'] = auth()->user()->id;
+        $validateData['paparanMula'] = $request->paparanMula;
+        $validateData['paparanTamat'] = $request->paparanTamat;
+
+        Pengumuman::where('id', $pengumuman->id)->update($validateData);
+
+        return redirect('/spsm/admin/pengumuman/' . $pengumuman->id . '/edit')->with('success', 'Satu pengumuman telah berjaya disimpan dan akan mula dipaparkan pada '  . $validateData['paparanMula']);
     }
 
     /**
@@ -111,6 +130,8 @@ class PengumumanController extends Controller
      */
     public function destroy(Pengumuman $pengumuman)
     {
-        //
+        Pengumuman::destroy($pengumuman->id);
+
+        return redirect('/spsm/admin/pengumuman')->with('success', 'Satu pengumuman telah berjaya dipadam');
     }
 }

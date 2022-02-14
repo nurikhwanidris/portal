@@ -47,7 +47,8 @@
                 <form action="/spsm/login" method="POST">
                     @csrf
                     <div class="input-group mb-3">
-                        <input type="text" name="email" class="form-control" placeholder="Kata nama">
+                        <input type="text" name="email" class="form-control" placeholder="Email..."
+                            value="{{ old('email') }}">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-user"></span>

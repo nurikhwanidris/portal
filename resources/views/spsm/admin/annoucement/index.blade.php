@@ -1,6 +1,15 @@
 @extends('spsm.layouts.main')
 
 @section('content')
+
+{{-- Alert --}}
+@if (session()->has('success'))
+<div class="alert alert-success alert-dismissible">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    {{ session('success') }}
+</div>
+@endif
+
 <div class="card">
     <div class="card-body">
         <div class="row">
@@ -19,6 +28,7 @@
                         <tr>
                             <th class="align-middle">#</th>
                             <th class="align-middle">Tajuk Pengumuman</th>
+                            <th class="align-middle">Annoucement Titlte</th>
                             <th class="align-middle">Mula Paparan</th>
                             <th class="align-middle">Tamat Paparan</th>
                             <th class="align-middle">Masa yang Tinggal</th>
@@ -32,7 +42,11 @@
                             <td class="align-middle">{{ $loop->iteration }}</td>
                             <td class="align-middle">
                                 <a href="/spsm/admin/pengumuman/{{ $annoucement->id }}" target="_blank"
-                                    rel="noopener noreferrer">{{ $annoucement->tajukPengumuman }}</a>
+                                    rel="noopener noreferrer">{{ $annoucement->title_my }}</a>
+                            </td>
+                            <td class="align-middle">
+                                <a href="/spsm/admin/pengumuman/{{ $annoucement->id }}" target="_blank"
+                                    rel="noopener noreferrer">{{ $annoucement->title_en }}</a>
                             </td>
                             <td class="align-middle">{{ $annoucement->paparanMula }}</td>
                             <td class="align-middle">{{ $annoucement->paparanTamat }}</td>
@@ -46,7 +60,7 @@
                                     @csrf
                                     <div class="row-inline">
                                         <a href="/spsm/admin/pengumuman/{{ $annoucement->id }}/edit"
-                                            class="btn btn-link">
+                                            class="btn btn-link text-warning">
                                             <i class="fa fa-edit"></i>
                                         </a>
                                         <button type="submit" class="btn btn-link text-danger">
