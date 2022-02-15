@@ -28,6 +28,9 @@
                         <table class="table table-striped table-sm">
                             <thead class="thead-dark">
                                 <tr>
+                                    <th class="align-middle text-center">
+                                        #
+                                    </th>
                                     <th class="align-middle">
                                         Tajuk Perolehan
                                     </th>
@@ -40,7 +43,7 @@
                                     <th class="align-middle">
                                         Harga Perolehan
                                     </th>
-                                    <th class="align-middle">
+                                    <th class="align-middle text-center">
                                         Tempoh Iklan
                                     </th>
                                     <th class="align-middle">
@@ -49,14 +52,17 @@
                                     <th class="align-middle">
                                         Status
                                     </th>
-                                    <th class="align-middle">
+                                    <th class="align-middle text-center">
                                         Actions
                                     </th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($tenders as $tenders)
+                                @foreach ($tenders as $tender)
                                 <tr>
+                                    <td class="align-middle text-center">
+                                        {{ $loop->iteration }}
+                                    </td>
                                     <td class="align-middle">
                                         {{ $tender->title_my }}
                                     </td>
@@ -64,10 +70,13 @@
                                         {{ $tender->title_en }}
                                     </td>
                                     <td class="align-middle">
-                                        {{ $tender->harga }}
+                                        {{ $tender->kod }}
                                     </td>
                                     <td class="align-middle">
-                                        {{ $tender->tempoh }}
+                                        {{ $tender->harga }}
+                                    </td>
+                                    <td class="align-middle text-center">
+                                        {{ $tender->masa }}
                                     </td>
                                     <td class="align-middle">
                                         {{ $tender->paparanMula }}
@@ -75,15 +84,15 @@
                                     <td class="align-middle">
                                         {{ $tender->status->status }}
                                     </td>
-                                    <td class="align-middle">
-                                        {{ $tender->kod }}
-                                    </td>
                                     <td class="align-middle text-center">
                                         <form action="/spsm/admin/tender/{{ $tender->id }}" method="post">
                                             @method('delete')
                                             @csrf
                                             <div class="row-inline">
-                                                <a href="/spsm/admin/tender/{{ $tender->id }}"
+                                                <a href="/spsm/admin/tender/{{ $tender->id }}" class="btn btn-link">
+                                                    <i class="fa fa-eye"></i>
+                                                </a>
+                                                <a href="/spsm/admin/tender/{{ $tender->id }}/edit"
                                                     class="btn btn-link text-warning">
                                                     <i class="fa fa-edit"></i>
                                                 </a>

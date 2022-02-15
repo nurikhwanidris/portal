@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Tender;
 use App\Models\Status;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 class TenderController extends Controller
 {
@@ -46,7 +47,41 @@ class TenderController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validateData = $request->validate([
+            'title_my' => 'required',
+            'title_en' => 'required',
+            'tempoh' => 'required',
+            'paparanMula' => 'required',
+            'paparanTamat' => 'required',
+            'status_id' => 'required'
+        ]);
+
+        // Get filename with extension
+        $filenamewithextension = $request->file('filename')->getClientOriginalName();
+
+        // Filter out the extension
+        $filename = pathinfo($filenamewithextension, PATHINFO_FILENAME);
+
+        // Filter out the filename
+        $extension = $request->file('filename')->getClientOriginalExtension();
+
+        // Remove all white spaces
+        $filenametostore = str_replace(' ', '-', $filename) . '-' . time() . '.' . $extension;
+
+        // Store with filename
+        $request->file('filename')->storeAs('public/upload/doc', $filenametostore);
+
+        $validateData['user_id'] = auth()->user()->id;
+        $validateData['kod'] = $request['kod'];
+        $validateData['harga'] = $request['harga'];
+        $validateData['taklimat'] = $request['taklimat'];
+        $validateData['pertanyaan'] = $request['pertanyaan'];
+        $validateData['masa'] = $request['masa'];
+        $validateData['filename'] = $filenametostore;
+
+        Tender::create($validateData);
+
+        return redirect('/spsm/admin/tender')->with('success', 'Satu tender telah berjaya disimpan dan akan mula dipaparkan pada ' . $validateData['paparanMula']);
     }
 
     /**
@@ -57,7 +92,12 @@ class TenderController extends Controller
      */
     public function show(Tender $tender)
     {
-        //
+        return view('spsm.admin.tender.show', [
+            'title' => $tender->title_my,
+            'leadCrumbs' => 'Perolehan',
+            'link' => '/spsm/admin/tender',
+            'tender' => $tender,
+        ]);
     }
 
     /**
@@ -68,7 +108,13 @@ class TenderController extends Controller
      */
     public function edit(Tender $tender)
     {
-        //
+        return view('spsm.admin.tender.edit', [
+            'title' => $tender->title_my,
+            'leadCrumbs' => 'Perolehan',
+            'link' => '/spsm/admin/tender',
+            'tender' => $tender,
+            'statuses' => Status::all(),
+        ]);
     }
 
     /**
@@ -80,7 +126,43 @@ class TenderController extends Controller
      */
     public function update(Request $request, Tender $tender)
     {
-        //
+        $validateData = $request->validate([
+            'title_my' => 'required',
+            'title_en' => 'required',
+            'tempoh' => 'required',
+            'paparanMula' => 'required',
+            'paparanTamat' => 'required',
+            'status_id' => 'required'
+        ]);
+
+        // Create a function to delete old files
+
+        // Get filename with extension
+        $filenamewithextension = $request->file('filename')->getClientOriginalName();
+
+        // Filter out the extension
+        $filename = pathinfo($filenamewithextension, PATHINFO_FILENAME);
+
+        // Filter out the filename
+        $extension = $request->file('filename')->getClientOriginalExtension();
+
+        // Remove all white spaces
+        $filenametostore = str_replace(' ', '-', $filename) . '-' . time() . '.' . $extension;
+
+        // Store with filename
+        $request->file('filename')->storeAs('public/upload/doc', $filenametostore);
+
+        $validateData['user_id'] = auth()->user()->id;
+        $validateData['kod'] = $request['kod'];
+        $validateData['harga'] = $request['harga'];
+        $validateData['taklimat'] = $request['taklimat'];
+        $validateData['pertanyaan'] = $request['pertanyaan'];
+        $validateData['masa'] = $request['masa'];
+        $validateData['filename'] = $filenametostore;
+
+        Tender::where('id', $tender->id)->update($validateData);
+
+        return redirect('/spsm/admin/tender')->with('success', 'Satu tender telah berjaya dikemaskini dan akan mula dipaparkan pada ' . $validateData['paparanMula']);
     }
 
     /**
@@ -91,6 +173,8 @@ class TenderController extends Controller
      */
     public function destroy(Tender $tender)
     {
-        //
+        Tender::destroy($tender->id);
+
+        return redirect('/spsm/admin/tender')->with('success', 'Satu perolehan telah berjaya dipadam');
     }
 }

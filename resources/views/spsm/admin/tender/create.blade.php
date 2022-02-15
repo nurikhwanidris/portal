@@ -5,63 +5,74 @@
     <div class="card-body">
         <div class="row">
             <div class="col-lg-12">
-                <form action="/spsm/admin/tender/create" method="post" enctype="multipart/form-data">
+                <form action="/spsm/admin/tender" method="post" enctype="multipart/form-data">
+                    <div class="row">
+                        @csrf
+                    </div>
                     <div class="row">
                         <div class="col-md-12">
                             <div class="row mb-3">
                                 <label for="" class="col-sm-2 col-form-label col-form-label-sm">Tajuk Perolehan</label>
                                 <span class="col-sm-1">:</span>
                                 <div class="col-sm-6">
-                                    <input type="text" name="title_my" id="" class="form-control form-control-sm">
+                                    <input type="text" name="title_my" id="" class="form-control form-control-sm"
+                                        value="{{ old('title_my') }}">
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <label for="" class="col-sm-2 col-form-label col-form-label-sm">Tender Title</label>
                                 <span class="col-sm-1">:</span>
                                 <div class="col-sm-6">
-                                    <input type="text" name="title_en" id="" class="form-control form-control-sm">
+                                    <input type="text" name="title_en" id="" class="form-control form-control-sm"
+                                        value="{{ old('title_en') }}">
                                 </div>
                             </div>
                             <div class="row mb-3">
-                                <label for="" class="col-sm-2 col-form-label col-form-label-sm">Kod Perolehan</label>
+                                <label for="" class="col-sm-2 col-form-label col-form-label-sm">Kod</label>
                                 <span class="col-sm-1">:</span>
                                 <div class="col-sm-3">
-                                    <input type="text" name="kod" id="" class="form-control form-control-sm">
+                                    <input type="text" name="kod" id="" class="form-control form-control-sm"
+                                        value="{{ old('kod') }}">
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <label for="" class="col-sm-2 col-form-label col-form-label-sm">Harga</label>
                                 <span class="col-sm-1">:</span>
                                 <div class="col-sm-3">
-                                    <input type="text" name="harga" id="" class="form-control form-control-sm">
+                                    <input type="text" name="harga" id="" class="form-control form-control-sm"
+                                        value="{{ old('harga') }}">
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <label for="" class="col-sm-2 col-form-label col-form-label-sm">Tempoh Iklan</label>
                                 <span class="col-sm-1">:</span>
                                 <div class="col-sm-6">
-                                    <input type="text" name="tempoh" id="" class="form-control form-control-sm">
+                                    <input type="text" name="tempoh" id="" class="form-control form-control-sm"
+                                        value="{{ old('tempoh') }}">
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <label for="" class="col-sm-2 col-form-label col-form-label-sm">Masa</label>
                                 <span class="col-sm-1">:</span>
                                 <div class="col-sm-6">
-                                    <input type="text" name="masa" id="" class="form-control form-control-sm">
+                                    <input type="text" name="masa" id="" class="form-control form-control-sm"
+                                        value="{{ old('masa') }}">
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <label for="" class="col-sm-2 col-form-label col-form-label-sm">Taklimat</label>
                                 <span class="col-sm-1">:</span>
                                 <div class="col-sm-6">
-                                    <input type="text" name="taklimat" id="" class="form-control form-control-sm">
+                                    <input type="text" name="taklimat" id="" class="form-control form-control-sm"
+                                        value="{{ old('taklimat') }}">
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <label for="" class="col-sm-2 col-form-label col-form-label-sm">Pertanyaan</label>
                                 <span class="col-sm-1">:</span>
                                 <div class="col-sm-6">
-                                    <input type="text" name="pertanyaan" id="" class="form-control form-control-sm">
+                                    <input type="text" name="pertanyaan" id="" class="form-control form-control-sm"
+                                        value="{{ old('pertanyaan') }}">
                                 </div>
                             </div>
                             <div class="row mb-3">
@@ -90,7 +101,7 @@
                                 <span class="col-sm-1">:</span>
                                 <div class="col-sm-2">
                                     <input type="datetime-local" name="paparanMula" id=""
-                                        class="form-control form-control-sm">
+                                        class="form-control form-control-sm" value="{{ old('paparanMula') }}">
                                 </div>
                             </div>
                             <div class="row mb-3">
@@ -99,7 +110,7 @@
                                 <span class="col-sm-1">:</span>
                                 <div class="col-sm-2">
                                     <input type="datetime-local" name="paparanTamat" id=""
-                                        class="form-control form-control-sm">
+                                        class="form-control form-control-sm" value="{{ old('paparanTamat') }}">
                                 </div>
                             </div>
                             <div class="row mb-3">
