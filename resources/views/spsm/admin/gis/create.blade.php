@@ -15,31 +15,55 @@
                                 <label for="" class="col-sm-2 col-form-label col-form-label-sm">Tajuk Buletin</label>
                                 <span class="col-sm-1">:</span>
                                 <div class="col-sm-6">
-                                    <input type="text" name="title_my" id="" class="form-control form-control-sm"
+                                    <input type="text" name="title_my" id=""
+                                        class="form-control form-control-sm @error('title_my') is-invalid @enderror"
                                         value="{{ old('title_my') }}">
+                                    @error('title_my')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <label for="" class="col-sm-2 col-form-label col-form-label-sm">Bulletin Title</label>
                                 <span class="col-sm-1">:</span>
                                 <div class="col-sm-6">
-                                    <input type="text" name="title_en" id="" class="form-control form-control-sm"
+                                    <input type="text" name="title_en" id=""
+                                        class="form-control form-control-sm @error('title_en') is-invalid @enderror"
                                         value="{{ old('title_en') }}">
+                                    @error('title_en')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <label for="" class="col-sm-2 col-form-label col-form-label-sm">Tahun Terbitan</label>
                                 <span class="col-sm-1">:</span>
                                 <div class="col-sm-6">
-                                    <input type="text" name="year" id="" class="form-control form-control-sm">
+                                    <input type="text" name="year" id=""
+                                        class="form-control form-control-sm @error('year') is-invalid @enderror">
+                                    @error('year')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <label for="" class="col-sm-2 col-form-label col-form-label-sm">Buletin</label>
                                 <span class="col-sm-1">:</span>
                                 <div class="col-sm-3">
-                                    <input type="file" name="filename" id="" class="form-control form-control-sm"
+                                    <input type="file" name="filename" id=""
+                                        class="form-control form-control-sm @error('filename') is-invalid @enderror"
                                         accept="application/pdf">
+                                    @error('filename')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="row mb-3">
@@ -47,8 +71,13 @@
                                 <span class="col-sm-1">:</span>
                                 <div class="col-sm-3">
                                     <input type="file" name="gambarHadapan" id="image"
-                                        class="form-control form-control-sm" accept="image/png, image/jpeg, image/jpg"
-                                        onchange="previewImage()">
+                                        class="form-control form-control-sm @error('gambarHadapan') is-invalid @enderror"
+                                        accept="image/png, image/jpeg, image/jpg" onchange="previewImage()">
+                                    @error('gambarHadapan')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
                                 </div>
                                 <div class="col-sm-3 h-75">
                                     <img src="" alt="" class="img-preview img-fluid float-right img-thumbnail">
@@ -58,12 +87,18 @@
                                 <label for="" class="col-sm-2 col-form-label-sm">Status</label>
                                 <span class="col-sm-1">:</span>
                                 <div class="col-sm-2">
-                                    <select name="status_id" id="" class="form-control form-control-sm">
+                                    <select name="status_id" id=""
+                                        class="form-control form-control-sm @error('status_id') is-invalid @enderror">
                                         <option value="">Sila Pilih</option>
                                         @foreach ($statuses as $status)
                                         <option value="{{ $status->id }}">{{ $status->status }}</option>
                                         @endforeach
                                     </select>
+                                    @error('status_id')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="row mb-3">

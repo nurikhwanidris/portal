@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Tender;
 use App\Models\Status;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\File;
 
 class TenderController extends Controller
 {

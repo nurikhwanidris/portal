@@ -51,6 +51,8 @@ class BuletinGisController extends Controller
             'title_en' => 'required',
             'year' => 'required',
             'status_id' => 'required',
+            'gambarHadapan' => 'required',
+            'filename' => 'required',
         ]);
 
         // Get filename with extension
@@ -90,7 +92,7 @@ class BuletinGisController extends Controller
      */
     public function show(BuletinGis $buletinGis)
     {
-        //
+        return redirect('/upload/doc/' . $buletinGis->filename);
     }
 
     /**
@@ -101,7 +103,13 @@ class BuletinGisController extends Controller
      */
     public function edit(BuletinGis $buletinGis)
     {
-        //
+        return view('spsm.admin.gis.edit', [
+            'title' => $buletinGis->title_my,
+            'leadCrumbs' => 'Buletin GIS',
+            'link' => '/spsm/admin/gis',
+            'buletinGis' => $buletinGis,
+            'statuses' => Status::all(),
+        ]);
     }
 
     /**
@@ -124,6 +132,8 @@ class BuletinGisController extends Controller
      */
     public function destroy(BuletinGis $buletinGis)
     {
-        //
+        BuletinGis::destroy($buletinGis->id);
+
+        return redirect('/spsm/admin/buletin_gis')->with('success', 'Satu buletin telah berjaya dipadam');
     }
 }

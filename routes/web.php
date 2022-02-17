@@ -112,5 +112,5 @@ Route::resource('/spsm/admin/quote', QuoteController::class)->middleware('auth')
 // Tender route
 Route::resource('/spsm/admin/tender', TenderController::class)->middleware('auth');
 
-// Buleting GIS route
+// Buletin GIS route
 Route::resource('/spsm/admin/buletin_gis', BuletinGisController::class)->middleware('auth');
