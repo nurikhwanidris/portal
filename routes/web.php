@@ -10,6 +10,7 @@ use App\Http\Controllers\PengumumanController;
 use App\Http\Controllers\PopupController;
 use App\Http\Controllers\QuoteController;
 use App\Http\Controllers\TenderController;
+use App\Http\Controllers\BuletinGisController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -110,3 +111,6 @@ Route::resource('/spsm/admin/quote', QuoteController::class)->middleware('auth')
 
 // Tender route
 Route::resource('/spsm/admin/tender', TenderController::class)->middleware('auth');
+
+// Buleting GIS route
+Route::resource('/spsm/admin/buletin_gis', BuletinGisController::class)->middleware('auth');

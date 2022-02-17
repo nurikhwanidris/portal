@@ -128,9 +128,27 @@
                 "autoWidth": false,
                 "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"],
                 "ordering": false,
-                "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
+                "lengthMenu": [
+                    [10, 25, 50, -1],
+                    [10, 25, 50, "All"]
+                ],
             }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
         });
+
+        // Image Preview
+        function previewImage() {
+            const image = document.querySelector('#image');
+            const imgPreview = document.querySelector('.img-preview');
+
+            imgPreview.style.display = 'block';
+
+            const oFReader = new FileReader();
+            oFReader.readAsDataURL(image.files[0]);
+
+            oFReader.onload = function (oFREvent) {
+                imgPreview.src = oFREvent.target.result;
+            }
+        }
 
     </script>
 </body>
