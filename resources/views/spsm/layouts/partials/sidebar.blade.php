@@ -397,8 +397,8 @@
                     </ul>
                 </li>
                 {{-- Laporan Mesyuarat --}}
-                <li class="nav-item {{ (request()->is('spsm/admin/meetingreport/*')) ? 'menu-open' : ''}}">
-                    <a href="#" class="nav-link {{ (request()->is('spsm/admin/meetingreport/*')) ? 'active' : ''}}">
+                <li class="nav-item {{ (request()->is('spsm/admin/laporan_mesyuarat/*')) ? 'menu-open' : ''}}">
+                    <a href="#" class="nav-link {{ (request()->is('spsm/admin/laporan_mesyuarat/*')) ? 'active' : ''}}">
                         <i class="nav-icon far fa-file-alt"></i>
                         <p>
                             Laporan Mesyuarat
@@ -407,13 +407,13 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="/spsm/admin/page/create" class="nav-link">
+                            <a href="/spsm/admin/laporan_mesyuarat/create" class="nav-link">
                                 <i class="fas fa-plus nav-icon"></i>
                                 <p>Tambah Laporan</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/spsm/admin/page/" class="nav-link">
+                            <a href="/spsm/admin/laporan_mesyuarat/" class="nav-link">
                                 <i class="fas fa-list-alt nav-icon"></i>
                                 <p>Senarai Laporan</p>
                             </a>

@@ -4,6 +4,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\Admin\PagesController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LaporanTahunanController;
+use App\Http\Controllers\LaporanMesyuaratController;
 use App\Http\Controllers\KeratanAkhbarController;
 use App\Http\Controllers\MediaController;
 use App\Http\Controllers\PengumumanController;
@@ -117,3 +118,6 @@ Route::resource('/spsm/admin/buletin_gis', BuletinGisController::class)->middlew
 
 // Laporan Tahunan route
 Route::resource('/spsm/admin/laporan_tahunan', LaporanTahunanController::class)->middleware('auth');
+
+// Laporan Mesyuarat route
+Route::resource('/spsm/admin/laporan_mesyuarat', LaporanMesyuaratController::class)->middleware('auth');
