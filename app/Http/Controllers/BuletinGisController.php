@@ -68,12 +68,12 @@ class BuletinGisController extends Controller
         $gambarExtension = $request->file('gambarHadapan')->getClientOriginalExtension();
 
         // Remove all white spaces
-        $gambarName = str_replace(' ', '-', $pdf) . '-' . time() . '.' . $gambarExtension;
-        $pdfName = str_replace(' ', '-', $gambar) . '-' . time() . '.' . $pdfExtension;
+        $gambarName = str_replace(' ', '-', $gambar) . '-' . time() . '.' . $gambarExtension;
+        $pdfName = str_replace(' ', '-', $pdf) . '-' . time() . '.' . $pdfExtension;
 
         // Store with filename
-        $request->file('filename')->storeAs('public/upload/doc', $pdfName);
-        $request->file('gambarHadapan')->storeAs('public/upload/img', $gambarName);
+        $request->file('filename')->storeAs('public/upload/doc/', $pdfName);
+        $request->file('gambarHadapan')->storeAs('public/upload/img/', $gambarName);
 
         $validateData['user_id'] = auth()->user()->id;
         $validateData['gambarHadapan'] = $gambarName;
@@ -104,7 +104,7 @@ class BuletinGisController extends Controller
     public function edit(BuletinGis $buletinGis)
     {
         return view('spsm.admin.gis.edit', [
-            'title' => $buletinGis->title_my,
+            'title' => 'asd',
             'leadCrumbs' => 'Buletin GIS',
             'link' => '/spsm/admin/gis',
             'buletinGis' => $buletinGis,

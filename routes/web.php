@@ -3,7 +3,7 @@
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\Admin\PagesController;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\JabatanUnitController;
+use App\Http\Controllers\LaporanTahunanController;
 use App\Http\Controllers\KeratanAkhbarController;
 use App\Http\Controllers\MediaController;
 use App\Http\Controllers\PengumumanController;
@@ -114,3 +114,6 @@ Route::resource('/spsm/admin/tender', TenderController::class)->middleware('auth
 
 // Buletin GIS route
 Route::resource('/spsm/admin/buletin_gis', BuletinGisController::class)->middleware('auth');
+
+// Laporan Tahunan route
+Route::resource('/spsm/admin/laporan_tahunan', LaporanTahunanController::class)->middleware('auth');
