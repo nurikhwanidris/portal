@@ -1,0 +1,123 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Models\KertasKerja;
+use App\Models\Status;
+use Illuminate\Http\Request;
+
+class KertasKerjaController extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        return view('spsm.admin.kertas_kerja.index', [
+            'title' => 'Senarai Kertas Kerja',
+            'leadCrumbs' => 'Kertas Kerja',
+            'link' => '/spsm/admin/kertas_kerja',
+            'papers' => KertasKerja::with('status')->get(),
+        ]);
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        return view('spsm.admin.kertas_kerja.create', [
+            'title' => 'Cipta Kertas Kerja',
+            'leadCrumbs' => 'Kertas Kerja',
+            'link' => '/spsm/admin/kertas_kerja',
+            'statuses' => Status::all(),
+        ]);
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        $validateData = $request->validate([
+            'title_my'=>'required',
+            'title_en'=>'required',
+            'presentedBy'=>'required',
+            'filename'=>'required',
+            'date'=>'required',
+            'status_id'=>'required',
+        ]);
+
+        // Get the filename with extension
+        $filenameWithExtension = $request->file('filename')->getClientOriginalName();
+
+        // Filter out the extension
+        $filename = pathinfo($filenameWithExtension, PATHINFO_FILENAME);
+
+        // Filter out the filename
+        $filenameExtension = $request->file('filename')->getClientOriginalExtension();
+
+        // Removes all whitespaces and add time
+        $filenameToStore = str_replace(' ', '-', $filename) . '-' . time() . '.' . $filenameExtension;
+
+        // Store the file with its new name
+        $request->file('filename')->storeAs('public/upload/doc/', $filenameToStore);
+
+        KertasKerja::create($validateData);
+
+        return redirect('/spsm/admin/kertas_kerja')->with('success', 'Satu laporan tahunan telah berjaya disimpan.');
+
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\KertasKerja  $kertasKerja
+     * @return \Illuminate\Http\Response
+     */
+    public function show(KertasKerja $kertasKerja)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\Models\KertasKerja  $kertasKerja
+     * @return \Illuminate\Http\Response
+     */
+    public function edit(KertasKerja $kertasKerja)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Models\KertasKerja  $kertasKerja
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, KertasKerja $kertasKerja)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Models\KertasKerja  $kertasKerja
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy(KertasKerja $kertasKerja)
+    {
+        //
+    }
+}

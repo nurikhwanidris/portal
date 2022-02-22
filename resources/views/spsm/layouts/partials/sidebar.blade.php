@@ -445,8 +445,8 @@
                     </ul>
                 </li>
                 {{-- Kertas Kerja --}}
-                <li class="nav-item {{ (request()->is('spsm/admin/paperwork/*')) ? 'menu-open' : ''}}">
-                    <a href="#" class="nav-link {{ (request()->is('spsm/admin/paperwork/*')) ? 'active' : ''}}">
+                <li class="nav-item {{ (request()->is('spsm/admin/kertas_kerja/*')) ? 'menu-open' : ''}}">
+                    <a href="#" class="nav-link {{ (request()->is('spsm/admin/kertas_kerja/*')) ? 'active' : ''}}">
                         <i class="nav-icon far fa-file-pdf"></i>
                         <p>
                             Kertas Kerja
@@ -455,13 +455,13 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="/spsm/admin/page/create" class="nav-link">
+                            <a href="/spsm/admin/kertas_kerja/create" class="nav-link">
                                 <i class="fas fa-plus nav-icon"></i>
                                 <p>Tambah</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/spsm/admin/page/" class="nav-link">
+                            <a href="/spsm/admin/kertas_kerja/" class="nav-link">
                                 <i class="fas fa-list-alt nav-icon"></i>
                                 <p>Senarai</p>
                             </a>

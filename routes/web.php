@@ -13,6 +13,7 @@ use App\Http\Controllers\QuoteController;
 use App\Http\Controllers\TenderController;
 use App\Http\Controllers\BuletinGisController;
 use App\Http\Controllers\BeritaUkurController;
+use App\Http\Controllers\KertasKerjaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -124,4 +125,7 @@ Route::resource('/spsm/admin/laporan_tahunan', LaporanTahunanController::class)-
 Route::resource('/spsm/admin/laporan_mesyuarat', LaporanMesyuaratController::class)->middleware('auth');
 
 // Berita Ukur route
-Route::resource('/spsm/admin/berita_ukur', BeritaUkurController::class);
+Route::resource('/spsm/admin/berita_ukur', BeritaUkurController::class)->middleware('auth');
+
+// Kertas Kerja route
+Route::resource('/spsm/admin/kertas_kerja', KertasKerjaController::class)->middleware('auth');
