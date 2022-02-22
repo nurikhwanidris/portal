@@ -19,7 +19,7 @@ class KertasKerjaController extends Controller
             'title' => 'Senarai Kertas Kerja',
             'leadCrumbs' => 'Kertas Kerja',
             'link' => '/spsm/admin/kertas_kerja',
-            'papers' => KertasKerja::with('status')->get(),
+            'kertasKerjas' => KertasKerja::with('status')->get(),
         ]);
     }
 
@@ -47,12 +47,12 @@ class KertasKerjaController extends Controller
     public function store(Request $request)
     {
         $validateData = $request->validate([
-            'title_my'=>'required',
-            'title_en'=>'required',
-            'presentedBy'=>'required',
-            'filename'=>'required',
-            'date'=>'required',
-            'status_id'=>'required',
+            'title_my' => 'required',
+            'title_en' => 'required',
+            'presentedBy' => 'required',
+            'filename' => 'required',
+            'date' => 'required',
+            'status_id' => 'required',
         ]);
 
         // Get the filename with extension
@@ -70,10 +70,12 @@ class KertasKerjaController extends Controller
         // Store the file with its new name
         $request->file('filename')->storeAs('public/upload/doc/', $filenameToStore);
 
+        $validateData['user_id'] = auth()->user()->id;
+        $validateData['filename'] = $filenameToStore;
+
         KertasKerja::create($validateData);
 
         return redirect('/spsm/admin/kertas_kerja')->with('success', 'Satu laporan tahunan telah berjaya disimpan.');
-
     }
 
     /**
@@ -95,7 +97,13 @@ class KertasKerjaController extends Controller
      */
     public function edit(KertasKerja $kertasKerja)
     {
-        //
+        return view('spsm.admin.kertas_kerja.edit', [
+            'title' => 'Ubah Kertas Kerja',
+            'leadCrumbs' => 'Kertas Kerja',
+            'link' => '/spsm/admin/kertas_kerja',
+            'statuses' => Status::all(),
+            'kertasKerja' => $kertasKerja,
+        ]);
     }
 
     /**
