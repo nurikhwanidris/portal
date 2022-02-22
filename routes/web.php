@@ -12,6 +12,7 @@ use App\Http\Controllers\PopupController;
 use App\Http\Controllers\QuoteController;
 use App\Http\Controllers\TenderController;
 use App\Http\Controllers\BuletinGisController;
+use App\Http\Controllers\BeritaUkurController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -121,3 +122,6 @@ Route::resource('/spsm/admin/laporan_tahunan', LaporanTahunanController::class)-
 
 // Laporan Mesyuarat route
 Route::resource('/spsm/admin/laporan_mesyuarat', LaporanMesyuaratController::class)->middleware('auth');
+
+// Berita Ukur route
+Route::resource('/spsm/admin/berita_ukur', BeritaUkurController::class);

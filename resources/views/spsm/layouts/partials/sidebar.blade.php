@@ -421,8 +421,8 @@
                     </ul>
                 </li>
                 {{-- Berita Ukur --}}
-                <li class="nav-item {{ (request()->is('spsm/admin/ukur/*')) ? 'menu-open' : ''}}">
-                    <a href="#" class="nav-link {{ (request()->is('spsm/admin/ukur/*')) ? 'active' : ''}}">
+                <li class="nav-item {{ (request()->is('spsm/admin/berita_ukur/*')) ? 'menu-open' : ''}}">
+                    <a href="#" class="nav-link {{ (request()->is('spsm/admin/berita_ukur/*')) ? 'active' : ''}}">
                         <i class="nav-icon far fa-comment-alt"></i>
                         <p>
                             Berita Ukur
@@ -431,13 +431,13 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="/spsm/admin/page/create" class="nav-link">
+                            <a href="/spsm/admin/berita_ukur/create" class="nav-link">
                                 <i class="fas fa-plus nav-icon"></i>
                                 <p>Tambah Berita</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/spsm/admin/page/" class="nav-link">
+                            <a href="/spsm/admin/berita_ukur/" class="nav-link">
                                 <i class="fas fa-list-alt nav-icon"></i>
                                 <p>Senarai Berita</p>
                             </a>
