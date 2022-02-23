@@ -10,6 +10,7 @@
                         <div class="col-md-12">
                             <div class="row">
                                 @csrf
+                                @method('put')
                             </div>
                             <div class="row mb-3">
                                 <label for="" class="col-form-lable col-form-label-sm col-sm-1">Tajuk Kertas

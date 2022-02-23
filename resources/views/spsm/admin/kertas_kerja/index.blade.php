@@ -73,7 +73,7 @@
                                             @method('delete')
                                             @csrf
                                             <div class="row-inline">
-                                                <a href="/spsm/admin/kertas_kerja/{{ $kertasKerja->id }}"
+                                                <a href="/upload/doc/{{ $kertasKerja->filename }}" target="_blank"
                                                     class="btn btn-link">
                                                     <i class="fa fa-eye"></i>
                                                 </a>
