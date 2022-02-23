@@ -469,8 +469,8 @@
                     </ul>
                 </li>
                 {{-- Piagam Pelanggan --}}
-                <li class="nav-item {{ (request()->is('spsm/admin/piagam/*')) ? 'menu-open' : ''}}">
-                    <a href="#" class="nav-link {{ (request()->is('spsm/admin/piagam/*')) ? 'active' : ''}}">
+                <li class="nav-item {{ (request()->is('spsm/admin/piagam_pelanggan/*')) ? 'menu-open' : ''}}">
+                    <a href="#" class="nav-link {{ (request()->is('spsm/admin/piagam_pelanggan/*')) ? 'active' : ''}}">
                         <i class="nav-icon fab fa-creative-commons-nd"></i>
                         <p>
                             Piagam Pelanggan
@@ -479,13 +479,13 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="/spsm/admin/page/create" class="nav-link">
+                            <a href="/spsm/admin/piagam_pelanggan/create" class="nav-link">
                                 <i class="fas fa-plus nav-icon"></i>
                                 <p>Tambah</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/spsm/admin/page/" class="nav-link">
+                            <a href="/spsm/admin/piagam_pelanggan/" class="nav-link">
                                 <i class="fas fa-list-alt nav-icon"></i>
                                 <p>Senarai</p>
                             </a>

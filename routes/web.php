@@ -14,6 +14,7 @@ use App\Http\Controllers\TenderController;
 use App\Http\Controllers\BuletinGisController;
 use App\Http\Controllers\BeritaUkurController;
 use App\Http\Controllers\KertasKerjaController;
+use App\Http\Controllers\PiagamPelangganController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -129,3 +130,6 @@ Route::resource('/spsm/admin/berita_ukur', BeritaUkurController::class)->middlew
 
 // Kertas Kerja route
 Route::resource('/spsm/admin/kertas_kerja', KertasKerjaController::class)->middleware('auth');
+
+// Piagam Pelanggan route
+Route::resource('/spsm/admin/piagam_pelanggan', PiagamPelangganController::class)->middleware('auth');
