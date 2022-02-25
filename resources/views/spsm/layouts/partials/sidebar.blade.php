@@ -19,8 +19,7 @@
             </div>
         </div>
 
-        {{--
-        <!-- SidebarSearch Form -->
+        {{-- <!-- SidebarSearch Form -->
         <div class="form-inline">
             <div class="input-group" data-widget="sidebar-search">
                 <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
@@ -37,8 +36,8 @@
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-                <li class="nav-item {{ (request()->is('spsm')) ? 'menu-open' : ''}}">
-                    <a href="/spsm" class="nav-link {{ (request()->is('spsm')) ? 'active' : '' }}">
+                <li class="nav-item {{ request()->is('spsm') ? 'menu-open' : '' }}">
+                    <a href="/spsm" class="nav-link {{ request()->is('spsm') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
                             Dashboard
@@ -46,8 +45,8 @@
                     </a>
                 </li>
                 {{-- Halaman --}}
-                <li class="nav-item {{ (request()->is('spsm/admin/page/*')) ? 'menu-open' : ''}}">
-                    <a href="#" class="nav-link {{ (request()->is('spsm/admin/page/*')) ? 'active' : ''}}">
+                <li class="nav-item {{ request()->is('spsm/admin/page/*') ? 'menu-open' : '' }}">
+                    <a href="#" class="nav-link {{ request()->is('spsm/admin/page/*') ? 'active' : '' }}">
                         <i class="nav-icon far fa-file"></i>
                         <p>
                             Halaman
@@ -70,9 +69,9 @@
                     </ul>
                 </li>
                 {{-- Media --}}
-                <li class="nav-item {{ (request()->is('spsm/admin/media')) ? 'menu-open' : ''}}">
+                <li class="nav-item {{ request()->is('spsm/admin/media') ? 'menu-open' : '' }}">
                     <a href="/spsm/admin/media/"
-                        class="nav-link {{ (request()->is('spsm/admin/media')) ? 'active' : ''}}">
+                        class="nav-link {{ request()->is('spsm/admin/media') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-photo-video"></i>
                         <p>
                             Media
@@ -95,8 +94,8 @@
                     </ul> --}}
                 </li>
                 {{-- Slider --}}
-                <li class="nav-item {{ (request()->is('spsm/admin/slider/*')) ? 'menu-open' : ''}}">
-                    <a href="#" class="nav-link {{ (request()->is('spsm/admin/slider/*')) ? 'active' : ''}}">
+                <li class="nav-item {{ request()->is('spsm/admin/slider/*') ? 'menu-open' : '' }}">
+                    <a href="#" class="nav-link {{ request()->is('spsm/admin/slider/*') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-scroll"></i>
                         <p>
                             Slider
@@ -119,8 +118,8 @@
                     </ul>
                 </li>
                 {{-- Popup --}}
-                <li class="nav-item {{ (request()->is('spsm/admin/popup/*')) ? 'menu-open' : ''}}">
-                    <a href="#" class="nav-link {{ (request()->is('spsm/admin/popup/*')) ? 'active' : ''}}">
+                <li class="nav-item {{ request()->is('spsm/admin/popup/*') ? 'menu-open' : '' }}">
+                    <a href="#" class="nav-link {{ request()->is('spsm/admin/popup/*') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-asterisk"></i>
                         <p>
                             Popup
@@ -142,8 +141,8 @@
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item {{ (request()->is('spsm/admin/pengumuman/*')) ? 'menu-open' : ''}}">
-                    <a href="#" class="nav-link {{ (request()->is('spsm/admin/pengumuman/*')) ? 'active' : ''}}">
+                <li class="nav-item {{ request()->is('spsm/admin/pengumuman/*') ? 'menu-open' : '' }}">
+                    <a href="#" class="nav-link {{ request()->is('spsm/admin/pengumuman/*') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-bullhorn"></i>
                         <p>
                             Pengumuman
@@ -166,8 +165,8 @@
                     </ul>
                 </li>
                 {{-- Direktori Pegawai --}}
-                <li class="nav-item {{ (request()->is('spsm/admin/pegawai/*')) ? 'menu-open' : ''}}">
-                    <a href="#" class="nav-link {{ (request()->is('spsm/admin/pegawai/*')) ? 'active' : ''}}">
+                <li class="nav-item {{ request()->is('spsm/admin/pegawai/*') ? 'menu-open' : '' }}">
+                    <a href="#" class="nav-link {{ request()->is('spsm/admin/pegawai/*') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-users"></i>
                         <p>
                             Direktori Pegawai
@@ -217,8 +216,8 @@
                     </ul>
                 </li>
                 {{-- Pertukaran Pegawai --}}
-                <li class="nav-item {{ (request()->is('spsm/admin/tukarpegawai/*')) ? 'menu-open' : ''}}">
-                    <a href="#" class="nav-link {{ (request()->is('spsm/admin/tukarpegawai/*')) ? 'active' : ''}}">
+                <li class="nav-item {{ request()->is('spsm/admin/tukarpegawai/*') ? 'menu-open' : '' }}">
+                    <a href="#" class="nav-link {{ request()->is('spsm/admin/tukarpegawai/*') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-exchange-alt"></i>
                         <p>
                             Pertukaran Pegawai
@@ -241,8 +240,8 @@
                     </ul>
                 </li>
                 {{-- Keratan Akhbar --}}
-                <li class="nav-item {{ (request()->is('spsm/admin/newspaper/*')) ? 'menu-open' : ''}}">
-                    <a href="#" class="nav-link {{ (request()->is('spsm/admin/newspaper/*')) ? 'active' : ''}}">
+                <li class="nav-item {{ request()->is('spsm/admin/newspaper/*') ? 'menu-open' : '' }}">
+                    <a href="#" class="nav-link {{ request()->is('spsm/admin/newspaper/*') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-newspaper"></i>
                         <p>
                             Keratan Akhbar
@@ -271,8 +270,8 @@
                     </ul>
                 </li>
                 {{-- Pekeliling --}}
-                <li class="nav-item {{ (request()->is('spsm/admin/pekeliling/*')) ? 'menu-open' : ''}}">
-                    <a href="#" class="nav-link {{ (request()->is('spsm/admin/pekeliling/*')) ? 'active' : ''}}">
+                <li class="nav-item {{ request()->is('spsm/admin/pekeliling/*') ? 'menu-open' : '' }}">
+                    <a href="#" class="nav-link {{ request()->is('spsm/admin/pekeliling/*') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-exclamation-circle"></i>
                         <p>
                             Pekeliling
@@ -301,8 +300,8 @@
                     </ul>
                 </li>
                 {{-- Sebut Harga --}}
-                <li class="nav-item {{ (request()->is('spsm/admin/quote/*')) ? 'menu-open' : ''}}">
-                    <a href="#" class="nav-link {{ (request()->is('spsm/admin/quote/*')) ? 'active' : ''}}">
+                <li class="nav-item {{ request()->is('spsm/admin/quote/*') ? 'menu-open' : '' }}">
+                    <a href="#" class="nav-link {{ request()->is('spsm/admin/quote/*') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-comment-dollar"></i>
                         <p>
                             Sebut Harga
@@ -325,8 +324,8 @@
                     </ul>
                 </li>
                 {{-- Tender --}}
-                <li class="nav-item {{ (request()->is('spsm/admin/tender/*')) ? 'menu-open' : ''}}">
-                    <a href="#" class="nav-link {{ (request()->is('spsm/admin/tender/*')) ? 'active' : ''}}">
+                <li class="nav-item {{ request()->is('spsm/admin/tender/*') ? 'menu-open' : '' }}">
+                    <a href="#" class="nav-link {{ request()->is('spsm/admin/tender/*') ? 'active' : '' }}">
                         <i class="nav-icon far fa-object-ungroup"></i>
                         <p>
                             Tender
@@ -349,8 +348,8 @@
                     </ul>
                 </li>
                 {{-- Buletin GIS --}}
-                <li class="nav-item {{ (request()->is('spsm/admin/buletin_gis/*')) ? 'menu-open' : ''}}">
-                    <a href="#" class="nav-link {{ (request()->is('spsm/admin/buletin_gis/*')) ? 'active' : ''}}">
+                <li class="nav-item {{ request()->is('spsm/admin/buletin_gis/*') ? 'menu-open' : '' }}">
+                    <a href="#" class="nav-link {{ request()->is('spsm/admin/buletin_gis/*') ? 'active' : '' }}">
                         <i class="nav-icon far fa-comment-alt"></i>
                         <p>
                             Buletin GIS
@@ -373,8 +372,8 @@
                     </ul>
                 </li>
                 {{-- Laporan Tahunan --}}
-                <li class="nav-item {{ (request()->is('spsm/admin/annualreport/*')) ? 'menu-open' : ''}}">
-                    <a href="#" class="nav-link {{ (request()->is('spsm/admin/annualreport/*')) ? 'active' : ''}}">
+                <li class="nav-item {{ request()->is('spsm/admin/annualreport/*') ? 'menu-open' : '' }}">
+                    <a href="#" class="nav-link {{ request()->is('spsm/admin/annualreport/*') ? 'active' : '' }}">
                         <i class="nav-icon far fa-file-alt"></i>
                         <p>
                             Laporan Tahunan
@@ -397,8 +396,9 @@
                     </ul>
                 </li>
                 {{-- Laporan Mesyuarat --}}
-                <li class="nav-item {{ (request()->is('spsm/admin/laporan_mesyuarat/*')) ? 'menu-open' : ''}}">
-                    <a href="#" class="nav-link {{ (request()->is('spsm/admin/laporan_mesyuarat/*')) ? 'active' : ''}}">
+                <li class="nav-item {{ request()->is('spsm/admin/laporan_mesyuarat/*') ? 'menu-open' : '' }}">
+                    <a href="#"
+                        class="nav-link {{ request()->is('spsm/admin/laporan_mesyuarat/*') ? 'active' : '' }}">
                         <i class="nav-icon far fa-file-alt"></i>
                         <p>
                             Laporan Mesyuarat
@@ -421,8 +421,8 @@
                     </ul>
                 </li>
                 {{-- Berita Ukur --}}
-                <li class="nav-item {{ (request()->is('spsm/admin/berita_ukur/*')) ? 'menu-open' : ''}}">
-                    <a href="#" class="nav-link {{ (request()->is('spsm/admin/berita_ukur/*')) ? 'active' : ''}}">
+                <li class="nav-item {{ request()->is('spsm/admin/berita_ukur/*') ? 'menu-open' : '' }}">
+                    <a href="#" class="nav-link {{ request()->is('spsm/admin/berita_ukur/*') ? 'active' : '' }}">
                         <i class="nav-icon far fa-comment-alt"></i>
                         <p>
                             Berita Ukur
@@ -445,8 +445,8 @@
                     </ul>
                 </li>
                 {{-- Kertas Kerja --}}
-                <li class="nav-item {{ (request()->is('spsm/admin/kertas_kerja/*')) ? 'menu-open' : ''}}">
-                    <a href="#" class="nav-link {{ (request()->is('spsm/admin/kertas_kerja/*')) ? 'active' : ''}}">
+                <li class="nav-item {{ request()->is('spsm/admin/kertas_kerja/*') ? 'menu-open' : '' }}">
+                    <a href="#" class="nav-link {{ request()->is('spsm/admin/kertas_kerja/*') ? 'active' : '' }}">
                         <i class="nav-icon far fa-file-pdf"></i>
                         <p>
                             Kertas Kerja
@@ -469,8 +469,9 @@
                     </ul>
                 </li>
                 {{-- Piagam Pelanggan --}}
-                <li class="nav-item {{ (request()->is('spsm/admin/piagam_pelanggan/*')) ? 'menu-open' : ''}}">
-                    <a href="#" class="nav-link {{ (request()->is('spsm/admin/piagam_pelanggan/*')) ? 'active' : ''}}">
+                <li class="nav-item {{ request()->is('spsm/admin/piagam_pelanggan/*') ? 'menu-open' : '' }}">
+                    <a href="#"
+                        class="nav-link {{ request()->is('spsm/admin/piagam_pelanggan/*') ? 'active' : '' }}">
                         <i class="nav-icon fab fa-creative-commons-nd"></i>
                         <p>
                             Piagam Pelanggan
@@ -493,8 +494,8 @@
                     </ul>
                 </li>
                 {{-- Jadual Peperiksaan --}}
-                <li class="nav-item {{ (request()->is('spsm/admin/exam/*')) ? 'menu-open' : ''}}">
-                    <a href="#" class="nav-link {{ (request()->is('spsm/admin/exam/*')) ? 'active' : ''}}">
+                <li class="nav-item {{ request()->is('spsm/admin/exam/*') ? 'menu-open' : '' }}">
+                    <a href="#" class="nav-link {{ request()->is('spsm/admin/exam/*') ? 'active' : '' }}">
                         <i class="nav-icon far fa-calendar-alt"></i>
                         <p>
                             Jadual Peperiksaan
@@ -517,8 +518,8 @@
                     </ul>
                 </li>
                 {{-- Buku --}}
-                <li class="nav-item {{ (request()->is('spsm/admin/buku/*')) ? 'menu-open' : ''}}">
-                    <a href="#" class="nav-link {{ (request()->is('spsm/admin/buku/*')) ? 'active' : ''}}">
+                <li class="nav-item {{ request()->is('spsm/admin/buku/*') ? 'menu-open' : '' }}">
+                    <a href="#" class="nav-link {{ request()->is('spsm/admin/buku/*') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-book"></i>
                         <p>
                             Buku
@@ -541,8 +542,8 @@
                     </ul>
                 </li>
                 {{-- Galeri --}}
-                <li class="nav-item {{ (request()->is('spsm/admin/galeri/*')) ? 'menu-open' : ''}}">
-                    <a href="#" class="nav-link {{ (request()->is('spsm/admin/galeri/*')) ? 'active' : ''}}">
+                <li class="nav-item {{ request()->is('spsm/admin/galeri/*') ? 'menu-open' : '' }}">
+                    <a href="#" class="nav-link {{ request()->is('spsm/admin/galeri/*') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-photo-video"></i>
                         <p>
                             Galeri
@@ -564,9 +565,26 @@
                         </li>
                     </ul>
                 </li>
+                <li class="nav-item {{ request()->is('spsm/admin/maklum_balas/*') ? 'menu-open' : '' }}">
+                    <a href="#" class="nav-link {{ request()->is('spsm/admin/maklum_balas/*') ? 'active' : '' }}">
+                        <i class="nav-icon fas fa-ticket-alt"></i>
+                        <p>
+                            Maklum Balas
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="/spsm/admin/maklum_balas/list" class="nav-link">
+                                <i class="fas fa-list-alt nav-icon"></i>
+                                <p>Senarai</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
                 <li class="nav-header">Tetapan</li>
-                <li class="nav-item {{ (request()->is('spsm/admin/settings/*')) ? 'menu-open' : ''}}">
-                    <a href="#" class="nav-link {{ (request()->is('spsm/admin/settings/*')) ? 'active' : ''}}">
+                <li class="nav-item {{ request()->is('spsm/admin/settings/*') ? 'menu-open' : '' }}">
+                    <a href="#" class="nav-link {{ request()->is('spsm/admin/settings/*') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-cog"></i>
                         <p>
                             Umum
@@ -597,8 +615,8 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item {{ (request()->is('spsm/admin/piagam/*')) ? 'active' : ''}}">
-                            <a href="#" class="nav-link {{ (request()->is('spsm/admin/piagam/*')) ? 'active' : ''}}">
+                        <li class="nav-item {{ request()->is('spsm/admin/piagam/*') ? 'active' : '' }}">
+                            <a href="#" class="nav-link {{ request()->is('spsm/admin/piagam/*') ? 'active' : '' }}">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>
                                     Page
@@ -620,8 +638,8 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item {{ (request()->is('spsm/admin/user/*')) ? 'menu-open' : ''}}">
-                            <a href="#" class="nav-link {{ (request()->is('spsm/admin/user/*')) ? 'active' : ''}}">
+                        <li class="nav-item {{ request()->is('spsm/admin/user/*') ? 'menu-open' : '' }}">
+                            <a href="#" class="nav-link {{ request()->is('spsm/admin/user/*') ? 'active' : '' }}">
                                 <i class="fas fa-users-cog nav-icon"></i>
                                 <p>
                                     Users
@@ -643,8 +661,8 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item {{ (request()->is('spsm/admin/log/*')) ? 'menu-open' : ''}}">
-                            <a href="#" class="nav-link {{ (request()->is('spsm/admin/log/*')) ? 'active' : ''}}">
+                        <li class="nav-item {{ request()->is('spsm/admin/log/*') ? 'menu-open' : '' }}">
+                            <a href="#" class="nav-link {{ request()->is('spsm/admin/log/*') ? 'active' : '' }}">
                                 <i class="fas fa-clipboard-list nav-icon"></i>
                                 <p>
                                     Log
