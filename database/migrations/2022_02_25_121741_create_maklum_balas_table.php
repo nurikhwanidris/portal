@@ -20,7 +20,7 @@ class CreateMaklumBalasTable extends Migration
             $table->string('fullName');
             $table->string('email');
             $table->string('phone');
-            $table->string('title_my');
+            $table->string('title');
             $table->text('content');
             $table->timestamps();
         });

@@ -8,23 +8,13 @@ use Illuminate\Http\Request;
 class MaklumBalasController extends Controller
 {
     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
-    }
-
-    /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function create()
     {
-        //
+        return view('maklum-balas.create');
     }
 
     /**
@@ -35,7 +25,19 @@ class MaklumBalasController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validateData = $request->validate([
+            'product'=>'required',
+            'typeOfQuestion'=>'required',
+            'fullName'=>'required',
+            'email'=>'required',
+            'phone'=>'required',
+            'title'=>'required',
+            'content'=>'required',
+        ]);
+
+        MaklumBalas::create($validateData);
+
+        return back()->with('success','Satu maklum balas telah dihantar');
     }
 
     /**
@@ -55,7 +57,7 @@ class MaklumBalasController extends Controller
             'title' => 'Senarai Maklum Balas',
             'leadCrumbs' => 'Maklum Balas',
             'link' => '/spsm/admin/maklum_balas/list',
-            'laporans' => MaklumBalas::with('status')->get(),
+            'responses' => MaklumBalas::all(),
         ]);
     }
 }
