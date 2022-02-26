@@ -517,7 +517,7 @@
                         </li>
                     </ul>
                 </li>
-                {{-- Buku --}}
+                {{-- Buku
                 <li class="nav-item {{ request()->is('spsm/admin/buku/*') ? 'menu-open' : '' }}">
                     <a href="#" class="nav-link {{ request()->is('spsm/admin/buku/*') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-book"></i>
@@ -540,7 +540,7 @@
                             </a>
                         </li>
                     </ul>
-                </li>
+                </li> --}}
                 {{-- Galeri --}}
                 <li class="nav-item {{ request()->is('spsm/admin/galeri/*') ? 'menu-open' : '' }}">
                     <a href="#" class="nav-link {{ request()->is('spsm/admin/galeri/*') ? 'active' : '' }}">
