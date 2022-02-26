@@ -11,10 +11,10 @@
                                 <th class="align-middle text-center">#</th>
                                 <th class="align-middle text-center">Tentang</th>
                                 <th class="align-middle text-center">Jenis Maklum balas</th>
+                                <th class="align-middle">Tajuk Maklum Balas</th>
                                 <th class="align-middle">Nama Responden</th>
                                 <th class="align-middle">No Telefon</th>
                                 <th class="align-middle">Email</th>
-                                <th class="align-middle">Tajuk Maklum Balas</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -30,6 +30,9 @@
                                         {{ $response->typeOfQuestion }}
                                     </td>
                                     <td class="align-middle">
+                                        {{ $response->title }}
+                                    </td>
+                                    <td class="align-middle">
                                         {{ $response->fullName }}
                                     </td>
                                     <td class="align-middle">
@@ -37,9 +40,6 @@
                                     </td>
                                     <td class="align-middle">
                                         {{ $response->email }}
-                                    </td>
-                                    <td class="align-middle">
-                                        {{ $response->title }}
                                     </td>
                                 </tr>
                             @endforeach

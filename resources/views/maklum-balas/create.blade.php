@@ -2,9 +2,9 @@
     @csrf
     <select name="product" id="">
         <option value="">Sila Pilih</option>
-        <option value="portal">Portal JUPEM</option>
-        <option value="product">Produk & Perkhidmatan</option>
-        <option value="others">Lain-lain</option>
+        <option value="Portal">Portal JUPEM</option>
+        <option value="Produk">Produk & Perkhidmatan</option>
+        <option value="Lain">Lain-lain</option>
     </select><br>
     <select name="typeOfQuestion" id="">
         <option value="">Sila Pilih</option>

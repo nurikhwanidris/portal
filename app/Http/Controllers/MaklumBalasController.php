@@ -40,17 +40,6 @@ class MaklumBalasController extends Controller
         return back()->with('success','Satu maklum balas telah dihantar');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\MaklumBalas  $maklumBalas
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(MaklumBalas $maklumBalas)
-    {
-        //
-    }
-
     public function list()
     {
         return view('spsm.admin.maklum_balas.list',[
