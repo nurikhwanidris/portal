@@ -169,21 +169,33 @@
                     <a href="#" class="nav-link {{ request()->is('spsm/admin/pegawai/*') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-users"></i>
                         <p>
-                            Direktori Pegawai
+                            Pegawai
                             <i class="fas fa-angle-left right"></i>
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="/spsm/admin/page/create" class="nav-link">
+                            <a href="/spsm/admin/pegawai/create" class="nav-link">
                                 <i class="fas fa-plus nav-icon"></i>
                                 <p>Tambah Pegawai</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/spsm/admin/page/" class="nav-link">
+                            <a href="/spsm/admin/pegawai/tukar" class="nav-link">
+                                <i class="fas fa-exchange-alt nav-icon"></i>
+                                <p>Tukar Pegawai</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/spsm/admin/pegawai/" class="nav-link">
                                 <i class="fas fa-list-alt nav-icon"></i>
                                 <p>Senarai Pegawai</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/spsm/admin/pegawai/gred" class="nav-link">
+                                <i class="fas fa-list-ul nav-icon"></i>
+                                <p>Gred Pegawai</p>
                             </a>
                         </li>
                         <li class="nav-item">
@@ -200,42 +212,18 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="/spsm/admin/page/" class="nav-link">
-                                        <i class="fas fa-list-ul nav-icon"></i>
-                                        <p>Susunan Jabatan/Staf</p>
+                                    <a href="/spsm/admin/jabatan/create" class="nav-link">
+                                        <i class="fas fa-plus nav-icon"></i>
+                                        <p>Tambah Jabatan</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/spsm/admin/jabatan/susunan" class="nav-link">
+                                        <i class="fas fa-stream nav-icon"></i>
+                                        <p>Susunan Jabatan</p>
                                     </a>
                                 </li>
                             </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/spsm/admin/page/" class="nav-link">
-                                <i class="fas fa-list-ul nav-icon"></i>
-                                <p>Gred Pegawai</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                {{-- Pertukaran Pegawai --}}
-                <li class="nav-item {{ request()->is('spsm/admin/tukarpegawai/*') ? 'menu-open' : '' }}">
-                    <a href="#" class="nav-link {{ request()->is('spsm/admin/tukarpegawai/*') ? 'active' : '' }}">
-                        <i class="nav-icon fas fa-exchange-alt"></i>
-                        <p>
-                            Pertukaran Pegawai
-                            <i class="fas fa-angle-left right"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="/spsm/admin/page/create" class="nav-link">
-                                <i class="fas fa-plus nav-icon"></i>
-                                <p>Tambah Pertukaran</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/spsm/admin/page/" class="nav-link">
-                                <i class="fas fa-list-alt nav-icon"></i>
-                                <p>Senarai Pegawai</p>
-                            </a>
                         </li>
                     </ul>
                 </li>
@@ -261,12 +249,6 @@
                                 <p>Senarai Keratan Akhbar</p>
                             </a>
                         </li>
-                        {{-- <li class="nav-item">
-                            <a href="/spsm/admin/page/" class="nav-link">
-                                <i class="fas fa-list-alt nav-icon"></i>
-                                <p>Sumber Keratan Akbar</p>
-                            </a>
-                        </li> --}}
                     </ul>
                 </li>
                 {{-- Pekeliling --}}

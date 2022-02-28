@@ -15,6 +15,7 @@ use App\Http\Controllers\BuletinGisController;
 use App\Http\Controllers\BeritaUkurController;
 use App\Http\Controllers\KertasKerjaController;
 use App\Http\Controllers\MaklumBalasController;
+use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\PiagamPelangganController;
 use App\Models\MaklumBalas;
 use Illuminate\Support\Facades\Route;
@@ -98,14 +99,6 @@ Route::delete('/spsm/admin/slider/delete/{slider}', [MediaController::class, 'sl
 // Popup Route
 Route::resource('/spsm/admin/popup', PopupController::class)->middleware('auth');
 
-// // Direktori Pegawai route
-// Route::resource('/spsm/admin/pegawai', DirecktoriPegawaiController::class)->middleware('auth'); // Sambung dkt sini nanti
-
-// // Jabatan route
-// Route::resource('/spsm/admin/jabatan', JabatanUnitController::class)->middleware('auth');
-
-// Petukaran Pegawai route
-
 // Keratan Akhbar route
 Route::resource('/spsm/admin/newspaper', KeratanAkhbarController::class)->middleware('auth');
 
@@ -144,3 +137,6 @@ Route::get('/maklum-balas',[MaklumBalasController::class,'create']);
 
 // Maklum Balas store route
 Route::post('/maklum-balas/store',[MaklumBalasController::class,'store']);
+
+// Pegawai route
+Route::resource('/spsm/admin/pegawai',PegawaiController::class)->middleware('auth');
