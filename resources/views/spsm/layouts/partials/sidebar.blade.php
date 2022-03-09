@@ -165,8 +165,8 @@
                     </ul>
                 </li>
                 {{-- Direktori Pegawai --}}
-                <li class="nav-item {{ request()->is('spsm/admin/pegawai/*') ? 'menu-open' : '' }}">
-                    <a href="#" class="nav-link {{ request()->is('spsm/admin/pegawai/*') ? 'active' : '' }}">
+                <li class="nav-item {{ request()->is('/spsm/admin/pegawai/*') ? 'menu-open' : '' }}">
+                    <a href="#" class="nav-link {{ request()->is('/spsm/admin/pegawai/*') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-users"></i>
                         <p>
                             Pegawai

@@ -26,6 +26,7 @@ class CreatePegawaisTable extends Migration
             $table->string('photo');
             $table->string('dept_id');
             $table->string('sort_order');
+            $table->string('status');
             $table->timestamps();
         });
     }

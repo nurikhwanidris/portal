@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Pegawai;
+use App\Models\PiagamPelanggan;
+use App\Models\Status;
 use Illuminate\Http\Request;
 
 class PegawaiController extends Controller
@@ -14,7 +16,12 @@ class PegawaiController extends Controller
      */
     public function index()
     {
-        //
+        return view('spsm.admin.pegawai.index',[
+            'title' => 'Senarai Pegawai',
+            'leadCrumbs' => 'Pegawai',
+            'link' => '/spsm/admin/piagam',
+            'pegawais' => Pegawai::with('status')->get(),
+        ]);
     }
 
     /**
@@ -24,7 +31,12 @@ class PegawaiController extends Controller
      */
     public function create()
     {
-        //
+        return view('spsm.admin.pegawai.create',[
+            'title' => 'Tambah Pegawai Baru',
+            'leadCrumbs' => 'Piagam Pelanggan',
+            'link' => '/spsm/admin/piagam',
+            'statuses' => Status::all(),
+        ]);
     }
 
     /**
@@ -35,7 +47,38 @@ class PegawaiController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validateData = $request->validate([
+            'name_my' => 'required',
+            'name_en' => 'required',
+            'jawatan_my' => 'required',
+            'jawatan_en' => 'required',
+            'gred_id' => 'required',
+            'email' => 'required',
+            'phone_no' => 'required',
+            'fax_no' => 'required',
+            // 'photo' => 'required',
+            'dept_id' => 'required',
+            'sort_order' => 'required',
+            'status' => 'required',
+        ]);
+
+        // Get filename with extension
+        $photoNameWithExtension = $request->file('photo')->getClientOriginalName();
+
+        // Get file extension
+        $photoExtension = pathinfo($photoNameWithExtension, PATHINFO_FILENAME);
+
+        // Filter out the extension
+        $photoExtension = $request->file('photo')->getClientOriginalExtension();
+
+        // Removes all whitespace and add time
+        $photoToStore = str_replace(' ','-',$photoExtension).'-'.time().'-'.$photoExtension;
+
+        $validateData['photo'] = $photoToStore;
+
+        Pegawai::created($validateData);
+
+        return redirect('/spsm/admin/pegawai')->with('success','Seorang pegawai telah berjaya ditambah');
     }
 
     /**

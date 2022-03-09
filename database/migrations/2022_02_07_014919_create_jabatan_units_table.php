@@ -15,12 +15,11 @@ class CreateJabatanUnitsTable extends Migration
     {
         Schema::create('jabatan_units', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained();
-            $table->string('namaJabatan');
-            $table->string('departmentName');
-            $table->string('parentId');
-            $table->string('sortOrder')->nullable();
-            $table->smallInteger('status_id');
+            $table->string('name_my');
+            $table->string('name_en');
+            $table->string('parent_id');
+            $table->string('sort_order')->nullable();
+            $table->string('status');
             $table->timestamps();
         });
     }
