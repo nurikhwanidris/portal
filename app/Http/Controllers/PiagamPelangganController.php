@@ -60,16 +60,16 @@ class PiagamPelangganController extends Controller
         $filename_enWithExtension = $request->file('filename_en')->getClientOriginalName();
 
         // Filter out the extension
-        $filename_myExtension = pathinfo($filename_myWithExtension, PATHINFO_FILENAME);
-        $filename_enExtension = pathinfo($filename_enWithExtension, PATHINFO_FILENAME);
+        $filename_my = pathinfo($filename_myWithExtension, PATHINFO_FILENAME);
+        $filename_en = pathinfo($filename_enWithExtension, PATHINFO_FILENAME);
 
         // Filter out the filename
         $filename_myExtension = $request->file('filename_my')->getClientOriginalExtension();
         $filename_enExtension = $request->file('filename_en')->getClientOriginalExtension();
 
         // Removes all whitespaces and add time
-        $filename_myToStore = str_replace(' ', '-', $filename_myExtension) . '-' . time() . '.' . $filename_enExtension;
-        $filename_enToStore = str_replace(' ', '-', $filename_enExtension) . '-' . time() . '.' . $filename_enExtension;
+        $filename_myToStore = str_replace(' ', '-', $filename_my) . '-' . time() . '.' . $filename_myExtension;
+        $filename_enToStore = str_replace(' ', '-', $filename_en) . '-' . time() . '.' . $filename_enExtension;
 
         // Store the file with its new name
         $request->file('filename_my')->storeAs('public/upload/doc/', $filename_myToStore);

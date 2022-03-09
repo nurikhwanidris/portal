@@ -17,8 +17,8 @@ use App\Http\Controllers\KertasKerjaController;
 use App\Http\Controllers\MaklumBalasController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\PiagamPelangganController;
-use App\Models\MaklumBalas;
 use Illuminate\Support\Facades\Route;
+// use App\Models\MaklumBalas;
 
 /*
 |--------------------------------------------------------------------------
@@ -129,6 +129,9 @@ Route::resource('/spsm/admin/kertas_kerja', KertasKerjaController::class)->middl
 // Piagam Pelanggan route
 Route::resource('/spsm/admin/piagam_pelanggan', PiagamPelangganController::class)->middleware('auth');
 
+// Pegawai route
+Route::resource('/spsm/admin/pegawai',PegawaiController::class)->middleware('auth');
+
 // Maklum Balas list route
 Route::get('/spsm/admin/maklum_balas/list', [MaklumBalasController::class,'list'])->middleware('auth');
 
@@ -138,5 +141,3 @@ Route::get('/maklum-balas',[MaklumBalasController::class,'create']);
 // Maklum Balas store route
 Route::post('/maklum-balas/store',[MaklumBalasController::class,'store']);
 
-// Pegawai route
-Route::resource('/spsm/admin/pegawai',PegawaiController::class)->middleware('auth');

@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\JabatanUnit;
 use App\Models\Pegawai;
-use App\Models\PiagamPelanggan;
 use App\Models\Status;
 use Illuminate\Http\Request;
 
@@ -36,6 +36,7 @@ class PegawaiController extends Controller
             'leadCrumbs' => 'Piagam Pelanggan',
             'link' => '/spsm/admin/piagam',
             'statuses' => Status::all(),
+            'jabatans' => JabatanUnit::all(),
         ]);
     }
 
@@ -56,27 +57,30 @@ class PegawaiController extends Controller
             'email' => 'required',
             'phone_no' => 'required',
             'fax_no' => 'required',
-            // 'photo' => 'required',
+            'photo' => 'required',
             'dept_id' => 'required',
             'sort_order' => 'required',
-            'status' => 'required',
+            // 'status' => 'required',
         ]);
 
         // Get filename with extension
         $photoNameWithExtension = $request->file('photo')->getClientOriginalName();
 
         // Get file extension
-        $photoExtension = pathinfo($photoNameWithExtension, PATHINFO_FILENAME);
+        $photoName = pathinfo($photoNameWithExtension, PATHINFO_FILENAME);
 
         // Filter out the extension
         $photoExtension = $request->file('photo')->getClientOriginalExtension();
 
         // Removes all whitespace and add time
-        $photoToStore = str_replace(' ','-',$photoExtension).'-'.time().'-'.$photoExtension;
+        $photoToStore = str_replace(' ','-',$photoName).'-'.time().'-'.$photoExtension;
+
+        // Store the file
+        $request->file('photo')->storeAs('public/upload/img/officer/',$photoToStore);
 
         $validateData['photo'] = $photoToStore;
 
-        Pegawai::created($validateData);
+        Pegawai::create($validateData);
 
         return redirect('/spsm/admin/pegawai')->with('success','Seorang pegawai telah berjaya ditambah');
     }
