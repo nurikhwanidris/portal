@@ -63,31 +63,7 @@ class PegawaiController extends Controller
             'status_id' => 'required',
         ]);
 
-        // Get filename with extension
-        $photoNameWithExtension = $request->file('photo')->getClientOriginalName();
-
-        // Get file extension
-        $photoName = pathinfo($photoNameWithExtension, PATHINFO_FILENAME);
-
-        // Filter out the extension
-        $photoExtension = $request->file('photo')->getClientOriginalExtension();
-
-        // Removes all whitespace and add time
-        $photoToStore = str_replace(' ', '-', $photoName).'-'.time().'-'.$photoExtension;
-
-        // Store the file
-        $request->file('photo')->storeAs('public/upload/img/officer/',$photoToStore);
-
-        $validateData['photo'] = 'store_image.jpg';
-        $validateData['status'] = 1;
-
-        if (Pegawai::create($validateData)) {
-            return redirect('/spsm/admin/pegawai')->with('success','Seorang pegawai telah berjaya ditambah');
-        } else {
-            return back()->with('error','Something went wrong');
-        }
-
-
+        return back()->with('error','Something went wrong');
     }
 
     /**
