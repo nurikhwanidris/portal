@@ -27,7 +27,7 @@ class PegawaiController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+    * @return \Illuminate\Http\Response
      */
     public function create()
     {
@@ -60,7 +60,7 @@ class PegawaiController extends Controller
             'photo' => 'required',
             'dept_id' => 'required',
             'sort_order' => 'required',
-            // 'status' => 'required',
+            'status_id' => 'required',
         ]);
 
         // Get filename with extension
@@ -73,16 +73,21 @@ class PegawaiController extends Controller
         $photoExtension = $request->file('photo')->getClientOriginalExtension();
 
         // Removes all whitespace and add time
-        $photoToStore = str_replace(' ','-',$photoName).'-'.time().'-'.$photoExtension;
+        $photoToStore = str_replace(' ', '-', $photoName).'-'.time().'-'.$photoExtension;
 
         // Store the file
         $request->file('photo')->storeAs('public/upload/img/officer/',$photoToStore);
 
-        $validateData['photo'] = $photoToStore;
+        $validateData['photo'] = 'store_image.jpg';
+        $validateData['status'] = 1;
 
-        Pegawai::create($validateData);
+        if (Pegawai::create($validateData)) {
+            return redirect('/spsm/admin/pegawai')->with('success','Seorang pegawai telah berjaya ditambah');
+        } else {
+            return back()->with('error','Something went wrong');
+        }
 
-        return redirect('/spsm/admin/pegawai')->with('success','Seorang pegawai telah berjaya ditambah');
+
     }
 
     /**

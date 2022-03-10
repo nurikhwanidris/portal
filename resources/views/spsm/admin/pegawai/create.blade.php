@@ -3,14 +3,24 @@
 @section('content')
     <div class="card">
         <div class="card-body">
-            <form action="/spsm/admin/pegawai" method="post" enctype="multipart/form-data">
+            <div class="row">
+                @if (session()->has('error'))
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        {{ session('error') }}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                @endif
+            </div>
+            <form action="/spsm/admin/pegawai" method="POST" enctype="multipart/form-data">
                 <div class="row">
                     <div class="col-lg-12">
                         @csrf
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label for="" class="col-sm-2 col-form-label sm">Nama Pegawai (My)</label>
+                    <label for="" class="col-sm-2 col-form-label-sm">Nama Pegawai (My)</label>
                     <span class="col-sm-1">:</span>
                     <div class="col-sm-4">
                         <input type="text" name="name_my" id=""
@@ -24,7 +34,7 @@
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label for="" class="col-sm-2 col-form-label sm">Nama Pegawai (En)</label>
+                    <label for="" class="col-sm-2 col-form-label-sm">Nama Pegawai (En)</label>
                     <span class="col-sm-1">:</span>
                     <div class="col-sm-4">
                         <input type="text" name="name_en" id=""
@@ -38,7 +48,7 @@
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label for="" class="col-sm-2 col-form-label sm">Jawatan (my)</label>
+                    <label for="" class="col-sm-2 col-form-label-sm">Jawatan (my)</label>
                     <span class="col-sm-1">:</span>
                     <div class="col-sm-4">
                         <input type="text" name="jawatan_my" id=""
@@ -52,7 +62,7 @@
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label for="" class="col-sm-2 col-form-label sm">Jawatan (en)</label>
+                    <label for="" class="col-sm-2 col-form-label-sm">Jawatan (en)</label>
                     <span class="col-sm-1">:</span>
                     <div class="col-sm-4">
                         <input type="text" name="jawatan_en" id=""
@@ -66,7 +76,7 @@
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label for="" class="col-sm-2 col-form-label sm">Gred</label>
+                    <label for="" class="col-sm-2 col-form-label-sm">Gred</label>
                     <span class="col-sm-1">:</span>
                     <div class="col-sm-2">
                         <select name="gred_id" id="" class="form-control form-control-sm">
@@ -149,6 +159,18 @@
                                 {{ $message }}
                             </div>
                         @enderror
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="" class="col-sm-2 col-form-label-sm col-form-label">Status</label>
+                    <span class="col-sm-1">:</span>
+                    <div class="col-sm-4">
+                        <select name="status_id" id="" class="form-control form-control-sm">
+                            <option value="">Sila Pilih</option>
+                            @foreach ($statuses as $status)
+                                <option value="{{ $status->id }}">{{ $status->status }}</option>
+                            @endforeach
+                        </select>
                     </div>
                 </div>
                 <div class="row">

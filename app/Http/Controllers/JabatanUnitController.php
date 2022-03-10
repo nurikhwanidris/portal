@@ -19,6 +19,7 @@ class JabatanUnitController extends Controller
             'title' => 'Senarai Jabatan & Unit',
             'leadCrumbs' => 'Jabatan & Unit',
             'link' => '/spsm/admin/jabatan/',
+            'jabatans' => JabatanUnit::all(),
         ]);
     }
 
@@ -34,6 +35,7 @@ class JabatanUnitController extends Controller
             'leadCrumbs' => 'Jabatan & Unit',
             'link' => '/spsm/admin/jabatan',
             'statuses' => Status::all(),
+            'jabatanInduk' => JabatanUnit::where('parent_id' ,'=', 0)->get(),
         ]);
     }
 
@@ -46,12 +48,17 @@ class JabatanUnitController extends Controller
     public function store(Request $request)
     {
         $validateData = $request->validate([
-            'namaJabatan' => 'required',
-            'departmentName' => 'required',
-            'parentId' => 'required',
-            'sortOrder' => 'required',
-            'status_id' => 'required',
+            'name_my' => 'required',
+            'name_en' => 'required',
+            'parent_id' => 'required',
+            'sort_order' => 'required',
+            'status' => 'required',
         ]);
+
+        JabatanUnit::create($validateData);
+
+        return redirect('/spsm/admin/pegawai')->with('success', 'Satu jabatan baru telah dimasukkan');
+
     }
 
     /**

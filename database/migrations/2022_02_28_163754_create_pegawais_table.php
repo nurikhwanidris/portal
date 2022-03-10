@@ -16,17 +16,17 @@ class CreatePegawaisTable extends Migration
         Schema::create('pegawais', function (Blueprint $table) {
             $table->id();
             $table->string('name_my');
-            $table->string('name_en');
+            $table->string('name_en')->nullable();
             $table->string('jawatan_my');
-            $table->string('jawatan_en');
+            $table->string('jawatan_en')->nullable();
             $table->string('gred_id');
             $table->string('email');
-            $table->string('phone_no');
-            $table->string('fax_no');
-            $table->string('photo');
+            $table->string('phone_no')->nullable();
+            $table->string('fax_no')->nullable();
+            $table->string('photo')->nullable();
             $table->string('dept_id');
-            $table->string('sort_order');
-            $table->string('status');
+            $table->smallInteger('sort_order');
+            $table->smallInteger('status_id');
             $table->timestamps();
         });
     }
