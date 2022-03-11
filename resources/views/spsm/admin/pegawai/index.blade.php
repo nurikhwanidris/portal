@@ -1,6 +1,13 @@
 @extends('spsm.layouts.main')
 
 @section('content')
+    {{-- Alert --}}
+    @if (session()->has('success'))
+        <div class="alert alert-success alert-dismissible">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            {{ session('success') }}
+        </div>
+    @endif
     <div class="card">
         <div class="card-body">
             <div class="row">
@@ -37,16 +44,16 @@
                                         {{ $pegawai->jabatan->name_my }}
                                     </td>
                                     <td class="align-middle">
-                                        {{ $pegawai->email }}
+                                        <a href="mailto:{{ $pegawai->email }}">{{ $pegawai->email }}</a>
                                     </td>
                                     <td class="align-middle text-center">
                                         <form action="/spsm/admin/pegawai/{{ $pegawai->id }}" method="post">
                                             @method('delete')
                                             @csrf
                                             <div class="row-inline">
-                                                <a href="/upload/doc/" class="btn btn-link" target="_blank">
+                                                {{-- <a href="/upload/doc/" class="btn btn-link" target="_blank">
                                                     <i class="fa fa-eye"></i>
-                                                </a>
+                                                </a> --}}
                                                 <a href="/spsm/admin/pegawai/{{ $pegawai->id }}/edit"
                                                     class="btn btn-link text-warning">
                                                     <i class="fa fa-edit"></i>

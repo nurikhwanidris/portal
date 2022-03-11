@@ -105,7 +105,14 @@ class PegawaiController extends Controller
      */
     public function edit(Pegawai $pegawai)
     {
-        //
+        return view('spsm.admin.pegawai.edit',[
+            'title' => 'Ubah Info Pegawai',
+            'leadCrumbs' => 'Piagam Pelanggan',
+            'link' => '/spsm/admin/piagam',
+            'statuses' => Status::all(),
+            'jabatans' => JabatanUnit::all(),
+            'pegawai' => $pegawai,
+        ]);
     }
 
     /**
@@ -117,7 +124,41 @@ class PegawaiController extends Controller
      */
     public function update(Request $request, Pegawai $pegawai)
     {
-        //
+        // Validate data
+        $validateData = $request->validate([
+            'name_my'=> 'required',
+            'name_en'=> 'required',
+            'jawatan_my'=> 'required',
+            'jawatan_en'=> 'required',
+            'gred_id'=> 'required',
+            'email'=> 'required',
+            'phone_no'=> 'required',
+            'dept_id'=> 'required',
+            'sort_order'=> 'required',
+            'status_id'=> 'required',
+        ]);
+
+        if ($request->file('photo')) {
+            // Get filename with extension
+            $filenameWithExtension = $request->file('photo')->getClientOriginalName();
+
+            // Filter out the extension
+            $filename = pathinfo($filenameWithExtension,PATHINFO_FILENAME);
+
+            // Filter out the filename only
+            $filenameExtension = $request->file('photo')->getClientOriginalExtension();
+
+            $filenameTostore = str_replace(' ', '-', $filename). '-' . time() . '.' . $filenameExtension;
+
+            // Store the file with its new name
+            $request->file('photo')->storeAs('public/upload/img/pegawai/',$filenameTostore);
+
+            $validateData['photo'] = $filenameTostore;
+        }
+
+        Pegawai::where('id', $pegawai->id)->update($validateData);
+
+        return redirect('/spsm/admin/pegawai')->with('success','Data seorang pegawai telah berjaya diubah.');
     }
 
     /**
@@ -128,6 +169,8 @@ class PegawaiController extends Controller
      */
     public function destroy(Pegawai $pegawai)
     {
-        //
+        Pegawai::destroy($pegawai->id);
+
+        return back()->with('success', 'Satu info pegawai telah berjaya dipadamkan dari database.');
     }
 }
