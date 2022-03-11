@@ -48,22 +48,42 @@ class PegawaiController extends Controller
      */
     public function store(Request $request)
     {
+
+        // Validate data
         $validateData = $request->validate([
-            'name_my' => 'required',
-            'name_en' => 'required',
-            'jawatan_my' => 'required',
-            'jawatan_en' => 'required',
-            'gred_id' => 'required',
-            'email' => 'required',
-            'phone_no' => 'required',
-            'fax_no' => 'required',
-            'photo' => 'required',
-            'dept_id' => 'required',
-            'sort_order' => 'required',
-            'status_id' => 'required',
+            'name_my'=> 'required',
+            'name_en'=> 'required',
+            'jawatan_my'=> 'required',
+            'jawatan_en'=> 'required',
+            'gred_id'=> 'required',
+            'email'=> 'required',
+            'phone_no'=> 'required',
+            'dept_id'=> 'required',
+            'sort_order'=> 'required',
+            'status_id'=> 'required',
         ]);
 
-        return back()->with('error','Something went wrong');
+        if ($request->file('photo')) {
+            // Get filename with extension
+            $filenameWithExtension = $request->file('photo')->getClientOriginalName();
+
+            // Filter out the extension
+            $filename = pathinfo($filenameWithExtension,PATHINFO_FILENAME);
+
+            // Filter out the filename only
+            $filenameExtension = $request->file('photo')->getClientOriginalExtension();
+
+            $filenameTostore = str_replace(' ', '-', $filename). '-' . time() . '.' . $filenameExtension;
+
+            // Store the file with its new name
+            $request->file('photo')->storeAs('public/upload/img/pegawai/',$filenameTostore);
+
+            $validateData['photo'] = $filenameTostore;
+        }
+
+        Pegawai::create($validateData);
+
+        return redirect('/spsm/admin/pegawai')->with('success','Data seorang pegawai telah berjaya ditambah');
     }
 
     /**

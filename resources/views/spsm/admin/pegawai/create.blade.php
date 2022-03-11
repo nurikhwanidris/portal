@@ -13,7 +13,7 @@
                     </div>
                 @endif
             </div>
-            <form action="/spsm/admin/pegawai/store" method="POST" enctype="multipart/form-data">
+            <form action="/spsm/admin/pegawai" method="POST" enctype="multipart/form-data">
                 <div class="row">
                     <div class="col-lg-12">
                         @csrf
