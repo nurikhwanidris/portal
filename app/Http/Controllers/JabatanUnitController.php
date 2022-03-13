@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\JabatanUnit;
 use Illuminate\Http\Request;
 use App\Models\Status;
+use Illuminate\Support\Facades\DB;
 
 class JabatanUnitController extends Controller
 {
