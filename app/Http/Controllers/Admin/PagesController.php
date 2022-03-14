@@ -60,7 +60,7 @@ class PagesController extends Controller
             'slug_my' => 'required|unique:pages',
             'content_my' => 'required',
             'content_en' => 'required',
-            'status' => 'required',
+            'status_id' => 'required',
             'type' => 'required',
         ]);
 

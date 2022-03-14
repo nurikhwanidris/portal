@@ -26,8 +26,8 @@ class CreateTendersTable extends Migration
             $table->string('pertanyaan');
             $table->string('filename');
             $table->smallInteger('status_id');
-            $table->dateTime('paparanMula');
-            $table->dateTime('paparanTamat');
+            $table->dateTime('show');
+            $table->dateTime('hide');
             $table->timestamps();
         });
     }

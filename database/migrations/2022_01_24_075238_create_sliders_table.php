@@ -19,8 +19,8 @@ class CreateSlidersTable extends Migration
             $table->string('filename');
             $table->string('link')->nullable();
             $table->smallInteger('status_id');
-            $table->dateTime('show')->nullable();
-            $table->dateTime('hide');
+            $table->dateTime('show');
+            $table->dateTime('hide')->nullable();
             $table->smallInteger('susunan');
             $table->timestamps();
         });

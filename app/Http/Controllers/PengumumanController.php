@@ -55,12 +55,12 @@ class PengumumanController extends Controller
         ]);
 
         $validateData['user_id'] = auth()->user()->id;
-        $validateData['paparanMula'] = $request->paparanMula;
-        $validateData['paparanTamat'] = $request->paparanTamat;
+        $validateData['show'] = $request->show;
+        $validateData['hide'] = $request->hide;
 
         Pengumuman::create($validateData);
 
-        return redirect('/spsm/admin/pengumuman')->with('success', 'Satu pengumuman telah berjaya disimpan dan akan mula dipaparkan pada ' . '<b>' . $validateData['paparanMula'] . '</b>.');
+        return redirect('/spsm/admin/pengumuman')->with('success', 'Satu pengumuman telah berjaya disimpan dan akan mula dipaparkan pada ' . '<b>' . $validateData['show'] . '</b>.');
     }
 
     /**
@@ -114,12 +114,12 @@ class PengumumanController extends Controller
         ]);
 
         $validateData['user_id'] = auth()->user()->id;
-        $validateData['paparanMula'] = $request->paparanMula;
-        $validateData['paparanTamat'] = $request->paparanTamat;
+        $validateData['show'] = $request->show;
+        $validateData['hide'] = $request->hide;
 
         Pengumuman::where('id', $pengumuman->id)->update($validateData);
 
-        return redirect('/spsm/admin/pengumuman/' . $pengumuman->id . '/edit')->with('success', 'Satu pengumuman telah berjaya disimpan dan akan mula dipaparkan pada '  . $validateData['paparanMula']);
+        return redirect('/spsm/admin/pengumuman/' . $pengumuman->id . '/edit')->with('success', 'Satu pengumuman telah berjaya disimpan dan akan mula dipaparkan pada '  . $validateData['show']);
     }
 
     /**

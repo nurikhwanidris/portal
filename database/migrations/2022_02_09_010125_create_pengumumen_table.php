@@ -20,8 +20,8 @@ class CreatePengumumenTable extends Migration
             $table->string('title_en');
             $table->text('content_my');
             $table->text('content_en');
-            $table->dateTime('paparanMula')->nullable();
-            $table->dateTime('paparanTamat')->nullable();
+            $table->dateTime('show')->nullable();
+            $table->dateTime('hide')->nullable();
             $table->smallInteger('status_id');
             $table->timestamps();
         });

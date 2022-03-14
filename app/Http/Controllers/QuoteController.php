@@ -50,8 +50,8 @@ class QuoteController extends Controller
             'title_my' => 'required',
             'title_en' => 'required',
             'tempoh' => 'required',
-            'paparanMula' => 'required',
-            'paparanTamat' => 'required',
+            'show' => 'required',
+            'hide' => 'required',
             'status_id' => 'required'
         ]);
 
@@ -80,7 +80,7 @@ class QuoteController extends Controller
 
         Quote::create($validateData);
 
-        return redirect('/spsm/admin/quote')->with('success', 'Satu tender telah berjaya disimpan dan akan mula dipaparkan pada ' . $validateData['paparanMula']);
+        return redirect('/spsm/admin/quote')->with('success', 'Satu tender telah berjaya disimpan dan akan mula dipaparkan pada ' . $validateData['show']);
     }
 
     /**
@@ -129,8 +129,8 @@ class QuoteController extends Controller
             'title_my' => 'required',
             'title_en' => 'required',
             'tempoh' => 'required',
-            'paparanMula' => 'required',
-            'paparanTamat' => 'required',
+            'show' => 'required',
+            'hide' => 'required',
             'status_id' => 'required'
         ]);
 
@@ -161,7 +161,7 @@ class QuoteController extends Controller
 
         Quote::where('id', $quote->id)->update($validateData);
 
-        return redirect('/spsm/admin/quote')->with('success', 'Satu sebut harga telah berjaya dikemaskini dan akan mula dipaparkan pada ' . $validateData['paparanMula']);
+        return redirect('/spsm/admin/quote')->with('success', 'Satu sebut harga telah berjaya dikemaskini dan akan mula dipaparkan pada ' . $validateData['show']);
     }
 
     /**

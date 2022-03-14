@@ -48,7 +48,7 @@ class PageFactory extends Factory
 
 <p>Pellentesque quis eros et sapien tristique rutrum. Etiam convallis placerat massa non tempus. Fusce vulputate, justo pharetra molestie porttitor, felis lorem imperdiet orci, sed pharetra sem velit sit amet neque. Quisque eget porttitor metus, ultricies rutrum nulla. Proin sit amet commodo lorem, sit amet dictum massa. Nam ullamcorper lacinia risus eu facilisis. Integer molestie viverra turpis at pulvinar. Aliquam odio ante, scelerisque maximus eleifend sed, vehicula et leo. Praesent in mi molestie mauris ornare tempus non nec justo. Sed finibus erat tortor, eget pharetra risus congue ut.</p>
 </div>',
-            'status' => 'published',
+            'status_id' => '1',
             'type' => 'page',
         ];
     }

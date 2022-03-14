@@ -22,7 +22,7 @@ class CreatePageTable extends Migration
             $table->string('slug_en', 100);
             $table->text('content_my');
             $table->text('content_en');
-            $table->string('status', 40);
+            $table->tinyInteger('status_id');
             $table->string('type', 20);
             $table->string('parent_id', 20)->nullable();
             $table->timestamps();
