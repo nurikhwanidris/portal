@@ -1,0 +1,3 @@
+SELECT id, name_my, parent_id, sort_order
+FROM jabatan_units
+ORDER BY case when parent_id =0 then id else parent_id end * 1000 + id ASC;
