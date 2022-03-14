@@ -51,9 +51,6 @@
                                             @method('delete')
                                             @csrf
                                             <div class="row-inline">
-                                                {{-- <a href="/upload/doc/" class="btn btn-link" target="_blank">
-                                                    <i class="fa fa-eye"></i>
-                                                </a> --}}
                                                 <a href="/spsm/admin/pegawai/{{ $pegawai->id }}/edit"
                                                     class="btn btn-link text-warning">
                                                     <i class="fa fa-edit"></i>
