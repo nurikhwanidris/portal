@@ -51,14 +51,18 @@ class JabatanUnitController extends Controller
         $validateData = $request->validate([
             'name_my' => 'required',
             'name_en' => 'required',
-            'parent_id' => 'required',
-            'sort_order' => 'required',
-            'status' => 'required',
+            'status_id' => 'required',
         ]);
+
+        if ($request['parent_id'] == '') {
+            $validateData['parent_id'] = 0;
+        } else {
+            $validateData['parent_id'] = $request['parent_id'];
+        }
 
         JabatanUnit::create($validateData);
 
-        return redirect('/spsm/admin/pegawai')->with('success', 'Satu jabatan baru telah dimasukkan');
+        return redirect('/spsm/admin/jabatan')->with('success', 'Satu jabatan baru telah dimasukkan');
 
     }
 

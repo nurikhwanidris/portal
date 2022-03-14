@@ -34,10 +34,19 @@
                             <ul>
                                 {{-- <li>Coffee</li> --}}
                                 @if ($jabatan->parent_id == 0)
-                                    <li>{{ $jabatan->name_my }}</li>
+                                    <li>
+                                        <b>{{ $jabatan->name_my }}</b>
+                                        <a href="/spsm/admin/jabatan/{{ $jabatan->id }}/edit">
+                                            &nbsp;<i class="fas fa-edit"></i>
+                                        </a>
+                                    </li>
                                 @elseif ($jabatan->parent_id != 0)
                                     <ul>
-                                        <li>{{ $jabatan->name_my }}</li>
+                                        <li>{{ $jabatan->name_my }}
+                                            <a href="/spsm/admin/jabatan/{{ $jabatan->id }}/edit">
+                                                &nbsp;<i class="fas fa-edit"></i>
+                                            </a>
+                                        </li>
                                     </ul>
                                 @endif
                             </ul>
