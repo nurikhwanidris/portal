@@ -14,6 +14,7 @@ use App\Http\Controllers\TenderController;
 use App\Http\Controllers\BuletinGisController;
 use App\Http\Controllers\BeritaUkurController;
 use App\Http\Controllers\GisController;
+use App\Http\Controllers\GisTestController;
 use App\Http\Controllers\JabatanUnitController;
 use App\Http\Controllers\KertasKerjaController;
 use App\Http\Controllers\MaklumBalasController;
@@ -150,3 +151,4 @@ Route::resource('/spsm/admin/jabatan', JabatanUnitController::class)->middleware
 
 // Pekeliling Route
 Route::resource('/spsm/admin/pekeliling', PekelilingController::class)->middleware('auth');
+

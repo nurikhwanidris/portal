@@ -81,7 +81,7 @@ class PiagamPelangganController extends Controller
 
         PiagamPelanggan::create($validateData);
 
-        return redirect('/spsm/admin/piagam_pelanggan')->with('success', 'Satu laporan tahunan telah berjaya disimpan.');
+        return redirect('/spsm/admin/piagam_pelanggan')->with('success', 'Satu piagam pelanggan telah berjaya disimpan.');
     }
 
     /**
@@ -167,7 +167,7 @@ class PiagamPelangganController extends Controller
 
         PiagamPelanggan::where('id', $piagamPelanggan->id)->update($validateData);
 
-        return redirect('/spsm/admin/piagam_pelanggan')->with('success', 'Satu laporan tahunan telah berjaya disimpan.');
+        return redirect('/spsm/admin/piagam_pelanggan')->with('success', 'Satu piagam pelanggan telah berjaya disimpan.');
     }
 
     /**

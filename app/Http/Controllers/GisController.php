@@ -104,11 +104,21 @@ class GisController extends Controller
     public function edit(Gis $gis)
     {
         return view('spsm.admin.gis.edit', [
-            'title' => $gis->title_my,
+            'title' => 'Ubah Buletin GIS',
             'leadCrumbs' => 'Buletin GIS',
             'link' => '/spsm/admin/gis',
-            'buletin' => $gis,
+            'gis' => $gis,
             'statuses' => Status::all(),
+        ]);
+    }
+
+    // Testing shit
+    public function test(Gis $gis)
+    {
+        return view('spsm.admin.test.edit',[
+            'title' => 'some shit',
+            'leadCrumbs' => 'Ntah',
+            'gis' => $gis,
         ]);
     }
 

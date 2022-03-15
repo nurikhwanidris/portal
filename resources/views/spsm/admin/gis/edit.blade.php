@@ -5,7 +5,7 @@
         <div class="card-body">
             <div class="row">
                 <div class="col-lg-12">
-                    <form action="/spsm/admin/gis/{{ $buletin->id }}" method="post" enctype="multipart/form-data">
+                    <form action="/spsm/admin/gis/{{ $gis->id }}" method="post" enctype="multipart/form-data">
                         <div class="row">
                             @method('put')
                             @csrf
@@ -18,7 +18,7 @@
                                     <div class="col-sm-6">
                                         <input type="text" name="title_my" id=""
                                             class="form-control form-control-sm @error('title_my') is-invalid @enderror"
-                                            value="{{ old('title_my', $buletin->title_my) }}">
+                                            value="{{ old('title_my', $gis->title_my) }}">
                                         @error('title_my')
                                             <div class="invalid-feedback">
                                                 {{ $message }}
@@ -32,7 +32,7 @@
                                     <div class="col-sm-6">
                                         <input type="text" name="title_en" id=""
                                             class="form-control form-control-sm @error('title_en') is-invalid @enderror"
-                                            value="{{ old('title_en', $buletin->title_en) }}">
+                                            value="{{ old('title_en', $gis->title_en) }}">
                                         @error('title_en')
                                             <div class="invalid-feedback">
                                                 {{ $message }}
@@ -46,7 +46,7 @@
                                     <div class="col-sm-6">
                                         <input type="text" name="year" id=""
                                             class="form-control form-control-sm @error('year') is-invalid @enderror"
-                                            value="{{ old('title_en', $buletin->year) }}">
+                                            value="{{ old('title_en', $gis->year) }}">
                                         @error('year')
                                             <div class="invalid-feedback">
                                                 {{ $message }}
@@ -58,7 +58,7 @@
                                     <label for="" class="col-sm-2 col-form-label col-form-label-sm">Buletin</label>
                                     <span class="col-sm-1">:</span>
                                     <div class="col-sm-3">
-                                        <input type="hidden" name="oldFile" value="{{ $buletin->filename }}">
+                                        <input type="hidden" name="oldFile" value="{{ $gis->filename }}">
                                         <input type="file" name="filename" id=""
                                             class="form-control form-control-sm @error('filename') is-invalid @enderror"
                                             accept="application/pdf">
@@ -73,7 +73,7 @@
                                     <label for="" class="col-sm-2 col-form-label sm">Gambar Hadapan</label>
                                     <span class="col-sm-1">:</span>
                                     <div class="col-sm-3">
-                                        <input type="hidden" name="oldGambar" value="{{ $buletin->gambarHadapan }}">
+                                        <input type="hidden" name="oldGambar" value="{{ $gis->gambarHadapan }}">
                                         <input type="file" name="gambarHadapan" id="image"
                                             class="form-control form-control-sm @error('gambarHadapan') is-invalid @enderror"
                                             accept="image/png, image/jpeg, image/jpg" onchange="previewImage()">
@@ -95,7 +95,7 @@
                                             class="form-control form-control-sm @error('status_id') is-invalid @enderror">
                                             <option value="">Sila Pilih</option>
                                             @foreach ($statuses as $status)
-                                                @if (old('status_id', $buletin->status_id) == $status->id)
+                                                @if (old('status_id', $gis->status_id) == $status->id)
                                                     <option value="{{ $status->id }}" selected>{{ $status->status }}
                                                     </option>
                                                 @else
