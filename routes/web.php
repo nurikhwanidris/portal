@@ -13,10 +13,12 @@ use App\Http\Controllers\QuoteController;
 use App\Http\Controllers\TenderController;
 use App\Http\Controllers\BuletinGisController;
 use App\Http\Controllers\BeritaUkurController;
+use App\Http\Controllers\GisController;
 use App\Http\Controllers\JabatanUnitController;
 use App\Http\Controllers\KertasKerjaController;
 use App\Http\Controllers\MaklumBalasController;
 use App\Http\Controllers\PegawaiController;
+use App\Http\Controllers\PekelilingController;
 use App\Http\Controllers\PiagamPelangganController;
 use App\Models\JabatanUnit;
 use Illuminate\Support\Facades\Route;
@@ -114,7 +116,7 @@ Route::resource('/spsm/admin/quote', QuoteController::class)->middleware('auth')
 Route::resource('/spsm/admin/tender', TenderController::class)->middleware('auth');
 
 // Buletin GIS route
-Route::resource('/spsm/admin/buletin_gis', BuletinGisController::class)->middleware('auth');
+Route::resource('/spsm/admin/gis', GisController::class)->middleware('auth');
 
 // Laporan Tahunan route
 Route::resource('/spsm/admin/laporan_tahunan', LaporanTahunanController::class)->middleware('auth');
@@ -145,3 +147,6 @@ Route::post('/maklum-balas/store',[MaklumBalasController::class,'store']);
 
 // Jabatan Route
 Route::resource('/spsm/admin/jabatan', JabatanUnitController::class)->middleware('auth');
+
+// Pekeliling Route
+Route::resource('/spsm/admin/pekeliling', PekelilingController::class)->middleware('auth');

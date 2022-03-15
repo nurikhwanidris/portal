@@ -45,7 +45,7 @@
                                     <td class="text-center align-middle">
                                         {{ $popup->status->status }}
                                     </td>
-                                    <td class="text-center align-middle">
+                                    <td class="text-left align-middle">
                                         {{ $popup->show }}
                                     </td>
                                     <td class="text-left align-middle">

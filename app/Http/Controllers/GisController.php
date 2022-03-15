@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\BuletinGis;
+use App\Models\Gis;
 use App\Models\Status;
 use Illuminate\Http\Request;
 
-class BuletinGisController extends Controller
+class GisController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,11 +15,11 @@ class BuletinGisController extends Controller
      */
     public function index()
     {
-        return view('spsm.admin.gis.index', [
+    return view('spsm.admin.gis.index', [
             'title' => 'Senarai Buletin GIS',
             'leadCrumbs' => 'Buletin GIS',
             'link' => '/spsm/admin/gis',
-            'bulletins' => BuletinGis::with('status')->get(),
+            'bulletins' => Gis::with('status')->get(),
         ]);
     }
 
@@ -79,35 +79,35 @@ class BuletinGisController extends Controller
         $validateData['gambarHadapan'] = $gambarName;
         $validateData['filename'] = $pdfName;
 
-        BuletinGis::create($validateData);
+        Gis::create($validateData);
 
-        return redirect('/spsm/admin/buletin_gis')->with('success', 'Satu buletin telah berjaya disimpan');
+        return redirect('/spsm/admin/gis')->with('success', 'Satu buletin telah berjaya disimpan');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\BuletinGis  $buletinGis
+     * @param  \App\Models\Gis  $gis
      * @return \Illuminate\Http\Response
      */
-    public function show(BuletinGis $buletinGis)
+    public function show(Gis $gis)
     {
-        return redirect('/upload/doc/' . $buletinGis->filename);
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\BuletinGis  $buletinGis
+     * @param  \App\Models\Gis  $gis
      * @return \Illuminate\Http\Response
      */
-    public function edit(BuletinGis $buletinGis)
+    public function edit(Gis $gis)
     {
         return view('spsm.admin.gis.edit', [
-            'title' => 'asd',
+            'title' => $gis->title_my,
             'leadCrumbs' => 'Buletin GIS',
             'link' => '/spsm/admin/gis',
-            'buletinGis' => $buletinGis,
+            'buletin' => $gis,
             'statuses' => Status::all(),
         ]);
     }
@@ -116,24 +116,58 @@ class BuletinGisController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\BuletinGis  $buletinGis
+     * @param  \App\Models\Gis  $gis
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, BuletinGis $buletinGis)
+    public function update(Request $request, Gis $gis)
     {
-        //
+        $validateData = $request->validate([
+            'title_my' => 'required',
+            'title_en' => 'required',
+            'year' => 'required',
+            'status_id' => 'required',
+        ]);
+
+        if ($request->file('filename') != '') {
+            // Get filename with extension
+            $pdfWithExtension = $request->file('filename')->getClientOriginalName();
+            $gambarWithExtension = $request->file('gambarHadapan')->getClientOriginalName();
+
+            // Filter out the extension
+            $pdf = pathinfo($pdfWithExtension, PATHINFO_FILENAME);
+            $gambar = pathinfo($gambarWithExtension, PATHINFO_FILENAME);
+
+            // Filter out the filename
+            $pdfExtension = $request->file('filename')->getClientOriginalExtension();
+            $gambarExtension = $request->file('gambarHadapan')->getClientOriginalExtension();
+
+            // Remove all white spaces
+            $gambarName = str_replace(' ', '-', $gambar) . '-' . time() . '.' . $gambarExtension;
+            $pdfName = str_replace(' ', '-', $pdf) . '-' . time() . '.' . $pdfExtension;
+
+            // Store with filename
+            $request->file('filename')->storeAs('public/upload/doc/', $pdfName);
+            $request->file('gambarHadapan')->storeAs('public/upload/img/', $gambarName);
+
+            $validateData['filename'] = $pdfName;
+            $validateData['gambarHadapan'] = $gambarName;
+        } else {
+            $validateData['filename'] = $request['oldFile'];
+            $validateData['oldGambar'] = $request['oldGambar'];
+        }
+        $validateData['user_id'] = auth()->user()->id;
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\BuletinGis  $buletinGis
+     * @param  \App\Models\Gis  $gis
      * @return \Illuminate\Http\Response
      */
-    public function destroy(BuletinGis $buletinGis)
+    public function destroy(Gis $gis)
     {
-        BuletinGis::destroy($buletinGis->id);
+        Gis::destroy($gis->id);
 
-        return redirect('/spsm/admin/buletin_gis')->with('success', 'Satu buletin telah berjaya dipadam');
+        return redirect('/spsm/admin/gis')->with('success', 'Satu buletin telah berjaya dipadam');
     }
 }

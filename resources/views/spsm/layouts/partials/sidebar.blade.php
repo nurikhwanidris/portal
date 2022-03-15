@@ -262,19 +262,19 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="/spsm/admin/page/create" class="nav-link">
+                            <a href="/spsm/admin/pekeliling/create" class="nav-link">
                                 <i class="fas fa-plus nav-icon"></i>
                                 <p>Tambah Pekeliling</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/spsm/admin/page/create" class="nav-link">
+                            <a href="/spsm/admin/pekeliling/kategori" class="nav-link">
                                 <i class="far fa-square nav-icon"></i>
                                 <p>Kategori Pekeliling</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/spsm/admin/page/" class="nav-link">
+                            <a href="/spsm/admin/pekeliling/" class="nav-link">
                                 <i class="fas fa-list-alt nav-icon"></i>
                                 <p>Senarai Pekeliling</p>
                             </a>
@@ -330,8 +330,8 @@
                     </ul>
                 </li>
                 {{-- Buletin GIS --}}
-                <li class="nav-item {{ request()->is('spsm/admin/buletin_gis/*') ? 'menu-open' : '' }}">
-                    <a href="#" class="nav-link {{ request()->is('spsm/admin/buletin_gis/*') ? 'active' : '' }}">
+                <li class="nav-item {{ request()->is('spsm/admin/gis/*') ? 'menu-open' : '' }}">
+                    <a href="#" class="nav-link {{ request()->is('spsm/admin/gis/*') ? 'active' : '' }}">
                         <i class="nav-icon far fa-comment-alt"></i>
                         <p>
                             Buletin GIS
@@ -340,13 +340,13 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="/spsm/admin/buletin_gis/create" class="nav-link">
+                            <a href="/spsm/admin/gis/create" class="nav-link">
                                 <i class="fas fa-plus nav-icon"></i>
                                 <p>Tambah Buletin GIS</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/spsm/admin/buletin_gis/" class="nav-link">
+                            <a href="/spsm/admin/gis/" class="nav-link">
                                 <i class="fas fa-list-alt nav-icon"></i>
                                 <p>Senarai Buletin GIS</p>
                             </a>

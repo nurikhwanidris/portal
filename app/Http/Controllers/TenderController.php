@@ -134,22 +134,28 @@ class TenderController extends Controller
             'status_id' => 'required'
         ]);
 
-        // Create a function to delete old files
+        if ($request->file('filename') != '') {
+            // Create a function to delete old files
 
-        // Get filename with extension
-        $filenamewithextension = $request->file('filename')->getClientOriginalName();
+            // Get filename with extension
+            $filenamewithextension = $request->file('filename')->getClientOriginalName();
 
-        // Filter out the extension
-        $filename = pathinfo($filenamewithextension, PATHINFO_FILENAME);
+            // Filter out the extension
+            $filename = pathinfo($filenamewithextension, PATHINFO_FILENAME);
 
-        // Filter out the filename
-        $extension = $request->file('filename')->getClientOriginalExtension();
+            // Filter out the filename
+            $extension = $request->file('filename')->getClientOriginalExtension();
 
-        // Remove all white spaces
-        $filenametostore = str_replace(' ', '-', $filename) . '-' . time() . '.' . $extension;
+            // Remove all white spaces
+            $filenametostore = str_replace(' ', '-', $filename) . '-' . time() . '.' . $extension;
 
-        // Store with filename
-        $request->file('filename')->storeAs('public/upload/doc', $filenametostore);
+            // Store with filename
+            $request->file('filename')->storeAs('public/upload/doc', $filenametostore);
+
+            $validateData['filename'] = $filenametostore;
+        } else {
+            $validateData['filename'] = $request['oldFile'];
+        }
 
         $validateData['user_id'] = auth()->user()->id;
         $validateData['kod'] = $request['kod'];
@@ -157,7 +163,6 @@ class TenderController extends Controller
         $validateData['taklimat'] = $request['taklimat'];
         $validateData['pertanyaan'] = $request['pertanyaan'];
         $validateData['masa'] = $request['masa'];
-        $validateData['filename'] = $filenametostore;
 
         Tender::where('id', $tender->id)->update($validateData);
 

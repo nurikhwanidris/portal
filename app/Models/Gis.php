@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use App\Models\User;
 use App\Models\Status;
 
-class BuletinGis extends Model
+class Gis extends Model
 {
     use HasFactory;
 
