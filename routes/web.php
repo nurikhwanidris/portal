@@ -15,6 +15,7 @@ use App\Http\Controllers\BeritaUkurController;
 use App\Http\Controllers\GisController;
 use App\Http\Controllers\JabatanUnitController;
 use App\Http\Controllers\KertasKerjaController;
+use App\Http\Controllers\MainController;
 use App\Http\Controllers\MaklumBalasController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\PekelilingController;
@@ -33,9 +34,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Landing page route
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 // SPSM CMS route
 Route::get('/spsm', [HomeController::class, 'index'])->middleware('auth');
@@ -160,3 +161,11 @@ Route::put('/spsm/admin/buletingis/{update}',[GisController::class, 'change'])->
 // Delete GIS route
 Route::delete('/spsm/admin/buletingis/{delete}', [GisController::class, 'delete'])->middleware('auth');
 
+/*
+|--------------------------------------------------------------------------
+| Main Routes
+|--------------------------------------------------------------------------
+*/
+
+// Index Route
+Route::get('/', [MainController::class, 'index']);
