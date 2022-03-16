@@ -112,16 +112,6 @@ class GisController extends Controller
         ]);
     }
 
-    // Testing shit
-    public function test(Gis $gis)
-    {
-        return view('spsm.admin.test.edit',[
-            'title' => 'some shit',
-            'leadCrumbs' => 'Ntah',
-            'gis' => $gis,
-        ]);
-    }
-
     /**
      * Update the specified resource in storage.
      *
