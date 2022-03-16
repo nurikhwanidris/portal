@@ -330,8 +330,8 @@
                     </ul>
                 </li>
                 {{-- Buletin GIS --}}
-                <li class="nav-item {{ request()->is('spsm/admin/gis/*') ? 'menu-open' : '' }}">
-                    <a href="#" class="nav-link {{ request()->is('spsm/admin/gis/*') ? 'active' : '' }}">
+                <li class="nav-item {{ request()->is('spsm/admin/buletingis/*') ? 'menu-open' : '' }}">
+                    <a href="#" class="nav-link {{ request()->is('spsm/admin/buletingis/*') ? 'active' : '' }}">
                         <i class="nav-icon far fa-comment-alt"></i>
                         <p>
                             Buletin GIS

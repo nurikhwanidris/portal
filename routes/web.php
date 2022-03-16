@@ -11,19 +11,15 @@ use App\Http\Controllers\PengumumanController;
 use App\Http\Controllers\PopupController;
 use App\Http\Controllers\QuoteController;
 use App\Http\Controllers\TenderController;
-use App\Http\Controllers\BuletinGisController;
 use App\Http\Controllers\BeritaUkurController;
 use App\Http\Controllers\GisController;
-use App\Http\Controllers\GisTestController;
 use App\Http\Controllers\JabatanUnitController;
 use App\Http\Controllers\KertasKerjaController;
 use App\Http\Controllers\MaklumBalasController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\PekelilingController;
 use App\Http\Controllers\PiagamPelangganController;
-use App\Models\JabatanUnit;
 use Illuminate\Support\Facades\Route;
-// use App\Models\MaklumBalas;
 
 /*
 |--------------------------------------------------------------------------
@@ -116,9 +112,6 @@ Route::resource('/spsm/admin/quote', QuoteController::class)->middleware('auth')
 // Tender route
 Route::resource('/spsm/admin/tender', TenderController::class)->middleware('auth');
 
-// Buletin GIS route
-Route::resource('/spsm/admin/gis', GisController::class)->middleware('auth');
-
 // Laporan Tahunan route
 Route::resource('/spsm/admin/laporan_tahunan', LaporanTahunanController::class)->middleware('auth');
 
@@ -151,4 +144,19 @@ Route::resource('/spsm/admin/jabatan', JabatanUnitController::class)->middleware
 
 // Pekeliling Route
 Route::resource('/spsm/admin/pekeliling', PekelilingController::class)->middleware('auth');
+
+// Index GIS Route
+Route::get('/spsm/admin/buletingis',[GisController::class, 'index'])->middleware('auth');
+
+// Create GIS route
+Route::get('/spsm/admin/buletingis/create',[GisController::class, 'create'])->middleware('auth');
+
+// Edit GIS route
+Route::get('/spsm/admin/buletingis/{edit}/edit',[GisController::class, 'edit'])->middleware('auth');
+
+// Update GIS route
+Route::put('/spsm/admin/buletingis/{update}',[GisController::class, 'change'])->middleware('auth');
+
+// Delete GIS route
+Route::delete('/spsm/admin/buletingis/{delete}', [GisController::class, 'delete'])->middleware('auth');
 

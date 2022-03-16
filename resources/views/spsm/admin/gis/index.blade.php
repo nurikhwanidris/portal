@@ -15,7 +15,7 @@
                 <div class="col-lg-12">
                     <div class="row">
                         <div class="col-md-12">
-                            <a href="/spsm/admin/gis/create" class="btn btn-primary btn-sm">Cipta Buletin</a>
+                            <a href="/spsm/admin/buletingis/create" class="btn btn-primary btn-sm">Cipta Buletin</a>
                         </div>
                     </div>
                 </div>
@@ -82,7 +82,7 @@
                                                 <span class="badge badge-success">{{ $bulletin->status->status }}</span>
                                             </td>
                                             <td class="align-middle text-center">
-                                                <form action="/spsm/admin/gis/{{ $bulletin->id }}" method="post">
+                                                <form action="/spsm/admin/buletingis/{{ $bulletin->id }}" method="post">
                                                     @method('delete')
                                                     @csrf
                                                     <div class="row-inline">
@@ -90,7 +90,7 @@
                                                             class="btn btn-link">
                                                             <i class="fa fa-eye"></i>
                                                         </a>
-                                                        <a href="/spsm/admin/gis/{{ $bulletin->id }}/edit"
+                                                        <a href="/spsm/admin/buletingis/{{ $bulletin->id }}/edit"
                                                             class="btn btn-link text-warning">
                                                             <i class="fa fa-edit"></i>
                                                         </a>
