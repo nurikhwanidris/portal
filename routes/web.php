@@ -34,9 +34,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Landing page route
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('welcome');
+});
 
 // SPSM CMS route
 Route::get('/spsm', [HomeController::class, 'index'])->middleware('auth');
@@ -168,4 +168,4 @@ Route::delete('/spsm/admin/buletingis/{delete}', [GisController::class, 'delete'
 */
 
 // Index Route
-Route::get('/', [MainController::class, 'index']);
+// Route::get('/', [MainController::class, 'index']);
