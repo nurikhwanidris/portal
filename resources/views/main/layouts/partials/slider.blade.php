@@ -4,20 +4,17 @@
             <div class="owl-carousel nav-inside show-nav-hover dots-inside mb-0" style="box-shadow: 0px 0px 10px #ccc;"
                 data-plugin-options="{'items': 1, 'loop': true, 'autoplay': true, 'autoplayTimeout': 5000, 'autoplayHoverPause': true, 'nav': true, 'dots': true, 'animateOut': 'fadeOut'}">
                 <div>
-                    <img src="/main/img/slider/slide-3-wide.jpg" data-thumb="/main/img/slider/slide-3-wide.jpg"
-                        alt="" />
+                    <img src="https://dummyimage.com/1400x300/000/fff"
+                        data-thumb="https://dummyimage.com/1400x300/000/fff" alt="" />
                 </div>
                 <div>
-                    <img src="/main/img/slider/slide-4-wide.jpg" data-thumb="/main/img/slider/slide-4-wide.jpg"
-                        alt="" />
+                    <img src="main/img/slider/slide-4-wide.jpg" data-thumb="main/img/slider/slide-4-wide.jpg" alt="" />
                 </div>
                 <div>
-                    <img src="/main/img/slider/slide-5-wide.jpg" data-thumb="/main/img/slider/slide-5-wide.jpg"
-                        alt="" />
+                    <img src="main/img/slider/slide-5-wide.jpg" data-thumb="main/img/slider/slide-5-wide.jpg" alt="" />
                 </div>
                 <div>
-                    <img src="/main/img/slider/slide-6-wide.jpg" data-thumb="/main/img/slider/slide-6-wide.jpg"
-                        alt="" />
+                    <img src="main/img/slider/slide-6-wide.jpg" data-thumb="main/img/slider/slide-6-wide.jpg" alt="" />
                 </div>
             </div>
         </div>

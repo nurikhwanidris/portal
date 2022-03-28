@@ -20,7 +20,7 @@
             <!-- Column 1 -->
             <div class="col-lg-4 col-sm-6 col-md-4  col-xs-12 mb-4 mb-lg-0">
                 <h5 class="text-kaki-atas-1 mb-3 pb-1">Waktu Operasi</h5>
-                <img alt="QR Code Laman Web Rasmi JUPEM" width="20%" src="img/logo-default/logo_JUPEM.svg">
+                <img alt="QR Code Laman Web Rasmi JUPEM" width="20%" src="/main/img/logo-default/logo_JUPEM.svg">
                 <!-- 1 -->
                 <div style="padding-top: 10px;"></div>
                 <div class="flex-container">
@@ -73,9 +73,9 @@
                 <p class="text-8 text-color-light font-weight-bold">31.01.2022</p>
                 <!-- <div class="text-kaki-atas-2">Pengiktirafan:</div> -->
                 <h5 class="text-kaki-atas-1 mb-3 pb-1">Pengiktirafan</h5>
-                <img src="img/iso/iso-label-1.jpg" data-thumb="img/iso/iso-label-1.jpg" alt="ISO 1"
+                <img src="/main/img/iso/iso-label-1.jpg" data-thumb="/main/img/iso/iso-label-1.jpg" alt="ISO 1"
                     style="padding-bottom:5px;" />
-                <img src="img/iso/iso-label-2.jpg" data-thumb="img/iso/iso-label-2.jpg" alt="ISO 2" />
+                <img src="/main/img/iso/iso-label-2.jpg" data-thumb="/main/img/iso/iso-label-2.jpg" alt="ISO 2" />
             </div>
 
             <!-- Column 3 -->
@@ -93,7 +93,8 @@
                                 class="fab fa-youtube text-2"></i></a></li>
                 </ul>
                 <div class="text-kaki-atas-2">URL Mobile:</div>
-                <img alt="QR Code Laman Web Rasmi JUPEM" width="50%" src="img/logo-default/jupem-qr-code-trans.svg">
+                <img alt="QR Code Laman Web Rasmi JUPEM" width="50%"
+                    src="/main/img/logo-default/jupem-qr-code-trans.svg">
             </div>
         </div>
     </div>

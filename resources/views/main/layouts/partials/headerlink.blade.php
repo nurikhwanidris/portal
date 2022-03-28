@@ -1,6 +1,6 @@
   <!-- Favicon JUPEM -->
-  <link rel="shortcut icon" href="img/favicon/favicon-16x16.png" type="image/x-icon" />
-  <link rel="apple-touch-icon" href="img/favicon/apple-icon-180x180.png">
+  <link rel="shortcut icon" href="/main/img/favicon/favicon-16x16.png" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="/main/img/favicon/apple-icon-180x180.png">
 
   <!-- Own -->
   <link rel="stylesheet" href="/main/css/jupem-style-sara.css">
