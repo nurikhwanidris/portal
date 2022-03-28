@@ -10,8 +10,10 @@
                     <!-- 1 -->
                     <div>
                         <div class="row">
-                            <div class="col" style="width: 180px;"><img src="img/blog/small/blog-1.jpg"></div>
-                            <div class="col" style="width: 180px;"><img src="img/blog/small/blog-1.jpg"></div>
+                            <div class="col" style="width: 180px;"><img src="/main/img/blog/small/blog-1.jpg">
+                            </div>
+                            <div class="col" style="width: 180px;"><img src="/main/img/blog/small/blog-1.jpg">
+                            </div>
                         </div>
                         <br>
                         <div class="recent-posts">
@@ -46,9 +48,11 @@
                     <!-- 2 -->
                     <div>
                         <div class="row">
-                            <div class="col" style="width: 180px;"><img src="img/blog/small/blog-1.jpg">
+                            <div class="col" style="width: 180px;"><img
+                                    src="/main/img/blog/small/blog-1.jpg">
                             </div>
-                            <div class="col" style="width: 180px;"><img src="img/blog/small/blog-1.jpg">
+                            <div class="col" style="width: 180px;"><img
+                                    src="/main/img/blog/small/blog-1.jpg">
                             </div>
                         </div>
                         <br>
@@ -115,7 +119,7 @@
 
         <!-- Column 3 -->
         <div class="col-sm-10 col-md-7 col-lg-4">
-            <?php include 'include-portal/waktu-solat-compress.php'; ?>
+            @include('main.layouts.partials.waktu-solat-compressed')
         </div>
     </div>
 </div>

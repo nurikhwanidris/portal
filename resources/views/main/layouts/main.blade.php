@@ -59,7 +59,7 @@
 
             <!-- Pautan Laman Web Kerajaan - START -->
             @include('main.layouts.partials.lamanluar')
-            <!-- Pautan Laman Web Kerajaan - END -->    
+            <!-- Pautan Laman Web Kerajaan - END -->
 
 
         </div>
@@ -71,37 +71,37 @@
     </div>
 
     <!-- Vendor -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/jquery.appear/jquery.appear.min.js"></script>
-    <script src="vendor/jquery.easing/jquery.easing.min.js"></script>
-    <script src="vendor/jquery.cookie/jquery.cookie.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="vendor/jquery.validation/jquery.validate.min.js"></script>
-    <script src="vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
-    <script src="vendor/jquery.gmap/jquery.gmap.min.js"></script>
-    <script src="vendor/lazysizes/lazysizes.min.js"></script>
-    <script src="vendor/isotope/jquery.isotope.min.js"></script>
-    <script src="vendor/owl.carousel/owl.carousel.min.js"></script>
-    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
-    <script src="vendor/vide/jquery.vide.min.js"></script>
-    <script src="vendor/vivus/vivus.min.js"></script>
+    <script src="/main/vendor/jquery/jquery.min.js"></script>
+    <script src="/main/vendor/jquery.appear/jquery.appear.min.js"></script>
+    <script src="/main/vendor/jquery.easing/jquery.easing.min.js"></script>
+    <script src="/main/vendor/jquery.cookie/jquery.cookie.min.js"></script>
+    <script src="/main/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/main/vendor/jquery.validation/jquery.validate.min.js"></script>
+    <script src="/main/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
+    <script src="/main/vendor/jquery.gmap/jquery.gmap.min.js"></script>
+    <script src="/main/vendor/lazysizes/lazysizes.min.js"></script>
+    <script src="/main/vendor/isotope/jquery.isotope.min.js"></script>
+    <script src="/main/vendor/owl.carousel/owl.carousel.min.js"></script>
+    <script src="/main/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="/main/vendor/vide/jquery.vide.min.js"></script>
+    <script src="/main/vendor/vivus/vivus.min.js"></script>
 
     <!-- Theme Base, Components and Settings -->
-    <script src="js/theme.js"></script>
+    <script src="/main/js/theme.js"></script>
 
     <!-- Circle Flip Slideshow Script -->
-    <script src="vendor/circle-flip-slideshow/js/jquery.flipshow.min.js"></script>
+    <script src="/main/vendor/circle-flip-slideshow/js/jquery.flipshow.min.js"></script>
     <!-- Current Page Views -->
-    <script src="js/views/view.home.js"></script>
+    <script src="/main/js/views/view.home.js"></script>
 
     <!-- Theme Custom -->
-    <script src="js/custom.js"></script>
+    <script src="/main/js/custom.js"></script>
 
     <!-- Theme Initialization Files -->
-    <script src="js/theme.init.js"></script>
+    <script src="/main/js/theme.init.js"></script>
 
     <!-- Script Cak Cak Menu -->
-    <script src="js/jupem-js-sara.js"></script>
+    <script src="/main/js/jupem-js-sara.js"></script>
 
 </body>
 
