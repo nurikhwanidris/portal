@@ -1,11 +1,11 @@
 <div id="mySidenav" class="sidenav">
     <ul class="nav" id="mainNav">
-        <li class="dropdown side-tambahan">
+        <li class="dropdown">
             <a class="dropdown-item active" href="index-1.php">
                 Laman Utama
             </a>
         </li>
-        <li class="dropdown side-tambahan">
+        <li class="dropdown dropdown-mega">
             <a class="dropdown-item dropdown-toggle" href="#">
                 Info Semasa
             </a>
@@ -27,7 +27,7 @@
                 </li>
             </ul>
         </li>
-        <li class="dropdown side-tambahan">
+        <li class="dropdown">
             <a class="dropdown-item dropdown-toggle" href="info-korp.php">
                 Info Korporat
             </a>
@@ -54,7 +54,7 @@
                 </li>
             </ul>
         </li>
-        <li class="dropdown side-tambahan">
+        <li class="dropdown">
             <a class="dropdown-item dropdown-toggle" href="#">
                 Warga JUPEM
             </a>
@@ -81,7 +81,7 @@
                 </li>
             </ul>
         </li>
-        <li class="dropdown side-tambahan">
+        <li class="dropdown">
             <a class="dropdown-item dropdown-toggle" href="#">
                 Orang Awam
             </a>
@@ -113,12 +113,6 @@
 
 
 <legend class="butang-tepi">
-    <!-- div id="myDIV" onclick="myFunction()">
-      <a id="satu" class="tepi-menu-utama gerak-khas satu hamburguer-btn" href="#" data-bs-toggle="tooltip" data-bs-animation="false" data-bs-placement="right" title="">
-          <i class="fas fa-bars img-fluid icon-menu-tepi"></i>
-          <div class="text-menu-tepi">Menu Utama</div>
-      </a>
-  </div> -->
     <div id="myDIV">
         <a id="satu" class="tepi-menu-utama gerak-khas satu" href="#" data-bs-toggle="tooltip" data-bs-animation="false"
             data-bs-placement="right" title="" onclick="myFunction();openNav();">
@@ -152,27 +146,8 @@
     <div id="myDIV5">
         <a id="empat" class="tepi-menu-awam gerak-khas" href="#" data-bs-toggle="tooltip" data-bs-animation="false"
             data-bs-placement="right" title="">
-            <!-- <i class="fas fa-life-ring img-fluid icon-menu-tepi"></i> -->
             <i class="fas fa-users img-fluid icon-menu-tepi"></i>
             <div class="text-menu-tepi">Orang Awam</div>
         </a>
     </div>
 </legend>
-
-<script>
-    /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
-    var dropdown = document.getElementsByClassName("dropdown-btn");
-    var i;
-
-    for (i = 0; i < dropdown.length; i++) {
-        dropdown[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var dropdownContent = this.nextElementSibling;
-            if (dropdownContent.style.display === "block") {
-                dropdownContent.style.display = "none";
-            } else {
-                dropdownContent.style.display = "block";
-            }
-        });
-    }
-</script>

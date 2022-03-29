@@ -4,23 +4,24 @@
         /*width: 300px;
     height: 300px;*/
         /*margin: 10px;*/
-        padding-bottom: 50px;
         /*border:1px solid red;*/
+        padding-bottom: 50px;
         margin-bottom: 150px;
     }
 
     .child1 {
         position: absolute;
         width: 100%;
-        height: 300px;
+        height: 350px;
+        /* height: 370px; */
         top: 0;
         left: 0;
+        background: #4e914a;
         /* opacity: 0.7; */
         /*background: #2f4c2d;*/
-        background: #4e914a;
         /* padding-top: 100px; */
         /* margin-top: 45px; */
-        margin-top: 45px;
+        /* margin-top: 45px; */
     }
 
     .child2 {
@@ -43,11 +44,9 @@
 </div>
 
 <section class="parent">
-
     <div class="container-fluid child1"></div>
-
     <div class="container-fluid child2">
-        <div class="container" style=";padding-top:20px;">
+        <div class="container">
             <div class="row align-items-center">
                 <!-- Line 1 START -->
                 <div class="col-lg-6">

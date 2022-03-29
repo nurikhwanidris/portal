@@ -18,8 +18,9 @@
                 <div class="col-sm-6 col-lg-12 mb-4 mb-lg-0">
                     <div class="counter counter-quaternary">
                         <i class="fas fa-user"></i>
-                        <strong data-to="12730" data-append="+">0</strong>
-                        <label>Jumlah Transaksi Dalam Talian Januari 2022</label>
+                        <!-- <strong data-to="12730" data-append="+">0</strong> -->
+                        <strong style="font-weight: bold;">12730</strong>
+                        <label class="font-weight-bold">Jumlah Transaksi Dalam Talian Januari 2022</label>
                     </div>
                 </div>
             </div>
@@ -31,29 +32,29 @@
                     <div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
                         <div class="counter counter-primary">
                             <i class="fas fa-layer-group"></i>
-                            <strong data-to="11584">0</strong>
-                            <label>Kadaster</label>
+                            <strong class="font-weight-bold" data-to="11584">0</strong>
+                            <label class="font-weight-bold">Kadaster</label>
                         </div>
                     </div>
                     <div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
                         <div class="counter counter-secondary">
                             <i class="fas fa-map"></i>
                             <strong data-to="277">0</strong>
-                            <label>Pemetaan</label>
+                            <label class="font-weight-bold">Pemetaan</label>
                         </div>
                     </div>
                     <div class="col-sm-6 col-lg-3 mb-4 mb-sm-0">
                         <div class="counter counter-tertiary">
                             <i class="fas fa-globe"></i>
                             <strong data-to="668">0</strong>
-                            <label>Geodesi</label>
+                            <label class="font-weight-bold">Geodesi</label>
                         </div>
                     </div>
                     <div class="col-sm-6 col-lg-3">
                         <div class="counter counter-quinary">
                             <i class="fas fas fa-street-view"></i>
                             <strong data-to="73">0</strong>
-                            <label>Permohonan Lesen Digital</label>
+                            <label class="font-weight-bold">Permohonan Lesen Digital</label>
                         </div>
                     </div>
                 </div>
@@ -64,28 +65,28 @@
                         <div class="counter counter-primary">
                             <i class="fas fa-satellite"></i>
                             <strong data-to="32">0</strong>
-                            <label>Langganan RTK</label>
+                            <label class="font-weight-bold">Langganan RTK</label>
                         </div>
                     </div>
                     <div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
                         <div class="counter counter-secondary">
                             <i class="fas  fa-map-pin"></i>
                             <strong data-to="52">0</strong>
-                            <label>Perkhidmatan Geodetik</label>
+                            <label class="font-weight-bold">Perkhidmatan Geodetik</label>
                         </div>
                     </div>
                     <div class="col-sm-6 col-lg-3 mb-4 mb-sm-0">
                         <div class="counter counter-tertiary">
                             <i class="fas fa-certificate"></i>
                             <strong data-to="7">0</strong>
-                            <label>Permohonan Data Terhad</label>
+                            <label class="font-weight-bold">Permohonan Data Terhad</label>
                         </div>
                     </div>
                     <div class="col-sm-6 col-lg-3">
                         <div class="counter counter-quinary">
                             <i class="fas fa-server"></i>
                             <strong data-to="37">0</strong>
-                            <label>Permohonan Permit</label>
+                            <label class="font-weight-bold">Permohonan Permit</label>
                         </div>
                     </div>
                 </div>

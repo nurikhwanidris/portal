@@ -24,8 +24,7 @@
 
         <div role="main" class="main">
 
-            {{-- Bring out content to display on the main page --}}
-            {{-- @yield('content') --}}
+            <!-- Bring out content to display on the main page -->
 
             <!-- Video - START -->
             @include('main.layouts.partials.mainvideo')
@@ -52,8 +51,6 @@
             <!-- Map Online Trans - END -->
 
             <!-- Map Hubungi Kami - START -->
-            <?php //include 'include-portal/contact-front-wide.php';
-            ?>
             @include('main.layouts.partials.darkgreen')
             <!-- Map Hubungi Kami - END -->
 
