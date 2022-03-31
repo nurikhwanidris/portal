@@ -53,7 +53,7 @@
                                             </a>
                                         </li>
                                         <li class="dropdown">
-                                            <a class="dropdown-item dropdown-toggle active" href="index.php">
+                                            <a class="dropdown-item dropdown-toggle active" href="/maklum-balas">
                                                 <div class="center-icon">
                                                     <img alt="Soalan Lazim"
                                                         data-change-src="/main/img/shortcut-icon/faq-small.png"

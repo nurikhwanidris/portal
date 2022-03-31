@@ -28,7 +28,7 @@
             </ul>
         </li>
         <li class="dropdown">
-            <a class="dropdown-item dropdown-toggle" href="info-korp.php">
+            <a class="dropdown-item dropdown-toggle" href="info-korp">
                 Info Korporat
             </a>
             <ul class="dropdown-menu">

@@ -164,6 +164,29 @@
                         </li>
                     </ul>
                 </li>
+                <li class="nav-item {{ request()->is('spsm/admin/berita_terkini/*') ? 'menu-open' : '' }}">
+                    <a href="#" class="nav-link {{ request()->is('spsm/admin/berita_terkini/*') ? 'active' : '' }}">
+                        <i class="nav-icon fas fa-newspaper"></i>
+                        <p>
+                            Berita Terkini
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="/spsm/admin/berita_terkini/create" class="nav-link">
+                                <i class="fas fa-plus nav-icon"></i>
+                                <p>Tambah Berita Terkini</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/spsm/admin/berita_terkini/" class="nav-link">
+                                <i class="fas fa-list-alt nav-icon"></i>
+                                <p>Senarai Berita Terkini</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
                 {{-- Direktori Pegawai --}}
                 <li class="nav-item {{ request()->is('/spsm/admin/pegawai/*') ? 'menu-open' : '' }}">
                     <a href="#" class="nav-link {{ request()->is('/spsm/admin/pegawai/*') ? 'active' : '' }}">

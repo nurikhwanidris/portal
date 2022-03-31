@@ -48,9 +48,8 @@ class PengumumanController extends Controller
     {
         $validateData = $request->validate([
             'title_my' => 'required',
-            'title_en' => 'required',
+            'excerpt_my' => 'required',
             'content_my' => 'required',
-            'content_en' => 'required',
             'status_id' => 'required',
         ]);
 
@@ -107,9 +106,8 @@ class PengumumanController extends Controller
     {
         $validateData = $request->validate([
             'title_my' => 'required',
-            'title_en' => 'required',
+            'excerpt_my' => 'required',
             'content_my' => 'required',
-            'content_en' => 'required',
             'status_id' => 'required',
         ]);
 

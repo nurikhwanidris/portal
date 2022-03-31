@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePengumumenTable extends Migration
+class CreateBeritaTerkinisTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreatePengumumenTable extends Migration
      */
     public function up()
     {
-        Schema::create('pengumumen', function (Blueprint $table) {
+        Schema::create('berita_terkinis', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained();
             $table->string('title_my');
@@ -36,6 +36,6 @@ class CreatePengumumenTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pengumumen');
+        Schema::dropIfExists('berita_terkinis');
     }
 }

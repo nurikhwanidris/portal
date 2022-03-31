@@ -117,7 +117,11 @@ pre {
 #header .header-body {
 	display: flex;
 	flex-direction: column;
-	background: #FFF;
+	/*background: #FFF;*/
+
+	/*Edit for JUPEM*/
+	background: #212529;
+	/* --- */
 	transition: min-height 0.3s ease;
 	width: 100%;
 	border-top: 3px solid #EDEDED;
@@ -1373,6 +1377,7 @@ html #header.header-transparent .header-body:not(.header-border-bottom) {
 
 html:not(.sticky-header-active) #header.header-transparent:not(.header-semi-transparent) .header-body {
 	background-color: transparent !important;
+
 }
 
 html:not(.sticky-header-active) #header.header-semi-transparent-light .header-body {
@@ -1499,7 +1504,7 @@ html.sticky-header-enabled.sticky-header-active #header .header-logo-sticky-chan
 	}
 
 	#header .header-nav-main nav > ul > li {
-		
+
 		/*Edit for JUPEM*/
 		/*height: 100%;*/
 		/* --- */
@@ -8248,8 +8253,8 @@ a.text-light:focus, a.text-light:hover {
 	padding-right: 10px;
 }
 
-/* 
- * Order (Extending to 10) 
+/*
+ * Order (Extending to 10)
  * Bootstrap 5 has until 5 order class
 */
 .order-6 {

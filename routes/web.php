@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\Admin\PagesController;
+use App\Http\Controllers\BeritaTerkiniController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LaporanTahunanController;
 use App\Http\Controllers\LaporanMesyuaratController;
@@ -146,6 +147,8 @@ Route::resource('/spsm/admin/jabatan', JabatanUnitController::class)->middleware
 // Pekeliling Route
 Route::resource('/spsm/admin/pekeliling', PekelilingController::class)->middleware('auth');
 
+Route::resource('/spsm/admin/berita_terkini', BeritaTerkiniController::class)->middleware('auth');
+
 // Index GIS Route
 Route::get('/spsm/admin/buletingis',[GisController::class, 'index'])->middleware('auth');
 
@@ -169,3 +172,5 @@ Route::delete('/spsm/admin/buletingis/{delete}', [GisController::class, 'delete'
 
 // Index Route
 Route::get('/', [MainController::class, 'index']);
+
+Route::get('/info-korp', [MainController::class, 'infoKorp']);
