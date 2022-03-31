@@ -20,6 +20,7 @@ class CreateBeritaTerkinisTable extends Migration
             $table->string('title_en')->nullable();
             $table->string('excerpt_my');
             $table->string('excerpt_en')->nullable();
+            $table->string('gambarHadapan');
             $table->text('content_my');
             $table->text('content_en')->nullable();
             $table->dateTime('show')->nullable();
