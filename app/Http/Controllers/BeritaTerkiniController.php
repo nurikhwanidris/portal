@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\BeritaTerkini;
 use App\Models\Status;
 use Illuminate\Http\Request;
-use Monolog\Processor\WebProcessor;
 
 class BeritaTerkiniController extends Controller
 {
@@ -20,7 +19,7 @@ class BeritaTerkiniController extends Controller
             'title' => 'Senarai Berita Terkini',
             'leadCrumbs' => 'Berita Terkini',
             'link' => '/spsm/admin/berita_terkini',
-            'news' => BeritaTerkini::with('status')->get()
+            'currentNews' => BeritaTerkini::with('status')->get()
         ]);
     }
 
@@ -52,7 +51,6 @@ class BeritaTerkiniController extends Controller
             'excerpt_my' => 'required',
             'content_my' => 'required',
             'status_id' => 'required',
-            'gambarHadapan' => 'required'
         ]);
 
         // Get the real filename
@@ -61,11 +59,11 @@ class BeritaTerkiniController extends Controller
         // Filter out the extension
         $gambar = pathinfo($gambarWithExtension, PATHINFO_FILENAME);
 
-        // Filter out the filename
+         // Filter out the filename
         $gambarExtension = $request->file('gambarHadapan')->getClientOriginalExtension();
 
         // Remove all white spaces
-        $gambarName = str_replace(' ', '-', $gambar) . '-' . time() . '.' . $gambarExtension;
+        $gambarName = str_replace(' ', '-', $gambar) . '-' . time() . '.' .$gambarExtension;
 
         // Store the filename
         $request->file('gambarHadapan')->storeAs('public/upload/img/', $gambarName);
@@ -73,12 +71,15 @@ class BeritaTerkiniController extends Controller
         $validateData['user_id'] = auth()->user()->id;
         $validateData['show'] = $request->show;
         $validateData['hide'] = $request->hide;
+        $validateData['title_en'] = $request['title_en'];
+        $validateData['excerpt_en'] = $request['excerpt_en'];
+        $validateData['content_en'] = $request['content_en'];
         $validateData['gambarHadapan'] = $gambarName;
 
         BeritaTerkini::create($validateData);
 
-        return redirect('/spsm/admin/berita_terkini')->with('success', 'Satu berita telah berjaya disimpan');
 
+        return redirect('/spsm/admin/berita_terkini')->with('success', 'Satu berita telah berjaya disimpan');
     }
 
     /**
@@ -100,7 +101,13 @@ class BeritaTerkiniController extends Controller
      */
     public function edit(BeritaTerkini $beritaTerkini)
     {
-        //
+        return view('spsm.admin.berita_terkini.edit',[
+            'title' => 'Ubah Berita Terkini',
+            'leadCrumbs' => 'Ubah Berita Terkini',
+            'link' => '/spsm/admin/berita_terkini',
+            'beritaTerkini' => $beritaTerkini,
+            'statuses' => Status::all()
+        ]);
     }
 
     /**
@@ -112,7 +119,46 @@ class BeritaTerkiniController extends Controller
      */
     public function update(Request $request, BeritaTerkini $beritaTerkini)
     {
-        //
+        $validateData = $request->validate([
+            'title_my' => 'required',
+            'excerpt_my' => 'required',
+            'content_my' => 'required',
+            'status_id' => 'required',
+        ]);
+
+        if ($request->file('gambarHadapan') !== '') {
+            // Get the real filename
+            $gambarWithExtension = $request->file('gambarHadapan')->getClientOriginalName();
+
+            // Filter out the extension
+            $gambar = pathinfo($gambarWithExtension, PATHINFO_FILENAME);
+
+            // Filter out the filename
+            $gambarExtension = $request->file('gambarHadapan')->getClientOriginalExtension();
+
+            // Remove all white spaces
+            $gambarName = str_replace(' ', '-', $gambar) . '-' . time() . '.' . $gambarExtension;
+
+            // Store the filename
+            $request->file('gambarHadapan')->storeAs('public/upload/img/', $gambarName);
+
+            // Insert inside the database
+            $validateData['gambarHadapan'] = $gambarName;
+        } else {
+            $validateData['gambarHadapan'] = $request['gambarOld'];
+        }
+
+        $validateData['user_id'] = auth()->user()->id;
+        $validateData['show'] = $request->show;
+        $validateData['hide'] = $request->hide;
+        $validateData['title_en'] = $request['title_en'];
+        $validateData['excerpt_en'] = $request['excerpt_en'];
+        $validateData['content_en'] = $request['content_en'];
+
+        BeritaTerkini::where('id', $beritaTerkini->id)->update($validateData);
+
+
+        return redirect('/spsm/admin/berita_terkini')->with('success', 'Satu berita telah berjaya diubah');
     }
 
     /**
@@ -123,6 +169,8 @@ class BeritaTerkiniController extends Controller
      */
     public function destroy(BeritaTerkini $beritaTerkini)
     {
-        //
+        BeritaTerkini::destroy($beritaTerkini->id);
+
+        return redirect('/spsm/admin/berita_terkini')->with('success', 'Satu berita telah berjaya dipadam');
     }
 }

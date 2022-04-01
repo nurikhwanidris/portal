@@ -9,7 +9,7 @@
         </div>
     @endif
 
-    <form action="/spsm/admin/berita_terkini" method="post">
+    <form action="/spsm/admin/berita_terkini" method="post" enctype="multipart/form-data">
         <div class="card">
             <div class="card-body">
                 <div class="row">
@@ -78,12 +78,17 @@
                                     </div>
                                 </div>
                                 <div class="row mb-3">
-                                    <label for="" class="col-sm-2 col-form-label col-form-label-sm">Gambar Berita</label>
-                                    <span class="col-sm-1">:</span>
+                                    <label for="" class="col-sm-2 col-form-label col-form-label-sm">Gambar Hadapan</label>
+                                    <span class="col-sm-1 text-center">:</span>
                                     <div class="col-sm-3">
                                         <input type="file" name="gambarHadapan" id="" class="form-control form-control-sm"
-                                            accept="image/png, image/jpg, image/jpeg">
+                                            accept="image/png, image/jpeg, image/jpg">
                                     </div>
+                                    @error('gambarHadapan')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
                                 </div>
                                 <div class="row mb-3">
                                     <label for="" class="col-sm-2 col-form-label col-form-label-sm">Isi Berita</label>

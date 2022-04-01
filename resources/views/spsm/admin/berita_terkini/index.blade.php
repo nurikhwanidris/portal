@@ -37,29 +37,35 @@
                             </tr>
                         </thead>
                         <tbody>
-                            {{-- @foreach ($annoucements as $annoucement)
+                            @foreach ($currentNews as $news)
                                 <tr>
                                     <td class="align-middle">{{ $loop->iteration }}</td>
                                     <td class="align-middle">
-                                        <a href="/spsm/admin/pengumuman/{{ $annoucement->id }}" target="_blank"
-                                            rel="noopener noreferrer">{{ $annoucement->title_my }}</a>
+                                        <a href="/spsm/admin/berita_terkini/{{ $news->id }}" target="_blank"
+                                            rel="noopener noreferrer">{{ $news->title_my }}</a>
                                     </td>
                                     <td class="align-middle">
-                                        <a href="/spsm/admin/pengumuman/{{ $annoucement->id }}" target="_blank"
-                                            rel="noopener noreferrer">{{ $annoucement->title_en }}</a>
+                                        <a href="/spsm/admin/berita_terkini/{{ $news->id }}" target="_blank"
+                                            rel="noopener noreferrer">{{ $news->title_en }}</a>
                                     </td>
-                                    <td class="align-middle">{{ $annoucement->show }}</td>
-                                    <td class="align-middle">{{ $annoucement->hide }}</td>
+                                    <td class="align-middle">{{ $news->show }}</td>
+                                    <td class="align-middle">{{ $news->hide }}</td>
                                     <td class="align-middle">13 Jam</td>
                                     <td class="align-middle text-center">
-                                        <span class="badge badge-success">Published</span>
+                                        @if ($news->status->id == 1)
+                                            <span class="badge badge-success">Published</span>
+                                        @elseif($news->status->id == 2)
+                                            <span class="badge badge-warning">Draft</span>
+                                        @elseif($news->status->id == 3)
+                                            <span class="badge badge-primary">Archived</span>
+                                        @endif
                                     </td>
                                     <td class="align-middle text-center">
-                                        <form action="/spsm/admin/pengumuman/{{ $annoucement->id }}" method="post">
+                                        <form action="/spsm/admin/berita_terkini/{{ $news->id }}" method="post">
                                             @method('delete')
                                             @csrf
                                             <div class="row-inline">
-                                                <a href="/spsm/admin/pengumuman/{{ $annoucement->id }}/edit"
+                                                <a href="/spsm/admin/berita_terkini/{{ $news->id }}/edit"
                                                     class="btn btn-link text-warning">
                                                     <i class="fa fa-edit"></i>
                                                 </a>
@@ -70,7 +76,7 @@
                                         </form>
                                     </td>
                                 </tr>
-                            @endforeach --}}
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
