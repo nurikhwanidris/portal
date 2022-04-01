@@ -79,7 +79,7 @@
                                 </div>
                                 <div class="row mb-3">
                                     <label for="" class="col-sm-2 col-form-label col-form-label-sm">Gambar Hadapan</label>
-                                    <span class="col-sm-1 text-center">:</span>
+                                    <span class="col-sm-1">:</span>
                                     <div class="col-sm-3">
                                         <input type="file" name="gambarHadapan" id="" class="form-control form-control-sm"
                                             accept="image/png, image/jpeg, image/jpg">
