@@ -8,44 +8,50 @@
                 <div class="owl-carousel owl-theme"
                     data-plugin-options="{'items': 1, 'autoplay': true, 'autoplayTimeout': 3000}">
                     <!-- 1 -->
-                    <div>
-                        <div class="row">
-                            <div class="col" style="width: 180px;"><img src="/main/img/blog/small/blog-1.jpg">
+                    @foreach ($beritaTerkini as $news)
+                        <div>
+                            <div class="row">
+                                <div class="col" style="width: 180px;"><img
+                                        src="/main/img/blog/small/blog-1.jpg">
+                                </div>
+                                <div class="col" style="width: 180px;"><img
+                                        src="/main/img/blog/small/blog-1.jpg">
+                                </div>
                             </div>
-                            <div class="col" style="width: 180px;"><img src="/main/img/blog/small/blog-1.jpg">
-                            </div>
-                        </div>
-                        <br>
-                        <div class="recent-posts">
-                            <article class="post">
-                                <div class="row">
-                                    <div class="col-auto pe-0">
-                                        <div class="post-date">
-                                            <span class="day text-color-dark font-weight-extra-bold">15</span>
-                                            <span class="month">JAN</span>
-                                        </div>
-                                    </div>
-                                    <div class="col ps-1">
-                                        <div>
-                                            <h4 class="line-height-3"><a href="#"
-                                                    class="text-decoration-none text-show-line-tajuk">Mesyuarat
-                                                    Jawatankuasa Pemetaan dan Data Spatial Negara (JPDSN) Ke-72 </a>
-                                            </h4>
-                                            <div>
-                                                <div class="mb-1 info-semasa-paragraph text-show-line">Sed ut
-                                                    perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                                                    doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
-                                                    inventore veritatis et quasi architecto beatae vitae dicta sunt
-                                                    explicabo. </div>
-                                                <a href="blog-post.html"
-                                                    class="read-more text-color-dark font-weight-bold text-2">MAKLUMAT
-                                                    TERPERINCI <i class="fas fa-chevron-right"></i></a>
+                            <br>
+                            <div class="recent-posts">
+                                <article class="post">
+                                    <div class="row">
+                                        <div class="col-auto pe-0">
+                                            <div class="post-date">
+                                                <span class="day text-color-dark font-weight-extra-bold">15</span>
+                                                <span class="month">JAN</span>
                                             </div>
                                         </div>
-                            </article>
+                                        <div class="col ps-1">
+                                            <div>
+                                                <h4 class="line-height-3"><a href="#"
+                                                        class="text-decoration-none text-show-line-tajuk">Mesyuarat
+                                                        Jawatankuasa Pemetaan dan Data Spatial Negara (JPDSN) Ke-72 </a>
+                                                </h4>
+                                                <div>
+                                                    <div class="mb-1 info-semasa-paragraph text-show-line">Sed ut
+                                                        perspiciatis unde omnis iste natus error sit voluptatem
+                                                        accusantium
+                                                        doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
+                                                        illo
+                                                        inventore veritatis et quasi architecto beatae vitae dicta sunt
+                                                        explicabo. </div>
+                                                    <a href="blog-post.html"
+                                                        class="read-more text-color-dark font-weight-bold text-2">MAKLUMAT
+                                                        TERPERINCI <i class="fas fa-chevron-right"></i></a>
+                                                </div>
+                                            </div>
+                                </article>
+                            </div>
                         </div>
-                    </div>
-                    <!-- 2 -->
+                    @endforeach
+                    {{-- <!-- 2 -->
                     <div>
                         <div class="row">
                             <div class="col" style="width: 180px;"><img
@@ -84,7 +90,7 @@
                                         </div>
                             </article>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>
