@@ -13,6 +13,8 @@
 
     <!-- CSS & Script -->
     @include('main.layouts.partials.headerlink')
+
+    @livewireStyles
 </head>
 
 <body data-plugin-page-transition>
@@ -103,7 +105,7 @@
                     </div>
                     <div class="col-lg-9">
                         <div class="tab-pane tab-pane-navigation active" id="tab-1">
-                            <?php include 'include-portal/info-korp-mengenai.php'; ?>
+                            @livewire('info-korp.info-korp-mengenai')
                         </div>
                         <div class="tab-pane tab-pane-navigation" id="tab-2">
                             <?php include 'include-portal/info-korp-struktur-org.php'; ?>
@@ -129,5 +131,7 @@
     @include('main.layouts.partials.scripts')
 
 </body>
+
+@livewireScripts
 
 </html>
