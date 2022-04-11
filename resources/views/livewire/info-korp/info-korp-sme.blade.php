@@ -11,14 +11,14 @@
                                 <a class="accordion-toggle text-color-dark font-weight-bold collapsed"
                                     data-bs-toggle="collapse" data-bs-target="#collapse200One" aria-expanded="false"
                                     aria-controls="collapse200One">
-                                    Pengurusan Tertinggi
+                                    Mengenai SME & Bidang Kepakaran
                                 </a>
                             </h4>
                         </div>
                         <div id="collapse200One" class="collapse" aria-labelledby="collapse200HeadingOne"
                             data-bs-parent="#accordion200">
                             <div class="card-body pt-0">
-                                @livewire('info-korp.mengenai-pengurusan-tertinggi')
+                                @livewire('info-korp.sme-mengenai-bidang-kepakaran')
                             </div>
                         </div>
                     </div>
@@ -29,14 +29,14 @@
                                 <a class="accordion-toggle text-color-dark font-weight-bold collapsed"
                                     data-bs-toggle="collapse" data-bs-target="#collapse200TwoA" aria-expanded="false"
                                     aria-controls="collapse200Two">
-                                    JUPEM Negeri
+                                    Permohonan SME & Hubungi Kami
                                 </a>
                             </h4>
                         </div>
                         <div id="collapse200TwoA" class="collapse" aria-labelledby="collapse200HeadingTwoA"
                             data-bs-parent="#accordion200">
                             <div class="card-body pt-0">
-                                @livewire('info-korp.struktur-negeri')
+                                @livewire('info-korp.info-korp-sme-permohonan-hubungi-kami')
                             </div>
                         </div>
                     </div>
@@ -47,14 +47,14 @@
                                 <a class="accordion-toggle text-color-dark font-weight-bold collapsed"
                                     data-bs-toggle="collapse" data-bs-target="#collapse200Two" aria-expanded="false"
                                     aria-controls="collapse200Two">
-                                    Carta Organisasi Ibu Pejabat
+                                    Punca Kuasa
                                 </a>
                             </h4>
                         </div>
                         <div id="collapse200Two" class="collapse" aria-labelledby="collapse200HeadingTwo"
                             data-bs-parent="#accordion200">
                             <div class="card-body pt-0">
-                                @livewire('info-korp.struktur-hq')
+                                @livewire('info-korp.info-korp-sme-punca-kuasa')
                             </div>
                         </div>
                     </div>
@@ -65,32 +65,14 @@
                                 <a class="accordion-toggle text-color-dark font-weight-bold collapsed"
                                     data-bs-toggle="collapse" data-bs-target="#collapse200Three" aria-expanded="false"
                                     aria-controls="collapse200Three">
-                                    Carta Organisasi Kementerian
+                                    Aktiviti SME
                                 </a>
                             </h4>
                         </div>
                         <div id="collapse200Three" class="collapse" aria-labelledby="collapse200HeadingThree"
                             data-bs-parent="#accordion200">
                             <div class="card-body pt-0">
-                                @livewire('info-korp.struktur-ketsa')
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 5 -->
-                    <div class="card card-default">
-                        <div class="card-header" id="collapse200HeadingFour">
-                            <h4 class="card-title m-0">
-                                <a class="accordion-toggle text-color-dark font-weight-bold collapsed"
-                                    data-bs-toggle="collapse" data-bs-target="#collapse200Four" aria-expanded="false"
-                                    aria-controls="collapse200Four">
-                                    Ketua Pegawai Maklumat (CIO)
-                                </a>
-                            </h4>
-                        </div>
-                        <div id="collapse200Four" class="collapse" aria-labelledby="collapse200HeadingFour"
-                            data-bs-parent="#accordion200">
-                            <div class="card-body pt-0">
-                                @livewire('info-korp.struktur-cio')
+                                @livewire('info-korp.info-korp-sme-aktiviti')
                             </div>
                         </div>
                     </div>

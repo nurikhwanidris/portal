@@ -174,3 +174,5 @@ Route::delete('/spsm/admin/buletingis/{delete}', [GisController::class, 'delete'
 Route::get('/', [MainController::class, 'index']);
 
 Route::get('/info-korp', [MainController::class, 'infoKorp']);
+
+Route::get('/awam', [MainController::class, 'orangAwam']);

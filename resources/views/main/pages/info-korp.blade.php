@@ -111,10 +111,10 @@
                             @livewire('info-korp.info-korp-struktur-org')
                         </div>
                         <div class="tab-pane tab-pane-navigation" id="tab-3">
-                            <?php include 'include-portal/info-korp-hubungi.php'; ?>
+                            @livewire('info-korp.info-korp-hubungi')
                         </div>
                         <div class="tab-pane tab-pane-navigation" id="tab-4">
-                            <?php include 'include-portal/info-korp-sme.php'; ?>
+                            @livewire('info-korp.info-korp-sme')
                         </div>
                     </div>
                 </div>
@@ -122,7 +122,7 @@
         </div>
 
         <!-- Footer - START -->
-        <?php include 'include-portal/footer-1.php'; ?>
+        @include('main.layouts.partials.footer')
         <!-- Footer - END -->
 
     </div>

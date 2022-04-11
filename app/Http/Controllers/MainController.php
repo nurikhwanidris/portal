@@ -38,6 +38,12 @@ class MainController extends Controller
     {
         return view('main.pages.info-korp');
     }
-    
+
+    // Orang Awam controller
+    public function orangAwam()
+    {
+        return view('main.pages.orang-awam');
+    }
+
 }
 
