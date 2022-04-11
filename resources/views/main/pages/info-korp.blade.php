@@ -108,7 +108,7 @@
                             @livewire('info-korp.info-korp-mengenai')
                         </div>
                         <div class="tab-pane tab-pane-navigation" id="tab-2">
-                            <?php include 'include-portal/info-korp-struktur-org.php'; ?>
+                            @livewire('info-korp.info-korp-struktur-org')
                         </div>
                         <div class="tab-pane tab-pane-navigation" id="tab-3">
                             <?php include 'include-portal/info-korp-hubungi.php'; ?>
