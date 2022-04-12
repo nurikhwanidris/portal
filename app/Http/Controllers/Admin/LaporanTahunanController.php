@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use App\Models\LaporanTahunan;
 use App\Models\Status;
 use Illuminate\Http\Request;
@@ -96,7 +97,7 @@ class LaporanTahunanController extends Controller
      */
     public function show(LaporanTahunan $laporanTahunan)
     {
-        // 
+        //
     }
 
     /**
