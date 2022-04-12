@@ -34,11 +34,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// // Landing page route
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
 // SPSM CMS route
 Route::get('/spsm', [HomeController::class, 'index'])->middleware('auth');
 
