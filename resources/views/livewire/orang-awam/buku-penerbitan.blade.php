@@ -16,7 +16,7 @@
 					<div class="card-header" id="collapse200HeadingOne">
 						<h4 class="card-title m-0">
 							<a class="accordion-toggle text-color-dark font-weight-bold collapsed" data-bs-toggle="collapse" data-bs-target="#collapse200One" aria-expanded="false" aria-controls="collapse200One">
-								Buletin GIS
+								Buletin GISS
 							</a>
 						</h4>
 					</div>
