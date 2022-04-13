@@ -1,12 +1,11 @@
-<header id="header" class="header-transparent header-effect-shrink"
-    data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'shrink', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': false, 'stickyChangeLogo': true, 'stickyStartAt': 30, 'stickyHeaderContainerHeight': 100}">
-    <div class="header-body border-top-0 bg-dark box-shadow-none">
-        <div class="header-container" style="padding-right: 30px;">
-            <div class="header-row">
-                <!-- Logo - START -->
-                <div class="header-column">
-                    <div class="header-row">
-                        <div class="header-logo">
+<header id="header" class="header-transparent" data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'shrink', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': false, 'stickyChangeLogo': true, 'stickyStartAt': 20, 'stickyHeaderContainerHeight': 100}">
+	<div class="header-body border-top-0 bg-dark box-shadow-none">
+		<div class="header-container" style="padding-right: 30px; height: 100px; min-height: 0px;">
+			<div class="header-row">
+				<!-- Logo - START -->
+				<div class="header-column">
+					<div class="header-row">
+						<div class="header-logo">
                             <a href="index.php">
                                 <img alt="Jata Negara" src="/main/img/logo-default/logo-default-208x100.png"
                                     class="logo-size">

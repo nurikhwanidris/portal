@@ -3201,7 +3201,11 @@ html body .tabs .nav-tabs .nav-link:hover,
 html.dark body .tabs .nav-tabs .nav-link:hover,
 html body .tabs .nav-tabs .nav-link.active,
 html.dark body .tabs .nav-tabs .nav-link.active {
-	color: #0088CC;
+	/*color: #0088CC;*/
+
+	/*Edit for JUPEM*/
+	color: #222;
+	/* --- */
 }
 
 html body .tabs .nav-tabs .nav-link:hover,
@@ -3238,7 +3242,11 @@ html body .tabs.tabs-vertical.tabs-left .nav-tabs .nav-link.active:hover,
 html.dark body .tabs.tabs-vertical.tabs-left .nav-tabs .nav-link.active:hover,
 html body .tabs.tabs-vertical.tabs-left .nav-tabs .nav-link.active:focus,
 html.dark body .tabs.tabs-vertical.tabs-left .nav-tabs .nav-link.active:focus {
-	border-left-color: #0088CC;
+	/*border-left-color: #0088CC*/;
+
+	/*Edit for JUPEM*/
+	border-left-color: #4e914a;
+	/* --- */
 }
 
 html body .tabs.tabs-vertical.tabs-right .nav-tabs li .nav-link:hover,

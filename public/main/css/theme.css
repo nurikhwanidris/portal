@@ -120,7 +120,7 @@ pre {
 	/*background: #FFF;*/
 
 	/*Edit for JUPEM*/
-	background: #212529;
+	background: #212529; 
 	/* --- */
 	transition: min-height 0.3s ease;
 	width: 100%;
@@ -1504,7 +1504,7 @@ html.sticky-header-enabled.sticky-header-active #header .header-logo-sticky-chan
 	}
 
 	#header .header-nav-main nav > ul > li {
-
+		
 		/*Edit for JUPEM*/
 		/*height: 100%;*/
 		/* --- */
@@ -8253,8 +8253,8 @@ a.text-light:focus, a.text-light:hover {
 	padding-right: 10px;
 }
 
-/*
- * Order (Extending to 10)
+/* 
+ * Order (Extending to 10) 
  * Bootstrap 5 has until 5 order class
 */
 .order-6 {
