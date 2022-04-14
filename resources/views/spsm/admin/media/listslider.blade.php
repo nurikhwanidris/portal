@@ -44,7 +44,7 @@
                                 {{ $loop->iteration }}
                             </td>
                             <td class="align-middle text-center">
-                                <img src="/upload/img/{{ $slider->filename }}" alt="" srcset="" class="img-fluid"
+                                <img src="{{ asset('storage/upload/img/' . $slider->filename) }}" alt="" srcset="" class="img-fluid"
                                     style="width: auto; height: 150px;">
                             </td>
                             <td class="align-middle text-left text-wrap">

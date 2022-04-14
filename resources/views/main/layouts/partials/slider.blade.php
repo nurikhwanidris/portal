@@ -5,8 +5,9 @@
                 data-plugin-options="{'items': 1, 'loop': true, 'autoplay': true, 'autoplayTimeout': 5000, 'autoplayHoverPause': true, 'nav': true, 'dots': true, 'animateOut': 'fadeOut'}">
                 @foreach ($sliders as $slider)
                     <div>
-                        <img src="/upload/img/{{ $slider->filename }}"
-                            data-thumb="/upload/img/{{ $slider->filename }}" alt="{{ $slider->filename }}" />
+                        <img src="{{ asset('storage/upload/img/' . $slider->filename) }}"
+                            data-thumb="{{ asset('storage/upload/img/' . $slider->filename) }}"
+                            alt="{{ $slider->filename }}" />
                     </div>
                 @endforeach
             </div>
