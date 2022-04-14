@@ -25,7 +25,7 @@ class LoginController extends Controller
 
         if (Auth::attempt($logins)) {
             $request->session()->regenerate();
-            return redirect()->intended('/spsm');
+            return redirect()->intended('/jupem');
         }
 
         return back()->with('loginError', 'Gagal untuk log masuk. Semak semula kata nama & kata laluan anda');
@@ -39,6 +39,6 @@ class LoginController extends Controller
 
         $request->session()->regenerateToken();
 
-        return redirect('/spsm/login')->with('success', 'Sesi anda berjaya ditamatkan.');
+        return redirect('/jupem/login')->with('success', 'Sesi anda berjaya ditamatkan.');
     }
 }
