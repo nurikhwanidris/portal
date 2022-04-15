@@ -10,13 +10,13 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="/spsm/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="/jupem/plugins/fontawesome-free/css/all.min.css">
     <!-- IonIcons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Theme style -->
-    <link rel="stylesheet" href="/spsm/css/adminlte.min.css">
+    <link rel="stylesheet" href="/jupem/css/adminlte.min.css">
     <!-- CKeditor 5 -->
-    <script src="/spsm/js/ckeditor/ckeditor.js"></script>
+    <script src="/jupem/js/ckeditor/ckeditor.js"></script>
     <!-- DataTables -->
     <link rel="stylesheet" href="../../plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="../../plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
@@ -26,11 +26,11 @@
     <!-- REQUIRED SCRIPTS -->
 
     <!-- jQuery -->
-    <script src="/spsm/plugins/jquery/jquery.min.js"></script>
+    <script src="/jupem/plugins/jquery/jquery.min.js"></script>
     <!-- Bootstrap -->
-    <script src="/spsm/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/jupem/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- AdminLTE -->
-    <script src="/spsm/js/adminlte.js"></script>
+    <script src="/jupem/js/adminlte.js"></script>
     <!-- Lightbox -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
 </head>
@@ -63,9 +63,10 @@
                         </div><!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
-                                <li class="breadcrumb-item"><a href="/spsm">Utama</a></li>
-                                @if ($leadCrumbs !='')
-                                <li class="breadcrumb-item"><a href="/spsm/{{ $link }}">{{ $leadCrumbs }}</a></li>
+                                <li class="breadcrumb-item"><a href="/jupem">Utama</a></li>
+                                @if ($leadCrumbs != '')
+                                    <li class="breadcrumb-item"><a
+                                            href="/jupem/{{ $link }}">{{ $leadCrumbs }}</a></li>
                                 @endif
                                 <li class="breadcrumb-item active">{{ $title }}</li>
                             </ol>
@@ -100,28 +101,28 @@
     <!-- ./wrapper -->
 
     <!-- OPTIONAL SCRIPTS -->
-    <script src="/spsm/plugins/chart.js/Chart.min.js"></script>
+    <script src="/jupem/plugins/chart.js/Chart.min.js"></script>
     <!-- AdminLTE for demo purposes -->
-    <script src="/spsm/js/demo.js"></script>
+    <script src="/jupem/js/demo.js"></script>
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-    <script src="/spsm/js/pages/dashboard3.js"></script>
+    <script src="/jupem/js/pages/dashboard3.js"></script>
 
     {{-- Datatable --}}
     <!-- DataTables  & Plugins -->
-    <script src="/spsm/plugins/datatables/jquery.dataTables.min.js"></script>
-    <script src="/spsm/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-    <script src="/spsm/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
-    <script src="/spsm/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
-    <script src="/spsm/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
-    <script src="/spsm/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
-    <script src="/spsm/plugins/jszip/jszip.min.js"></script>
-    <script src="/spsm/plugins/pdfmake/pdfmake.min.js"></script>
-    <script src="/spsm/plugins/pdfmake/vfs_fonts.js"></script>
-    <script src="/spsm/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
-    <script src="/spsm/plugins/datatables-buttons/js/buttons.print.min.js"></script>
-    <script src="/spsm/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+    <script src="/jupem/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="/jupem/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="/jupem/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="/jupem/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <script src="/jupem/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="/jupem/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+    <script src="/jupem/plugins/jszip/jszip.min.js"></script>
+    <script src="/jupem/plugins/pdfmake/pdfmake.min.js"></script>
+    <script src="/jupem/plugins/pdfmake/vfs_fonts.js"></script>
+    <script src="/jupem/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+    <script src="/jupem/plugins/datatables-buttons/js/buttons.print.min.js"></script>
+    <script src="/jupem/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
     <script>
-        $(function () {
+        $(function() {
             $(".table").DataTable({
                 "responsive": true,
                 "lengthChange": false,
@@ -145,11 +146,10 @@
             const oFReader = new FileReader();
             oFReader.readAsDataURL(image.files[0]);
 
-            oFReader.onload = function (oFREvent) {
+            oFReader.onload = function(oFREvent) {
                 imgPreview.src = oFREvent.target.result;
             }
         }
-
     </script>
 </body>
 

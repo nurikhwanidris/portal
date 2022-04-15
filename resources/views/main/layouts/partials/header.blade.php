@@ -1,12 +1,13 @@
-<header id="header" class="header-transparent" data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'shrink', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': false, 'stickyChangeLogo': true, 'stickyStartAt': 20, 'stickyHeaderContainerHeight': 100}">
-	<div class="header-body border-top-0 bg-dark box-shadow-none">
-		<div class="header-container" style="padding-right: 30px; height: 100px; min-height: 0px;">
-			<div class="header-row">
-				<!-- Logo - START -->
-				<div class="header-column">
-					<div class="header-row">
-						<div class="header-logo">
-                            <a href="index.php">
+<header id="header" class="header-transparent"
+    data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'shrink', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': false, 'stickyChangeLogo': true, 'stickyStartAt': 20, 'stickyHeaderContainerHeight': 100}">
+    <div class="header-body border-top-0 bg-dark box-shadow-none">
+        <div class="header-container" style="padding-right: 30px; height: 100px; min-height: 0px;">
+            <div class="header-row">
+                <!-- Logo - START -->
+                <div class="header-column">
+                    <div class="header-row">
+                        <div class="header-logo">
+                            <a href="/">
                                 <img alt="Jata Negara" src="/main/img/logo-default/logo-default-208x100.png"
                                     class="logo-size">
                             </a>
@@ -32,7 +33,7 @@
                                 <nav class="collapse">
                                     <ul class="nav nav-pills" id="mainNav">
                                         <li class="dropdown">
-                                            <a class="dropdown-item dropdown-toggle active" href="index.php">
+                                            <a class="dropdown-item dropdown-toggle active" href="#">
                                                 <div class="center-icon">
                                                     <img alt="Soalan Lazim"
                                                         data-change-src="/main/img/shortcut-icon/faq-small.png"
@@ -42,7 +43,7 @@
                                             </a>
                                         </li>
                                         <li class="dropdown dropdown-mega">
-                                            <a class="dropdown-item dropdown-toggle active" href="index.php">
+                                            <a class="dropdown-item dropdown-toggle active" href="#">
                                                 <div class="center-icon">
                                                     <img alt="Soalan Lazim"
                                                         data-change-src="/main/img/shortcut-icon/faq-small.png"
@@ -62,7 +63,7 @@
                                             </a>
                                         </li>
                                         <li class="dropdown">
-                                            <a class="dropdown-item dropdown-toggle active" href="index.php">
+                                            <a class="dropdown-item dropdown-toggle active" href="#">
                                                 <div class="center-icon">
                                                     <img alt="Soalan Lazim"
                                                         data-change-src="/main/img/shortcut-icon/faq-small.png"

@@ -10,31 +10,31 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="/spsm/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="/jupem/plugins/fontawesome-free/css/all.min.css">
     <!-- IonIcons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Theme style -->
-    <link rel="stylesheet" href="/spsm/css/adminlte.min.css">
+    <link rel="stylesheet" href="/jupem/css/adminlte.min.css">
 </head>
 
 <body class="hold-transition login-page">
     <div class="login-box">
         {{-- Success alert --}}
         @if (session()->has('success'))
-        <div class="alert alert-secondary" role="alert">
-            <div class="text-center">
-                {{ session('success') }}
+            <div class="alert alert-secondary" role="alert">
+                <div class="text-center">
+                    {{ session('success') }}
+                </div>
             </div>
-        </div>
         @endif
 
         {{-- Error alert --}}
         @if (session()->has('loginError'))
-        <div class="alert alert-danger" role="alert">
-            <div class="text-center">
-                {{ session('loginError') }}
+            <div class="alert alert-danger" role="alert">
+                <div class="text-center">
+                    {{ session('loginError') }}
+                </div>
             </div>
-        </div>
         @endif
         <!-- /.login-logo -->
         <div class="card card-outline card-primary">
@@ -90,11 +90,11 @@
     <!-- REQUIRED SCRIPTS -->
 
     <!-- jQuery -->
-    <script src="/spsm/plugins/jquery/jquery.min.js"></script>
+    <script src="/jupem/plugins/jquery/jquery.min.js"></script>
     <!-- Bootstrap -->
-    <script src="/spsm/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/jupem/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- AdminLTE -->
-    <script src="/spsm/js/adminlte.js"></script>
+    <script src="/jupem/js/adminlte.js"></script>
 </body>
 
 </html>
