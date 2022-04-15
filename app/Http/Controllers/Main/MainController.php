@@ -26,7 +26,9 @@ class MainController extends Controller
             'beritaTerkini' => BeritaTerkini::where([
                 ['show', '<=', Carbon::now()],
                 ['hide', '>=', Carbon::now()],
-            ])->orWhere('status_id', '=', 1)->with('status')->get(),
+            ])
+            ->orWhere('show', null)
+            ->with('status')->get(),
             'tenders' => Tender::where([
                 ['show', '<=', Carbon::now()],
                 ['hide', '>=', Carbon::now()],

@@ -1,7 +1,7 @@
 <div id="mySidenav" class="sidenav">
     <ul class="nav" id="mainNav">
         <li class="dropdown">
-            <a class="dropdown-item active" href="index-1.php">
+            <a class="dropdown-item active" href="/">
                 Laman Utama
             </a>
         </li>
@@ -130,21 +130,21 @@
     </div>
 
     <div id="myDIV3">
-        <a id="dua" class="tepi-menu-direktori gerak-khas" href="#" data-bs-toggle="tooltip" data-bs-animation="false"
-            data-bs-placement="right" title="">
+        <a id="dua" class="tepi-menu-direktori gerak-khas" href="/direktori-pegawai" data-bs-toggle="tooltip"
+            data-bs-animation="false" data-bs-placement="right" title="">
             <i class="fas fa-user-tie img-fluid icon-menu-tepi"></i>
             <div class="text-menu-tepi">Direktori Pegawai</div>
         </a>
     </div>
     <div id="myDIV4">
-        <a id="tiga" class="tepi-menu-warga gerak-khas" href="#" data-bs-toggle="tooltip" data-bs-animation="false"
+        <a id="tiga" class="tepi-menu-warga gerak-khas" href="/jupem" data-bs-toggle="tooltip" data-bs-animation="false"
             data-bs-placement="right" title="">
             <i class="fas fa-briefcase img-fluid icon-menu-tepi"></i>
             <div class="text-menu-tepi">Warga JUPEM</div>
         </a>
     </div>
     <div id="myDIV5">
-        <a id="empat" class="tepi-menu-awam gerak-khas" href="#" data-bs-toggle="tooltip" data-bs-animation="false"
+        <a id="empat" class="tepi-menu-awam gerak-khas" href="/awam" data-bs-toggle="tooltip" data-bs-animation="false"
             data-bs-placement="right" title="">
             <i class="fas fa-users img-fluid icon-menu-tepi"></i>
             <div class="text-menu-tepi">Orang Awam</div>
