@@ -7,7 +7,6 @@ use App\Models\Media;
 use App\Models\Slider;
 use App\Models\Status;
 use App\Http\Requests\StoreMediaRequest;
-use App\Http\Requests\UpdateMediaRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
