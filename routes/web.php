@@ -16,7 +16,7 @@ use App\Http\Controllers\Admin\BeritaUkurController;
 use App\Http\Controllers\Admin\GisController;
 use App\Http\Controllers\Admin\JabatanUnitController;
 use App\Http\Controllers\Admin\KertasKerjaController;
-use App\Http\Controllers\MainController\MainController;
+use App\Http\Controllers\Main\MainController;
 use App\Http\Controllers\Admin\MaklumBalasController;
 use App\Http\Controllers\Admin\PegawaiController;
 use App\Http\Controllers\Admin\PekelilingController;

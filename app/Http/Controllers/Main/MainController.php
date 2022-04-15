@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\MainController;
+namespace App\Http\Controllers\Main;
 
 use App\Http\Controllers\Controller;
 use App\Models\BeritaTerkini;
