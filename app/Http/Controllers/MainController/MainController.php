@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\MainController;
 
+use App\Http\Controllers\Controller;
 use App\Models\BeritaTerkini;
 use App\Models\Pengumuman;
 use App\Models\Slider;
