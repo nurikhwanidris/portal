@@ -6,7 +6,6 @@ use App\Models\Media;
 use App\Models\Slider;
 use App\Models\Status;
 use App\Http\Requests\StoreMediaRequest;
-use App\Http\Requests\UpdateMediaRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -119,7 +118,7 @@ class MediaController extends Controller
     {
         // Validate Data
         $validateData = $request->validate([
-            'sliderImage' => 'required|image|max:1024',
+            'sliderImage' => 'required|image|max:1024|dimensions:width=1400,height=300',
             'hide' => 'required',
             'status' => 'required',
             'susunan' => 'required'
@@ -187,7 +186,7 @@ class MediaController extends Controller
         if ($request['sliderImage'] != '') {
 
             // Validate the file first
-            $request->validate(['sliderImage' => 'required|image|max:1024']);
+            $request->validate(['sliderImage' => 'required|image|max:1024|dimensions:width=1400,height=300']);
 
             // Delete old file first
             if ($request->file('sliderImage')) {
