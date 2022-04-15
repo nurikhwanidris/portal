@@ -7,6 +7,7 @@ use App\Models\BeritaTerkini;
 use App\Models\Pengumuman;
 use App\Models\Slider;
 use App\Models\Tender;
+use App\Models\Quote;
 use Carbon\Carbon;
 
 class MainController extends Controller
@@ -18,7 +19,9 @@ class MainController extends Controller
             'sliders' => Slider::where([
                 ['show', '<=', Carbon::now()],
                 ['hide', '>=', Carbon::now()],
-            ])->with('statuses')->get(),
+            ])
+            ->orWhere('show', null)
+            ->with('statuses')->get(),
             'annoucements' => Pengumuman::where([
                 ['show', '<=', Carbon::now()],
                 ['hide', '>=', Carbon::now()],
@@ -30,6 +33,10 @@ class MainController extends Controller
             ->orWhere('show', null)
             ->with('status')->get(),
             'tenders' => Tender::where([
+                ['show', '<=', Carbon::now()],
+                ['hide', '>=', Carbon::now()],
+            ])->with('status')->limit(5)->get(),
+            'quotes' => Quote::where([
                 ['show', '<=', Carbon::now()],
                 ['hide', '>=', Carbon::now()],
             ])->with('status')->get(),

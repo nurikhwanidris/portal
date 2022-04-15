@@ -48,6 +48,8 @@
                                                         TERPERINCI <i class="fas fa-chevron-right"></i></a>
                                                 </div>
                                             </div>
+                                        </div>
+                                    </div>
                                 </article>
                             </div>
                         </div>
@@ -61,25 +63,29 @@
             <div class="row text-title-semasa-1">Tawaran Perolehan</div>
             <br>
             <div>
-
                 <div class="parent">
                     <div class="row"><text class="text-head-space">Tender</text></div>
-                    <div class="row"><text class="info-semasa-paragraph overflow-tajuk"><a href="#">JUPEM
-                                T2/2022 : Perolehan Membekal, Menghantar, Menguji Dan Mentauliah Empat Belas (14) Set
-                                Alat Penerima Global Navigation Satellite System (GNSS) Untuk Jabatan Ukur Dan Pemetaan
-                                Malaysia (JUPEM), Kementerian Tenaga Dan Sumber Asli (KetSA)</text></a></div>
-                    <div class="row"><text class="info-semasa-paragraph overflow-tajuk"><a href="#">JUPEM
-                                T2/2022 : Perolehan Membekal, Menghantar, Menguji Dan Mentauliah Empat Belas (14) Set
-                                Alat Penerima Global Navigation Satellite System (GNSS) Untuk Jabatan Ukur Dan Pemetaan
-                                Malaysia (JUPEM), Kementerian Tenaga Dan Sumber Asli (KetSA)</text></a></div>
-
-                    <div class="row" style="padding-top: 24px;"><text
-                            class="text-head-space">Sebutharga</text></div>
-                    <div class="row"><text class="info-semasa-paragraph">Tiada Sebutharga buat masa
-                            ini</text></div>
-                    <div class="row child"><a href="#"
-                            class="read-more text-color-dark font-weight-bold text-2">MAKLUMAT TERPERINCI <i
-                                class="fas fa-chevron-right"></i></a></div>
+                    @foreach ($tenders as $tender)
+                        <div class="row">
+                            <text class="info-semasa-paragraph overflow-tajuk">
+                                <a href="#">{{ $tender->title_my }}</a>
+                            </text>
+                        </div>
+                    @endforeach
+                    <div class="row" style="padding-top: 24px;">
+                        <text class="text-head-space">Sebutharga</text>
+                    </div>
+                    <div class="row">
+                        <text class="info-semasa-paragraph">
+                            Tiada Sebutharga buat masa ini
+                        </text>
+                    </div>
+                    <div class="row child">
+                        <a href="/perolehan" class="read-more text-color-dark font-weight-bold text-2">
+                            MAKLUMAT TERPERINCI
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
