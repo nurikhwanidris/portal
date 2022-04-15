@@ -1,26 +1,26 @@
 <?php
 
-use App\Http\Controllers\LoginController;
+use App\Http\Controllers\Admin\LoginController;
 use App\Http\Controllers\Admin\PagesController;
-use App\Http\Controllers\BeritaTerkiniController;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\LaporanTahunanController;
-use App\Http\Controllers\LaporanMesyuaratController;
-use App\Http\Controllers\KeratanAkhbarController;
-use App\Http\Controllers\MediaController;
-use App\Http\Controllers\PengumumanController;
-use App\Http\Controllers\PopupController;
-use App\Http\Controllers\QuoteController;
-use App\Http\Controllers\TenderController;
-use App\Http\Controllers\BeritaUkurController;
-use App\Http\Controllers\GisController;
-use App\Http\Controllers\JabatanUnitController;
-use App\Http\Controllers\KertasKerjaController;
-use App\Http\Controllers\MainController;
-use App\Http\Controllers\MaklumBalasController;
-use App\Http\Controllers\PegawaiController;
-use App\Http\Controllers\PekelilingController;
-use App\Http\Controllers\PiagamPelangganController;
+use App\Http\Controllers\Admin\BeritaTerkiniController;
+use App\Http\Controllers\Admin\HomeController;
+use App\Http\Controllers\Admin\LaporanTahunanController;
+use App\Http\Controllers\Admin\LaporanMesyuaratController;
+use App\Http\Controllers\Admin\KeratanAkhbarController;
+use App\Http\Controllers\Admin\MediaController;
+use App\Http\Controllers\Admin\PengumumanController;
+use App\Http\Controllers\Admin\PopupController;
+use App\Http\Controllers\Admin\QuoteController;
+use App\Http\Controllers\Admin\TenderController;
+use App\Http\Controllers\Admin\BeritaUkurController;
+use App\Http\Controllers\Admin\GisController;
+use App\Http\Controllers\Admin\JabatanUnitController;
+use App\Http\Controllers\Admin\KertasKerjaController;
+use App\Http\Controllers\Admin\MaklumBalasController;
+use App\Http\Controllers\Admin\PegawaiController;
+use App\Http\Controllers\Admin\PekelilingController;
+use App\Http\Controllers\Admin\PiagamPelangganController;
+use App\Http\Controllers\Main\MainController;
 use Illuminate\Support\Facades\Route;
 
 /*

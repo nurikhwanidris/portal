@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
-use App\Models\Status;
-use App\Http\Requests\StoreStatusRequest;
-use App\Http\Requests\UpdateStatusRequest;
+use App\Http\Controllers\Controller;
+use App\Models\DirektoriPegawai;
+use Illuminate\Http\Request;
 
-class StatusController extends Controller
+class DirektoriPegawaiController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -31,10 +31,10 @@ class StatusController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreStatusRequest  $request
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreStatusRequest $request)
+    public function store(Request $request)
     {
         //
     }
@@ -42,10 +42,10 @@ class StatusController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Status  $status
+     * @param  \App\Models\DirektoriPegawai  $direktoriPegawai
      * @return \Illuminate\Http\Response
      */
-    public function show(Status $status)
+    public function show(DirektoriPegawai $direktoriPegawai)
     {
         //
     }
@@ -53,10 +53,10 @@ class StatusController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Status  $status
+     * @param  \App\Models\DirektoriPegawai  $direktoriPegawai
      * @return \Illuminate\Http\Response
      */
-    public function edit(Status $status)
+    public function edit(DirektoriPegawai $direktoriPegawai)
     {
         //
     }
@@ -64,11 +64,11 @@ class StatusController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateStatusRequest  $request
-     * @param  \App\Models\Status  $status
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Models\DirektoriPegawai  $direktoriPegawai
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateStatusRequest $request, Status $status)
+    public function update(Request $request, DirektoriPegawai $direktoriPegawai)
     {
         //
     }
@@ -76,10 +76,10 @@ class StatusController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Status  $status
+     * @param  \App\Models\DirektoriPegawai  $direktoriPegawai
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Status $status)
+    public function destroy(DirektoriPegawai $direktoriPegawai)
     {
         //
     }
