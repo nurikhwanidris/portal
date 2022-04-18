@@ -20,8 +20,8 @@
                         </div>
                         <div id="collapse200One" class="collapse" aria-labelledby="collapse200HeadingOne" data-bs-parent="#accordion200">
                             <div class="card-body pt-0">
-                                {{-- Filtering --}}
-                                <div class="row">
+                                <!--  Filtering -->
+                                <div class="row kotak-filter">
                                     <div class="form-group col-lg-6">
                                         <label class="form-label mb-1 text-2">Keyword</label>
                                         <input class="form-control border-color-quaernary" type="text" placeholder="Title/Code" aria-label="default color input example">
@@ -38,69 +38,131 @@
                                         </div>
                                     </div>
                                 </div>
-                                {{-- Table --}}
-                                <table class="table table-striped table-hover">
+                                <!-- Table -->
+                                <!-- Datatable - START -->
+                                <table id="example"  class="table table-striped table-hover" style="width:100%">
                                     <thead>
                                         <tr>
-                                            <th>
-                                                #
-                                            </th>
-                                            <th>
-                                                NAMA / TAJUK PERJANJIAN
-                                            </th>
-                                            <th>
-                                                TARIKH
-                                            </th>
-                                            <th>
-                                                LOKASI
-                                            </th>
+                                            <th>#</th>
+                                            <th>TITLE</th>
+                                            <th>TITLE</th>
+                                            <th>TITLE</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>
-                                                1
-                                            </td>
-                                            <td>
-                                                MoU
-                                            </td>
-                                            <td>
-                                                08 September 1972
-                                            </td>
-                                            <td>
-                                                Bangkok, Thailand
-                                            </td>
+                                            <td>autoincrement</td>
+                                            <td>123</td>
+                                            <td>text</td>
+                                            <td>text</td>
                                         </tr>
                                         <tr>
-                                            <td>
-                                                2
-                                            </td>
-                                            <td>
-                                                MoU & Peta
-                                            </td>
-                                            <td>
-                                                11 Ogos 1976
-                                            </td>
-                                            <td>
-                                                Bangkok, Thailand
-                                            </td>
+                                            <td>autoincrement</td>
+                                            <td>text</td>
+                                            <td>text</td>
+                                            <td>text</td>
                                         </tr>
                                         <tr>
-                                            <td>
-                                                3
-                                            </td>
-                                            <td>
-                                                MoU & Peta
-                                            </td>
-                                            <td>
-                                                21 Julai 1977
-                                            </td>
-                                            <td>
-                                                Kuala Lumpur, Malaysia
-                                            </td>
+                                            <td>autoincrement</td>
+                                            <td>text</td>
+                                            <td>text</td>
+                                            <td>text</td>
+                                        </tr>
+                                        <tr>
+                                            <td>autoincrement</td>
+                                            <td>text</td>
+                                            <td>text</td>
+                                            <td>text</td>
+                                        </tr>
+                                        <tr>
+                                            <td>autoincrement</td>
+                                            <td>text</td>
+                                            <td>text</td>
+                                            <td>text</td>
+                                        </tr>
+                                        <tr>
+                                            <td>autoincrement</td>
+                                            <td>text</td>
+                                            <td>text</td>
+                                            <td>text</td>
+                                        </tr>
+                                        <tr>
+                                            <td>autoincrement</td>
+                                            <td>text</td>
+                                            <td>text</td>
+                                            <td>text</td>
+                                        </tr>
+                                        <tr>
+                                            <td>autoincrement</td>
+                                            <td>text</td>
+                                            <td>text</td>
+                                            <td>text</td>
+                                        </tr>
+                                        <tr>
+                                            <td>autoincrement</td>
+                                            <td>text</td>
+                                            <td>text</td>
+                                            <td>text</td>
+                                        </tr>
+                                        <tr>
+                                            <td>autoincrement</td>
+                                            <td>text</td>
+                                            <td>text</td>
+                                            <td>text</td>
+                                        </tr>
+                                        <tr>
+                                            <td>autoincrement</td>
+                                            <td>text</td>
+                                            <td>text</td>
+                                            <td>text</td>
+                                        </tr>
+                                        <tr>
+                                            <td>autoincrement</td>
+                                            <td>text</td>
+                                            <td>text</td>
+                                            <td>text</td>
+                                        </tr>
+                                        <tr>
+                                            <td>autoincrement</td>
+                                            <td>text</td>
+                                            <td>text</td>
+                                            <td>text</td>
+                                        </tr>
+                                        <tr>
+                                            <td>autoincrement</td>
+                                            <td>text</td>
+                                            <td>text</td>
+                                            <td>text</td>
+                                        </tr>
+                                        <tr>
+                                            <td>autoincrement</td>
+                                            <td>text</td>
+                                            <td>text</td>
+                                            <td>text</td>
+                                        </tr>
+                                        <tr>
+                                            <td>autoincrement</td>
+                                            <td>text</td>
+                                            <td>text</td>
+                                            <td>text</td>
+                                        </tr>
+                                        <tr>
+                                            <td>autoincrement</td>
+                                            <td>text</td>
+                                            <td>text</td>
+                                            <td>text</td>
                                         </tr>
                                     </tbody>
+                                    {{-- <tfoot>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>TITLE</th>
+                                            <th>TITLE</th>
+                                            <th>TITLE</th>
+                                        </tr>
+                                    </tfoot> --}}
                                 </table>
+                                <!-- Datatable - END -->
                             </div>
                         </div>
                     </div>

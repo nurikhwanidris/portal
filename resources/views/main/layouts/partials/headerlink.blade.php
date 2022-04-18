@@ -25,13 +25,13 @@
 <!-- Baboon -->
 <!-- Admin Extension Specific Page Vendor CSS -->
 <link rel="stylesheet" href="/main/vendor/bootstrap-datepicker/css/bootstrap-datepicker3.css" />
-<link rel="stylesheet" href="/main/vendor/jquery-ui/jquery-ui.css" />
+{{-- <link rel="stylesheet" href="/main/vendor/jquery-ui/jquery-ui.css" />
 <link rel="stylesheet" href="/main/vendor/jquery-ui/jquery-ui.theme.css" />
 <link rel="stylesheet" href="/main/vendor/select2/css/select2.css" />
 <link rel="stylesheet" href="/main/vendor/select2-bootstrap-theme/select2-bootstrap.min.css" />
 <link rel="stylesheet" href="/main/vendor/bootstrap-multiselect/css/bootstrap-multiselect.css" />
 <link rel="stylesheet" href="/main/vendor/bootstrap-tagsinput/bootstrap-tagsinput.css" />
-{{-- <link rel="stylesheet" href="/main/vendor/bootstrap-colorpicker/css/bootstrap-colorpicker.css" />
+<link rel="stylesheet" href="/main/vendor/bootstrap-colorpicker/css/bootstrap-colorpicker.css" />
 <link rel="stylesheet" href="/main/vendor/bootstrap-timepicker/css/bootstrap-timepicker.css" />
 <link rel="stylesheet" href="/main/vendor/dropzone/basic.css" />
 <link rel="stylesheet" href="/main/vendor/dropzone/dropzone.css" />
@@ -39,6 +39,9 @@
 <link rel="stylesheet" href="/main/vendor/summernote/summernote-bs4.css" />
 <link rel="stylesheet" href="/main/vendor/codemirror/lib/codemirror.css" />
 <link rel="stylesheet" href="/main/vendor/codemirror/theme/monokai.css" /> --}}
+
+<!-- Datatable -->
+<link rel="stylesheet" href="/main/css/jquery.datatables.min.css" />
 
 <!-- Theme CSS -->
 <link rel="stylesheet" href="/main/css/theme.css">

@@ -180,7 +180,7 @@
 
 .hovercolour li div {
    color: #ffffff;
-} 
+}
 .hovercolour li:hover div {
    /*color: #47c33d;*/
    color: #efff00;
@@ -547,7 +547,7 @@
    text-overflow: ellipsis;
    display: -webkit-box;
    -webkit-line-clamp: 1; /* number of lines to show */
-           line-clamp: 1; 
+           line-clamp: 1;
    -webkit-box-orient: vertical;
    height: 2.5em;
 }
@@ -557,7 +557,7 @@
    text-overflow: ellipsis;
    display: -webkit-box;
             -webkit-line-clamp: 2; /* number of lines to show */
-                    line-clamp: 2; 
+                    line-clamp: 2;
             -webkit-box-orient: vertical;
 }
 .test-xxx{
@@ -568,10 +568,10 @@
 }
 .overflow-tajuk
 {
-    white-space: nowrap; 
-    width: 200px; 
+    white-space: nowrap;
+    width: 200px;
     overflow: hidden;
-    text-overflow: ellipsis; 
+    text-overflow: ellipsis;
 }
 
 
@@ -631,7 +631,7 @@
         margin-top: 2px !important;
         background-color: grey;
         border-radius: 50%;
-        display: inline-block;   
+        display: inline-block;
     }
 
 /*MENU SWITCHER*/
@@ -1020,13 +1020,13 @@ legend.butang-tepi a:hover{
   white-space: nowrap;
 }
 
-.center 
+.center
 {
   justify-content: center;
 }
 
 /*WAKTU SOLAT 2*/
-.bg-waktu-solat-2 
+.bg-waktu-solat-2
 {
   padding: 5px;
   background-color: rgb(255, 246, 246);
@@ -1059,7 +1059,7 @@ legend.butang-tepi a:hover{
     align-content: center;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
- 
+
 }
 
 .tempat-text-small
@@ -1086,7 +1086,7 @@ legend.butang-tepi a:hover{
 
 .style-tab-tepi
 {
-    /*border-right-color:transparent !important; 
+    /*border-right-color:transparent !important;
     color:  #222  !important;*/
     border-left-color: #4e914a;
 
@@ -1161,4 +1161,12 @@ legend.butang-tepi a:hover{
     line-height: 1.0em;
     color: #777777;
     padding-bottom: 10px;
+}
+
+/*Filtering */
+.kotak-filter{
+    padding-bottom: 10px;
+    border: 1px #ccc solid;
+    margin-bottom: 30px;
+    border-radius: 3px;
 }
