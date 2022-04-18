@@ -3,9 +3,6 @@
 namespace App\Http\Controllers\Main;
 
 use App\Http\Controllers\Controller;
-use App\Models\Tender;
-use App\Models\Quote;
-use Carbon\Carbon;
 
 class MainController extends Controller
 {
