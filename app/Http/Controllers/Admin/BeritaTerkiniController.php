@@ -49,7 +49,6 @@ class BeritaTerkiniController extends Controller
     {
         $validateData = $request->validate([
             'title_my' => 'required',
-            'excerpt_my' => 'required',
             'content_my' => 'required',
             'status_id' => 'required',
         ]);
@@ -73,7 +72,6 @@ class BeritaTerkiniController extends Controller
         $validateData['show'] = $request->show;
         $validateData['hide'] = $request->hide;
         $validateData['title_en'] = $request['title_en'];
-        $validateData['excerpt_en'] = $request['excerpt_en'];
         $validateData['content_en'] = $request['content_en'];
         $validateData['gambarHadapan'] = $gambarName;
 
@@ -122,7 +120,6 @@ class BeritaTerkiniController extends Controller
     {
         $validateData = $request->validate([
             'title_my' => 'required',
-            'excerpt_my' => 'required',
             'content_my' => 'required',
             'status_id' => 'required',
         ]);
@@ -153,11 +150,9 @@ class BeritaTerkiniController extends Controller
         $validateData['show'] = $request->show;
         $validateData['hide'] = $request->hide;
         $validateData['title_en'] = $request['title_en'];
-        $validateData['excerpt_en'] = $request['excerpt_en'];
         $validateData['content_en'] = $request['content_en'];
 
         BeritaTerkini::where('id', $beritaTerkini->id)->update($validateData);
-
 
         return redirect('/spsm/admin/berita_terkini')->with('success', 'Satu berita telah berjaya diubah');
     }

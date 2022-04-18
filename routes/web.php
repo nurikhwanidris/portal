@@ -20,6 +20,7 @@ use App\Http\Controllers\Admin\MaklumBalasController;
 use App\Http\Controllers\Admin\PegawaiController;
 use App\Http\Controllers\Admin\PekelilingController;
 use App\Http\Controllers\Admin\PiagamPelangganController;
+use App\Http\Controllers\Admin\TransaksiController;
 use App\Http\Controllers\Main\MainController;
 use Illuminate\Support\Facades\Route;
 
@@ -153,6 +154,9 @@ Route::put('/spsm/admin/buletingis/{update}',[GisController::class, 'change'])->
 
 // Delete GIS route
 Route::delete('/spsm/admin/buletingis/{delete}', [GisController::class, 'delete'])->middleware('auth');
+
+// Transaksi route
+Route::resource('/spsm/admin/transaksi', TransaksiController::class)->middleware('auth');
 
 /*
 |--------------------------------------------------------------------------

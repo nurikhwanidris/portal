@@ -18,8 +18,6 @@ class CreatePengumumenTable extends Migration
             $table->foreignId('user_id')->constrained();
             $table->string('title_my');
             $table->string('title_en')->nullable();
-            $table->string('excerpt_my');
-            $table->string('excerpt_en')->nullable();
             $table->text('content_my');
             $table->text('content_en')->nullable();
             $table->dateTime('show')->nullable();
