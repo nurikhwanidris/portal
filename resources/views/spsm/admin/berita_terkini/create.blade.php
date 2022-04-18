@@ -50,34 +50,6 @@
                                     </div>
                                 </div>
                                 <div class="row mb-3">
-                                    <label for="" class="col-sm-2 col-form-label col-form-label-sm">Excerpt MY</label>
-                                    <span class="col-sm-1">:</span>
-                                    <div class="col-sm-9">
-                                        <input type="text" name="excerpt_my" id=""
-                                            class="form-control form-control-sm @error('excerpt_my') is-invalid @enderror"
-                                            placeholder="Masukan petikan dari berita">
-                                        @error('excerpt_my')
-                                            <div class="invalid-feedback">
-                                                {{ $message }}
-                                            </div>
-                                        @enderror
-                                    </div>
-                                </div>
-                                <div class="row mb-3">
-                                    <label for="" class="col-sm-2 col-form-label col-form-label-sm">Excerpt EN</label>
-                                    <span class="col-sm-1">:</span>
-                                    <div class="col-sm-9">
-                                        <input type="text" name="excerpt_en" id=""
-                                            class="form-control form-control-sm @error('excerpt_en') is-invalid @enderror"
-                                            placeholder="Insert excerpt from the news">
-                                        @error('excerpt_en')
-                                            <div class="invalid-feedback">
-                                                {{ $message }}
-                                            </div>
-                                        @enderror
-                                    </div>
-                                </div>
-                                <div class="row mb-3">
                                     <label for="" class="col-sm-2 col-form-label col-form-label-sm">Gambar Hadapan</label>
                                     <span class="col-sm-1">:</span>
                                     <div class="col-sm-3">

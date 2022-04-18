@@ -4,13 +4,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Str;
 
-class BeritaTerkini extends Model
+class Transaksi extends Model
 {
     use HasFactory;
-
-    const EXCERPT_LENGTH = 100;
 
     protected $guarded = ['id'];
 
@@ -19,14 +16,13 @@ class BeritaTerkini extends Model
         return $this->belongsTo(Status::class);
     }
 
-    public function excerptMy()
+    public function user()
     {
-        return Str::limit($this->content_my, self::EXCERPT_LENGTH);
+        return $this->belongsTo(User::class);
     }
 
-    public function excerptEn()
+    public function transaksi_category()
     {
-        return Str::limit($this->content_en, self::EXCERPT_LENGTH);
+        return $this->belongsTo(TransaksiCategory::class);
     }
-
 }

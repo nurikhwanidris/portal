@@ -570,6 +570,7 @@
                         </li>
                     </ul>
                 </li>
+                {{-- Maklum Bahas --}}
                 <li class="nav-item {{ request()->is('spsm/admin/maklum_balas/*') ? 'menu-open' : '' }}">
                     <a href="#" class="nav-link {{ request()->is('spsm/admin/maklum_balas/*') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-ticket-alt"></i>
@@ -587,6 +588,31 @@
                         </li>
                     </ul>
                 </li>
+                {{-- Transaksi --}}
+                <li class="nav-item {{ request()->is('spsm/admin/transaksi/*') ? 'menu-open' : '' }}">
+                    <a href="#" class="nav-link {{ request()->is('spsm/admin/transaksi/*') ? 'active' : '' }}">
+                        <i class="nav-icon fas fa-exchange-alt"></i>
+                        <p>
+                            Transaksi
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="/spsm/admin/transaksi/create" class="nav-link">
+                                <i class="fas fa-plus nav-icon"></i>
+                                <p>Tambah Transaksi</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/spsm/admin/transaksi/" class="nav-link">
+                                <i class="fas fa-list-alt nav-icon"></i>
+                                <p>Senarai Transaksi</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                {{-- Tetapan --}}
                 <li class="nav-header">Tetapan</li>
                 <li class="nav-item {{ request()->is('spsm/admin/settings/*') ? 'menu-open' : '' }}">
                     <a href="#" class="nav-link {{ request()->is('spsm/admin/settings/*') ? 'active' : '' }}">

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateBeritaTerkinisTable extends Migration
+class CreateTransaksiCategoriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,12 @@ class CreateBeritaTerkinisTable extends Migration
      */
     public function up()
     {
-        Schema::create('berita_terkinis', function (Blueprint $table) {
+        Schema::create('transaksi_categories', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained();
             $table->string('title_my');
-            $table->string('title_en')->nullable();
-            $table->string('gambarHadapan');
-            $table->text('content_my');
-            $table->text('content_en')->nullable();
-            $table->dateTime('show')->nullable();
-            $table->dateTime('hide')->nullable();
+            $table->string('title_en');
+            $table->smallInteger('sort_order');
             $table->smallInteger('status_id');
             $table->timestamps();
         });
@@ -35,6 +31,6 @@ class CreateBeritaTerkinisTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('berita_terkinis');
+        Schema::dropIfExists('transaksi_categories');
     }
 }

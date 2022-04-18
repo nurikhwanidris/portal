@@ -33,12 +33,16 @@
             @include('main.layouts.partials.mainvideo')
             <!-- Video - END -->
 
+            <!-- Pengumuman - START -->
+            @livewire('main.pengumuman')
+            <!-- Pengumuman - END -->
+
             <!-- Sidemenu - START -->
             @include('main.layouts.partials.switcher')
             <!-- Sidemenu - END -->
 
             <!-- Slider - START -->
-            @include('main.layouts.partials.slider')
+            @livewire('main.slider')
             <!-- Slider - END -->
 
             <!-- Pautan Info Semasa - START -->
