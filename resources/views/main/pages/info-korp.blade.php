@@ -13,22 +13,19 @@
 
     <!-- CSS & Script -->
     @include('main.layouts.partials.headerlink')
-
     @livewireStyles
 </head>
 
 <body data-plugin-page-transition>
     <div class="body">
         <!-- Header - Logo + Icons 4 + Search - START -->
-        @include('main.layouts.partials.header')
+        @include('main.layouts.partials.header-inner')
         <!-- Header - Logo + Icons 4 + Search - END -->
 
         <div role="main" class="main">
             <!-- Title Section - START -->
-            @include(
-                'main.layouts.partials.pages.info-korp.info-korp-title'
-            )
-            <!-- Title Section - END -->
+				@livewire('title.page-title')
+				<!-- Title Section - END -->
 
             <!-- Menu - START -->
             @include('main.layouts.partials.switcher')
@@ -36,17 +33,6 @@
 
 
             <div class="container" style="margin-bottom: 100px;">
-                <!-- Breadcrumb -->
-                <div class="row">
-                    <h5 class="text-1 font-weight-bolder">
-                        Laman Utama > Info Korporat > Mengenai Kami
-                    </h5>
-                </div>
-                <div class="row">
-                    <h2 class="font-weight-normal text-6">
-                        <strong class="text-title-strong">Mengenai</strong> JUPEM
-                    </h2>
-                </div>
                 <div class="row">
                     <!-- Icon Row - START -->
                     <div class="featured-boxes featured-boxes-style-3 featured-boxes-flat">

@@ -23,7 +23,7 @@
 
 			<div role="main" class="main">
 				<!-- Title Section - START -->
-				@livewire('orang-awam.awam-title')
+				@livewire('title.page-title')
 				<!-- Title Section - END -->
 
 				<!-- Menu - START -->
