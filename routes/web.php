@@ -167,8 +167,11 @@ Route::resource('/spsm/admin/transaksi', TransaksiController::class)->middleware
 // Index Route
 Route::get('/', [MainController::class, 'index']);
 
+// Info Korp route
 Route::get('/info-korp', [MainController::class, 'infoKorp']);
 
+// Orang Awam Route
 Route::get('/awam', [MainController::class, 'orangAwam']);
 
+// Page Element Route
 Route::get('/page-element', [MainController::class, 'pageElement']);
