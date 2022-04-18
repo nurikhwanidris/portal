@@ -29,3 +29,4 @@ class MainController extends Controller
     {
         return view('main.pages.page-element');
     }
+}
