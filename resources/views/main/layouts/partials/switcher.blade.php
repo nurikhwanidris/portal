@@ -1,7 +1,7 @@
 <div id="mySidenav" class="sidenav">
     <ul class="nav" id="mainNav">
         <li class="dropdown">
-            <a class="dropdown-item active" href="index-1.php">
+            <a class="dropdown-item active" href="index">
                 Laman Utama
             </a>
         </li>
@@ -82,7 +82,7 @@
             </ul>
         </li>
         <li class="dropdown">
-            <a class="dropdown-item dropdown-toggle" href="#">
+            <a class="dropdown-item dropdown-toggle" href="awam">
                 Orang Awam
             </a>
             <ul class="dropdown-menu">
@@ -144,7 +144,7 @@
         </a>
     </div>
     <div id="myDIV5">
-        <a id="empat" class="tepi-menu-awam gerak-khas" href="#" data-bs-toggle="tooltip" data-bs-animation="false"
+        <a id="empat" class="tepi-menu-awam gerak-khas" href="awam" data-bs-toggle="tooltip" data-bs-animation="false"
             data-bs-placement="right" title="">
             <i class="fas fa-users img-fluid icon-menu-tepi"></i>
             <div class="text-menu-tepi">Orang Awam</div>

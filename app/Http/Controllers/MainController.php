@@ -45,5 +45,10 @@ class MainController extends Controller
         return view('main.pages.orang-awam');
     }
 
+    public function pageElement()
+    {
+        return view('main.pages.page-element');
+    }
+
 }
 
