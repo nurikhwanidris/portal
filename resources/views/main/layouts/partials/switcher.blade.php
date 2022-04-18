@@ -82,7 +82,7 @@
             </ul>
         </li>
         <li class="dropdown">
-            <a class="dropdown-item dropdown-toggle" href="#">
+            <a class="dropdown-item dropdown-toggle" href="awam">
                 Orang Awam
             </a>
             <ul class="dropdown-menu">

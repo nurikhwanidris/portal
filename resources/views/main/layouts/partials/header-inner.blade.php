@@ -6,7 +6,7 @@
 				<div class="header-column">
 					<div class="header-row">
 						<div class="header-logo">
-							<a href="index-1.php">
+							<a href="index.php">
 								<img alt="Jata Negara" src="/main/img/logo-default/logo-default-208x100.png" class="logo-size">
 							</a>
 						</div>

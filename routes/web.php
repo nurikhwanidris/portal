@@ -170,3 +170,5 @@ Route::get('/', [MainController::class, 'index']);
 Route::get('/info-korp', [MainController::class, 'infoKorp']);
 
 Route::get('/awam', [MainController::class, 'orangAwam']);
+
+Route::get('/page-element', [MainController::class, 'pageElement']);

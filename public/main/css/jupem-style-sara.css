@@ -1166,3 +1166,10 @@ legend.butang-tepi a:hover{
 .tinggi {
     font-size: 12px;
 }
+/*Filtering */
+.kotak-filter{
+    padding-bottom: 10px;
+    border: 1px #ccc solid;
+    margin-bottom: 30px;
+    border-radius: 3px;
+}
