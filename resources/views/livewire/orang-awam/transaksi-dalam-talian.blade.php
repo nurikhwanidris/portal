@@ -37,7 +37,7 @@
                         <div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
                             <div class="counter counter-primary">
                                 <i class="fas fa-layer-group"></i>
-                                <strong class="font-weight-bold">{!! $kadaster !!}</strong>
+                                <strong class="font-weight-bold">{{ $kadaster }}</strong>
                                 <label class="font-weight-bold">Kadaster</label>
                             </div>
                         </div>
