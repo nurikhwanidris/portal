@@ -140,7 +140,7 @@
     text-shadow: 0px 0px 5px #777;
     line-height: 1.2em;
 }
-}
+
 
 .text-tajuk-column
 {
@@ -1165,6 +1165,9 @@ legend.butang-tepi a:hover{
 
 .tinggi {
     font-size: 12px;
+}
+.margin-content-2{
+    margin-top: 20px;
 }
 /*Filtering */
 .kotak-filter{
