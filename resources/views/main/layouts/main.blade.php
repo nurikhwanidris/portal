@@ -53,9 +53,9 @@
             @include('main.layouts.partials.pp')
             <!-- Pautan P & P - END -->
 
-            <!-- Map Online Trans - START -->
-            @include('main.layouts.partials.onlinetrans')
-            <!-- Map Online Trans - END -->
+            <!-- Online Trans - START -->
+            @livewire('orang-awam.transaksi-dalam-talian')
+            <!-- Online Trans - END -->
 
             <!-- Map Hubungi Kami - START -->
             @include('main.layouts.partials.darkgreen')
