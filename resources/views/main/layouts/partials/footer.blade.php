@@ -39,7 +39,7 @@
                         Jumaat
                     </div>
                     <div class="flex-child text-kaki-atas-3">
-                        45 pg - 12.00 t/hari<br>
+                        7.45 pg - 12.00 t/hari<br>
                         2.45 ptg - 4.45 ptg
                     </div>
                     <br><br>
