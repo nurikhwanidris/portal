@@ -37,28 +37,28 @@
                         <div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
                             <div class="counter counter-primary">
                                 <i class="fas fa-layer-group"></i>
-                                <strong class="font-weight-bold">{{ $kadaster }}</strong>
+                                <strong class="font-weight-bold" data-to="{{ $kadaster }}">0</strong>
                                 <label class="font-weight-bold">Kadaster</label>
                             </div>
                         </div>
                         <div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
                             <div class="counter counter-secondary">
                                 <i class="fas fa-map"></i>
-                                <strong data-to="277">0</strong>
+                                <strong data-to="{{ $pemetaan }}">0</strong>
                                 <label class="font-weight-bold">Pemetaan</label>
                             </div>
                         </div>
                         <div class="col-sm-6 col-lg-3 mb-4 mb-sm-0">
                             <div class="counter counter-tertiary">
                                 <i class="fas fa-globe"></i>
-                                <strong data-to="668">0</strong>
+                                <strong data-to="{{ $geodesi }}">0</strong>
                                 <label class="font-weight-bold">Geodesi</label>
                             </div>
                         </div>
                         <div class="col-sm-6 col-lg-3">
                             <div class="counter counter-quinary">
                                 <i class="fas fas fa-street-view"></i>
-                                <strong data-to="73">0</strong>
+                                <strong data-to="{{ $lesen }}">0</strong>
                                 <label class="font-weight-bold">Permohonan Lesen Digital</label>
                             </div>
                         </div>
@@ -69,28 +69,28 @@
                         <div class="col-sm-6 col-lg-3">
                             <div class="counter counter-primary">
                                 <i class="fas fa-satellite"></i>
-                                <strong data-to="32">0</strong>
+                                <strong data-to="{{ $rtk }}">0</strong>
                                 <label class="font-weight-bold">Langganan RTK</label>
                             </div>
                         </div>
                         <div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
                             <div class="counter counter-secondary">
                                 <i class="fas  fa-map-pin"></i>
-                                <strong data-to="52">0</strong>
+                                <strong data-to="{{ $geodetik }}">0</strong>
                                 <label class="font-weight-bold">Perkhidmatan Geodetik</label>
                             </div>
                         </div>
                         <div class="col-sm-6 col-lg-3 mb-4 mb-sm-0">
                             <div class="counter counter-tertiary">
                                 <i class="fas fa-certificate"></i>
-                                <strong data-to="7">0</strong>
+                                <strong data-to="{{ $dataTerhad }}">0</strong>
                                 <label class="font-weight-bold">Permohonan Data Terhad</label>
                             </div>
                         </div>
                         <div class="col-sm-6 col-lg-3">
                             <div class="counter counter-quinary">
                                 <i class="fas fa-server"></i>
-                                <strong data-to="37">0</strong>
+                                <strong data-to="{{ $permit }}">0</strong>
                                 <label class="font-weight-bold">Permohonan Permit</label>
                             </div>
                         </div>
