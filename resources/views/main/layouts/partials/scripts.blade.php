@@ -53,5 +53,7 @@
     $('#example').DataTable( {
         "pagingType": "full_numbers"
     } );
+    // $('table').dataTable({searching: false, paging: false, info: false});
+    // $('table').dataTable({dom: 'lrt'});
 } );
 </script>

@@ -324,7 +324,7 @@
                         <br>
                         <hr class="solid">
                         <h4 class="text-light bg-color-primary">LIST - TEXT</h4>
-
+                        List 1
                         <!-- LIST TEXT - START -->
                         <div class="row align-items-center py-5 appear-animation" data-appear-animation="fadeInRightShorter" style="padding-top:0 !important;">
                             <div class="col-md-12 pe-md-5 mb-5 mb-md-0">
@@ -336,6 +336,32 @@
                             </div>
                         </div>
                         <!-- LIST TEXT - END -->
+
+                        List 1 Reverse
+                        <!-- LIST TEXT - START -->
+                        <div class="row align-items-center py-5 appear-animation" data-appear-animation="fadeInRightShorter" style="padding-top:0 !important;">
+                            <div class="col-md-12 pe-md-5 mb-5 mb-md-0">
+                                <ul class="list list-icons list-icons-style-2 list-tertiary list-icons-sm">
+                                    <li><i class="fas fa-check"></i><a href="#">1</a></li>
+                                    <li><i class="fas fa-check"></i><a href="#">2</a></li>
+                                    <li><i class="fas fa-check"></i><a href="#">3</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- LIST TEXT - END -->
+
+                        List 2 - Number
+                        <div class="row align-items-center py-5 appear-animation" data-appear-animation="fadeInRightShorter" style="padding-top:0 !important;">
+                            <div class="col-md-12 pe-md-5 mb-5 mb-md-0">
+                                <ol class="list list-ordened list-ordened-style-2 list-tertiary list-icons-sm">
+                                    <li>Lorem ipsum</li>
+                                    <li>Consectetur adipi</li>
+                                    <li>Integer molestie</li>
+                                    <li>Facilisis in pre</li>
+                                    <li>Faucibus porta la</li>
+                                </ol>
+                            </div>
+                        </div>
 
                         <!-- ============== -->
                         <br>
@@ -1533,10 +1559,9 @@
                         <table id="example"  class="table table-striped table-hover" style="width:100%">
                             <thead>
                                 <tr>
-                                    <th>#</th>
-                                    <th>TITLE</th>
-                                    <th>TITLE</th>
-                                    <th>TITLE</th>
+                                    <th class="table-title-jupem">#</th>
+                                    <th class="table-title-jupem">TAJUK 1</th>
+                                    <th class="table-title-jupem">FORMAT</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -1544,17 +1569,8 @@
                                     <td>autoincrement</td>
                                     <td>text</td>
                                     <td>text</td>
-                                    <td>text</td>
                                 </tr>
                             </tbody>
-                            {{-- <tfoot>
-                                <tr>
-                                    <th>#</th>
-                                    <th>TITLE</th>
-                                    <th>TITLE</th>
-                                    <th>TITLE</th>
-                                </tr>
-                            </tfoot> --}}
                         </table>
                         <!-- Datatable - END -->
 

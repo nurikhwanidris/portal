@@ -25,4 +25,28 @@
         </div>
     </div>
     <!-- Filtering - END -->
+    <!-- Datatable - START -->
+    <table id="example"  class="table table-striped table-hover" style="width:100%">
+        <thead>
+            <tr>
+                <th class="table-title-jupem">#</th>
+                <th class="table-title-jupem">TARIKH PERTUKARAN</th>
+                <th class="table-title-jupem">NAMA PEGAWAI</th>
+                <th class="table-title-jupem">DARI</th>
+                <th class="table-title-jupem">KE</th>
+                <th class="table-title-jupem">STATUS PERTUKARAN</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>autoincrement</td>
+                <td>text</td>
+                <td>text</td>
+                <td>text</td>
+                <td>text</td>
+                <td>text</td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- Datatable - END -->
 </div>

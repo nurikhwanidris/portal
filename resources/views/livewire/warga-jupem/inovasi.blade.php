@@ -1,3 +1,9 @@
 <div>
-    {{-- The best athlete wants his opponent at his best. --}}
+    <!-- PAGE TITLE - START-->
+    <div class="row">
+        <div class="col">
+            <div class="text-title-semasa-11" style="padding-bottom: 20px;">Inovasi Sektor Awam</div>
+        </div>
+    </div>
+    <!-- PAGE TITLE - END-->
 </div>
