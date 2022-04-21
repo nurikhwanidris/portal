@@ -1046,7 +1046,7 @@
                             </div>
                         </div>
                         <br><strong>Style 3</strong><br>
-                        <!-- Filtering - START -->
+                        <!-- FILTERING - START -->
                         <div class="row kotak-filter">
                             <div class="form-group col-lg-6">
                                 <label class="form-label mb-1 text-2">Keyword</label>
@@ -1064,7 +1064,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Filtering - END -->
+                        <!-- FILTERING - END -->
 
                         <!-- ============== -->
                         <br>
