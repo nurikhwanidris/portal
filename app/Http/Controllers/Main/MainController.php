@@ -29,4 +29,10 @@ class MainController extends Controller
     {
         return view('main.pages.page-element');
     }
+
+    // Warga Jupem Controller
+    public function wargaJupem()
+    {
+        return view('main.pages.warga-jupem');
+    }
 }
