@@ -102,7 +102,9 @@
 								@livewire('warga-jupem.dasar-pekeliling')
 							</div>
 							<div class="tab-pane tab-pane-navigation" id="tab-10">
-								@livewire('warga-jupem.dokumen-jabatan')
+								{{-- @livewire('warga-jupem.dokumen-jabatan') --}}
+                                {{-- sama dengan orang awam > muat-turun --}}
+                                @livewire('orang-awam.muat-turun')
 							</div>
 						</div>
 					</div>
