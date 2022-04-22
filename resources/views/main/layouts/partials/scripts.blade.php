@@ -40,8 +40,8 @@
         $.fn.bootstrapDP = $.fn.datepicker.noConflict();
     }
 </script>
-<script src="/main/vendor/jquery-ui/jquery-ui.js"></script>
-<script src="/main/vendor/jqueryui-touch-punch/jquery.ui.touch-punch.js"></script>
+{{-- <script src="/main/vendor/jquery-ui/jquery-ui.js"></script> --}}
+{{-- <script src="/main/vendor/jqueryui-touch-punch/jquery.ui.touch-punch.js"></script> --}}
 
 <!-- Script Pagination -->
 {{-- <script src="/main/js/jquery-bootpag.js"></script> --}}
@@ -50,8 +50,8 @@
 <script src="/main/js/jquery.datatables.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function() {
-    $('#example').DataTable( {
-        "pagingType": "full_numbers"
-    } );
-} );
+        $('#example').DataTable({
+            "pagingType": "full_numbers"
+        });
+    });
 </script>
