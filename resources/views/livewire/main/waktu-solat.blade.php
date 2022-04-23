@@ -115,8 +115,8 @@
                         <option value="55">Zon 8 - Kuching, Bau, Lundu,Sematan</option>
                     </optgroup>
                     <optgroup label="Selangor">
-                        <option value="22">Gombak,H.Selangor,Rawang,H.Langat,Sepang,Petaling,S.Alam</option>
-                        <option value="24">Klang, Kuala Langat</option>
+                        <option value="22">Gombak, Hulu Selangor, Rawang, Hulu Langat, Sepang, Petaling, Shah Alam
+                        </option>
                         <option value="23">Sabak Bernam, Kuala Selangor</option>
                     </optgroup>
                     <optgroup label="Terengganu">
