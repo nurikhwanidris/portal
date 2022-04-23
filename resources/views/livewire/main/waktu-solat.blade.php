@@ -117,7 +117,7 @@
                     <optgroup label="Selangor">
                         <option value="22">Gombak, Hulu Selangor, Rawang, Hulu Langat, Sepang, Petaling, Shah Alam
                         </option>
-                        <option value="23">Sabak Bernam, Kuala Selangor</option>
+                        <option value="23">Sabak Bernam, Kuala Selangor, Klang, Kuala Langat</option>
                     </optgroup>
                     <optgroup label="Terengganu">
                         <option value="18">Kuala Terengganu, Marang</option>
