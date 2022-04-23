@@ -3,13 +3,18 @@
 namespace App\Http\Controllers\Main;
 
 use App\Http\Controllers\Controller;
+use App\Models\Visitor;
+use Illuminate\Support\Facades\DB;
 
 class MainController extends Controller
 {
     // Index controller
     public function index()
     {
-        return view('main.index');
+        return view('main.index',[
+            'counter' => Visitor::whereMonth('date', '=', now()->format('m'))->get()->count(),
+            'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first()
+        ]);
     }
 
     // Info Korporat controller
@@ -18,7 +23,7 @@ class MainController extends Controller
         return view('main.pages.info-korp');
     }
 
-    // Orang Awam controller
+    // Orang Awam controller`
     public function orangAwam()
     {
         return view('main.pages.orang-awam');

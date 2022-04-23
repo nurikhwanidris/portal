@@ -7,10 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 use App\Models\User;
 use App\Models\Status;
 use Illuminate\Support\Str;
+use LdapRecord\Laravel\Events\Loggable;
 
 class Pengumuman extends Model
 {
-    use HasFactory;
+    use HasFactory, Loggable;
 
     const EXCERPT_LENGTH = 100;
 
