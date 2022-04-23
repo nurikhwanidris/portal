@@ -1045,7 +1045,46 @@
                                 </div>
                             </div>
                         </div>
+
                         <br><strong>Style 3</strong><br>
+                        <div class="row">
+                            <div class="form-group col">
+                                <div class="form-check form-check-inline">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="radio" name="radios" data-msg-required="Please select at least one option." id="tabContent9Radio1" value="option1" required> Option 1
+                                    </label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="radio" name="radios" data-msg-required="Please select at least one option." id="tabContent9Radio2" value="option2" required> Option 2
+                                    </label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="radio" name="radios" data-msg-required="Please select at least one option." id="tabContent9Radio3" value="option3" required> Option 3
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col">
+                                <label class="form-label mb-1 text-2">Message</label>
+                                <textarea maxlength="5000" data-msg-required="Please enter your message." rows="8" class="form-control text-3 h-auto py-2" name="message" required></textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                              <div class="form-group col">
+                                <div class="form-check">
+                                      <input class="form-check-input" type="checkbox" value="" name="agree" id="tabContent9Checkbox" data-msg-required="You must agree before submiting." required>
+                                      <label class="form-check-label" for="tabContent9Checkbox">
+                                        Agree to terms and conditions
+                                      </label>
+                                   </div>
+                              </div>
+                          </div>
+
+
+                          <br><strong>Style 4</strong><br>
                         <!-- FILTERING - START -->
                         <div class="row kotak-filter">
                             <div class="form-group col-lg-6">
@@ -1617,6 +1656,73 @@
                         </div>
                         <!-- Login - END -->
 
+                        <!-- ============== -->
+                        <br>
+                        <hr class="solid">
+                        <h4 class="text-light bg-color-primary">TAB STYLE 3</h4>
+                        <!-- TAB STYLE 3 - START -->
+                        <div class="row">
+                            <div class="col">
+                                <div class="tabs tabs-bottom tabs-center tabs-simple">
+                                    <ul class="nav nav-tabs">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" href="#tabsNavigationSimpleIcons1" data-bs-toggle="tab">
+                                                <span class="featured-boxes featured-boxes-style-6 p-0 m-0">
+                                                    <span class="featured-box featured-box-primary featured-box-effect-6 p-0 m-0">
+                                                        <span class="box-content p-0 m-0">
+                                                            <i class="icon-featured fas fa-user"></i>
+                                                        </span>
+                                                    </span>
+                                                </span>
+                                                <p class="mb-0 pb-0">UMUM</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#tabsNavigationSimpleIcons2" data-bs-toggle="tab">
+                                                <span class="featured-boxes featured-boxes-style-6 p-0 m-0">
+                                                    <span class="featured-box featured-box-primary featured-box-effect-6 p-0 m-0">
+                                                        <span class="box-content p-0 m-0">
+                                                            <i class="icon-featured fas fa-file"></i>
+                                                        </span>
+                                                    </span>
+                                                </span>
+                                                <p class="mb-0 pb-0">PEMETAAN</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#tabsNavigationSimpleIcons3" data-bs-toggle="tab">
+                                                <span class="featured-boxes featured-boxes-style-6 p-0 m-0">
+                                                    <span class="featured-box featured-box-primary featured-box-effect-6 p-0 m-0">
+                                                        <span class="box-content p-0 m-0">
+                                                            <i class="icon-featured fab fa-google-plus-g"></i>
+                                                        </span>
+                                                    </span>
+                                                </span>
+                                                <p class="mb-0 pb-0">KADASTER</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="tabsNavigationSimpleIcons1">
+                                            <div class="text-center">
+                                                123
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane" id="tabsNavigationSimpleIcons2">
+                                            <div class="text-center">
+                                                456
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane" id="tabsNavigationSimpleIcons3">
+                                            <div class="text-center">
+                                                789
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- TAB STYLE 3 - END -->
 
 
 

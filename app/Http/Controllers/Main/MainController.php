@@ -35,4 +35,10 @@ class MainController extends Controller
     {
         return view('main.pages.warga-jupem');
     }
+
+    // FAQ Controller
+    public function faq()
+    {
+        return view('main.pages.faq');
+    }
 }
