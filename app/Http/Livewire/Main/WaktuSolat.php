@@ -5,9 +5,11 @@ namespace App\Http\Livewire\Main;
 use Illuminate\Support\Facades\DB;
 use Livewire\Component;
 use Illuminate\Support\Facades\Http;
-
 class WaktuSolat extends Component
 {
+
+    public $zone = 57;
+
     public function tarikhHijrah()
     {
         $response = Http::get('http://api.aladhan.com/v1/gToH?date='.date('d-m-Y'));
@@ -15,19 +17,24 @@ class WaktuSolat extends Component
         return $hijri->data->hijri->day.' '.$hijri->data->hijri->month->en.' '.$hijri->data->hijri->year;
     }
 
-    public function waktuSolat($zon_id = 57)
+    public function waktuSolat()
     {
-        $bulan_today = date('n');
+        if ($zone = $this->zone) {
+            $monthNow = date('n');
 
-        $tarikh_full = date('n')."/".date('j')."/".date('Y');
+            $fullDate = date('n')."/".date('j')."/".date('Y');
 
-        $query = DB::table('tbl_prayer_data')
-        ->where('ZON_ID', $zon_id)
-        ->where('KOD_BULAN', $bulan_today)
-        ->where('TARIKH', $tarikh_full)
-        ->first();
+            $query = DB::table('tbl_prayer_data')
+            ->join('tbl_prayer_zone_data', 'tbl_prayer_data.ZON_ID', '=', 'tbl_prayer_zone_data.ZONE_ID')
+            ->select('tbl_prayer_data.*', 'tbl_prayer_zone_data.ZONE_NAME')
+            ->where([
+                ['tbl_prayer_data.ZON_ID', $zone],
+                ['tbl_prayer_data.KOD_BULAN', $monthNow],
+                ['tbl_prayer_data.TARIKH', $fullDate]
+            ])->first();
 
-        return $query;
+            return $query;
+        }
     }
 
     public function render()

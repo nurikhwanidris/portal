@@ -64,13 +64,15 @@
                 <div class="row mb-4 counters counters-sm text-light">
                     <div class="col-sm-6 col-lg-4 mb-4 mb-lg-0">
                         <div class="counter" style="text-align: left !important;">
-                            <strong data-to="40000" data-append="+" style="font-size: 30px !important;">0</strong>
-                            <label>Januari 2022</label>
+                            <strong data-to="{{ $counter }}" data-append="+"
+                                style="font-size: 30px !important;">0</strong>
+                            <label>{{ now()->format('F') }}</label>
                         </div>
                     </div>
                 </div>
                 <div class="text-kaki-atas-2">Kemaskini:</div>
-                <p class="text-8 text-color-light font-weight-bold">31.01.2022</p>
+                <p class="text-8 text-color-light font-weight-bold">
+                    {{ date('d-m-Y', strtotime($activity->log_date)) }}</p>
                 <!-- <div class="text-kaki-atas-2">Pengiktirafan:</div> -->
                 <h5 class="text-kaki-atas-1 mb-3 pb-1">Pengiktirafan</h5>
                 <img src="/main/img/iso/iso-label-1.jpg" data-thumb="/main/img/iso/iso-label-1.jpg" alt="ISO 1"
