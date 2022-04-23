@@ -54,7 +54,7 @@
 											<a class="nav-link" href="#tab-5" data-bs-toggle="tab">Kertas Pembentangan</a>
 										</li>
 										<li class="nav-item">
-											<a class="nav-link" href="#tab-6" data-bs-toggle="tab">Polisi, Blanjawan dan Dokumen Sah</a>
+											<a class="nav-link" href="#tab-6" data-bs-toggle="tab">Polisi, Belanjawan dan Dokumen Sah</a>
 										</li>
 										<li class="nav-item">
 											<a class="nav-link" href="#tab-7" data-bs-toggle="tab">Dokumen Persijilan & Pengiktirafan</a>
@@ -102,7 +102,9 @@
 								@livewire('warga-jupem.dasar-pekeliling')
 							</div>
 							<div class="tab-pane tab-pane-navigation" id="tab-10">
-								@livewire('warga-jupem.dokumen-jabatan')
+								{{-- @livewire('warga-jupem.dokumen-jabatan') --}}
+                                {{-- sama dengan orang awam > muat-turun --}}
+                                @livewire('orang-awam.muat-turun')
 							</div>
 						</div>
 					</div>

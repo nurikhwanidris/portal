@@ -16,9 +16,9 @@
         <table id="example"  class="table table-striped table-hover" style="width:100%">
             <thead>
                 <tr>
-                    <th>#</th>
-                    <th>TAJUK</th>
-                    <th>FORMAT</th>
+                    <th class="table-title-jupem">#</th>
+                    <th class="table-title-jupem">TAJUK</th>
+                    <th class="table-title-jupem">FORMAT</th>
                 </tr>
             </thead>
             <tbody>
