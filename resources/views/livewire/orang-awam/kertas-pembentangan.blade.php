@@ -13,12 +13,8 @@
 			<th>
 				#
 			</th>
-			<th>
-				TAJUK
-			</th>
-			<th>
-				DIBENTANGKAN OLEH
-			</th>
+			<th class="table-title-jupem">TAJUK</th>
+			<th class="table-title-jupem">DIBENTANGKAN OLEH</th>
 		</tr>
 	</thead>
 	<tbody>

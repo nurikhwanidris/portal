@@ -43,10 +43,10 @@
                                 <table id="example"  class="table table-striped table-hover" style="width:100%">
                                     <thead>
                                         <tr>
-                                            <th>#</th>
-                                            <th>TITLE</th>
-                                            <th>TITLE</th>
-                                            <th>TITLE</th>
+                                            <th class="table-title-jupem">#</th>
+                                            <th class="table-title-jupem">TITLE</th>
+                                            <th class="table-title-jupem">TITLE</th>
+                                            <th class="table-title-jupem">TITLE</th>
                                         </tr>
                                     </thead>
                                     <tbody>

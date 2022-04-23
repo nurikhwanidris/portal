@@ -50,8 +50,10 @@
 <script src="/main/js/jquery.datatables.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function() {
-        $('#example').DataTable({
-            "pagingType": "full_numbers"
-        });
-    });
+    $('#example').DataTable( {
+        "pagingType": "full_numbers"
+    } );
+    // $('table').dataTable({searching: false, paging: false, info: false});
+    // $('table').dataTable({dom: 'lrt'});
+} );
 </script>

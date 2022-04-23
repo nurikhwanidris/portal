@@ -131,7 +131,7 @@
                                     <span class="toggle-title text-4">
                                         <div class="accordion-jupem-negeri">11111111111111111111111111</div>
                                     </span>
-                                    <div class="toggle-content">
+                                    <div class="toggle-content margin-content-2">
                                         111
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                                     </div>
@@ -324,7 +324,7 @@
                         <br>
                         <hr class="solid">
                         <h4 class="text-light bg-color-primary">LIST - TEXT</h4>
-
+                        List 1
                         <!-- LIST TEXT - START -->
                         <div class="row align-items-center py-5 appear-animation" data-appear-animation="fadeInRightShorter" style="padding-top:0 !important;">
                             <div class="col-md-12 pe-md-5 mb-5 mb-md-0">
@@ -336,6 +336,32 @@
                             </div>
                         </div>
                         <!-- LIST TEXT - END -->
+
+                        List 1 Reverse
+                        <!-- LIST TEXT - START -->
+                        <div class="row align-items-center py-5 appear-animation" data-appear-animation="fadeInRightShorter" style="padding-top:0 !important;">
+                            <div class="col-md-12 pe-md-5 mb-5 mb-md-0">
+                                <ul class="list list-icons list-icons-style-2 list-tertiary list-icons-sm">
+                                    <li><i class="fas fa-check"></i><a href="#">1</a></li>
+                                    <li><i class="fas fa-check"></i><a href="#">2</a></li>
+                                    <li><i class="fas fa-check"></i><a href="#">3</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- LIST TEXT - END -->
+
+                        List 2 - Number
+                        <div class="row align-items-center py-5 appear-animation" data-appear-animation="fadeInRightShorter" style="padding-top:0 !important;">
+                            <div class="col-md-12 pe-md-5 mb-5 mb-md-0">
+                                <ol class="list list-ordened list-ordened-style-2 list-tertiary list-icons-sm">
+                                    <li>Lorem ipsum</li>
+                                    <li>Consectetur adipi</li>
+                                    <li>Integer molestie</li>
+                                    <li>Facilisis in pre</li>
+                                    <li>Faucibus porta la</li>
+                                </ol>
+                            </div>
+                        </div>
 
                         <!-- ============== -->
                         <br>
@@ -1019,7 +1045,47 @@
                                 </div>
                             </div>
                         </div>
+
                         <br><strong>Style 3</strong><br>
+                        <div class="row">
+                            <div class="form-group col">
+                                <div class="form-check form-check-inline">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="radio" name="radios" data-msg-required="Please select at least one option." id="tabContent9Radio1" value="option1" required> Option 1
+                                    </label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="radio" name="radios" data-msg-required="Please select at least one option." id="tabContent9Radio2" value="option2" required> Option 2
+                                    </label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="radio" name="radios" data-msg-required="Please select at least one option." id="tabContent9Radio3" value="option3" required> Option 3
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col">
+                                <label class="form-label mb-1 text-2">Message</label>
+                                <textarea maxlength="5000" data-msg-required="Please enter your message." rows="8" class="form-control text-3 h-auto py-2" name="message" required></textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                              <div class="form-group col">
+                                <div class="form-check">
+                                      <input class="form-check-input" type="checkbox" value="" name="agree" id="tabContent9Checkbox" data-msg-required="You must agree before submiting." required>
+                                      <label class="form-check-label" for="tabContent9Checkbox">
+                                        Agree to terms and conditions
+                                      </label>
+                                   </div>
+                              </div>
+                          </div>
+
+
+                          <br><strong>Style 4</strong><br>
+                        <!-- FILTERING - START -->
                         <div class="row kotak-filter">
                             <div class="form-group col-lg-6">
                                 <label class="form-label mb-1 text-2">Keyword</label>
@@ -1037,6 +1103,7 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- FILTERING - END -->
 
                         <!-- ============== -->
                         <br>
@@ -1531,10 +1598,9 @@
                         <table id="example"  class="table table-striped table-hover" style="width:100%">
                             <thead>
                                 <tr>
-                                    <th>#</th>
-                                    <th>TITLE</th>
-                                    <th>TITLE</th>
-                                    <th>TITLE</th>
+                                    <th class="table-title-jupem">#</th>
+                                    <th class="table-title-jupem">TAJUK 1</th>
+                                    <th class="table-title-jupem">FORMAT</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -1542,19 +1608,125 @@
                                     <td>autoincrement</td>
                                     <td>text</td>
                                     <td>text</td>
-                                    <td>text</td>
                                 </tr>
                             </tbody>
-                            {{-- <tfoot>
-                                <tr>
-                                    <th>#</th>
-                                    <th>TITLE</th>
-                                    <th>TITLE</th>
-                                    <th>TITLE</th>
-                                </tr>
-                            </tfoot> --}}
                         </table>
                         <!-- Datatable - END -->
+
+                        <!-- ============== -->
+                        <br>
+                        <hr class="solid">
+                        <h4 class="text-light bg-color-primary">LOGIN FORM</h4>
+
+                        <!-- Login - START -->
+                        <div class="row justify-content-md-center">
+                            <div class="col-md-9">
+                                <div class="featured-box featured-box-primary text-start mt-0">
+                                    <div class="box-content">
+                                        <h4 class="color-primary font-weight-semibold text-4 text-uppercase mb-3">Sila Log Masuk</h4>
+                                        <form action="/" id="frmSignIn" method="post" class="needs-validation">
+                                            <div class="row">
+                                                <div class="form-group col">
+                                                    <label class="form-label">E-mail</label>
+                                                    <input type="text" name="username" value="" class="form-control form-control-lg" required>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="form-group col">
+                                                    <a class="float-end" href="#">(Lupa Password?)</a>
+                                                    <label class="form-label">Password</label>
+                                                    <input type="password" name="password" value="" class="form-control form-control-lg" required>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="form-group col-lg-6">
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" name="rememberme" class="custom-control-input" id="rememberme">
+                                                        <label class="custom-control-label text-2" for="rememberme">Remember Me</label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-lg-6">
+                                                    <input type="submit" value="Login" class="btn btn-primary btn-modern float-end" data-loading-text="Loading...">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Login - END -->
+
+                        <!-- ============== -->
+                        <br>
+                        <hr class="solid">
+                        <h4 class="text-light bg-color-primary">TAB STYLE 3</h4>
+                        <!-- TAB STYLE 3 - START -->
+                        <div class="row">
+                            <div class="col">
+                                <div class="tabs tabs-bottom tabs-center tabs-simple">
+                                    <ul class="nav nav-tabs">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" href="#tabsNavigationSimpleIcons1" data-bs-toggle="tab">
+                                                <span class="featured-boxes featured-boxes-style-6 p-0 m-0">
+                                                    <span class="featured-box featured-box-primary featured-box-effect-6 p-0 m-0">
+                                                        <span class="box-content p-0 m-0">
+                                                            <i class="icon-featured fas fa-user"></i>
+                                                        </span>
+                                                    </span>
+                                                </span>
+                                                <p class="mb-0 pb-0">UMUM</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#tabsNavigationSimpleIcons2" data-bs-toggle="tab">
+                                                <span class="featured-boxes featured-boxes-style-6 p-0 m-0">
+                                                    <span class="featured-box featured-box-primary featured-box-effect-6 p-0 m-0">
+                                                        <span class="box-content p-0 m-0">
+                                                            <i class="icon-featured fas fa-file"></i>
+                                                        </span>
+                                                    </span>
+                                                </span>
+                                                <p class="mb-0 pb-0">PEMETAAN</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#tabsNavigationSimpleIcons3" data-bs-toggle="tab">
+                                                <span class="featured-boxes featured-boxes-style-6 p-0 m-0">
+                                                    <span class="featured-box featured-box-primary featured-box-effect-6 p-0 m-0">
+                                                        <span class="box-content p-0 m-0">
+                                                            <i class="icon-featured fab fa-google-plus-g"></i>
+                                                        </span>
+                                                    </span>
+                                                </span>
+                                                <p class="mb-0 pb-0">KADASTER</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="tabsNavigationSimpleIcons1">
+                                            <div class="text-center">
+                                                123
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane" id="tabsNavigationSimpleIcons2">
+                                            <div class="text-center">
+                                                456
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane" id="tabsNavigationSimpleIcons3">
+                                            <div class="text-center">
+                                                789
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- TAB STYLE 3 - END -->
+
+
+
+
                         <br>
                     </div>
                 </div>

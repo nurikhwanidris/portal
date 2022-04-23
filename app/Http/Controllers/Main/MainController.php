@@ -43,4 +43,16 @@ class MainController extends Controller
             'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first()
         ]);
     }
+
+    // Warga Jupem Controller
+    public function wargaJupem()
+    {
+        return view('main.pages.warga-jupem');
+    }
+
+    // FAQ Controller
+    public function faq()
+    {
+        return view('main.pages.faq');
+    }
 }
