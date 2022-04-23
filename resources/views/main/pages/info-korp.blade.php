@@ -13,6 +13,8 @@
 
     <!-- CSS & Script -->
     @include('main.layouts.partials.headerlink')
+
+    {{-- Livewire --}}
     @livewireStyles
 </head>
 
@@ -23,9 +25,10 @@
         <!-- Header - Logo + Icons 4 + Search - END -->
 
         <div role="main" class="main">
+
             <!-- Title Section - START -->
-				@livewire('title.page-title')
-				<!-- Title Section - END -->
+            @livewire('title.page-title')
+            <!-- Title Section - END -->
 
             <!-- Menu - START -->
             @include('main.layouts.partials.switcher')

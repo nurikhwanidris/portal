@@ -8,6 +8,10 @@ class PageTitle extends Component
 {
     public function render()
     {
-        return view('livewire.title.page-title');
+        return view('livewire.title.page-title',[
+            'infoKorp-title' => 'Info Korporat',
+            'orangAwam-title' => 'Orang Awam',
+            'wargaJupem-title' => 'Warga Jupem',
+        ]);
     }
 }
