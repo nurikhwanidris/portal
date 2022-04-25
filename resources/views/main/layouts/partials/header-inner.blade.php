@@ -6,7 +6,7 @@
 				<div class="header-column">
 					<div class="header-row">
 						<div class="header-logo">
-							<a href="index.php">
+							<a href="/">
 								<img alt="Jata Negara" src="/main/img/logo-default/logo-default-208x100.png" class="logo-size">
 							</a>
 						</div>
@@ -29,7 +29,7 @@
 								<nav class="collapse">
 									<ul class="nav nav-pills" id="mainNav">
 										<li class="dropdown">
-											<a class="dropdown-item dropdown-toggle active" href="index.php">
+											<a class="dropdown-item dropdown-toggle active" href="faq">
 												<div class="center-icon">
 													<img alt="Soalan Lazim" data-change-src="/main/img/shortcut-icon/faq-small.png" src="/main/img/shortcut-icon/faq-small.png">
 													<div class="text-header-icon">Soalan Lazim</div>
@@ -37,7 +37,7 @@
 											</a>
 										</li>
 										<li class="dropdown dropdown-mega">
-											<a class="dropdown-item dropdown-toggle active" href="index.php">
+											<a class="dropdown-item dropdown-toggle active" href="#">
 												<div class="center-icon">
 													<img alt="Soalan Lazim" data-change-src="/main/img/shortcut-icon/faq-small.png" src="/main/img/shortcut-icon/hubungi-small.png">
 													<div class="text-header-icon">Hubungi Kami</div>
@@ -45,7 +45,7 @@
 											</a>
 										</li>
 										<li class="dropdown">
-											<a class="dropdown-item dropdown-toggle active" href="index.php">
+											<a class="dropdown-item dropdown-toggle active" href="#">
 												<div class="center-icon">
 													<img alt="Soalan Lazim" data-change-src="/main/img/shortcut-icon/faq-small.png" src="/main/img/shortcut-icon/maklumbalas-small.png">
 													<div class="text-header-icon">Aduan & Maklum Balas</div>
@@ -53,7 +53,7 @@
 											</a>
 										</li>
 										<li class="dropdown">
-											<a class="dropdown-item dropdown-toggle active" href="index.php">
+											<a class="dropdown-item dropdown-toggle active" href="sitemap">
 												<div class="center-icon">
 													<img alt="Soalan Lazim" data-change-src="/main/img/shortcut-icon/faq-small.png" src="/main/img/shortcut-icon/peta-small.png">
 													<div class="text-header-icon">Peta Laman</div>

@@ -337,7 +337,7 @@
                         </div>
                         <!-- LIST TEXT - END -->
 
-                        List 1 Reverse
+                        List 1 border
                         <!-- LIST TEXT - START -->
                         <div class="row align-items-center py-5 appear-animation" data-appear-animation="fadeInRightShorter" style="padding-top:0 !important;">
                             <div class="col-md-12 pe-md-5 mb-5 mb-md-0">
@@ -350,7 +350,26 @@
                         </div>
                         <!-- LIST TEXT - END -->
 
-                        List 2 - Number
+                        List 2 - Icon
+                        <!-- LIST TEXT - START -->
+                        {{-- <div class="row align-items-center py-5 appear-animation" data-appear-animation="fadeInRightShorter" style="padding-top:0 !important;">
+                            <div class="col-md-12 pe-md-5 mb-5 mb-md-0">
+                                <ul class="list list-icons list-icons-style-3 list-tertiary list-icons-sm">
+                                    <li><i class="fas fa-check"></i><a href="#">1</a></li>
+                                    <li><i class="fas fa-check"></i><a href="#">2</a></li>
+                                    <li><i class="fas fa-check"></i><a href="#">3</a></li>
+                                </ul>
+                            </div>
+                        </div> --}}
+                        <ul class="list list-icons">
+                            <li><i class="fas fa-file"></i> Sub Page</li>
+                            <ul class="list list-icons ul-subsub">
+                                <li><i class="fas fa-caret-right"></i> Sub Sub Page</li>
+                            </ul>
+                        </ul>
+                        <!-- LIST TEXT - END -->
+
+                        List 3 - Number
                         <div class="row align-items-center py-5 appear-animation" data-appear-animation="fadeInRightShorter" style="padding-top:0 !important;">
                             <div class="col-md-12 pe-md-5 mb-5 mb-md-0">
                                 <ol class="list list-ordened list-ordened-style-2 list-tertiary list-icons-sm">

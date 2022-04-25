@@ -178,5 +178,9 @@ Route::get('/page-element', [MainController::class, 'pageElement']);
 
 // Warga Jupem Route
 Route::get('/jupem', [MainController::class, 'wargaJupem']);
-// Warga Jupem Route
+
+// FAQ Jupem Route
 Route::get('/faq', [MainController::class, 'faq']);
+
+// Sitemap Jupem Route
+Route::get('/sitemap', [MainController::class, 'sitemap']);
