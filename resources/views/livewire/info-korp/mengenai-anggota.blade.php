@@ -20,9 +20,6 @@
                 data-option-key="filter">
                 <li class="nav-item active" data-option-value="*"><a class="nav-link text-1 text-uppercase active"
                         href="#">Semua Mantan</a></li>
-                <!-- <li class="nav-item" data-option-value=".tertinggi"><a class="nav-link text-1 text-uppercase" href="#">Pengurusan Tertinggi</a></li>
-   <li class="nav-item" data-option-value=".cio"><a class="nav-link text-1 text-uppercase" href="#">Ketua Pegawai Maklumat (CIO)</a></li>
-   <li class="nav-item" data-option-value=".menteri"><a class="nav-link text-1 text-uppercase" href="#">Maklumat Menteri & Timbalan Menteri</a></li> -->
                 <li class="nav-item" data-option-value=".mantan"><a class="nav-link text-1 text-uppercase"
                         href="#">Mantan Ketua Juruukur</a></li>
                 <li class="nav-item" data-option-value=".kp"><a class="nav-link text-1 text-uppercase"
@@ -37,7 +34,7 @@
                         <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
                             <span class="thumb-info-wrapper">
                                 <a href="#">
-                                    <img src="img/anggota/mantan/mantan-1.jpg" class="img-fluid" alt="">
+                                    <img src="main/img/anggota/mantan/mantan-1.jpg" class="img-fluid" alt="">
                                 </a>
                             </span>
                             <span class="thumb-info-caption">
@@ -64,7 +61,7 @@
                         <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
                             <span class="thumb-info-wrapper">
                                 <a href="#">
-                                    <img src="img/anggota/mantan/mantan-2.jpg" class="img-fluid" alt="">
+                                    <img src="main/img/anggota/mantan/mantan-2.jpg" class="img-fluid" alt="">
                                 </a>
                             </span>
                             <span class="thumb-info-caption">
@@ -91,7 +88,7 @@
                         <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
                             <span class="thumb-info-wrapper">
                                 <a href="#">
-                                    <img src="img/anggota/default.jpg" class="img-fluid" alt="">
+                                    <img src="main/img/anggota/default.jpg" class="img-fluid" alt="">
                                 </a>
                             </span>
                             <span class="thumb-info-caption">
@@ -118,7 +115,7 @@
                         <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
                             <span class="thumb-info-wrapper">
                                 <a href="#">
-                                    <img src="img/anggota/mantan/mantan-4.jpg" class="img-fluid" alt="">
+                                    <img src="main/img/anggota/mantan/mantan-4.jpg" class="img-fluid" alt="">
                                 </a>
                             </span>
                             <span class="thumb-info-caption">
@@ -145,7 +142,7 @@
                         <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
                             <span class="thumb-info-wrapper">
                                 <a href="#">
-                                    <img src="img/anggota/mantan/mantan-5.jpg" class="img-fluid" alt="">
+                                    <img src="main/img/anggota/mantan/mantan-5.jpg" class="img-fluid" alt="">
                                 </a>
                             </span>
                             <span class="thumb-info-caption">
@@ -172,7 +169,7 @@
                         <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
                             <span class="thumb-info-wrapper">
                                 <a href="#">
-                                    <img src="img/anggota/mantan/mantan-6.jpg" class="img-fluid" alt="">
+                                    <img src="main/img/anggota/mantan/mantan-6.jpg" class="img-fluid" alt="">
                                 </a>
                             </span>
                             <span class="thumb-info-caption">
@@ -199,7 +196,7 @@
                         <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
                             <span class="thumb-info-wrapper">
                                 <a href="#">
-                                    <img src="img/anggota/mantan/mantan-7.jpg" class="img-fluid" alt="">
+                                    <img src="main/img/anggota/mantan/mantan-7.jpg" class="img-fluid" alt="">
                                 </a>
                             </span>
                             <span class="thumb-info-caption">
@@ -226,7 +223,7 @@
                         <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
                             <span class="thumb-info-wrapper">
                                 <a href="#">
-                                    <img src="img/anggota/mantan/mantan-8.jpg" class="img-fluid" alt="">
+                                    <img src="main/img/anggota/mantan/mantan-8.jpg" class="img-fluid" alt="">
                                 </a>
                             </span>
                             <span class="thumb-info-caption">
@@ -253,7 +250,7 @@
                         <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
                             <span class="thumb-info-wrapper">
                                 <a href="#">
-                                    <img src="img/anggota/mantan/mantan-9.jpg" class="img-fluid" alt="">
+                                    <img src="main/img/anggota/mantan/mantan-9.jpg" class="img-fluid" alt="">
                                 </a>
                             </span>
                             <span class="thumb-info-caption">
@@ -280,7 +277,7 @@
                         <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
                             <span class="thumb-info-wrapper">
                                 <a href="#">
-                                    <img src="img/anggota/mantan/mantan-10.jpg" class="img-fluid" alt="">
+                                    <img src="main/img/anggota/mantan/mantan-10.jpg" class="img-fluid" alt="">
                                 </a>
                             </span>
                             <span class="thumb-info-caption">
@@ -307,7 +304,7 @@
                         <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
                             <span class="thumb-info-wrapper">
                                 <a href="#">
-                                    <img src="img/anggota/mantan/mantan-11.jpg" class="img-fluid" alt="">
+                                    <img src="main/img/anggota/mantan/mantan-11.jpg" class="img-fluid" alt="">
                                 </a>
                             </span>
                             <span class="thumb-info-caption">
@@ -336,7 +333,7 @@
                         <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
                             <span class="thumb-info-wrapper">
                                 <a href="#">
-                                    <img src="img/anggota/mantan/mantan-kp-1.jpg" class="img-fluid" alt="">
+                                    <img src="main/img/anggota/mantan/mantan-kp-1.jpg" class="img-fluid" alt="">
                                 </a>
                             </span>
                             <span class="thumb-info-caption">
@@ -364,7 +361,7 @@
                         <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
                             <span class="thumb-info-wrapper">
                                 <a href="#">
-                                    <img src="img/anggota/mantan/mantan-kp-2.jpg" class="img-fluid" alt="">
+                                    <img src="main/img/anggota/mantan/mantan-kp-2.jpg" class="img-fluid" alt="">
                                 </a>
                             </span>
                             <span class="thumb-info-caption">
@@ -392,7 +389,7 @@
                         <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
                             <span class="thumb-info-wrapper">
                                 <a href="#">
-                                    <img src="img/anggota/mantan/mantan-kp-3.jpg" class="img-fluid" alt="">
+                                    <img src="main/img/anggota/mantan/mantan-kp-3.jpg" class="img-fluid" alt="">
                                 </a>
                             </span>
                             <span class="thumb-info-caption">
@@ -420,7 +417,7 @@
                         <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
                             <span class="thumb-info-wrapper">
                                 <a href="#">
-                                    <img src="img/anggota/mantan/mantan-kp-4.jpg" class="img-fluid" alt="">
+                                    <img src="main/img/anggota/mantan/mantan-kp-4.jpg" class="img-fluid" alt="">
                                 </a>
                             </span>
                             <span class="thumb-info-caption">
@@ -448,7 +445,7 @@
                         <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
                             <span class="thumb-info-wrapper">
                                 <a href="#">
-                                    <img src="img/anggota/mantan/mantan-kp-5.jpg" class="img-fluid" alt="">
+                                    <img src="main/img/anggota/mantan/mantan-kp-5.jpg" class="img-fluid" alt="">
                                 </a>
                             </span>
                             <span class="thumb-info-caption">
@@ -476,7 +473,7 @@
                         <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
                             <span class="thumb-info-wrapper">
                                 <a href="#">
-                                    <img src="img/anggota/mantan/mantan-kp-6.jpg" class="img-fluid" alt="">
+                                    <img src="main/img/anggota/mantan/mantan-kp-6.jpg" class="img-fluid" alt="">
                                 </a>
                             </span>
                             <span class="thumb-info-caption">
@@ -504,7 +501,7 @@
                         <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
                             <span class="thumb-info-wrapper">
                                 <a href="#">
-                                    <img src="img/anggota/mantan/mantan-kp-7.jpg" class="img-fluid" alt="">
+                                    <img src="main/img/anggota/mantan/mantan-kp-7.jpg" class="img-fluid" alt="">
                                 </a>
                             </span>
                             <span class="thumb-info-caption">
@@ -532,7 +529,7 @@
                         <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
                             <span class="thumb-info-wrapper">
                                 <a href="#">
-                                    <img src="img/anggota/mantan/mantan-kp-8.jpg" class="img-fluid" alt="">
+                                    <img src="main/img/anggota/mantan/mantan-kp-8.jpg" class="img-fluid" alt="">
                                 </a>
                             </span>
                             <span class="thumb-info-caption">
@@ -560,7 +557,7 @@
                         <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
                             <span class="thumb-info-wrapper">
                                 <a href="#">
-                                    <img src="img/anggota/mantan/mantan-kp-9.jpg" class="img-fluid" alt="">
+                                    <img src="main/img/anggota/mantan/mantan-kp-9.jpg" class="img-fluid" alt="">
                                 </a>
                             </span>
                             <span class="thumb-info-caption">
@@ -588,7 +585,7 @@
                         <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
                             <span class="thumb-info-wrapper">
                                 <a href="#">
-                                    <img src="img/anggota/mantan/mantan-kp-10.jpg" class="img-fluid" alt="">
+                                    <img src="main/img/anggota/mantan/mantan-kp-10.jpg" class="img-fluid" alt="">
                                 </a>
                             </span>
                             <span class="thumb-info-caption">
@@ -616,7 +613,7 @@
                         <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
                             <span class="thumb-info-wrapper">
                                 <a href="#">
-                                    <img src="img/anggota/mantan/mantan-kp-11.jpg" class="img-fluid" alt="">
+                                    <img src="main/img/anggota/mantan/mantan-kp-11.jpg" class="img-fluid" alt="">
                                 </a>
                             </span>
                             <span class="thumb-info-caption">
@@ -644,7 +641,7 @@
                         <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
                             <span class="thumb-info-wrapper">
                                 <a href="#">
-                                    <img src="img/anggota/mantan/mantan-kp-12.jpg" class="img-fluid" alt="">
+                                    <img src="main/img/anggota/mantan/mantan-kp-12.jpg" class="img-fluid" alt="">
                                 </a>
                             </span>
                             <span class="thumb-info-caption">

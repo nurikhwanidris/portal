@@ -168,19 +168,19 @@ Route::resource('/spsm/admin/transaksi', TransaksiController::class)->middleware
 Route::get('/', [MainController::class, 'index'])->middleware('visitor');
 
 // Info Korp route
-Route::get('/info-korp', [MainController::class, 'infoKorp']);
+Route::get('/info-korp', [MainController::class, 'infoKorp'])->name('info-korp');
 
 // Orang Awam Route
-Route::get('/awam', [MainController::class, 'orangAwam']);
+Route::get('/awam', [MainController::class, 'orangAwam'])->name('orang-awam');
 
 // Page Element Route
 Route::get('/page-element', [MainController::class, 'pageElement']);
 
 // Warga Jupem Route
-Route::get('/jupem', [MainController::class, 'wargaJupem']);
+Route::get('/jupem', [MainController::class, 'wargaJupem'])->name('warga-jupem');
 
-// FAQ Jupem Route
-Route::get('/faq', [MainController::class, 'faq']);
+// FAQ Route
+Route::get('/faq', [MainController::class, 'faq'])->name('faq');
 
 // Sitemap Jupem Route
 Route::get('/sitemap', [MainController::class, 'sitemap']);

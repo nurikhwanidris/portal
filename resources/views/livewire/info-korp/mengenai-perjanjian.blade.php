@@ -12,62 +12,102 @@
     <table class="table table-striped table-hover">
         <thead>
             <tr>
-                <th>
-                    #
-                </th>
-                <th>
-                    NAMA / TAJUK PERJANJIAN
-                </th>
-                <th>
-                    TARIKH
-                </th>
-                <th>
-                    LOKASI
-                </th>
+                <th class="text-center align-middle">#</th>
+                <th>NAMA / TAJUK PERJANJIAN</th>
+                <th>TARIKH</th>
+                <th>LOKASI</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>
-                    1
-                </td>
-                <td>
-                    MoU
-                </td>
-                <td>
-                    08 September 1972
-                </td>
-                <td>
-                    Bangkok, Thailand
-                </td>
+                <td class="text-center align-middle">1</td>
+                <td class="align-middle">MoU</td>
+                <td class="align-middle">8-Sep-72</td>
+                <td class="align-middle">Bangkok, Thailand</td>
             </tr>
             <tr>
-                <td>
-                    2
-                </td>
-                <td>
-                    MoU & Peta
-                </td>
-                <td>
-                    11 Ogos 1976
-                </td>
-                <td>
-                    Bangkok, Thailand
-                </td>
+                <td class="text-center align-middle">2</td>
+                <td class="align-middle">MoU Peta</td>
+                <td class="align-middle">11 Ogos 1976</td>
+                <td class="align-middle">Bangkok, Thailand</td>
             </tr>
             <tr>
-                <td>
-                    3
-                </td>
-                <td>
-                    MoU & Peta
-                </td>
-                <td>
-                    21 Julai 1977
-                </td>
-                <td>
-                    Kuala Lumpur, Malaysia
-                </td>
+                <td class="text-center align-middle">3</td>
+                <td class="align-middle">MoU Peta</td>
+                <td class="align-middle">21 Julai 1977</td>
+                <td class="align-middle">Kuala Lumpur, Malaysia</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">4</td>
+                <td class="align-middle">MoU Peta</td>
+                <td class="align-middle">18 Julai 1978</td>
+                <td class="align-middle">Bangkok, Thailand</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">5</td>
+                <td class="align-middle">MoU Peta</td>
+                <td class="align-middle">7 Julai 1979</td>
+                <td class="align-middle">Kuala Lumpur, Malaysia</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">6</td>
+                <td class="align-middle">MoU Peta</td>
+                <td class="align-middle">26-Jun-80</td>
+                <td class="align-middle">Bangkok, Thailand</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">7</td>
+                <td class="align-middle">MoU Peta</td>
+                <td class="align-middle">11-Sep-81</td>
+                <td class="align-middle">Kuala Lumpur, Malaysia</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">8</td>
+                <td class="align-middle">MoU Peta</td>
+                <td class="align-middle">8-Sep-82</td>
+                <td class="align-middle">Bangkok, Thailand</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">9</td>
+                <td class="align-middle">MoU Peta</td>
+                <td class="align-middle">25 Mei 1983</td>
+                <td class="align-middle">Johor Bahru, Malaysia</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">10</td>
+                <td class="align-middle">MoU Peta</td>
+                <td class="align-middle">9 Mei 1984</td>
+                <td class="align-middle">Bangkok, Thailand</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">11</td>
+                <td class="align-middle">MoU Peta</td>
+                <td class="align-middle">2 Julai 1985</td>
+                <td class="align-middle">Kuala Lumpur, Malaysia</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">12</td>
+                <td class="align-middle">MoU Peta</td>
+                <td class="align-middle">29 Mac 1986</td>
+                <td class="align-middle">Chiang-Mai, Thailand</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">13</td>
+                <td class="align-middle">MoU Peta</td>
+                <td class="align-middle">19 Mei 1999</td>
+                <td class="align-middle">Johor Bahru, Malaysia</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">14</td>
+                <td class="align-middle">MoU Peta</td>
+                <td class="align-middle">28-Apr-00</td>
+                <td class="align-middle">Chiang-Mai, Thailand</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">15</td>
+                <td class="align-middle">MoU Peta</td>
+                <td class="align-middle">29 Julai 2003</td>
+                <td class="align-middle">Kota Kinabalu, Malaysia</td>
             </tr>
         </tbody>
     </table>
@@ -81,62 +121,144 @@
     <table class="table table-striped table-hover">
         <thead>
             <tr>
-                <th>
-                    #
-                </th>
-                <th>
-                    NAMA / TAJUK PERJANJIAN
-                </th>
-                <th>
-                    TARIKH
-                </th>
-                <th>
-                    LOKASI
-                </th>
+                <th class="text-center align-middle">#</th>
+                <th title="Field #2">NAMA / TAJUK PERJANJIAN</th>
+                <th title="Field #3">TARIKH</th>
+                <th title="Field #4">LOKASI</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>
-                    1
-                </td>
-                <td>
-                    MoU
-                </td>
-                <td>
-                    06 November 1973
-                </td>
-                <td>
-                    Jakarta, Indonesia
-                </td>
+                <td class="text-center align-middle">1</td>
+                <td class="align-middle">MoU</td>
+                <td class="align-middle">6-Nov-73</td>
+                <td class="align-middle">Jakarta, Indonesia</td>
             </tr>
             <tr>
-                <td>
-                    2
-                </td>
-                <td>
-                    MoU & Peta
-                </td>
-                <td>
-                    23 Ogos 1976
-                </td>
-                <td>
-                    Kota Kinabalu, Malaysia
-                </td>
+                <td class="text-center align-middle">2</td>
+                <td class="align-middle">MoU Peta</td>
+                <td class="align-middle">23 Ogos 1976</td>
+                <td class="align-middle">Kota Kinabalu, Malaysia</td>
             </tr>
             <tr>
-                <td>
-                    3
-                </td>
-                <td>
-                    MoU & Peta
-                </td>
-                <td>
-                    13 Disember 1976
-                </td>
-                <td>
-                    Yogyakarta, Indonesia
-                </td>
+                <td class="text-center align-middle">3</td>
+                <td class="align-middle">MoU Peta</td>
+                <td class="align-middle">13 Disember 1976</td>
+                <td class="align-middle">Yogyakarta, Indonesia</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">4</td>
+                <td class="align-middle">MoU Peta</td>
+                <td class="align-middle">18-Nov-78</td>
+                <td class="align-middle">Semarang, Indonesia</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">5</td>
+                <td class="align-middle">MoU Peta</td>
+                <td class="align-middle">10 Julai 1980</td>
+                <td class="align-middle">Kuala Lumpur, Malaysia</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">6</td>
+                <td class="align-middle">MoU Peta</td>
+                <td class="align-middle">30 Mei 1984</td>
+                <td class="align-middle">Jakarta, Indonesia</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">7</td>
+                <td class="align-middle">MoU Peta</td>
+                <td class="align-middle">28 Februari 1987</td>
+                <td class="align-middle">Jakarta, Indonesia</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">8</td>
+                <td class="align-middle">MoU Peta</td>
+                <td class="align-middle">16-Sep-92</td>
+                <td class="align-middle">Johor Bahru, Malaysia</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">9</td>
+                <td class="align-middle">MoU Peta</td>
+                <td class="align-middle">20 Oktober 1993</td>
+                <td class="align-middle">Jakarta, Indonesia</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">10</td>
+                <td class="align-middle">MoU Peta</td>
+                <td class="align-middle">29-Jun-94</td>
+                <td class="align-middle">Kota Kinabalu, Malaysia</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">11</td>
+                <td class="align-middle">MoU Peta</td>
+                <td class="align-middle">25 Januari 1995</td>
+                <td class="align-middle">Denpasar, Indonesia</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">12</td>
+                <td class="align-middle">MoU Peta</td>
+                <td class="align-middle">6 Januari 1996</td>
+                <td class="align-middle">Melaka, Malaysia</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">13</td>
+                <td class="align-middle">MoU Peta</td>
+                <td class="align-middle">7 Mac 1997</td>
+                <td class="align-middle">Parapat, Indonesia</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">14</td>
+                <td class="align-middle">MoU Peta</td>
+                <td class="align-middle">25-Apr-98</td>
+                <td class="align-middle">Johor Bahru, Malaysia</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">15</td>
+                <td class="align-middle">MoU Peta</td>
+                <td class="align-middle">30-Apr-99</td>
+                <td class="align-middle">Jakarta, Indonesia</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">16</td>
+                <td class="align-middle">MoU Peta</td>
+                <td class="align-middle">26 Februari 2000</td>
+                <td class="align-middle">Pulau Pinang, Malaysia</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">17</td>
+                <td class="align-middle">MoU Peta</td>
+                <td class="align-middle">9-Nov-00</td>
+                <td class="align-middle">Surabaya, Indonesia</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">18</td>
+                <td class="align-middle">MoU Peta</td>
+                <td class="align-middle">31 Oktober 2001</td>
+                <td class="align-middle">Kota Kinabalu, Malaysia</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">19</td>
+                <td class="align-middle">MoU Peta</td>
+                <td class="align-middle">4 Februari 2005</td>
+                <td class="align-middle">Johor Bahru, Malaysia</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">20</td>
+                <td class="align-middle">MoU Peta</td>
+                <td class="align-middle">13-Apr-06</td>
+                <td class="align-middle">Yogjakarta, Indonesia</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">21</td>
+                <td class="align-middle">MoU Peta</td>
+                <td class="align-middle">8-Jun-17</td>
+                <td class="align-middle">Shah Alam, Malaysia</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">22</td>
+                <td class="align-middle">MoU Peta</td>
+                <td class="align-middle">21-Nov-19</td>
+                <td class="align-middle">Kuala Lumpur, Malaysia</td>
             </tr>
         </tbody>
     </table>
@@ -150,39 +272,208 @@
     <table class="table table-striped table-hover">
         <thead>
             <tr>
-                <th>
-                    #
-                </th>
-                <th>
-                    NAMA / TAJUK PERJANJIAN / STATUS / TARIKH
-                </th>
-                <th>
-                    LOKASI
-                </th>
+                <th class="text-center align-middle">#</th>
+                <th>NAMA / TAJUK PERJANJIAN</th>
+                <th>LOKASI</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>
-                    1
-                </td>
-                <td>
-                    Treaty with the King of Quedah, 1800 (Confirmed 1802)
-                </td>
-                <td>
-                    Kedah – P. Pinang
-                </td>
+                <td class="text-center align-middle">1</td>
+                <td class="align-middle">Treaty with the King of Quedah, 1800 (Confirmed 1802)</td>
+                <td class="align-middle">Kedah - P. Pinang</td>
             </tr>
             <tr>
-                <td>
-                    2
+                <td class="text-center align-middle">2</td>
+                <td class="align-middle">Frontier and Boundary Treaties, 1831 (Quedah, 1831)</td>
+                <td class="align-middle">Kedah - P. Pinang</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">3</td>
+                <td class="align-middle">Perjanjian Rumbowe Boundary , 1833 (9.1.1833)</td>
+                <td class="align-middle">N. Sembilan - Melaka</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">4</td>
+                <td class="align-middle">Johole, 1833 (26.8.1833)</td>
+                <td class="align-middle">N. Sembilan - Melaka</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">5</td>
+                <td class="align-middle">Topography and itinery of Province Wellesly 1861</td>
+                <td class="align-middle">Pulau Pinang</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">6</td>
+                <td class="align-middle">Perjanjian Pahang - Johor 1862</td>
+                <td class="align-middle">Johor - Pahang</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">7</td>
+                <td class="align-middle">Perjanjian Sempadan Kedah - Pulau Pinang 19.9.1867</td>
+                <td class="align-middle">Kedah - P. Pinang</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">8</td>
+                <td class="align-middle">Perjanjian 1869 pada 6 Mei 1869</td>
+                <td class="align-middle">Kedah - P. Pinang</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">9</td>
+                <td class="align-middle">Jelebu pada 24.8.1883</td>
+                <td class="align-middle">N. Sembilan - Pahang</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">10</td>
+                <td class="align-middle">Surat-menyurat antara Gabenor - Bendahara 1884 - 1885</td>
+                <td class="align-middle">N. Sembilan - Pahang</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">11</td>
+                <td class="align-middle">Boundary between two Malay States 3.12.1886</td>
+                <td class="align-middle">Selangor - Pahang</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">12</td>
+                <td class="align-middle">Award 1898 bertarikh 18.2.1898</td>
+                <td class="align-middle">Melaka - Johor</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">13</td>
+                <td class="align-middle">Award 1898 bertarikh 18.2.1898</td>
+                <td class="align-middle">Johor - Pahang</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">14</td>
+                <td class="align-middle">Award 1898 bertarikh 18.2.1898</td>
+                <td class="align-middle">N. Sembilan - Johor</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">15</td>
+                <td class="align-middle">Perjanjian Bangkok pada 29.11.1899 dan telah diwartakan dalam Perak Government Gazettee15.5.1900
                 </td>
-                <td>
-                    Frontier and Boundary Treaties 1831 (Quedah, 1831)
-                </td>
-                <td>
-                    Kedah – P. Pinang
-                </td>
+                <td class="align-middle">Kedah - Perak</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">16</td>
+                <td class="align-middle">Perjanjian Bangkok pada 29.11.1899 dan telah diwartakan dalam Perak Government Gazettee1.6.1900</td>
+                <td class="align-middle">Pahang - Kelantan</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">17</td>
+                <td class="align-middle">Perjanjian Bangkok pada 29.11.1899 dan telah diwartakan dalam Perak Government Gazettee1.6.1900</td>
+                <td class="align-middle">Pahang - Kelantan</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">18</td>
+                <td class="align-middle">Perjanjian Bangkok pada 29.11.1899 dan telah diwartakan dalam Perak Government Gazettee1.6.1900</td>
+                <td class="align-middle">Pahang - Terengganu</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">19</td>
+                <td class="align-middle">Perak Government Gazettee pada 12.4.1901</td>
+                <td class="align-middle">Perak - Pahang</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">20</td>
+                <td class="align-middle">Treaty pada 10 Mac 1909</td>
+                <td class="align-middle">Perlis - Kedah</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">21</td>
+                <td class="align-middle">Selangor Government Gazette pada 12.4.1901 Selangor</td>
+                <td class="align-middle">Selangor - Negeri Sembilan</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">22</td>
+                <td class="align-middle">Treaty copy for S.R.S Pahang 14.8.1913</td>
+                <td class="align-middle">Selangor - Pahang</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">23</td>
+                <td class="align-middle">Surat-menyurat SU Residen Selangor - SU Residen Pahang tahun 1927 - 1929</td>
+                <td class="align-middle">Selangor - Pahang</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">24</td>
+                <td class="align-middle">F.M.S Government Gazette pada 15.11.1909</td>
+                <td class="align-middle">Selangor - Pahang</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">25</td>
+                <td class="align-middle">Memorandum 1940 Melaka</td>
+                <td class="align-middle">Melaka</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">26</td>
+                <td class="align-middle">Federation of Malaya Government Gazette diwartakan oleh Kedah pada 31 Disember 1953 dan Perlis
+                    pada 28 Januari 1954</td>
+                <td class="align-middle">Perlis - Kedah</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">27</td>
+                <td class="align-middle">Akta A206 pada 1 Februari 1974</td>
+                <td class="align-middle">WPKL - Selangor</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">28</td>
+                <td class="align-middle">MoU pada 25.10.1982 antara Kedah - Pulau Pinang</td>
+                <td class="align-middle">Kedah - Pulau Pinang</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">29</td>
+                <td class="align-middle">Warta Kerajaan 16.8.1984</td>
+                <td class="align-middle">WP Labuan</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">30</td>
+                <td class="align-middle">MoU pada 10.10.1988 antara kedua Kerajaan di Kota Bharu, Kelantan</td>
+                <td class="align-middle">Pahang - Kelantan</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">31</td>
+                <td class="align-middle">Perjanjian Bangkok pada 29.11.1899 dan telah diwartakan dalam Perak Government Gazette pada 15.5.1990</td>
+                <td class="align-middle">Perak - Pahang</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">32</td>
+                <td class="align-middle">Warta Kerajaan Persekutuan No:112 &amp; No: 3199 pada 14.1.1991</td>
+                <td class="align-middle">Selangor - Pahang</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">33</td>
+                <td class="align-middle">MoU pada 21.11.1991 di Tapah, Perak</td>
+                <td class="align-middle">Perak - Pahang</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">34</td>
+                <td class="align-middle">MoU pada 20.1.1992 antara kedua Kerajaan di Kuala Terengganu, Terengganu</td>
+                <td class="align-middle">Pahang - Terengganu</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">35</td>
+                <td class="align-middle">MoU pada 11.7.1994 antara Pahang - Selangor di Genting Highlands</td>
+                <td class="align-middle">Selangor - Pahang</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">36</td>
+                <td class="align-middle">MoU pada 2.5.1997 antara kedua Kerajaan Negeri di Seremban</td>
+                <td class="align-middle">Negeri Sembilan - Pahang</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">37</td>
+                <td class="align-middle">Akta A1095 pada 1 Februari 2001</td>
+                <td class="align-middle">WP Putrajaya - Selangor</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">38</td>
+                <td class="align-middle">MoU pada 28 Jun 2005 antara kedua Kerajaan negeri di Melaka</td>
+                <td class="align-middle">Johor - Melaka</td>
+            </tr>
+            <tr>
+                <td class="text-center align-middle">39</td>
+                <td class="align-middle">Perjanjian Sempadan pada 19 Mac 2007 di Kuantan</td>
+                <td class="align-middle">Pahang - Terengganu</td>
             </tr>
         </tbody>
     </table>
