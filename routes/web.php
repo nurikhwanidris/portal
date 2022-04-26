@@ -182,5 +182,5 @@ Route::get('/jupem', [MainController::class, 'wargaJupem'])->name('warga-jupem')
 // FAQ Route
 Route::get('/faq', [MainController::class, 'faq'])->name('faq');
 
-// Sitemap Jupem Route
+// Sitemap Route
 Route::get('/sitemap', [MainController::class, 'sitemap']);

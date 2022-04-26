@@ -56,12 +56,18 @@ class MainController extends Controller
     // FAQ Controller
     public function faq()
     {
-        return view('main.pages.faq');
+        return view('main.pages.faq',[
+            'counter' => Visitor::whereMonth('date', '=', now()->format('m'))->get()->count(),
+            'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first()
+        ]);
     }
 
     // Sitemap Controller
     public function sitemap()
     {
-        return view('main.pages.sitemap');
+        return view('main.pages.sitemap',[
+            'counter' => Visitor::whereMonth('date', '=', now()->format('m'))->get()->count(),
+            'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first()
+        ]);
     }
 }
