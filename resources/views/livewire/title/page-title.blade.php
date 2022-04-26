@@ -11,13 +11,21 @@
                                 Orang Awam
                             @elseif (url()->current() == route('warga-jupem'))
                                 Warga Jupem
-                            @elseif (url()->current() == route('faq'))
-                                Soalan Lazim
+                                {{-- @elseif (url()->current() == route('faq'))
+                                Soalan Lazim --}}
                             @endif
                         </div>
                         <div class="font-weight-normal text-6">
                             <strong class="text-title-strong">
-                                Mengenai Jupem
+                                @if (url()->current() == route('info-korp'))
+                                    Info Korporat
+                                @elseif (url()->current() == route('orang-awam'))
+                                    Orang Awam
+                                @elseif (url()->current() == route('warga-jupem'))
+                                    Warga Jupem
+                                @elseif (url()->current() == route('faq'))
+                                    Soalan Lazim
+                                @endif
                             </strong>
                         </div>
                     </div>
