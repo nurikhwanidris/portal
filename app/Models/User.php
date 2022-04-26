@@ -2,17 +2,16 @@
 
 namespace App\Models;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 use App\Models\Page;
-use App\Models\Status;
+use LdapRecord\Laravel\Events\Loggable;
 
 class User extends Authenticatable
 {
-    use HasApiTokens, HasFactory, Notifiable;
+    use HasApiTokens, HasFactory, Notifiable, Loggable;
 
     /**
      * The attributes that are mass assignable.

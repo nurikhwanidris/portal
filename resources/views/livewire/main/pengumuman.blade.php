@@ -5,15 +5,15 @@
                 <div class="col-md-12">
                     <marquee behaviour="scroll" onmouseover="this.stop();" onmouseout="this.start();" direction="left"
                         class="news-scroll">
+                        <span class="dot-yellow-green"></span>
                         @foreach ($annoucements as $annoucement)
-                            <span class="dot-yellow-green"></span>
-                            <a href="#" style="color: #000 !important;">
+                            <a href="#" style="color: #000 !important;" class="me-4">
                                 {{-- <strong class="text-title-strong"> --}}
                                 <strong>
                                     {{ $annoucement->title_my }} :
                                 </strong>
                                 <span>
-                                    {{ $annoucement->excerpt_my }}
+                                    {{ strip_tags($annoucement->excerptMy()) }}
                                 </span>
                             </a>
                         @endforeach

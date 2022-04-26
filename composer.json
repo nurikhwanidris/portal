@@ -11,6 +11,7 @@
         "directorytree/ldaprecord-laravel": "^2.5",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
+        "haruncpi/laravel-user-activity": "^1.0",
         "intervention/image": "^2.7",
         "itsgoingd/clockwork": "^5.1",
         "laravel/framework": "^8.65",
