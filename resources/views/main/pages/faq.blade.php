@@ -47,9 +47,10 @@
 									<li class="nav-item">
 										<a class="nav-link active" href="#tabsNavigationSimpleIcons1" data-bs-toggle="tab">
 											<span class="featured-boxes featured-boxes-style-6 p-0 m-0">
-												<span class="featured-box featured-box-primary featured-box-effect-6 p-0 m-0">
+												<span class="featured-box featured-box-quaternary featured-box-effect-3 p-0 m-0">
 													<span class="box-content p-0 m-0">
-														<i class="icon-featured fas fa-user"></i>
+														<i class="icon-featured icon-directions icons"></i>
+                                                        {{-- <i class="fa-solid fa-signs-post"></i> --}}
 													</span>
 												</span>
 											</span>
@@ -59,9 +60,9 @@
 									<li class="nav-item">
 										<a class="nav-link" href="#tabsNavigationSimpleIcons2" data-bs-toggle="tab">
 											<span class="featured-boxes featured-boxes-style-6 p-0 m-0">
-												<span class="featured-box featured-box-primary featured-box-effect-6 p-0 m-0">
+												<span class="featured-box featured-box-quaternary featured-box-effect-3 p-0 m-0">
 													<span class="box-content p-0 m-0">
-														<i class="icon-featured fas fa-file"></i>
+														<i class="icon-featured icon-map icons"></i>
 													</span>
 												</span>
 											</span>
@@ -71,9 +72,9 @@
 									<li class="nav-item">
 										<a class="nav-link" href="#tabsNavigationSimpleIcons3" data-bs-toggle="tab">
 											<span class="featured-boxes featured-boxes-style-6 p-0 m-0">
-												<span class="featured-box featured-box-primary featured-box-effect-6 p-0 m-0">
+												<span class="featured-box featured-box-quaternary featured-box-effect-3 p-0 m-0">
 													<span class="box-content p-0 m-0">
-														<i class="icon-featured fab fa-google-plus-g"></i>
+														<i class="icon-featured icon-globe icons"></i>
 													</span>
 												</span>
 											</span>
