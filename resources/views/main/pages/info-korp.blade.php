@@ -75,7 +75,7 @@
                             <div class="tabs tabs-vertical tabs-right tabs-navigation tabs-navigation-simple">
                                 <ul class="nav nav-tabs col-sm-3">
                                     <li class="nav-item">
-                                        <a class="nav-link active" href="#tab-1" data-bs-toggle="tab" id="tab1">Mengenai
+                                        <a class="nav-link active" href="#tab-1" data-bs-toggle="tab" id="tab1">Info
                                             JUPEM</a>
                                     </li>
                                     <li class="nav-item">
