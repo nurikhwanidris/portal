@@ -373,6 +373,39 @@
                     </div>
                 </div>
             </section>
+            <!-- JUPEM W.P. Labuan -->
+            <section class="toggle">
+                <span class="toggle-title text-4">
+                    <div class="accordion-jupem-negeri">JUPEM W.P. Labuan</div>
+                </span>
+                <div class="toggle-content">
+                    <div class="container pt-4">
+                        {!! $labuan->contents_my !!}
+                    </div>
+                </div>
+            </section>
+            <!-- JUPEM Sabah -->
+            <section class="toggle">
+                <span class="toggle-title text-4">
+                    <div class="accordion-jupem-negeri">Topografi Sabah</div>
+                </span>
+                <div class="toggle-content">
+                    <div class="container pt-4">
+                        {!! $sabah->contents_my !!}
+                    </div>
+                </div>
+            </section>
+            <!-- JUPEM Sarawak -->
+            <section class="toggle">
+                <span class="toggle-title text-4">
+                    <div class="accordion-jupem-negeri">Topografi Sarawak</div>
+                </span>
+                <div class="toggle-content">
+                    <div class="container pt-4">
+                        {!! $sarawak->contents_my !!}
+                    </div>
+                </div>
+            </section>
         </div>
     </div>
 </div>

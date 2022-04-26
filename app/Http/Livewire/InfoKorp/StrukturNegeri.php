@@ -22,6 +22,9 @@ class StrukturNegeri extends Component
             'perlis' => Post::where('id', '=', '36')->first(),
             'selangor' => Post::where('id', '=', '26')->first(),
             'terengganu' => Post::where('id', '=', '43')->first(),
+            'sarawak' => Post::where('id', '=', '50')->first(),
+            'sabah' => Post::where('id', '=', '49')->first(),
+            'labuan' => Post::where('id', '=', '48')->first(),
         ]);
     }
 }
