@@ -58,4 +58,10 @@ class MainController extends Controller
     {
         return view('main.pages.faq');
     }
+
+    // Sitemap Controller
+    public function sitemap()
+    {
+        return view('main.pages.sitemap');
+    }
 }
