@@ -50,10 +50,18 @@
 <script src="/main/js/jquery.datatables.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function() {
-    $('#example').DataTable( {
-        "pagingType": "full_numbers"
-    } );
-    // $('table').dataTable({searching: false, paging: false, info: false});
-    // $('table').dataTable({dom: 'lrt'});
-} );
+        // Datatable
+        $('#example').DataTable({
+            "pagingType": "full_numbers"
+        });
+
+
+        $('#dynamic_select').on('change', function() {
+            var url = $(this).val();
+            if (url) {
+                window.location = url;
+            }
+            return false;
+        });
+    });
 </script>

@@ -47,7 +47,10 @@ class MainController extends Controller
     // Warga Jupem Controller
     public function wargaJupem()
     {
-        return view('main.pages.warga-jupem');
+        return view('main.pages.warga-jupem',[
+            'counter' => Visitor::whereMonth('date', '=', now()->format('m'))->get()->count(),
+            'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first()
+        ]);
     }
 
     // FAQ Controller
