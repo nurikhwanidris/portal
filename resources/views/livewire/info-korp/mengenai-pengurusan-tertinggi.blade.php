@@ -1,5 +1,5 @@
 <div>
-    <style type="text/css">
+    {{-- <style type="text/css">
         .nama-ahli {
             font-size: 1em !important;
             line-height: 1.2em;
@@ -200,5 +200,6 @@
             </div>
             <!-- ============================================================================ -->
         </div>
-    </div>
+    </div> --}}
+    {!! $post->contents_my !!}
 </div>

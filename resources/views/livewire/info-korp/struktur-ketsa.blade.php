@@ -12,8 +12,9 @@
                 <div class="row">
                     <div class="col-lg-12" style="padding-top: 12px;">
                         <a class="img-thumbnail img-thumbnail-no-borders d-block lightbox"
-                            href="img/carta-organisasi/carta_ketsa-2022.jpg" data-plugin-options="{'type':'image'}">
-                            <img class="img-fluid" src="img/carta-organisasi/carta_ketsa-2022.jpg"
+                            href="main/img/carta-organisasi/carta_ketsa-2022.jpg"
+                            data-plugin-options="{'type':'image'}">
+                            <img class="img-fluid" src="main/img/carta-organisasi/carta_ketsa-2022.jpg"
                                 alt="Project Image">
                             <span class="zoom">
                                 <i class="fas fa-search"></i>
