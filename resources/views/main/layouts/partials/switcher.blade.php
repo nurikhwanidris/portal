@@ -144,7 +144,7 @@
         </a>
     </div>
     <div id="myDIV5">
-        <a id="empat" class="tepi-menu-awam gerak-khas" href="/awam" data-bs-toggle="tooltip" data-bs-animation="false"
+        <a id="empat" class="tepi-menu-awam gerak-khas" href="/orang-awam" data-bs-toggle="tooltip" data-bs-animation="false"
             data-bs-placement="right" title="">
             <i class="fas fa-users img-fluid icon-menu-tepi"></i>
             <div class="text-menu-tepi">Orang Awam</div>
