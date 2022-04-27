@@ -55,7 +55,7 @@
             </ul>
         </li>
         <li class="dropdown">
-            <a class="dropdown-item dropdown-toggle" href="jupem">
+            <a class="dropdown-item dropdown-toggle" href="warga-jupem">
                 Warga JUPEM
             </a>
             <ul class="dropdown-menu">
@@ -82,7 +82,7 @@
             </ul>
         </li>
         <li class="dropdown">
-            <a class="dropdown-item dropdown-toggle" href="awam">
+            <a class="dropdown-item dropdown-toggle" href="orang-awam">
                 Orang Awam
             </a>
             <ul class="dropdown-menu">
@@ -137,8 +137,8 @@
         </a>
     </div>
     <div id="myDIV4">
-        <a id="tiga" class="tepi-menu-warga gerak-khas" href="/jupem" data-bs-toggle="tooltip" data-bs-animation="false"
-            data-bs-placement="right" title="">
+        <a id="tiga" class="tepi-menu-warga gerak-khas" href="/warga-jupem" data-bs-toggle="tooltip"
+            data-bs-animation="false" data-bs-placement="right" title="">
             <i class="fas fa-briefcase img-fluid icon-menu-tepi"></i>
             <div class="text-menu-tepi">Warga JUPEM</div>
         </a>

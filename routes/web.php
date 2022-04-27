@@ -171,13 +171,13 @@ Route::get('/', [MainController::class, 'index'])->middleware('visitor');
 Route::get('/info-korp', [MainController::class, 'infoKorp'])->name('info-korp');
 
 // Orang Awam Route
-Route::get('/awam', [MainController::class, 'orangAwam'])->name('orang-awam');
+Route::get('/orang-awam', [MainController::class, 'orangAwam'])->name('orang-awam');
 
 // Page Element Route
 Route::get('/page-element', [MainController::class, 'pageElement']);
 
 // Warga Jupem Route
-Route::get('/jupem', [MainController::class, 'wargaJupem'])->name('warga-jupem');
+Route::get('/warga-jupem', [MainController::class, 'wargaJupem'])->name('warga-jupem');
 
 // FAQ Route
 Route::get('/faq', [MainController::class, 'faq'])->name('faq');
