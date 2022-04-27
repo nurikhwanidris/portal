@@ -20,7 +20,7 @@ class CreateKertasKerjasTable extends Migration
             $table->string('title_en');
             $table->string('presentedBy');
             $table->string('filename');
-            $table->date('date');
+            $table->date('date')->nullable();
             $table->smallInteger('status_id');
             $table->timestamps();
         });
