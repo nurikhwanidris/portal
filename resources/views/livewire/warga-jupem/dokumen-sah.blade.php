@@ -32,6 +32,5 @@
         </div>
     </div>
     <!-- LIST TEXT - END -->
-
     {!! $dokumen_sah->contents_my !!}
 </div>
