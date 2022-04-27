@@ -10,13 +10,6 @@ class WaktuSolat extends Component
 
     public $zone = 57;
 
-    public function tarikhHijrah()
-    {
-        $response = Http::get('http://api.aladhan.com/v1/gToH?date='.date('d-m-Y'));
-        $hijri = json_decode($response->body());
-        return $hijri->data->hijri->day.' '.$hijri->data->hijri->month->en.' '.$hijri->data->hijri->year;
-    }
-
     public function waktuSolat()
     {
         if ($zone = $this->zone) {
@@ -35,6 +28,13 @@ class WaktuSolat extends Component
 
             return $query;
         }
+    }
+
+    public function tarikhHijrah()
+    {
+        $response = Http::get('http://api.aladhan.com/v1/gToH?date='.date('d-m-Y'));
+        $hijri = json_decode($response->body());
+        return $hijri->data->hijri->day.' '.$hijri->data->hijri->month->en.' '.$hijri->data->hijri->year;
     }
 
     public function render()

@@ -130,7 +130,7 @@
     </div>
 
     <div id="myDIV3">
-        <a id="dua" class="tepi-menu-direktori gerak-khas" href="/direktori-pegawai" data-bs-toggle="tooltip"
+        <a id="dua" class="tepi-menu-direktori gerak-khas" href="/orang-awam#tab-4" data-bs-toggle="tooltip"
             data-bs-animation="false" data-bs-placement="right" title="">
             <i class="fas fa-user-tie img-fluid icon-menu-tepi"></i>
             <div class="text-menu-tepi">Direktori Pegawai</div>

@@ -184,3 +184,12 @@ Route::get('/faq', [MainController::class, 'faq'])->name('faq');
 
 // Sitemap Route
 Route::get('/sitemap', [MainController::class, 'sitemap']);
+
+// Direktori Pegawai Route
+Route::get('/direktori-pegawai', [MainController::class, 'direktoriPegawai'])->name('direktori-pegawai');
+
+// Tugas & Peranan Route
+Route::get('/tugas-peranan', [MainController::class, 'tugasPeranan'])->name('tugas-peranan');
+
+// Visi & Misi Route
+Route::get('/visi-misi', [MainController::class, 'visiMisi'])->name('visi-misi');
