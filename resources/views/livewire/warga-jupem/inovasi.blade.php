@@ -6,4 +6,10 @@
         </div>
     </div>
     <!-- PAGE TITLE - END-->
+
+    <div class="row">
+        <div class="col">
+            {!! $inovasi->contents_my !!}
+        </div>
+    </div>
 </div>

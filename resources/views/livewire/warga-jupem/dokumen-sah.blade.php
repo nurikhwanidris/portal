@@ -6,8 +6,8 @@
         </div>
     </div>
     <!-- PAGE TITLE - END-->
-     <!-- FILTERING - START -->
-     <div class="row kotak-filter">
+    <!-- FILTERING - START -->
+    <div class="row kotak-filter">
         <div class="form-group col-lg-12">
             <label class="form-label mb-1 text-2">Select</label>
             <div class="custom-select-1">
@@ -21,7 +21,8 @@
     </div>
     <!-- FILTERING - END -->
     <!-- LIST TEXT - START -->
-    <div class="row align-items-center py-5 appear-animation" data-appear-animation="fadeInRightShorter" style="padding-top:0 !important;">
+    <div class="row align-items-center py-5 appear-animation" data-appear-animation="fadeInRightShorter"
+        style="padding-top:0 !important;">
         <div class="col-md-12 pe-md-5 mb-5 mb-md-0">
             <ul class="list list-icons list-icons-style-3 list-tertiary list-icons-sm">
                 <li><i class="fas fa-check"></i><a href="#">1</a></li>
@@ -31,4 +32,6 @@
         </div>
     </div>
     <!-- LIST TEXT - END -->
+
+    {!! $dokumen_sah->contents_my !!}
 </div>
