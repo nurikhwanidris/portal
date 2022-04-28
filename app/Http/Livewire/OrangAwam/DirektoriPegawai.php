@@ -9,7 +9,7 @@ use Livewire\Component;
 class DirektoriPegawai extends Component
 {
 
-    public $bahagian = 1;
+    public $bahagian;
 
     public function bahagian()
     {
@@ -17,8 +17,11 @@ class DirektoriPegawai extends Component
             $query = DB::table('pegawais')->join('dp_departments', 'pegawais.dept_id', '=', 'dp_departments.id')->select('pegawais.*')->where('pegawais.dept_id', $bahagian)->get();
 
             return $query;
-       }
+       } else {
+            $query = DB::table('pegawais')->join('dp_departments', 'pegawais.dept_id', '=', 'dp_departments.id')->select('pegawais.*')->where('pegawais.dept_id', 1)->get();
 
+            return $query;
+       }
     }
 
     public function render()

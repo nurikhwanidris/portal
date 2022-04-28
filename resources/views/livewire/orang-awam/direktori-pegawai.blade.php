@@ -177,7 +177,8 @@
                 <div class="row" style="margin-top: 10px;">
                     <div class="col-md-5 order-md-2 mb-4 mb-lg-0 appear-animation"
                         data-appear-animation="fadeInLeftShorter">
-                        <img src="img/anggota/pegawai/nun.jpg" class="img-fluid" alt="" width="400" height="400">
+                        <img src="{{ asset('storage/upload/img/pegawai/' . $bahagianPegawai[0]->photo) }}"
+                            class="img-fluid" alt="" width="400" height="400">
                     </div>
                     <div class="col-md-7 order-2">
                         <ul class="list list-icons list-icons-style-2 list-icons-sm mt-2 appear-animation ul-kite"
