@@ -15,9 +15,10 @@ class DirektoriPegawai extends Component
     {
        if ($bahagian = $this->bahagian) {
             $query = DB::table('pegawais')->join('dp_departments', 'pegawais.dept_id', '=', 'dp_departments.id')->select('pegawais.*')->where('pegawais.dept_id', $bahagian)->get();
+
+            return $query;
        }
 
-       return $query;
     }
 
     public function render()

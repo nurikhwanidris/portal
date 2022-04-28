@@ -170,7 +170,7 @@
                 <!-- Search Nama Pegawai - END -->
 
                 <div class="row" style="margin-top: 30px;">
-                    <h2 class="font-weight-bold text-4 mb-0">asd</h2>
+                    <h2 class="font-weight-bold text-4 mb-0">Nama Bahagian/Seksyen</h2>
                 </div>
 
                 <!-- Maklumat Pengarah - START -->
@@ -182,24 +182,27 @@
                     <div class="col-md-7 order-2">
                         <ul class="list list-icons list-icons-style-2 list-icons-sm mt-2 appear-animation ul-kite"
                             data-appear-animation="maskUp" data-appear-animation-delay="300">
-                            <h4 class="font-weight-bold mb-2 size-text-standard">1. NUN ZARINA BINTI ZAINAL</h4>
+                            <h4 class="font-weight-bold mb-2 size-text-standard">1.
+                                {{ $bahagianPegawai[0]->name_my }}
+                            </h4>
                             <h2 class="font-weight-bold mb-0 pt-0 mt-0 size-text-standard-2">
-                                Pengarah Seksyen
+                                {{ $bahagianPegawai[0]->jawatan_my }}
                             </h2>
                             <li class="li-kite">
                                 <i class="fas fa-envelope top-6"></i>
                                 <strong>Email:</strong><br>
-                                <a href="mailto:?">ppmnun@jupem.gov.my</a>
+                                <a
+                                    href="mailto:{{ $bahagianPegawai[0]->email }}">{{ $bahagianPegawai[0]->email }}</a>
                             </li>
                             <li class="li-kite">
                                 <i class="fas fa-phone top-6"></i>
                                 <strong>Tel:</strong><br>
-                                03-2617 0084
+                                {{ $bahagianPegawai[0]->phone_no }}
                             </li>
                             <li class="li-kite">
                                 <i class="fas fa-fax top-6"></i>
                                 <strong>Faks:</strong><br>
-                                03-2617 0990
+                                {{ $bahagianPegawai[0]->fax_no }}
                             </li>
                         </ul>
                     </div>
@@ -210,43 +213,46 @@
                 <div class="row pb-0 pt-3 mb-5 appear-animation" data-appear-animation="fadeInUpShorter"
                     data-appear-animation-delay="200">
 
-                    @foreach ($bahagianPegawai as $item)
-                        <div class="col-sm-6 col-lg-4 mb-4 mb-lg-0">
-                            <span class="thumb-info thumb-info-hide-wrapper-bg thumb-info-no-zoom">
-                                <span class="thumb-info-wrapper">
-                                    <a href="about-me.html">
-                                        <img src="{{ asset('storage/upload/img/pegawai/' . $item->photo) }}"
-                                            class="img-fluid" alt="">
-                                    </a>
+                    @foreach ($bahagianPegawai as $key => $pegawai)
+                        @if ($key > 0)
+                            <div class="col-sm-6 col-lg-4 mb-4 mb-lg-0">
+                                <span class="thumb-info thumb-info-hide-wrapper-bg thumb-info-no-zoom">
+                                    <span class="thumb-info-wrapper">
+                                        <a href="about-me.html">
+                                            <img src="{{ asset('storage/upload/img/pegawai/' . $pegawai->photo) }}"
+                                                class="img-fluid" alt="">
+                                        </a>
+                                    </span>
+                                    <span class="thumb-info-caption">
+                                        <ul class="list list-icons list-icons-style-2 list-icons-sm mt-2 appear-animation ul-kite"
+                                            data-appear-animation="maskUp" data-appear-animation-delay="300">
+                                            <h4 class="font-weight-bold mb-2 size-text-standard">
+                                                {{ $loop->iteration }}.
+                                                {{ $pegawai->name_my }}</h4>
+                                            </h4>
+                                            <h2 class="font-weight-bold mb-0 pt-0 mt-0 size-text-standard-2">
+                                                {{ $pegawai->jawatan_my }}
+                                            </h2>
+                                            <li class="li-kite">
+                                                <i class="fas fa-envelope top-6"></i>
+                                                <strong>Email:</strong><br>
+                                                <a href="mailto:{{ $pegawai->email }}">{{ $pegawai->email }}</a>
+                                            </li>
+                                            <li class="li-kite">
+                                                <i class="fas fa-phone top-6"></i>
+                                                <strong>Tel:</strong><br>
+                                                {{ $pegawai->phone_no }}
+                                            </li>
+                                            <li class="li-kite">
+                                                <i class="fas fa-fax top-6"></i>
+                                                <strong>Faks:</strong><br>
+                                                {{ $pegawai->fax_no }}
+                                            </li>
+                                        </ul>
+                                    </span>
                                 </span>
-                                <span class="thumb-info-caption">
-                                    <ul class="list list-icons list-icons-style-2 list-icons-sm mt-2 appear-animation ul-kite"
-                                        data-appear-animation="maskUp" data-appear-animation-delay="300">
-                                        <h4 class="font-weight-bold mb-2 size-text-standard">{{ $loop->iteration }}.
-                                            {{ $item->name_my }}</h4>
-                                        </h4>
-                                        <h2 class="font-weight-bold mb-0 pt-0 mt-0 size-text-standard-2">
-                                            Ketua Penolong Pengarah
-                                        </h2>
-                                        <li class="li-kite">
-                                            <i class="fas fa-envelope top-6"></i>
-                                            <strong>Email:</strong><br>
-                                            <a href="mailto:?">azwan@jupem.gov.my</a>
-                                        </li>
-                                        <li class="li-kite">
-                                            <i class="fas fa-phone top-6"></i>
-                                            <strong>Tel:</strong><br>
-                                            03-2617 0983
-                                        </li>
-                                        <li class="li-kite">
-                                            <i class="fas fa-fax top-6"></i>
-                                            <strong>Faks:</strong><br>
-                                            03-2617 0990
-                                        </li>
-                                    </ul>
-                                </span>
-                            </span>
-                        </div>
+                            </div>
+                        @endif
                     @endforeach
 
                     {{-- <div class="col-sm-6 col-lg-4 mb-4 mb-lg-0">
