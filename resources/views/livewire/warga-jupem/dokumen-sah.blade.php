@@ -5,32 +5,153 @@
             <div class="text-title-semasa-11" style="padding-bottom: 20px;">Arkib Polisi / Belanjawan / Dokumen Sah</div>
         </div>
     </div>
-    <!-- PAGE TITLE - END-->
-    <!-- FILTERING - START -->
-    <div class="row kotak-filter">
-        <div class="form-group col-lg-12">
-            <label class="form-label mb-1 text-2">Select</label>
-            <div class="custom-select-1">
-                <select class="form-select form-control  border-color-quaernary h-auto" name="dd-nama" required>
-                    <option value="">Choose...</option>
-                    <option value="1">2022</option>
-                    <option value="2">2021</option>
-                </select>
+    <div class="row mt-2">
+        <ul class="nav nav-tabs nav-fill" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a aria-controls="Tab1" aria-selected="true" class="nav-link active nav-link-tab" data-bs-toggle="tab"
+                    href="#tab1" id="tab1-tab" role="tab">2017</a>
+            </li>
+            <li class="nav-item">
+                <a aria-controls="Tab2" aria-selected="false" class="nav-link nav-link-tab" data-bs-toggle="tab"
+                    href="#tab2" id="tab2-tab" role="tab">2016</a>
+            </li>
+            <li class="nav-item">
+                <a aria-controls="Tab3" aria-selected="false" class="nav-link nav-link-tab" data-bs-toggle="tab"
+                    href="#tab3" id="tab3-tab" role="tab">2015</a>
+            </li>
+            <li class="nav-item">
+                <a aria-controls="Tab4" aria-selected="false" class="nav-link nav-link-tab" data-bs-toggle="tab"
+                    href="#tab4" id="tab4-tab" role="tab">2014</a>
+            </li>
+            <li class="nav-item">
+                <a aria-controls="Tab5" aria-selected="false" class="nav-link nav-link-tab" data-bs-toggle="tab"
+                    href="#tab5" id="tab5-tab" role="tab">2013</a>
+            </li>
+        </ul>
+
+        <div class="tab-content" id="myTabContent">
+            <div aria-labelledby="tab1-tab" class="tab-pane fade show active" id="tab1" role="tabpanel">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <ul>
+                                    <li><a href="https://www.jupem.gov.my/v1/wp-content/uploads/2017/06/Pelan_Strategik_JUPEM_2010-2020.pdf"
+                                            target="_blank">Pelan Strategik JUPEM 2010-2020</a></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <ul>
+                                    <li><a href="https://www.jupem.gov.my/v1/wp-content/uploads/2017/06/Pelan_Integriti_Organisasi_JUPEM_2015-2017.pdf"
+                                            target="_blank">Pelan Integriti Organisasi JUPEM 2015-2017</a></li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div aria-labelledby="tab2-tab" class="tab-pane fade" id="tab2" role="tabpanel">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <ul>
+                                    <li><a href="https://www.jupem.gov.my/v1/wp-content/uploads/2017/06/Pelan_Strategik_JUPEM_2010-2020.pdf"
+                                            target="_blank">Pelan Strategik JUPEM 2010-2020</a></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <ul>
+                                    <li><a href="https://www.jupem.gov.my/v1/wp-content/uploads/2017/06/Pelan_Integriti_Organisasi_JUPEM_2015-2017.pdf"
+                                            target="_blank">Pelan Integriti Organisasi JUPEM 2015-2017</a></li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div aria-labelledby="tab3-tab" class="tab-pane fade" id="tab3" role="tabpanel">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <ul>
+                                    <li><a href="https://www.jupem.gov.my/v1/wp-content/uploads/2017/06/Pelan_Strategik_JUPEM_2010-2020.pdf"
+                                            target="_blank">Pelan Strategik JUPEM 2010-2020</a></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <ul>
+                                    <li><a href="https://www.jupem.gov.my/v1/wp-content/uploads/2017/06/Pelan_Strategik_ICT_JUPEM_2011-2015.pdf"
+                                            target="_blank">Pelan Strategik ICT JUPEM 2011-2015</a></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <ul>
+                                    <li><a href="https://www.jupem.gov.my/v1/wp-content/uploads/2017/06/Pelan_Integriti_Organisasi_JUPEM_2015-2017.pdf"
+                                            target="_blank">Pelan Integriti Organisasi JUPEM 2015-2017</a></li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div aria-labelledby="tab4-tab" class="tab-pane fade" id="tab4" role="tabpanel">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <ul>
+                                    <li><a href="https://www.jupem.gov.my/v1/wp-content/uploads/2017/06/Pelan_Strategik_JUPEM_2010-2020.pdf"
+                                            target="_blank">Pelan Strategik JUPEM 2010-2020</a></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <ul>
+                                    <li><a href="https://www.jupem.gov.my/v1/wp-content/uploads/2017/06/Pelan_Strategik_ICT_JUPEM_2011-2015.pdf"
+                                            target="_blank">Pelan Strategik ICT JUPEM 2011-2015</a></li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div aria-labelledby="tab5-tab" class="tab-pane fade" id="tab5" role="tabpanel">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <ul>
+                                    <li><a href="https://www.jupem.gov.my/v1/wp-content/uploads/2017/06/Pelan_Strategik_JUPEM_2010-2020.pdf"
+                                            target="_blank">Pelan Strategik JUPEM 2010-2020</a></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <ul>
+                                    <li><a href="https://www.jupem.gov.my/v1/wp-content/uploads/2017/06/Pelan_Strategik_ICT_JUPEM_2011-2015.pdf"
+                                            target="_blank">Pelan Strategik ICT JUPEM 2011-2015</a></li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
-    <!-- FILTERING - END -->
-    <!-- LIST TEXT - START -->
-    <div class="row align-items-center py-5 appear-animation" data-appear-animation="fadeInRightShorter"
-        style="padding-top:0 !important;">
-        <div class="col-md-12 pe-md-5 mb-5 mb-md-0">
-            <ul class="list list-icons list-icons-style-3 list-tertiary list-icons-sm">
-                <li><i class="fas fa-check"></i><a href="#">1</a></li>
-                <li><i class="fas fa-check"></i><a href="#">2</a></li>
-                <li><i class="fas fa-check"></i><a href="#">3</a></li>
-            </ul>
-        </div>
-    </div>
-    <!-- LIST TEXT - END -->
-    {!! $dokumen_sah->contents_my !!}
 </div>
