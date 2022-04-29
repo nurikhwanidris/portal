@@ -63,5 +63,49 @@
             }
             return false;
         });
+
+        $("#borang").change(function() {
+            if (this.value == '1') {
+                $('#kerjaLuar').show();
+                $('#titleBorang').text('Borang Permohonan Kerja Luar');
+                $('#crEbiz').hide();
+                $('#pemetaan').hide();
+                $('#email').hide();
+            } else if (this.value == '2') {
+                $('#crPortal').show();
+                $('#titleBorang').text('Borang Change Request (Portal)');
+                $('#kerjaLuar').hide();
+                $('#crEbiz').hide();
+                $('#pemetaan').hide();
+                $('#email').hide();
+            } else if (this.value == '3') {
+                $('#crEbiz').show();
+                $('#titleBorang').text('Borang Change Request (eBiz)');
+                $('#kerjaLuar').hide();
+                $('#crPortal').hide();
+                $('#pemetaan').hide();
+                $('#email').hide();
+            } else if (this.value == '4') {
+                $('#pemetaan').show();
+                $('#titleBorang').text('Borang Muat Turun Pemetaan');
+                $('#kerjaLuar').hide();
+                $('#crPortal').hide();
+                $('#crEbiz').hide();
+                $('#email').hide();
+            } else if (this.value == '5') {
+                $('#email').show();
+                $('#titleBorang').text('Borang Permohonan Email Rasmi');
+                $('#kerjaLuar').hide();
+                $('#crPortal').hide();
+                $('#crEbiz').hide();
+                $('#pemetaan').hide();
+            } else {
+                $('#kerjaLuar').show();
+                $('#crPortal').show();
+                $('#crEbiz').show();
+                $('#pemetaan').show();
+                $('#email').show();
+            }
+        });
     });
 </script>

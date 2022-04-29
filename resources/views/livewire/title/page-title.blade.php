@@ -7,11 +7,11 @@
                         <div class="font-weight-normal text-title-small">
                             @if (url()->current() == route('info-korp'))
                                 Mengenai Jupem
-                            @elseif (url()->current() == route('orang-awam'))
+                                {{-- @elseif (url()->current() == route('orang-awam'))
                                 Orang Awam
                             @elseif (url()->current() == route('warga-jupem'))
-                                Warga Jupem
-                            {{-- @elseif (url()->current() == route('faq'))
+                                Warga Jupem --}}
+                                {{-- @elseif (url()->current() == route('faq'))
                                 Soalan Lazim --}}
                             @endif
                         </div>
