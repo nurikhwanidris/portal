@@ -6,12 +6,12 @@
                     <div class="row">
                         <div class="font-weight-normal text-title-small">
                             @if (url()->current() == route('info-korp'))
-                                Info Korporat
+                                Mengenai Jupem
                             @elseif (url()->current() == route('orang-awam'))
                                 Orang Awam
                             @elseif (url()->current() == route('warga-jupem'))
                                 Warga Jupem
-                                {{-- @elseif (url()->current() == route('faq'))
+                            {{-- @elseif (url()->current() == route('faq'))
                                 Soalan Lazim --}}
                             @endif
                         </div>

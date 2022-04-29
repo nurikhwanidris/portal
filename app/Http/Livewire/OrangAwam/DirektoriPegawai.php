@@ -9,7 +9,7 @@ use Livewire\Component;
 class DirektoriPegawai extends Component
 {
 
-    public $bahagian;
+    public $bahagian = 1;
 
     public function bahagian()
     {
