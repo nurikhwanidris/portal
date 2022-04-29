@@ -193,3 +193,6 @@ Route::get('/dasar-keselamatan', [MainController::class, 'dasarKeselamatan']);
 
 // Dasar Penafian Route
 Route::get('/penafian', [MainController::class, 'penafian']);
+
+// Info Semasa Route
+Route::get('/info-semasa', [MainController::class, 'infoSemasa']);
