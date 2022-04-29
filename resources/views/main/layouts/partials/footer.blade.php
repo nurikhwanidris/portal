@@ -85,13 +85,13 @@
                 <h5 class="text-kaki-atas-1 mb-3 pb-1">Temui Kami</h5>
 
                 <ul class="footer-social-icons social-icons mt-4" style="padding-bottom: 20px;">
-                    <li class="social-icons-facebook"><a href="#" target="_blank" title="Facebook"><i
+                    <li class="social-icons-facebook"><a href="https://www.facebook.com/jupemKeTSA/" target="_blank" title="Facebook"><i
                                 class="fab fa-facebook-f text-2"></i></a></li>
-                    <li class="social-icons-twitter"><a href="#" target="_blank" title="Twitter"><i
+                    <li class="social-icons-twitter"><a href="https://twitter.com/jupemKeTSA" target="_blank" title="Twitter"><i
                                 class="fab fa-twitter text-2"></i></a></li>
-                    <li class="social-icons-instagram"><a href="#" target="_blank" title="Instagram"><i
+                    <li class="social-icons-instagram"><a href="https://www.instagram.com/jupemketsa/" target="_blank" title="Instagram"><i
                                 class="fab fa-instagram text-2"></i></a></li>
-                    <li class="social-icons-youtube"><a href="#" target="_blank" title="YouTube"><i
+                    <li class="social-icons-youtube"><a href="https://www.youtube.com/channel/UCwXaXGuEbIjeUhnOmapR79A" target="_blank" title="YouTube"><i
                                 class="fab fa-youtube text-2"></i></a></li>
                 </ul>
                 <div class="text-kaki-atas-2">URL Mobile:</div>
@@ -119,11 +119,11 @@
                                     Privasi</a></li>
                         </ul>
                         <ul>
-                            <li><i class="fas fa-angle-right"></i><a href="#" class="ms-1 text-decoration-none"> Dasar
+                            <li><i class="fas fa-angle-right"></i><a href="dasar-keselamatan" class="ms-1 text-decoration-none"> Dasar
                                     Keselamatan</a></li>
                         </ul>
                         <ul>
-                            <li><i class="fas fa-angle-right"></i><a href="#" class="ms-1 text-decoration-none">
+                            <li><i class="fas fa-angle-right"></i><a href="penafian" class="ms-1 text-decoration-none">
                                     Penafian</a></li>
                         </ul>
                     </nav>

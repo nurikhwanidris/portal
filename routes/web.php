@@ -179,11 +179,17 @@ Route::get('/page-element', [MainController::class, 'pageElement']);
 // Warga Jupem Route
 Route::get('/jupem', [MainController::class, 'wargaJupem']);
 
-// FAQ Jupem Route
+// FAQ Route
 Route::get('/faq', [MainController::class, 'faq']);
 
-// Sitemap Jupem Route
+// Sitemap Route
 Route::get('/sitemap', [MainController::class, 'sitemap']);
 
-// Dasar Privasi Jupem Route
+// Dasar Privasi Route
 Route::get('/dasar-privasi', [MainController::class, 'dasarPrivasi']);
+
+// Dasar Keselamatan Route
+Route::get('/dasar-keselamatan', [MainController::class, 'dasarKeselamatan']);
+
+// Dasar Penafian Route
+Route::get('/penafian', [MainController::class, 'penafian']);
