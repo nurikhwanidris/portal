@@ -115,7 +115,7 @@
                     class="col-lg-4 d-flex align-items-center justify-content-center justify-content-lg-end text-kaki-2">
                     <nav id="sub-menu">
                         <ul>
-                            <li><i class="fas fa-angle-right"></i><a href="#" class="ms-1 text-decoration-none"> Dasar
+                            <li><i class="fas fa-angle-right"></i><a href="dasar-privasi" class="ms-1 text-decoration-none"> Dasar
                                     Privasi</a></li>
                         </ul>
                         <ul>

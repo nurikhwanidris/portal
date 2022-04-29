@@ -184,3 +184,6 @@ Route::get('/faq', [MainController::class, 'faq']);
 
 // Sitemap Jupem Route
 Route::get('/sitemap', [MainController::class, 'sitemap']);
+
+// Dasar Privasi Jupem Route
+Route::get('/dasar-privasi', [MainController::class, 'dasarPrivasi']);

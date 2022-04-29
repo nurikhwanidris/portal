@@ -70,4 +70,13 @@ class MainController extends Controller
             'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first()
         ]);
     }
+
+    // DasarPrivasi Controller
+    public function dasarPrivasi()
+    {
+        return view('main.pages.dasar-privasi',[
+            'counter' => Visitor::whereMonth('date', '=', now()->format('m'))->get()->count(),
+            'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first()
+        ]);
+    }
 }
