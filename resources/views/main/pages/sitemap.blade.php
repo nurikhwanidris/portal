@@ -41,7 +41,7 @@
                     <div role="main" class="main">
                         <div class="row">
                             <!-- Column 1 -->
-                            <div class="col-sm-3" style="border: 1px solid red;">
+                            <div class="col-sm-3">
                                 <!-- Utama -->
                                 <h3 class="font-weight-bold text-4 mb-2">LAMAN UTAMA</h3>
                                 <ul class="list list-icons">
@@ -103,7 +103,7 @@
                             </div>
                             <!-- ======== -->
                             <!-- Column 3 -->
-                            <div class="col-sm-3"  style="border: 1px solid blue;">
+                            <div class="col-sm-3">
                                 <!-- Utama -->
                                 <!-- Sub Category - INFO KORPORAT -->
                                 <h3 class="font-weight-bold text-4 mb-2">WARGA JUPEM</h3>
@@ -133,7 +133,7 @@
                                 <ul class="list list-icons list-icons-sm mb-4">
                                     <li><a href="#"><i class="fas fa-file"></i> Produk & Perkhidmatan</a></li>
                                     <li><a href="/"><i class="fas fa-file"></i> Kertas Pembentangan</a></li>
-                                    <li><a href="/"><i class="fas fa-file"></i> Buku & Penerbitan/a></li>
+                                    <li><a href="/"><i class="fas fa-file"></i> Buku & Penerbitan</a></li>
                                     <li><a href="/"><i class="fas fa-file"></i> Direktori Pegawai</a></li>
                                     <li><a href="#"><i class="fas fa-file"></i> Multimedia</a></li>
                                     <li><a href="/"><i class="fas fa-file"></i> Tender & Sebutharga</a></li>
