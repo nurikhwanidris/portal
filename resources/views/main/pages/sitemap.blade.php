@@ -41,7 +41,7 @@
                     <div role="main" class="main">
                         <div class="row">
                             <!-- Column 1 -->
-                            <div class="col-sm-3">
+                            <div class="col-sm-3" style="border: 1px solid red;">
                                 <!-- Utama -->
                                 <h3 class="font-weight-bold text-4 mb-2">LAMAN UTAMA</h3>
                                 <ul class="list list-icons">
@@ -103,20 +103,45 @@
                             </div>
                             <!-- ======== -->
                             <!-- Column 3 -->
-                            <div class="col-sm-3">
+                            <div class="col-sm-3"  style="border: 1px solid blue;">
                                 <!-- Utama -->
                                 <!-- Sub Category - INFO KORPORAT -->
                                 <h3 class="font-weight-bold text-4 mb-2">WARGA JUPEM</h3>
                                 <!-- Sub Sub Category -->
                                 <ul class="list list-icons list-icons-sm mb-4">
-                                    <li><a href="#"><i class="fas fa-file"></i> 1</a></li>
-                                    <li><a href="/"><i class="fas fa-file"></i> 2</a></li>
-                                    <li><a href="/"><i class="fas fa-file"></i> 3</a></li>
-                                    <li><a href="/"><i class="fas fa-file"></i> 4</a></li>
-                                    <li><a href="#"><i class="fas fa-file"></i> 1</a></li>
-                                    <li><a href="/"><i class="fas fa-file"></i> 2</a></li>
-                                    <li><a href="/"><i class="fas fa-file"></i> 3</a></li>
-                                    <li><a href="/"><i class="fas fa-file"></i> 4</a></li>
+                                    <li><a href="#"><i class="fas fa-file"></i> Kertas Kerja</a></li>
+                                    <li><a href="/"><i class="fas fa-file"></i> Pertukaran Pegawai</a></li>
+                                    <li><a href="/"><i class="fas fa-file"></i> Laporan Mesyuarat</a></li>
+                                    <li><a href="/"><i class="fas fa-file"></i> Inovasi Sektor Awam</a></li>
+                                    <li><a href="#"><i class="fas fa-file"></i> Kertas Pembentangan</a></li>
+                                    <li><a href="/"><i class="fas fa-file"></i> Polisi/Belanjawan/Dokumen Sah</a></li>
+                                    <li><a href="/"><i class="fas fa-file"></i> Dokumen Pensijilan & Pengiktirafan</a></li>
+                                    <li><a href="/"><i class="fas fa-file"></i> Garis Panduan Umum</a></li>
+                                    <li><a href="#"><i class="fas fa-file"></i> Dasar & Pekeliling</a></li>
+                                    <li><a href="/"><i class="fas fa-file"></i> Dokumen Jabatan</a></li>
+                                    <li><a href="/"><i class="fas fa-file"></i> Muat Turun Borang JUPEM</a></li>
+
+                                </ul>
+                            </div>
+                            <!-- ======== -->
+                            <!-- Column 4 -->
+                            <div class="col-sm-3">
+                                <!-- Utama -->
+                                <!-- Sub Category - INFO KORPORAT -->
+                                <h3 class="font-weight-bold text-4 mb-2">ORANG AWAM</h3>
+                                <!-- Sub Sub Category -->
+                                <ul class="list list-icons list-icons-sm mb-4">
+                                    <li><a href="#"><i class="fas fa-file"></i> Produk & Perkhidmatan</a></li>
+                                    <li><a href="/"><i class="fas fa-file"></i> Kertas Pembentangan</a></li>
+                                    <li><a href="/"><i class="fas fa-file"></i> Buku & Penerbitan/a></li>
+                                    <li><a href="/"><i class="fas fa-file"></i> Direktori Pegawai</a></li>
+                                    <li><a href="#"><i class="fas fa-file"></i> Multimedia</a></li>
+                                    <li><a href="/"><i class="fas fa-file"></i> Tender & Sebutharga</a></li>
+                                    <li><a href="/"><i class="fas fa-file"></i> Transaksi Dalam Talian</a></li>
+                                    <li><a href="/"><i class="fas fa-file"></i> Keratan Akhbar</a></li>
+                                    <li><a href="#"><i class="fas fa-file"></i> Muat Turun Borang Pemetaan</a></li>
+                                    <li><a href="/"><i class="fas fa-file"></i> Dokumen Jabatan</a></li>
+
                                 </ul>
                             </div>
                             <!-- ======== -->
