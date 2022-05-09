@@ -184,3 +184,12 @@ Route::get('/faq', [MainController::class, 'faq'])->name('faq');
 
 // Sitemap Route
 Route::get('/sitemap', [MainController::class, 'sitemap']);
+
+// Dasar Privasi Route
+Route::get('/dasar-privasi', [MainController::class, 'dasarPrivasi']);
+
+// Dasar Keselamatan Route
+Route::get('/dasar-keselamatan', [MainController::class, 'dasarKeselamatan']);
+
+// Dasar Penafian Route
+Route::get('/penafian', [MainController::class, 'penafian']);

@@ -68,6 +68,10 @@
 										<li class="nav-item">
 											<a class="nav-link" href="#tab-10" data-bs-toggle="tab">Dokumen Jabatan</a>
 										</li>
+                                        <li class="nav-item">
+											<a class="nav-link" href="#tab-11" data-bs-toggle="tab">Muat Turun Borang JUPEM</a>
+                                            <!-- Sama page Orang Awam > Muat Turun Borang Pemetaan -->
+										</li>
 									</ul>
 								</div>
 								<!-- Tab Sub - END -->

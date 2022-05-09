@@ -70,4 +70,31 @@ class MainController extends Controller
             'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first()
         ]);
     }
+
+    // DasarPrivasi Controller
+    public function dasarPrivasi()
+    {
+        return view('main.pages.dasar-privasi',[
+            'counter' => Visitor::whereMonth('date', '=', now()->format('m'))->get()->count(),
+            'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first()
+        ]);
+    }
+
+    // DasarKeselamatan Controller
+    public function dasarKeselamatan()
+    {
+        return view('main.pages.dasar-keselamatan',[
+            'counter' => Visitor::whereMonth('date', '=', now()->format('m'))->get()->count(),
+            'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first()
+        ]);
+    }
+
+    // Penafian Controller
+    public function penafian()
+    {
+        return view('main.pages.penafian',[
+            'counter' => Visitor::whereMonth('date', '=', now()->format('m'))->get()->count(),
+            'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first()
+        ]);
+    }
 }
