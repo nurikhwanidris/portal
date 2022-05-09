@@ -97,4 +97,13 @@ class MainController extends Controller
             'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first()
         ]);
     }
+
+    // Penafian Controller
+    public function infoSemasa()
+    {
+        return view('main.pages.info-semasa',[
+            'counter' => Visitor::whereMonth('date', '=', now()->format('m'))->get()->count(),
+            'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first()
+        ]);
+    }
 }
