@@ -76,6 +76,42 @@
                             </div>
                         </div>
                     </div>
+                    <!-- 5 -->
+                    <div class="card card-default">
+                        <div class="card-header" id="collapse200HeadingFour">
+                            <h4 class="card-title m-0">
+                                <a class="accordion-toggle text-color-dark font-weight-bold collapsed"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse200Four" aria-expanded="false"
+                                    aria-controls="collapse200Four">
+                                    Senarai dan Profil Pegawai SME
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse200Four" class="collapse" aria-labelledby="collapse200HeadingFour"
+                            data-bs-parent="#accordion200">
+                            <div class="card-body pt-0">
+                                @livewire('info-korp.info-korp-sme-pegawai')
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 6 -->
+                    <div class="card card-default">
+                        <div class="card-header" id="collapse200HeadingFive">
+                            <h4 class="card-title m-0">
+                                <a class="accordion-toggle text-color-dark font-weight-bold collapsed"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse200Five" aria-expanded="false"
+                                    aria-controls="collapse200Five">
+                                    Sumbangan SME
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse200Five" class="collapse" aria-labelledby="collapse200HeadingFive"
+                            data-bs-parent="#accordion200">
+                            <div class="card-body pt-0">
+                                @livewire('info-korp.info-korp-sme-sumbangan')
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
