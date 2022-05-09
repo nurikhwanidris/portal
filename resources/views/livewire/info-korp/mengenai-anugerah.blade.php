@@ -1,5 +1,5 @@
 <div>
-    <div class="container">
+    {{-- <div class="container">
         <div class="row">
             <div class="col">
                 <div class="text-center text-title-semasa-11" style="padding-top: 40px;padding-bottom: 20px;">Anugerah
@@ -45,5 +45,6 @@
                 </tr>
             </tbody>
         </table>
-    </div>
+    </div> --}}
+    {!! $anugerah->contents_my !!}
 </div>
