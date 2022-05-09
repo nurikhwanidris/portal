@@ -46,7 +46,7 @@
                         <option value="35">Pulau Aur dan Pemanggil</option>
                         <option value="36">Kota Tinggi, Mersing, Johor Bahru</option>
                         <option value="37">Kluang dan Pontian</option>
-                        <option value="38">Batu Pahat, Muar, Segamat, Gemas</option>
+                        {{-- <option value="38">Batu Pahat, Muar, Segamat, Gemas</option> --}}
                     </optgroup>
                     <optgroup label="Kedah">
                         <option value="2">Baling, Sik, Padang Terap</option>
