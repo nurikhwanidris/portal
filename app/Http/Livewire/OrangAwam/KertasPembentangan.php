@@ -10,7 +10,7 @@ class KertasPembentangan extends Component
     public function render()
     {
         return view('livewire.orang-awam.kertas-pembentangan',[
-            'kertas_pembentangan' => Post::where('id', '=', '442')->first()
+            'kertas_pembentangan' => Post::where('id', '=', '731')->first()
         ]);
     }
 }

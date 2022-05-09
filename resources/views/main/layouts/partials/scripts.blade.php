@@ -51,7 +51,7 @@
 <script type="text/javascript">
     $(document).ready(function() {
         // Datatable
-        $('#example').DataTable({
+        $('table').DataTable({
             "pagingType": "full_numbers"
         });
 

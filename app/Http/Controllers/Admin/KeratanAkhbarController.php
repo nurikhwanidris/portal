@@ -77,10 +77,10 @@ class KeratanAkhbarController extends Controller
             $save = new KeratanAkhbar;
 
             $save->user_id = auth()->user()->id;
-            $save->filename = $filenametostore;
-            $save->tajukKeratanAkhbar = $validateData['tajukKeratanAkhbar'];
-            $save->sumberKeratanAkhbar = $validateData['sumberKeratanAkhbar'];
-            $save->tarikhTerbitanAkhbar = $validateData['tarikhTerbitanAkhbar'];
+            $save->lampiran = $filenametostore;
+            $save->title_my = $validateData['tajukKeratanAkhbar'];
+            $save->title_en = $validateData['tajukKeratanAkhbar'];
+            $save->category_id = $validateData['sumberKeratanAkhbar'];
             $save->status_id = $validateData['status_id'];
 
             $save->save();

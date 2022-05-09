@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class KeratanAkhbar extends Model
+class KeratanAkhbarCategory extends Model
 {
     use HasFactory;
 
@@ -23,9 +23,9 @@ class KeratanAkhbar extends Model
         return $this->belongsTo(Status::class);
     }
 
-    // KeratanAkhbarCategory
-    public function category()
+    // KeratanAkhbar
+    public function keratanAkhbar()
     {
-        return $this->belongsTo(KeratanAkhbarCategory::class);
+        return $this->hasMany(KeratanAkhbar::class);
     }
 }
