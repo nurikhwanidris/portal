@@ -71,37 +71,28 @@ class MainController extends Controller
         ]);
     }
 
-    // DasarPrivasi Controller
-    public function dasarPrivasi()
+    // Direktori Pegawai Controller
+    public function direktoriPegawai()
     {
-        return view('main.pages.dasar-privasi',[
+        return view('main.pages.direktori-pegawai',[
             'counter' => Visitor::whereMonth('date', '=', now()->format('m'))->get()->count(),
             'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first()
         ]);
     }
 
-    // DasarKeselamatan Controller
-    public function dasarKeselamatan()
+    // Tugas Peranan Controller
+    public function tugasPeranan()
     {
-        return view('main.pages.dasar-keselamatan',[
+        return view('main.pages.tugas-peranan',[
             'counter' => Visitor::whereMonth('date', '=', now()->format('m'))->get()->count(),
             'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first()
         ]);
     }
 
-    // Penafian Controller
-    public function penafian()
+    // Visi Misi Controller
+    public function visiMisi()
     {
-        return view('main.pages.penafian',[
-            'counter' => Visitor::whereMonth('date', '=', now()->format('m'))->get()->count(),
-            'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first()
-        ]);
-    }
-
-    // Penafian Controller
-    public function infoSemasa()
-    {
-        return view('main.pages.info-semasa',[
+        return view('main.pages.visi-misi',[
             'counter' => Visitor::whereMonth('date', '=', now()->format('m'))->get()->count(),
             'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first()
         ]);
