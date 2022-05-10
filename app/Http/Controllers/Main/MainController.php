@@ -103,7 +103,8 @@ class MainController extends Controller
     {
         return view('main.pages.info-semasa',[
             'counter' => Visitor::whereMonth('date', '=', now()->format('m'))->get()->count(),
-            'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first()
+            'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first(),
+            'k' =>'jjjj'
         ]);
     }
 }
