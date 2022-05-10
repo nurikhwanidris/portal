@@ -21,7 +21,7 @@ class Transaksi extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function transaksi_category()
+    public function category()
     {
         return $this->belongsTo(TransaksiCategory::class);
     }
