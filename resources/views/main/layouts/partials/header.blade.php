@@ -109,8 +109,8 @@
                             class="header-nav-features header-nav-features-light header-nav-features-no-border header-nav-features-lg-show-border order-1 order-lg-2">
                             <div
                                 class="header-nav-feature header-nav-features-cart header-nav-features-cart-big d-inline-flex top-2 ms-2">
-                                <a href="#" class="header-nav-features-toggle">
-                                    <i class="fas fa-life-ring header-nav-top-icon"></i>
+                                <a href="#" class="header-nav-features-toggle" style="color: #ffffff;font-weight: 800;font-size: 12px;}">
+                                    {{-- <i class="fas fa-life-ring header-nav-top-icon"></i> --}}W3C
                                 </a>
                                 <div class="header-nav-features-dropdown" id="headerTopCartDropdown">
                                     <!-- Menu W3C -->
