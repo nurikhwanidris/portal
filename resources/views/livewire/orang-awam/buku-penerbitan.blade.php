@@ -16,7 +16,7 @@
 					<div class="card-header" id="collapse200HeadingOne">
 						<h4 class="card-title m-0">
 							<a class="accordion-toggle text-color-dark font-weight-bold collapsed" data-bs-toggle="collapse" data-bs-target="#collapse200One" aria-expanded="false" aria-controls="collapse200One">
-								Buletin GISS
+								Buletin GIS
 							</a>
 						</h4>
 					</div>
@@ -130,6 +130,66 @@
 						</div>
 					</div>
 				</div>
+                <!-- 2 -->
+                <div class="card card-default">
+                    <div class="card-header" id="collapse200HeadingTwoA">
+                        <h4 class="card-title m-0">
+                            <a class="accordion-toggle text-color-dark font-weight-bold collapsed" data-bs-toggle="collapse" data-bs-target="#collapse200TwoA" aria-expanded="false" aria-controls="collapse200Two">
+                                Berita Ukur
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse200TwoA" class="collapse" aria-labelledby="collapse200HeadingTwoA" data-bs-parent="#accordion200">
+                        <div class="card-body pt-0">
+                            Content 2
+                        </div>
+                    </div>
+                </div>
+                <!-- 3 -->
+                <div class="card card-default">
+                    <div class="card-header" id="collapse200HeadingThree">
+                        <h4 class="card-title m-0">
+                            <a class="accordion-toggle text-color-dark font-weight-bold collapsed" data-bs-toggle="collapse" data-bs-target="#collapse200Three" aria-expanded="false" aria-controls="collapse200Three">
+                                Laporan Tahunan
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse200Three" class="collapse" aria-labelledby="collapse200HeadingThree" data-bs-parent="#accordion200">
+                        <div class="card-body pt-0">
+                            Content 3
+                        </div>
+                    </div>
+                </div>
+                <!-- 4 -->
+                <div class="card card-default">
+                    <div class="card-header" id="collapse200HeadingFour">
+                        <h4 class="card-title m-0">
+                            <a class="accordion-toggle text-color-dark font-weight-bold collapsed" data-bs-toggle="collapse" data-bs-target="#collapse200Four" aria-expanded="false" aria-controls="collapse200Four">
+                                Buku Perancangan Latihan
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse200Four" class="collapse" aria-labelledby="collapse200HeadingFour" data-bs-parent="#accordion200">
+                        <div class="card-body pt-0">
+                            Content 4
+                        </div>
+                    </div>
+                </div>
+                <!-- 5 -->
+                <div class="card card-default">
+                    <div class="card-header" id="collapse200HeadingFive">
+                        <h4 class="card-title m-0">
+                            <a class="accordion-toggle text-color-dark font-weight-bold collapsed" data-bs-toggle="collapse" data-bs-target="#collapse200Five" aria-expanded="false" aria-controls="collapse200Five">
+                                Buku
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse200Five" class="collapse" aria-labelledby="collapse200HeadingFive" data-bs-parent="#accordion200">
+                        <div class="card-body pt-0">
+                            Content 5
+                        </div>
+                    </div>
+                </div>
 			</div>
 		</div>
 	</div>
