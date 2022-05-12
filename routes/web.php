@@ -168,31 +168,31 @@ Route::resource('/spsm/admin/transaksi', TransaksiController::class)->middleware
 Route::get('/', [MainController::class, 'index'])->middleware('visitor');
 
 // Info Korp route
-Route::get('/info-korp', [MainController::class, 'infoKorp']);
+Route::get('/info-korp', [MainController::class, 'infoKorp'])->name('info-korp');
 
 // Orang Awam Route
-Route::get('/awam', [MainController::class, 'orangAwam']);
+Route::get('/orang-awam', [MainController::class, 'orangAwam'])->name('orang-awam');
 
 // Page Element Route
 Route::get('/page-element', [MainController::class, 'pageElement']);
 
 // Warga Jupem Route
-Route::get('/jupem', [MainController::class, 'wargaJupem']);
+Route::get('/warga-jupem', [MainController::class, 'wargaJupem'])->name('warga-jupem');
 
 // FAQ Route
-Route::get('/faq', [MainController::class, 'faq']);
+Route::get('/faq', [MainController::class, 'faq'])->name('faq');
 
 // Sitemap Route
-Route::get('/sitemap', [MainController::class, 'sitemap']);
+Route::get('/sitemap', [MainController::class, 'sitemap'])->name('sitemap');
 
 // Dasar Privasi Route
-Route::get('/dasar-privasi', [MainController::class, 'dasarPrivasi']);
+Route::get('/dasar-privasi', [MainController::class, 'dasarPrivasi'])->name('dasar-privasi');
 
 // Dasar Keselamatan Route
-Route::get('/dasar-keselamatan', [MainController::class, 'dasarKeselamatan']);
+Route::get('/dasar-keselamatan', [MainController::class, 'dasarKeselamatan'])->name('dasar-keselamatan');
 
 // Dasar Penafian Route
-Route::get('/penafian', [MainController::class, 'penafian']);
+Route::get('/penafian', [MainController::class, 'penafian'])->name('penafian');
 
 // Info Semasa Route
-Route::get('/info-semasa', [MainController::class, 'infoSemasa']);
+Route::get('/info-semasa', [MainController::class, 'infoSemasa'])->name('info-semasa');

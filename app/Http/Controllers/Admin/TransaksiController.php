@@ -95,12 +95,13 @@ class TransaksiController extends Controller
      */
     public function edit(Transaksi $transaksi)
     {
-         return view('spsm.admin.transaksi.edit',[
+        return view('spsm.admin.transaksi.edit', [
             'title' => 'Ubah Transaksi',
             'leadCrumbs' => 'Ubah Transaksi',
             'link' => '/spsm/admin/transaksi',
             'transaksi' => $transaksi,
-            'statuses' => Status::all()
+            'statuses' => Status::all(),
+            'products' => TransaksiCategory::all(),
         ]);
     }
 

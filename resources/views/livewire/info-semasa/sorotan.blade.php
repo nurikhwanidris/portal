@@ -6,11 +6,12 @@
         </div>
     </div>
     <!-- PAGE TITLE - END-->
-     <!-- Filtering - START -->
-     <div class="row kotak-filter">
+    <!-- Filtering - START -->
+    <div class="row kotak-filter">
         <div class="form-group col-lg-6">
             <label class="form-label mb-1 text-2">Keyword</label>
-            <input class="form-control border-color-quaernary" type="text" placeholder="Title/Code" aria-label="default color input example">
+            <input class="form-control border-color-quaernary" type="text" placeholder="Title/Code"
+                aria-label="default color input example">
         </div>
         <div class="form-group col-lg-6">
             <label class="form-label mb-1 text-2">Select</label>
@@ -26,7 +27,7 @@
     </div>
     <!-- Filtering - END -->
     <!-- Datatable - START -->
-    <table id="example"  class="table table-striped table-hover" style="width:100%">
+    <table id="example" class="table table-striped table-hover" style="width:100%">
         <thead>
             <tr>
                 <th class="table-title-jupem">#</th>
@@ -36,12 +37,23 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>autoincrement</td>
-                <td>text</td>
-                <td>text</td>
-                <td>text</td>
-            </tr>
+            @foreach ($sorotan as $item)
+                <tr>
+                    <td>
+                        {{ $loop->iteration }}
+                    </td>
+                    <td>
+                        <a href="/sorotan/{{ $item->id }}" target="_blank"
+                            rel="noopener noreferrer">{{ $item->title_my }}</a>
+                    </td>
+                    <td>
+                        {{ $item->created_at->toDatestring() }}
+                    </td>
+                    <td>
+                        <a href="/sorotan/{{ $item->id }}" target="_blank" rel="noopener noreferrer">Lampiran</a>
+                    </td>
+                </tr>
+            @endforeach
         </tbody>
     </table>
     <!-- Datatable - END -->

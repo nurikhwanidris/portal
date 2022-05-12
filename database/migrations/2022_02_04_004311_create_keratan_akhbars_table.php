@@ -16,10 +16,10 @@ class CreateKeratanAkhbarsTable extends Migration
         Schema::create('keratan_akhbars', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained();
+            $table->string('title_my');
+            $table->string('title_en');
             $table->string('filename');
-            $table->string('tajukKeratanAkhbar');
-            $table->string('sumberKeratanAkhbar');
-            $table->date('tarikhTerbitanAkhbar');
+            $table->string('category_id');
             $table->smallInteger('status_id');
             $table->timestamps();
         });

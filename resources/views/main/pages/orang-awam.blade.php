@@ -22,6 +22,7 @@
 			<!-- Header - Logo + Icons 4 + Search - END -->
 
 			<div role="main" class="main">
+                
 				<!-- Title Section - START -->
 				@livewire('title.page-title')
 				<!-- Title Section - END -->

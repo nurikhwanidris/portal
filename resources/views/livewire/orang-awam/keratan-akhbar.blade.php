@@ -22,22 +22,32 @@
         </div>
         <!-- Table -->
         <!-- Datatable - START -->
-        <table id="example"  class="table table-striped table-hover" style="width:100%">
+        <table id="example" class="table table-striped table-hover" style="width:100%">
             <thead>
                 <tr>
-                    <th class="table-title-jupem">#</th>
+                    <th class="table-title-jupem text-center">#</th>
                     <th class="table-title-jupem">TITLE</th>
                     <th class="table-title-jupem">TARIKH</th>
                     <th class="table-title-jupem">SUMBER</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>autoincrement</td>
-                    <td>123</td>
-                    <td>text</td>
-                    <td>text</td>
-                </tr>
+                @foreach ($newspapers as $item)
+                    <tr>
+                        <td class="align-middle text-center">
+                            {{ $loop->iteration }}
+                        </td>
+                        <td class="align-middle">
+                            {{ $item->title_my }}
+                        </td>
+                        <td class="align-middle">
+                            {{ $item->created_at->toDateString() }}
+                        </td>
+                        <td class="align-middle">
+                            {{ $item->category->name_my }}
+                        </td>
+                    </tr>
+                @endforeach
             </tbody>
         </table>
         <!-- Datatable - END -->

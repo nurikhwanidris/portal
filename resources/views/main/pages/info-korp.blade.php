@@ -13,6 +13,8 @@
 
     <!-- CSS & Script -->
     @include('main.layouts.partials.headerlink')
+
+    {{-- Livewire --}}
     @livewireStyles
 </head>
 
@@ -23,9 +25,11 @@
         <!-- Header - Logo + Icons 4 + Search - END -->
 
         <div role="main" class="main">
+
             <!-- Title Section - START -->
-				@livewire('title.page-title')
-				<!-- Title Section - END -->
+            {{-- @include('main.layouts.partials.page-title') --}}
+            @livewire('title.page-title')
+            <!-- Title Section - END -->
 
             <!-- Menu - START -->
             @include('main.layouts.partials.switcher')
@@ -71,17 +75,20 @@
                             <div class="tabs tabs-vertical tabs-right tabs-navigation tabs-navigation-simple">
                                 <ul class="nav nav-tabs col-sm-3">
                                     <li class="nav-item">
-                                        <a class="nav-link active" href="#tab-1" data-bs-toggle="tab">Mengenai JUPEM</a>
+                                        <a class="nav-link active" href="#tab-1" data-bs-toggle="tab" id="tab1">Info
+                                            JUPEM</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#tab-2" data-bs-toggle="tab">Struktur
+                                        <a class="nav-link" href="#tab-2" data-bs-toggle="tab" id="tab2">Struktur
                                             Organisasi</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#tab-3" data-bs-toggle="tab">Hubungi Kami</a>
+                                        <a class="nav-link" href="#tab-3" data-bs-toggle="tab" id="tab3">Hubungi
+                                            Kami</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#tab-4" data-bs-toggle="tab">Kepakaran Bidang
+                                        <a class="nav-link" href="#tab-4" data-bs-toggle="tab" id="tab4">Kepakaran
+                                            Bidang
                                             Khusus</a>
                                     </li>
                                 </ul>

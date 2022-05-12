@@ -11,13 +11,21 @@ class KeratanAkhbar extends Model
 
     protected $guarded = ['id'];
 
+    // User
     public function user()
     {
         return $this->belongsTo(User::class);
     }
 
+    // Status
     public function status()
     {
         return $this->belongsTo(Status::class);
+    }
+
+    // KeratanAkhbarCategory
+    public function category()
+    {
+        return $this->belongsTo(KeratanAkhbarCategory::class);
     }
 }

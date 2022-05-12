@@ -112,15 +112,4 @@
     </div>
 
     <!-- <script src="/js/jquery-hubungi-kami.js"></script> -->
-    <script type="text/javascript">
-        $(function() {
-            $('#dynamic_select').on('change', function() {
-                var url = $(this).val();
-                if (url) {
-                    window.location = url;
-                }
-                return false;
-            });
-        });
-    </script>
 </div>

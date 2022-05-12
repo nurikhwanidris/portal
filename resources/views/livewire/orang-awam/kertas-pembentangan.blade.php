@@ -1,13 +1,13 @@
 <div>
     <!-- PAGE TITLE - START-->
-<div class="row">
-	<div class="col">
-		<div class="text-title-semasa-11" style="padding-bottom: 20px;">Tajuk Page</div>
-	</div>
-</div>
-<!-- PAGE TITLE - END-->
-<!-- TABLE TITLE - START-->
-<table class="table table-striped table-hover">
+    <div class="row">
+        <div class="col">
+            <div class="text-title-semasa-11" style="padding-bottom: 20px;">Tajuk Page</div>
+        </div>
+    </div>
+    <!-- PAGE TITLE - END-->
+    <!-- TABLE TITLE - START-->
+    {{-- <table class="table table-striped table-hover">
 	<thead>
 		<tr>
 			<th>
@@ -31,6 +31,6 @@
 			</td>
 		</tr>
 	</tbody>
-</table>
-<!-- TABLE TITLE - END-->
+</table> --}}
+    {!! $kertas_pembentangan->contents_my !!}
 </div>
