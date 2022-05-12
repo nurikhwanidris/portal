@@ -82,7 +82,7 @@
                                                 <td>{{ Str::limit($item->taklimat, 20) }}</td>
                                                 <td></td>
                                                 <td>
-                                                    <a href="{{ asset('storage/app/public/tender/' . $item->filename) }}"
+                                                    <a href="{{ asset('storage/upload/tender/' . $item->filename) }}"
                                                         target="_blank" rel="noopener noreferrer">
                                                         <i class="fas fa-file-pdf"></i>
                                                     </a>

@@ -51,10 +51,16 @@
 <script type="text/javascript">
     $(document).ready(function() {
         // Datatable
-        $('table').DataTable({
-            "pagingType": "full_numbers"
+        var table = $('table').DataTable({
+            "pagingType": "full_numbers",
         });
 
+        // Datatable filter input
+        $('.filter-input').on('keyup', function() {
+            table.column($(this).data('column'))
+                .search($(this).val())
+                .draw();
+        });
 
         $('#dynamic_select').on('change', function() {
             var url = $(this).val();
