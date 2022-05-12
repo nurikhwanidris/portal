@@ -70,7 +70,6 @@ class MainController extends Controller
         return view('main.pages.dasar-privasi', [
             'counter' => Visitor::whereMonth('date', '=', now()->format('m'))->get()->count(),
             'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first(),
-            'k' => 'jjjj'
         ]);
     }
     // DasarKeselamatan Controller
@@ -79,7 +78,6 @@ class MainController extends Controller
         return view('main.pages.dasar-keselamatan', [
             'counter' => Visitor::whereMonth('date', '=', now()->format('m'))->get()->count(),
             'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first(),
-            'k' => 'jjjj'
         ]);
     }
     // Penafian Controller
@@ -88,7 +86,6 @@ class MainController extends Controller
         return view('main.pages.penafian', [
             'counter' => Visitor::whereMonth('date', '=', now()->format('m'))->get()->count(),
             'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first(),
-            'k' => 'jjjj'
         ]);
     }
     // Penafian Controller
@@ -97,7 +94,6 @@ class MainController extends Controller
         return view('main.pages.info-semasa', [
             'counter' => Visitor::whereMonth('date', '=', now()->format('m'))->get()->count(),
             'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first(),
-            'k' => 'jjjj'
         ]);
     }
 }

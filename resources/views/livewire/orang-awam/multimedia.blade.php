@@ -224,6 +224,26 @@
 										</div>
 									</div>
 								</div>
+                                <!-- 3 -->
+                                <div class="card card-default">
+                                    <div class="card-header" id="collapse200HeadingThree">
+                                        <h4 class="card-title m-0">
+                                            <a class="accordion-toggle text-color-dark font-weight-bold collapsed" data-bs-toggle="collapse" data-bs-target="#collapse200Three" aria-expanded="false" aria-controls="collapse200Three">
+                                                Galeri Audio
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse200Three" class="collapse" aria-labelledby="collapse200HeadingThree" data-bs-parent="#accordion200">
+                                        <div class="card-body pt-0">
+                                            <div class="col-lg-12" style="padding-top: 50px;">
+                                                <audio controls  loop autoplay>
+                                                   <source src="https://www.jupem.gov.my/jupem18a/assets/uploads/images/contents/20210909111102-61b57-omv_koir_jupem_8-pesuma.mp4" type="audio/ogg">
+                                                   Your browser dose not Support the audio Tag
+                                               </audio>
+                                           </div>
+                                        </div>
+                                    </div>
+                                </div>
 							</div>
 						</div>
 					</div>

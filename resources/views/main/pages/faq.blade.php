@@ -32,11 +32,11 @@
 
 				<div class="container" style="margin-bottom: 100px;">
                     <!-- PAGE TITLE - START-->
-                    <div class="row">
+                    {{-- <div class="row">
                         <div class="col">
                             <div class="text-title-semasa-11" style="padding-bottom: 20px;">Soalan Lazim</div>
                         </div>
-                    </div>
+                    </div> --}}
                     <!-- PAGE TITLE - END-->
                     <!-- TAB STYLE 3 - START -->
 					<div class="row">
