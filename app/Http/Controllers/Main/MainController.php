@@ -16,6 +16,7 @@ class MainController extends Controller
             'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first()
         ]);
     }
+
     // Info Korporat controller
     public function infoKorp()
     {
@@ -24,6 +25,7 @@ class MainController extends Controller
             'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first()
         ]);
     }
+
     // Orang Awam controller`
     public function orangAwam()
     {
@@ -32,6 +34,7 @@ class MainController extends Controller
             'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first()
         ]);
     }
+
     // Page Element Controller
     public function pageElement()
     {
@@ -40,6 +43,7 @@ class MainController extends Controller
             'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first()
         ]);
     }
+
     // Warga Jupem Controller
     public function wargaJupem()
     {
@@ -48,6 +52,7 @@ class MainController extends Controller
             'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first()
         ]);
     }
+
     // FAQ Controller
     public function faq()
     {
@@ -56,6 +61,7 @@ class MainController extends Controller
             'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first()
         ]);
     }
+
     // Sitemap Controller
     public function sitemap()
     {
@@ -64,6 +70,7 @@ class MainController extends Controller
             'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first()
         ]);
     }
+
     // DasarPrivasi Controller
     public function dasarPrivasi()
     {
@@ -72,6 +79,7 @@ class MainController extends Controller
             'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first(),
         ]);
     }
+
     // DasarKeselamatan Controller
     public function dasarKeselamatan()
     {
@@ -80,6 +88,7 @@ class MainController extends Controller
             'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first(),
         ]);
     }
+
     // Penafian Controller
     public function penafian()
     {
@@ -88,6 +97,7 @@ class MainController extends Controller
             'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first(),
         ]);
     }
+    
     // Penafian Controller
     public function infoSemasa()
     {
