@@ -987,6 +987,18 @@ legend.butang-tepi a:hover{
     font-weight: 700 !important;
 }
 
+.dropdown-item.focus, .dropdown-item:focus {
+    text-decoration: none !important;
+    background-color: #ffffff !important;
+    color: #48a027 !important;
+    font-weight: 700 !important;
+}
+li {
+    line-height: 16px !important;
+}
+.link-no-deco{
+    text-decoration: none !important;
+}
     @media screen and (max-height: 450px) {
       .sidenav {padding-top: 15px;}
       .sidenav a {font-size: 18px;}

@@ -16,19 +16,19 @@
                 <a class="nav-link" href="/"> Laman Utama </a>
             </li>
             <li class="nav-item has-submenu">
-                <a class="nav-link dropdown-item dropdown-toggle" href="/#"> Info Semasa </a>
+                <a class="nav-link dropdown-item dropdown-toggle" href="#"> Info Semasa </a>
                 <ul class="submenu collapse">
                     <li>
-                        <a class="nav-link" href="/info-semasa#tab-1">Pengumuman </a>
+                        <a class="nav-link link-no-deco" href="/info-semasa#tab-1">Pengumuman </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="/info-semasa#tab-2">Sorotan Terkini </a>
+                        <a class="nav-link link-no-deco" href="/info-semasa#tab-2">Sorotan Terkini </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="/info-semasa#tab-3">Tawaran Perolehan </a>
+                        <a class="nav-link link-no-deco" href="/info-semasa#tab-3">Tawaran Perolehan </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="/info-semasa#tab-4">Piagam Pelanggan </a>
+                        <a class="nav-link link-no-deco" href="/info-semasa#tab-4">Piagam Pelanggan </a>
                     </li>
                 </ul>
             </li>
@@ -36,16 +36,16 @@
                 <a class="nav-link dropdown-item dropdown-toggle" href="#"> Info Korporat </a>
                 <ul class="submenu collapse">
                     <li>
-                        <a class="nav-link" href="/info-korp#tab-1">Struktur Organisasi </a>
+                        <a class="nav-link link-no-deco" href="/info-korp#tab-1">Struktur Organisasi </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="/info-korp#tab-2">Hubungi Kami </a>
+                        <a class="nav-link link-no-deco" href="/info-korp#tab-2">Hubungi Kami </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="/info-korp#tab-3">Mengenai JUPEM </a>
+                        <a class="nav-link link-no-deco" href="/info-korp#tab-3">Mengenai JUPEM </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="/info-korp#tab-4">Kepakaran Bidang Khusus </a>
+                        <a class="nav-link link-no-deco" href="/info-korp#tab-4">Kepakaran Bidang Khusus </a>
                     </li>
                 </ul>
             </li>
