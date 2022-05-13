@@ -22,7 +22,7 @@
 			<!-- Header - Logo + Icons 4 + Search - END -->
 
 			<div role="main" class="main">
-                
+
 				<!-- Title Section - START -->
 				@livewire('title.page-title')
 				<!-- Title Section - END -->
@@ -55,7 +55,7 @@
 											<a class="nav-link" href="#tab-5" data-bs-toggle="tab">Multimedia</a>
 										</li>
 										<li class="nav-item">
-											<a class="nav-link" href="#tab-6" data-bs-toggle="tab">Tender & Sebutharga</a>
+											<a class="nav-link" href="#tab-6" data-bs-toggle="tab">Tawaran Perolehan</a>
 										</li>
 										<li class="nav-item">
 											<a class="nav-link" href="#tab-7" data-bs-toggle="tab">Transaksi Dalam Talian</a>
