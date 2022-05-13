@@ -124,13 +124,13 @@ Route::resource('/spsm/admin/piagam_pelanggan', PiagamPelangganController::class
 Route::resource('/spsm/admin/pegawai', PegawaiController::class)->middleware('auth');
 
 // Maklum Balas list route
-Route::get('/spsm/admin/maklum_balas/list', [MaklumBalasController::class,'list'])->middleware('auth');
+Route::get('/spsm/admin/maklum_balas/list', [MaklumBalasController::class, 'list'])->middleware('auth');
 
 // Maklum Balas create route
-Route::get('/maklum-balas',[MaklumBalasController::class,'create']);
+Route::get('/maklum-balas', [MaklumBalasController::class, 'create']);
 
 // Maklum Balas store route
-Route::post('/maklum-balas/store',[MaklumBalasController::class,'store']);
+Route::post('/maklum-balas/store', [MaklumBalasController::class, 'store']);
 
 // Jabatan Route
 Route::resource('/spsm/admin/jabatan', JabatanUnitController::class)->middleware('auth');
@@ -141,16 +141,16 @@ Route::resource('/spsm/admin/pekeliling', PekelilingController::class)->middlewa
 Route::resource('/spsm/admin/berita_terkini', BeritaTerkiniController::class)->middleware('auth');
 
 // Index GIS Route
-Route::get('/spsm/admin/buletingis',[GisController::class, 'index'])->middleware('auth');
+Route::get('/spsm/admin/buletingis', [GisController::class, 'index'])->middleware('auth');
 
 // Create GIS route
-Route::get('/spsm/admin/buletingis/create',[GisController::class, 'create'])->middleware('auth');
+Route::get('/spsm/admin/buletingis/create', [GisController::class, 'create'])->middleware('auth');
 
 // Edit GIS route
-Route::get('/spsm/admin/buletingis/{edit}/edit',[GisController::class, 'edit'])->middleware('auth');
+Route::get('/spsm/admin/buletingis/{edit}/edit', [GisController::class, 'edit'])->middleware('auth');
 
 // Update GIS route
-Route::put('/spsm/admin/buletingis/{update}',[GisController::class, 'change'])->middleware('auth');
+Route::put('/spsm/admin/buletingis/{update}', [GisController::class, 'change'])->middleware('auth');
 
 // Delete GIS route
 Route::delete('/spsm/admin/buletingis/{delete}', [GisController::class, 'delete'])->middleware('auth');
@@ -172,6 +172,9 @@ Route::get('/info-korp', [MainController::class, 'infoKorp'])->name('info-korp')
 
 // Visi Misi route
 Route::get('/visi-misi', [MainController::class, 'visiMisi'])->name('visi-misi');
+
+// Tugas Peranan Route
+Route::get('/tugas-peranan', [MainController::class, 'tugasPeranan'])->name('tugas-peranan');
 
 // Orang Awam Route
 Route::get('/orang-awam', [MainController::class, 'orangAwam'])->name('orang-awam');

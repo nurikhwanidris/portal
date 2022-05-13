@@ -97,11 +97,29 @@ class MainController extends Controller
             'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first(),
         ]);
     }
-    
+
     // Penafian Controller
     public function infoSemasa()
     {
         return view('main.pages.info-semasa', [
+            'counter' => Visitor::whereMonth('date', '=', now()->format('m'))->get()->count(),
+            'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first(),
+        ]);
+    }
+
+    // Visi-Misi Controller
+    public function visiMisi()
+    {
+        return view('main.pages.visi-misi', [
+            'counter' => Visitor::whereMonth('date', '=', now()->format('m'))->get()->count(),
+            'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first(),
+        ]);
+    }
+
+    // Tugas Peranan Controller
+    public function tugasPeranan()
+    {
+        return view('main.pages.tugas-peranan', [
             'counter' => Visitor::whereMonth('date', '=', now()->format('m'))->get()->count(),
             'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first(),
         ]);
