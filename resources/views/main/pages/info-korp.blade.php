@@ -45,7 +45,7 @@
                             <div class="col-lg-3 col-sm-6">
                                 <div class="featured-box featured-box-quaternary  featured-box-effect-3">
                                     <div class="box-content box-content-border-0">
-                                        <a href="info-korp-visi.php"><i class="icon-featured far fa-file-alt"></i></a>
+                                        <a href="visi-misi"><i class="icon-featured far fa-file-alt"></i></a>
                                         <h4 class="font-weight-normal text-5 mt-3">Pengenalan <strong
                                                 class="font-weight-extra-bold">JUPEM</strong></h4>
                                         <p class="mb-2 mt-2 text-2">Visi, Misi, Moto, Dasar Kualiti, Kod Etika dan
@@ -56,7 +56,7 @@
                             <div class="col-lg-3 col-sm-6">
                                 <div class="featured-box featured-box-quaternary  featured-box-effect-3">
                                     <div class="box-content box-content-border-0">
-                                        <i class="icon-featured far fa-edit"></i>
+                                        <a href="tugas-peranan"><i class="icon-featured far fa-edit"></i></a>
                                         <h4 class="font-weight-normal text-5 mt-3">Tugas <strong
                                                 class="font-weight-extra-bold">dan Peranan</strong> </h4>
                                         <p class="mb-2 mt-2 text-2">Tugas, Peranan dan Punca Kuasa.</p>

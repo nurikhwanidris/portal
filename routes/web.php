@@ -170,6 +170,9 @@ Route::get('/', [MainController::class, 'index'])->middleware('visitor');
 // Info Korp route
 Route::get('/info-korp', [MainController::class, 'infoKorp'])->name('info-korp');
 
+// Visi Misi route
+Route::get('/visi-misi', [MainController::class, 'visiMisi'])->name('visi-misi');
+
 // Orang Awam Route
 Route::get('/orang-awam', [MainController::class, 'orangAwam'])->name('orang-awam');
 
