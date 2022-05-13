@@ -11,7 +11,6 @@
             text-transform: uppercase;
             color: #0088cc !important;
         }
-
     </style>
     <div class="container py-4">
         <div class="container py-4">

@@ -53,22 +53,26 @@
         // Datatable
         var table = $('table').DataTable({
             "pagingType": "full_numbers",
-        });
-
-        // Datatable filter input
-        $('.filter-input').on('keyup', function() {
-            table.column($(this).data('column'))
-                .search($(this).val())
-                .draw();
-        });
-
-        $('#dynamic_select').on('change', function() {
-            var url = $(this).val();
-            if (url) {
-                window.location = url;
+            "searching": true,
+            "dom": 'lrtip',
+            "language": {
+                "lengthMenu": "Memaparkan _MENU_ rekod bagi 1 mukasurat",
+                "zeroRecords": "Tiada rekod ditemui",
+                "info": "Memaparkan _PAGE_ of _PAGES_",
+                "infoEmpty": "Tiada rekod ditemui",
+                "infoFiltered": "(Tapisan dari _MAX_ keseluruhan rekod)",
             }
-            return false;
         });
+
+        // Filter by text
+        $('.filter-text').keyup(function() {
+            table.search($(this).val()).draw();
+        })
+
+        // Filter by year
+        $('.filter-year').change(function() {
+            table.columns([2]).search($(this).val()).draw();
+        })
     });
 </script>
 <script>

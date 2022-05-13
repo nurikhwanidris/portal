@@ -51,7 +51,7 @@
                     <!-- Google Map END -->
                 </div>
 
-                <div class="row align-items-center" style="padding-top: 30px;">
+                <div class="row align-items-center" style="padding-top: 30px;" id="hq">
                     <span class="nama-hubungi-black text-5 fw-bold">Jabatan Ukur Dan Pemetaan Malaysia </span>
                     <br><br>
                     <span class="nama-hubungi-black text-4 fw-bold">Ibu Pejabat JUPEM</span>
@@ -65,6 +65,69 @@
                                     Jabatan Ukur Dan Pemetaan Malaysia,<br>
                                     Wisma JUPEM, Jalan Sultan Yahya Petra,<br>
                                     50578 Kuala Lumpur.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feature-box feature-box-primary">
+                            <div class="icon-hubungi-2">
+                                <i class="fas fa-phone-volume icon-kaler"></i>
+                            </div>
+                            <div class="feature-box-info">
+                                <div class="info-hubungi-black">
+                                    +603-2617 0800
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feature-box feature-box-primary">
+                            <div class="icon-hubungi-2">
+                                <i class="fas fa-fax icon-kaler"></i>
+                            </div>
+                            <div class="feature-box-info">
+                                <div class="info-hubungi-black">
+                                    +603-2691 7457
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feature-box feature-box-primary">
+                            <div class="icon-hubungi-2 icon-kaler">
+                                <i class="fas fa-envelope-open-text"></i>
+                            </div>
+                            <div class="feature-box-info">
+                                <div class="info-hubungi-black">
+                                    hqweb[at]jupem[dot]gov[dot]my
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="feature-box feature-box-primary col-sm-9" style="padding-top: 90px;">
+                            <a href="#" class="btn btn-modern btn-tertiary mb-2">Peta Wisma JUPEM</a>&nbsp;
+                            <a href="awam-direktori-pegawai.php" class="btn btn-modern btn-secondary mb-2">Direktori
+                                Pegawai</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row align-items-center" style="padding-top: 30px;" id="jupem-johor">
+                    <span class="nama-hubungi-black text-4 fw-bold">Jabatan Ukur dan Pemetaan Johor</span>
+                    <div class="col-lg-6">
+                        <div class="feature-box feature-box-primary mb-2">
+                            <div class="icon-hubungi-2">
+                                <i class="fas fa-map-marker-alt icon-kaler"></i>
+                            </div>
+                            <div class="feature-box-info">
+                                <div class="info-hubungi-black">
+                                    Jabatan Ukur dan Pemetaan Johor
+
+                                    Pengarah:
+                                    Sr MOHD LATIF BIN ZAINAL
+                                    mohdlatif@jupem.gov.my
+
+                                    Tingkat 7, 8 & 9, Blok A, Wisma Persekutuan,
+                                    Jalan Air Molek, 80000 Johor Bahru,
+                                    Johor Darul Takzim.
+
+                                    Tel: 07-223 1244 ext 900
+                                    Faks: 07-223 8535
                                 </div>
                             </div>
                         </div>

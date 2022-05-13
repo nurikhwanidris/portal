@@ -74,13 +74,14 @@
     <div class="row kotak-filter">
         <div class="form-group col-lg-6">
             <label class="form-label mb-1 text-2">Kata Kunci</label>
-            <input class="form-control border-color-quaernary" type="text" placeholder="Tajuk"
+            <input class="form-control border-color-quaernary filter-text" type="text" placeholder="Tajuk"
                 aria-label="default color input example">
         </div>
         <div class="form-group col-lg-6">
             <label class="form-label mb-1 text-2">Pilih Tahun</label>
             <div class="custom-select-1">
-                <select class="form-select form-control  border-color-quaernary h-auto" name="dd-nama" required>
+                <select class="form-select form-control  border-color-quaernary h-auto filter-select filter-year" data-column="2"
+                    name="dd-nama" required>
                     <option value="">Pilih</option>
                     <option value="2022">2022</option>
                     <option value="2021">2021</option>
@@ -105,11 +106,12 @@
 
     <div class="row">
         <div class="col-lg-12">
-            <table id="example" class="table table-striped table-hover" style="width:100%">
+            <table id="table" class="table table-striped table-hover" style="width:100%">
                 <thead>
                     <tr>
                         <th class="table-title-jupem align-middle text-center">#</th>
                         <th class="table-title-jupem">Tajuk</th>
+                        <th class="align-middle text-center">Tahun</th>
                         <th class="table-title-jupem text-center">Muat Turun</th>
                     </tr>
                 </thead>
@@ -121,6 +123,9 @@
                             </td>
                             <td class="align-middle">
                                 {{ $item->title_my }}
+                            </td>
+                            <td class="align-middle text-center">
+                                {{ $item->created_at->format('Y') }}
                             </td>
                             <td class="align-middle text-center">
                                 <a href="{{ asset('storage/upload/piagam_pelanggan/' . $item->filename_my) }}"

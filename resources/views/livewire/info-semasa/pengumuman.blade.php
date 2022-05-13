@@ -1,32 +1,41 @@
 <div>
-    <!-- PAGE TITLE - START-->
     <div class="row">
         <div class="col">
             <div class="text-title-semasa-11" style="padding-bottom: 20px;">Pengumuman</div>
         </div>
     </div>
-    <!-- PAGE TITLE - END-->
-    <!-- Filtering - START -->
     <div class="row kotak-filter">
         <div class="form-group col-lg-6">
-            <label class="form-label mb-1 text-2">Keyword</label>
-            <input class="form-control border-color-quaernary filter-input" type="text" placeholder="Title/Code"
-                aria-label="default color input example" data-column="1">
+            <label class="form-label mb-1 text-2">Carian</label>
+            <input class="form-control border-color-quaernary filter-text" type="text"
+                placeholder="Tajuk/Code Tender & Sebutharga" aria-label="default color input example">
         </div>
         <div class="form-group col-lg-6">
-            <label class="form-label mb-1 text-2">Select</label>
+            <label class="form-label mb-1 text-2">Pilih Tahun</label>
             <div class="custom-select-1">
-                <select class="form-select form-control  border-color-quaernary h-auto" name="dd-nama" required>
-                    <option value="">Choose...</option>
-                    <option value="1">2020</option>
-                    <option value="2">2021</option>
-                    <option value="3">2022</option>
+                <select class="form-select form-control  border-color-quaernary h-auto filter-year" name="dd-nama"
+                    required>
+                    <option value="">Pilih</option>
+                    <option value="2022">2022</option>
+                    <option value="2021">2021</option>
+                    <option value="2020">2020</option>
+                    <option value="2019">2019</option>
+                    <option value="2018">2018</option>
+                    <option value="2017">2017</option>
+                    <option value="2016">2016</option>
+                    <option value="2015">2015</option>
+                    <option value="2014">2014</option>
+                    <option value="2013">2013</option>
+                    <option value="2012">2012</option>
+                    <option value="2011">2011</option>
+                    <option value="2010">2010</option>
+                    <option value="2009">2009</option>
+                    <option value="2008">2008</option>
+                    <option value="2007">2007</option>
                 </select>
             </div>
         </div>
     </div>
-    <!-- Filtering - END -->
-    <!-- Datatable - START -->
     <table id="example" class="table table-striped table-hover" style="width:100%">
         <thead>
             <tr>
@@ -38,13 +47,15 @@
         <tbody>
             @foreach ($pengumuman as $item)
                 <tr>
-                    <td class="align-middle table-title-jupem text-center">{{ $loop->iteration }}</td>
-                    <td class="align-middle table-title-jupem">
+                    <td class="align-middle text-center">{{ $loop->iteration }}</td>
+                    <td class="align-middle">
                         <a href="/pengumuman/{{ $item->id }}" target="_blank" rel="noopener noreferrer">
                             {{ $item->title_my }}
                         </a>
                     </td>
-                    <td class="align-middle table-title-jupem">{{ $item->created_at->toDatestring() }}</td>
+                    <td class="align-middle">
+                        {{ $item->created_at->toDatestring() }}
+                    </td>
                 </tr>
             @endforeach
         </tbody>
