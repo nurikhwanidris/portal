@@ -7,14 +7,14 @@
     <div class="row kotak-filter">
         <div class="form-group col-lg-6">
             <label class="form-label mb-1 text-2">Carian</label>
-            <input class="form-control border-color-quaernary filter-text" type="text"
+            <input class="form-control border-color-quaernary filter-text" type="text" id="pengumuman-filter-text"
                 placeholder="Tajuk/Code Tender & Sebutharga" aria-label="default color input example">
         </div>
         <div class="form-group col-lg-6">
             <label class="form-label mb-1 text-2">Pilih Tahun</label>
             <div class="custom-select-1">
-                <select class="form-select form-control  border-color-quaernary h-auto filter-year" name="dd-nama"
-                    required>
+                <select class="form-select form-control  border-color-quaernary h-auto filter-year"
+                    id="pengumuman-filter-year" required>
                     <option value="">Pilih</option>
                     <option value="2022">2022</option>
                     <option value="2021">2021</option>
@@ -36,11 +36,12 @@
             </div>
         </div>
     </div>
-    <table id="example" class="table table-striped table-hover" style="width:100%">
+    <table id="pengumuman-table" class="table table-striped table-hover" style="width:100%">
         <thead>
             <tr>
                 <th class="table-title-jupem text-center">#</th>
                 <th class="table-title-jupem">Tajuk</th>
+                <th class="table-title-jupem d-none">Tahun</th>
                 <th class="table-title-jupem">Tarikh</th>
             </tr>
         </thead>
@@ -53,6 +54,7 @@
                             {{ $item->title_my }}
                         </a>
                     </td>
+                    <td class="align-middle d-none">{{ $item->created_at->format('Y') }}</td>
                     <td class="align-middle">
                         {{ $item->created_at->toDatestring() }}
                     </td>

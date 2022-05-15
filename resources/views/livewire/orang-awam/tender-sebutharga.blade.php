@@ -29,7 +29,7 @@
                                     <div class="form-group col-lg-6">
                                         <label class="form-label mb-1 text-2">Carian</label>
                                         <input class="form-control border-color-quaernary filter-text" type="text"
-                                            placeholder="Tajuk/Code Tender & Sebutharga"
+                                            placeholder="Tajuk/Code Tender & Sebutharga" id="tender-filter-text"
                                             aria-label="default color input example">
                                     </div>
                                     <div class="form-group col-lg-6">
@@ -37,7 +37,7 @@
                                         <div class="custom-select-1">
                                             <select
                                                 class="form-select form-control  border-color-quaernary h-auto filter-year"
-                                                name="dd-nama" required>
+                                                id="tender-filter-year" name="dd-nama" required>
                                                 <option value="">Pilih</option>
                                                 <option value="2022">2022</option>
                                                 <option value="2021">2021</option>
@@ -61,12 +61,13 @@
                                 </div>
                                 <!-- Table -->
                                 <!-- Datatable - START -->
-                                <table id="example" class="table table-striped table-hover" style="width:100%">
+                                <table id="tender-table" class="table table-striped table-hover"
+                                    style="width:100%">
                                     <thead>
                                         <tr>
                                             <th class="">#</th>
                                             <th class="">Tajuk Tender</th>
-                                            <th class=" text-center align-middle">Tahun</th>
+                                            <th class="d-none text-center align-middle">Tahun</th>
                                             <th class="">Kod</th>
                                             <th class="">Tempoh</th>
                                             <th class="">Masa</th>
@@ -79,7 +80,7 @@
                                             <tr>
                                                 <td>{{ $loop->iteration }}</td>
                                                 <td>{{ Str::limit($item->title_my, 30) }}</td>
-                                                <td class="text-center align-middle">
+                                                <td class="text-center align-middle d-none">
                                                     {{ $item->created_at->format('Y') }}</td>
                                                 <td>{{ Str::limit($item->kod, 10) }}</td>
                                                 <td>{{ $item->masa }}</td>
@@ -118,7 +119,7 @@
                                     <div class="form-group col-lg-6">
                                         <label class="form-label mb-1 text-2">Carian</label>
                                         <input class="form-control border-color-quaernary filter-text" type="text"
-                                            placeholder="Tajuk/Code Tender & Sebutharga"
+                                            placeholder="Tajuk/Code Tender & Sebutharga" id="sebut-harga-filter-text"
                                             aria-label="default color input example">
                                     </div>
                                     <div class="form-group col-lg-6">
@@ -126,7 +127,7 @@
                                         <div class="custom-select-1">
                                             <select
                                                 class="form-select form-control  border-color-quaernary h-auto filter-year"
-                                                name="dd-nama" required>
+                                                name="dd-nama" id="sebut-harga-filter-year" required>
                                                 <option value="">Pilih</option>
                                                 <option value="2022">2022</option>
                                                 <option value="2021">2021</option>
@@ -150,12 +151,13 @@
                                 </div>
                                 <!-- Table -->
                                 <!-- Datatable - START -->
-                                <table id="example" class="table table-striped table-hover" style="width:100%">
+                                <table id="sebutHarga-table" class="table table-striped  table-hover"
+                                    style="width:100%">
                                     <thead>
                                         <tr>
                                             <th class="">#</th>
                                             <th class="">Tajuk Sebut Harga</th>
-                                            <th class="text-center align-middle">Tahun</th>
+                                            <th class="text-center align-middle d-none">Tahun</th>
                                             <th class="">Kod</th>
                                             <th class="">Tempoh</th>
                                             <th class="">Masa</th>
@@ -172,7 +174,7 @@
                                                 <td class="align-middle">
                                                     {{ Str::limit($item->title_my, 30) }}
                                                 </td>
-                                                <td class="text-center align-middle">
+                                                <td class="text-center align-middle d-none">
                                                     {{ $item->created_at->format('Y') }}</td>
                                                 <td class="align-middle">
                                                     {{ Str::limit($item->kod, 10) }}
@@ -218,13 +220,13 @@
                                         <label class="form-label mb-1 text-2">Carian</label>
                                         <input class="form-control border-color-quaernary" type="text"
                                             placeholder="Tajuk/Code Tender & Sebutharga"
-                                            aria-label="default color input example">
+                                            aria-label="default color input example" id="perolehan-berjaya-filter-text">
                                     </div>
                                     <div class="form-group col-lg-6">
                                         <label class="form-label mb-1 text-2">Pilih Tahun</label>
                                         <div class="custom-select-1">
                                             <select class="form-select form-control  border-color-quaernary h-auto"
-                                                name="dd-nama" required>
+                                                name="dd-nama" id="perolehan-berjaya-filter-year" required>
                                                 <option value="">Pilih</option>
                                                 <option value="2022">2022</option>
                                                 <option value="2021">2021</option>
@@ -248,7 +250,8 @@
                                 </div>
                                 <!-- Table -->
                                 <!-- Datatable - START -->
-                                <table id="example" class="table table-striped table-hover" style="width:100%">
+                                <table id="perolehan-table" class="table table-striped table-hover"
+                                    style="width:100%">
                                     <thead>
                                         <tr>
                                             <th class="table-title-jupem">#</th>
