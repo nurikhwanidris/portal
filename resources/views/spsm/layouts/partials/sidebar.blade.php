@@ -612,7 +612,36 @@
                         </li>
                     </ul>
                 </li>
-                {{-- Tetapan --}}
+                {{-- Soalan Lazim --}}
+                <li class="nav-item {{ request()->is('spsm/admin/soalan_lazim/*') ? 'menu-open' : '' }}">
+                    <a href="#" class="nav-link {{ request()->is('spsm/admin/soalan_lazim/*') ? 'active' : '' }}">
+                        <i class="nav-icon fas fa-question"></i>
+                        <p>
+                            Soalan Lazim
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="/spsm/admin/soalan_lazim/create" class="nav-link">
+                                <i class="fas fa-plus nav-icon"></i>
+                                <p>Tambah Soalan Lazim</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/spsm/admin/soalan_lazim/" class="nav-link">
+                                <i class="fas fa-list-alt nav-icon"></i>
+                                <p>Senarai Soalan Lazim</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/spsm/admin/soalan_lazim/kategori" class="nav-link">
+                                <i class="fas fa-list-alt nav-icon"></i>
+                                <p>Kategori Soalan</p>
+                            </a>
+                        </li>
+                    </ul>
+                    {{-- Tetapan --}}
                 <li class="nav-header">Tetapan</li>
                 <li class="nav-item {{ request()->is('spsm/admin/settings/*') ? 'menu-open' : '' }}">
                     <a href="#" class="nav-link {{ request()->is('spsm/admin/settings/*') ? 'active' : '' }}">

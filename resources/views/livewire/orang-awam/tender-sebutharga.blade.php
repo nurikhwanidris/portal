@@ -61,32 +61,31 @@
                                 </div>
                                 <!-- Table -->
                                 <!-- Datatable - START -->
-                                <table id="tender-table" class="table table-striped table-hover"
-                                    style="width:100%">
+                                <table id="tender-table" class="table table-striped table-hover" style="width:100%">
                                     <thead>
                                         <tr>
-                                            <th class="">#</th>
-                                            <th class="">Tajuk Tender</th>
+                                            <th class="align-middle">#</th>
+                                            <th class="align-middle">Tajuk Tender</th>
                                             <th class="d-none text-center align-middle">Tahun</th>
-                                            <th class="">Kod</th>
-                                            <th class="">Tempoh</th>
-                                            <th class="">Masa</th>
-                                            <th class="">Taklimat</th>
-                                            <th class="">Lampiran</th>
+                                            <th class="align-middle">Kod</th>
+                                            <th class="align-middle">Tempoh</th>
+                                            <th class="align-middle">Masa</th>
+                                            <th class="align-middle">Taklimat</th>
+                                            <th class="align-middle">Lampiran</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         @foreach ($tender as $item)
                                             <tr>
-                                                <td>{{ $loop->iteration }}</td>
-                                                <td>{{ Str::limit($item->title_my, 30) }}</td>
+                                                <td class="align-middle text-center">{{ $loop->iteration }}</td>
+                                                <td class="align-middle">{{ Str::limit($item->title_my, 30) }}</td>
                                                 <td class="text-center align-middle d-none">
                                                     {{ $item->created_at->format('Y') }}</td>
-                                                <td>{{ Str::limit($item->kod, 10) }}</td>
-                                                <td>{{ $item->masa }}</td>
-                                                <td>{{ Str::limit($item->taklimat, 20) }}</td>
-                                                <td></td>
-                                                <td>
+                                                <td class="align-middle">{{ Str::limit($item->kod, 10) }}</td>
+                                                <td class="align-middle">{{ $item->masa }}</td>
+                                                <td class="align-middle">{{ Str::limit($item->taklimat, 20) }}</td>
+                                                <td class="align-middle"></td>
+                                                <td class="align-middle text-center">
                                                     <a href="{{ asset('storage/upload/tender/' . $item->filename) }}"
                                                         target="_blank" rel="noopener noreferrer">
                                                         <i class="fas fa-file-pdf"></i>
@@ -250,8 +249,7 @@
                                 </div>
                                 <!-- Table -->
                                 <!-- Datatable - START -->
-                                <table id="perolehan-table" class="table table-striped table-hover"
-                                    style="width:100%">
+                                <table id="perolehan-table" class="table table-striped table-hover" style="width:100%">
                                     <thead>
                                         <tr>
                                             <th class="table-title-jupem">#</th>

@@ -21,6 +21,7 @@ use App\Http\Controllers\Admin\PegawaiController;
 use App\Http\Controllers\Admin\PekelilingController;
 use App\Http\Controllers\Admin\PiagamPelangganController;
 use App\Http\Controllers\Admin\TransaksiController;
+use App\Http\Controllers\Admin\SoalanLazimController;
 use App\Http\Controllers\Main\MainController;
 use Illuminate\Support\Facades\Route;
 
@@ -157,6 +158,9 @@ Route::delete('/spsm/admin/buletingis/{delete}', [GisController::class, 'delete'
 
 // Transaksi route
 Route::resource('/spsm/admin/transaksi', TransaksiController::class)->middleware('auth');
+
+// Soalan Lazim route
+Route::resource('/spsm/admin/soalan_lazim', SoalanLazimController::class)->middleware('auth');
 
 /*
 |--------------------------------------------------------------------------
