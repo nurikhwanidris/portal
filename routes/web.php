@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\LaporanMesyuaratController;
 use App\Http\Controllers\Admin\KeratanAkhbarController;
 use App\Http\Controllers\Admin\MediaController;
 use App\Http\Controllers\Admin\PengumumanController;
+use App\Http\Livewire\InfoSemasa\Pengumuman;
 use App\Http\Controllers\Admin\PopupController;
 use App\Http\Controllers\Admin\QuoteController;
 use App\Http\Controllers\Admin\TenderController;
@@ -206,3 +207,15 @@ Route::get('/penafian', [MainController::class, 'penafian'])->name('penafian');
 
 // Info Semasa Route
 Route::get('/info-semasa', [MainController::class, 'infoSemasa'])->name('info-semasa');
+
+/*
+|--------------------------------------------------------------------------
+| Read Routes
+|--------------------------------------------------------------------------
+*/
+
+// Pengumuman Read Route
+Route::get('/info-semasa/pengumuman/{id}', [MainController::class, 'pengumumanRead'])->name('pengumuman-read');
+
+// Berita Terkini Read Route
+Route::get('/info-semasa/berita-terkini/{id}', [MainController::class, 'beritaTerkiniRead'])->name('berita-terkini-read');

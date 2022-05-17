@@ -61,6 +61,9 @@ class SoalanLazimController extends Controller
 
         // Create
         SoalanLazim::create($validateData);
+
+        // Redirect if success
+        return redirect('soalan_lazim.index')->with('success', 'Soalan Lazim telah berjaya ditambah.');
     }
 
     /**

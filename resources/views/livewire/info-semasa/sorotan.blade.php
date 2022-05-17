@@ -10,13 +10,14 @@
     <div class="row kotak-filter">
         <div class="form-group col-lg-6">
             <label class="form-label mb-1 text-2">Keyword</label>
-            <input class="form-control border-color-quaernary" id="beritaTerkini-filter-text" type="text" placeholder="Title/Code"
-                aria-label="default color input example">
+            <input class="form-control border-color-quaernary" id="beritaTerkini-filter-text" type="text"
+                placeholder="Title/Code" aria-label="default color input example">
         </div>
         <div class="form-group col-lg-6">
             <label class="form-label mb-1 text-2">Select</label>
             <div class="custom-select-1">
-                <select class="form-select form-control  border-color-quaernary h-auto" name="dd-nama" id="beritaTerkini-filter-year" required>
+                <select class="form-select form-control  border-color-quaernary h-auto" name="dd-nama"
+                    id="beritaTerkini-filter-year" required>
                     <option value="">Pilih</option>
                     <option value="2022">2022</option>
                     <option value="2021">2021</option>
@@ -57,7 +58,7 @@
                         {{ $loop->iteration }}
                     </td>
                     <td>
-                        <a href="/sorotan/{{ $item->id }}" target="_blank"
+                        <a href="/info-semasa/berita-terkini/{{ $item->id }}" target="_blank"
                             rel="noopener noreferrer">{{ $item->title_my }}</a>
                     </td>
                     <td class="d-none">
@@ -67,7 +68,8 @@
                         {{ $item->created_at->toDatestring() }}
                     </td>
                     <td>
-                        <a href="/sorotan/{{ $item->id }}" target="_blank" rel="noopener noreferrer">Lampiran</a>
+                        <a href="/info-semasa/berita-terkini/{{ $item->id }}" target="_blank"
+                            rel="noopener noreferrer">Lampiran</a>
                     </td>
                 </tr>
             @endforeach

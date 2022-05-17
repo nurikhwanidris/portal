@@ -8,8 +8,6 @@ use App\Http\Controllers\Controller;
 use App\Models\Page;
 use App\Models\Status;
 use Illuminate\Http\Request;
-use Illuminate\Support\Str;
-use Illuminate\Support\Facades\Storage;
 use \Cviebrock\EloquentSluggable\Services\SlugService;
 
 class PagesController extends Controller

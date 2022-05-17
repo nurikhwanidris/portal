@@ -50,10 +50,11 @@
                 <tr>
                     <td class="align-middle text-center">{{ $loop->iteration }}</td>
                     <td class="align-middle">
-                        <a href="/pengumuman/{{ $item->id }}" target="_blank" rel="noopener noreferrer">
+                        {{-- <a href="/pengumuman/{{ $item->id }}" target="_blank" rel="noopener noreferrer">
                             {{ $item->title_my }}
-                        </a>
-                        <a href="/info-semasa/inner" target="_blank">test</a>
+                        </a> --}}
+                        <a href="/info-semasa/pengumuman/{{ $item->id }}"
+                            target="_blank">{{ $item->title_my }}</a>
                     </td>
                     <td class="align-middle d-none">{{ $item->created_at->format('Y') }}</td>
                     <td class="align-middle">

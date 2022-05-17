@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Main;
 
 use App\Http\Controllers\Controller;
+use App\Models\BeritaTerkini;
+use App\Models\Pengumuman;
 use App\Models\Visitor;
 use Illuminate\Support\Facades\DB;
 
@@ -120,6 +122,30 @@ class MainController extends Controller
     public function tugasPeranan()
     {
         return view('main.pages.tugas-peranan', [
+            'counter' => Visitor::whereMonth('date', '=', now()->format('m'))->get()->count(),
+            'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first(),
+        ]);
+    }
+
+    // Pengumuman Read Controller
+    public function pengumumanRead($id)
+    {
+        $pengumuman = Pengumuman::findOrFail($id);
+
+        return view('main.pages.pages', [
+            'page' => $pengumuman,
+            'counter' => Visitor::whereMonth('date', '=', now()->format('m'))->get()->count(),
+            'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first(),
+        ]);
+    }
+
+    // Berita Terkini Read Controller
+    public function beritaTerkiniRead($id)
+    {
+        $beritaTerkini = BeritaTerkini::findOrFail($id);
+
+        return view('main.pages.pages', [
+            'page' => $beritaTerkini,
             'counter' => Visitor::whereMonth('date', '=', now()->format('m'))->get()->count(),
             'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first(),
         ]);
