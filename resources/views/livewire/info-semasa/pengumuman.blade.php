@@ -53,6 +53,7 @@
                         <a href="/pengumuman/{{ $item->id }}" target="_blank" rel="noopener noreferrer">
                             {{ $item->title_my }}
                         </a>
+                        <a href="/info-semasa/inner" target="_blank">test</a>
                     </td>
                     <td class="align-middle d-none">{{ $item->created_at->format('Y') }}</td>
                     <td class="align-middle">
