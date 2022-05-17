@@ -43,6 +43,7 @@
                         <a href="/pengumuman/{{ $item->id }}" target="_blank" rel="noopener noreferrer">
                             {{ $item->title_my }}
                         </a>
+                        <a href="/info-semasa/inner" target="_blank">test</a>
                     </td>
                     <td class="align-middle table-title-jupem">{{ $item->created_at->toDatestring() }}</td>
                 </tr>
