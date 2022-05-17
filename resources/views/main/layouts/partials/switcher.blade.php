@@ -53,37 +53,37 @@
                 <a class="nav-link dropdown-item dropdown-toggle" href="#"> Warga JUPEM </a>
                 <ul class="submenu collapse">
                     <li>
-                        <a class="nav-link" href="/warga-jupem#tab-1">Kertas Kerja </a>
+                        <a class="nav-link link-no-deco" href="/warga-jupem#tab-1">Kertas Kerja </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="/warga-jupem#tab-2">Pertukaran Pegawai </a>
+                        <a class="nav-lin link-no-deco" href="/warga-jupem#tab-2">Pertukaran Pegawai </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="/warga-jupem#tab-3">Laporan Mesyuarat </a>
+                        <a class="nav-link link-no-deco" href="/warga-jupem#tab-3">Laporan Mesyuarat </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="/warga-jupem#tab-4">Inovasi Sektor Awam </a>
+                        <a class="nav-link link-no-deco" href="/warga-jupem#tab-4">Inovasi Sektor Awam </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="/warga-jupem#tab-5">Kertas Pembentangan </a>
+                        <a class="nav-link link-no-deco" href="/warga-jupem#tab-5">Kertas Pembentangan </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="/warga-jupem#tab-6">Polisi, Belanjawan & Dokumen Sah </a>
+                        <a class="nav-link link-no-deco" href="/warga-jupem#tab-6">Polisi, Belanjawan & Dokumen Sah </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="/warga-jupem#tab-7">Dokumen Pensijilan & Pengiktirafan </a>
+                        <a class="nav-link link-no-deco" href="/warga-jupem#tab-7">Dokumen Pensijilan & Pengiktirafan </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="/warga-jupem#tab-8">Garis Panduan Umum </a>
+                        <a class="nav-link link-no-deco" href="/warga-jupem#tab-8">Garis Panduan Umum </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="/warga-jupem#tab-9">Dasar & Pekeliling </a>
+                        <a class="nav-link link-no-deco" href="/warga-jupem#tab-9">Dasar & Pekeliling </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="/warga-jupem#tab-10">Dokumen Jabatan </a>
+                        <a class="nav-link link-no-deco" href="/warga-jupem#tab-10">Dokumen Jabatan </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="/warga-jupem#tab-11">Muat Turun Borang JUPEM </a>
+                        <a class="nav-link link-no-deco" href="/warga-jupem#tab-11">Muat Turun Borang JUPEM </a>
                     </li>
                 </ul>
             </li>
@@ -91,34 +91,34 @@
                 <a class="nav-link dropdown-item dropdown-toggle" href="#"> Orang Awam </a>
                 <ul class="submenu collapse">
                     <li>
-                        <a class="nav-link" href="/orang-awam#tab-1">Produk & Perkhidmatan </a>
+                        <a class="nav-link link-no-deco" href="/orang-awam#tab-1">Produk & Perkhidmatan </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="/orang-awam#tab-2">Kertas Pembentangan </a>
+                        <a class="nav-link link-no-deco" href="/orang-awam#tab-2">Kertas Pembentangan </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="/orang-awam#tab-3">Buku & Penerbitan </a>
+                        <a class="nav-link link-no-deco" href="/orang-awam#tab-3">Buku & Penerbitan </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="/orang-awam#tab-4">Direktori Pegawai </a>
+                        <a class="nav-link link-no-deco" href="/orang-awam#tab-4">Direktori Pegawai </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="/orang-awam#tab-5">Multimedia </a>
+                        <a class="nav-link link-no-deco" href="/orang-awam#tab-5">Multimedia </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="/orang-awam#tab-6">Tender & Sebut Harga </a>
+                        <a class="nav-link link-no-deco" href="/orang-awam#tab-6">Tender & Sebut Harga </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="/orang-awam#tab-7">Transaksi Dalam Talian </a>
+                        <a class="nav-link link-no-deco" href="/orang-awam#tab-7">Transaksi Dalam Talian </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="/orang-awam#tab-8">Keratan Akhbar </a>
+                        <a class="nav-link link-no-deco" href="/orang-awam#tab-8">Keratan Akhbar </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="/orang-awam#tab-9">Muat Turun Borang Pemetaan </a>
+                        <a class="nav-link link-no-deco" href="/orang-awam#tab-9">Muat Turun Borang Pemetaan </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="/orang-awam#tab-10">Data Terbuka Kerajaan </a>
+                        <a class="nav-link link-no-deco" href="/orang-awam#tab-10">Data Terbuka Kerajaan </a>
                     </li>
                 </ul>
             </li>
