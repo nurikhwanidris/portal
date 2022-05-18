@@ -163,6 +163,9 @@ Route::resource('/spsm/admin/transaksi', TransaksiController::class)->middleware
 // Soalan Lazim route
 Route::resource('/spsm/admin/soalan_lazim', SoalanLazimController::class)->middleware('auth');
 
+// Soalan Lazim route
+Route::get('/spsm/admin/soalan_lazim/kategori', [SoalanLazimController::class, 'soalanLazimCategory'])->middleware('auth');
+
 /*
 |--------------------------------------------------------------------------
 | Main Routes
@@ -219,3 +222,6 @@ Route::get('/info-semasa/pengumuman/{id}', [MainController::class, 'pengumumanRe
 
 // Berita Terkini Read Route
 Route::get('/info-semasa/berita-terkini/{id}', [MainController::class, 'beritaTerkiniRead'])->name('berita-terkini-read');
+
+// Tender & Quotation Read Route
+Route::get('/perolehan/{id}', [MainController::class, 'tenderRead'])->name('tender-read');

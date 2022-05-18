@@ -39,7 +39,7 @@
                     @if ($page->gambarHadapan)
                         <div class="col-md-12">
                             <div class="text-center">
-                                <img src="{{ asset('images/pages/' . $page->gambarHadapan) }}"
+                                <img src="{{ asset('storage/upload/img/' . $page->gambarHadapan) }}"
                                     alt="{{ $page->title_my }}" class="img-fluid">
                             </div>
                         </div>
@@ -47,7 +47,7 @@
                     <!-- IMAGE - END-->
 
                     <!-- PARAGRAPH - START -->
-                    <p class="mb-0 para-align">
+                    <p class="mt-3 mb-0 para-align">
                         {!! $page->content_my !!}
                     </p>
                     <!-- PARAGRAPH - END -->

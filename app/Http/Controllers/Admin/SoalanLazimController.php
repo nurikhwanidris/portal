@@ -17,8 +17,13 @@ class SoalanLazimController extends Controller
      */
     public function index()
     {
-        //Index
-        return view('spsm.admin.soalan_lazim.index');
+        // Index
+        return view('spsm.admin.soalan_lazim.index',[
+            'title' => 'Soalan Lazim',
+            'leadCrumbs' => 'Soalan Lazim',
+            'link' => '/admin/soalan_lazim',
+            'soalanLazim' => SoalanLazim::all(),
+        ]);
     }
 
     /**
@@ -28,7 +33,7 @@ class SoalanLazimController extends Controller
      */
     public function create()
     {
-        //Create
+        // Create
         return view('spsm.admin.soalan_lazim.create', [
             'title' => 'Senarai Soalan Lazim',
             'leadCrumbs' => 'Soalan Lazim',
@@ -109,5 +114,16 @@ class SoalanLazimController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    // Soalan Lazim Kategori
+    public function soalanLazimCategory()
+    {
+        return view('spsm.admin.soalan_lazim.category', [
+            'title' => 'Senarai Kategori Soalan Lazim',
+            'leadCrumbs' => 'Kategori Soalan Lazim',
+            'link' => '/admin/soalan_lazim',
+            'statuses' => Status::all(),
+        ]);
     }
 }

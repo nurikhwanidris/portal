@@ -14,9 +14,10 @@ class Slider extends Component
             'sliders' => SliderModel::where([
                 ['show', '<=', Carbon::now()],
             ])
-            ->orWhere('show', null)
-            ->orWhere('hide', null)
-            ->with('statuses')->get(),
+                ->orWhere('show', null)
+                ->orWhere('hide', null)
+                ->with('statuses')
+                ->orderBy('susunan', 'asc')->get(),
         ]);
     }
 }
