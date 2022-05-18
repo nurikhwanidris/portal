@@ -7,49 +7,52 @@
 <div class="container-fluid">
     <div class="row featured-boxes-full featured-boxes-full-scale">
         <div class="container-pp col-lg-2 featured-box-full featured-box-full-primary">
-            <img src="/main/img/logo-default/icon-produk-perkhidmatan/ebiz.png" width="100px" class="image-pp">
-            <div class="overlay-pp">
-                <div class="text-pp font-weight-normal text-app mt-3">Sistem <strong
-                        class="font-weight-extra-bold">eBiz</strong></div>
-            </div>
+            <a href="https://ebiz.jupem.gov.my/" target="_blank">
+                <img src="/main/img/logo-default/icon-produk-perkhidmatan/ebiz.png" width="100px" class="image-pp">
+                <div class="overlay-pp">
+                    <div class="text-pp font-weight-normal text-app mt-3">Sistem <strong class="font-weight-extra-bold">eBiz</strong></div>
+                </div>
+            </a>
         </div>
         <div class="container-pp col-lg-2 featured-box-full featured-box-full-primary">
-            <img src="/main/img/logo-default/icon-produk-perkhidmatan/ekadaster.png" width="100px"
-                class="image-pp">
-            <div class="overlay-pp">
-                <div class="text-pp font-weight-normal text-app mt-3">Sistem <strong
-                        class="font-weight-extra-bold">eKadaster</strong></div>
-            </div>
+            <a href="/#" target="_self">
+                <img src="/main/img/logo-default/icon-produk-perkhidmatan/ekadaster.png" width="100px" class="image-pp">
+                <div class="overlay-pp">
+                    <div class="text-pp font-weight-normal text-app mt-3">Sistem <strong class="font-weight-extra-bold">eKadaster</strong></div>
+                </div>
+            </a>
         </div>
         <div class="container-pp col-lg-2 featured-box-full featured-box-full-primary">
-            <img src="/main/img/logo-default/icon-produk-perkhidmatan/staps.png" width="100px" class="image-pp">
-            <div class="overlay-pp">
-                <div class="text-pp font-weight-normal text-app mt-3">Sistem <strong class="font-weight-extra-bold">Air
-                        Pasang Surut</strong></div>
-            </div>
+            <a href="/#" target="_self">
+                <img src="/main/img/logo-default/icon-produk-perkhidmatan/staps.png" width="100px" class="image-pp">
+                <div class="overlay-pp">
+                    <div class="text-pp font-weight-normal text-app mt-3">Sistem <strong class="font-weight-extra-bold">Air Pasang Surut</strong></div>
+                </div>
+            </a>
         </div>
         <div class="container-pp col-lg-2 featured-box-full featured-box-full-primary">
-            <img src="/main/img/logo-default/icon-produk-perkhidmatan/myrtknet.png" width="100px"
-                class="image-pp">
-            <div class="overlay-pp">
-                <div class="text-pp font-weight-normal text-app mt-3">Sistem <strong
-                        class="font-weight-extra-bold">MyRTKNet</strong></div>
-            </div>
+            <a href="https://www.myrtknet.gov.my/sbc" target="_blank">
+                <img src="/main/img/logo-default/icon-produk-perkhidmatan/myrtknet.png" width="100px" class="image-pp">
+                <div class="overlay-pp">
+                    <div class="text-pp font-weight-normal text-app mt-3">Sistem <strong class="font-weight-extra-bold">MyRTKNet</strong></div>
+                </div>
+            </a>
         </div>
         <div class="container-pp col-lg-2 featured-box-full featured-box-full-primary">
-            <img src="/main/img/logo-default/icon-produk-perkhidmatan/mygeoserve.png" width="100px"
-                class="image-pp">
-            <div class="overlay-pp">
-                <div class="text-pp font-weight-normal text-app mt-3">Sistem <strong
-                        class="font-weight-extra-bold">myGeoServe</strong></div>
-            </div>
+            <a href="https://mygeoserve.jupem.gov.my/iportal/web-ui/index.html" target="_blank">
+                <img src="/main/img/logo-default/icon-produk-perkhidmatan/mygeoserve.png" width="100px" class="image-pp">
+                <div class="overlay-pp">
+                    <div class="text-pp font-weight-normal text-app mt-3">Sistem <strong class="font-weight-extra-bold">myGeoServe</strong></div>
+                </div>
+            </a>
         </div>
         <div class="container-pp col-lg-2 featured-box-full featured-box-full-primary">
-            <img src="/main/img/logo-default/icon-produk-perkhidmatan/sme.png" width="100px" class="image-pp">
-            <div class="overlay-pp">
-                <div class="text-pp font-weight-normal text-app mt-3">Sistem <strong
-                        class="font-weight-extra-bold">SME</strong></div>
-            </div>
+            <a href="/info-korp#tab-4" target="_self">
+                <img src="/main/img/logo-default/icon-produk-perkhidmatan/sme.png" width="100px" class="image-pp">
+                <div class="overlay-pp">
+                    <div class="text-pp font-weight-normal text-app mt-3">Sistem <strong class="font-weight-extra-bold">SME</strong></div>
+                </div>
+            </a>
         </div>
     </div>
 </div>
