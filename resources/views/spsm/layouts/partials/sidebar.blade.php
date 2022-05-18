@@ -634,12 +634,6 @@
                                 <p>Senarai Soalan Lazim</p>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="/spsm/admin/soalan_lazim/kategori" class="nav-link">
-                                <i class="fas fa-list-alt nav-icon"></i>
-                                <p>Kategori Soalan</p>
-                            </a>
-                        </li>
                     </ul>
                     {{-- Tetapan --}}
                 <li class="nav-header">Tetapan</li>

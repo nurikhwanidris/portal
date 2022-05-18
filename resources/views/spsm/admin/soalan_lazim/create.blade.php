@@ -91,10 +91,12 @@
                                     @foreach ($categories as $kategori_soalan)
                                         @if (old('category_id') == $kategori_soalan->id)
                                             <option value="{{ $kategori_soalan->id }}" selected>
-                                                {{ $kategori_soalan->kategori_soalan }}</option>
+                                                {{ $kategori_soalan->category_name }}
+                                            </option>
                                         @else
                                             <option value="{{ $kategori_soalan->id }}">
-                                                {{ $kategori_soalan->kategori_soalan }}</option>
+                                                {{ $kategori_soalan->category_name }}
+                                            </option>
                                         @endif
                                     @endforeach
                                 </select>

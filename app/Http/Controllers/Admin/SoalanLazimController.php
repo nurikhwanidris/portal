@@ -18,7 +18,7 @@ class SoalanLazimController extends Controller
     public function index()
     {
         // Index
-        return view('spsm.admin.soalan_lazim.index',[
+        return view('spsm.admin.soalan_lazim.index', [
             'title' => 'Soalan Lazim',
             'leadCrumbs' => 'Soalan Lazim',
             'link' => '/admin/soalan_lazim',
@@ -58,7 +58,7 @@ class SoalanLazimController extends Controller
             'jawapan_my' => 'required',
             'jawapan_en' => 'required',
             'status_id' => 'required',
-            'category_id' => 'required',
+            // 'category_id' => 'required',
         ]);
 
         // User ID
@@ -68,7 +68,7 @@ class SoalanLazimController extends Controller
         SoalanLazim::create($validateData);
 
         // Redirect if success
-        return redirect('soalan_lazim.index')->with('success', 'Soalan Lazim telah berjaya ditambah.');
+        return redirect()->route('soalan_lazim.index')->with('success', 'Soalan Lazim telah berjaya ditambah.');
     }
 
     /**
@@ -90,7 +90,15 @@ class SoalanLazimController extends Controller
      */
     public function edit($id)
     {
-        //
+        // Edit
+        return view('spsm.admin.soalan_lazim.edit', [
+            'title' => 'Kemaskini Soalan Lazim',
+            'leadCrumbs' => 'Soalan Lazim',
+            'link' => '/admin/soalan_lazim',
+            'soalanLazim' => SoalanLazim::find($id),
+            'statuses' => Status::all(),
+            'categories' => SoalanLazimCategory::all(),
+        ]);
     }
 
     /**
@@ -102,7 +110,19 @@ class SoalanLazimController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // Update data
+        $validateData = $request->validate([
+            'soalan_my' => 'required',
+            'soalan_en' => 'required',
+            'jawapan_my' => 'required',
+            'jawapan_en' => 'required',
+            'status_id' => 'required',
+            // 'category_id' => 'required',
+        ]);
+
+        SoalanLazim::where('id', $id)->update($validateData);
+
+        return redirect()->route('soalan_lazim.index')->with('success', 'Soalan Lazim telah berjaya dikemaskini.');
     }
 
     /**
@@ -113,7 +133,10 @@ class SoalanLazimController extends Controller
      */
     public function destroy($id)
     {
-        //
+        // Delete
+        SoalanLazim::find($id)->delete();
+
+        return redirect()->route('soalan_lazim.index')->with('success', 'Soalan Lazim telah berjaya dihapuskan.');
     }
 
     // Soalan Lazim Kategori

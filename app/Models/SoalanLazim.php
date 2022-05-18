@@ -23,9 +23,15 @@ class SoalanLazim extends Model
         return $this->belongsTo(Status::class);
     }
 
-    // Soalan Lazim Category
-    public function category()
+    // Soalan Lazim Parent
+    public function parent()
     {
-        return $this->belongsTo(SoalanLazimCategory::class);
+        return $this->belongsTo(SoalanLazimCategory::class, 'soalan_lazim_parent_id');
+    }
+
+    // Soalan Lazim Child
+    public function child()
+    {
+        return $this->belongsTo(SoalanLazimCategory::class, 'soalan_lazim_child_id');
     }
 }
