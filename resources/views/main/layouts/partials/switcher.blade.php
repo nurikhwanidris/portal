@@ -36,13 +36,13 @@
                 <a class="nav-link dropdown-item dropdown-toggle" href="#"> Info Korporat </a>
                 <ul class="submenu collapse">
                     <li>
-                        <a class="nav-link link-no-deco" href="/info-korp#tab-1">Struktur Organisasi </a>
+                        <a class="nav-link link-no-deco" href="/info-korp#tab-1">Info JUPEM </a>
                     </li>
                     <li>
-                        <a class="nav-link link-no-deco" href="/info-korp#tab-2">Hubungi Kami </a>
+                        <a class="nav-link link-no-deco" href="/info-korp#tab-2">Struktur Organisasi </a>
                     </li>
                     <li>
-                        <a class="nav-link link-no-deco" href="/info-korp#tab-3">Mengenai JUPEM </a>
+                        <a class="nav-link link-no-deco" href="/info-korp#tab-3">Hubungi Kami </a>
                     </li>
                     <li>
                         <a class="nav-link link-no-deco" href="/info-korp#tab-4">Kepakaran Bidang Khusus </a>
