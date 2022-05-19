@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Main;
 use App\Http\Controllers\Controller;
 use App\Models\BeritaTerkini;
 use App\Models\Pengumuman;
+use App\Models\SoalanLazim;
 use App\Models\Visitor;
 use Illuminate\Support\Facades\DB;
 
@@ -59,6 +60,7 @@ class MainController extends Controller
     public function faq()
     {
         return view('main.pages.faq', [
+            'faq' => SoalanLazim::all(),
             'counter' => Visitor::whereMonth('date', '=', now()->format('m'))->get()->count(),
             'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first()
         ]);

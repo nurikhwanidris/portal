@@ -58,7 +58,7 @@ class SoalanLazimController extends Controller
             'jawapan_my' => 'required',
             'jawapan_en' => 'required',
             'status_id' => 'required',
-            // 'category_id' => 'required',
+            'category_id' => 'required',
         ]);
 
         // User ID

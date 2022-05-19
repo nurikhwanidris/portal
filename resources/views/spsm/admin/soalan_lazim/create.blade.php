@@ -39,8 +39,8 @@
                             <label for="" class="col-sm-2 col-form-label col-form-label-sm">Jawapan dalam Bahasa</label>
                             <span class="col-sm-1">:</span>
                             <div class="col-sm-6">
-                                <textarea name="jawapan_my" id="" cols="30" rows="10"
-                                    class="form-control form-control-sm @error('jawapan_my') is-invalid @enderror"></textarea>
+                                <textarea class="form-control jawapan_my" id="jawapan_my" placeholder="Enter the Description" name="jawapan_my"
+                                    rows="4">{{ old('content_my') }}</textarea>
                                 @error('jawapan_my')
                                     <div class="invalid-feedback">
                                         {{ $message }}
@@ -52,8 +52,8 @@
                             <label for="" class="col-sm-2 col-form-label col-form-label-sm">Anwser in English</label>
                             <span class="col-sm-1">:</span>
                             <div class="col-sm-6">
-                                <textarea name="jawapan_en" id="" cols="30" rows="10"
-                                    class="form-control form-control-sm @error('jawapan_en') is-invalid @enderror"></textarea>
+                                <textarea class="form-control jawapan_en" id="jawapan_en" placeholder="Enter the Description" name="jawapan_en"
+                                    rows="4">{{ old('content_my') }}</textarea>
                                 @error('jawapan_en')
                                     <div class="invalid-feedback">
                                         {{ $message }}
@@ -88,15 +88,15 @@
                             <div class="col-sm-3">
                                 <select name="category_id" id="" class="form-control form-control-sm">
                                     <option value="">Sila Pilih</option>
-                                    @foreach ($categories as $kategori_soalan)
-                                        @if (old('category_id') == $kategori_soalan->id)
-                                            <option value="{{ $kategori_soalan->id }}" selected>
-                                                {{ $kategori_soalan->category_name }}
-                                            </option>
-                                        @else
-                                            <option value="{{ $kategori_soalan->id }}">
-                                                {{ $kategori_soalan->category_name }}
-                                            </option>
+                                    @foreach ($categories as $category)
+                                        @if ($category->sort_parent == null)
+                                            <optgroup label="{{ $category->category_name }}">
+                                                @foreach ($category->children as $child)
+                                                    <option value="{{ $child->id }}">
+                                                        {{ $child->category_name }}
+                                                    </option>
+                                                @endforeach
+                                            </optgroup>
                                         @endif
                                     @endforeach
                                 </select>
@@ -117,4 +117,17 @@
             </form>
         </div>
     </div>
+    <script>
+        // Editor MY
+        CKEDITOR.replace('jawapan_my', {
+            filebrowserUploadUrl: "{{ route('pageUpload', ['_token' => csrf_token()]) }}",
+            filebrowserUploadMethod: 'form',
+        });
+
+        // Editor EN
+        CKEDITOR.replace('jawapan_en', {
+            filebrowserUploadUrl: "{{ route('pageUpload', ['_token' => csrf_token()]) }}",
+            filebrowserUploadMethod: 'form',
+        });
+    </script>
 @endsection

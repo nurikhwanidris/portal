@@ -15,4 +15,14 @@ class SoalanLazimCategory extends Model
     {
         return $this->hasMany(SoalanLazim::class);
     }
+
+    public function scopeRoot($query)
+    {
+        $query->whereNull('sort_parent');
+    }
+
+    public function children()
+    {
+        return $this->hasMany(SoalanLazimCategory::class, 'sort_parent');
+    }
 }

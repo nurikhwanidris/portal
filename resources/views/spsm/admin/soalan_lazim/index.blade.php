@@ -36,9 +36,6 @@
                                         <th class="align-middle text-left">
                                             Kategori Induk
                                         </th>
-                                        <th class="align-middle text-left">
-                                            Sub Kategori
-                                        </th>
                                         <th class="align-middle text-center">
                                             Actions
                                         </th>
@@ -54,10 +51,7 @@
                                                 {{ $item->soalan_my }}
                                             </td>
                                             <td class="align-middle text-left">
-                                                {{ $item->parent->category_name }}
-                                            </td>
-                                            <td class="align-middle text-left">
-                                                {{ $item->child->category_name }}
+                                                {{ $item->category->category_name }}
                                             </td>
                                             <td class="align-middle text-center">
                                                 <form action="/spsm/admin/soalan_lazim/{{ $item->id }}" method="post">
