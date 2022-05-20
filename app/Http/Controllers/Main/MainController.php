@@ -111,6 +111,15 @@ class MainController extends Controller
         ]);
     }
 
+    // eKadaster Controller
+    public function eKadaster()
+    {
+        return view('main.pages.ekadaster', [
+            'counter' => Visitor::whereMonth('date', '=', now()->format('m'))->get()->count(),
+            'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first(),
+        ]);
+    }
+
     // Visi-Misi Controller
     public function visiMisi()
     {

@@ -1743,6 +1743,39 @@
                         </div>
                         <!-- TAB STYLE 3 - END -->
 
+                        <!-- ============== -->
+                        <br>
+                        <hr class="solid">
+                        <h4 class="text-light bg-color-primary">Flip Card</h4>
+
+                        <!-- FLIP CARD - START -->
+                        <!-- Level 1 -->
+                        <div class="row mb-5 pb-3">
+                            <div class="col-md-6 col-lg-4 mb-5 mb-lg-0 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="200">
+                                <div class="card flip-card text-center rounded-0">
+                                    <div class="flip-front p-5">
+                                        <div class="flip-content my-4">
+                                            {{-- <strong class="font-weight-extra-bold text-color-dark line-height-1 text-13 mb-3 d-inline-block">Perlis</strong> --}}
+                                            <h4 class="font-weight-bold text-color-primary text-4">PERLIS</h4>
+                                            {{-- <p>Perlis</p> --}}
+                                            <div class="thumb-info-side-image-wrapper">
+                                                <img src="/main/img/flags/flag-perlis.png" class="img-fluid" alt="" style="width: 150px;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flip-back d-flex align-items-center p-5" style="background-image: url(/main/img/flags/back-perlis.png); background-size: cover; background-position: center;">
+                                        <div class="flip-content my-4">
+                                            <h4 class="font-weight-bold text-color-light">eKadaster Negeri Perlis</h4>
+                                            <p class="font-weight-light text-color-light opacity-5">https://ekadaster.pls.jupem.gov.my/</p>
+                                            <a href="https://ekadaster.pls.jupem.gov.my/" target="_blank" class="btn btn-light btn-modern text-color-dark font-weight-bold">TERUSKAN</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+				    </div>
+                    <!-- FLIP CARD  - END -->
+
 
 
 
