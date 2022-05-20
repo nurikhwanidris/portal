@@ -134,6 +134,9 @@ Route::get('/maklum-balas', [MaklumBalasController::class, 'create']);
 // Maklum Balas store route
 Route::post('/maklum-balas/store', [MaklumBalasController::class, 'store']);
 
+// Maklum Balas show route
+Route::get('/maklum-balas/{id}', [MaklumBalasController::class, 'show'])->name('maklum-balas');
+
 // Jabatan Route
 Route::resource('/spsm/admin/jabatan', JabatanUnitController::class)->middleware('auth');
 

@@ -11,4 +11,9 @@ class MaklumBalas extends Model
 
     protected $guarded = ['id'];
 
+    // Maklum Balas Reply
+    public function maklumBalasReply()
+    {
+        return $this->hasMany(MaklumBalasReply::class);
+    }
 }
