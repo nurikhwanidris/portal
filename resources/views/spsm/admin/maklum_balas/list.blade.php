@@ -31,7 +31,7 @@
                                         {{ $loop->iteration }}
                                     </td>
                                     <td class="align-middle text-center">
-                                        {{ $response->created_at }}
+                                        {{ $response->created_at->diffForHumans() }}
                                     </td>
                                     <td class="align-middle">
                                         {{ $response->product }}
@@ -53,7 +53,7 @@
                                     </td>
                                     <td class="align-middle text-center">
                                         @if ($response->status == null)
-                                            <span class="badge badge-pill badge-secondary">
+                                            <span class="badge badge-pill badge-primary">
                                                 Baru
                                             </span>
                                         @elseif ($response->status == '1')
@@ -61,22 +61,26 @@
                                                 Selesai
                                             </span>
                                         @elseif ($response->status == '2')
-                                            <span class="badge badge-pill badge-primary">
+                                            <span class="badge badge-pill badge-info">
                                                 Dibalas
+                                            </span>
+                                        @elseif ($response->status == '3')
+                                            <span class="badge badge-pill badge-dark">
+                                                On Hold
+                                            </span>
+                                        @elseif ($response->status == '4')
+                                            <span class="badge badge-pill badge-warning">
+                                                Balasan Baru
                                             </span>
                                         @endif
                                     </td>
                                     <td class="align-middle text-center">
-                                        <form action="/spsm/admin/maklum-balas/{{ $response->id }}" method="post">
-                                            @method('delete')
-                                            @csrf
-                                            <div class="row-inline">
-                                                <a href="/spsm/admin/maklum-balas/{{ $response->id }}/reply"
-                                                    class="btn btn-link text-info">
-                                                    <i class="fas fa-comment-dots"></i>
-                                                </a>
-                                            </div>
-                                        </form>
+                                        <div class="row-inline">
+                                            <a href="/spsm/admin/maklum-balas/{{ $response->id }}/reply" target="_blank"
+                                                class="btn btn-primary btn-sm">
+                                                <i class="fas fa-comment-dots"></i> Balas
+                                            </a>
+                                        </div>
                                     </td>
                                 </tr>
                             @endforeach

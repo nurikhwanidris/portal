@@ -137,6 +137,15 @@ Route::post('/maklum-balas/store', [MaklumBalasController::class, 'store']);
 // Maklum Balas show route
 Route::get('/maklum-balas/{id}', [MaklumBalasController::class, 'show'])->name('maklum-balas');
 
+// Maklum Balas reply admin route
+Route::get('/spsm/admin/maklum-balas/{id}/reply', [MaklumBalasController::class, 'reply'])->middleware('auth');
+
+// Maklum Balas reply admin store route
+Route::post('/spsm/admin/maklum-balas/balas/{id}', [MaklumBalasController::class, 'adminReply'])->middleware('auth');
+
+// Maklum Balas user reply route
+Route::post('/maklum-balas/balas/{id}', [MaklumBalasController::class, 'userReply']);
+
 // Jabatan Route
 Route::resource('/spsm/admin/jabatan', JabatanUnitController::class)->middleware('auth');
 

@@ -129,39 +129,69 @@
                                 </div>
                                 @if (count($answer) > 0)
                                     @foreach ($answer as $item)
-                                        <div class="row my-3">
+                                        <div class="row">
                                             <label for="" class="col-sm-2 col-form-label col-form-label-sm">Balasan
                                                 Dari</label>
                                             <span class="col-sm-1">:</span>
                                             <div class="col-sm-4">
-                                                <p>
-                                                    {{ $item->user->name }}
-                                                </p>
+                                                @if ($item->user_id == 0)
+                                                    <p>
+                                                        {{ $response->fullName }}
+                                                    </p>
+                                                @else
+                                                    <p>
+                                                        {{ $item->user->name }}
+                                                    </p>
+                                                @endif
                                             </div>
                                         </div>
                                         <div class="row my-3">
-                                            <label for="" class="col-sm-2 col-form-label col-form-label-sm">Isi
-                                                Kandungan</label>
+                                            <label for="" class="col-sm-2 col-form-label col-form-label-sm">Waktu
+                                                Balasan</label>
                                             <span class="col-sm-1">:</span>
                                             <div class="col-sm-4">
                                                 <p>
-                                                    {{ $item->reply }}
+                                                    {{ $item->created_at->diffForHumans() . ' [' . $item->created_at . ']' }}
                                                 </p>
                                             </div>
-                                        </div>
-                                        <form action="/maklum-balas/balasan" method="post">
                                             <div class="row my-3">
                                                 <label for="" class="col-sm-2 col-form-label col-form-label-sm">Isi
                                                     Kandungan</label>
                                                 <span class="col-sm-1">:</span>
                                                 <div class="col-sm-4">
                                                     <p>
-                                                        {{ $response->content }}
+                                                        {{ $item->reply }}
                                                     </p>
                                                 </div>
                                             </div>
-                                        </form>
+                                            <hr>
                                     @endforeach
+                                    <form action="/maklum-balas/balas/{{ $response->id }}" method="post">
+                                        @csrf
+                                        <div class="row mb-3 d-none">
+                                            <label for="" class="col-sm-2 col-form-label col-form-label-sm">ID
+                                                Balasan</label>
+                                            <span class="col-sm-1">:</span>
+                                            <div class="col-sm-4">
+                                                <input type="text" name="id" value="{{ $response->id }}"
+                                                    class="form-control form-control-sm" readonly>
+                                            </div>
+                                        </div>
+                                        <div class="row my-3">
+                                            <label for=""
+                                                class="col-sm-2 col-form-label col-form-label-sm">Balas</label>
+                                            <span class="col-sm-1">:</span>
+                                            <div class="col-lg-9">
+                                                <textarea name="reply" id="" cols="30" rows="10" class="form-control"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-2">
+                                            <div class="col">
+                                                <button type="submit" class="btn btn-primary float-end">Hantar
+                                                    Balasan</button>
+                                            </div>
+                                        </div>
+                                    </form>
                                 @else
                                     <div class="row my-3">
                                         <span>Belum ada apa-apa balasan.</span>
