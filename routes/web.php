@@ -221,7 +221,11 @@ Route::get('/dasar-keselamatan', [MainController::class, 'dasarKeselamatan'])->n
 Route::get('/penafian', [MainController::class, 'penafian'])->name('penafian');
 
 // Info Semasa Route
+
 Route::get('/info-semasa', [MainController::class, 'infoSemasa'])->name('info-semasa');
+
+// eKadaster Route
+Route::get('/eKadaster', [MainController::class, 'eKadaster'])->name('eKadaster');
 
 /*
 |--------------------------------------------------------------------------
