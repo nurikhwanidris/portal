@@ -39,7 +39,7 @@
                         <div class="col">
                             <h2 class="font-weight-normal text-7 mb-0">Memaparkan hasil carian bagi <strong
                                     class="font-weight-extra-bold">{{ $search }}</strong></h2>
-                            <p class="lead mb-0">{{ $total }} carian ditemui.</p>
+                            <p class="lead mb-0">{{ $post->total() }} carian ditemui.</p>
                         </div>
                     </div>
                     <div class="row">
@@ -55,6 +55,31 @@
                                     @foreach ($post as $item)
                                         <li>
                                             <div class="post-info">
+                                                <a href="/carian/papar">{{ $item['title_my'] }}</a>
+                                                <div class="post-meta">
+                                                    @if ($item->type == 'post')
+                                                        <span
+                                                            class="text-dark text-uppercase font-weight-semibold">Post</span>
+                                                    @else
+                                                        <span
+                                                            class="text-dark text-uppercase font-weight-semibold">Page</span>
+                                                    @endif
+                                                    |
+                                                    {{ $item->created_at->diffForHumans() }}
+                                                </div>
+                                            </div>
+                                        </li>
+                                    @endforeach
+                                </ul>
+                                {!! $post->appends(request()->query())->links() !!}
+                            @endif
+                            @if (count($pengumuman) > 0)
+                                <hr>
+                                <h3>Pengumuman</h3>
+                                <ul class="simple-post-list m-0">
+                                    @foreach ($pengumuman as $item)
+                                        <li>
+                                            <div class="post-info">
                                                 <a href="/carian/papar">{{ $item->title_my }}</a>
                                                 <div class="post-meta">
                                                     @if ($item->type == 'post')
@@ -65,14 +90,89 @@
                                                             class="text-dark text-uppercase font-weight-semibold">Page</span>
                                                     @endif
                                                     |
-                                                    Nov 11 2022
+                                                    {{ $item->created_at->diffForHumans() }}
                                                 </div>
                                             </div>
                                         </li>
                                     @endforeach
                                 </ul>
+                                {!! $pengumuman->appends(request()->query())->links() !!}
                             @endif
-                            {!! $post->links() !!}
+                            @if (count($beritaTerkini) > 0)
+                                <hr>
+                                <h3>Pengumuman</h3>
+                                <ul class="simple-post-list m-0">
+                                    @foreach ($beritaTerkini as $item)
+                                        <li>
+                                            <div class="post-info">
+                                                <a href="/carian/papar">{{ $item->title_my }}</a>
+                                                <div class="post-meta">
+                                                    @if ($item->type == 'post')
+                                                        <span
+                                                            class="text-dark text-uppercase font-weight-semibold">Post</span>
+                                                    @else
+                                                        <span
+                                                            class="text-dark text-uppercase font-weight-semibold">Page</span>
+                                                    @endif
+                                                    |
+                                                    {{ $item->created_at->diffForHumans() }}
+                                                </div>
+                                            </div>
+                                        </li>
+                                    @endforeach
+                                </ul>
+                                {!! $beritaTerkini->appends(request()->query())->links() !!}
+                            @endif
+                            @if (count($tender) > 0)
+                                <hr>
+                                <h3>Pengumuman</h3>
+                                <ul class="simple-post-list m-0">
+                                    @foreach ($tender as $item)
+                                        <li>
+                                            <div class="post-info">
+                                                <a href="/carian/papar">{{ $item->title_my }}</a>
+                                                <div class="post-meta">
+                                                    @if ($item->type == 'post')
+                                                        <span
+                                                            class="text-dark text-uppercase font-weight-semibold">Post</span>
+                                                    @else
+                                                        <span
+                                                            class="text-dark text-uppercase font-weight-semibold">Page</span>
+                                                    @endif
+                                                    |
+                                                    {{ $item->created_at->diffForHumans() }}
+                                                </div>
+                                            </div>
+                                        </li>
+                                    @endforeach
+                                </ul>
+                                {!! $tender->appends(request()->query())->links() !!}
+                            @endif
+                            @if (count($sebutHarga) > 0)
+                                <hr>
+                                <h3>Pengumuman</h3>
+                                <ul class="simple-post-list m-0">
+                                    @foreach ($sebutHarga as $item)
+                                        <li>
+                                            <div class="post-info">
+                                                <a href="/carian/papar">{{ $item->title_my }}</a>
+                                                <div class="post-meta">
+                                                    @if ($item->type == 'post')
+                                                        <span
+                                                            class="text-dark text-uppercase font-weight-semibold">Post</span>
+                                                    @else
+                                                        <span
+                                                            class="text-dark text-uppercase font-weight-semibold">Page</span>
+                                                    @endif
+                                                    |
+                                                    {{ $item->created_at->diffForHumans() }}
+                                                </div>
+                                            </div>
+                                        </li>
+                                    @endforeach
+                                </ul>
+                                {!! $sebutHarga->appends(request()->query())->links() !!}
+                            @endif
                         </div>
                     </div>
                 </div>

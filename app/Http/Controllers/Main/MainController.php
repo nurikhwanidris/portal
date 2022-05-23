@@ -6,9 +6,12 @@ use App\Http\Controllers\Controller;
 use App\Models\BeritaTerkini;
 use App\Models\Pengumuman;
 use App\Models\Post;
+use App\Models\Quote;
 use App\Models\SoalanLazim;
+use App\Models\Tender;
 use App\Models\Visitor;
 use Illuminate\Http\Request;
+use Illuminate\Http\Resources\MergeValue;
 use Illuminate\Support\Facades\DB;
 
 
@@ -173,9 +176,13 @@ class MainController extends Controller
         // Posts Table
         $posts = Post::query()
             ->where('title_my', 'LIKE', "%{$search}%")
-            ->orWhere('contents_my', 'LIKE', "%{$search}%")
+            ->orWhere('content_my', 'LIKE', "%{$search}%")
             ->orderBy('created_at', 'desc')
-            ->paginate(10);
+            ->paginate(10)->toArray();
+
+        foreach ($posts as $post) {
+            $post['title'] = str_replace($search, "<span class='highlight'>$search</span>", $post['title']);
+        }
 
         // Pengumuman Table
         $pengumuman = Pengumuman::query()
@@ -191,12 +198,26 @@ class MainController extends Controller
             ->orderBy('created_at', 'desc')
             ->paginate(10);
 
+        // Tender Table
+        $tender = Tender::query()
+            ->where('title_my', 'LIKE', "%{$search}%")
+            ->orderBy('created_at', 'desc')
+            ->paginate(10);
+
+        // Sebut Harga table
+        $sebutHarga = Quote::query()
+            ->where('title_my', 'LIKE', "%{$search}%")
+            ->orderBy('created_at', 'desc')
+            ->paginate(10);
+
         return view('main.pages.carian', [
             'post' => $posts,
             'pengumuman' => $pengumuman,
             'beritaTerkini' => $beritaTerkini,
+            'tender' => $tender,
+            'sebutHarga' => $sebutHarga,
             'search' => $search,
-            'total' => $posts->count() + $pengumuman->count() + $beritaTerkini->count(),
+            // 'total' => $posts->count() + $pengumuman->count() + $beritaTerkini->count(),
             'counter' => Visitor::whereMonth('date', '=', now()->format('m'))->get()->count(),
             'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first(),
         ]);
