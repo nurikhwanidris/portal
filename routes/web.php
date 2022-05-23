@@ -227,6 +227,9 @@ Route::get('/info-semasa', [MainController::class, 'infoSemasa'])->name('info-se
 // eKadaster Route
 Route::get('/eKadaster', [MainController::class, 'eKadaster'])->name('eKadaster');
 
+// Global Search Route
+Route::get('/carian/', [MainController::class, 'carian'])->name('carian');
+
 /*
 |--------------------------------------------------------------------------
 | Read Routes
@@ -241,3 +244,6 @@ Route::get('/info-semasa/berita-terkini/{id}', [MainController::class, 'beritaTe
 
 // Tender & Quotation Read Route
 Route::get('/perolehan/{id}', [MainController::class, 'tenderRead'])->name('tender-read');
+
+// Global Search Read Route
+Route::get('/carian/papar/{id}', [MainController::class, 'carianRead'])->name('carian-read');

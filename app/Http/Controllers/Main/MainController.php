@@ -5,9 +5,12 @@ namespace App\Http\Controllers\Main;
 use App\Http\Controllers\Controller;
 use App\Models\BeritaTerkini;
 use App\Models\Pengumuman;
+use App\Models\Post;
 use App\Models\SoalanLazim;
 use App\Models\Visitor;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+
 
 class MainController extends Controller
 {
@@ -157,6 +160,74 @@ class MainController extends Controller
 
         return view('main.pages.pages', [
             'page' => $beritaTerkini,
+            'counter' => Visitor::whereMonth('date', '=', now()->format('m'))->get()->count(),
+            'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first(),
+        ]);
+    }
+
+    // Global Search
+    public function carian(Request $request)
+    {
+        $search = $request->input('carian');
+
+        // Posts Table
+        $posts = Post::query()
+            ->where('title_my', 'LIKE', "%{$search}%")
+            ->orWhere('contents_my', 'LIKE', "%{$search}%")
+            ->orderBy('created_at', 'desc')
+            ->paginate(10);
+
+        // Pengumuman Table
+        $pengumuman = Pengumuman::query()
+            ->where('title_my', 'LIKE', "%{$search}%")
+            ->orWhere('content_my', 'LIKE', "%{$search}%")
+            ->orderBy('created_at', 'desc')
+            ->paginate(10);
+
+        // Berita Terkini Table
+        $beritaTerkini = BeritaTerkini::query()
+            ->where('title_my', 'LIKE', "%{$search}%")
+            ->orWhere('content_my', 'LIKE', "%{$search}%")
+            ->orderBy('created_at', 'desc')
+            ->paginate(10);
+
+        return view('main.pages.carian', [
+            'post' => $posts,
+            'pengumuman' => $pengumuman,
+            'beritaTerkini' => $beritaTerkini,
+            'search' => $search,
+            'total' => $posts->count() + $pengumuman->count() + $beritaTerkini->count(),
+            'counter' => Visitor::whereMonth('date', '=', now()->format('m'))->get()->count(),
+            'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first(),
+        ]);
+    }
+
+    // Global Search Read
+    public function carianRead($id)
+    {
+        $search = $id;
+
+        // Posts Table
+        $posts = Post::query()
+            ->where('id', '=', $search)
+            ->get();
+
+        // Pengumuman Table
+        $pengumuman = Pengumuman::query()
+            ->where('id', '=', $search)
+            ->get();
+
+        // Berita Terkini Table
+        $beritaTerkini = BeritaTerkini::query()
+            ->where('id', '=', $search)
+            ->get();
+
+        return view('main.pages.carian', [
+            'post' => $posts,
+            'pengumuman' => $pengumuman,
+            'beritaTerkini' => $beritaTerkini,
+            'search' => $search,
+            'total' => $posts->count() + $pengumuman->count() + $beritaTerkini->count(),
             'counter' => Visitor::whereMonth('date', '=', now()->format('m'))->get()->count(),
             'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first(),
         ]);

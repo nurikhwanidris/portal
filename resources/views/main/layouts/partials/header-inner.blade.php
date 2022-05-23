@@ -90,10 +90,10 @@
                                 </a>
                                 <div class="header-nav-features-dropdown header-nav-features-dropdown-mobile-fixed"
                                     id="headerTopSearchDropdown" style="margin-right: -31px; top: 10px;">
-                                    <form role="search" action="page-search-results.html" method="get">
+                                    <form role="search" action="{{ route('carian') }}" method="get">
                                         <div class="simple-search input-group">
-                                            <input class="form-control text-1" id="headerSearch" name="q" type="search"
-                                                value="" placeholder="Search...">
+                                            <input class="form-control text-1" id="headerSearch" name="carian"
+                                                type="search" value="" placeholder="Search...">
                                             <button class="btn" type="submit">
                                                 <i class="fas fa-search header-nav-top-icon"
                                                     style="color:#222 !important;"></i>

@@ -111,9 +111,9 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-lg-12">
-                                    <button type="submit" class="btn btn-primary">Hantar</button>
-                                    <button type="reset" class="btn btn-danger float-end">Reset</button>
+                                <div class="col-lg-8">
+                                    <button type="submit" class="btn btn-primary float-end">Hantar</button>
+                                    <button type="reset" class="btn btn-danger float-start">Reset</button>
                                 </div>
                             </div>
                         </form>
