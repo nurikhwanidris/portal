@@ -215,6 +215,11 @@ Route::get('/info-semasa', [MainController::class, 'infoSemasa'])->name('info-se
 // eKadaster Route
 Route::get('/eKadaster', [MainController::class, 'eKadaster'])->name('eKadaster');
 
+// staps Route
+Route::get('/staps', [MainController::class, 'staps'])->name('staps');
+
+
+
 /*
 |--------------------------------------------------------------------------
 | Read Routes

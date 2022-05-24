@@ -39,10 +39,10 @@
                     </div>
                     <!-- PAGE TITLE - END-->
                     <div role="main" class="main">
-                        <!-- SUB TITLE - START-->
-                        {{-- <h2 class="font-weight-normal text-6 mb-3">Subtitle</h2> --}}
-                        <!-- SUB TITLE - END-->
-                        <!-- FLIP CARD - START -->
+                    <!-- SUB TITLE - START-->
+                    {{-- <h2 class="font-weight-normal text-6 mb-3">Subtitle</h2> --}}
+                    <!-- SUB TITLE - END-->
+                    <!-- FLIP CARD - START -->
                         <!-- Level 1 - START -->
                         <div class="row mb-5 pb-3">
                             <!-- 1 -->
@@ -308,23 +308,20 @@
                             </div>
                         </div>
                         <!-- Level 4 - END -->
+                    <!-- FLIP CARD  - END -->
                     </div>
                 </div>
             </div>
-
-                <!-- FLIP CARD  - END -->
-			    </div>
-
-			<!-- Footer - START -->
-			@include('main.layouts.partials.footer')
-			<!-- Footer - END -->
-
 		</div>
+
+        <!-- Footer - START -->
+        @include('main.layouts.partials.footer')
+        <!-- Footer - END -->
+
+		{{-- </div> --}}
 
 		<!-- Vendor -->
 		@include('main.layouts.partials.scripts')
-
-
 
 	</body>
 </html>
