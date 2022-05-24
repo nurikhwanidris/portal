@@ -171,53 +171,11 @@ class MainController extends Controller
     // Global Search
     public function carian(Request $request)
     {
+
         $search = $request->input('carian');
 
-        // Posts Table
-        $posts = Post::query()
-            ->where('title_my', 'LIKE', "%{$search}%")
-            ->orWhere('content_my', 'LIKE', "%{$search}%")
-            ->orderBy('created_at', 'desc')
-            ->paginate(10)->toArray();
-
-        foreach ($posts as $post) {
-            $post['title'] = str_replace($search, "<span class='highlight'>$search</span>", $post['title']);
-        }
-
-        // Pengumuman Table
-        $pengumuman = Pengumuman::query()
-            ->where('title_my', 'LIKE', "%{$search}%")
-            ->orWhere('content_my', 'LIKE', "%{$search}%")
-            ->orderBy('created_at', 'desc')
-            ->paginate(10);
-
-        // Berita Terkini Table
-        $beritaTerkini = BeritaTerkini::query()
-            ->where('title_my', 'LIKE', "%{$search}%")
-            ->orWhere('content_my', 'LIKE', "%{$search}%")
-            ->orderBy('created_at', 'desc')
-            ->paginate(10);
-
-        // Tender Table
-        $tender = Tender::query()
-            ->where('title_my', 'LIKE', "%{$search}%")
-            ->orderBy('created_at', 'desc')
-            ->paginate(10);
-
-        // Sebut Harga table
-        $sebutHarga = Quote::query()
-            ->where('title_my', 'LIKE', "%{$search}%")
-            ->orderBy('created_at', 'desc')
-            ->paginate(10);
-
         return view('main.pages.carian', [
-            'post' => $posts,
-            'pengumuman' => $pengumuman,
-            'beritaTerkini' => $beritaTerkini,
-            'tender' => $tender,
-            'sebutHarga' => $sebutHarga,
             'search' => $search,
-            // 'total' => $posts->count() + $pengumuman->count() + $beritaTerkini->count(),
             'counter' => Visitor::whereMonth('date', '=', now()->format('m'))->get()->count(),
             'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first(),
         ]);
