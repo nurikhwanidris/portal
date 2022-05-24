@@ -42,7 +42,7 @@
                     <h2 class="font-weight-normal text-6 mb-3">Senarai Stesen</h2>
                     <!-- SUB TITLE - END-->
                     <!-- Button - Stesen - START -->
-                    <div class="row" style="padding-bottom:20px;border: solid 1px red;">
+                    <div class="row">
                         <div class="col">
                             <a href="#" class="btn btn-outline btn-quaternary mb-2 active">Pulau Langkawi</a>
                             <a href="#" class="btn btn-outline btn-quaternary mb-2">Pulau Pinang</a>
@@ -55,7 +55,7 @@
                     <h2 class="font-weight-normal text-6 mb-3">Waktu Air Pasang Surut Untuk Klang</h2>
                     <!-- SUB TITLE - END-->
                     <!-- Button - Pilih hari - START -->
-                    <div class="row" style="padding-bottom:20px;border: solid 1px blue;">
+                    <div class="row">
                         <div class="col">
                             <a href="#" class="btn btn-success mb-2">Semasa</a>
                             <a href="#" class="btn btn-success mb-2">2 Hari</a>
@@ -68,7 +68,7 @@
                         <p class="mb-0 para-align">Jangkaan air pasang surut bagi hari <strong> Selasa, 24 Mei 2022</strong> untuk <strong>Pulau Langkawi</strong> adalah seperti berikut:</p>
                     </div> --}}
                     @livewire('main.staps-table')
-                    
+
 
                 </div>
             </div>
