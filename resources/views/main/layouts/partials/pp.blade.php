@@ -23,7 +23,7 @@
             </a>
         </div>
         <div class="container-pp col-lg-2 featured-box-full featured-box-full-primary">
-            <a href="/#" target="_self">
+            <a href="/staps" target="_self">
                 <img src="/main/img/logo-default/icon-produk-perkhidmatan/staps.png" width="100px" class="image-pp">
                 <div class="overlay-pp">
                     <div class="text-pp font-weight-normal text-app mt-3">Sistem <strong class="font-weight-extra-bold">Air Pasang Surut</strong></div>

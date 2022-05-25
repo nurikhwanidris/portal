@@ -126,6 +126,15 @@ class MainController extends Controller
         ]);
     }
 
+    // staps Controller
+    public function staps()
+    {
+        return view('main.pages.staps', [
+            'counter' => Visitor::whereMonth('date', '=', now()->format('m'))->get()->count(),
+            'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first(),
+        ]);
+    }
+
     // Visi-Misi Controller
     public function visiMisi()
     {
@@ -143,6 +152,7 @@ class MainController extends Controller
             'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first(),
         ]);
     }
+
 
     // Pengumuman Read Controller
     public function pengumumanRead($id)

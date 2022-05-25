@@ -1203,3 +1203,13 @@ li {
 }
 /* Hide search bar added by the jQuery DataTables */
 .dataTables_filter, .dataTables_info { display: none; }
+
+/* Table STAPS */
+.tajuk-tab-staps{
+    padding-top: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 12px;
+    /* font-weight: 500; */
+    color: #3f724a;
+}
