@@ -43,7 +43,7 @@
                                             </a>
                                         </li>
                                         <li class="dropdown dropdown-mega">
-                                            <a class="dropdown-item dropdown-toggle active" href="#">
+                                            <a class="dropdown-item dropdown-toggle active" href="/info-korp#tab-3">
                                                 <div class="center-icon">
                                                     <img alt="Soalan Lazim"
                                                         data-change-src="/main/img/shortcut-icon/faq-small.png"
@@ -90,10 +90,10 @@
                                 </a>
                                 <div class="header-nav-features-dropdown header-nav-features-dropdown-mobile-fixed"
                                     id="headerTopSearchDropdown" style="margin-right: -31px; top: 10px;">
-                                    <form role="search" action="page-search-results.html" method="get">
+                                    <form role="search" action="{{ route('carian') }}" method="get">
                                         <div class="simple-search input-group">
-                                            <input class="form-control text-1" id="headerSearch" name="q" type="search"
-                                                value="" placeholder="Search...">
+                                            <input class="form-control text-1" id="headerSearch" name="carian"
+                                                type="search" value="" placeholder="Search...">
                                             <button class="btn" type="submit">
                                                 <i class="fas fa-search header-nav-top-icon"
                                                     style="color:#222 !important;"></i>
@@ -104,12 +104,14 @@
                             </div>
                         </div>
 
+
                         <!-- W3C Start -->
                         <div
                             class="header-nav-features header-nav-features-light header-nav-features-no-border header-nav-features-lg-show-border order-1 order-lg-2">
                             <div
                                 class="header-nav-feature header-nav-features-cart header-nav-features-cart-big d-inline-flex top-2 ms-2">
-                                <a href="#" class="header-nav-features-toggle" style="color: #ffffff;font-weight: 800;font-size: 12px;}">
+                                <a href="#" class="header-nav-features-toggle"
+                                    style="color: #ffffff;font-weight: 800;font-size: 12px;}">
                                     {{-- <i class="fas fa-life-ring header-nav-top-icon"></i> --}}W3C
                                 </a>
                                 <div class="header-nav-features-dropdown" id="headerTopCartDropdown">
