@@ -1,24 +1,26 @@
 <div>
-    @if (count($post) > 0)
+    @if (!empty($posts))
         <h3>Post</h3>
         <ul class="simple-post-list m-0">
-            @foreach ($post as $item)
+            @foreach ($posts as $item)
                 <li>
                     <div class="post-info">
-                        <a href="/carian/papar">{{ $item['title_my'] }}</a>
+                        <a href="/carian/papar/post/{{ $item['id'] }}">{{ $item['tajuk'] }}</a>
                         <div class="post-meta">
-                            @if ($item->type == 'post')
+                            @if ($item['type'] == 'post')
                                 <span class="text-dark text-uppercase font-weight-semibold">Post</span>
                             @else
                                 <span class="text-dark text-uppercase font-weight-semibold">Page</span>
                             @endif
-                            |
-                            {{ $item->created_at->diffForHumans() }}
+                            | {{ $item['created_at'] }}
+                            <p>
+                                <?= $item['contents_my'] ?>
+                            </p>
                         </div>
                     </div>
                 </li>
             @endforeach
         </ul>
-        {!! $post->appends(request()->query())->links() !!}
+        {!! $data->appends(request()->query())->links() !!}
     @endif
 </div>

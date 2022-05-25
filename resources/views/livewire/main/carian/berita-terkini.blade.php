@@ -6,7 +6,7 @@
             @foreach ($beritaTerkini as $item)
                 <li>
                     <div class="post-info">
-                        <a href="/carian/papar">{{ $item->title_my }}</a>
+                        <a href="/carian/papar/berita-terkini/{{ $item->id }}">{{ $item->title_my }}</a>
                         <div class="post-meta">
                             @if ($item->type == 'post')
                                 <span class="text-dark text-uppercase font-weight-semibold">Post</span>

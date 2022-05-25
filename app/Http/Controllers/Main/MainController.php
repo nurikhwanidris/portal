@@ -181,32 +181,46 @@ class MainController extends Controller
         ]);
     }
 
-    // Global Search Read
-    public function carianRead($id)
+    // Global Search Post Read
+    public function carianPost($id)
     {
-        $search = $id;
-
         // Posts Table
-        $posts = Post::query()
-            ->where('id', '=', $search)
-            ->get();
+        $post = Post::query()
+            ->where('id', '=', $id)
+            ->first();
 
+        return view('main.pages.carian-papar', [
+            'post' => $post,
+            'counter' => Visitor::whereMonth('date', '=', now()->format('m'))->get()->count(),
+            'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first(),
+        ]);
+    }
+
+    // Global Search Pengumuman Read
+    public function carianPengumuman($id)
+    {
         // Pengumuman Table
         $pengumuman = Pengumuman::query()
-            ->where('id', '=', $search)
-            ->get();
+            ->where('id', '=', $id)
+            ->first();
 
+        return view('main.pages.carian-papar', [
+            'pengumuman' => $pengumuman,
+            'counter' => Visitor::whereMonth('date', '=', now()->format('m'))->get()->count(),
+            'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first(),
+        ]);
+    }
+
+    // Global Search Berita Terkini Read
+    public function carianBeritaTerkini($id)
+    {
         // Berita Terkini Table
         $beritaTerkini = BeritaTerkini::query()
-            ->where('id', '=', $search)
-            ->get();
+            ->where('id', '=', $id)
+            ->first();
 
-        return view('main.pages.carian', [
-            'post' => $posts,
-            'pengumuman' => $pengumuman,
+        return view('main.pages.carian-papar', [
             'beritaTerkini' => $beritaTerkini,
-            'search' => $search,
-            'total' => $posts->count() + $pengumuman->count() + $beritaTerkini->count(),
             'counter' => Visitor::whereMonth('date', '=', now()->format('m'))->get()->count(),
             'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first(),
         ]);

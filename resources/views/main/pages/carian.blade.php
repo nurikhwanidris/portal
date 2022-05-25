@@ -62,7 +62,6 @@
 
                             {{-- Sebut Harga --}}
                             @livewire('main.carian.sebut-harga')
-
                         </div>
                     </div>
                 </div>
@@ -75,7 +74,7 @@
                                 <form action="{{ route('carian') }}" method="get">
                                     <div class="input-group input-group-lg">
                                         <input class="form-control h-auto" placeholder="Search..." name="carian" id="s"
-                                            type="text">
+                                            type="text" value="{{ old('search', $search) }}">
                                         <button type="submit" class="btn btn-primary"><i
                                                 class="fas fa-search"></i></button>
                                     </div>

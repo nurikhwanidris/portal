@@ -44,161 +44,82 @@
                 @endif
                 <!-- PAGE TITLE - END-->
                 <div role="main" class="main">
-                    <div class="card">
-                        <div class="card-body">
+                    <div class="row">
+                        @if (!empty($post))
                             <div class="col-lg-12">
-                                <!-- PAGE TITLE - START-->
                                 <div class="row">
                                     <div class="col">
-                                        <div class="text-title-semasa-11" style="padding-bottom: 20px;">Aduan & Maklum
-                                            Balas</div>
+                                        <h3>
+                                            <strong>
+                                                Post
+                                            </strong>
+                                        </h3>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <label for="" class="col-sm-2 col-form-label col-form-label-sm">Nama</label>
-                                    <span class="col-sm-1">:</span>
-                                    <div class="col-sm-4">
-                                        <strong>
-                                            {{ $response->fullName }}
-                                        </strong>
+                                    <div class="col">
+                                        <h4>{{ $post->title_my }}</h4>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <label for="" class="col-sm-2 col-form-label col-form-label-sm">Emel</label>
-                                    <span class="col-sm-1">:</span>
-                                    <div class="col-sm-4">
-                                        <strong>
-                                            {{ $response->email }}
-                                        </strong>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <label for="" class="col-sm-2 col-form-label col-form-label-sm">No Telefon</label>
-                                    <span class="col-sm-1">:</span>
-                                    <div class="col-sm-4">
-                                        <strong>
-                                            {{ $response->phone }}
-                                        </strong>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <label for="" class="col-sm-2 col-form-label col-form-label-sm">Produk</label>
-                                    <span class="col-sm-1">:</span>
-                                    <div class="col-sm-4">
-                                        <strong>
-                                            {{ $response->product }}
-                                        </strong>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <label for="" class="col-sm-2 col-form-label col-form-label-sm">Jenis Soalan</label>
-                                    <span class="col-sm-1">:</span>
-                                    <div class="col-sm-4">
-                                        <strong>
-                                            {{ $response->typeOfQuestion }}
-                                        </strong>
-                                    </div>
-                                </div>
-                                <hr>
-                                <div class="row my-3">
-                                    <label for="" class="col-sm-2 col-form-label col-form-label-sm">Tajuk</label>
-                                    <span class="col-sm-1">:</span>
-                                    <div class="col-sm-4">
-                                        <strong>
-                                            {{ $response->title }}
-                                        </strong>
-                                    </div>
-                                </div>
-                                <div class="row my-3">
-                                    <label for="" class="col-sm-2 col-form-label col-form-label-sm">Isi
-                                        Kandungan</label>
-                                    <span class="col-sm-1">:</span>
-                                    <div class="col-sm-4">
+                                    <div class="col">
                                         <p>
-                                            {{ $response->content }}
+                                            {!! $post->contents_my !!}
                                         </p>
                                     </div>
                                 </div>
-                                <hr>
+                            </div>
+                        @endif
+                        @if (!empty($pengumuman))
+                            <div class="col-lg-12">
                                 <div class="row">
                                     <div class="col">
-                                        <div class="text-title-semasa-11" style="padding-bottom: 20px;">
-                                            Jawapan
-                                        </div>
+                                        <h3>
+                                            <strong>
+                                                Pengumuman
+                                            </strong>
+                                        </h3>
                                     </div>
                                 </div>
-                                @if (count($answer) > 0)
-                                    @foreach ($answer as $item)
-                                        <div class="row">
-                                            <label for="" class="col-sm-2 col-form-label col-form-label-sm">Balasan
-                                                Dari</label>
-                                            <span class="col-sm-1">:</span>
-                                            <div class="col-sm-4">
-                                                @if ($item->user_id == 0)
-                                                    <p>
-                                                        {{ $response->fullName }}
-                                                    </p>
-                                                @else
-                                                    <p>
-                                                        {{ $item->user->name }}
-                                                    </p>
-                                                @endif
-                                            </div>
-                                        </div>
-                                        <div class="row my-3">
-                                            <label for="" class="col-sm-2 col-form-label col-form-label-sm">Waktu
-                                                Balasan</label>
-                                            <span class="col-sm-1">:</span>
-                                            <div class="col-sm-4">
-                                                <p>
-                                                    {{ $item->created_at->diffForHumans() . ' [' . $item->created_at . ']' }}
-                                                </p>
-                                            </div>
-                                            <div class="row my-3">
-                                                <label for="" class="col-sm-2 col-form-label col-form-label-sm">Isi
-                                                    Kandungan</label>
-                                                <span class="col-sm-1">:</span>
-                                                <div class="col-sm-4">
-                                                    <p>
-                                                        {{ $item->reply }}
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <hr>
-                                    @endforeach
-                                    <form action="/maklum-balas/balas/{{ $response->id }}" method="post">
-                                        @csrf
-                                        <div class="row mb-3 d-none">
-                                            <label for="" class="col-sm-2 col-form-label col-form-label-sm">ID
-                                                Balasan</label>
-                                            <span class="col-sm-1">:</span>
-                                            <div class="col-sm-4">
-                                                <input type="text" name="id" value="{{ $response->id }}"
-                                                    class="form-control form-control-sm" readonly>
-                                            </div>
-                                        </div>
-                                        <div class="row my-3">
-                                            <label for=""
-                                                class="col-sm-2 col-form-label col-form-label-sm">Balas</label>
-                                            <span class="col-sm-1">:</span>
-                                            <div class="col-lg-9">
-                                                <textarea name="reply" id="" cols="30" rows="10" class="form-control"></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="row mb-2">
-                                            <div class="col">
-                                                <button type="submit" class="btn btn-primary float-end">Hantar
-                                                    Balasan</button>
-                                            </div>
-                                        </div>
-                                    </form>
-                                @else
-                                    <div class="row my-3">
-                                        <span>Belum ada apa-apa balasan.</span>
+                                <div class="row">
+                                    <div class="col">
+                                        <h4>{{ $pengumuman->title_my }}</h4>
                                     </div>
-                                @endif
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <p>
+                                            {!! $pengumuman->content_my !!}
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+                        @endif
+                        @if (!empty($beritaTerkini))
+                            <div class="col-lg-12">
+                                <div class="row">
+                                    <div class="col">
+                                        <h3>
+                                            <strong>
+                                                Berita Terkini
+                                            </strong>
+                                        </h3>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <h4>{{ $beritaTerkini->title_my }}</h4>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <p>
+                                            {!! $beritaTerkini->content_my !!}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        @endif
                     </div>
                 </div>
             </div>

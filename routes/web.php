@@ -245,5 +245,11 @@ Route::get('/info-semasa/berita-terkini/{id}', [MainController::class, 'beritaTe
 // Tender & Quotation Read Route
 Route::get('/perolehan/{id}', [MainController::class, 'tenderRead'])->name('tender-read');
 
-// Global Search Read Route
-Route::get('/carian/papar/{id}', [MainController::class, 'carianRead'])->name('carian-read');
+// Global Search Post Read Route
+Route::get('/carian/papar/post/{id}', [MainController::class, 'carianPost'])->name('carian-post');
+
+// Global Search Pengumuman Read Route
+Route::get('/carian/papar/pengumuman/{id}', [MainController::class, 'carianPengumuman'])->name('carian-pengumuman');
+
+// Global Search Berita Terkini Read Route
+Route::get('/carian/papar/berita-terkini/{id}', [MainController::class, 'carianBeritaTerkini'])->name('carian-berita-terkini');
