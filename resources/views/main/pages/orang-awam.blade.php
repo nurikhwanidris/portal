@@ -11,9 +11,11 @@
     <meta name="description" content="Laman Web Rasmi JUPEM">
     <meta name="author" content="JUPEM">
 
+    {{-- Livewire style --}}
+    @livewireStyles
+
     <!-- CSS & Script -->
     @include('main.layouts.partials.headerlink')
-    @livewireStyles
 </head>
 
 <body data-plugin-page-transition>
@@ -131,6 +133,6 @@
 </body>
 
 {{-- Livewire script --}}
-    @livewireScripts
+@livewireScripts
 
 </html>

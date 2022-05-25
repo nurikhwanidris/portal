@@ -256,12 +256,3 @@ Route::get('/carian/papar/pengumuman/{id}', [MainController::class, 'carianPengu
 
 // Global Search Berita Terkini Read Route
 Route::get('/carian/papar/berita-terkini/{id}', [MainController::class, 'carianBeritaTerkini'])->name('carian-berita-terkini');
-
-
-/*
-|--------------------------------------------------------------------------
-| Language Routes
-|--------------------------------------------------------------------------
-*/
-
-// English Route
