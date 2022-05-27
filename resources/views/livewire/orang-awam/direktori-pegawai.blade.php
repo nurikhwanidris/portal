@@ -176,15 +176,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="row" style="margin-top: 30px;">
-                    @if ($searchedPegawai)
-                        {{ $searchedPegawai }}
-                    @else
-                        <h2 class="font-weight-bold text-4 mb-0">
-                            {{ $bahagian[0]->deptName }}
-                        </h2>
-                    @endif
-                </div>
                 @if ($searchedPegawai)
                     <div class="row pb-0 pt-3 mb-5">
                         @foreach ($bahagian as $key => $pegawai)

@@ -9,9 +9,9 @@ use Livewire\Component;
 class DirektoriPegawai extends Component
 {
 
+    public $search;
     public $bahagian;
     public $pegawai;
-    public $namaSeksyen;
 
     public $selectedBahagian = null;
     public $searchedPegawai = null;
@@ -35,7 +35,7 @@ class DirektoriPegawai extends Component
     public function updatedSearch($search)
     {
         if (!is_null($search)) {
-            $query = DB::table('pegawais')->select('pegawais.*', 'dp_departments.name_my as deptName')->where('pegawais.name_my', $search)->get();
+            $query = DB::table('pegawais')->select('pegawais.*')->where('pegawais.name_my', $search)->get();
 
             $this->bahagian = $query;
         } else {
