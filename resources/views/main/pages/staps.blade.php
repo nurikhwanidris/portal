@@ -62,11 +62,6 @@
                             <a href="#" class="btn btn-success mb-2">7 Hari</a>
                         </div>
                     </div>
-                    <!-- Button - Pilih hari - END -->
-                    {{-- <div class="col-md-8 ps-md-5">
-                        <p class="mb-0 para-align-title">Waktu pasang surut bagi: <strong> Pulau Langkawi </strong></p>
-                        <p class="mb-0 para-align">Jangkaan air pasang surut bagi hari <strong> Selasa, 24 Mei 2022</strong> untuk <strong>Pulau Langkawi</strong> adalah seperti berikut:</p>
-                    </div> --}}
                     @livewire('main.staps-table')
 
 

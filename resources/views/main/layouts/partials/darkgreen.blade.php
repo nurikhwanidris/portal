@@ -107,8 +107,8 @@
                         </div>
                     </div>
                     <div class="feature-box feature-box-primary col-sm-9" style="padding-top: 10px;">
-                        <a href="#" class="btn btn-modern btn-tertiary mb-2">JUPEM Negeri</a>&nbsp;
-                        <a href="#" class="btn btn-modern btn-secondary mb-2">Direktori Pegawai</a>
+                        <a href="/info-korp#tab-3" class="btn btn-modern btn-tertiary mb-2">JUPEM Negeri</a>&nbsp;
+                        <a href="/orang-awam#tab-4" class="btn btn-modern btn-secondary mb-2">Direktori Pegawai</a>
                     </div>
 
                 </div>

@@ -4,7 +4,13 @@
             <div class="row">
                 <div class="col-12" style="padding-bottom: 20px;">
                     <p class="mb-0 para-align-title">Waktu pasang surut bagi: <strong> Pulau Langkawi </strong></p>
-                    <p class="mb-0 para-align">Jangkaan air pasang surut bagi hari <strong> Selasa, 24 Mei 2022</strong> untuk <strong>Pulau Langkawi</strong> adalah seperti berikut:</p>
+                    <p class="mb-0 para-align">Jangkaan air pasang surut bagi hari
+                        <strong>{{ now()->format('l jS \\of F Y h:i:s A') }}</strong>
+                        untuk <strong>Pulau
+                            Langkawi</strong>
+                        adalah seperti
+                        berikut:
+                    </p>
                 </div>
             </div>
             <div class="row">
@@ -24,14 +30,18 @@
                         <tbody>
                             <tr>
                                 <td>
-                                    <span class="badge badge-tertiary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">Air Surut</span>
+                                    <span
+                                        class="badge badge-tertiary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">Air
+                                        Surut</span>
                                 </td>
                                 <td>2:20am</td>
                                 <td>0.58m</td>
                             </tr>
                             <tr>
                                 <td>
-                                    <span class="badge badge-secondary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">Air Pasang</span>
+                                    <span
+                                        class="badge badge-secondary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">Air
+                                        Pasang</span>
                                 </td>
                                 <td>8:20am</td>
                                 <td>4.58m</td>
@@ -56,14 +66,18 @@
                         <tbody>
                             <tr>
                                 <td>
-                                    <span class="badge badge-tertiary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">Air Surut</span>
+                                    <span
+                                        class="badge badge-tertiary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">Air
+                                        Surut</span>
                                 </td>
                                 <td>2:20am</td>
                                 <td>0.58m</td>
                             </tr>
                             <tr>
                                 <td>
-                                    <span class="badge badge-secondary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">Air Pasang</span>
+                                    <span
+                                        class="badge badge-secondary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">Air
+                                        Pasang</span>
                                 </td>
                                 <td>8:20am</td>
                                 <td>4.58m</td>

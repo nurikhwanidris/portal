@@ -1,6 +1,7 @@
 <div>
     <div class="container pt-3 pb-2" style="margin-bottom: 100px;">
         <div class="row pt-2">
+
             <div class="row">
                 <div class="col">
                     <div class="text-title-semasa-11" style="padding-bottom: 20px;">
@@ -229,10 +230,8 @@
                             <div class="col-sm-6 col-lg-4 mb-4 mb-lg-0">
                                 <span class="thumb-info thumb-info-hide-wrapper-bg thumb-info-no-zoom">
                                     <span class="thumb-info-wrapper">
-                                        <a href="about-me.html">
-                                            <img src="{{ asset('storage/upload/img/pegawai/' . $pegawai->photo) }}"
-                                                class="img-fluid" alt="">
-                                        </a>
+                                        <img src="{{ asset('storage/upload/img/pegawai/' . $pegawai->photo) }}"
+                                            class="img-fluid" alt="">
                                     </span>
                                     <span class="thumb-info-caption">
                                         <ul class="list list-icons list-icons-style-2 list-icons-sm mt-2 appear-animation ul-kite"
@@ -270,46 +269,16 @@
             <div class="col-lg-3 mt-4 mt-lg-0">
                 <aside class="sidebar">
                     <h5 class="font-weight-semi-bold">Senarai Seksyen</h5>
-                    <ul class="nav nav-list flex-column mb-5">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                Seksyen Inovasi Dan
-                                Dokumentasi
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                Seksyen Pembangunan
-                                Kompetensi
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                Seksyen Pengurusan
-                                Korporat
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                Seksyen Pengurusan Sistem
-                                Maklumat
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                Seksyen Penyelarasan
-                                Pembangunan
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                Seksyen Perancangan Dan
-                                Dasar
-                            </a>
-                        </li>
-                    </ul>
+                    @foreach ($bahagiann as $item)
+                        <ul class="nav nav-list flex-column mb-5">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    {{ $item->name_my }}
+                                </a>
+                            </li>
+                        </ul>
+                    @endforeach
                 </aside>
             </div>
         </div>
     </div>
-</div>

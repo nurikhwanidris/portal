@@ -26,10 +26,26 @@ class DirektoriPegawai extends Component
         }
     }
 
+    public function bahagianSeksyen()
+    {
+        $bahagian = $this->bahagian;
+
+        $query = DB::table('dp_departments')->select('dp_departments.*')->where('dp_departments.id', $bahagian)->get();
+
+        return $query;
+
+        if ($query->parent_id != 0) {
+            $query2 = DB::table('dp_departments')->select('dp_departments.*')->where('dp_departments.parent_id', $query->parent_id)->get();
+
+            return $query2;
+        }
+    }
+
     public function render()
     {
         return view('livewire.orang-awam.direktori-pegawai', [
             'bahagianPegawai' => $this->pegawai(),
+            'bahagiann' => $this->bahagianSeksyen(),
         ]);
     }
 }

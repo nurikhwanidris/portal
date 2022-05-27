@@ -1045,7 +1045,7 @@
                     <div class="col-lg-6">
                         <div class="feature-box feature-box-primary col-sm-9" style="padding-top: 90px;">
                             <a href="#" class="btn btn-modern btn-tertiary mb-2">Peta Wisma JUPEM</a>&nbsp;
-                            <a href="awam-direktori-pegawai.php" class="btn btn-modern btn-secondary mb-2">Direktori
+                            <a href="/orang-awam#tab-4" class="btn btn-modern btn-secondary mb-2">Direktori
                                 Pegawai</a>
                         </div>
                     </div>
