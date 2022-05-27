@@ -9,43 +9,39 @@ use Livewire\Component;
 class DirektoriPegawai extends Component
 {
 
-    public $search = '';
+    public $bahagian;
+    public $pegawai;
+    public $namaSeksyen;
 
-    public $bahagian = 1;
+    public $selectedBahagian = null;
+    public $searchedPegawai = null;
 
-    public function pegawai()
+    public function mount()
     {
-        if ($bahagian = $this->bahagian) {
-            $query = DB::table('pegawais')->join('dp_departments', 'pegawais.dept_id', '=', 'dp_departments.id')->select('pegawais.*', 'dp_departments.name_my as deptName')->where('pegawais.dept_id', $bahagian)->get();
+        $query = DB::table('pegawais')->join('dp_departments', 'pegawais.dept_id', '=', 'dp_departments.id')->select('pegawais.*', 'dp_departments.name_my as deptName')->where('pegawais.dept_id', 1)->get();
 
-            return $query;
-        } elseif ($search = $this->search) {
-            $query = DB::table('pegawais')->join('dp_departments', 'pegawais.dept_id', '=', 'dp_departments.id')->select('pegawais.*', 'dp_departments.name_my as deptName')->where('pegawais.name_my', $search)->get();
+        $this->bahagian = $query;
+    }
 
-            return $query;
+    public function updatedSelectedBahagian($bahagian)
+    {
+        if (!is_null($bahagian)) {
+            $query = DB::table('pegawais')->join('dp_departments', 'pegawais.dept_id', '=', 'dp_departments.id')->select('pegawais.*', 'dp_departments.name_my as deptName',)->where('pegawais.dept_id', $bahagian)->get();
+
+            $this->bahagian = $query;
         }
     }
 
-    public function bahagianSeksyen()
+    public function updatedSearch($search)
     {
-        $bahagian = $this->bahagian;
+        if (!is_null($search)) {
+            $query = DB::table('pegawais')->select('pegawais.*', 'dp_departments.name_my as deptName')->where('pegawais.name_my', $search)->get();
 
-        $query = DB::table('dp_departments')->select('dp_departments.*')->where('dp_departments.id', $bahagian)->get();
+            $this->bahagian = $query;
+        } else {
+            $query = DB::table('pegawais')->join('dp_departments', 'pegawais.dept_id', '=', 'dp_departments.id')->select('pegawais.*', 'dp_departments.name_my as deptName',)->where('pegawais.dept_id', 1)->get();
 
-        return $query;
-
-        if ($query->parent_id != 0) {
-            $query2 = DB::table('dp_departments')->select('dp_departments.*')->where('dp_departments.parent_id', $query->parent_id)->get();
-
-            return $query2;
+            $this->bahagian = $query;
         }
-    }
-
-    public function render()
-    {
-        return view('livewire.orang-awam.direktori-pegawai', [
-            'bahagianPegawai' => $this->pegawai(),
-            'bahagiann' => $this->bahagianSeksyen(),
-        ]);
     }
 }

@@ -14,7 +14,7 @@
                     <div class="featured-boxes featured-boxes-style-3 featured-boxes-flat">
                         <div class="col">
                             <span>Bahagian</span>
-                            <select wire:model='bahagian' class="form-select form-select-sm"
+                            <select wire:model='selectedBahagian' class="form-select form-select-sm"
                                 aria-label=".form-select-sm example">
                                 <option value="1" class="department_dropdown_option">PEJABAT KETUA PENGARAH UKUR DAN
                                     PEMETAAN MALAYSIA</option>
@@ -170,103 +170,224 @@
                     <div style="margin-top: 10px;">
                         Nama
                         <div class="input-group rounded">
-                            <input wire:model='search' type="search" class="form-control rounded"
+                            <input wire:model='searchedPegawai' type="search" class="form-control rounded"
                                 placeholder="Sila taip nama pegawai" aria-label="Search"
                                 aria-describedby="search-addon" />
-                            <span class="input-group-text border-0" id="search-addon">
-                                <i class="fas fa-search"></i>
-                            </span>
                         </div>
                     </div>
                 </div>
                 <div class="row" style="margin-top: 30px;">
-                    <h2 class="font-weight-bold text-4 mb-0">
-                        {{ $bahagianPegawai[0]->deptName }}
-                    </h2>
+                    @if ($searchedPegawai)
+                        {{ $searchedPegawai }}
+                    @else
+                        <h2 class="font-weight-bold text-4 mb-0">
+                            {{ $bahagian[0]->deptName }}
+                        </h2>
+                    @endif
                 </div>
-                <div class="row" style="margin-top: 10px;">
-                    <div class="col-md-5 order-md-2 mb-4 mb-lg-0 appear-animation"
-                        data-appear-animation="fadeInLeftShorter">
-                        @if ($bahagianPegawai[0]->name_my == 'KOSONG')
-                            <img src="{{ asset('storage/upload/img/default-potrait-1648800867.jpg') }}"
-                                class="img-fluid" alt="" width="400" height="400">
-                        @else
-                            <img src="{{ asset('storage/upload/img/pegawai/' . $bahagianPegawai[0]->photo) }}"
-                                class="img-fluid" alt="" width="400" height="400">
-                        @endif
+                @if ($searchedPegawai)
+                    <div class="row pb-0 pt-3 mb-5">
+                        @foreach ($bahagian as $key => $pegawai)
+                            @if ($key > 0)
+                                @if ($pegawai['name_my'] == 'KOSONG')
+                                    <div class="col-sm-6 col-lg-4 mb-4 mb-lg-0">
+                                        <span class="thumb-info thumb-info-hide-wrapper-bg thumb-info-no-zoom">
+                                            <span class="thumb-info-wrapper">
+                                                <img src="{{ asset('storage/upload/img/default-potrait-1648800867.jpg') }}"
+                                                    class="img-fluid" alt="">
+                                            </span>
+                                            <span class="thumb-info-caption">
+                                                <ul
+                                                    class="list list-icons list-icons-style-2 list-icons-sm mt-2  ul-kite">
+                                                    <h4 class="font-weight-bold mb-2 size-text-standard">
+                                                        {{ $loop->iteration }}.
+                                                        {{ $pegawai['name_my'] }}</h4>
+                                                    </h4>
+                                                    <h2 class="font-weight-bold mb-0 pt-0 mt-0 size-text-standard-2">
+                                                        {{ $pegawai['jawatan_my'] }}
+                                                    </h2>
+                                                    <li class="li-kite">
+                                                        <i class="fas fa-envelope top-6"></i>
+                                                        <strong>Email:</strong><br>
+                                                        <a
+                                                            href="mailto:{{ $pegawai['email'] }}">{{ $pegawai['email'] }}</a>
+                                                    </li>
+                                                    <li class="li-kite">
+                                                        <i class="fas fa-phone top-6"></i>
+                                                        <strong>Tel:</strong><br>
+                                                        {{ $pegawai['phone_no'] }}
+                                                    </li>
+                                                    <li class="li-kite">
+                                                        <i class="fas fa-fax top-6"></i>
+                                                        <strong>Faks:</strong><br>
+                                                        {{ $pegawai['fax_no'] }}
+                                                    </li>
+                                                </ul>
+                                            </span>
+                                        </span>
+                                    </div>
+                                @else
+                                    <div class="col-sm-6 col-lg-4 mb-4 mb-lg-0">
+                                        <span class="thumb-info thumb-info-hide-wrapper-bg thumb-info-no-zoom">
+                                            <span class="thumb-info-wrapper">
+                                                <img src="{{ asset('storage/upload/img/pegawai/' . $pegawai['photo']) }}"
+                                                    class="img-fluid" alt="">
+                                            </span>
+                                            <span class="thumb-info-caption">
+                                                <ul
+                                                    class="list list-icons list-icons-style-2 list-icons-sm mt-2  ul-kite">
+                                                    <h4 class="font-weight-bold mb-2 size-text-standard">
+                                                        {{ $loop->iteration }}.
+                                                        {{ $pegawai['name_my'] }}</h4>
+                                                    </h4>
+                                                    <h2 class="font-weight-bold mb-0 pt-0 mt-0 size-text-standard-2">
+                                                        {{ $pegawai['jawatan_my'] }}
+                                                    </h2>
+                                                    <li class="li-kite">
+                                                        <i class="fas fa-envelope top-6"></i>
+                                                        <strong>Email:</strong><br>
+                                                        <a
+                                                            href="mailto:{{ $pegawai['email'] }}">{{ $pegawai['email'] }}</a>
+                                                    </li>
+                                                    <li class="li-kite">
+                                                        <i class="fas fa-phone top-6"></i>
+                                                        <strong>Tel:</strong><br>
+                                                        {{ $pegawai['phone_no'] }}
+                                                    </li>
+                                                    <li class="li-kite">
+                                                        <i class="fas fa-fax top-6"></i>
+                                                        <strong>Faks:</strong><br>
+                                                        {{ $pegawai['fax_no'] }}
+                                                    </li>
+                                                </ul>
+                                            </span>
+                                        </span>
+                                    </div>
+                                @endif
+                            @endif
+                        @endforeach
                     </div>
-                    <div class="col-md-7 order-2">
-                        <ul class="list list-icons list-icons-style-2 list-icons-sm mt-2 appear-animation ul-kite"
-                            data-appear-animation="maskUp" data-appear-animation-delay="300">
-                            <h4 class="font-weight-bold mb-2 size-text-standard">1.
-                                {{ $bahagianPegawai[0]->name_my }}
-                            </h4>
-                            <h2 class="font-weight-bold mb-0 pt-0 mt-0 size-text-standard-2">
-                                {{ $bahagianPegawai[0]->jawatan_my }}
-                            </h2>
-                            <li class="li-kite">
-                                <i class="fas fa-envelope top-6"></i>
-                                <strong>Email:</strong><br>
-                                <a
-                                    href="mailto:{{ $bahagianPegawai[0]->email }}">{{ $bahagianPegawai[0]->email }}</a>
-                            </li>
-                            <li class="li-kite">
-                                <i class="fas fa-phone top-6"></i>
-                                <strong>Tel:</strong><br>
-                                {{ $bahagianPegawai[0]->phone_no }}
-                            </li>
-                            <li class="li-kite">
-                                <i class="fas fa-fax top-6"></i>
-                                <strong>Faks:</strong><br>
-                                {{ $bahagianPegawai[0]->fax_no }}
-                            </li>
-                        </ul>
+                @else
+                    <div class="row" style="margin-top: 10px;">
+                        <div class="col-md-5 order-md-2 mb-4 mb-lg-0">
+                            @if ($bahagian[0]->name_my == 'KOSONG')
+                                <img src="{{ asset('storage/upload/img/default-potrait-1648800867.jpg') }}"
+                                    class="img-fluid" alt="" width="400" height="400">
+                            @else
+                                <img src="{{ asset('storage/upload/img/pegawai/' . $bahagian[0]->photo) }}"
+                                    class="img-fluid" alt="" width="400" height="400">
+                            @endif
+                        </div>
+                        <div class="col-md-7 order-2">
+                            <ul class="list list-icons list-icons-style-2 list-icons-sm mt-2 ul-kite">
+                                <h4 class="font-weight-bold mb-2 size-text-standard">1.
+                                    {{ $bahagian[0]->name_my }}
+                                </h4>
+                                <h2 class="font-weight-bold mb-0 pt-0 mt-0 size-text-standard-2">
+                                    {{ $bahagian[0]->jawatan_my }}
+                                </h2>
+                                <li class="li-kite">
+                                    <i class="fas fa-envelope top-6"></i>
+                                    <strong>Email:</strong><br>
+                                    <a href="mailto:{{ $bahagian[0]->email }}">{{ $bahagian[0]->email }}</a>
+                                </li>
+                                <li class="li-kite">
+                                    <i class="fas fa-phone top-6"></i>
+                                    <strong>Tel:</strong><br>
+                                    {{ $bahagian[0]->phone_no }}
+                                </li>
+                                <li class="li-kite">
+                                    <i class="fas fa-fax top-6"></i>
+                                    <strong>Faks:</strong><br>
+                                    {{ $bahagian[0]->fax_no }}
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div class="row pb-0 pt-3 mb-5 appear-animation" data-appear-animation="fadeInUpShorter"
-                    data-appear-animation-delay="200">
-                    @foreach ($bahagianPegawai as $key => $pegawai)
-                        @if ($key > 0)
-                            <div class="col-sm-6 col-lg-4 mb-4 mb-lg-0">
-                                <span class="thumb-info thumb-info-hide-wrapper-bg thumb-info-no-zoom">
-                                    <span class="thumb-info-wrapper">
-                                        <img src="{{ asset('storage/upload/img/pegawai/' . $pegawai->photo) }}"
-                                            class="img-fluid" alt="">
-                                    </span>
-                                    <span class="thumb-info-caption">
-                                        <ul class="list list-icons list-icons-style-2 list-icons-sm mt-2 appear-animation ul-kite"
-                                            data-appear-animation="maskUp" data-appear-animation-delay="300">
-                                            <h4 class="font-weight-bold mb-2 size-text-standard">
-                                                {{ $loop->iteration }}.
-                                                {{ $pegawai->name_my }}</h4>
-                                            </h4>
-                                            <h2 class="font-weight-bold mb-0 pt-0 mt-0 size-text-standard-2">
-                                                {{ $pegawai->jawatan_my }}
-                                            </h2>
-                                            <li class="li-kite">
-                                                <i class="fas fa-envelope top-6"></i>
-                                                <strong>Email:</strong><br>
-                                                <a href="mailto:{{ $pegawai->email }}">{{ $pegawai->email }}</a>
-                                            </li>
-                                            <li class="li-kite">
-                                                <i class="fas fa-phone top-6"></i>
-                                                <strong>Tel:</strong><br>
-                                                {{ $pegawai->phone_no }}
-                                            </li>
-                                            <li class="li-kite">
-                                                <i class="fas fa-fax top-6"></i>
-                                                <strong>Faks:</strong><br>
-                                                {{ $pegawai->fax_no }}
-                                            </li>
-                                        </ul>
-                                    </span>
-                                </span>
-                            </div>
-                        @endif
-                    @endforeach
-                </div>
+                    <div class="row pb-0 pt-3 mb-5">
+                        @foreach ($bahagian as $key => $pegawai)
+                            @if ($key > 0)
+                                @if ($pegawai->name_my == 'KOSONG')
+                                    <div class="col-sm-6 col-lg-4 mb-4 mb-lg-0">
+                                        <span class="thumb-info thumb-info-hide-wrapper-bg thumb-info-no-zoom">
+                                            <span class="thumb-info-wrapper">
+                                                <img src="{{ asset('storage/upload/img/default-potrait-1648800867.jpg') }}"
+                                                    class="img-fluid" alt="">
+                                            </span>
+                                            <span class="thumb-info-caption">
+                                                <ul
+                                                    class="list list-icons list-icons-style-2 list-icons-sm mt-2  ul-kite">
+                                                    <h4 class="font-weight-bold mb-2 size-text-standard">
+                                                        {{ $loop->iteration }}.
+                                                        {{ $pegawai->name_my }}</h4>
+                                                    </h4>
+                                                    <h2 class="font-weight-bold mb-0 pt-0 mt-0 size-text-standard-2">
+                                                        {{ $pegawai->jawatan_my }}
+                                                    </h2>
+                                                    <li class="li-kite">
+                                                        <i class="fas fa-envelope top-6"></i>
+                                                        <strong>Email:</strong><br>
+                                                        <a
+                                                            href="mailto:{{ $pegawai->email }}">{{ $pegawai->email }}</a>
+                                                    </li>
+                                                    <li class="li-kite">
+                                                        <i class="fas fa-phone top-6"></i>
+                                                        <strong>Tel:</strong><br>
+                                                        {{ $pegawai->phone_no }}
+                                                    </li>
+                                                    <li class="li-kite">
+                                                        <i class="fas fa-fax top-6"></i>
+                                                        <strong>Faks:</strong><br>
+                                                        {{ $pegawai->fax_no }}
+                                                    </li>
+                                                </ul>
+                                            </span>
+                                        </span>
+                                    </div>
+                                @else
+                                    <div class="col-sm-6 col-lg-4 mb-4 mb-lg-0">
+                                        <span class="thumb-info thumb-info-hide-wrapper-bg thumb-info-no-zoom">
+                                            <span class="thumb-info-wrapper">
+                                                <img src="{{ asset('storage/upload/img/pegawai/' . $pegawai->photo) }}"
+                                                    class="img-fluid" alt="">
+                                            </span>
+                                            <span class="thumb-info-caption">
+                                                <ul
+                                                    class="list list-icons list-icons-style-2 list-icons-sm mt-2  ul-kite">
+                                                    <h4 class="font-weight-bold mb-2 size-text-standard">
+                                                        {{ $loop->iteration }}.
+                                                        {{ $pegawai->name_my }}</h4>
+                                                    </h4>
+                                                    <h2 class="font-weight-bold mb-0 pt-0 mt-0 size-text-standard-2">
+                                                        {{ $pegawai->jawatan_my }}
+                                                    </h2>
+                                                    <li class="li-kite">
+                                                        <i class="fas fa-envelope top-6"></i>
+                                                        <strong>Email:</strong><br>
+                                                        <a
+                                                            href="mailto:{{ $pegawai->email }}">{{ $pegawai->email }}</a>
+                                                    </li>
+                                                    <li class="li-kite">
+                                                        <i class="fas fa-phone top-6"></i>
+                                                        <strong>Tel:</strong><br>
+                                                        {{ $pegawai->phone_no }}
+                                                    </li>
+                                                    <li class="li-kite">
+                                                        <i class="fas fa-fax top-6"></i>
+                                                        <strong>Faks:</strong><br>
+                                                        {{ $pegawai->fax_no }}
+                                                    </li>
+                                                </ul>
+                                            </span>
+                                        </span>
+                                    </div>
+                                @endif
+                            @endif
+                        @endforeach
+                    </div>
+                @endif
             </div>
-            <div class="col-lg-3 mt-4 mt-lg-0">
+            {{-- <div class="col-lg-3 mt-4 mt-lg-0">
                 <aside class="sidebar">
                     <h5 class="font-weight-semi-bold">Senarai Seksyen</h5>
                     @foreach ($bahagiann as $item)
@@ -279,6 +400,6 @@
                         </ul>
                     @endforeach
                 </aside>
-            </div>
+            </div> --}}
         </div>
     </div>
