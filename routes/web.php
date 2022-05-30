@@ -9,7 +9,6 @@ use App\Http\Controllers\Admin\LaporanMesyuaratController;
 use App\Http\Controllers\Admin\KeratanAkhbarController;
 use App\Http\Controllers\Admin\MediaController;
 use App\Http\Controllers\Admin\PengumumanController;
-use App\Http\Livewire\InfoSemasa\Pengumuman;
 use App\Http\Controllers\Admin\PopupController;
 use App\Http\Controllers\Admin\QuoteController;
 use App\Http\Controllers\Admin\TenderController;
@@ -25,6 +24,7 @@ use App\Http\Controllers\Admin\TransaksiController;
 use App\Http\Controllers\Admin\SoalanLazimController;
 use App\Http\Controllers\Main\MainController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\App;
 
 /*
 |--------------------------------------------------------------------------
@@ -259,3 +259,14 @@ Route::get('/carian/papar/pengumuman/{id}', [MainController::class, 'carianPengu
 
 // Global Search Berita Terkini Read Route
 Route::get('/carian/papar/berita-terkini/{id}', [MainController::class, 'carianBeritaTerkini'])->name('carian-berita-terkini');
+
+// Test Language
+Route::get('/greeting/{locale}', function ($locale) {
+    if (!in_array($locale, ['en', 'ms'])) {
+        abort(400);
+    }
+
+    App::setLocale($locale);
+
+    //
+});

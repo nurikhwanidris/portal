@@ -17,9 +17,15 @@
                 <!-- Logo - END -->
                 <!-- Nama Page - START -->
                 <div class="header-column" style="padding: 10px 20px 20px 20px;">
-                    <div class="header-row text-header-small">Laman Web Rasmi</div>
-                    <div class="header-row text-header-main">Jabatan Ukur Dan Pemetaan Malaysia</div>
-                    <div class="header-row text-header-kementerian">Kementerian Tenaga dan Sumber Asli</div>
+                    <div class="header-row text-header-small">
+                        {{ __('bahasa.Official Website') }}
+                    </div>
+                    <div class="header-row text-header-main">
+                        {{ __('bahasa.Department of Survey and Mapping Malaysia') }}
+                    </div>
+                    <div class="header-row text-header-kementerian">
+                        {{ __('bahasa.Ministry of Energy and Natural Resources') }}
+                    </div>
                 </div>
                 <!-- Nama Page  - END -->
                 <!-- Buttons -START -->
@@ -38,7 +44,8 @@
                                                     <img alt="Soalan Lazim"
                                                         data-change-src="/main/img/shortcut-icon/faq-small.png"
                                                         src="/main/img/shortcut-icon/faq-small.png">
-                                                    <div class="text-header-icon">Soalan Lazim</div>
+                                                    <div class="text-header-icon">{{ __('bahasa.FAQ') }}
+                                                    </div>
                                                 </div>
                                             </a>
                                         </li>
@@ -48,7 +55,8 @@
                                                     <img alt="Soalan Lazim"
                                                         data-change-src="/main/img/shortcut-icon/faq-small.png"
                                                         src="/main/img/shortcut-icon/hubungi-small.png">
-                                                    <div class="text-header-icon">Hubungi Kami</div>
+                                                    <div class="text-header-icon">{{ __('bahasa.Contact Us') }}
+                                                    </div>
                                                 </div>
                                             </a>
                                         </li>
@@ -58,7 +66,8 @@
                                                     <img alt="Soalan Lazim"
                                                         data-change-src="/main/img/shortcut-icon/faq-small.png"
                                                         src="/main/img/shortcut-icon/maklumbalas-small.png">
-                                                    <div class="text-header-icon">Aduan & Maklum Balas</div>
+                                                    <div class="text-header-icon">
+                                                        {{ __('bahasa.Feedback & Complaint') }}</div>
                                                 </div>
                                             </a>
                                         </li>
@@ -68,7 +77,7 @@
                                                     <img alt="Soalan Lazim"
                                                         data-change-src="/main/img/shortcut-icon/faq-small.png"
                                                         src="/main/img/shortcut-icon/peta-small.png">
-                                                    <div class="text-header-icon">Peta Laman</div>
+                                                    <div class="text-header-icon">{{ __('bahasa.Site Map') }}</div>
                                                 </div>
                                             </a>
                                         </li>
@@ -119,7 +128,7 @@
                                     <ol class="mini-products-list">
                                         <li class="item">
                                             <div class="product-details">
-                                                <p class="qty-price">Bahasa </p>
+                                                <p class="qty-price">{{ __('bahasa.Language') }} </p>
                                                 <p class="product-name">
                                                     <a href="#"><img src="/main/img/shortcut-icon/my.svg" alt="BM"
                                                             class="header-nav-top-icon-img flag-w3c"> </a>
@@ -132,7 +141,7 @@
                                     <ol class="mini-products-list">
                                         <li class="item">
                                             <div class="product-details">
-                                                <p class="qty-price">Warna Font </p>
+                                                <p class="qty-price">{{ __('bahasa.Font Color') }}</p>
                                                 <p class="product-name">
                                                 <div>
                                                     <span class="dot-w3c dot-w3c-1"></span>
@@ -148,7 +157,9 @@
                                     <ol class="mini-products-list">
                                         <li class="item">
                                             <div class="product-details">
-                                                <p class="qty-price">Saiz Font </p>
+                                                <p class="qty-price">
+                                                    {{ __('bahasa.Font Size') }}
+                                                </p>
                                                 <p class="product-name">
                                                     <a href="#" style="font-size: 10px;">A &nbsp;</a>
                                                     <a href="#" style="font-size: 12px;">A &nbsp;</a>
@@ -160,7 +171,7 @@
                                     <ol class="mini-products-list">
                                         <li class="item">
                                             <div class="product-details">
-                                                <p class="qty-price">Bantuan </p>
+                                                <p class="qty-price">{{ __('bahasa.Help') }} </p>
                                                 <p class="product-name">
                                                     <a href="#">
                                                         <img src="/main/img/shortcut-icon/manual-colour.svg"
