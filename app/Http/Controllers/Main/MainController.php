@@ -13,6 +13,7 @@ use App\Models\Tender;
 use App\Models\Visitor;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\App;
 
 
 class MainController extends Controller

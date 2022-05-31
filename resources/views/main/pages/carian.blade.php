@@ -71,7 +71,7 @@
 
                         <div class="row pb-4">
                             <div class="col">
-                                <form action="{{ route('carian') }}" method="get">
+                                <form action="{{ route('carian', app()->getLocale()) }}" method="get">
                                     <div class="input-group input-group-lg">
                                         <input class="form-control h-auto" placeholder="Search..." name="carian" id="s"
                                             type="text" value="{{ old('search', $search) }}">

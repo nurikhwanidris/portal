@@ -2,6 +2,7 @@
 
 return [
     // Landing Page
+    "National Coat of Arms" => "Jata Negara",
     "Official Website" => "Laman Web Rasmi",
     "Department of Survey and Mapping Malaysia" => "Jabatan Ukur Dan Pemetaan Malaysia",
     "Ministry of Energy and Natural Resources" => "Kementerian Tenaga dan Sumber Asli",
@@ -29,7 +30,7 @@ return [
     "Operating Hours" => "Waktu Operasi",
     "Isnin - Khamis" => "Monday - Thursday",
     "Friday" => "Jumaat",
-    "Saturday - Sunday / Regional Holiday"=>"Sabtu - Ahad / Hari Kelepasan Am",
+    "Saturday - Sunday / Regional Holiday" => "Sabtu - Ahad / Hari Kelepasan Am",
     "7:45 am - 12:30 pm" => "7:45 Pagi - 12:30 T/Hari",
     "2:00 pm - 4:45 pm" => "2:00 Ptg - 4:45 Ptg",
     "7:45 am - 12:00 pm" => "7:45 Pagi - 12:00 T/hari",
@@ -51,7 +52,7 @@ return [
 
     // Info semasa
     "Current Information" => "Info Semasa",
-    "Client's Charter" => "Piagam Pelanggan",
+    "Client Charter" => "Piagam Pelanggan",
 
     // Info Korp
     "Corporate Information" => "Info Korp",
@@ -71,13 +72,14 @@ return [
     "Tender Period" => "Tempoh Tender",
     "Tender Time" => "Masa Tender",
     "Briefing" => "Taklimat",
-    "Download Client's Charter for"=> "Muat Turun Prestasi Piagam Pelanggan bagi  ",
+    "Download Client Charter for" => "Muat Turun Prestasi Piagam Pelanggan bagi  ",
 
     // Warga JUPEM
     "Work Sheet" => "Kertas Kerja",
     "Staff Exchange" => "Pertukaran Pegawai",
     "Meeting Report" => "Laporan Mesyuarat",
     "Public Sector Inovation" => "Inovasi Sektor Awam",
+    "Development Paper" => "Kertas Pembentangan",
     "Development Paper" => "Kertas Pembentangan",
     "Policy, Budget & Offical Documents" => "Polisi, Belanjawan & Dokumen Sah",
     "Certificate & Recognition Documents" => "Dokumen Pensijilan & Pengiktirafan",

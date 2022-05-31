@@ -184,89 +184,91 @@ Route::get('/spsm/admin/soalan_lazim/kategori', [SoalanLazimController::class, '
 |--------------------------------------------------------------------------
 */
 
-// Index Route
-Route::get('/', [MainController::class, 'index'])->middleware('visitor');
+Route::redirect('/', 'ms');
 
-// Info Korp route
-Route::get('/info-korp', [MainController::class, 'infoKorp'])->name('info-korp');
+Route::group(['prefix' => '{language}'], function () {
 
-// Visi Misi route
-Route::get('/visi-misi', [MainController::class, 'visiMisi'])->name('visi-misi');
+    // Index Route
+    Route::get('/', [MainController::class, 'index'])->middleware('visitor')->name('index');
 
-// Tugas Peranan Route
-Route::get('/tugas-peranan', [MainController::class, 'tugasPeranan'])->name('tugas-peranan');
+    // Info Korp route
+    Route::get('/info-korp', [MainController::class, 'infoKorp'])->name('info-korp');
 
-// Orang Awam Route
-Route::get('/orang-awam', [MainController::class, 'orangAwam'])->name('orang-awam');
+    // Visi Misi route
+    Route::get('/visi-misi', [MainController::class, 'visiMisi'])->name('visi-misi');
 
-// Page Element Route
-Route::get('/page-element', [MainController::class, 'pageElement']);
+    // Tugas Peranan Route
+    Route::get('/tugas-peranan', [MainController::class, 'tugasPeranan'])->name('tugas-peranan');
 
-// Warga Jupem Route
-Route::get('/warga-jupem', [MainController::class, 'wargaJupem'])->name('warga-jupem');
+    // Orang Awam Route
+    Route::get('/orang-awam', [MainController::class, 'orangAwam'])->name('orang-awam');
 
-// FAQ Route
-Route::get('/faq', [MainController::class, 'faq'])->name('faq');
+    // Page Element Route
+    Route::get('/page-element', [MainController::class, 'pageElement']);
 
-// Sitemap Route
-Route::get('/sitemap', [MainController::class, 'sitemap'])->name('sitemap');
+    // Warga Jupem Route
+    Route::get('/warga-jupem', [MainController::class, 'wargaJupem'])->name('warga-jupem');
 
-// Dasar Privasi Route
-Route::get('/dasar-privasi', [MainController::class, 'dasarPrivasi'])->name('dasar-privasi');
+    // FAQ Route
+    Route::get('/faq', [MainController::class, 'faq'])->name('faq');
 
-// Dasar Keselamatan Route
-Route::get('/dasar-keselamatan', [MainController::class, 'dasarKeselamatan'])->name('dasar-keselamatan');
+    // Sitemap Route
+    Route::get('/sitemap', [MainController::class, 'sitemap'])->name('sitemap');
 
-// Dasar Penafian Route
-Route::get('/penafian', [MainController::class, 'penafian'])->name('penafian');
+    // Dasar Privasi Route
+    Route::get('/dasar-privasi', [MainController::class, 'dasarPrivasi'])->name('dasar-privasi');
 
-// Info Semasa Route
+    // Dasar Keselamatan Route
+    Route::get('/dasar-keselamatan', [MainController::class, 'dasarKeselamatan'])->name('dasar-keselamatan');
 
-Route::get('/info-semasa', [MainController::class, 'infoSemasa'])->name('info-semasa');
+    // Dasar Penafian Route
+    Route::get('/penafian', [MainController::class, 'penafian'])->name('penafian');
 
-// eKadaster Route
-Route::get('/eKadaster', [MainController::class, 'eKadaster'])->name('eKadaster');
+    // Info Semasa Route
 
-// staps Route
-Route::get('/staps', [MainController::class, 'staps'])->name('staps');
+    Route::get('/info-semasa', [MainController::class, 'infoSemasa'])->name('info-semasa');
 
-// Global Search Route
-Route::get('/carian/', [MainController::class, 'carian'])->name('carian');
+    // eKadaster Route
+    Route::get('/eKadaster', [MainController::class, 'eKadaster'])->name('eKadaster');
 
-// Carian Pegawai Route
-Route::get('/carian/pegawai', [MainController::class, 'carianPegawai'])->name('carian-pegawai');
+    // staps Route
+    Route::get('/staps', [MainController::class, 'staps'])->name('staps');
 
-/*
+    // Global Search Route
+    Route::get('/carian/', [MainController::class, 'carian'])->name('carian');
+
+    // Carian Pegawai Route
+    Route::get('/carian/pegawai', [MainController::class, 'carianPegawai'])->name('carian-pegawai');
+
+
+    /*
 |--------------------------------------------------------------------------
 | Read Routes
 |--------------------------------------------------------------------------
 */
 
-// Pengumuman Read Route
-Route::get('/info-semasa/pengumuman/{id}', [MainController::class, 'pengumumanRead'])->name('pengumuman-read');
+    // Pengumuman Read Route
+    Route::get('/info-semasa/pengumuman/{id}', [MainController::class, 'pengumumanRead'])->name('pengumuman-read');
 
-// Berita Terkini Read Route
-Route::get('/info-semasa/berita-terkini/{id}', [MainController::class, 'beritaTerkiniRead'])->name('berita-terkini-read');
+    // Berita Terkini Read Route
+    Route::get('/info-semasa/berita-terkini/{id}', [MainController::class, 'beritaTerkiniRead'])->name('berita-terkini-read');
 
-// Tender & Quotation Read Route
-Route::get('/perolehan/{id}', [MainController::class, 'tenderRead'])->name('tender-read');
+    // Tender & Quotation Read Route
+    Route::get('/perolehan/{id}', [MainController::class, 'tenderRead'])->name('tender-read');
 
-// Global Search Post Read Route
-Route::get('/carian/papar/post/{id}', [MainController::class, 'carianPost'])->name('carian-post');
+    // Global Search Post Read Route
+    Route::get('/carian/papar/post/{id}', [MainController::class, 'carianPost'])->name('carian-post');
 
-// Global Search Pengumuman Read Route
-Route::get('/carian/papar/pengumuman/{id}', [MainController::class, 'carianPengumuman'])->name('carian-pengumuman');
+    // Global Search Pengumuman Read Route
+    Route::get('/carian/papar/pengumuman/{id}', [MainController::class, 'carianPengumuman'])->name('carian-pengumuman');
 
-// Global Search Berita Terkini Read Route
-Route::get('/carian/papar/berita-terkini/{id}', [MainController::class, 'carianBeritaTerkini'])->name('carian-berita-terkini');
+    // Global Search Berita Terkini Read Route
+    Route::get('/carian/papar/berita-terkini/{id}', [MainController::class, 'carianBeritaTerkini'])->name('carian-berita-terkini');
+});
 
 // Test Language
-Route::get('/greeting/{locale}', function ($locale) {
-    if (!in_array($locale, ['en', 'ms'])) {
-        abort(400);
-    }
+Route::get('/en', function () {
+    App::setLocale('en');
 
-    App::setLocale($locale);
-
-    //
+    dd(App::getLocale());
 });
