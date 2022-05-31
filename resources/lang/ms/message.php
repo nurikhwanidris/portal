@@ -47,6 +47,18 @@ return [
     "Disclaimer" => "Penafian",
     "All Rights Reserved " . now('Y') . " © Department of Survey and Mapping Malaysia" => "Hakcipta Terpelihara " . now('Y') . " © Jabatan Ukur dan Pemetaan Malaysia (JUPEM)",
     "Best view with Internet Explorer version 10 or above, Mozilla Firefox version 3 or above and Google Chrome version 10 or above." => "Paparan terbaik adalah dengan menggunakan Internet Explorer versi 10 ke atas, Mozilla Firefox versi 3 ke atas dan Google Chrome versi 10 ke atas.",
+    "Details" => "Maklumat Terperinci",
+    "No News" => "Tiada Berita Terkini",
+    "Subuh" => "Subuh",
+    "Syuruk" => "Syuruk",
+    "Zohor" => "Zohor",
+    "Asar" => "Asar",
+    "Maghrib" => "Maghrib",
+    "Isyak" => "Isyak",
+    "Tender" => "Tender",
+    "no_tender" => "Tiada tender buat masa ini",
+    "sebut_harga" => "Sebut Harga",
+    "no_sebut_harga" => "Tiada sebutan harga buat masa ini",
 
     // ----- Main Menu ----- //
 

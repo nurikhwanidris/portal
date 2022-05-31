@@ -46,6 +46,18 @@ return [
     "Disclaimer" => "Disclaimer",
     "All Rights Reserved " . now('Y') . " © Department of Survey and Mapping Malaysia" => "All Rights Reserved " . now('Y') . " © Department of Survey and Mapping Malaysia",
     "Best view with Internet Explorer version 10 or above, Mozilla Firefox version 3 or above and Google Chrome version 10 or above." => "Best view with Internet Explorer version 10 or above, Mozilla Firefox version 3 or above and Google Chrome version 10 or above.",
+    "Details" => "More details",
+    "No News" => "No News",
+    "Subuh" => "Subuh",
+    "Syuruk" => "Syuruk",
+    "Zohor" => "Zohor",
+    "Asar" => "Asar",
+    "Maghrib" => "Maghrib",
+    "Isyak" => "Isyak",
+    "Tender" => "Tender",
+    "no_tender" => "No tender available at the moment.",
+    "sebut_harga" => "Quotation",
+    "no_sebut_harga" => "No quotation available at the moment.",
 
     // ----- Main Menu ----- //
 

@@ -4,7 +4,7 @@
 
             <div class="row">
                 <div class="col" style="padding-top: 20px;">
-                    <span class="row text-title-semasa-1 mb-2">Waktu Solat</span>
+                    <span class="row text-title-semasa-1 mb-2">{{ __('message.Prayer Time') }}</span>
                 </div>
                 <text class="date-text-small">
                     {{ date('d F Y') }} Miladi | {{ $tarikhHijrah }} Hijriah
@@ -16,27 +16,27 @@
             <div class="row" style="padding: 0 25px;">
                 <table>
                     <tr class="tinggi">
-                        <td class="waktu-solat-small">SUBUH</td>
+                        <td class="waktu-solat-small">{{ __('message.Subuh') }}</td>
                         <td class="masa-solat-small">{{ $waktuSolat->SUBUH }}</td>
                     </tr>
                     <tr class="tinggi">
-                        <td class="waktu-solat-small">SYURUK</td>
+                        <td class="waktu-solat-small">{{ __('message.Syuruk') }}</td>
                         <td class="masa-solat-small">{{ $waktuSolat->SYURUK }}</td>
                     </tr>
                     <tr class="tinggi">
-                        <td class="waktu-solat-small">ZOHOR</td>
+                        <td class="waktu-solat-small">{{ __('message.Zohor') }}</td>
                         <td class="masa-solat-small">{{ $waktuSolat->ZUHUR }}</td>
                     </tr>
                     <tr class="tinggi">
-                        <td class="waktu-solat-small">ASAR</td>
+                        <td class="waktu-solat-small">{{ __('message.Asar') }}</td>
                         <td class="masa-solat-small">{{ $waktuSolat->ASAR }}</td>
                     </tr>
                     <tr class="tinggi">
-                        <td class="waktu-solat-small">MAGHRIB</td>
+                        <td class="waktu-solat-small">{{ __('message.Maghrib') }}</td>
                         <td class="masa-solat-small">{{ $waktuSolat->MAGHRIB }}</td>
                     </tr>
                     <tr class="tinggi">
-                        <td class="waktu-solat-small">ISYAK</td>
+                        <td class="waktu-solat-small">{{ __('message.Isyak') }}</td>
                         <td class="masa-solat-small">{{ $waktuSolat->ISYA }}</td>
                     </tr>
                 </table>
@@ -128,11 +128,11 @@
                     <option value="57">W.P. Kuala Lumpur & Putrajaya</option>
                     <option value="56">W.P. Labuan</option>
                 </select>
-                <div class="col mt-2 p-0">
+                {{-- <div class="col mt-2 p-0">
                     <button type="button" class="btn btn-outline-dark btn-sm float-end">
                         <i class="fas fa-file-pdf"></i> Jadual Waktu Solat
                     </button>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>
