@@ -135,7 +135,6 @@ return [
     "Seminar Title" => "Seminar Title",
     "Presented by" => "Presented by",
 
-
     // Orang Awam
     "Publication & Publishing" => "Publication & Publishing",
     "News & Press Release" => "News & Press Release",
