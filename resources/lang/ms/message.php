@@ -104,6 +104,10 @@ return [
     "Tender Time" => "Masa Tender",
     "Briefing" => "Taklimat",
     "Download Client Charter for" => "Muat Turun Prestasi Piagam Pelanggan bagi  ",
+    "intro_jupem" => "Pengenalan JUPEM",
+    "info_korp_visi" => "Visi, Misi, Moto, Nilai dan Definisi Logo JUPEM",
+    "info_korp_objectives" => "Tugas dan Peranan JUPEM",
+    "info_korp_objectives2" => "Tugas, Peranan dan Punca Kuasa.",
 
     // Warga JUPEM
     "Work Sheet" => "Kertas Kerja",

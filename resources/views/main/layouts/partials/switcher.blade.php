@@ -19,39 +19,43 @@
                 <a class="nav-link dropdown-item dropdown-toggle" href="#"> {{ __('message.Current Information') }}</a>
                 <ul class="submenu collapse">
                     <li>
-                        <a class="nav-link link-no-deco" href="/info-semasa#tab-1">{{ __('message.Announcement') }}
+                        <a class="nav-link link-no-deco"
+                            href="{{ route('info-semasa', app()->getLocale()) }}#tab-1">{{ __('message.Announcement') }}
                         </a>
                     </li>
                     <li>
-                        <a class="nav-link link-no-deco" href="/info-semasa#tab-2">{{ __('message.Latest News') }}</a>
+                        <a class="nav-link link-no-deco"
+                            href="{{ route('info-semasa', app()->getLocale()) }}#tab-2">{{ __('message.Latest News') }}</a>
                     </li>
                     <li>
                         <a class="nav-link link-no-deco"
-                            href="/info-semasa#tab-3">{{ __('message.Procurement Offer') }}</a>
+                            href="{{ route('info-semasa', app()->getLocale()) }}#tab-3">{{ __('message.Procurement Offer') }}</a>
                     </li>
                     <li>
                         <a class="nav-link link-no-deco"
-                            href="/info-semasa#tab-4">{{ __('message.Client Charter') }}</a>
+                            href="{{ route('info-semasa', app()->getLocale()) }}#tab-4">{{ __('message.Client Charter') }}</a>
                     </li>
                 </ul>
             </li>
             <li class="nav-item has-submenu">
-                <a class="nav-link dropdown-item dropdown-toggle" href="#">{{ __('message.Corporate Information') }}</a>
+                <a class="nav-link dropdown-item dropdown-toggle"
+                    href="#">{{ __('message.Corporate Information') }}</a>
                 <ul class="submenu collapse">
                     <li>
                         <a class="nav-link link-no-deco"
-                            href="/info-korp#tab-1">{{ __('message.JUPEM Information') }}</a>
+                            href="{{ route('info-korp', app()->getLocale()) }}#tab-1">{{ __('message.JUPEM Information') }}</a>
                     </li>
                     <li>
                         <a class="nav-link link-no-deco"
-                            href="/info-korp#tab-2">{{ __('message.Organization Structure') }}</a>
-                    </li>
-                    <li>
-                        <a class="nav-link link-no-deco" href="/info-korp#tab-3">{{ __('message.Contact Us') }}</a>
+                            href="{{ route('info-korp', app()->getLocale()) }}#tab-2">{{ __('message.Organization Structure') }}</a>
                     </li>
                     <li>
                         <a class="nav-link link-no-deco"
-                            href="/info-korp#tab-4">{{ __('message.Subject Matter Expertise') }}</a>
+                            href="{{ route('info-korp', app()->getLocale()) }}#tab-3">{{ __('message.Contact Us') }}</a>
+                    </li>
+                    <li>
+                        <a class="nav-link link-no-deco"
+                            href="{{ route('info-korp', app()->getLocale()) }}#tab-4">{{ __('message.Subject Matter Expertise') }}</a>
                     </li>
                 </ul>
             </li>
@@ -59,84 +63,95 @@
                 <a class="nav-link dropdown-item dropdown-toggle" href="#">{{ __('message.JUPEM Staff') }}</a>
                 <ul class="submenu collapse">
                     <li>
-                        <a class="nav-link link-no-deco" href="/warga-jupem#tab-1">{{ __('message.Work Sheet') }}</a>
+                        <a class="nav-link link-no-deco"
+                            href="{{ route('warga-jupem', app()->getLocale()) }}#tab-1">{{ __('message.Work Sheet') }}</a>
                     </li>
                     <li>
                         <a class="nav-lin link-no-deco"
-                            href="/warga-jupem#tab-2">{{ __('message.Staff Exchange') }}</a>
+                            href="{{ route('warga-jupem', app()->getLocale()) }}#tab-2">{{ __('message.Staff Exchange') }}</a>
                     </li>
                     <li>
                         <a class="nav-link link-no-deco"
-                            href="/warga-jupem#tab-3">{{ __('message.Meeting Report') }}</a>
+                            href="{{ route('warga-jupem', app()->getLocale()) }}#tab-3">{{ __('message.Meeting Report') }}</a>
                     </li>
                     <li>
                         <a class="nav-link link-no-deco"
-                            href="/warga-jupem#tab-4">{{ __('message.Public Sector Inovation') }}</a>
+                            href="{{ route('warga-jupem', app()->getLocale()) }}#tab-4">{{ __('message.Public Sector Inovation') }}</a>
                     </li>
                     <li>
                         <a class="nav-link link-no-deco"
-                            href="/warga-jupem#tab-5">{{ __('message.Development Paper') }}</a>
+                            href="{{ route('warga-jupem', app()->getLocale()) }}#tab-5">{{ __('message.Development Paper') }}</a>
                     </li>
                     <li>
                         <a class="nav-link link-no-deco"
-                            href="/warga-jupem#tab-6">{{ __('message.Policy, Budget & Offical Documents') }} </a>
-                    </li>
-                    <li>
-                        <a class="nav-link link-no-deco"
-                            href="/warga-jupem#tab-7">{{ __('message.Certificate & Recognition Documents') }}
+                            href="{{ route('warga-jupem', app()->getLocale()) }}#tab-6">{{ __('message.Policy, Budget & Offical Documents') }}
                         </a>
                     </li>
                     <li>
                         <a class="nav-link link-no-deco"
-                            href="/warga-jupem#tab-8">{{ __('message.General Instruction') }}</a>
+                            href="{{ route('warga-jupem', app()->getLocale()) }}#tab-7">{{ __('message.Certificate & Recognition Documents') }}
+                        </a>
                     </li>
                     <li>
                         <a class="nav-link link-no-deco"
-                            href="/warga-jupem#tab-9">{{ __('message.Policy, Circular and Guidelines') }}</a>
+                            href="{{ route('warga-jupem', app()->getLocale()) }}#tab-8">{{ __('message.General Instruction') }}</a>
                     </li>
                     <li>
                         <a class="nav-link link-no-deco"
-                            href="/warga-jupem#tab-10">{{ __('message.Departmental Documents
-                                                    ') }}</a>
+                            href="{{ route('warga-jupem', app()->getLocale()) }}#tab-9">{{ __('message.Policy, Circular and Guidelines') }}</a>
                     </li>
                     <li>
                         <a class="nav-link link-no-deco"
-                            href="/warga-jupem#tab-11">{{ __('message.Download JUPEM Forms') }}</a>
+                            href="{{ route('warga-jupem', app()->getLocale()) }}#tab-10">{{ __('message.Departmental Documents') }}</a>
+                    </li>
+                    <li>
+                        <a class="nav-link link-no-deco"
+                            href="{{ route('warga-jupem', app()->getLocale()) }}#tab-11">{{ __('message.Download JUPEM Forms') }}</a>
                     </li>
                 </ul>
             </li>
             <li class="nav-item has-submenu">
-                <a class="nav-link dropdown-item dropdown-toggle" href="#"> {{__('message.Public')}}</a>
+                <a class="nav-link dropdown-item dropdown-toggle" href="#"> {{ __('message.Public') }}</a>
                 <ul class="submenu collapse">
                     <li>
-                        <a class="nav-link link-no-deco" href="/orang-awam#tab-1">{{__('message.Products & Services')}}</a>
+                        <a class="nav-link link-no-deco"
+                            href="{{ route('orang-awam', app()->getLocale()) }}#tab-1">{{ __('message.product_and_service') }}</a>
                     </li>
                     <li>
-                        <a class="nav-link link-no-deco" href="/orang-awam#tab-2">{{__('message.Development Paper')}}</a>
+                        <a class="nav-link link-no-deco"
+                            href="{{ route('orang-awam', app()->getLocale()) }}#tab-2">{{ __('message.Development Paper') }}</a>
                     </li>
                     <li>
-                        <a class="nav-link link-no-deco" href="/orang-awam#tab-3">{{__('message.Publication & Publishing')}}</a>
+                        <a class="nav-link link-no-deco"
+                            href="{{ route('orang-awam', app()->getLocale()) }}#tab-3">{{ __('message.Publication & Publishing') }}</a>
                     </li>
                     <li>
-                        <a class="nav-link link-no-deco" href="/orang-awam#tab-4">{{__('message.Staff Directory')}}</a>
+                        <a class="nav-link link-no-deco"
+                            href="{{ route('orang-awam', app()->getLocale()) }}#tab-4">{{ __('message.Staff Directory') }}</a>
                     </li>
                     <li>
-                        <a class="nav-link link-no-deco" href="/orang-awam#tab-5">Multimedia </a>
+                        <a class="nav-link link-no-deco"
+                            href="{{ route('orang-awam', app()->getLocale()) }}#tab-5">Multimedia </a>
                     </li>
                     <li>
-                        <a class="nav-link link-no-deco" href="/orang-awam#tab-6">{{__('message.Procurement Offer')}}</a>
+                        <a class="nav-link link-no-deco"
+                            href="{{ route('orang-awam', app()->getLocale()) }}#tab-6">{{ __('message.Procurement Offer') }}</a>
                     </li>
                     <li>
-                        <a class="nav-link link-no-deco" href="/orang-awam#tab-7">{{__('message.Online Transactions')}}</a>
+                        <a class="nav-link link-no-deco"
+                            href="{{ route('orang-awam', app()->getLocale()) }}#tab-7">{{ __('message.Online Transactions') }}</a>
                     </li>
                     <li>
-                        <a class="nav-link link-no-deco" href="/orang-awam#tab-8">{{__('message.News & Press Release')}}</a>
+                        <a class="nav-link link-no-deco"
+                            href="{{ route('orang-awam', app()->getLocale()) }}#tab-8">{{ __('message.News & Press Release') }}</a>
                     </li>
                     <li>
-                        <a class="nav-link link-no-deco" href="/orang-awam#tab-9">{{__('message.Download Mapping Forms')}}</a>
+                        <a class="nav-link link-no-deco"
+                            href="{{ route('orang-awam', app()->getLocale()) }}#tab-9">{{ __('message.Download Mapping Forms') }}</a>
                     </li>
                     <li>
-                        <a class="nav-link link-no-deco" href="/orang-awam#tab-10">{{__('message.Government Open Data')}}</a>
+                        <a class="nav-link link-no-deco"
+                            href="{{ route('orang-awam', app()->getLocale()) }}#tab-10">{{ __('message.Government Open Data') }}</a>
                     </li>
                 </ul>
             </li>
@@ -155,7 +170,7 @@
         <a id="satu" class="tepi-menu-utama gerak-khas satu" href="#" data-bs-toggle="tooltip" data-bs-animation="false"
             data-bs-placement="right" title="" onclick="myFunction();openNav();">
             <i class="fas fa-bars img-fluid icon-menu-tepi"></i>
-            <div class="text-menu-tepi">{{__('message.Main Menu')}}</div>
+            <div class="text-menu-tepi">{{ __('message.Main Menu') }}</div>
         </a>
     </div>
 
@@ -163,29 +178,29 @@
         <a id="satu-2" class="tepi-menu-utama-2 gerak-khas satu hamburguer-btn" href="#" data-bs-toggle="tooltip"
             data-bs-animation="false" data-bs-placement="right" title="">
             <i class="fas fa-bars img-fluid icon-menu-tepi"></i>
-            <div class="text-menu-tepi">{{__('message.Main Menu')}}</div>
+            <div class="text-menu-tepi">{{ __('message.Main Menu') }}</div>
         </a>
     </div>
 
     <div id="myDIV3">
-        <a id="dua" class="tepi-menu-direktori gerak-khas" href="/orang-awam#tab-4" data-bs-toggle="tooltip"
-            data-bs-animation="false" data-bs-placement="right" title="">
+        <a id="dua" class="tepi-menu-direktori gerak-khas" href="{{ route('orang-awam', app()->getLocale()) }}#tab-4"
+            data-bs-toggle="tooltip" data-bs-animation="false" data-bs-placement="right" title="">
             <i class="fas fa-user-tie img-fluid icon-menu-tepi"></i>
-            <div class="text-menu-tepi">{{__('message.Staff Directory')}}</div>
+            <div class="text-menu-tepi">{{ __('message.Staff Directory') }}</div>
         </a>
     </div>
     <div id="myDIV4">
-        <a id="tiga" class="tepi-menu-warga gerak-khas" href="/warga-jupem" data-bs-toggle="tooltip"
-            data-bs-animation="false" data-bs-placement="right" title="">
+        <a id="tiga" class="tepi-menu-warga gerak-khas" href="{{ route('warga-jupem', app()->getLocale()) }}"
+            data-bs-toggle="tooltip" data-bs-animation="false" data-bs-placement="right" title="">
             <i class="fas fa-briefcase img-fluid icon-menu-tepi"></i>
-            <div class="text-menu-tepi">{{__('message.JUPEM Staff')}}</div>
+            <div class="text-menu-tepi">{{ __('message.JUPEM Staff') }}</div>
         </a>
     </div>
     <div id="myDIV5">
-        <a id="empat" class="tepi-menu-awam gerak-khas" href="/orang-awam" data-bs-toggle="tooltip"
-            data-bs-animation="false" data-bs-placement="right" title="">
+        <a id="empat" class="tepi-menu-awam gerak-khas" href="{{ route('orang-awam', app()->getLocale()) }}"
+            data-bs-toggle="tooltip" data-bs-animation="false" data-bs-placement="right" title="">
             <i class="fas fa-users img-fluid icon-menu-tepi"></i>
-            <div class="text-menu-tepi">{{__('message.Public')}}</div>
+            <div class="text-menu-tepi">{{ __('message.Public') }}</div>
         </a>
     </div>
 </legend>

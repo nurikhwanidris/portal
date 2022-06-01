@@ -18,7 +18,7 @@ return [
     "Main Menu" => "Main Menu",
     "Staff Directory" => "Staff Directory",
     "JUPEM Staff" => "JUPEM Staff",
-    "Public" => "Public",
+    "Public" => "General Public",
     "Latest News" => "Latest News",
     "Procurement Offer" => "Procurement Offer",
     "Announcement" => "Announcement",
@@ -102,6 +102,10 @@ return [
     "Tender Time" => "Tender Time",
     "Briefing" => "Briefing",
     "Download Client Charter for " => "Download Client's Charter for ",
+    "intro_jupem" => "JUPEM Introduction",
+    "info_korp_visi" => "Vision, Mission, Motto, Values, and Definitions of Logo",
+    "info_korp_objectives" => "Objectives and Values",
+    "info_korp_objectives2" => "Objectives and Values",
 
     // Warga JUPEM
     "Work Sheet" => "Work Sheet",

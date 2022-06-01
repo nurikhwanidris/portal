@@ -213,7 +213,7 @@ Route::group(['prefix' => '{language}'], function () {
     Route::get('/faq', [MainController::class, 'faq'])->name('faq');
 
     // Sitemap Route
-    Route::get('/sitemap', [MainController::class, 'sitemap'])->name('sitemap');
+    Route::get('/peta-laman', [MainController::class, 'sitemap'])->name('sitemap');
 
     // Dasar Privasi Route
     Route::get('/dasar-privasi', [MainController::class, 'dasarPrivasi'])->name('dasar-privasi');
@@ -240,12 +240,11 @@ Route::group(['prefix' => '{language}'], function () {
     // Carian Pegawai Route
     Route::get('/carian/pegawai', [MainController::class, 'carianPegawai'])->name('carian-pegawai');
 
-
     /*
-|--------------------------------------------------------------------------
-| Read Routes
-|--------------------------------------------------------------------------
-*/
+    |--------------------------------------------------------------------------
+    | Read Routes
+    |--------------------------------------------------------------------------
+    */
 
     // Pengumuman Read Route
     Route::get('/info-semasa/pengumuman/{id}', [MainController::class, 'pengumumanRead'])->name('pengumuman-read');
