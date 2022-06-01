@@ -52,7 +52,7 @@
         @else
             <div class="row">
                 <text class="info-semasa-paragraph overflow-tajuk">
-                    {{ __('message.No news') }}
+                    {{ __('message.No News') }}
                 </text>
             </div>
         @endif

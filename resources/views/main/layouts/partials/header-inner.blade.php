@@ -7,7 +7,7 @@
                 <div class="header-column">
                     <div class="header-row">
                         <div class="header-logo">
-                            <a href="/">
+                            <a href="{{ route('index', app()->getLocale()) }}">
                                 <img alt="{{ __('message.National Coat of Arms') }}"
                                     src="/main/img/logo-default/logo-default-208x100.png" class="logo-size">
                             </a>

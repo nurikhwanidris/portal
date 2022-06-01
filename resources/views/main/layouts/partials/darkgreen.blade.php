@@ -38,8 +38,9 @@
 
 <div class="row">
     <div class="col" style="padding-top:10px;">
-        <h2 class="font-weight-normal text-center text-6" style="margin-bottom: 0px;"><strong
-                class="text-title-strong">Hubungi</strong> Kami</h2>
+        <h2 class="font-weight-normal text-center text-6" style="margin-bottom: 0px;">
+            {{ __('message.Contact Us') }}
+        </h2>
     </div>
 </div>
 
@@ -63,7 +64,8 @@
                     class="col-lg-6 row align-items-center appear-animation animated fadeInLeftShorter appear-animation-visible"
                     data-appear-animation="fadeInLeftShorter" style="animation-delay: 100ms;">
                     <!-- <div style="padding-left:20px;" class="col-lg-6 p-5 row align-items-center pt-4 appear-animation animated fadeInLeftShorter appear-animation-visible" data-appear-animation="fadeInLeftShorter" style="animation-delay: 100ms;" > -->
-                    <div class="nama-hubungi-white">Jabatan Ukur Dan Pemetaan Malaysia </div>
+                    <div class="nama-hubungi-white">{{ __('message.Department of Survey and Mapping Malaysia') }}
+                    </div>
                     <div class="feature-box feature-box-primary mb-4">
                         <div class="icon-hubungi-2">
                             <i class="fas fa-map-marker-alt icon-kaler"></i>
@@ -107,15 +109,13 @@
                         </div>
                     </div>
                     <div class="feature-box feature-box-primary col-sm-9" style="padding-top: 10px;">
-                        <a href="/info-korp#tab-3" class="btn btn-modern btn-tertiary mb-2">JUPEM Negeri</a>&nbsp;
-                        <a href="/orang-awam#tab-4" class="btn btn-modern btn-secondary mb-2">Direktori Pegawai</a>
+                        <a href="/info-korp#tab-3"
+                            class="btn btn-modern btn-tertiary mb-2">{{ __('message.jupem_states') }}</a>&nbsp;
+                        <a href="/orang-awam#tab-4"
+                            class="btn btn-modern btn-secondary mb-2">{{ __('message.Staff Directory') }}</a>
                     </div>
-
                 </div>
-
-                <!-- Line 2 END -->
             </div>
         </div>
     </div>
-
 </section>

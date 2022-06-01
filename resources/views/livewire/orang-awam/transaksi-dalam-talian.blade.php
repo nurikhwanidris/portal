@@ -8,8 +8,9 @@
             <!-- Title -->
             <div class="col">
                 <h2 class="font-weight-normal text-center text-6">
-                    <strong class="text-title-strong">Transaksi</strong>
-                    Dalam Talian
+                    <strong>
+                        {{ __('message.Online Transactions') }}
+                    </strong>
                 </h2>
             </div>
 
@@ -24,7 +25,7 @@
                             <strong style="font-weight: bold;">
                                 {{ $transaksiTotal }}
                             </strong>
-                            <label class="font-weight-bold">Jumlah Transaksi Dalam Talian
+                            <label class="font-weight-bold">{{ __('message.total_transaction') }}
                                 {{ now()->subMonth()->format('F') }} 2022</label>
                         </div>
                     </div>
@@ -38,28 +39,28 @@
                             <div class="counter counter-primary">
                                 <i class="fas fa-layer-group"></i>
                                 <strong class="font-weight-bold" data-to="{{ $kadaster }}">0</strong>
-                                <label class="font-weight-bold">Kadaster</label>
+                                <label class="font-weight-bold">{{ __('message.kadaster') }}</label>
                             </div>
                         </div>
                         <div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
                             <div class="counter counter-secondary">
                                 <i class="fas fa-map"></i>
                                 <strong data-to="{{ $pemetaan }}">0</strong>
-                                <label class="font-weight-bold">Pemetaan</label>
+                                <label class="font-weight-bold">{{ __('message.mapping') }}</label>
                             </div>
                         </div>
                         <div class="col-sm-6 col-lg-3 mb-4 mb-sm-0">
                             <div class="counter counter-tertiary">
                                 <i class="fas fa-globe"></i>
                                 <strong data-to="{{ $geodesi }}">0</strong>
-                                <label class="font-weight-bold">Geodesi</label>
+                                <label class="font-weight-bold">{{ __('message.geodesi') }}</label>
                             </div>
                         </div>
                         <div class="col-sm-6 col-lg-3">
                             <div class="counter counter-quinary">
                                 <i class="fas fas fa-street-view"></i>
                                 <strong data-to="{{ $lesen }}">0</strong>
-                                <label class="font-weight-bold">Permohonan Lesen Digital</label>
+                                <label class="font-weight-bold">{{ __('message.license') }}</label>
                             </div>
                         </div>
                     </div>
@@ -70,28 +71,28 @@
                             <div class="counter counter-primary">
                                 <i class="fas fa-satellite"></i>
                                 <strong data-to="{{ $rtk }}">0</strong>
-                                <label class="font-weight-bold">Langganan RTK</label>
+                                <label class="font-weight-bold">{{ __('message.rtk_subscription') }}</label>
                             </div>
                         </div>
                         <div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
                             <div class="counter counter-secondary">
                                 <i class="fas  fa-map-pin"></i>
                                 <strong data-to="{{ $geodetik }}">0</strong>
-                                <label class="font-weight-bold">Perkhidmatan Geodetik</label>
+                                <label class="font-weight-bold">{{ __('message.geo_service') }}</label>
                             </div>
                         </div>
                         <div class="col-sm-6 col-lg-3 mb-4 mb-sm-0">
                             <div class="counter counter-tertiary">
                                 <i class="fas fa-certificate"></i>
                                 <strong data-to="{{ $dataTerhad }}">0</strong>
-                                <label class="font-weight-bold">Permohonan Data Terhad</label>
+                                <label class="font-weight-bold">{{ __('message.limited_data_application') }}</label>
                             </div>
                         </div>
                         <div class="col-sm-6 col-lg-3">
                             <div class="counter counter-quinary">
                                 <i class="fas fa-server"></i>
                                 <strong data-to="{{ $permit }}">0</strong>
-                                <label class="font-weight-bold">Permohonan Permit</label>
+                                <label class="font-weight-bold">{{ __('message.permit_application') }}</label>
                             </div>
                         </div>
                     </div>

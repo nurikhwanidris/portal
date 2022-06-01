@@ -5,7 +5,8 @@
      </span> -->
         <div class="row">
             <div class="col">
-                <div class="text-title-semasa-11" style="padding-top: 40px;padding-bottom: 20px;">Hubungi Kami</div>
+                <div class="text-title-semasa-11" style="padding-top: 40px;padding-bottom: 20px;">
+                    {{ __('message.Contact Us') }}</div>
             </div>
         </div>
         <div class="row">
@@ -13,9 +14,9 @@
             <div class="featured-boxes featured-boxes-style-3 featured-boxes-flat">
                 <div class="row">
                     <div>
-                        Negeri
+                        {{ __('message.states') }}
                         <select id="contact-us" class="form-select form-select-sm" aria-label=".form-select-sm example">
-                            <option value="0" selected="selected">Ibu Pejabat JUPEM</option>
+                            <option value="0" selected="selected">{{ __('message.hq') }}</option>
                             <option value="1">JUPEM Johor</option>
                             <option value="2">JUPEM Kedah</option>
                             <option value="3">JUPEM Kelantan</option>
