@@ -106,27 +106,28 @@
             <div class="row py-4">
                 <div class="col-lg-7 align-items-center justify-content-center justify-content-lg-start mb-4 mb-lg-0">
                     <!-- <div class="col-lg-7 d-flex align-items-center justify-content-center justify-content-lg-start mb-4 mb-lg-0"> -->
-                    <div class="text-kaki-copyright-1">Hakcipta Terpelihara 2022 © Jabatan Ukur dan Pemetaan Malaysia
-                        (JUPEM)</div>
-                    <div class="text-kaki-copyright-2">Paparan terbaik adalah dengan menggunakan Internet Explorer versi
-                        10 ke atas, Mozilla Firefox versi 3 ke atas dan Google Chrome</div>
+                    <div class="text-kaki-copyright-1">
+                        {{ __('message.copyright') }}
+                    </div>
+                    <div class="text-kaki-copyright-2">
+                        {{ __('message.best_view') }}
+                    </div>
                 </div>
                 <div
                     class="col-lg-4 d-flex align-items-center justify-content-center justify-content-lg-end text-kaki-2">
                     <nav id="sub-menu">
                         <ul>
                             <li><i class="fas fa-angle-right"></i><a href="dasar-privasi"
-                                    class="ms-1 text-decoration-none"> Dasar
-                                    Privasi</a></li>
+                                    class="ms-1 text-decoration-none">
+                                {{__('message.privacy_policy')}}</a></li>
                         </ul>
                         <ul>
                             <li><i class="fas fa-angle-right"></i><a href="dasar-keselamatan"
-                                    class="ms-1 text-decoration-none"> Dasar
-                                    Keselamatan</a></li>
+                                    class="ms-1 text-decoration-none">{{__('message.security_policy')}}</a></li>
                         </ul>
                         <ul>
                             <li><i class="fas fa-angle-right"></i><a href="penafian" class="ms-1 text-decoration-none">
-                                    Penafian</a></li>
+                                    {{__('message.Disclaimer')}}</a></li>
                         </ul>
                     </nav>
                 </div>
