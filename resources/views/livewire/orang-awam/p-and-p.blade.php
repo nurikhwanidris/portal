@@ -1320,7 +1320,7 @@
                             <h4 class="card-title m-0">
                                 <a class="accordion-toggle text-color-dark font-weight-bold collapsed"
                                     data-bs-toggle="collapse" data-bs-target="#collapse200Four" aria-expanded="false"
-                                    aria-controls="collapse200Three">
+                                    aria-controls="collapse200Four">
                                     Peta Tematik
                                 </a>
                             </h4>
@@ -1822,6 +1822,441 @@
                                             <hr class="solid">
 
                                         {{-- </div> --}}
+                                    </section>
+
+                                </div>
+                                <!-- ACCORDION 2 -END -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion accordion-modern-status accordion-modern-status-borders accordion-modern-status-arrow mt-3"
+                    id="accordion200">
+                    <!-- 4- Peta Tematik -->
+                    <div class="card card-default">
+                        <div class="card-header" id="collapse200HeadingFive">
+                            <h4 class="card-title m-0">
+                                <a class="accordion-toggle text-color-dark font-weight-bold collapsed"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse200Five" aria-expanded="false"
+                                    aria-controls="collapse200Five">
+                                    Peta Pelbagai
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse200Five" class="collapse" aria-labelledby="collapse200HeadingFive"
+                            data-bs-parent="#accordion200">
+                            <div class="card-body pt-0">
+
+                                <!-- ACCORDION 2 -START -->
+                                <div class="toggle toggle-primary toggle-simple" data-plugin-toggle>
+                                    <!-- 1 -->
+                                    <section class="toggle">
+
+                                            <!-- 1 -->
+                                            <!-- SECTION + TEXT TO LEFT - START -->
+                                            <div class="row align-items-center pt-4 appear-animation"
+                                                data-appear-animation="fadeInLeftShorter">
+                                                <div class="col-md-4 mb-4 mb-md-0">
+                                                    <div class="col">
+                                                        <!-- LIGHTBOX - START -->
+                                                        <div class="row">
+                                                            <div class="col-lg-12">
+                                                                <a class="img-thumbnail img-thumbnail-no-borders d-block lightbox"
+                                                                    href="main/img/peta/20190404113251-16ae3-sm-laporan.jpg"
+                                                                    data-plugin-options="{'type':'image'}">
+                                                                    <img class="img-fluid"
+                                                                        src="main/img/peta/20190404113251-16ae3-sm-laporan.jpg"
+                                                                        alt="Project Image">
+                                                                    <span class="zoom">
+                                                                        <i class="fas fa-search"></i>
+                                                                    </span>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <!-- LIGHTBOX - END -->
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-8 ps-md-5">
+                                                    <!-- PARAGRAPH - START -->
+                                                    <p class="mb-0 para-align-title">Jenis Peta:</p>
+                                                    <p class="mb-0 para-align">
+                                                        Peta Laporan Malaysia (1:4,500,000) – No. Siri Malaysia Report Map
+                                                    </p>
+                                                    <div class="para-gap"></div>
+                                                    <p class="mb-0 para-align-title">Pengenalan:</p>
+                                                    <p class="mb-0 para-align">
+                                                        Peta jenis politikal (pentadbiran) berwarna yang meliputi kawasan Semenanjung Malaysia, Sabah dan Sarawak.
+                                                    </p>
+                                                    <div class="para-gap"></div>
+                                                    <p class="mb-0 para-align-title">Keterangan:</p>
+                                                    <p class="mb-0 para-align">
+                                                        Ciri-ciri seperti sempadan antarabangsa, sempadan negeri ditunjukkan mengikut simbol-simbol tertentu. Walaubagaimanapun maklumat -maklumat yang terdapat di peta ini adalah maklumat lama dan tidak dikemaskini.
+                                                    </p>
+                                                    <!-- PARAGRAPH - END -->
+                                                </div>
+                                            </div>
+                                            <!-- SECTION + TEXT TO LEFT - END -->
+                                            <hr class="solid">
+                                            <!-- 2 -->
+                                            <!-- SECTION + TEXT TO RIGHT - START -->
+                                            <div class="row align-items-center py-5 appear-animation"
+                                                data-appear-animation="fadeInRightShorter">
+                                                <div class="col-md-8 pe-md-5 mb-5 mb-md-0">
+                                                    <!-- PARAGRAPH - START -->
+                                                    <p class="mb-0 para-align-title">Jenis Peta:</p>
+                                                    <p class="mb-0 para-align">
+                                                        Peta Laporan Sabah (1:1 250 000) – No. Siri Rampaian 80
+                                                    </p>
+                                                    <div class="para-gap"></div>
+                                                    <p class="mb-0 para-align-title">Pengenalan:</p>
+                                                    <p class="mb-0 para-align">
+                                                        Peta politikal (pentadbiran) berwarna yang meliputi kawasan Negeri Sabah.
+                                                    </p>
+                                                    <div class="para-gap"></div>
+                                                    <p class="mb-0 para-align-title">Keterangan:</p>
+                                                    <p class="mb-0 para-align">
+                                                        Ciri-ciri maklumat seperti sempadan bahagian, negeri dan antarabangsa ditunjukkan. Maklumat di peta ini tidak dikemaskini dan penerbitannya telah dihentikan.
+                                                    </p>
+                                                    <!-- PARAGRAPH - END -->
+                                                </div>
+                                                <div class="col-md-4 px-5 px-md-3">
+                                                    <div class="col">
+                                                        <div class="row">
+                                                            <div class="col-lg-12">
+                                                                <a class="img-thumbnail img-thumbnail-no-borders d-block lightbox"
+                                                                    href="main/img/peta/20190404113313-2aeed-sm-rampaian80.jpg"
+                                                                    data-plugin-options="{'type':'image'}">
+                                                                    <img class="img-fluid"
+                                                                        src="main/img/peta/20190404113313-2aeed-sm-rampaian80.jpg"
+                                                                        alt="Project Image">
+                                                                    <span class="zoom">
+                                                                        <i class="fas fa-search"></i>
+                                                                    </span>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- SECTION + TEXT TO RIGHT - END -->
+                                            <hr class="solid">
+                                            <!-- 3 -->
+                                            <!-- SECTION + TEXT TO LEFT - START -->
+                                            <div class="row align-items-center pt-4 appear-animation"
+                                                data-appear-animation="fadeInLeftShorter">
+                                                <div class="col-md-4 mb-4 mb-md-0">
+                                                    <div class="col">
+                                                        <!-- LIGHTBOX - START -->
+                                                        <div class="row">
+                                                            <div class="col-lg-12">
+                                                                <a class="img-thumbnail img-thumbnail-no-borders d-block lightbox"
+                                                                    href="main/img/peta/20190404113313-2aeed-sm-rampaian80.jpg"
+                                                                    data-plugin-options="{'type':'image'}">
+                                                                    <img class="img-fluid"
+                                                                        src="main/img/peta/20190404113313-2aeed-sm-rampaian80.jpg"
+                                                                        alt="Project Image">
+                                                                    <span class="zoom">
+                                                                        <i class="fas fa-search"></i>
+                                                                    </span>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <!-- LIGHTBOX - END -->
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-8 ps-md-5">
+                                                    <!-- PARAGRAPH - START -->
+                                                    <p class="mb-0 para-align-title">Jenis Peta:</p>
+                                                    <p class="mb-0 para-align">
+                                                        Peta Sabah (1: 500 000) – No. Siri Rampaian 37
+                                                    </p>
+                                                    <div class="para-gap"></div>
+                                                    <p class="mb-0 para-align-title">Pengenalan:</p>
+                                                    <p class="mb-0 para-align">
+                                                        Peta jenis fizikal yang menunjukkan kawasan rupa muka bumi dengan susunan warna yang membezakan tinggi relief.
+                                                    </p>
+                                                    <div class="para-gap"></div>
+                                                    <p class="mb-0 para-align-title">Keterangan:</p>
+                                                    <p class="mb-0 para-align">
+                                                        Ciri-ciri seperti sempadan antarabangsa, negeri, daerah serta maklumat-maklumat seperti jalan raya, jalan keretapi, sungai, nama bandar dan kampung ditunjukkan mengikut simbol-simbol tertentu.
+                                                    </p>
+                                                    <!-- PARAGRAPH - END -->
+                                                </div>
+                                            </div>
+                                            <!-- SECTION + TEXT TO LEFT - END -->
+                                            <hr class="solid">
+                                            <!-- 4 -->
+                                            <!-- SECTION + TEXT TO RIGHT - START -->
+                                            <div class="row align-items-center py-5 appear-animation"
+                                                data-appear-animation="fadeInRightShorter">
+                                                <div class="col-md-8 pe-md-5 mb-5 mb-md-0">
+                                                    <!-- PARAGRAPH - START -->
+                                                    <p class="mb-0 para-align-title">Jenis Peta:</p>
+                                                    <p class="mb-0 para-align">
+                                                        Peta Politikal Malaysia (1:760 000) – No. Siri Rampaian 45
+                                                    </p>
+                                                    <div class="para-gap"></div>
+                                                    <p class="mb-0 para-align-title">Pengenalan:</p>
+                                                    <p class="mb-0 para-align">
+                                                        Peta jenis politikal (pentadbiran) yang berwarna penuh yang menunjukkan perbezaan warna bagi setiap negeri dan digantikan dengan Siri DNMM 2001 pada skala 1:750 000.
+                                                    </p>
+                                                    <div class="para-gap"></div>
+                                                    <p class="mb-0 para-align-title">Keterangan:</p>
+                                                    <p class="mb-0 para-align">
+                                                        Ciri-ciri seperti sempadan antarabangsa, negeri , daerah serta maklumat-maklumat seperti jalan raya, jalan keretapi, sungai , nama bandar dan kampung ditunjukkan mengikut simbol-simbol tertentu.
+                                                    </p>
+                                                    <!-- PARAGRAPH - END -->
+                                                </div>
+                                                <div class="col-md-4 px-5 px-md-3">
+                                                    <div class="col">
+                                                        <div class="row">
+                                                            <div class="col-lg-12">
+                                                                <a class="img-thumbnail img-thumbnail-no-borders d-block lightbox"
+                                                                    href="main/img/peta/20190404113349-a1b38-politikal-sm_my90008r_300px.jpg"
+                                                                    data-plugin-options="{'type':'image'}">
+                                                                    <img class="img-fluid"
+                                                                        src="main/img/peta/20190404113349-a1b38-politikal-sm_my90008r_300px.jpg"
+                                                                        alt="Project Image">
+                                                                    <span class="zoom">
+                                                                        <i class="fas fa-search"></i>
+                                                                    </span>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- SECTION + TEXT TO RIGHT - END -->
+                                            <hr class="solid">
+
+                                            <!-- 5 -->
+                                            <!-- SECTION + TEXT TO LEFT - START -->
+                                            <div class="row align-items-center pt-4 appear-animation"
+                                                data-appear-animation="fadeInLeftShorter">
+                                                <div class="col-md-4 mb-4 mb-md-0">
+                                                    <div class="col">
+                                                        <!-- LIGHTBOX - START -->
+                                                        <div class="row">
+                                                            <div class="col-lg-12">
+                                                                <a class="img-thumbnail img-thumbnail-no-borders d-block lightbox"
+                                                                    href="main/img/peta/20190404113422-144ad-sm-rampaian97.jpg"
+                                                                    data-plugin-options="{'type':'image'}">
+                                                                    <img class="img-fluid"
+                                                                        src="main/img/peta/20190404113422-144ad-sm-rampaian97.jpg"
+                                                                        alt="Project Image">
+                                                                    <span class="zoom">
+                                                                        <i class="fas fa-search"></i>
+                                                                    </span>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <!-- LIGHTBOX - END -->
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-8 ps-md-5">
+                                                    <!-- PARAGRAPH - START -->
+                                                    <p class="mb-0 para-align-title">Jenis Peta:</p>
+                                                    <p class="mb-0 para-align">
+                                                        Peta Sempadan Perairan Pelantar Benua Malaysia (1:1 500 000) – No. Siri Rampaian 97
+                                                    </p>
+                                                    <div class="para-gap"></div>
+                                                    <p class="mb-0 para-align-title">Pengenalan:</p>
+                                                    <p class="mb-0 para-align">
+                                                        Peta yang menunjukkan sempadan perairan dan pelantar benua bagi Semenanjung Malaysia, Sabah dan Sarawak.
+                                                    </p>
+                                                    <div class="para-gap"></div>
+                                                    <p class="mb-0 para-align-title">Keterangan:</p>
+                                                    <p class="mb-0 para-align">
+                                                        Ciri-ciri maklumat seperti titik kedalaman, kordinit sempadan pelantar benua, sempadan antarabangsa, sempadan perairan wilayah ditunjukkan dengan menggunakan warna dan simbol yang tertentu.
+                                                    </p>
+                                                    <!-- PARAGRAPH - END -->
+                                                </div>
+                                            </div>
+                                            <!-- SECTION + TEXT TO LEFT - END -->
+                                            <hr class="solid">
+                                            <!-- 6 -->
+                                            <!-- SECTION + TEXT TO RIGHT - START -->
+                                            <div class="row align-items-center py-5 appear-animation"
+                                                data-appear-animation="fadeInRightShorter">
+                                                <div class="col-md-8 pe-md-5 mb-5 mb-md-0">
+                                                    <!-- PARAGRAPH - START -->
+                                                    <p class="mb-0 para-align-title">Jenis Peta:</p>
+                                                    <p class="mb-0 para-align">
+                                                        Peta Jalanraya Negeri-Negeri Semenanjung Malaysia
+                                                    </p>
+                                                    <div class="para-gap"></div>
+                                                    <p class="mb-0 para-align-title">Pengenalan:</p>
+                                                    <p class="mb-0 para-align">
+                                                        Peta Jalan raya Negeri-Negeri Semenanjung Malaysia (pelbagai skala) – No. Siri DNMM9001
+                                                    </p>
+                                                    <div class="para-gap"></div>
+                                                    <p class="mb-0 para-align-title">Keterangan:</p>
+                                                    <p class="mb-0 para-align">
+                                                        Peta jalan raya yang meliputi semua negeri-negeri di Semenanjung Malaysia dalam pelbagai skala.
+                                                    </p>
+                                                    <!-- PARAGRAPH - END -->
+                                                </div>
+                                                <div class="col-md-4 px-5 px-md-3">
+                                                    <div class="col">
+                                                        <div class="row">
+                                                            <div class="col-lg-12">
+                                                                <a class="img-thumbnail img-thumbnail-no-borders d-block lightbox"
+                                                                    href="main/img/peta/20190404113438-a71d4-sm-dnmm9001.jpg"
+                                                                    data-plugin-options="{'type':'image'}">
+                                                                    <img class="img-fluid"
+                                                                        src="main/img/peta/20190404113438-a71d4-sm-dnmm9001.jpg"
+                                                                        alt="Project Image">
+                                                                    <span class="zoom">
+                                                                        <i class="fas fa-search"></i>
+                                                                    </span>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- SECTION + TEXT TO RIGHT - END -->
+                                            <hr class="solid">
+                                            <!-- 7 -->
+                                            <!-- SECTION + TEXT TO LEFT - START -->
+                                            <div class="row align-items-center pt-4 appear-animation"
+                                                data-appear-animation="fadeInLeftShorter">
+                                                <div class="col-md-4 mb-4 mb-md-0">
+                                                    <div class="col">
+                                                        <!-- LIGHTBOX - START -->
+                                                        <div class="row">
+                                                            <div class="col-lg-12">
+                                                                <a class="img-thumbnail img-thumbnail-no-borders d-block lightbox"
+                                                                    href="main/img/peta/20190404113513-a8c93-sm-134.jpg"
+                                                                    data-plugin-options="{'type':'image'}">
+                                                                    <img class="img-fluid"
+                                                                        src="main/img/peta/20190404113513-a8c93-sm-134.jpg"
+                                                                        alt="Project Image">
+                                                                    <span class="zoom">
+                                                                        <i class="fas fa-search"></i>
+                                                                    </span>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <!-- LIGHTBOX - END -->
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-8 ps-md-5">
+                                                    <!-- PARAGRAPH - START -->
+                                                    <p class="mb-0 para-align-title">Jenis Peta:</p>
+                                                    <p class="mb-0 para-align">
+                                                        Peta Asia Tenggara & Pasifik Barat Daya (1:7 000 000) – No. Siri Rampaian 134
+                                                    </p>
+                                                    <div class="para-gap"></div>
+                                                    <p class="mb-0 para-align-title">Pengenalan:</p>
+                                                    <p class="mb-0 para-align">
+                                                        Peta ini menunjukkan kawasan negara-negara Asia Tenggara dan Asia Barat Daya.
+                                                    </p>
+                                                    <div class="para-gap"></div>
+                                                    <p class="mb-0 para-align-title">Keterangan:</p>
+                                                    <p class="mb-0 para-align">
+                                                        Maklumat-maklumat seperti jalan utama, keretapi dan ciri-ciri hidrografi ditunjukkan. Nama-nama negara, negeri, pulau-pulau dan nama ciri hidrografi ditunjukkan juga. Warna digunakan untuk membezakan antara satu negara dengan negara yang lain. Saiz format peta adalah 105 x 75 cm. Walaubagaimanapun maklumat-maklumat di peta ini tidak dikemaskini dan penerbitannya telah dihentikan. Penerbitan dan pengemaskinian peta ini telah diambilalih oleh pihak UNGEGN.
+                                                    </p>
+                                                    <!-- PARAGRAPH - END -->
+                                                </div>
+                                            </div>
+                                            <!-- SECTION + TEXT TO LEFT - END -->
+                                            <hr class="solid">
+                                            <!-- 8 -->
+                                            <!-- SECTION + TEXT TO RIGHT - START -->
+                                            <div class="row align-items-center py-5 appear-animation"
+                                                data-appear-animation="fadeInRightShorter">
+                                                <div class="col-md-8 pe-md-5 mb-5 mb-md-0">
+                                                    <!-- PARAGRAPH - START -->
+                                                    <p class="mb-0 para-align-title">Jenis Peta:</p>
+                                                    <p class="mb-0 para-align">
+                                                        Peta Malaysia (1:2 000 000) – No. Siri 1208
+                                                    </p>
+                                                    <div class="para-gap"></div>
+                                                    <p class="mb-0 para-align-title">Pengenalan:</p>
+                                                    <p class="mb-0 para-align">
+                                                        Peta siri ini telah digantikan dengan siri DNMM 1001.
+                                                    </p>
+                                                    <div class="para-gap"></div>
+                                                    <p class="mb-0 para-align-title">Keterangan:</p>
+                                                    <p class="mb-0 para-align">
+                                                        Ciri-ciri maklumat seperti sempadan antarabangsa, sempadan negeri, jalan utama, keretapi dan sungai utama, bandar, pekan dan kawasan penempatan ditunjukkan dengan simbol dan warna tertentu. Saiz format peta adalah 10350mm x 350mm.
+                                                    </p>
+                                                    <!-- PARAGRAPH - END -->
+                                                </div>
+                                                <div class="col-md-4 px-5 px-md-3">
+                                                    <div class="col">
+                                                        <div class="row">
+                                                            <div class="col-lg-12">
+                                                                <a class="img-thumbnail img-thumbnail-no-borders d-block lightbox"
+                                                                    href="main/img/peta/20190404113533-b0f2c-sm-1208.jpg"
+                                                                    data-plugin-options="{'type':'image'}">
+                                                                    <img class="img-fluid"
+                                                                        src="main/img/peta/20190404113533-b0f2c-sm-1208.jpg"
+                                                                        alt="Project Image">
+                                                                    <span class="zoom">
+                                                                        <i class="fas fa-search"></i>
+                                                                    </span>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- SECTION + TEXT TO RIGHT - END -->
+                                            <hr class="solid">
+
+                                            <!-- 9 -->
+                                            <!-- SECTION + TEXT TO LEFT - START -->
+                                            <div class="row align-items-center pt-4 appear-animation"
+                                                data-appear-animation="fadeInLeftShorter">
+                                                <div class="col-md-4 mb-4 mb-md-0">
+                                                    <div class="col">
+                                                        <!-- LIGHTBOX - START -->
+                                                        <div class="row">
+                                                            <div class="col-lg-12">
+                                                                <a class="img-thumbnail img-thumbnail-no-borders d-block lightbox"
+                                                                    href="main/img/peta/20190404113613-5e5a4-peta_panduan.jpg"
+                                                                    data-plugin-options="{'type':'image'}">
+                                                                    <img class="img-fluid"
+                                                                        src="main/img/peta/20190404113613-5e5a4-peta_panduan.jpg"
+                                                                        alt="Project Image">
+                                                                    <span class="zoom">
+                                                                        <i class="fas fa-search"></i>
+                                                                    </span>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <!-- LIGHTBOX - END -->
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-8 ps-md-5">
+                                                    <!-- PARAGRAPH - START -->
+                                                    <p class="mb-0 para-align-title">Jenis Peta:</p>
+                                                    <p class="mb-0 para-align">
+                                                        Peta Laporan Jalan Wilayah Persekutuan (1:10 000) – No. Siri Rampaian 82
+                                                    </p>
+                                                    <div class="para-gap"></div>
+                                                    <p class="mb-0 para-align-title">Pengenalan:</p>
+                                                    <p class="mb-0 para-align">
+                                                        Dalam Pembinaan.
+                                                    </p>
+                                                    <div class="para-gap"></div>
+                                                    <p class="mb-0 para-align-title">Keterangan:</p>
+                                                    <p class="mb-0 para-align">
+                                                        Tiada Maklumat
+                                                    </p>
+                                                    <!-- PARAGRAPH - END -->
+                                                </div>
+                                            </div>
+                                            <!-- SECTION + TEXT TO LEFT - END -->
+                                            <hr class="solid">
+
                                     </section>
 
                                 </div>
