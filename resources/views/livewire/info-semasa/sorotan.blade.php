@@ -2,23 +2,23 @@
     <!-- PAGE TITLE - START-->
     <div class="row">
         <div class="col">
-            <div class="text-title-semasa-11" style="padding-bottom: 20px;">Sorotan Peristiwa</div>
+            <div class="text-title-semasa-11" style="padding-bottom: 20px;">{{ __('message.events') }}</div>
         </div>
     </div>
     <!-- PAGE TITLE - END-->
     <!-- Filtering - START -->
     <div class="row kotak-filter">
         <div class="form-group col-lg-6">
-            <label class="form-label mb-1 text-2">Keyword</label>
+            <label class="form-label mb-1 text-2">{{ __('message.keyword') }}</label>
             <input class="form-control border-color-quaernary" id="beritaTerkini-filter-text" type="text"
                 placeholder="Title/Code" aria-label="default color input example">
         </div>
         <div class="form-group col-lg-6">
-            <label class="form-label mb-1 text-2">Select</label>
+            <label class="form-label mb-1 text-2">{{ __('message.Select Year') }}</label>
             <div class="custom-select-1">
                 <select class="form-select form-control  border-color-quaernary h-auto" name="dd-nama"
                     id="beritaTerkini-filter-year" required>
-                    <option value="">Pilih</option>
+                    <option value="">{{ __('message.choose') }}</option>
                     <option value="2022">2022</option>
                     <option value="2021">2021</option>
                     <option value="2020">2020</option>
@@ -45,10 +45,10 @@
         <thead>
             <tr>
                 <th class="table-title-jupem">#</th>
-                <th class="table-title-jupem">TAJUK</th>
-                <th class="d-none">Tahun</th>
-                <th class="table-title-jupem">TARIKH PENGUMUMAN</th>
-                <th class="table-title-jupem">LAMPIRAN</th>
+                <th class="table-title-jupem">{{ __('message.Title') }}</th>
+                <th class="d-none">{{ __('message.Year') }}</th>
+                <th class="table-title-jupem">{{ __('message.Announcement') }}</th>
+                <th class="table-title-jupem">{{ __('message.Attachment') }}</th>
             </tr>
         </thead>
         <tbody>
@@ -59,7 +59,15 @@
                     </td>
                     <td>
                         <a href="/info-semasa/berita-terkini/{{ $item->id }}" target="_blank"
-                            rel="noopener noreferrer">{{ $item->title_my }}</a>
+                            rel="noopener noreferrer">
+                            @if (app()->getLocale() == 'en')
+                                {{ $item->title_en }}
+                            @elseif ($item->title_en == null)
+                                {{ $item->title_my }}
+                            @else
+                                {{ $item->title_my }}
+                            @endif
+                        </a>
                     </td>
                     <td class="d-none">
                         {{ $item->created_at->format('Y') }}
@@ -69,7 +77,7 @@
                     </td>
                     <td>
                         <a href="/info-semasa/berita-terkini/{{ $item->id }}" target="_blank"
-                            rel="noopener noreferrer">Lampiran</a>
+                            rel="noopener noreferrer">{{ __('message.Attachment') }}</a>
                     </td>
                 </tr>
             @endforeach

@@ -82,6 +82,9 @@ return [
     // Info semasa
     "Current Information" => "Current Information",
     "Client Charter" => "Client's Charter",
+    "keyword" => "Keyword",
+    "events" => "List of Events",
+    "perolehan_berjaya" => "Successful Procurement",
 
     // Info Korp
     "Corporate Information" => "Corporate Information",
@@ -90,18 +93,20 @@ return [
     "Subject Matter Expertise" => "Subject Matter Expertise",
 
     // Page Info Korp
+    "choose" => "Choose",
     "Search" => "Search",
     "Select Year" => "Select Year",
+    "Year" => "Year",
     "Title" => "Title",
     "Date" => "Date",
     "Announcement Date" => "Announcement Date",
     "Attachment" => "Attachment",
-    "Tender Title" => "Tender Title",
-    "Tender Code" => "Tender Code",
-    "Tender Period" => "Tender Period",
-    "Tender Time" => "Tender Time",
+    "Title" => "Title",
+    "Code" => "Code",
+    "Period" => "Period",
+    "Time" => "Time",
     "Briefing" => "Briefing",
-    "Download Client Charter for " => "Download Client's Charter for ",
+    "Download" => "Download ",
     "intro_jupem" => "JUPEM Introduction",
     "info_korp_visi" => "Vision, Mission, Motto, Values, and Definitions of Logo",
     "info_korp_objectives" => "Objectives and Values",
@@ -156,4 +161,20 @@ return [
     "Other Services" => "Other Services",
     "Electronic Map" => "Electronic Map",
     "Malaysia National Atlas" => "Malaysia National Atlas",
+
+    // Piagam Pelanggan
+    "charter_1" => "Completing the cadastral survey work up to the preparation of the Certified Plan within a period not exceeding 180 days from the date of receipt of a complete and orderly Requisition of Survey being registered in the system.",
+    "charter_2" => "Ensuring that the verification of the work performed by Licensed Land Surveyors (LLS) be completed within 60 days from the date of submission of a complete and orderly document.",
+    "charter_3" => "Processing of Strata Plan within 30 days and Certified Strata Plan within 50 days from the date of receipt of a complete and orderly application.",
+    "charter_4" => "Ensuring that lot numbers are issued within a period not exceeding 7 days from the date of receipt of a complete and orderly application from Licensed Land Surveyors.",
+    "charter_5" => "Preparing and providing survey data for the preparation of land title documents to the Land Office / Office of the Director of Lands and Mines within 7 days from the receipt of a complete and orderly application.",
+    "charter_6" => "Ensuring that classified geospatial documents are supplied within 2 days from the receipt of security clearance.",
+    "charter_7" => "Ensuring that MyRTKnet post-processed data can be managed and supplied within 4 hours.",
+    "charter_8" => "Ensuring that any application to purchase unrestricted geomatics information can be managed and supplied within 1 day.",
+    "charter_9" => "Ensuring that any coordinate transformation, coordinate conversion, map projection, and geoid interpolation service application can be managed and supplied within 1 day.",
+    "charter_10" => "Ensuring that all application services/purchase of each copy of the survey/non-restricted map data at the JUPEM counter can be managed within 1 hour.",
+    "charter_11" => "Ensuring that survey data can be accessed and obtained through eBiz at 99.5% uptime per year.",
+    "charter_12" => "Making payments of bills and invoices not exceeding 14 days from the date of receipt of completed applications.",
+    "charter_13" => "To issue acceptance acknowledgement and initial reply for complaints within 1 working day from the date of complaint received.",
+    "charter_14" => "To provide the necessary information to the Land Office / Office of the Director of Lands and Mines for the preparation of land title documents to the Land Office / Office of the Director of Lands and Mines within 7 days from the receipt of a complete and orderly application.",
 ];

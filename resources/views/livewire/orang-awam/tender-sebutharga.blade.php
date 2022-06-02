@@ -1,7 +1,7 @@
 <div>
     <div class="row">
         <div class="col">
-            <div class="text-title-semasa-11" style="padding-bottom: 20px;">Tawaran Perolehan</div>
+            <div class="text-title-semasa-11" style="padding-bottom: 20px;">{{ __('message.Procurement Offer') }}</div>
         </div>
     </div>
     <!-- ACCORDION 1 - START -->
@@ -17,7 +17,7 @@
                                 <a class="accordion-toggle text-color-dark font-weight-bold collapsed"
                                     data-bs-toggle="collapse" data-bs-target="#collapse200One" aria-expanded="false"
                                     aria-controls="collapse200One">
-                                    Tender
+                                    {{ __('message.Tender') }}
                                 </a>
                             </h4>
                         </div>
@@ -27,18 +27,18 @@
                                 <!--  Filtering -->
                                 <div class="row kotak-filter">
                                     <div class="form-group col-lg-6">
-                                        <label class="form-label mb-1 text-2">Carian</label>
+                                        <label class="form-label mb-1 text-2">{{ __('message.Search') }}</label>
                                         <input class="form-control border-color-quaernary filter-text" type="text"
                                             placeholder="Tajuk/Code Tender & Sebutharga" id="tender-filter-text"
                                             aria-label="default color input example">
                                     </div>
                                     <div class="form-group col-lg-6">
-                                        <label class="form-label mb-1 text-2">Pilih Tahun</label>
+                                        <label class="form-label mb-1 text-2">{{ __('message.Select Year') }}</label>
                                         <div class="custom-select-1">
                                             <select
                                                 class="form-select form-control  border-color-quaernary h-auto filter-year"
                                                 id="tender-filter-year" name="dd-nama" required>
-                                                <option value="">Pilih</option>
+                                                <option value="">{{ __('message.choose') }}</option>
                                                 <option value="2022">2022</option>
                                                 <option value="2021">2021</option>
                                                 <option value="2020">2020</option>
@@ -65,20 +65,28 @@
                                     <thead>
                                         <tr>
                                             <th class="align-middle">#</th>
-                                            <th class="align-middle">Tajuk Tender</th>
-                                            <th class="d-none text-center align-middle">Tahun</th>
-                                            <th class="align-middle">Kod</th>
-                                            <th class="align-middle">Tempoh</th>
-                                            <th class="align-middle">Masa</th>
-                                            <th class="align-middle">Taklimat</th>
-                                            <th class="align-middle">Lampiran</th>
+                                            <th class="align-middle">{{ __('message.Title') }}</th>
+                                            <th class="d-none text-center align-middle">{{ __('message.Year') }}</th>
+                                            <th class="align-middle">{{ __('message.Tender Code') }}</th>
+                                            <th class="align-middle">{{ __('message.Tender Period') }}</th>
+                                            <th class="align-middle">{{ __('message.Tender Time') }}</th>
+                                            <th class="align-middle">{{ __('message.Briefing') }}</th>
+                                            <th class="align-middle">{{ __('message.Attachment') }}</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         @foreach ($tender as $item)
                                             <tr>
                                                 <td class="align-middle text-center">{{ $loop->iteration }}</td>
-                                                <td class="align-middle">{{ Str::limit($item->title_my, 30) }}</td>
+                                                <td class="align-middle">
+                                                    @if (app()->getLocale() == 'en')
+                                                        {{ Str::limit($item->title_en, 30) }}
+                                                    @elseif ($item->title_en == null)
+                                                        {{ Str::limit($item->title_my, 30) }}
+                                                    @else
+                                                        {{ Str::limit($item->title_my, 30) }}
+                                                    @endif
+                                                </td>
                                                 <td class="text-center align-middle d-none">
                                                     {{ $item->created_at->format('Y') }}</td>
                                                 <td class="align-middle">{{ Str::limit($item->kod, 10) }}</td>
@@ -106,7 +114,7 @@
                                 <a class="accordion-toggle text-color-dark font-weight-bold collapsed"
                                     data-bs-toggle="collapse" data-bs-target="#collapse200Two" aria-expanded="false"
                                     aria-controls="collapse200Two">
-                                    Sebut Harga
+                                    {{ __('message.sebut_harga') }}
                                 </a>
                             </h4>
                         </div>
@@ -116,18 +124,18 @@
                                 <!--  Filtering -->
                                 <div class="row kotak-filter">
                                     <div class="form-group col-lg-6">
-                                        <label class="form-label mb-1 text-2">Carian</label>
+                                        <label class="form-label mb-1 text-2">{{ __('message.Search') }}</label>
                                         <input class="form-control border-color-quaernary filter-text" type="text"
                                             placeholder="Tajuk/Code Tender & Sebutharga" id="sebut-harga-filter-text"
                                             aria-label="default color input example">
                                     </div>
                                     <div class="form-group col-lg-6">
-                                        <label class="form-label mb-1 text-2">Pilih Tahun</label>
+                                        <label class="form-label mb-1 text-2">{{ __('message.Select Year') }}</label>
                                         <div class="custom-select-1">
                                             <select
                                                 class="form-select form-control  border-color-quaernary h-auto filter-year"
                                                 name="dd-nama" id="sebut-harga-filter-year" required>
-                                                <option value="">Pilih</option>
+                                                <option value="">{{ __('message.Choose') }}</option>
                                                 <option value="2022">2022</option>
                                                 <option value="2021">2021</option>
                                                 <option value="2020">2020</option>
@@ -155,13 +163,13 @@
                                     <thead>
                                         <tr>
                                             <th class="">#</th>
-                                            <th class="">Tajuk Sebut Harga</th>
-                                            <th class="text-center align-middle d-none">Tahun</th>
-                                            <th class="">Kod</th>
-                                            <th class="">Tempoh</th>
-                                            <th class="">Masa</th>
-                                            <th class="">Taklimat</th>
-                                            <th class="text-center ">Lampiran</th>
+                                            <th class="">{{ __('message.Title') }}</th>
+                                            <th class="text-center align-middle d-none">{{ __('message.Year') }}</th>
+                                            <th class="">{{ __('message.') }}</th>
+                                            <th class="">{{ __('message.Period') }}</th>
+                                            <th class="">{{ __('message.Time') }}</th>
+                                            <th class="">{{ __('message.Briefing') }}</th>
+                                            <th class="text-center ">{{ __('message.Attachment') }}</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -171,7 +179,13 @@
                                                     {{ $loop->iteration }}
                                                 </td>
                                                 <td class="align-middle">
-                                                    {{ Str::limit($item->title_my, 30) }}
+                                                    @if (app()->getLocale() == 'en')
+                                                        {{ Str::limit($item->title_en, 30) }}
+                                                    @elseif ($item->title_en == null)
+                                                        {{ Str::limit($item->title_my, 30) }}
+                                                    @else
+                                                        {{ Str::limit($item->title_my, 30) }}
+                                                    @endif
                                                 </td>
                                                 <td class="text-center align-middle d-none">
                                                     {{ $item->created_at->format('Y') }}</td>
@@ -206,7 +220,7 @@
                                 <a class="accordion-toggle text-color-dark font-weight-bold collapsed"
                                     data-bs-toggle="collapse" data-bs-target="#collapse200Three" aria-expanded="false"
                                     aria-controls="collapse200Three">
-                                    Perolehan Berjaya
+                                    {{ __('message.perolehan_berjaya') }}
                                 </a>
                             </h4>
                         </div>
@@ -216,17 +230,17 @@
                                 <!--  Filtering -->
                                 <div class="row kotak-filter">
                                     <div class="form-group col-lg-6">
-                                        <label class="form-label mb-1 text-2">Carian</label>
+                                        <label class="form-label mb-1 text-2">{{ __('message.Search') }}</label>
                                         <input class="form-control border-color-quaernary" type="text"
                                             placeholder="Tajuk/Code Tender & Sebutharga"
                                             aria-label="default color input example" id="perolehan-berjaya-filter-text">
                                     </div>
                                     <div class="form-group col-lg-6">
-                                        <label class="form-label mb-1 text-2">Pilih Tahun</label>
+                                        <label class="form-label mb-1 text-2">{{ __('message.Select Year') }}</label>
                                         <div class="custom-select-1">
                                             <select class="form-select form-control  border-color-quaernary h-auto"
                                                 name="dd-nama" id="perolehan-berjaya-filter-year" required>
-                                                <option value="">Pilih</option>
+                                                <option value="">{{ __('message.choose') }}</option>
                                                 <option value="2022">2022</option>
                                                 <option value="2021">2021</option>
                                                 <option value="2020">2020</option>
@@ -253,12 +267,12 @@
                                     <thead>
                                         <tr>
                                             <th class="table-title-jupem">#</th>
-                                            <th class="table-title-jupem">Tajuk Tender</th>
-                                            <th class="table-title-jupem">Kod</th>
-                                            <th class="table-title-jupem">Tempoh</th>
-                                            <th class="table-title-jupem">Masa</th>
-                                            <th class="table-title-jupem">Taklimat</th>
-                                            <th class="table-title-jupem">Lampiran</th>
+                                            <th class="table-title-jupem">{{ __('message.Title') }}</th>
+                                            <th class="table-title-jupem">{{ __('message.Code') }}</th>
+                                            <th class="table-title-jupem">{{ __('message.Period') }}</th>
+                                            <th class="table-title-jupem">{{ __('message.Time') }}</th>
+                                            <th class="table-title-jupem">{{ __('message.Briefing') }}</th>
+                                            <th class="table-title-jupem">{{ __('message.Attachment') }}</th>
                                         </tr>
                                     </thead>
                                     <tbody>

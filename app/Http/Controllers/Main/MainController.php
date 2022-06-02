@@ -251,21 +251,21 @@ class MainController extends Controller
         ]);
     }
 
-    // Carian Pegawai
-    public function carianPegawai(Request $request)
-    {
-        $search = $request->input('nama');
+    // // Carian Pegawai
+    // public function carianPegawai(Request $request)
+    // {
+    //     $search = $request->input('nama');
 
-        $pegawai = Pegawai::query()
-            ->where('name_my', 'like', '%' . $search . '%')
-            ->orderBy('sort_order', 'asc')
-            ->paginate(15);
+    //     $pegawai = Pegawai::query()
+    //         ->where('name_my', 'like', '%' . $search . '%')
+    //         ->orderBy('sort_order', 'asc')
+    //         ->paginate(15);
 
-        return view('main.pages.carian-pegawai', [
-            'search' => $search,
-            'pegawais' => $pegawai,
-            'counter' =>  $this->counter(),
-            'activity' => $this->activity(),
-        ]);
-    }
+    //     return view('main.pages.carian-pegawai', [
+    //         'search' => $search,
+    //         'pegawais' => $pegawai,
+    //         'counter' =>  $this->counter(),
+    //         'activity' => $this->activity(),
+    //     ]);
+    // }
 }

@@ -169,7 +169,7 @@
                 <div class="row">
                     <div style="margin-top: 10px;">
                         Nama Pegawai
-                        <form role="search" action="{{ route('carian-pegawai') }}" method="get">
+                        <form role="search" action="{{ route('carian-pegawai', app()->getLocale()) }}" method="get">
                             <div class="input-group rounded">
                                 <input type="search" class="form-control rounded form-control-md" name="nama"
                                     placeholder="Sila taip nama pegawai" aria-label="Search"
@@ -310,3 +310,4 @@
             </div> --}}
         </div>
     </div>
+</div>

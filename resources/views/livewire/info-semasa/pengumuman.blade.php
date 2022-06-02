@@ -1,21 +1,21 @@
 <div>
     <div class="row">
         <div class="col">
-            <div class="text-title-semasa-11" style="padding-bottom: 20px;">Pengumuman</div>
+            <div class="text-title-semasa-11" style="padding-bottom: 20px;">{{ __('message.Announcement') }}</div>
         </div>
     </div>
     <div class="row kotak-filter">
         <div class="form-group col-lg-6">
-            <label class="form-label mb-1 text-2">Carian</label>
+            <label class="form-label mb-1 text-2">{{ __('message.Search') }}</label>
             <input class="form-control border-color-quaernary filter-text" type="text" id="pengumuman-filter-text"
                 placeholder="Tajuk/Code Tender & Sebutharga" aria-label="default color input example">
         </div>
         <div class="form-group col-lg-6">
-            <label class="form-label mb-1 text-2">Pilih Tahun</label>
+            <label class="form-label mb-1 text-2">{{ __('message.Select Year') }}</label>
             <div class="custom-select-1">
                 <select class="form-select form-control  border-color-quaernary h-auto filter-year"
                     id="pengumuman-filter-year" required>
-                    <option value="">Pilih</option>
+                    <option value="">{{ __('message.choose') }}</option>
                     <option value="2022">2022</option>
                     <option value="2021">2021</option>
                     <option value="2020">2020</option>
@@ -40,9 +40,9 @@
         <thead>
             <tr>
                 <th class="table-title-jupem text-center">#</th>
-                <th class="table-title-jupem">Tajuk</th>
-                <th class="table-title-jupem d-none">Tahun</th>
-                <th class="table-title-jupem">Tarikh</th>
+                <th class="table-title-jupem">{{ __('message.Title') }}</th>
+                <th class="table-title-jupem d-none">{{ __('message.Year') }}</th>
+                <th class="table-title-jupem">{{ __('message.Date') }}</th>
             </tr>
         </thead>
         <tbody>
@@ -53,8 +53,15 @@
                         {{-- <a href="/pengumuman/{{ $item->id }}" target="_blank" rel="noopener noreferrer">
                             {{ $item->title_my }}
                         </a> --}}
-                        <a href="/info-semasa/pengumuman/{{ $item->id }}"
-                            target="_blank">{{ $item->title_my }}</a>
+                        <a href="/info-semasa/pengumuman/{{ $item->id }}" target="_blank">
+                            @if (app()->getLocale() == 'ms')
+                                {{ $item->title_my }}
+                            @elseif ($item->title_en == null)
+                                {{ $item->title_my }}
+                            @else
+                                {{ $item->title_en }}
+                            @endif
+                        </a>
                     </td>
                     <td class="align-middle d-none">{{ $item->created_at->format('Y') }}</td>
                     <td class="align-middle">

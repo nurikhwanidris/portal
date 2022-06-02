@@ -2,7 +2,7 @@
     <!-- PAGE TITLE - START-->
     <div class="row">
         <div class="col">
-            <div class="text-title-semasa-11" style="padding-bottom: 20px;">Piagam Pelanggan</div>
+            <div class="text-title-semasa-11" style="padding-bottom: 20px;">{{ __('message.Client Charter') }}</div>
         </div>
     </div>
     <!-- LIST TEXT - START -->
@@ -12,73 +12,60 @@
             <ul class="list list-icons list-icons-style-3 list-tertiary list-icons-sm">
                 <li>
                     <i class="fas fa-check"></i>
-                    Menyiapkan kerja ukur kadaster sehingga penyediaan Pelan Akui dalam tempoh tidak melebihi 180 hari
-                    dari tarikh penerimaan Permohonan Ukur yang lengkap dan teratur serta didaftarkan dalam sistem.
+                    {{ __('message.charter_1') }}
                 </li>
                 <li><i class="fas fa-check"></i>
-                    Memastikan penyemakan ke atas kerja kerja Jurukur Tanah Berlesen (JTB) disiapkan dalam tempoh 60
-                    hari dari tarikh penyerahan dokumen yang lengkap dan teratur.
+                    {{ __('message.charter_2') }}
                 </li>
                 <li><i class="fas fa-check"></i>
-                    Memproses Pelan Strata dalam tempoh 30 hari dan Pelan Akui Strata dalam tempoh 50 hari dari tarikh
-                    penerimaan permohonan yang lengkap dan teratur.
+                    {{ __('message.charter_3') }}
                 </li>
                 <li><i class="fas fa-check"></i>
-                    Memastikan pengeluaran nombor-nombor lot dilakukan dalam tempoh tidak melebihi 7 hari dari tarikh
-                    permohonan yang lengkap dan teratur daripada Jurukur Tanah Berlesen.
+                    {{ __('message.charter_4') }}
                 </li>
                 <li><i class="fas fa-check"></i>
-                    Menyedia serta membekalkan data-data ukur untuk penyediaan suratan hakmilik ke Pejabat Tanah/Pejabat
-                    Pengarah Tanah dan Galian dalam tempoh 7 hari dari penerimaan permohonan yang sempurna dan teratur.
+                    {{ __('message.charter_5') }}
                 </li>
                 <li><i class="fas fa-check"></i>
-                    Memastikan dokumen geospatial terperingkat dibekalkan dalam masa 2 hari selepas menerima kelulusan
-                    tapisan keselamatan.
+                    {{ __('message.charter_6') }}
                 </li>
                 <li><i class="fas fa-check"></i>
-                    Memastikan data pasca proses MyRTKNet dapat diurus dan dibekalkan dalam masa 4 jam.
+                    {{ __('message.charter_7') }}
                 </li>
                 <li><i class="fas fa-check"></i>
-                    Memastikan sebarang permohonan pembelian maklumat geodetik tidak terhad dapat diurus dan dibekalkan
-                    dalam masa 1 hari.
+                    {{ __('message.charter_8') }}
                 </li>
                 <li><i class="fas fa-check"></i>
-                    Memastikan sebarang permohonan perkhidmatan transformasi koordinat, penukaran koordinat, unjuran
-                    peta dan interpolasi geoid dapat diurus dan dibekalkan dalam masa 1 hari.
+                    {{ __('message.charter_9') }}
                 </li>
                 <li><i class="fas fa-check"></i>
-                    Memproses Pelan Strata dalam tempoh 30 hari dan Pelan Akui Strata dalam tempoh 50 hari dari tarikh
-                    penerimaan permohonan yang lengkap dan teratur.
+                    {{ __('message.charter_10') }}
                 </li>
                 <li><i class="fas fa-check"></i>
-                    Memastikan sebarang permohonan perkhidmatan / pembelian bagi setiap salinan data ukur/peta tidak
-                    terhad di kaunter JUPEM dapat diuruskan dalam masa 1 jam.
+                    {{ __('message.charter_11') }}
                 </li>
                 <li><i class="fas fa-check"></i>
-                    Memastikan data-data ukur dapat diakses dan diperolehi melalui eBiz pada capaian 99.5% setahun.
+                    {{ __('message.charter_12') }}
                 </li>
                 <li><i class="fas fa-check"></i>
-                    Membuat pembayaran bil dan invois tidak melebihi 14 hari dari tarikh penerimaan lengkap diterima.
+                    {{ __('message.charter_13') }}
                 </li>
-                <li><i class="fas fa-check"></i>
-                    Mengeluarkan akuan penerimaan dan maklumbalas awal bagi aduan dalam tempoh 1 hari bekerja dari
-                    tarikh aduan diterima</li>
             </ul>
         </div>
     </div>
     <div class="row mt-2 mb-4">
         <a href="{{ asset('storage/upload/piagam_pelanggan/' . $piagam[0]->filename_my) }}" class="btn btn-success"
-            target="_blank"><i class="fas fa-download"></i> Muat Turun
+            target="_blank"><i class="fas fa-download"></i> {{ __('message.Download') }}
             {{ $piagam[0]->title_my }}</a>
     </div>
     <div class="row kotak-filter">
         <div class="form-group col-lg-6">
-            <label class="form-label mb-1 text-2">Kata Kunci</label>
+            <label class="form-label mb-1 text-2">{{ __('message.keyword') }}</label>
             <input class="form-control border-color-quaernary piagam-filter-text" type="text" placeholder="Tajuk"
                 aria-label="default color input example" id="piagam-filter-text">
         </div>
         <div class="form-group col-lg-6">
-            <label class="form-label mb-1 text-2">Pilih Tahun</label>
+            <label class="form-label mb-1 text-2">{{ __('message.Select Year') }}</label>
             <div class="custom-select-1">
                 <select class="form-select form-control  border-color-quaernary h-auto filter-select filter-year"
                     data-column="2" id="piagam-filter-year" name="dd-nama" required>
@@ -110,9 +97,9 @@
                 <thead>
                     <tr>
                         <th class="table-title-jupem align-middle text-center">#</th>
-                        <th class="table-title-jupem">Tajuk</th>
+                        <th class="table-title-jupem">{{ __('message.Title') }}</th>
                         <th class="align-middle text-center d-none">Tahun</th>
-                        <th class="table-title-jupem text-center">Muat Turun</th>
+                        <th class="table-title-jupem text-center">{{ __('message.Attachment') }}</th>
                     </tr>
                 </thead>
                 <tbody>

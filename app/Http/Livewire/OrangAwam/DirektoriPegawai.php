@@ -2,7 +2,6 @@
 
 namespace App\Http\Livewire\OrangAwam;
 
-use App\Models\Pegawai;
 use Illuminate\Support\Facades\DB;
 use Livewire\Component;
 
@@ -28,5 +27,10 @@ class DirektoriPegawai extends Component
 
             $this->bahagian = $query;
         }
+    }
+
+    public function render()
+    {
+        return view('livewire.orang-awam.direktori-pegawai');
     }
 }

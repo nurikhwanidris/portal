@@ -2,7 +2,7 @@
     <!-- PAGE TITLE - START-->
     <div class="row">
         <div class="col">
-            <div class="text-title-semasa-11" style="padding-bottom: 20px;">Pengumuman</div>
+            <div class="text-title-semasa-11" style="padding-bottom: 20px;">{{__('message.Procurement Offer')}}</div>
         </div>
     </div>
     <!-- PAGE TITLE - END-->
@@ -17,7 +17,7 @@
 					<div class="card-header" id="collapse200HeadingOne">
 						<h4 class="card-title m-0">
 							<a class="accordion-toggle text-color-dark font-weight-bold collapsed" data-bs-toggle="collapse" data-bs-target="#collapse200One" aria-expanded="false" aria-controls="collapse200One">
-								Tender
+								{{__('message.Tender')}}
 							</a>
 						</h4>
 					</div>
@@ -27,11 +27,11 @@
                             <!-- Filtering - START -->
                             <div class="row kotak-filter">
                                 <div class="form-group col-lg-6">
-                                    <label class="form-label mb-1 text-2">Keyword</label>
+                                    <label class="form-label mb-1 text-2">{{__('message.keyword')}}</label>
                                     <input class="form-control border-color-quaernary" type="text" placeholder="Title/Code" aria-label="default color input example">
                                 </div>
                                 <div class="form-group col-lg-6">
-                                    <label class="form-label mb-1 text-2">Select</label>
+                                    <label class="form-label mb-1 text-2">select</label>
                                     <div class="custom-select-1">
                                         <select class="form-select form-control  border-color-quaernary h-auto" name="dd-nama" required>
                                             <option value="">Choose...</option>

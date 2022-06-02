@@ -84,6 +84,9 @@ return [
     // Info semasa
     "Current Information" => "Info Semasa",
     "Client Charter" => "Piagam Pelanggan",
+    "keyword" => "Kata kunci",
+    "events" => "Sorotan Peristiwa",
+    "perolehan_berjaya" => "Perolehan Berjaya",
 
     // Info Korp
     "Corporate Information" => "Info Korp",
@@ -98,12 +101,12 @@ return [
     "Date" => "Tarikh",
     "Announcement Date" => "Tarikh Pengumuman",
     "Attachment" => "Lampiran",
-    "Tender Title" => "Tajuk Tender",
-    "Tender Code" => "Kod Tender",
-    "Tender Period" => "Tempoh Tender",
-    "Tender Time" => "Masa Tender",
+    "Title" => "Tajuk",
+    "Code" => "Kod",
+    "Period" => "Tempoh",
+    "Time" => "Masa",
     "Briefing" => "Taklimat",
-    "Download Client Charter for" => "Muat Turun Prestasi Piagam Pelanggan bagi  ",
+    "Download" => "Muat Turun ",
     "intro_jupem" => "Pengenalan JUPEM",
     "info_korp_visi" => "Visi, Misi, Moto, Nilai dan Definisi Logo JUPEM",
     "info_korp_objectives" => "Tugas dan Peranan JUPEM",
@@ -158,4 +161,19 @@ return [
     "Other Services" => "Servis Lain",
     "Electronic Map" => "Peta Elektronik",
     "Malaysia National Atlas" => "Atlas Kebangsaan Malaysia",
+
+    // Piagam Pelanggan
+    "charter_1" => "Menyiapkan kerja ukur kadaster sehingga penyediaan Pelan Akui dalam tempoh tidak melebihi 180 hari dari tarikh penerimaan Permohonan Ukur yang lengkap dan teratur serta didaftarkan dalam sistem.",
+    "charter_2" => "Memastikan penyemakan ke atas kerja kerja Jurukur Tanah Berlesen (JTB) disiapkan dalam tempoh 60 hari dari tarikh penyerahan dokumen yang lengkap dan teratur.",
+    "charter_3" => "Memproses Pelan Strata dalam tempoh 30 hari dan Pelan Akui Strata dalam tempoh 50 hari dari tarikh penerimaan permohonan yang lengkap dan teratur.",
+    "charter_4" => "Memastikan pengeluaran nombor-nombor lot dilakukan dalam tempoh tidak melebihi 7 hari dari tarikh permohonan yang lengkap dan teratur daripada Jurukur Tanah Berlesen.",
+    "charter_5" => "Menyedia serta membekalkan data-data ukur untuk penyediaan suratan hakmilik ke Pejabat Tanah/Pejabat Pengarah Tanah dan Galian dalam tempoh 7 hari dari penerimaan permohonan yang sempurna dan teratur.",
+    "charter_6" => "Memastikan dokumen geospatial terperingkat dibekalkan dalam masa 2 hari selepas menerima kelulusan tapisan keselamatan.",
+    "charter_7" => "Memastikan data pasca proses MyRTKNet dapat diurus dan dibekalkan dalam masa 4 jam.",
+    "charter_8" => "Memastikan sebarang permohonan pembelian maklumat geodetik tidak terhad dapat diurus dan dibekalkan dalam masa 1 hari.",
+    "charter_9" => "Memastikan sebarang permohonan perkhidmatan transformasi koordinat, penukaran koordinat, unjuran peta dan interpolasi geoid dapat diurus dan dibekalkan dalam masa 1 hari.",
+    "charter_10" => "Memproses Pelan Strata dalam tempoh 30 hari dan Pelan Akui Strata dalam tempoh 50 hari dari tarikh penerimaan permohonan yang lengkap dan teratur.",
+    "charter_11" => "Memastikan data-data ukur dapat diakses dan diperolehi melalui eBiz pada capaian 99.5% setahun.",
+    "charter_12" => "Membuat pembayaran bil dan invois tidak melebihi 14 hari dari tarikh penerimaan lengkap diterima.",
+    "charter_13" => "Mengeluarkan akuan penerimaan dan maklumbalas awal bagi aduan dalam tempoh 1 hari bekerja dari tarikh aduan diterima",
 ];
