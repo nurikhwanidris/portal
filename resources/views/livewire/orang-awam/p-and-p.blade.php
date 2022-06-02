@@ -2265,6 +2265,83 @@
                         </div>
                     </div>
                 </div>
+                <div class="accordion accordion-modern-status accordion-modern-status-borders accordion-modern-status-arrow mt-3"
+                    id="accordion200">
+                    <!-- 4- Peta Tematik -->
+                    <div class="card card-default">
+                        <div class="card-header" id="collapse200HeadingSix">
+                            <h4 class="card-title m-0">
+                                <a class="accordion-toggle text-color-dark font-weight-bold collapsed"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse200Six" aria-expanded="false"
+                                    aria-controls="collapse200Six">
+                                    Fotograf Udara
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse200Six" class="collapse" aria-labelledby="collapse200Heading"
+                            data-bs-parent="#accordion200">
+                            <div class="card-body pt-0">
+
+                                <!-- ACCORDION 2 -START -->
+                                <div class="toggle toggle-primary toggle-simple" data-plugin-toggle>
+                                    <!-- 1 -->
+                                    <section class="toggle">
+                                        {{-- <span class="toggle-title text-4">
+                                            <div class="accordion-jupem-negeri">Peta Tematik</div>
+                                        </span> --}}
+                                        {{-- <div class="toggle-content"> --}}
+                                            <!-- 1 -->
+                                            <!-- SECTION + TEXT TO LEFT - START -->
+                                            <div class="row align-items-center pt-4 appear-animation"
+                                                data-appear-animation="fadeInLeftShorter">
+                                                <div class="col-md-4 mb-4 mb-md-0">
+                                                    <div class="col">
+                                                        <!-- LIGHTBOX - START -->
+                                                        <div class="row">
+                                                            <div class="col-lg-12">
+                                                                <a class="img-thumbnail img-thumbnail-no-borders d-block lightbox"
+                                                                    href="main/img/peta/20190530093650-FUDigital.jpg"
+                                                                    data-plugin-options="{'type':'image'}">
+                                                                    <img class="img-fluid"
+                                                                        src="main/img/peta/20190530093650-FUDigital.jpg"
+                                                                        alt="Project Image">
+                                                                    <span class="zoom">
+                                                                        <i class="fas fa-search"></i>
+                                                                    </span>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <!-- LIGHTBOX - END -->
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-8 ps-md-5">
+                                                    <!-- PARAGRAPH - START -->
+                                                    <p class="mb-0 para-align-title">Jenis Peta:</p>
+                                                    <p class="mb-0 para-align">
+                                                        Foto Udara
+                                                    </p>
+                                                    <div class="para-gap"></div>
+                                                    <p class="mb-0 para-align-title">Keterangan:</p>
+                                                    <p class="mb-0 para-align">
+                                                        Berdasarkan larian gambar udara. Satu fotoudara yang diperolehi melalui kamera udara dalam proses pemetaan fotografi. JUPEM membekal gambar udara samada dalam bentuk salinan keras atau berdigit berdasarkan kamera udara analog dan digital. Fotoudara ini dikategorikan sebagai Dokumen Geospatial Terperingkat
+                                                    </p>
+                                                    <!-- PARAGRAPH - END -->
+                                                </div>
+                                            </div>
+                                            <!-- SECTION + TEXT TO LEFT - END -->
+                                            <hr class="solid">
+
+
+                                        {{-- </div> --}}
+                                    </section>
+
+                                </div>
+                                <!-- ACCORDION 2 -END -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
