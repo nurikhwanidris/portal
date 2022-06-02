@@ -44,7 +44,7 @@
                     <!-- Button - Stesen - START -->
                     <div class="row">
                         <div class="col">
-                            <a href="#" class="btn btn-outline btn-quaternary mb-2 active">Pulau Langkawi</a>
+                            <a href="#" class="btn btn-outline btn-quaternary mb-2 active">Pulau Langkawi.</a>
                             <a href="#" class="btn btn-outline btn-quaternary mb-2">Pulau Pinang</a>
                             <a href="#" class="btn btn-outline btn-quaternary mb-2">Lumut</a>
                         </div>
