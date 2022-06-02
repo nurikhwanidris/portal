@@ -1333,10 +1333,11 @@
                                 <div class="toggle toggle-primary toggle-simple" data-plugin-toggle>
                                     <!-- 1 -->
                                     <section class="toggle">
-                                        <span class="toggle-title text-4">
+                                        {{-- <span class="toggle-title text-4">
                                             <div class="accordion-jupem-negeri">Peta Tematik</div>
-                                        </span>
+                                        </span> --}}
                                         {{-- <div class="toggle-content"> --}}
+                                            <!-- 1 -->
                                             <!-- SECTION + TEXT TO LEFT - START -->
                                             <div class="row align-items-center pt-4 appear-animation"
                                                 data-appear-animation="fadeInLeftShorter">
@@ -1346,10 +1347,10 @@
                                                         <div class="row">
                                                             <div class="col-lg-12">
                                                                 <a class="img-thumbnail img-thumbnail-no-borders d-block lightbox"
-                                                                    href="main/img/peta/20190530085006-MY90001R.jpg"
+                                                                    href="main/img/peta/20190530085118-MY91001R.jpg"
                                                                     data-plugin-options="{'type':'image'}">
                                                                     <img class="img-fluid"
-                                                                        src="main/img/peta/20190530085006-MY90001R.jpg"
+                                                                        src="main/img/peta/20190530085118-MY91001R.jpg"
                                                                         alt="Project Image">
                                                                     <span class="zoom">
                                                                         <i class="fas fa-search"></i>
@@ -1377,19 +1378,58 @@
                                             </div>
                                             <!-- SECTION + TEXT TO LEFT - END -->
                                             <hr class="solid">
+                                            <!-- 2 -->
+                                            <!-- SECTION + TEXT TO RIGHT - START -->
+                                            <div class="row align-items-center py-5 appear-animation"
+                                                data-appear-animation="fadeInRightShorter">
+                                                <div class="col-md-8 pe-md-5 mb-5 mb-md-0">
+                                                    <!-- PARAGRAPH - START -->
+                                                    <p class="mb-0 para-align-title">Jenis Peta:</p>
+                                                    <p class="mb-0 para-align">
+                                                        PETA DAERAH SABAH, SARAWAK & WP LABUAN (SIRI MY91001R)
+                                                    </p>
+                                                    <div class="para-gap"></div>
+                                                    <p class="mb-0 para-align-title">Keterangan:</p>
+                                                    <p class="mb-0 para-align">
+                                                        Peta Daerah merupakan peta tematik yang memaparkan maklumat pentadbiran daerah dalam sesebuah negeri. Kawasan pentadbiran seperti bahagian, daerah, daerah kecil, pekan dan bandar dipersembahkan dalam warna yang berbeza dan dianotasikan. Antara maklumat yang dipaparkan adalah termasuk jalan yang dikelaskan oleh pihak Jabatan Kerja Raya (JKR), jalan keretapi dan sungai. Lain-lain maklumat seperti balai polis, hospital, bangunan kerajaan, sekolah dan kemudahan lain ditunjukkan sebagai simbol tematik mengikut lokasinya. Kawasan penting melibatkan sebahagian ibu daerah ditandakan dengan kotak garisan putus di peta utama dan dibuatkan peta inset dalam skala yang besar. Maklumat jalan, bangunan kediaman dan pentadbiran serta kemudahan lain yang lebih terperinci ditunjukkan dalam bentuk simbol tematik dan dianotasikan. Peta ini disusun di atas Unjuran Bentuk Benar Serong Ditepati (Sabah, Sarawak dan Wilayah Persekutuan Labuan) Sferoid GRS 80, Datum 2000
+                                                    </p>
+                                                    <!-- PARAGRAPH - END -->
+                                                </div>
+                                                <div class="col-md-4 px-5 px-md-3">
+                                                    <div class="col">
+                                                        <div class="row">
+                                                            <div class="col-lg-12">
+                                                                <a class="img-thumbnail img-thumbnail-no-borders d-block lightbox"
+                                                                    href="main/img/peta/20190507102404-d34f1-dnmm8101.jpg"
+                                                                    data-plugin-options="{'type':'image'}">
+                                                                    <img class="img-fluid"
+                                                                        src="main/img/peta/20190507102404-d34f1-dnmm8101.jpg"
+                                                                        alt="Project Image">
+                                                                    <span class="zoom">
+                                                                        <i class="fas fa-search"></i>
+                                                                    </span>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- SECTION + TEXT TO RIGHT - END -->
+                                            <hr class="solid">
+                                            <!-- 3 -->
                                             <!-- SECTION + TEXT TO LEFT - START -->
                                             <div class="row align-items-center pt-4 appear-animation"
-                                                data-appear-animation="fadeInRightShorter">
+                                                data-appear-animation="fadeInLeftShorter">
                                                 <div class="col-md-4 mb-4 mb-md-0">
                                                     <div class="col">
                                                         <!-- LIGHTBOX - START -->
                                                         <div class="row">
                                                             <div class="col-lg-12">
                                                                 <a class="img-thumbnail img-thumbnail-no-borders d-block lightbox"
-                                                                    href="main/img/peta/20190530085118-MY91001R.jpg"
+                                                                    href="main/img/peta/20190514010344-DNMM9001.jpg"
                                                                     data-plugin-options="{'type':'image'}">
                                                                     <img class="img-fluid"
-                                                                        src="main/img/peta/20190530085118-MY91001R.jpg"
+                                                                        src="main/img/peta/20190514010344-DNMM9001.jpg"
                                                                         alt="Project Image">
                                                                     <span class="zoom">
                                                                         <i class="fas fa-search"></i>
@@ -1405,17 +1445,381 @@
                                                     <!-- PARAGRAPH - START -->
                                                     <p class="mb-0 para-align-title">Jenis Peta:</p>
                                                     <p class="mb-0 para-align">
-                                                        PETA DAERAH SABAH, SARAWAK & WP LABUAN (SIRI MY91001R)
+                                                        PETA PENGANGKUTAN DI SABAH/SARAWAK/LABUAN (SIRI DNMM9001)
                                                     </p>
                                                     <div class="para-gap"></div>
                                                     <p class="mb-0 para-align-title">Keterangan:</p>
                                                     <p class="mb-0 para-align">
-                                                        Peta Daerah merupakan peta tematik yang memaparkan maklumat pentadbiran daerah dalam sesebuah negeri. Kawasan pentadbiran seperti bahagian, daerah, daerah kecil, pekan dan bandar dipersembahkan dalam warna yang berbeza dan dianotasikan. Antara maklumat yang dipaparkan adalah termasuk jalan yang dikelaskan oleh pihak Jabatan Kerja Raya (JKR), jalan keretapi dan sungai. Lain-lain maklumat seperti balai polis, hospital, bangunan kerajaan, sekolah dan kemudahan lain ditunjukkan sebagai simbol tematik mengikut lokasinya. Kawasan penting melibatkan sebahagian ibu daerah ditandakan dengan kotak garisan putus di peta utama dan dibuatkan peta inset dalam skala yang besar. Maklumat jalan, bangunan kediaman dan pentadbiran serta kemudahan lain yang lebih terperinci ditunjukkan dalam bentuk simbol tematik dan dianotasikan. Peta ini disusun di atas Unjuran Bentuk Benar Serong Ditepati (Sabah, Sarawak dan Wilayah Persekutuan Labuan) Sferoid GRS 80, Datum 2000
+                                                        Peta Pengangkutan merupakan peta tematik yang memaparkan maklumat jalinan pengangkutan darat antara bandar/pekan/kampung dalam sesebuah negeri. Antara maklumat yang dipaparkan adalah termasuk jalan yang dikelaskan oleh pihak Jabatan Kerja Raya (JKR), jalan keretapi dan sungai. Maklumat jarak (dalam kilometer) antara bandar utama, nombor laluan Lebuhraya, Jalan Persekutuan, dan Jalan Negeri turut dipaparkan dalam peta ini.
                                                     </p>
                                                     <!-- PARAGRAPH - END -->
                                                 </div>
                                             </div>
                                             <!-- SECTION + TEXT TO LEFT - END -->
+                                            <hr class="solid">
+                                            <!-- 4 -->
+                                            <!-- SECTION + TEXT TO RIGHT - START -->
+                                            <div class="row align-items-center py-5 appear-animation"
+                                                data-appear-animation="fadeInRightShorter">
+                                                <div class="col-md-8 pe-md-5 mb-5 mb-md-0">
+                                                    <!-- PARAGRAPH - START -->
+                                                    <p class="mb-0 para-align-title">Jenis Peta:</p>
+                                                    <p class="mb-0 para-align">
+                                                        PETA PENGANGKUTAN NEGERI-NEGERI SEMENANJUNG (SIRI MY90003R)
+                                                    </p>
+                                                    <div class="para-gap"></div>
+                                                    <p class="mb-0 para-align-title">Keterangan:</p>
+                                                    <p class="mb-0 para-align">
+                                                        Peta Pengangkutan merupakan peta tematik yang memaparkan maklumat jalinan pengangkutan darat antara bandar/pekan/kampung dalam sesebuah negeri. Antara maklumat yang dipaparkan adalah termasuk jalan yang dikelaskan oleh pihak Jabatan Kerja Raya (JKR), jalan keretapi dan sungai. Maklumat jarak (dalam kilometer) antara bandar utama, nombor laluan Lebuhraya, Jalan Persekutuan, dan Jalan Negeri turut dipaparkan dalam peta ini. Peta ini disusun di atas Unjuran Bentuk Benar Serong Ditepati (Semenanjung Malaysia) Sferoid GRS 80, Datum 2000
+                                                    </p>
+                                                    <!-- PARAGRAPH - END -->
+                                                </div>
+                                                <div class="col-md-4 px-5 px-md-3">
+                                                    <div class="col">
+                                                        <div class="row">
+                                                            <div class="col-lg-12">
+                                                                <a class="img-thumbnail img-thumbnail-no-borders d-block lightbox"
+                                                                    href="main/img/peta/20190530085246-MY90003R.jpg"
+                                                                    data-plugin-options="{'type':'image'}">
+                                                                    <img class="img-fluid"
+                                                                        src="main/img/peta/20190530085246-MY90003R.jpg"
+                                                                        alt="Project Image">
+                                                                    <span class="zoom">
+                                                                        <i class="fas fa-search"></i>
+                                                                    </span>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- SECTION + TEXT TO RIGHT - END -->
+                                            <hr class="solid">
+
+                                            <!-- 5 -->
+                                            <!-- SECTION + TEXT TO LEFT - START -->
+                                            <div class="row align-items-center pt-4 appear-animation"
+                                                data-appear-animation="fadeInLeftShorter">
+                                                <div class="col-md-4 mb-4 mb-md-0">
+                                                    <div class="col">
+                                                        <!-- LIGHTBOX - START -->
+                                                        <div class="row">
+                                                            <div class="col-lg-12">
+                                                                <a class="img-thumbnail img-thumbnail-no-borders d-block lightbox"
+                                                                    href="main/img/peta/20190530085409-MY90008R.jpg"
+                                                                    data-plugin-options="{'type':'image'}">
+                                                                    <img class="img-fluid"
+                                                                        src="main/img/peta/20190530085409-MY90008R.jpg"
+                                                                        alt="Project Image">
+                                                                    <span class="zoom">
+                                                                        <i class="fas fa-search"></i>
+                                                                    </span>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <!-- LIGHTBOX - END -->
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-8 ps-md-5">
+                                                    <!-- PARAGRAPH - START -->
+                                                    <p class="mb-0 para-align-title">Jenis Peta:</p>
+                                                    <p class="mb-0 para-align">
+                                                        PETA POLITIKAL SEMENANJUNG (SIRI MY90008R)
+                                                    </p>
+                                                    <div class="para-gap"></div>
+                                                    <p class="mb-0 para-align-title">Keterangan:</p>
+                                                    <p class="mb-0 para-align">
+                                                        Peta Politikal merupakan peta tematik yang memaparkan maklumat kawasan-kawasan pentadbiran setiap negeri. Kawasan pentadbiran negeri dipersembahkan dalam warna yang berbeza dan dianotasikan. Ciri-ciri seperti sempadan antarabangsa, negeri, daerah serta maklumat-maklumat seperti jalan raya, jalan keretapi, sungai, nama bandar dan kampung ditunjukkan mengikut simbol-simbol tertentu.
+                                                    </p><p class="mb-0 para-align">Saiz format peta adalah seperti berikut:
+                                                    </p><p class="mb-0 para-align">Lembar 1 : 72 sm x 87.5 sm (Semenanjung Malaysia)
+                                                    </p><p class="mb-0 para-align">Peta ini disusun di atas Unjuran Bentuk Benar Serong Ditepati (Semenanjung Malaysia) Sferoid GRS 80, Datum 2000
+                                                    </p>
+                                                    <!-- PARAGRAPH - END -->
+                                                </div>
+                                            </div>
+                                            <!-- SECTION + TEXT TO LEFT - END -->
+                                            <hr class="solid">
+                                            <!-- 6 -->
+                                            <!-- SECTION + TEXT TO RIGHT - START -->
+                                            <div class="row align-items-center py-5 appear-animation"
+                                                data-appear-animation="fadeInRightShorter">
+                                                <div class="col-md-8 pe-md-5 mb-5 mb-md-0">
+                                                    <!-- PARAGRAPH - START -->
+                                                    <p class="mb-0 para-align-title">Jenis Peta:</p>
+                                                    <p class="mb-0 para-align">
+                                                        PETA POLITIKAL SABAH DAN SARAWAK (SIRI MY91008R)
+                                                    </p>
+                                                    <div class="para-gap"></div>
+                                                    <p class="mb-0 para-align-title">Keterangan:</p>
+                                                    <p class="mb-0 para-align">
+                                                        Peta Politikal merupakan peta tematik yang memaparkan maklumat kawasan-kawasan pentadbiran setiap negeri. Kawasan pentadbiran negeri dipersembahkan dalam warna yang berbeza dan dianotasikan. Ciri-ciri seperti sempadan antarabangsa, negeri, bahagian, daerah, daerah kecil serta maklumat-maklumat .seperti jalan raya, jalan keretapi, sungai, nama bandar dan kampung ditunjukkan mengikut simbol-simbol tertentu.
+                                                    </p><p class="mb-0 para-align">Saiz format peta adalah sperti berikut:
+                                                    </p><p class="mb-0 para-align">Lembar 2 : 83 sm x 100 sm (Sarawak)
+                                                    </p><p class="mb-0 para-align">Lembar 3 : 83 sm x 100 sm (Sabah)
+                                                    </p><p class="mb-0 para-align">Peta ini disusun di atas Unjuran Bentuk Benar Serong Ditepati (Sabah, Sarawak dan Wilayah Persekutuan Labuan) Sferoid GRS 80, Datum 2000
+                                                    </p>
+                                                    <!-- PARAGRAPH - END -->
+                                                </div>
+                                                <div class="col-md-4 px-5 px-md-3">
+                                                    <div class="col">
+                                                        <div class="row">
+                                                            <div class="col-lg-12">
+                                                                <a class="img-thumbnail img-thumbnail-no-borders d-block lightbox"
+                                                                    href="main/img/peta/20190530085523-MY91008R_SARAWAK-1.jpg"
+                                                                    data-plugin-options="{'type':'image'}">
+                                                                    <img class="img-fluid"
+                                                                        src="main/img/peta/20190530085523-MY91008R_SARAWAK-1.jpg"
+                                                                        alt="Project Image">
+                                                                    <span class="zoom">
+                                                                        <i class="fas fa-search"></i>
+                                                                    </span>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- SECTION + TEXT TO RIGHT - END -->
+                                            <hr class="solid">
+                                            <!-- 7 -->
+                                            <!-- SECTION + TEXT TO LEFT - START -->
+                                            <div class="row align-items-center pt-4 appear-animation"
+                                                data-appear-animation="fadeInLeftShorter">
+                                                <div class="col-md-4 mb-4 mb-md-0">
+                                                    <div class="col">
+                                                        <!-- LIGHTBOX - START -->
+                                                        <div class="row">
+                                                            <div class="col-lg-12">
+                                                                <a class="img-thumbnail img-thumbnail-no-borders d-block lightbox"
+                                                                    href="main/img/peta/20190530091843-MY90005R.jpg"
+                                                                    data-plugin-options="{'type':'image'}">
+                                                                    <img class="img-fluid"
+                                                                        src="main/img/peta/20190530091843-MY90005R.jpg"
+                                                                        alt="Project Image">
+                                                                    <span class="zoom">
+                                                                        <i class="fas fa-search"></i>
+                                                                    </span>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <!-- LIGHTBOX - END -->
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-8 ps-md-5">
+                                                    <!-- PARAGRAPH - START -->
+                                                    <p class="mb-0 para-align-title">Jenis Peta:</p>
+                                                    <p class="mb-0 para-align">
+                                                        PETA NEGERI SEMENANJUNG (SIRI MY90005R)
+                                                    </p>
+                                                    <div class="para-gap"></div>
+                                                    <p class="mb-0 para-align-title">Keterangan:</p>
+                                                    <p class="mb-0 para-align">
+                                                        Peta Negeri merupakan peta tematik yang memaparkan maklumat pentadbiran negeri, daerah/ jajahan, dan mukim dipersembahkan dalam warna yang berbeza serta dianotasikan. Antara maklumat yang dipaparkan adalah pengangkutan, pelbagai binaan, hidrografi, sempadan dan status tempat. Peta ini disusun di atas Unjuran Bentuk Benar Serong Ditepati (Semenanjung Malaysia) Sferoid GRS 80, Datum 2000
+                                                    </p>
+                                                    <!-- PARAGRAPH - END -->
+                                                </div>
+                                            </div>
+                                            <!-- SECTION + TEXT TO LEFT - END -->
+                                            <hr class="solid">
+                                            <!-- 8 -->
+                                            <!-- SECTION + TEXT TO RIGHT - START -->
+                                            <div class="row align-items-center py-5 appear-animation"
+                                                data-appear-animation="fadeInRightShorter">
+                                                <div class="col-md-8 pe-md-5 mb-5 mb-md-0">
+                                                    <!-- PARAGRAPH - START -->
+                                                    <p class="mb-0 para-align-title">Jenis Peta:</p>
+                                                    <p class="mb-0 para-align">
+                                                        PETA NEGERI SABAH, SARAWAK & WP LABUAN (SIRI MY91005R)
+                                                    </p>
+                                                    <div class="para-gap"></div>
+                                                    <p class="mb-0 para-align-title">Keterangan:</p>
+                                                    <p class="mb-0 para-align">
+                                                        Peta Negeri merupakan peta tematik yang memaparkan maklumat pentadbiran negeri, bahagian, daerah dan daerah kecil dipersembahkan dalam warna yang berbeza serta dianotasikan. Antara maklumat yang dipaparkan adalah pengangkutan, pelbagai binaan, hidrografi, sempadan dan status tempat. Peta ini disusun di atas Unjuran Bentuk Benar Serong Ditepati (Sabah, Sarawak dan Wilayah Persekutuan Labuan) Sferoid GRS 80, Datum 2000
+                                                    </p>
+                                                    <!-- PARAGRAPH - END -->
+                                                </div>
+                                                <div class="col-md-4 px-5 px-md-3">
+                                                    <div class="col">
+                                                        <div class="row">
+                                                            <div class="col-lg-12">
+                                                                <a class="img-thumbnail img-thumbnail-no-borders d-block lightbox"
+                                                                    href="main/img/peta/20190530091814-MY91005R.jpg"
+                                                                    data-plugin-options="{'type':'image'}">
+                                                                    <img class="img-fluid"
+                                                                        src="main/img/peta/20190530091814-MY91005R.jpg"
+                                                                        alt="Project Image">
+                                                                    <span class="zoom">
+                                                                        <i class="fas fa-search"></i>
+                                                                    </span>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- SECTION + TEXT TO RIGHT - END -->
+                                            <hr class="solid">
+
+                                            <!-- 9 -->
+                                            <!-- SECTION + TEXT TO LEFT - START -->
+                                            <div class="row align-items-center pt-4 appear-animation"
+                                                data-appear-animation="fadeInLeftShorter">
+                                                <div class="col-md-4 mb-4 mb-md-0">
+                                                    <div class="col">
+                                                        <!-- LIGHTBOX - START -->
+                                                        <div class="row">
+                                                            <div class="col-lg-12">
+                                                                <a class="img-thumbnail img-thumbnail-no-borders d-block lightbox"
+                                                                    href="main/img/peta/20190530091742-MY92001R.jpg"
+                                                                    data-plugin-options="{'type':'image'}">
+                                                                    <img class="img-fluid"
+                                                                        src="main/img/peta/20190530091742-MY92001R.jpg"
+                                                                        alt="Project Image">
+                                                                    <span class="zoom">
+                                                                        <i class="fas fa-search"></i>
+                                                                    </span>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <!-- LIGHTBOX - END -->
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-8 ps-md-5">
+                                                    <!-- PARAGRAPH - START -->
+                                                    <p class="mb-0 para-align-title">Jenis Peta:</p>
+                                                    <p class="mb-0 para-align">
+                                                        PETA AM MALAYSIA (POLITIKAL) (SIRI MY92001R)
+                                                    </p>
+                                                    <div class="para-gap"></div>
+                                                    <p class="mb-0 para-align-title">Keterangan:</p>
+                                                    <p class="mb-0 para-align">
+                                                        Peta Am Malaysia merupakan peta tematik yang terdiri daripada Semenanjung Malaysia, Sabah dan Sarawak yang diterbitkan dalam satu lembar. Kawasan-kawasan pentadbiran negeri dipersembahkan dalam warna yang berbeza dan dianotasikan. Maklumat mengenai sempadan antarabangsa, negeri dan jajahan Sabah dan Sarawak ditunjukkan. Ciri-ciri maklumat seperti jalan, jalan keretapi, sungai, nama bandar dan kampung ditunjukkan dengan menggunakan simbol yang tertentu. Peta ini telah disusun di atas Unjuran Kun Mudah
+                                                    </p>
+                                                    <!-- PARAGRAPH - END -->
+                                                </div>
+                                            </div>
+                                            <!-- SECTION + TEXT TO LEFT - END -->
+                                            <hr class="solid">
+                                            <!-- 10 -->
+                                            <!-- SECTION + TEXT TO RIGHT - START -->
+                                            <div class="row align-items-center py-5 appear-animation"
+                                                data-appear-animation="fadeInRightShorter">
+                                                <div class="col-md-8 pe-md-5 mb-5 mb-md-0">
+                                                    <!-- PARAGRAPH - START -->
+                                                    <p class="mb-0 para-align-title">Jenis Peta:</p>
+                                                    <p class="mb-0 para-align">
+                                                        PETA FIZIKAL SEMENANJUNG (SIRI MY90006R)
+                                                    </p>
+                                                    <div class="para-gap"></div>
+                                                    <p class="mb-0 para-align-title">Keterangan:</p>
+                                                    <p class="mb-0 para-align">
+                                                        Peta jenis fizikal berwarna yang menunjukkan relief dalam bentuk lapisan tinta. Ciri-ciri sempadan seperti antarabangsa, negeri dan daerah ditunjukkan. Maklumat seperti jalan, keretapi, sungai, nama bandar, pekan dan kampung ditunjukkan menggunakan simbol tertentu. Peta ini disusun di atas Unjuran Bentuk Benar Serong Ditepati (Semenanjung Malaysia) Sferoid GRS 80, Datum 2000
+                                                    </p>
+                                                    <!-- PARAGRAPH - END -->
+                                                </div>
+                                                <div class="col-md-4 px-5 px-md-3">
+                                                    <div class="col">
+                                                        <div class="row">
+                                                            <div class="col-lg-12">
+                                                                <a class="img-thumbnail img-thumbnail-no-borders d-block lightbox"
+                                                                    href="main/img/peta/20190530091706-MY90006R.jpg"
+                                                                    data-plugin-options="{'type':'image'}">
+                                                                    <img class="img-fluid"
+                                                                        src="main/img/peta/20190530091706-MY90006R.jpg"
+                                                                        alt="Project Image">
+                                                                    <span class="zoom">
+                                                                        <i class="fas fa-search"></i>
+                                                                    </span>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- SECTION + TEXT TO RIGHT - END -->
+                                            <hr class="solid">
+                                            <!-- 11 -->
+                                            <!-- SECTION + TEXT TO LEFT - START -->
+                                            <div class="row align-items-center pt-4 appear-animation"
+                                                data-appear-animation="fadeInLeftShorter">
+                                                <div class="col-md-4 mb-4 mb-md-0">
+                                                    <div class="col">
+                                                        <!-- LIGHTBOX - START -->
+                                                        <div class="row">
+                                                            <div class="col-lg-12">
+                                                                <a class="img-thumbnail img-thumbnail-no-borders d-block lightbox"
+                                                                    href="main/img/peta/20190530091633-DNMM9101.jpg"
+                                                                    data-plugin-options="{'type':'image'}">
+                                                                    <img class="img-fluid"
+                                                                        src="main/img/peta/20190530091633-DNMM9101.jpg"
+                                                                        alt="Project Image">
+                                                                    <span class="zoom">
+                                                                        <i class="fas fa-search"></i>
+                                                                    </span>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <!-- LIGHTBOX - END -->
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-8 ps-md-5">
+                                                    <!-- PARAGRAPH - START -->
+                                                    <p class="mb-0 para-align-title">Jenis Peta:</p>
+                                                    <p class="mb-0 para-align">
+                                                        PETA NEGERI (SIRI DNMM9101)
+                                                    </p>
+                                                    <div class="para-gap"></div>
+                                                    <p class="mb-0 para-align-title">Keterangan:</p>
+                                                    <p class="mb-0 para-align">
+                                                        Peta jenis politikal (pentadbiran) berwarna bagi setiap negeri di Malaysia. Peta-peta yang diterbitkan menunjukkan perbezaan warna untuk setiap daerah kecuali Perlis dan Wilayah Persekutuan Kuala Lumpur yang ditunjuk dengan perbezaan warna untuk mukim. Negeri-negeri yang besar seperti Johor, Pahang, Selangor, Perak, dan Kedah peta ini dicetak kepada dua (2) lembar peta. Ciri-ciri seperti sempadan antarabangsa, negeri, daerah dan mukim ditunjukkan. Perbezaan warna ditunjukkan bagi setiap daerah di negeri berkenaan. Maklumat-maklumat seperti jalan raya dikelaskan mengikut hirarki kepentingan, jalan keretapi, sungai, nama bandar dan kampung ditunjukkan mengikut simbol-simbol tertentu.
+                                                    </p>
+                                                    <!-- PARAGRAPH - END -->
+                                                </div>
+                                            </div>
+                                            <!-- SECTION + TEXT TO LEFT - END -->
+                                            <hr class="solid">
+                                            <!-- 12 -->
+                                            <!-- SECTION + TEXT TO RIGHT - START -->
+                                            <div class="row align-items-center py-5 appear-animation"
+                                                data-appear-animation="fadeInRightShorter">
+                                                <div class="col-md-8 pe-md-5 mb-5 mb-md-0">
+                                                    <!-- PARAGRAPH - START -->
+                                                    <p class="mb-0 para-align-title">Jenis Peta:</p>
+                                                    <p class="mb-0 para-align">
+                                                        PETA FIZIKAL SABAH & SARAWAK (SIRI MY91006R)
+                                                    </p>
+                                                    <div class="para-gap"></div>
+                                                    <p class="mb-0 para-align-title">Keterangan:</p>
+                                                    <p class="mb-0 para-align">
+                                                        Peta jenis fizikal berwarna yang menunjukkan relief dalam bentuk lapisan tinta. Ciri-ciri sempadan seperti antarabangsa, negeri dan bahagian ditunjukkan. Maklumat seperti jalan, keretapi, sungai, nama bandar, pekan dan kampung ditunjukkan menggunakan simbol tertentu. Peta ini disusun di atas Unjuran Bentuk Benar Serong Ditepati (Sabah, Sarawak dan Wilayah Persekutuan Labuan) Sferoid GRS 80, Datum 2000
+                                                    </p>
+                                                    <!-- PARAGRAPH - END -->
+                                                </div>
+                                                <div class="col-md-4 px-5 px-md-3">
+                                                    <div class="col">
+                                                        <div class="row">
+                                                            <div class="col-lg-12">
+                                                                <a class="img-thumbnail img-thumbnail-no-borders d-block lightbox"
+                                                                    href="main/img/peta/20190530091553-MY91006R.jpg"
+                                                                    data-plugin-options="{'type':'image'}">
+                                                                    <img class="img-fluid"
+                                                                        src="main/img/peta/20190530091553-MY91006R.jpg"
+                                                                        alt="Project Image">
+                                                                    <span class="zoom">
+                                                                        <i class="fas fa-search"></i>
+                                                                    </span>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- SECTION + TEXT TO RIGHT - END -->
+                                            <hr class="solid">
 
                                         {{-- </div> --}}
                                     </section>
