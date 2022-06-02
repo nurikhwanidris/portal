@@ -78,9 +78,6 @@ return [
     "jupem_states" => "JUPEM Negeri",
     "hq" => "JUPEM Headquarter",
 
-
-    // ----- Main Menu ----- //
-
     // Info semasa
     "Current Information" => "Info Semasa",
     "Client Charter" => "Piagam Pelanggan",
@@ -139,7 +136,6 @@ return [
     "JUPEM Geospatial and Geomatics Seminar" => "Seminar Juruukur dan Jurugeospatial JUPEM",
     "Seminar Title" => "Tajuk Seminar",
     "Presented by" => "Dibentangkan oleh",
-
 
     // Orang Awam
     "Publication & Publishing" => "Buku & Penerbitan",
