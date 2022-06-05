@@ -67,9 +67,9 @@
                                             <th class="align-middle">#</th>
                                             <th class="align-middle">{{ __('message.Title') }}</th>
                                             <th class="d-none text-center align-middle">{{ __('message.Year') }}</th>
-                                            <th class="align-middle">{{ __('message.Tender Code') }}</th>
-                                            <th class="align-middle">{{ __('message.Tender Period') }}</th>
-                                            <th class="align-middle">{{ __('message.Tender Time') }}</th>
+                                            <th class="align-middle">{{ __('message.Code') }}</th>
+                                            <th class="align-middle">{{ __('message.Period') }}</th>
+                                            <th class="align-middle">{{ __('message.Time') }}</th>
                                             <th class="align-middle">{{ __('message.Briefing') }}</th>
                                             <th class="align-middle">{{ __('message.Attachment') }}</th>
                                         </tr>

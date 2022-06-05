@@ -2,20 +2,20 @@
     <!-- Table 1 -->
     <div class="row">
         <div class="col">
-            <div class="text-center text-title-semasa-11" style="padding-top: 40px;padding-bottom: 20px;">Peringkat
-                Antarabangsa</div>
+            <div class="text-center text-title-semasa-11" style="padding-top: 40px;padding-bottom: 20px;">
+                {{ __('message.peringkat_antarabangsa') }}</div>
         </div>
     </div>
     <p class="mb-0">
-        Perjanjian Persefahaman (MoU) Bagi Sempadan Antarabangsa Malaysia - Thailand
+        {{ __('message.thailand_malaysia') }}
     </p>
     <table class="table table-striped table-hover">
         <thead>
             <tr>
                 <th class="align-middle text-center">#</th>
-                <th class="align-middle">NAMA / TAJUK PERJANJIAN</th>
-                <th class="align-middle">TARIKH</th>
-                <th class="align-middle">LOKASI</th>
+                <th class="align-middle">{{ __('message.Title') }}</th>
+                <th class="align-middle">{{ __('message.Date') }}</th>
+                <th class="align-middle">{{ __('message.location') }}</th>
             </tr>
         </thead>
         <tbody>
@@ -122,14 +122,14 @@
     <div class="para-gap"></div>
     <!-- Table 2 -->
     <p class="mb-0">
-        Perjanjian Persefahaman (MoU) Bagi Sempadan Antarabangsa Malaysia & Indonesia
+        {{ __('message.indonesia_malaysia') }}
     </p>
     <table class="table table-striped table-hover">
         <thead>
             <tr>
                 <th class="text-center align-middle">#</th>
-                <th class="align-middle">NAMA / TAJUK PERJANJIAN</th>
-                <th class="align-middle">LOKASI</th>
+                <th class="align-middle">{{ __('message.Title') }}</th>
+                <th class="align-middle">{{ __('message.location') }}</th>
             </tr>
         </thead>
         <tbody>

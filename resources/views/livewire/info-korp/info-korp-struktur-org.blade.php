@@ -11,7 +11,7 @@
                                 <a class="accordion-toggle text-color-dark font-weight-bold collapsed"
                                     data-bs-toggle="collapse" data-bs-target="#collapse200One" aria-expanded="false"
                                     aria-controls="collapse200One">
-                                    Pengurusan Tertinggi
+                                    {{ __('message.pengurusan_tertinggi') }}
                                 </a>
                             </h4>
                         </div>
@@ -29,7 +29,7 @@
                                 <a class="accordion-toggle text-color-dark font-weight-bold collapsed"
                                     data-bs-toggle="collapse" data-bs-target="#collapse200TwoA" aria-expanded="false"
                                     aria-controls="collapse200Two">
-                                    JUPEM Negeri
+                                    {{ __('message.states') }}
                                 </a>
                             </h4>
                         </div>
@@ -47,7 +47,7 @@
                                 <a class="accordion-toggle text-color-dark font-weight-bold collapsed"
                                     data-bs-toggle="collapse" data-bs-target="#collapse200Two" aria-expanded="false"
                                     aria-controls="collapse200Two">
-                                    Carta Organisasi Ibu Pejabat
+                                    {{ __('message.Organization_structure_jupem') }}
                                 </a>
                             </h4>
                         </div>
@@ -65,7 +65,7 @@
                                 <a class="accordion-toggle text-color-dark font-weight-bold collapsed"
                                     data-bs-toggle="collapse" data-bs-target="#collapse200Three" aria-expanded="false"
                                     aria-controls="collapse200Three">
-                                    Carta Organisasi Kementerian
+                                    {{ __('message.Organization_structure_ministry') }}
                                 </a>
                             </h4>
                         </div>
@@ -83,7 +83,7 @@
                                 <a class="accordion-toggle text-color-dark font-weight-bold collapsed"
                                     data-bs-toggle="collapse" data-bs-target="#collapse200Four" aria-expanded="false"
                                     aria-controls="collapse200Four">
-                                    Ketua Pegawai Maklumat (CIO)
+                                    {{ __('message.cio') }}
                                 </a>
                             </h4>
                         </div>

@@ -88,8 +88,11 @@ return [
     // Info Korp
     "Corporate Information" => "Info Korp",
     "JUPEM Information" => "Info JUPEM",
-    "Organization Structure" => "Struktur Organisasi",
-    "Subject Matter Expertise" => "Kepakaran Bidang Khusus",
+    "structure" => "Struktur Organisasi",
+    "Organization_structure_jupem" => "Carta Organisasi JUPEM",
+    "Organization_structure_ministry" => "Carta Organisasi Kementerian",
+    "Subject Matter Expertise" => "Pakar Bidang Berkaitan",
+    "cio" => "Ketua Pegawai Maklumat (CIO)",
 
     // Page Info Korp
     "Search" => "Carian",
@@ -108,6 +111,17 @@ return [
     "info_korp_visi" => "Visi, Misi, Moto, Nilai dan Definisi Logo JUPEM",
     "info_korp_objectives" => "Tugas dan Peranan JUPEM",
     "info_korp_objectives2" => "Tugas, Peranan dan Punca Kuasa.",
+    "pengarah_jupem" => "Ketua Pengarah JUPEM",
+    "pengurusan_tertinggi" => "Pengurusan Tertinggi",
+    "perjanjian_konvensyen" => "Perjanjian & Konvensyen",
+    'sumbangan' => "Penglibatan & Sumbangan",
+    "anggota_pentadbir" => "Anggota Pentadbir",
+    "majlis_bersama_jabatan" => "Majlis Bersama Jabatan",
+    "anugerah_pencapaian" => "Anugerah & Pencapaian",
+    "peringkat_antarabangsa" => "Peringkat Antarbangsa",
+    "thailand_malaysia" => "Perjanjian Persefahaman (MoU) Bagi Sempadan Antarabangsa Malaysia - Thailand",
+    "location" => "Lokasi",
+    "indonesia_malaysia" => "Perjanjian Persefahaman (MoU) Bagi Sempadan Antarabangsa Indonesia - Malaysia",
 
     // Warga JUPEM
     "Work Sheet" => "Kertas Kerja",

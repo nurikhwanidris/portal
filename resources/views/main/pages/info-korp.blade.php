@@ -45,20 +45,23 @@
                             <div class="col-lg-3 col-sm-6">
                                 <div class="featured-box featured-box-quaternary  featured-box-effect-3">
                                     <div class="box-content box-content-border-0">
-                                        <a href="/visi-misi"><i class="icon-featured far fa-file-alt"></i></a>
-                                        <h4 class="font-weight-normal text-5 mt-3">{{__('message.intro_jupem')}}</h4>
-                                        <p class="mb-2 mt-2 text-2">{{__('message.info_korp_visi')}}</p>
+                                        <a href="{{ route('visi-misi', app()->getLocale()) }}"><i
+                                                class="icon-featured far fa-file-alt"></i></a>
+                                        <h4 class="font-weight-normal text-5 mt-3">{{ __('message.intro_jupem') }}
+                                        </h4>
+                                        <p class="mb-2 mt-2 text-2">{{ __('message.info_korp_visi') }}</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-sm-6">
                                 <div class="featured-box featured-box-quaternary  featured-box-effect-3">
                                     <div class="box-content box-content-border-0">
-                                        <a href="/tugas-peranan">
+                                        <a href="{{ route('tugas-peranan', app()->getLocale()) }}">
                                             <i class="icon-featured far fa-edit"></i>
                                         </a>
-                                        <h4 class="font-weight-normal text-5 mt-3">{{__('message.info_korp_objectives')}}</h4>
-                                        <p class="mb-2 mt-2 text-2">{{__('message.info_korp_objectives2')}}</p>
+                                        <h4 class="font-weight-normal text-5 mt-3">
+                                            {{ __('message.info_korp_objectives') }}</h4>
+                                        <p class="mb-2 mt-2 text-2">{{ __('message.info_korp_objectives2') }}</p>
                                     </div>
                                 </div>
                             </div>
@@ -74,16 +77,20 @@
                             <div class="tabs tabs-vertical tabs-right tabs-navigation tabs-navigation-simple">
                                 <ul class="nav nav-tabs col-sm-3">
                                     <li class="nav-item">
-                                        <a class="nav-link active" href="#tab-1" data-bs-toggle="tab" id="tab1">{{__('message.JUPEM Information')}}</a>
+                                        <a class="nav-link active" href="#tab-1" data-bs-toggle="tab"
+                                            id="tab1">{{ __('message.JUPEM Information') }}</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#tab-2" data-bs-toggle="tab" id="tab2">{{__('message.Organization Structure')}}</a>
+                                        <a class="nav-link" href="#tab-2" data-bs-toggle="tab"
+                                            id="tab2">{{ __('message.structure') }}</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#tab-3" data-bs-toggle="tab" id="tab3">{{__('message.Contact Us')}}</a>
+                                        <a class="nav-link" href="#tab-3" data-bs-toggle="tab"
+                                            id="tab3">{{ __('message.Contact Us') }}</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#tab-4" data-bs-toggle="tab" id="tab4">{{__('message.Subject Matter Expertise')}}
+                                        <a class="nav-link" href="#tab-4" data-bs-toggle="tab"
+                                            id="tab4">{{ __('message.Subject Matter Expertise') }}
                                         </a>
                                     </li>
                                 </ul>

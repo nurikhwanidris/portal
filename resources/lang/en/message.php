@@ -89,8 +89,13 @@ return [
     // Info Korp
     "Corporate Information" => "Corporate Information",
     "JUPEM Information" => "JUPEM Information",
-    "Organization Structure" => "Organization Structure",
+    "Organization_structure_jupem" => "JUPEM Organizational Structure",
+    "Organization_structure_ministry" => "Ministry Organizational Structure",
+    "structure" => "Organization Structure",
     "Subject Matter Expertise" => "Subject Matter Expertise",
+    "pengarah_jupem" => "JUPEM's Director General",
+    "pengurusan_tertinggi" => "Higher Management",
+    "cio" => "Chief Information Officer",
 
     // Page Info Korp
     "choose" => "Choose",
@@ -111,6 +116,15 @@ return [
     "info_korp_visi" => "Vision, Mission, Motto, Values, and Definitions of Logo",
     "info_korp_objectives" => "Objectives and Values",
     "info_korp_objectives2" => "Objectives and Values",
+    "perjanjian_konvensyen" => "Agreement & Convention",
+    "sumbangan" => "Involvement and Support",
+    "anggota_pentadbir" => "Board of Directors",
+    "majlis_bersama_jabatan" => "Joint Committees & Positions",
+    "anugerah_pencapaian" => "Achievements & Awards",
+    "peringkat_antarabangsa" => "International Level",
+    "thailand_malaysia" => "Memorandum of Understanding (MoU) for the Malaysia - Thailand International Border",
+    "location" => "Location",
+    "indonesia_malaysia" => "Memorandum of Understanding (MoU) for the Malaysia - Indonesia International Border",
 
     // Warga JUPEM
     "Work Sheet" => "Work Sheet",

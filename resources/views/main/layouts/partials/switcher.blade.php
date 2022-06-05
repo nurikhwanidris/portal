@@ -47,7 +47,7 @@
                     </li>
                     <li>
                         <a class="nav-link link-no-deco"
-                            href="{{ route('info-korp', app()->getLocale()) }}#tab-2">{{ __('message.Organization Structure') }}</a>
+                            href="{{ route('info-korp', app()->getLocale()) }}#tab-2">{{ __('message.structure') }}</a>
                     </li>
                     <li>
                         <a class="nav-link link-no-deco"

@@ -11,7 +11,7 @@
                                 <a class="accordion-toggle text-color-dark font-weight-bold collapsed"
                                     data-bs-toggle="collapse" data-bs-target="#collapse200One" aria-expanded="false"
                                     aria-controls="collapse200One">
-                                    Perutusan Ketua Pengarah
+                                    {{ __('message.pengarah_jupem') }}
                                 </a>
                             </h4>
                         </div>
@@ -29,7 +29,7 @@
                                 <a class="accordion-toggle text-color-dark font-weight-bold collapsed"
                                     data-bs-toggle="collapse" data-bs-target="#collapse200TwoA" aria-expanded="false"
                                     aria-controls="collapse200Two">
-                                    Perjanjian & Konvensyen
+                                    {{ __('message.perjanjian_konvensyen') }}
                                 </a>
                             </h4>
                         </div>
@@ -47,7 +47,7 @@
                                 <a class="accordion-toggle text-color-dark font-weight-bold collapsed"
                                     data-bs-toggle="collapse" data-bs-target="#collapse200Two" aria-expanded="false"
                                     aria-controls="collapse200Two">
-                                    Penglibatan dan Sumbangan
+                                    {{ __('message.sumbangan') }}
                                 </a>
                             </h4>
                         </div>
@@ -65,7 +65,7 @@
                                 <a class="accordion-toggle text-color-dark font-weight-bold collapsed"
                                     data-bs-toggle="collapse" data-bs-target="#collapse200Three" aria-expanded="false"
                                     aria-controls="collapse200Three">
-                                    Anggota Pentadbir
+                                    {{ __('message.anggota_pentadbir') }}
                                 </a>
                             </h4>
                         </div>
@@ -83,7 +83,7 @@
                                 <a class="accordion-toggle text-color-dark font-weight-bold collapsed"
                                     data-bs-toggle="collapse" data-bs-target="#collapse200Four" aria-expanded="false"
                                     aria-controls="collapse200Four">
-                                    Majlis Bersama Jabatan
+                                    {{ __('message.majlis_bersama_jabatan') }}
                                 </a>
                             </h4>
                         </div>
@@ -101,7 +101,7 @@
                                 <a class="accordion-toggle text-color-dark font-weight-bold collapsed"
                                     data-bs-toggle="collapse" data-bs-target="#collapse200Five" aria-expanded="false"
                                     aria-controls="collapse200Five">
-                                    Anugerah & Pencapaian
+                                    {{ __('message.anugerah_pencapaian') }}
                                 </a>
                             </h4>
                         </div>
