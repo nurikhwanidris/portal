@@ -24,7 +24,7 @@ return [
     "Announcement" => "Announcement",
     "Prayer Time" => "Prayer Time",
     "product_and_service" => "Products & Services",
-    "Online Transaction" => "Online Transactions",
+    "Online Transactions" => "Online Transactions",
     "Government Official Websites" => "Government Official Websites",
     "Operating Hours" => "Operating Hours",
     "Monday - Thursday" => "Monday - Thursday",
@@ -111,6 +111,7 @@ return [
     "Period" => "Period",
     "Time" => "Time",
     "Briefing" => "Briefing",
+    "Question" => "Question",
     "Download" => "Download ",
     "intro_jupem" => "JUPEM Introduction",
     "info_korp_visi" => "Vision, Mission, Motto, Values, and Definitions of Logo",
@@ -190,4 +191,13 @@ return [
     "charter_12" => "Making payments of bills and invoices not exceeding 14 days from the date of receipt of completed applications.",
     "charter_13" => "To issue acceptance acknowledgement and initial reply for complaints within 1 working day from the date of complaint received.",
     "charter_14" => "To provide the necessary information to the Land Office / Office of the Director of Lands and Mines for the preparation of land title documents to the Land Office / Office of the Director of Lands and Mines within 7 days from the receipt of a complete and orderly application.",
+
+    // STAPS
+    "staps" => "Tidal Prediction System",
+    "senarai_stesyen" => "List of Stations",
+    "jadual_stesyen" => "Tidal info for station : ",
+    "current" => "Current",
+    "2_hari" => "2 Days",
+    "7_hari" => "7 Days",
+
 ];

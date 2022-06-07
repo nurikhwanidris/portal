@@ -182,6 +182,30 @@ class MainController extends Controller
         ]);
     }
 
+    // Tender Read Controller
+    public function tenderRead($id)
+    {
+        $tender = Tender::findOrFail($id);
+
+        return view('main.pages.pages', [
+            'page' => $tender,
+            'counter' =>  $this->counter(),
+            'activity' => $this->activity(),
+        ]);
+    }
+
+    // Sebut Harga Read Controller
+    public function sebutHargaRead($id)
+    {
+        $sebutHarga = Quote::findOrFail($id);
+
+        return view('main.pages.pages', [
+            'page' => $sebutHarga,
+            'counter' =>  $this->counter(),
+            'activity' => $this->activity(),
+        ]);
+    }
+
     // Berita Terkini Read Controller
     public function beritaTerkiniRead($id)
     {
@@ -251,21 +275,21 @@ class MainController extends Controller
         ]);
     }
 
-    // // Carian Pegawai
-    // public function carianPegawai(Request $request)
-    // {
-    //     $search = $request->input('nama');
+    // Carian Pegawai
+    public function carianPegawai(Request $request)
+    {
+        $search = $request->input('nama');
 
-    //     $pegawai = Pegawai::query()
-    //         ->where('name_my', 'like', '%' . $search . '%')
-    //         ->orderBy('sort_order', 'asc')
-    //         ->paginate(15);
+        $pegawai = Pegawai::query()
+            ->where('name_my', 'like', '%' . $search . '%')
+            ->orderBy('sort_order', 'asc')
+            ->paginate(15);
 
-    //     return view('main.pages.carian-pegawai', [
-    //         'search' => $search,
-    //         'pegawais' => $pegawai,
-    //         'counter' =>  $this->counter(),
-    //         'activity' => $this->activity(),
-    //     ]);
-    // }
+        return view('main.pages.carian-pegawai', [
+            'search' => $search,
+            'pegawais' => $pegawai,
+            'counter' =>  $this->counter(),
+            'activity' => $this->activity(),
+        ]);
+    }
 }

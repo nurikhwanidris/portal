@@ -32,7 +32,13 @@
             <div class="container" style="margin-bottom: 100px;">
                 <div class="row">
                     <!-- SUB TITLE - START-->
-                    <h2 class="font-weight-normal text-6 mb-3">{{ $page->title_my }}</h2>
+                    <h2 class="font-weight-normal text-6 mb-3">
+                        @if (app()->getLocale() == 'en')
+                            {{ $page->title_en }}
+                        @else
+                            {{ $page->title_my }}
+                        @endif
+                    </h2>
                     <!-- SUB TITLE - END-->
 
                     <!-- IMAGE - Start-->
@@ -48,9 +54,82 @@
 
                     <!-- PARAGRAPH - START -->
                     <p class="mt-3 mb-0 para-align">
-                        {!! $page->content_my !!}
+                        @if (app()->getLocale() == 'en')
+                            {!! $page->content_en !!}
+                        @else
+                            {!! $page->content_my !!}
+                        @endif
                     </p>
                     <!-- PARAGRAPH - END -->
+
+                    @if (!empty($page->kod))
+                        <div class="col border p-4">
+                            <div class="row">
+                                <span class="col-sm-2">{{ __('message.Code') }}</span>
+                                <span class="col-sm-1">:</span>
+                                <span class="col">
+                                    {{ $page->kod }}
+                                </span>
+                            </div>
+                            <div class="row">
+                                <span class="col-sm-2">{{ __('message.Period') }}</span>
+                                <span class="col-sm-1">:</span>
+                                <span class="col">
+                                    {{ $page->tempoh }}
+                                </span>
+                            </div>
+                            <div class="row">
+                                <span class="col-sm-2">{{ __('message.Time') }}</span>
+                                <span class="col-sm-1">:</span>
+                                <span class="col">
+                                    @if (empty($page->masa))
+                                        TIADA
+                                    @else
+                                        {{ $page->masa }}
+                                    @endif
+                                </span>
+                            </div>
+                            <div class="row">
+                                <span class="col-sm-2">{{ __('message.Briefing') }}</span>
+                                <span class="col-sm-1">:</span>
+                                <span class="col">
+                                    @if (empty($page->taklimat))
+                                        TIADA
+                                    @else
+                                        {{ $page->taklimat }}
+                                    @endif
+                                </span>
+                            </div>
+                            <div class="row">
+                                <span class="col-sm-2">{{ __('message.Question') }}</span>
+                                <span class="col-sm-1">:</span>
+                                <span class="col">
+                                    @if (empty($page->pertanyaan))
+                                        TIADA
+                                    @else
+                                        {{ $page->pertanyaan }}
+                                    @endif
+                                </span>
+                            </div>
+                            <div class="row">
+                                <span class="col-sm-2">{{ __('message.Attachment') }}</span>
+                                <span class="col-sm-1">:</span>
+                                <span class="col">
+                                    @if (empty($page->filename))
+                                        TIADA
+                                    @else
+                                        @if (route('sebut-harga-read', [app()->getLocale(), 'id' => $page->id]))
+                                            <a href="{{ asset('storage/upload/sebutharga/' . $page->filename) }}"><i
+                                                    class="fas fa-file-pdf"></i> {{ __('message.Download') }}</a>
+                                        @elseif (route('tender-read', [app()->getLocale(), 'id' => $page->id]))
+                                            <a href="{{ asset('storage/upload/tender/' . $page->filename) }}"><i
+                                                    class="fas fa-file-pdf"></i> {{ __('message.Download') }}</a>
+                                        @endif
+                                    @endif
+                                </span>
+                            </div>
+                        </div>
+                    @endif
                 </div>
             </div>
         </div>

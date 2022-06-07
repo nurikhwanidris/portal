@@ -36,7 +36,7 @@
             </a>
         </div>
         <div class="container-pp col-lg-2 featured-box-full featured-box-full-primary">
-            <a href="/staps" target="_self">
+            <a href="{{ route('staps', app()->getLocale()) }}" target="_self">
                 <img src="/main/img/logo-default/icon-produk-perkhidmatan/staps.png" width="100px"
                     class="image-pp">
                 <div class="overlay-pp">

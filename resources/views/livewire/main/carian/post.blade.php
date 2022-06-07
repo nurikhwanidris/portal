@@ -5,7 +5,8 @@
             @foreach ($posts as $item)
                 <li>
                     <div class="post-info">
-                        <a href="/carian/papar/post/{{ $item['id'] }}">{{ $item['tajuk'] }}</a>
+                        <a
+                            href="/{{ app()->getLocale() }}/carian/papar/post/{{ $item['id'] }}">{{ $item['tajuk'] }}</a>
                         <div class="post-meta">
                             @if ($item['type'] == 'post')
                                 <span class="text-dark text-uppercase font-weight-semibold">Post</span>

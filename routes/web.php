@@ -252,8 +252,11 @@ Route::group(['prefix' => '{language}'], function () {
     // Berita Terkini Read Route
     Route::get('/info-semasa/berita-terkini/{id}', [MainController::class, 'beritaTerkiniRead'])->name('berita-terkini-read');
 
-    // Tender & Quotation Read Route
-    Route::get('/perolehan/{id}', [MainController::class, 'tenderRead'])->name('tender-read');
+    // Tender Read Route
+    Route::get('/tender/{id}', [MainController::class, 'tenderRead'])->name('tender-read');
+
+    // Sebut Harga Read Route
+    Route::get('/sebut-harga/{id}', [MainController::class, 'sebutHargaRead'])->name('sebut-harga-read');
 
     // Global Search Post Read Route
     Route::get('/carian/papar/post/{id}', [MainController::class, 'carianPost'])->name('carian-post');
@@ -261,13 +264,9 @@ Route::group(['prefix' => '{language}'], function () {
     // Global Search Pengumuman Read Route
     Route::get('/carian/papar/pengumuman/{id}', [MainController::class, 'carianPengumuman'])->name('carian-pengumuman');
 
+    // Pengumuman Read Route
+    Route::get('/pengumuman/{id}', [MainController::class, 'pengumumanRead'])->name('pengumuman-read');
+
     // Global Search Berita Terkini Read Route
     Route::get('/carian/papar/berita-terkini/{id}', [MainController::class, 'carianBeritaTerkini'])->name('carian-berita-terkini');
-});
-
-// Test Language
-Route::get('/en', function () {
-    App::setLocale('en');
-
-    dd(App::getLocale());
 });

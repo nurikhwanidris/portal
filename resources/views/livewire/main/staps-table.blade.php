@@ -3,11 +3,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-12" style="padding-bottom: 20px;">
-                    <p class="mb-0 para-align-title">Waktu pasang surut bagi: <strong> Pulau Langkawi </strong></p>
-                    <p class="mb-0 para-align">Jangkaan air pasang surut bagi hari
-                        <strong>{{ now()->format('l jS \\of F Y h:i:s A') }}</strong>
-                        untuk <strong>Pulau
-                            Langkawi</strong>
+                    <p class="mb-0 para-align-title">{{ __('message.jadual_stesyen', ['<STESEN></STESEN>' => 'Pulau Langkawi']) }}
+                    </p>
+                    <p class="mb-0 para-align">{{ __('message.huraian', ['STESEN' => 'Pulau Langkawi']) }}
                         adalah seperti
                         berikut:
                     </p>

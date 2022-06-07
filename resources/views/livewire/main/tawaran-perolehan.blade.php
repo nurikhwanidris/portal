@@ -5,7 +5,8 @@
             @foreach ($tenders as $tender)
                 <div class="row">
                     <text class="info-semasa-paragraph overflow-tajuk">
-                        <a href="/perolehan/{{ $tender->id }}}">{{ $tender->title_my }}</a>
+                        <a
+                            href="{{ route('tender-read', [app()->getLocale(), 'id' => $tender->id]) }}">{{ $tender->title_my }}</a>
                     </text>
                 </div>
             @endforeach
@@ -23,7 +24,8 @@
             @foreach ($quotes as $quote)
                 <div class="row">
                     <text class="info-semasa-paragraph overflow-tajuk">
-                        <a href="/perolehan/{{ $quote->id }}">{{ $quote->title_my }}</a>
+                        <a
+                            href="{{ route('sebut-harga-read', [app()->getLocale(), 'id' => $quote->id]) }}">{{ $quote->title_my }}</a>
                     </text>
                 </div>
             @endforeach

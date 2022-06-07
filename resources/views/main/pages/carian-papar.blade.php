@@ -58,13 +58,23 @@
                                 </div>
                                 <div class="row">
                                     <div class="col">
-                                        <h4>{{ $post->title_my }}</h4>
+                                        <h4>
+                                            @if (app()->getLocale() == 'en')
+                                                {{ $post->title_en }}
+                                            @else
+                                                {{ $post->title_my }}
+                                            @endif
+                                        </h4>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col">
                                         <p>
-                                            {!! $post->contents_my !!}
+                                            @if (app()->getLocale() == 'en')
+                                                {!! $post->contents_en !!}
+                                            @else
+                                                {!! $post->contents_my !!}
+                                            @endif
                                         </p>
                                     </div>
                                 </div>
@@ -83,13 +93,23 @@
                                 </div>
                                 <div class="row">
                                     <div class="col">
-                                        <h4>{{ $pengumuman->title_my }}</h4>
+                                        <h4>
+                                            @if (app()->getLocale() == 'en')
+                                                {{ $pengumuman->title_en }}
+                                            @else
+                                                {{ $pengumuman->title_my }}
+                                            @endif
+                                        </h4>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col">
                                         <p>
-                                            {!! $pengumuman->content_my !!}
+                                            @if (app()->getLocale() == 'en')
+                                                {!! $pengumuman->content_en !!}
+                                            @else
+                                                {!! $pengumuman->content_my !!}
+                                            @endif
                                         </p>
                                     </div>
                                 </div>
@@ -108,13 +128,93 @@
                                 </div>
                                 <div class="row">
                                     <div class="col">
-                                        <h4>{{ $beritaTerkini->title_my }}</h4>
+                                        <h4>
+                                            @if (app()->getLocale() == 'en')
+                                                {{ $beritaTerkini->title_en }}
+                                            @else
+                                                {{ $beritaTerkini->title_my }}
+                                            @endif
+                                        </h4>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col">
                                         <p>
-                                            {!! $beritaTerkini->content_my !!}
+                                            @if (app()->getLocale() == 'en')
+                                                {!! $beritaTerkini->content_en !!}
+                                            @else
+                                                {!! $beritaTerkini->content_my !!}
+                                            @endif
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        @endif
+                        @if (!empty($tender))
+                            <div class="col-lg-12">
+                                <div class="row">
+                                    <div class="col">
+                                        <h3>
+                                            <strong>
+                                                {{ __('message.Tender') }}
+                                            </strong>
+                                        </h3>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <h4>
+                                            @if (app()->getLocale() == 'en')
+                                                {{ $tender->title_en }}
+                                            @else
+                                                {{ $tender->title_my }}
+                                            @endif
+                                        </h4>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <p>
+                                            @if (app()->getLocale() == 'en')
+                                                {!! $tender->content_en !!}
+                                            @else
+                                                {!! $tender->content_my !!}
+                                            @endif
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        @endif
+                        @if (!empty($sebutharga))
+                            <div class="col-lg-12">
+                                <div class="row">
+                                    <div class="col">
+                                        <h3>
+                                            <strong>
+                                                {{ __('message.sebut_harga') }}
+                                            </strong>
+                                        </h3>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <h4>
+                                            @if (app()->getLocale() == 'en')
+                                                {{ $sebutharga->title_en }}
+                                            @else
+                                                {{ $sebutharga->title_my }}
+                                            @endif
+                                        </h4>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <p>
+                                            @if (app()->getLocale() == 'en')
+                                                {!! $sebutharga->content_en !!}
+                                            @else
+                                                {!! $sebutharga->content_my !!}
+                                            @endif
                                         </p>
                                     </div>
                                 </div>
