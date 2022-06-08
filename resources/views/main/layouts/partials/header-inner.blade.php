@@ -35,7 +35,8 @@
                                 <nav class="collapse">
                                     <ul class="nav nav-pills" id="mainNav">
                                         <li class="dropdown">
-                                            <a class="dropdown-item dropdown-toggle active" href="faq">
+                                            <a class="dropdown-item dropdown-toggle active"
+                                                href="{{ route('faq', app()->getLocale()) }}">
                                                 <div class="center-icon">
                                                     <img alt="Soalan Lazim"
                                                         data-change-src="/main/img/shortcut-icon/faq-small.png"
@@ -45,7 +46,8 @@
                                             </a>
                                         </li>
                                         <li class="dropdown dropdown-mega">
-                                            <a class="dropdown-item dropdown-toggle active" href="/info-korp#tab-3">
+                                            <a class="dropdown-item dropdown-toggle active"
+                                                href="{{ app()->getLocale() }}/info-korp#tab-3">
                                                 <div class="center-icon">
                                                     <img alt="Soalan Lazim"
                                                         data-change-src="/main/img/shortcut-icon/faq-small.png"
@@ -55,7 +57,8 @@
                                             </a>
                                         </li>
                                         <li class="dropdown">
-                                            <a class="dropdown-item dropdown-toggle active" href="/maklum-balas">
+                                            <a class="dropdown-item dropdown-toggle active"
+                                                href="{{ app()->getLocale() }}/maklum-balas">
                                                 <div class="center-icon">
                                                     <img alt="Soalan Lazim"
                                                         data-change-src="/main/img/shortcut-icon/faq-small.png"
@@ -66,7 +69,8 @@
                                             </a>
                                         </li>
                                         <li class="dropdown">
-                                            <a class="dropdown-item dropdown-toggle active" href="/sitemap">
+                                            <a class="dropdown-item dropdown-toggle active"
+                                                href="{{ route('sitemap', app()->getLocale()) }}">
                                                 <div class="center-icon">
                                                     <img alt="Soalan Lazim"
                                                         data-change-src="/main/img/shortcut-icon/faq-small.png"

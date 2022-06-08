@@ -24,7 +24,6 @@ use App\Http\Controllers\Admin\TransaksiController;
 use App\Http\Controllers\Admin\SoalanLazimController;
 use App\Http\Controllers\Main\MainController;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\App;
 
 /*
 |--------------------------------------------------------------------------
@@ -128,15 +127,6 @@ Route::resource('/spsm/admin/pegawai', PegawaiController::class)->middleware('au
 // Maklum Balas list route
 Route::get('/spsm/admin/maklum_balas/list', [MaklumBalasController::class, 'list'])->middleware('auth');
 
-// Maklum Balas create route
-Route::get('/maklum-balas', [MaklumBalasController::class, 'create']);
-
-// Maklum Balas store route
-Route::post('/maklum-balas/store', [MaklumBalasController::class, 'store']);
-
-// Maklum Balas show route
-Route::get('/maklum-balas/{id}', [MaklumBalasController::class, 'show'])->name('maklum-balas');
-
 // Maklum Balas reply admin route
 Route::get('/spsm/admin/maklum-balas/{id}/reply', [MaklumBalasController::class, 'reply'])->middleware('auth');
 
@@ -239,6 +229,15 @@ Route::group(['prefix' => '{language}'], function () {
 
     // Carian Pegawai Route
     Route::get('/carian/pegawai', [MainController::class, 'carianPegawai'])->name('carian-pegawai');
+
+    // Maklum Balas create route
+    Route::get('/maklum-balas', [MaklumBalasController::class, 'create']);
+
+    // Maklum Balas show route
+    Route::get('/maklum-balas/{id}', [MaklumBalasController::class, 'show'])->name('maklum-balas');
+
+    // Maklum Balas store route
+    Route::post('/maklum-balas/store', [MaklumBalasController::class, 'store'])->name('maklum-balas-store');
 
     /*
     |--------------------------------------------------------------------------

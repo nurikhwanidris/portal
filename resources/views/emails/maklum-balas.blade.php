@@ -15,13 +15,15 @@
 
             <hr>
             Anda boleh menekan pautan di bawah untuk melihat balasan dari pihak JUPEM. <br>
-            <a href="{{ route('maklum-balas', $data['id']) }}">Lihat Balasan</a>
+            <a href="{{ route('maklum-balas', [app()->getLocale(), 'id' => $data['id']]) }}">Lihat
+                Balasan</a>
         </div>
     @else
         <div>
             <p>
                 Satu balasan telah dihantar kepada anda. Sila klik pada pautan di bawah untuk melihat balasan.
             </p><br>
-            <a href="{{ route('maklum-balas', $data['id']) }}">Lihat Balasan</a>
+            <a href="{{ route('maklum-balas', [app()->getLocale(), 'id' => $data['id']]) }}">Lihat
+                Balasan</a>
         </div>
     @endif

@@ -1,4 +1,4 @@
-<form action="/maklum-balas/store" method="post">
+<form action="{{ route('maklum-balas-store', app()->getLocale()) }}" method="post">
     @csrf
     <select name="product" id="">
         <option value="">Sila Pilih</option>
