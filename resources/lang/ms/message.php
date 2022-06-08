@@ -199,7 +199,7 @@ return [
     "huraian" => "Jangkaan air pasang surut bagi hari <strong>" . now()->format('l jS \\of F Y h:i:s A') . "</strong> untuk <strong>:STESEN</strong> adalah seperti berikut: ",
     "jadual_header_current" => "Jadual Waktu Pasang Surut " . now()->format('l jS \\of F Y h:i:s A'),
     "jadual_header_next_day" => "Jadual Waktu Pasang Surut " . now()->addDay()->format('l jS \\of F Y h:i:s A'),
-    "pasang_surut" => "Pasang Surut",
+    "pasang_surut" => "Pasang/Surut",
     "waktu_pasang_surut" => "Waktu Pasang Surut",
     "ketinggian_air" => "Ketinggian Air",
     "air_surut" => "Air Surut",
