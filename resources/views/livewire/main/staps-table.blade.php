@@ -83,16 +83,48 @@
                                     <span
                                         class="badge badge-tertiary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">{{ __('message.air_surut') }}</span>
                                 </td>
-                                <td class="align-center text-center">2:20am</td>
-                                <td class="align-center text-center">0.58m</td>
+                                <td class="align-center text-center">
+                                    {{ str_pad($staps1[0]->STAP_JAM, 2, 0, STR_PAD_LEFT) . $staps1[0]->STAP_MINIT }}
+                                </td>
+                                <td class="align-center text-center">
+                                    {{ $staps1[0]->STAP_KETINGGIAN }}cm
+                                </td>
                             </tr>
                             <tr>
                                 <td>
                                     <span
                                         class="badge badge-secondary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">{{ __('message.air_pasang') }}</span>
                                 </td>
-                                <td class="align-center text-center">8:20am</td>
-                                <td class="align-center text-center">4.58m</td>
+                                <td class="align-center text-center">
+                                    {{ str_pad($staps1[1]->STAP_JAM, 2, 0, STR_PAD_LEFT) . $staps1[1]->STAP_MINIT }}
+                                </td>
+                                <td class="align-center text-center">
+                                    {{ $staps1[1]->STAP_KETINGGIAN }}cm
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span
+                                        class="badge badge-secondary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">{{ __('message.air_pasang') }}</span>
+                                </td>
+                                <td class="align-center text-center">
+                                    {{ str_pad($staps1[2]->STAP_JAM, 2, 0, STR_PAD_LEFT) . $staps1[2]->STAP_MINIT }}
+                                </td>
+                                <td class="align-center text-center">
+                                    {{ $staps1[2]->STAP_KETINGGIAN }}cm
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span
+                                        class="badge badge-secondary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">{{ __('message.air_pasang') }}</span>
+                                </td>
+                                <td class="align-center text-center">
+                                    {{ str_pad($staps1[3]->STAP_JAM, 2, 0, STR_PAD_LEFT) . $staps1[3]->STAP_MINIT }}
+                                </td>
+                                <td class="align-center text-center">
+                                    {{ $staps1[3]->STAP_KETINGGIAN }}cm
+                                </td>
                             </tr>
                         </tbody>
                     </table>
