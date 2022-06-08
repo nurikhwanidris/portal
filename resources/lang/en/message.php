@@ -195,9 +195,16 @@ return [
     // STAPS
     "staps" => "Tidal Prediction System",
     "senarai_stesyen" => "List of Stations",
-    "jadual_stesyen" => "Tidal info for station : ",
+    "jadual_stesyen" => "Tidal timing for :STESEN",
     "current" => "Current",
     "2_hari" => "2 Days",
     "7_hari" => "7 Days",
-
+    "huraian" => "Prediction for the today <strong>" . now()->format('l jS \\of F Y h:i:s A') . "</strong> untuk <strong>:STESEN</strong> adalah seperti berikut: ",
+    "jadual_header_current" => "Tide Schedule for " . now()->format('l jS \\of F Y h:i:s A'),
+    "jadual_header_next_day" => "Tide Schedule for " . now()->addDay()->format('l jS \\of F Y h:i:s A'),
+    "pasang_surut" => "Tide",
+    "waktu_pasang_surut" => "Tidal Time",
+    "ketinggian_air" => "Water Height",
+    "air_surut" => "Low Tide",
+    "air_pasang" => "High Tide",
 ];

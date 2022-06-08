@@ -190,11 +190,18 @@ return [
     "charter_13" => "Mengeluarkan akuan penerimaan dan maklumbalas awal bagi aduan dalam tempoh 1 hari bekerja dari tarikh aduan diterima",
 
     // STAPS
-    "staps" => "Stesen Tolok Air Pasang Surut",
+    "staps" => "Sistem Tolok Air Pasang Surut",
     "senarai_stesyen" => "Senarai Stesen",
-    "jadual_stesyen" => "Waktu Air Pasang Surut bagi stesen : :STESEN",
+    "jadual_stesyen" => "Waktu Air Pasang Surut bagi stesen :STESEN",
     "current" => "Semasa",
     "2_hari" => "2 Hari",
     "7_hari" => "7 Hari",
-    "huraian" => "Jangkaan air pasang surut bagi hari " . now()->format('l jS \\of F Y h:i:s A') . "untuk :STESEN adalah seperti berikut: ",
+    "huraian" => "Jangkaan air pasang surut bagi hari <strong>" . now()->format('l jS \\of F Y h:i:s A') . "</strong> untuk <strong>:STESEN</strong> adalah seperti berikut: ",
+    "jadual_header_current" => "Jadual Waktu Pasang Surut " . now()->format('l jS \\of F Y h:i:s A'),
+    "jadual_header_next_day" => "Jadual Waktu Pasang Surut " . now()->addDay()->format('l jS \\of F Y h:i:s A'),
+    "pasang_surut" => "Pasang Surut",
+    "waktu_pasang_surut" => "Waktu Pasang Surut",
+    "ketinggian_air" => "Ketinggian Air",
+    "air_surut" => "Air Surut",
+    "air_pasang" => "Air Pasang",
 ];
