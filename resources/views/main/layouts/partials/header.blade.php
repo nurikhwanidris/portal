@@ -8,7 +8,7 @@
                     <div class="header-row">
                         <div class="header-logo">
                             <a href="{{ route('index', app()->getLocale()) }}">
-                                <img alt="Jata Negara" src="/main/img/logo-default/logo-default-208x100.png"
+                                <img alt="{{ __('message.National Coat of Arms') }}" src="/main/img/logo-default/logo-default-208x100.png"
                                     class="logo-size">
                             </a>
                         </div>
@@ -184,7 +184,7 @@
                                     <ol class="mini-products-list">
                                         <li class="item">
                                             <div class="product-details">
-                                                <p class="qty-price">{{ __('message.Help') }} </p>
+                                                <p class="qty-price">{{ __('message.Help') }}</p>
                                                 <p class="product-name">
                                                     <a href="#">
                                                         <img src="/main/img/shortcut-icon/manual-colour.svg"

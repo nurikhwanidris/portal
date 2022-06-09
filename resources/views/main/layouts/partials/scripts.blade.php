@@ -128,78 +128,17 @@
             beritaTerkiniTable.columns([2]).search($(this).val()).draw();
         })
 
-        // // Show/Hide Negeri on dropdown
-        // $('#contact-us').on('change', function() {
-        //     if (this.value == 1) {
-        //         $("#hq").hide();
-        //         $("#jupem-johor").show();
-        //         $("#jupem-kedah").hide();
-        //         $("#jupem-kelantan").hide();
-        //         $("#jupem-melaka").hide();
-        //         $("#jupem-kl").hide();
-        //         $("#jupem-n9").hide();
-        //         $("#jupem-pahang").hide();
-        //         $("#jupem-perak").hide();
-        //         $("#jupem-perlis").hide();
-        //         $("#jupem-pulau-pinang").hide();
-        //         $("#jupem-selangor").hide();
-        //         $("#jupem-terengganu").hide();
-        //         $("#jupem-labuan").hide();
-        //         $("#jupem-sarawak").hide();
-        //         $("#jupem-sabah").hide();
-        //     } else if (this.value == 2) {
-        //         $("#hq").hide();
-        //         $("#jupem-johor").hide();
-        //         $("#jupem-kedah").show();
-        //         $("#jupem-kelantan").hide();
-        //         $("#jupem-melaka").hide();
-        //         $("#jupem-kl").hide();
-        //         $("#jupem-n9").hide();
-        //         $("#jupem-pahang").hide();
-        //         $("#jupem-perak").hide();
-        //         $("#jupem-perlis").hide();
-        //         $("#jupem-pulau-pinang").hide();
-        //         $("#jupem-selangor").hide();
-        //         $("#jupem-terengganu").hide();
-        //         $("#jupem-labuan").hide();
-        //         $("#jupem-sarawak").hide();
-        //         $("#jupem-sabah").hide();
-        //     } else if (this.value == 3) {
-        //         $("#hq").hide();
-        //         $("#jupem-johor").hide();
-        //         $("#jupem-kedah").hide();
-        //         $("#jupem-kelantan").show();
-        //         $("#jupem-melaka").hide();
-        //         $("#jupem-kl").hide();
-        //         $("#jupem-n9").hide();
-        //         $("#jupem-pahang").hide();
-        //         $("#jupem-perak").hide();
-        //         $("#jupem-perlis").hide();
-        //         $("#jupem-pulau-pinang").hide();
-        //         $("#jupem-selangor").hide();
-        //         $("#jupem-terengganu").hide();
-        //         $("#jupem-labuan").hide();
-        //         $("#jupem-sarawak").hide();
-        //         $("#jupem-sabah").hide();
-        //     } else {
-        //         $("#hq").show();
-        //         $("#jupem-johor").hide();
-        //         $("#jupem-kedah").hide();
-        //         $("#jupem-kelantan").hide();
-        //         $("#jupem-melaka").hide();
-        //         $("#jupem-kl").hide();
-        //         $("#jupem-n9").hide();
-        //         $("#jupem-pahang").hide();
-        //         $("#jupem-perak").hide();
-        //         $("#jupem-perlis").hide();
-        //         $("#jupem-pulau-pinang").hide();
-        //         $("#jupem-selangor").hide();
-        //         $("#jupem-terengganu").hide();
-        //         $("#jupem-labuan").hide();
-        //         $("#jupem-sarawak").hide();
-        //         $("#jupem-sabah").hide();
-        //     }
-        // });
+        $("#contact-us").change(function() {
+            $(this).find("option:selected").each(function() {
+                var optionValue = $(this).attr("value");
+                if (optionValue) {
+                    $(".jupem").not("#" + optionValue).hide();
+                    $("#" + optionValue).show();
+                } else {
+                    $(".jupem").hide();
+                }
+            });
+        }).change();
     });
 </script>
 <script>
