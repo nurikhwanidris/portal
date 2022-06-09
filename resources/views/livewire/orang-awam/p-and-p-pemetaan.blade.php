@@ -1,6 +1,5 @@
 <div>
     <!-- PEMETAAN -->
-
     <!-- ACCORDION 1 - START -->
     <div class="row pb-4">
         <div class="featured-boxes featured-boxes-style-3 featured-boxes-flat">
