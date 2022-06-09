@@ -14,7 +14,7 @@
             <div class="featured-boxes featured-boxes-style-3 featured-boxes-flat">
                 <div class="row">
                     <div>
-                        {{ __('message.states') }}
+                        {{ __('message.choose_state') }}
                         <select id="contact-us" class="form-select form-select-sm" aria-label=".form-select-sm example">
                             <option value="0" selected="selected">{{ __('message.hq') }}</option>
                             <option value="1">JUPEM Johor</option>
@@ -38,6 +38,7 @@
             </div>
             <!-- Icon Row - END-->
         </div>
+        {{-- JUPEM HQ --}}
         <div class="row">
             <div class="container" style="padding-top:20px;">
                 <div class="row align-items-center">
@@ -50,7 +51,6 @@
                     </div>
                     <!-- Google Map END -->
                 </div>
-                {{-- JUPEM HQ --}}
                 <div class="row align-items-center" style="padding-top: 30px;" id="hq">
                     <span class="nama-hubungi-black text-5 fw-bold">Jabatan Ukur Dan Pemetaan Malaysia </span>
                     <br><br>
@@ -102,14 +102,31 @@
                     <div class="col-lg-6">
                         <div class="feature-box feature-box-primary col-sm-9" style="padding-top: 90px;">
                             <a href="#" class="btn btn-modern btn-tertiary mb-2">Peta Wisma JUPEM</a>&nbsp;
-                            <a href="awam-direktori-pegawai.php" class="btn btn-modern btn-secondary mb-2">Direktori
+                            <a href="{{ route('orang-awam', app()->getLocale()) }}#tab-4"
+                                class="btn btn-modern btn-secondary mb-2">Direktori
                                 Pegawai</a>
                         </div>
                     </div>
                 </div>
-                {{-- JUPEM Johor --}}
-                <div class="row align-items-center" style="padding-top: 30px; display: none;" id="jupem-johor">
-                    <span class="nama-hubungi-black text-4 fw-bold">Jabatan Ukur dan Pemetaan Johor</span>
+            </div>
+        </div>
+        {{-- JUPEM Johor --}}
+        <div class="row" id="johor" style="display: none">
+            <div class="container" style="padding-top:20px;">
+                <div class="row align-items-center">
+                    <!-- Google Map START -->
+                    <div id="googlemapsHalfContainer" class="google-map m-0"
+                        style="height: 350px;box-shadow: 0px 0px 10px #ccc;">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15954.085815640043!2d103.7581078!3d1.4608999!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd6715ace5574c079!2sJabatan%20Ukur%20dan%20Pemetaan%20Johor!5e0!3m2!1sen!2smy!4v1654760144518!5m2!1sen!2smy"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                    <!-- Google Map END -->
+                </div>
+                <div class="row align-items-center" style="padding-top: 30px;" id="hq">
+                    <span class="nama-hubungi-black text-5 fw-bold">Jabatan Ukur Dan Pemetaan Malaysia</span>
+                    <br><br>
+                    <span class="nama-hubungi-black text-4 fw-bold">Negeri Johor</span>
                     <div class="col-lg-6">
                         <div class="feature-box feature-box-primary mb-2">
                             <div class="icon-hubungi-2">
@@ -117,13 +134,10 @@
                             </div>
                             <div class="feature-box-info">
                                 <div class="info-hubungi-black">
-                                    Jabatan Ukur dan Pemetaan Johor
-                                    Tingkat 7, 8 & 9, Blok A, Wisma Persekutuan,
-                                    Jalan Air Molek, 80000 Johor Bahru,
-                                    Johor Darul Takzim.
-
-                                    Tel: 07-223 1244 ext 900
-                                    Faks: 07-223 8535
+                                    Tingkat 7, <br>
+                                    Blok A, Wisma Persekutuan, <br>
+                                    Jalan Air Molek, 80000, <br>
+                                    Johor Bahru, Johor
                                 </div>
                             </div>
                         </div>
@@ -137,38 +151,35 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="feature-box feature-box-primary">
-                            <div class="icon-hubungi-2">
-                                <i class="fas fa-fax icon-kaler"></i>
-                            </div>
-                            <div class="feature-box-info">
-                                <div class="info-hubungi-black">
-                                    +607-223 8535
-                                </div>
-                            </div>
-                        </div>
-                        <div class="feature-box feature-box-primary">
-                            <div class="icon-hubungi-2 icon-kaler">
-                                <i class="fas fa-envelope-open-text"></i>
-                            </div>
-                            <div class="feature-box-info">
-                                <div class="info-hubungi-black">
-                                    hqweb[at]jupem[dot]gov[dot]my
-                                </div>
-                            </div>
-                        </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="feature-box feature-box-primary col-sm-9" style="padding-top: 90px;">
                             <a href="#" class="btn btn-modern btn-tertiary mb-2">Peta Wisma JUPEM</a>&nbsp;
-                            <a href="awam-direktori-pegawai.php" class="btn btn-modern btn-secondary mb-2">Direktori
+                            <a href="{{ route('orang-awam', app()->getLocale()) }}#tab-4"
+                                class="btn btn-modern btn-secondary mb-2">Direktori
                                 Pegawai</a>
                         </div>
                     </div>
                 </div>
-                {{-- JUPEM Johor --}}
-                <div class="row align-items-center" style="padding-top: 30px; display: none;" id="jupem-johor">
-                    <span class="nama-hubungi-black text-4 fw-bold">Jabatan Ukur dan Pemetaan Johor</span>
+            </div>
+        </div>
+        {{-- JUPEM Kedah --}}
+        <div class="row" id="kedah">
+            <div class="container" style="padding-top:20px;">
+                <div class="row align-items-center">
+                    <!-- Google Map START -->
+                    <div id="googlemapsHalfContainer" class="google-map m-0"
+                        style="height: 350px;box-shadow: 0px 0px 10px #ccc;">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.3365119493374!2d100.54982641744384!3d5.365533999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304acbeaace6e037%3A0x4f14fdfa69390bf9!2sJabatan%20Ukur%20Dan%20Pemetaan%20Kedah!5e0!3m2!1sen!2smy!4v1654763424737!5m2!1sen!2smy"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                    <!-- Google Map END -->
+                </div>
+                <div class="row align-items-center" style="padding-top: 30px;" id="hq">
+                    <span class="nama-hubungi-black text-5 fw-bold">Jabatan Ukur Dan Pemetaan Malaysia</span>
+                    <br><br>
+                    <span class="nama-hubungi-black text-4 fw-bold">Negeri Kedah</span>
                     <div class="col-lg-6">
                         <div class="feature-box feature-box-primary mb-2">
                             <div class="icon-hubungi-2">
@@ -176,13 +187,9 @@
                             </div>
                             <div class="feature-box-info">
                                 <div class="info-hubungi-black">
-                                    Jabatan Ukur dan Pemetaan Johor
-                                    Tingkat 7, 8 & 9, Blok A, Wisma Persekutuan,
-                                    Jalan Air Molek, 80000 Johor Bahru,
-                                    Johor Darul Takzim.
-
-                                    Tel: 07-223 1244 ext 900
-                                    Faks: 07-223 8535
+                                    1187 Jalan Raya, <br>
+                                    09000 Kulim, <br>
+                                    Kedah Darul Aman.
                                 </div>
                             </div>
                         </div>
@@ -192,27 +199,7 @@
                             </div>
                             <div class="feature-box-info">
                                 <div class="info-hubungi-black">
-                                    +607-223 1244
-                                </div>
-                            </div>
-                        </div>
-                        <div class="feature-box feature-box-primary">
-                            <div class="icon-hubungi-2">
-                                <i class="fas fa-fax icon-kaler"></i>
-                            </div>
-                            <div class="feature-box-info">
-                                <div class="info-hubungi-black">
-                                    +607-223 8535
-                                </div>
-                            </div>
-                        </div>
-                        <div class="feature-box feature-box-primary">
-                            <div class="icon-hubungi-2 icon-kaler">
-                                <i class="fas fa-envelope-open-text"></i>
-                            </div>
-                            <div class="feature-box-info">
-                                <div class="info-hubungi-black">
-                                    hqweb[at]jupem[dot]gov[dot]my
+                                    +6044906166
                                 </div>
                             </div>
                         </div>
@@ -220,14 +207,30 @@
                     <div class="col-lg-6">
                         <div class="feature-box feature-box-primary col-sm-9" style="padding-top: 90px;">
                             <a href="#" class="btn btn-modern btn-tertiary mb-2">Peta Wisma JUPEM</a>&nbsp;
-                            <a href="awam-direktori-pegawai.php" class="btn btn-modern btn-secondary mb-2">Direktori
+                            <a href="{{ route('orang-awam', app()->getLocale()) }}#tab-4"
+                                class="btn btn-modern btn-secondary mb-2">Direktori
                                 Pegawai</a>
                         </div>
                     </div>
                 </div>
-                {{-- JUPEM Kedah --}}
-                <div class="row align-items-center" style="padding-top: 30px; display: none;" id="jupem-kedah">
-                    <span class="nama-hubungi-black text-4 fw-bold">Jabatan Ukur dan Pemetaan Johor</span>
+            </div>
+        </div>
+        <div class="row" id="kelantan">
+            <div class="container" style="padding-top:20px;">
+                <div class="row align-items-center">
+                    <!-- Google Map START -->
+                    <div id="googlemapsHalfContainer" class="google-map m-0"
+                        style="height: 350px;box-shadow: 0px 0px 10px #ccc;">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3967.042023108349!2d102.23862121531641!3d6.125047329364954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31b6afc4fb81ba0d%3A0xcc494592464f5837!2sDepartment%20of%20Survey%20and%20Mapping!5e0!3m2!1sen!2smy!4v1654763894343!5m2!1sen!2smy"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                    <!-- Google Map END -->
+                </div>
+                <div class="row align-items-center" style="padding-top: 30px;" id="hq">
+                    <span class="nama-hubungi-black text-5 fw-bold">Jabatan Ukur Dan Pemetaan Malaysia</span>
+                    <br><br>
+                    <span class="nama-hubungi-black text-4 fw-bold">Negeri Kelantan</span>
                     <div class="col-lg-6">
                         <div class="feature-box feature-box-primary mb-2">
                             <div class="icon-hubungi-2">
@@ -235,13 +238,7 @@
                             </div>
                             <div class="feature-box-info">
                                 <div class="info-hubungi-black">
-                                    Jabatan Ukur dan Pemetaan Johor
-                                    Tingkat 7, 8 & 9, Blok A, Wisma Persekutuan,
-                                    Jalan Air Molek, 80000 Johor Bahru,
-                                    Johor Darul Takzim.
-
-                                    Tel: 07-223 1244 ext 900
-                                    Faks: 07-223 8535
+                                    Jalan Hospital, Bandar Kota Bharu, 15000 Kota Bharu, Kelantan
                                 </div>
                             </div>
                         </div>
@@ -251,27 +248,7 @@
                             </div>
                             <div class="feature-box-info">
                                 <div class="info-hubungi-black">
-                                    +607-223 1244
-                                </div>
-                            </div>
-                        </div>
-                        <div class="feature-box feature-box-primary">
-                            <div class="icon-hubungi-2">
-                                <i class="fas fa-fax icon-kaler"></i>
-                            </div>
-                            <div class="feature-box-info">
-                                <div class="info-hubungi-black">
-                                    +607-223 8535
-                                </div>
-                            </div>
-                        </div>
-                        <div class="feature-box feature-box-primary">
-                            <div class="icon-hubungi-2 icon-kaler">
-                                <i class="fas fa-envelope-open-text"></i>
-                            </div>
-                            <div class="feature-box-info">
-                                <div class="info-hubungi-black">
-                                    hqweb[at]jupem[dot]gov[dot]my
+                                    +6097481588
                                 </div>
                             </div>
                         </div>
@@ -279,14 +256,30 @@
                     <div class="col-lg-6">
                         <div class="feature-box feature-box-primary col-sm-9" style="padding-top: 90px;">
                             <a href="#" class="btn btn-modern btn-tertiary mb-2">Peta Wisma JUPEM</a>&nbsp;
-                            <a href="awam-direktori-pegawai.php" class="btn btn-modern btn-secondary mb-2">Direktori
+                            <a href="{{ route('orang-awam', app()->getLocale()) }}#tab-4"
+                                class="btn btn-modern btn-secondary mb-2">Direktori
                                 Pegawai</a>
                         </div>
                     </div>
                 </div>
-                {{-- JUPEM Kelantan --}}
-                <div class="row align-items-center" style="padding-top: 30px; display: none;" id="jupem-kelantan">
-                    <span class="nama-hubungi-black text-4 fw-bold">Jabatan Ukur dan Pemetaan Johor</span>
+            </div>
+        </div>
+        <div class="row" id="melaka">
+            <div class="container" style="padding-top:20px;">
+                <div class="row align-items-center">
+                    <!-- Google Map START -->
+                    <div id="googlemapsHalfContainer" class="google-map m-0"
+                        style="height: 350px;box-shadow: 0px 0px 10px #ccc;">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3986.8458741074273!2d102.2535733153198!3d2.211795858814538!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d1efd54b97dd7d%3A0xc5d49d3156fc9828!2sJabatan%20Ukur%20Dan%20Pemetaan%20Melaka!5e0!3m2!1sen!2smy!4v1654764573068!5m2!1sen!2smy"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                    <!-- Google Map END -->
+                </div>
+                <div class="row align-items-center" style="padding-top: 30px;" id="hq">
+                    <span class="nama-hubungi-black text-5 fw-bold">Jabatan Ukur Dan Pemetaan Malaysia</span>
+                    <br><br>
+                    <span class="nama-hubungi-black text-4 fw-bold">Negeri Melaka</span>
                     <div class="col-lg-6">
                         <div class="feature-box feature-box-primary mb-2">
                             <div class="icon-hubungi-2">
@@ -294,13 +287,7 @@
                             </div>
                             <div class="feature-box-info">
                                 <div class="info-hubungi-black">
-                                    Jabatan Ukur dan Pemetaan Johor
-                                    Tingkat 7, 8 & 9, Blok A, Wisma Persekutuan,
-                                    Jalan Air Molek, 80000 Johor Bahru,
-                                    Johor Darul Takzim.
-
-                                    Tel: 07-223 1244 ext 900
-                                    Faks: 07-223 8535
+                                    Jalan Taming Sari, Kampung Durian Daun Dalam, 75400 Melaka
                                 </div>
                             </div>
                         </div>
@@ -310,27 +297,7 @@
                             </div>
                             <div class="feature-box-info">
                                 <div class="info-hubungi-black">
-                                    +607-223 1244
-                                </div>
-                            </div>
-                        </div>
-                        <div class="feature-box feature-box-primary">
-                            <div class="icon-hubungi-2">
-                                <i class="fas fa-fax icon-kaler"></i>
-                            </div>
-                            <div class="feature-box-info">
-                                <div class="info-hubungi-black">
-                                    +607-223 8535
-                                </div>
-                            </div>
-                        </div>
-                        <div class="feature-box feature-box-primary">
-                            <div class="icon-hubungi-2 icon-kaler">
-                                <i class="fas fa-envelope-open-text"></i>
-                            </div>
-                            <div class="feature-box-info">
-                                <div class="info-hubungi-black">
-                                    hqweb[at]jupem[dot]gov[dot]my
+                                    +6062822844
                                 </div>
                             </div>
                         </div>
@@ -338,715 +305,8 @@
                     <div class="col-lg-6">
                         <div class="feature-box feature-box-primary col-sm-9" style="padding-top: 90px;">
                             <a href="#" class="btn btn-modern btn-tertiary mb-2">Peta Wisma JUPEM</a>&nbsp;
-                            <a href="awam-direktori-pegawai.php" class="btn btn-modern btn-secondary mb-2">Direktori
-                                Pegawai</a>
-                        </div>
-                    </div>
-                </div>
-                {{-- JUPEM Melaka --}}
-                <div class="row align-items-center" style="padding-top: 30px; display: none;" id="jupem-melaka">
-                    <span class="nama-hubungi-black text-4 fw-bold">Jabatan Ukur dan Pemetaan Johor</span>
-                    <div class="col-lg-6">
-                        <div class="feature-box feature-box-primary mb-2">
-                            <div class="icon-hubungi-2">
-                                <i class="fas fa-map-marker-alt icon-kaler"></i>
-                            </div>
-                            <div class="feature-box-info">
-                                <div class="info-hubungi-black">
-                                    Jabatan Ukur dan Pemetaan Johor
-                                    Tingkat 7, 8 & 9, Blok A, Wisma Persekutuan,
-                                    Jalan Air Molek, 80000 Johor Bahru,
-                                    Johor Darul Takzim.
-
-                                    Tel: 07-223 1244 ext 900
-                                    Faks: 07-223 8535
-                                </div>
-                            </div>
-                        </div>
-                        <div class="feature-box feature-box-primary">
-                            <div class="icon-hubungi-2">
-                                <i class="fas fa-phone-volume icon-kaler"></i>
-                            </div>
-                            <div class="feature-box-info">
-                                <div class="info-hubungi-black">
-                                    +607-223 1244
-                                </div>
-                            </div>
-                        </div>
-                        <div class="feature-box feature-box-primary">
-                            <div class="icon-hubungi-2">
-                                <i class="fas fa-fax icon-kaler"></i>
-                            </div>
-                            <div class="feature-box-info">
-                                <div class="info-hubungi-black">
-                                    +607-223 8535
-                                </div>
-                            </div>
-                        </div>
-                        <div class="feature-box feature-box-primary">
-                            <div class="icon-hubungi-2 icon-kaler">
-                                <i class="fas fa-envelope-open-text"></i>
-                            </div>
-                            <div class="feature-box-info">
-                                <div class="info-hubungi-black">
-                                    hqweb[at]jupem[dot]gov[dot]my
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="feature-box feature-box-primary col-sm-9" style="padding-top: 90px;">
-                            <a href="#" class="btn btn-modern btn-tertiary mb-2">Peta Wisma JUPEM</a>&nbsp;
-                            <a href="awam-direktori-pegawai.php" class="btn btn-modern btn-secondary mb-2">Direktori
-                                Pegawai</a>
-                        </div>
-                    </div>
-                </div>
-                {{-- JUPEM Kl --}}
-                <div class="row align-items-center" style="padding-top: 30px; display: none;" id="jupem-kl">
-                    <span class="nama-hubungi-black text-4 fw-bold">Jabatan Ukur dan Pemetaan Johor</span>
-                    <div class="col-lg-6">
-                        <div class="feature-box feature-box-primary mb-2">
-                            <div class="icon-hubungi-2">
-                                <i class="fas fa-map-marker-alt icon-kaler"></i>
-                            </div>
-                            <div class="feature-box-info">
-                                <div class="info-hubungi-black">
-                                    Jabatan Ukur dan Pemetaan Johor
-                                    Tingkat 7, 8 & 9, Blok A, Wisma Persekutuan,
-                                    Jalan Air Molek, 80000 Johor Bahru,
-                                    Johor Darul Takzim.
-
-                                    Tel: 07-223 1244 ext 900
-                                    Faks: 07-223 8535
-                                </div>
-                            </div>
-                        </div>
-                        <div class="feature-box feature-box-primary">
-                            <div class="icon-hubungi-2">
-                                <i class="fas fa-phone-volume icon-kaler"></i>
-                            </div>
-                            <div class="feature-box-info">
-                                <div class="info-hubungi-black">
-                                    +607-223 1244
-                                </div>
-                            </div>
-                        </div>
-                        <div class="feature-box feature-box-primary">
-                            <div class="icon-hubungi-2">
-                                <i class="fas fa-fax icon-kaler"></i>
-                            </div>
-                            <div class="feature-box-info">
-                                <div class="info-hubungi-black">
-                                    +607-223 8535
-                                </div>
-                            </div>
-                        </div>
-                        <div class="feature-box feature-box-primary">
-                            <div class="icon-hubungi-2 icon-kaler">
-                                <i class="fas fa-envelope-open-text"></i>
-                            </div>
-                            <div class="feature-box-info">
-                                <div class="info-hubungi-black">
-                                    hqweb[at]jupem[dot]gov[dot]my
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="feature-box feature-box-primary col-sm-9" style="padding-top: 90px;">
-                            <a href="#" class="btn btn-modern btn-tertiary mb-2">Peta Wisma JUPEM</a>&nbsp;
-                            <a href="awam-direktori-pegawai.php" class="btn btn-modern btn-secondary mb-2">Direktori
-                                Pegawai</a>
-                        </div>
-                    </div>
-                </div>
-                {{-- JUPEM N9 --}}
-                <div class="row align-items-center" style="padding-top: 30px; display: none;" id="jupem-n9">
-                    <span class="nama-hubungi-black text-4 fw-bold">Jabatan Ukur dan Pemetaan Johor</span>
-                    <div class="col-lg-6">
-                        <div class="feature-box feature-box-primary mb-2">
-                            <div class="icon-hubungi-2">
-                                <i class="fas fa-map-marker-alt icon-kaler"></i>
-                            </div>
-                            <div class="feature-box-info">
-                                <div class="info-hubungi-black">
-                                    Jabatan Ukur dan Pemetaan Johor
-                                    Tingkat 7, 8 & 9, Blok A, Wisma Persekutuan,
-                                    Jalan Air Molek, 80000 Johor Bahru,
-                                    Johor Darul Takzim.
-
-                                    Tel: 07-223 1244 ext 900
-                                    Faks: 07-223 8535
-                                </div>
-                            </div>
-                        </div>
-                        <div class="feature-box feature-box-primary">
-                            <div class="icon-hubungi-2">
-                                <i class="fas fa-phone-volume icon-kaler"></i>
-                            </div>
-                            <div class="feature-box-info">
-                                <div class="info-hubungi-black">
-                                    +607-223 1244
-                                </div>
-                            </div>
-                        </div>
-                        <div class="feature-box feature-box-primary">
-                            <div class="icon-hubungi-2">
-                                <i class="fas fa-fax icon-kaler"></i>
-                            </div>
-                            <div class="feature-box-info">
-                                <div class="info-hubungi-black">
-                                    +607-223 8535
-                                </div>
-                            </div>
-                        </div>
-                        <div class="feature-box feature-box-primary">
-                            <div class="icon-hubungi-2 icon-kaler">
-                                <i class="fas fa-envelope-open-text"></i>
-                            </div>
-                            <div class="feature-box-info">
-                                <div class="info-hubungi-black">
-                                    hqweb[at]jupem[dot]gov[dot]my
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="feature-box feature-box-primary col-sm-9" style="padding-top: 90px;">
-                            <a href="#" class="btn btn-modern btn-tertiary mb-2">Peta Wisma JUPEM</a>&nbsp;
-                            <a href="awam-direktori-pegawai.php" class="btn btn-modern btn-secondary mb-2">Direktori
-                                Pegawai</a>
-                        </div>
-                    </div>
-                </div>
-                {{-- JUPEM PAHANG --}}
-                <div class="row align-items-center" style="padding-top: 30px; display: none;" id="jupem-pahang">
-                    <span class="nama-hubungi-black text-4 fw-bold">Jabatan Ukur dan Pemetaan Johor</span>
-                    <div class="col-lg-6">
-                        <div class="feature-box feature-box-primary mb-2">
-                            <div class="icon-hubungi-2">
-                                <i class="fas fa-map-marker-alt icon-kaler"></i>
-                            </div>
-                            <div class="feature-box-info">
-                                <div class="info-hubungi-black">
-                                    Jabatan Ukur dan Pemetaan Johor
-                                    Tingkat 7, 8 & 9, Blok A, Wisma Persekutuan,
-                                    Jalan Air Molek, 80000 Johor Bahru,
-                                    Johor Darul Takzim.
-
-                                    Tel: 07-223 1244 ext 900
-                                    Faks: 07-223 8535
-                                </div>
-                            </div>
-                        </div>
-                        <div class="feature-box feature-box-primary">
-                            <div class="icon-hubungi-2">
-                                <i class="fas fa-phone-volume icon-kaler"></i>
-                            </div>
-                            <div class="feature-box-info">
-                                <div class="info-hubungi-black">
-                                    +607-223 1244
-                                </div>
-                            </div>
-                        </div>
-                        <div class="feature-box feature-box-primary">
-                            <div class="icon-hubungi-2">
-                                <i class="fas fa-fax icon-kaler"></i>
-                            </div>
-                            <div class="feature-box-info">
-                                <div class="info-hubungi-black">
-                                    +607-223 8535
-                                </div>
-                            </div>
-                        </div>
-                        <div class="feature-box feature-box-primary">
-                            <div class="icon-hubungi-2 icon-kaler">
-                                <i class="fas fa-envelope-open-text"></i>
-                            </div>
-                            <div class="feature-box-info">
-                                <div class="info-hubungi-black">
-                                    hqweb[at]jupem[dot]gov[dot]my
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="feature-box feature-box-primary col-sm-9" style="padding-top: 90px;">
-                            <a href="#" class="btn btn-modern btn-tertiary mb-2">Peta Wisma JUPEM</a>&nbsp;
-                            <a href="awam-direktori-pegawai.php" class="btn btn-modern btn-secondary mb-2">Direktori
-                                Pegawai</a>
-                        </div>
-                    </div>
-                </div>
-                {{-- JUPEM PERAK --}}
-                <div class="row align-items-center" style="padding-top: 30px; display: none;" id="jupem-perak">
-                    <span class="nama-hubungi-black text-4 fw-bold">Jabatan Ukur dan Pemetaan Johor</span>
-                    <div class="col-lg-6">
-                        <div class="feature-box feature-box-primary mb-2">
-                            <div class="icon-hubungi-2">
-                                <i class="fas fa-map-marker-alt icon-kaler"></i>
-                            </div>
-                            <div class="feature-box-info">
-                                <div class="info-hubungi-black">
-                                    Jabatan Ukur dan Pemetaan Johor
-                                    Tingkat 7, 8 & 9, Blok A, Wisma Persekutuan,
-                                    Jalan Air Molek, 80000 Johor Bahru,
-                                    Johor Darul Takzim.
-
-                                    Tel: 07-223 1244 ext 900
-                                    Faks: 07-223 8535
-                                </div>
-                            </div>
-                        </div>
-                        <div class="feature-box feature-box-primary">
-                            <div class="icon-hubungi-2">
-                                <i class="fas fa-phone-volume icon-kaler"></i>
-                            </div>
-                            <div class="feature-box-info">
-                                <div class="info-hubungi-black">
-                                    +607-223 1244
-                                </div>
-                            </div>
-                        </div>
-                        <div class="feature-box feature-box-primary">
-                            <div class="icon-hubungi-2">
-                                <i class="fas fa-fax icon-kaler"></i>
-                            </div>
-                            <div class="feature-box-info">
-                                <div class="info-hubungi-black">
-                                    +607-223 8535
-                                </div>
-                            </div>
-                        </div>
-                        <div class="feature-box feature-box-primary">
-                            <div class="icon-hubungi-2 icon-kaler">
-                                <i class="fas fa-envelope-open-text"></i>
-                            </div>
-                            <div class="feature-box-info">
-                                <div class="info-hubungi-black">
-                                    hqweb[at]jupem[dot]gov[dot]my
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="feature-box feature-box-primary col-sm-9" style="padding-top: 90px;">
-                            <a href="#" class="btn btn-modern btn-tertiary mb-2">Peta Wisma JUPEM</a>&nbsp;
-                            <a href="awam-direktori-pegawai.php" class="btn btn-modern btn-secondary mb-2">Direktori
-                                Pegawai</a>
-                        </div>
-                    </div>
-                </div>
-                {{-- JUPEM PERLIS --}}
-                <div class="row align-items-center" style="padding-top: 30px; display: none;" id="jupem-perlis">
-                    <span class="nama-hubungi-black text-4 fw-bold">Jabatan Ukur dan Pemetaan Johor</span>
-                    <div class="col-lg-6">
-                        <div class="feature-box feature-box-primary mb-2">
-                            <div class="icon-hubungi-2">
-                                <i class="fas fa-map-marker-alt icon-kaler"></i>
-                            </div>
-                            <div class="feature-box-info">
-                                <div class="info-hubungi-black">
-                                    Jabatan Ukur dan Pemetaan Johor
-                                    Tingkat 7, 8 & 9, Blok A, Wisma Persekutuan,
-                                    Jalan Air Molek, 80000 Johor Bahru,
-                                    Johor Darul Takzim.
-
-                                    Tel: 07-223 1244 ext 900
-                                    Faks: 07-223 8535
-                                </div>
-                            </div>
-                        </div>
-                        <div class="feature-box feature-box-primary">
-                            <div class="icon-hubungi-2">
-                                <i class="fas fa-phone-volume icon-kaler"></i>
-                            </div>
-                            <div class="feature-box-info">
-                                <div class="info-hubungi-black">
-                                    +607-223 1244
-                                </div>
-                            </div>
-                        </div>
-                        <div class="feature-box feature-box-primary">
-                            <div class="icon-hubungi-2">
-                                <i class="fas fa-fax icon-kaler"></i>
-                            </div>
-                            <div class="feature-box-info">
-                                <div class="info-hubungi-black">
-                                    +607-223 8535
-                                </div>
-                            </div>
-                        </div>
-                        <div class="feature-box feature-box-primary">
-                            <div class="icon-hubungi-2 icon-kaler">
-                                <i class="fas fa-envelope-open-text"></i>
-                            </div>
-                            <div class="feature-box-info">
-                                <div class="info-hubungi-black">
-                                    hqweb[at]jupem[dot]gov[dot]my
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="feature-box feature-box-primary col-sm-9" style="padding-top: 90px;">
-                            <a href="#" class="btn btn-modern btn-tertiary mb-2">Peta Wisma JUPEM</a>&nbsp;
-                            <a href="awam-direktori-pegawai.php" class="btn btn-modern btn-secondary mb-2">Direktori
-                                Pegawai</a>
-                        </div>
-                    </div>
-                </div>
-                {{-- JUPEM PULAU-PINANG --}}
-                <div class="row align-items-center" style="padding-top: 30px; display: none;" id="jupem-pulau-pinang">
-                    <span class="nama-hubungi-black text-4 fw-bold">Jabatan Ukur dan Pemetaan Johor</span>
-                    <div class="col-lg-6">
-                        <div class="feature-box feature-box-primary mb-2">
-                            <div class="icon-hubungi-2">
-                                <i class="fas fa-map-marker-alt icon-kaler"></i>
-                            </div>
-                            <div class="feature-box-info">
-                                <div class="info-hubungi-black">
-                                    Jabatan Ukur dan Pemetaan Johor
-                                    Tingkat 7, 8 & 9, Blok A, Wisma Persekutuan,
-                                    Jalan Air Molek, 80000 Johor Bahru,
-                                    Johor Darul Takzim.
-
-                                    Tel: 07-223 1244 ext 900
-                                    Faks: 07-223 8535
-                                </div>
-                            </div>
-                        </div>
-                        <div class="feature-box feature-box-primary">
-                            <div class="icon-hubungi-2">
-                                <i class="fas fa-phone-volume icon-kaler"></i>
-                            </div>
-                            <div class="feature-box-info">
-                                <div class="info-hubungi-black">
-                                    +607-223 1244
-                                </div>
-                            </div>
-                        </div>
-                        <div class="feature-box feature-box-primary">
-                            <div class="icon-hubungi-2">
-                                <i class="fas fa-fax icon-kaler"></i>
-                            </div>
-                            <div class="feature-box-info">
-                                <div class="info-hubungi-black">
-                                    +607-223 8535
-                                </div>
-                            </div>
-                        </div>
-                        <div class="feature-box feature-box-primary">
-                            <div class="icon-hubungi-2 icon-kaler">
-                                <i class="fas fa-envelope-open-text"></i>
-                            </div>
-                            <div class="feature-box-info">
-                                <div class="info-hubungi-black">
-                                    hqweb[at]jupem[dot]gov[dot]my
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="feature-box feature-box-primary col-sm-9" style="padding-top: 90px;">
-                            <a href="#" class="btn btn-modern btn-tertiary mb-2">Peta Wisma JUPEM</a>&nbsp;
-                            <a href="awam-direktori-pegawai.php" class="btn btn-modern btn-secondary mb-2">Direktori
-                                Pegawai</a>
-                        </div>
-                    </div>
-                </div>
-                {{-- JUPEM SELANGOR --}}
-                <div class="row align-items-center" style="padding-top: 30px; display: none;" id="jupem-selangor">
-                    <span class="nama-hubungi-black text-4 fw-bold">Jabatan Ukur dan Pemetaan Johor</span>
-                    <div class="col-lg-6">
-                        <div class="feature-box feature-box-primary mb-2">
-                            <div class="icon-hubungi-2">
-                                <i class="fas fa-map-marker-alt icon-kaler"></i>
-                            </div>
-                            <div class="feature-box-info">
-                                <div class="info-hubungi-black">
-                                    Jabatan Ukur dan Pemetaan Johor
-                                    Tingkat 7, 8 & 9, Blok A, Wisma Persekutuan,
-                                    Jalan Air Molek, 80000 Johor Bahru,
-                                    Johor Darul Takzim.
-
-                                    Tel: 07-223 1244 ext 900
-                                    Faks: 07-223 8535
-                                </div>
-                            </div>
-                        </div>
-                        <div class="feature-box feature-box-primary">
-                            <div class="icon-hubungi-2">
-                                <i class="fas fa-phone-volume icon-kaler"></i>
-                            </div>
-                            <div class="feature-box-info">
-                                <div class="info-hubungi-black">
-                                    +607-223 1244
-                                </div>
-                            </div>
-                        </div>
-                        <div class="feature-box feature-box-primary">
-                            <div class="icon-hubungi-2">
-                                <i class="fas fa-fax icon-kaler"></i>
-                            </div>
-                            <div class="feature-box-info">
-                                <div class="info-hubungi-black">
-                                    +607-223 8535
-                                </div>
-                            </div>
-                        </div>
-                        <div class="feature-box feature-box-primary">
-                            <div class="icon-hubungi-2 icon-kaler">
-                                <i class="fas fa-envelope-open-text"></i>
-                            </div>
-                            <div class="feature-box-info">
-                                <div class="info-hubungi-black">
-                                    hqweb[at]jupem[dot]gov[dot]my
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="feature-box feature-box-primary col-sm-9" style="padding-top: 90px;">
-                            <a href="#" class="btn btn-modern btn-tertiary mb-2">Peta Wisma JUPEM</a>&nbsp;
-                            <a href="awam-direktori-pegawai.php" class="btn btn-modern btn-secondary mb-2">Direktori
-                                Pegawai</a>
-                        </div>
-                    </div>
-                </div>
-                {{-- JUPEM TERENGGANU --}}
-                <div class="row align-items-center" style="padding-top: 30px; display: none;" id="jupem-terengganu">
-                    <span class="nama-hubungi-black text-4 fw-bold">Jabatan Ukur dan Pemetaan Johor</span>
-                    <div class="col-lg-6">
-                        <div class="feature-box feature-box-primary mb-2">
-                            <div class="icon-hubungi-2">
-                                <i class="fas fa-map-marker-alt icon-kaler"></i>
-                            </div>
-                            <div class="feature-box-info">
-                                <div class="info-hubungi-black">
-                                    Jabatan Ukur dan Pemetaan Johor
-                                    Tingkat 7, 8 & 9, Blok A, Wisma Persekutuan,
-                                    Jalan Air Molek, 80000 Johor Bahru,
-                                    Johor Darul Takzim.
-
-                                    Tel: 07-223 1244 ext 900
-                                    Faks: 07-223 8535
-                                </div>
-                            </div>
-                        </div>
-                        <div class="feature-box feature-box-primary">
-                            <div class="icon-hubungi-2">
-                                <i class="fas fa-phone-volume icon-kaler"></i>
-                            </div>
-                            <div class="feature-box-info">
-                                <div class="info-hubungi-black">
-                                    +607-223 1244
-                                </div>
-                            </div>
-                        </div>
-                        <div class="feature-box feature-box-primary">
-                            <div class="icon-hubungi-2">
-                                <i class="fas fa-fax icon-kaler"></i>
-                            </div>
-                            <div class="feature-box-info">
-                                <div class="info-hubungi-black">
-                                    +607-223 8535
-                                </div>
-                            </div>
-                        </div>
-                        <div class="feature-box feature-box-primary">
-                            <div class="icon-hubungi-2 icon-kaler">
-                                <i class="fas fa-envelope-open-text"></i>
-                            </div>
-                            <div class="feature-box-info">
-                                <div class="info-hubungi-black">
-                                    hqweb[at]jupem[dot]gov[dot]my
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="feature-box feature-box-primary col-sm-9" style="padding-top: 90px;">
-                            <a href="#" class="btn btn-modern btn-tertiary mb-2">Peta Wisma JUPEM</a>&nbsp;
-                            <a href="awam-direktori-pegawai.php" class="btn btn-modern btn-secondary mb-2">Direktori
-                                Pegawai</a>
-                        </div>
-                    </div>
-                </div>
-                {{-- JUPEM LABUAN --}}
-                <div class="row align-items-center" style="padding-top: 30px; display: none;" id="jupem-labuan">
-                    <span class="nama-hubungi-black text-4 fw-bold">Jabatan Ukur dan Pemetaan Johor</span>
-                    <div class="col-lg-6">
-                        <div class="feature-box feature-box-primary mb-2">
-                            <div class="icon-hubungi-2">
-                                <i class="fas fa-map-marker-alt icon-kaler"></i>
-                            </div>
-                            <div class="feature-box-info">
-                                <div class="info-hubungi-black">
-                                    Jabatan Ukur dan Pemetaan Johor
-                                    Tingkat 7, 8 & 9, Blok A, Wisma Persekutuan,
-                                    Jalan Air Molek, 80000 Johor Bahru,
-                                    Johor Darul Takzim.
-
-                                    Tel: 07-223 1244 ext 900
-                                    Faks: 07-223 8535
-                                </div>
-                            </div>
-                        </div>
-                        <div class="feature-box feature-box-primary">
-                            <div class="icon-hubungi-2">
-                                <i class="fas fa-phone-volume icon-kaler"></i>
-                            </div>
-                            <div class="feature-box-info">
-                                <div class="info-hubungi-black">
-                                    +607-223 1244
-                                </div>
-                            </div>
-                        </div>
-                        <div class="feature-box feature-box-primary">
-                            <div class="icon-hubungi-2">
-                                <i class="fas fa-fax icon-kaler"></i>
-                            </div>
-                            <div class="feature-box-info">
-                                <div class="info-hubungi-black">
-                                    +607-223 8535
-                                </div>
-                            </div>
-                        </div>
-                        <div class="feature-box feature-box-primary">
-                            <div class="icon-hubungi-2 icon-kaler">
-                                <i class="fas fa-envelope-open-text"></i>
-                            </div>
-                            <div class="feature-box-info">
-                                <div class="info-hubungi-black">
-                                    hqweb[at]jupem[dot]gov[dot]my
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="feature-box feature-box-primary col-sm-9" style="padding-top: 90px;">
-                            <a href="#" class="btn btn-modern btn-tertiary mb-2">Peta Wisma JUPEM</a>&nbsp;
-                            <a href="awam-direktori-pegawai.php" class="btn btn-modern btn-secondary mb-2">Direktori
-                                Pegawai</a>
-                        </div>
-                    </div>
-                </div>
-                {{-- JUPEM SARAWAK --}}
-                <div class="row align-items-center" style="padding-top: 30px; display: none;" id="jupem-sarawak">
-                    <span class="nama-hubungi-black text-4 fw-bold">Jabatan Ukur dan Pemetaan Johor</span>
-                    <div class="col-lg-6">
-                        <div class="feature-box feature-box-primary mb-2">
-                            <div class="icon-hubungi-2">
-                                <i class="fas fa-map-marker-alt icon-kaler"></i>
-                            </div>
-                            <div class="feature-box-info">
-                                <div class="info-hubungi-black">
-                                    Jabatan Ukur dan Pemetaan Johor
-                                    Tingkat 7, 8 & 9, Blok A, Wisma Persekutuan,
-                                    Jalan Air Molek, 80000 Johor Bahru,
-                                    Johor Darul Takzim.
-
-                                    Tel: 07-223 1244 ext 900
-                                    Faks: 07-223 8535
-                                </div>
-                            </div>
-                        </div>
-                        <div class="feature-box feature-box-primary">
-                            <div class="icon-hubungi-2">
-                                <i class="fas fa-phone-volume icon-kaler"></i>
-                            </div>
-                            <div class="feature-box-info">
-                                <div class="info-hubungi-black">
-                                    +607-223 1244
-                                </div>
-                            </div>
-                        </div>
-                        <div class="feature-box feature-box-primary">
-                            <div class="icon-hubungi-2">
-                                <i class="fas fa-fax icon-kaler"></i>
-                            </div>
-                            <div class="feature-box-info">
-                                <div class="info-hubungi-black">
-                                    +607-223 8535
-                                </div>
-                            </div>
-                        </div>
-                        <div class="feature-box feature-box-primary">
-                            <div class="icon-hubungi-2 icon-kaler">
-                                <i class="fas fa-envelope-open-text"></i>
-                            </div>
-                            <div class="feature-box-info">
-                                <div class="info-hubungi-black">
-                                    hqweb[at]jupem[dot]gov[dot]my
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="feature-box feature-box-primary col-sm-9" style="padding-top: 90px;">
-                            <a href="#" class="btn btn-modern btn-tertiary mb-2">Peta Wisma JUPEM</a>&nbsp;
-                            <a href="awam-direktori-pegawai.php" class="btn btn-modern btn-secondary mb-2">Direktori
-                                Pegawai</a>
-                        </div>
-                    </div>
-                </div>
-                {{-- JUPEM SABAH --}}
-                <div class="row align-items-center" style="padding-top: 30px; display: none;" id="jupem-sabah">
-                    <span class="nama-hubungi-black text-4 fw-bold">Jabatan Ukur dan Pemetaan Johor</span>
-                    <div class="col-lg-6">
-                        <div class="feature-box feature-box-primary mb-2">
-                            <div class="icon-hubungi-2">
-                                <i class="fas fa-map-marker-alt icon-kaler"></i>
-                            </div>
-                            <div class="feature-box-info">
-                                <div class="info-hubungi-black">
-                                    Jabatan Ukur dan Pemetaan Johor
-                                    Tingkat 7, 8 & 9, Blok A, Wisma Persekutuan,
-                                    Jalan Air Molek, 80000 Johor Bahru,
-                                    Johor Darul Takzim.
-
-                                    Tel: 07-223 1244 ext 900
-                                    Faks: 07-223 8535
-                                </div>
-                            </div>
-                        </div>
-                        <div class="feature-box feature-box-primary">
-                            <div class="icon-hubungi-2">
-                                <i class="fas fa-phone-volume icon-kaler"></i>
-                            </div>
-                            <div class="feature-box-info">
-                                <div class="info-hubungi-black">
-                                    +607-223 1244
-                                </div>
-                            </div>
-                        </div>
-                        <div class="feature-box feature-box-primary">
-                            <div class="icon-hubungi-2">
-                                <i class="fas fa-fax icon-kaler"></i>
-                            </div>
-                            <div class="feature-box-info">
-                                <div class="info-hubungi-black">
-                                    +607-223 8535
-                                </div>
-                            </div>
-                        </div>
-                        <div class="feature-box feature-box-primary">
-                            <div class="icon-hubungi-2 icon-kaler">
-                                <i class="fas fa-envelope-open-text"></i>
-                            </div>
-                            <div class="feature-box-info">
-                                <div class="info-hubungi-black">
-                                    hqweb[at]jupem[dot]gov[dot]my
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="feature-box feature-box-primary col-sm-9" style="padding-top: 90px;">
-                            <a href="#" class="btn btn-modern btn-tertiary mb-2">Peta Wisma JUPEM</a>&nbsp;
-                            <a href="/orang-awam#tab-4" class="btn btn-modern btn-secondary mb-2">Direktori
+                            <a href="{{ route('orang-awam', app()->getLocale()) }}#tab-4"
+                                class="btn btn-modern btn-secondary mb-2">Direktori
                                 Pegawai</a>
                         </div>
                     </div>

@@ -230,3 +230,50 @@
         }) // forEach
     });
 </script>
+<script>
+    function changeWhite() {
+        document.body.style.color = "gray";
+        return false;
+    }
+
+    function changeGreen() {
+        document.body.style.color = "green";
+        return false;
+    }
+
+    function changeRed() {
+        document.body.style.color = "red";
+        return false;
+    }
+
+    function changeBlue() {
+        document.body.style.color = "blue";
+        return false;
+    }
+
+    function changeYellow() {
+        document.body.style.color = "yellow";
+        return false;
+    }
+
+    function change80() {
+        document.body.style.fontSize = "80%";
+        return false;
+    }
+
+    function change100() {
+        document.body.style.fontSize = "100%";
+        return false;
+    }
+
+    function change150() {
+        document.body.style.fontSize = "150%";
+        return false;
+    }
+
+    $(document).ready(function() {
+        $("#tukarMerah").click(function() {
+            $("p:first").addClass("intro");
+        });
+    });
+</script>

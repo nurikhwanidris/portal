@@ -52,7 +52,7 @@
                                         </li>
                                         <li class="dropdown dropdown-mega">
                                             <a class="dropdown-item dropdown-toggle active"
-                                                href="{{ app()->getLocale() }}/info-korp#tab-3">
+                                                href="{{ route('info-korp', app()->getLocale()) }}#tab-3">
                                                 <div class="center-icon">
                                                     <img alt="Soalan Lazim"
                                                         data-change-src="/main/img/shortcut-icon/faq-small.png"
@@ -64,7 +64,7 @@
                                         </li>
                                         <li class="dropdown">
                                             <a class="dropdown-item dropdown-toggle active"
-                                                href="{{ app()->getLocale() }}/maklum-balas">
+                                                href="{{ route('maklum-balas-create', app()->getLocale()) }}">
                                                 <div class="center-icon">
                                                     <img alt="Soalan Lazim"
                                                         data-change-src="/main/img/shortcut-icon/faq-small.png"
@@ -149,11 +149,16 @@
                                                 <p class="qty-price">{{ __('message.Font Color') }}</p>
                                                 <p class="product-name">
                                                 <div>
-                                                    <span class="dot-w3c dot-w3c-1"></span>
-                                                    <span class="dot-w3c dot-w3c-2"></span>
-                                                    <span class="dot-w3c dot-w3c-3"></span>
-                                                    <span class="dot-w3c dot-w3c-4"></span>
-                                                    <span class="dot-w3c dot-w3c-5"></span>
+                                                    <button class="dot-w3c dot-w3c-1" id="fontColorWhite"
+                                                        onclick="changeWhite()"></button>
+                                                    <button class="dot-w3c dot-w3c-2" id="fontColorRed"
+                                                        onclick="changeRed()"></button>
+                                                    <button class="dot-w3c dot-w3c-3" id="fontColorGreen"
+                                                        onclick="changeGreen()"></button>
+                                                    <button class="dot-w3c dot-w3c-4" id="fontColorBlue"
+                                                        onclick="changeBlue()"></button>
+                                                    <button class="dot-w3c dot-w3c-5" id="fontColorYellow"
+                                                        onclick="changeYellow()"></button>
                                                 </div>
                                                 </p>
                                             </div>
@@ -166,9 +171,12 @@
                                                     {{ __('message.Font Size') }}
                                                 </p>
                                                 <p class="product-name">
-                                                    <a href="#" style="font-size: 10px;">A &nbsp;</a>
-                                                    <a href="#" style="font-size: 12px;">A &nbsp;</a>
-                                                    <a href="#" style="font-size: 14px;">A &nbsp;</a>
+                                                    <a href="#" class="text-decoration-none btn-link"
+                                                        onclick="change80()" style="font-size: 10px;">A &nbsp;</a>
+                                                    <a href="#" class="text-decoration-none btn-link"
+                                                        onclick="change100()" style="font-size: 12px;">A &nbsp;</a>
+                                                    <a href="#" class="text-decoration-none btn-link"
+                                                        onclick="change150()" style="font-size: 14px;">A &nbsp;</a>
                                                 </p>
                                             </div>
                                         </li>

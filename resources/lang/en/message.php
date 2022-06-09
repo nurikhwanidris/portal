@@ -73,7 +73,8 @@ return [
     "geo_service" => "Geodetik Services",
     "limited_data_application" => "Limited Data Application",
     "permit_application" => "Permit Application",
-    "states" => "Negeri",
+    "states" => "States",
+    "choose_states" => "Choose States",
     "jupem_states" => "JUPEM States",
     "hq" => "Ibu Pejabat JUPEM",
 

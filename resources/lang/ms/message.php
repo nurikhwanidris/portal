@@ -75,7 +75,8 @@ return [
     "geo_service" => "Perkhidmatan Geodesi",
     "limited_data_application" => "Permohonan Perkhidmatan Data Terhad",
     "permit_application" => "Permohonan Permit",
-    "states" => "States",
+    "states" => "Negeri",
+    "choose_state" => "Pilih Negeri",
     "jupem_states" => "JUPEM Negeri",
     "hq" => "JUPEM Headquarter",
 

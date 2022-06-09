@@ -10,44 +10,44 @@
         style="padding-top:0 !important;">
         <div class="col-md-12 pe-md-5 mb-5 mb-md-0">
             <ul class="list list-icons list-icons-style-3 list-tertiary list-icons-sm">
-                <li>
+                <li class="py-2 my-2 align-middle" style="text-align:justify">
                     <i class="fas fa-check"></i>
                     {{ __('message.charter_1') }}
                 </li>
-                <li><i class="fas fa-check"></i>
+                <li class="py-2 my-2 align-middle" style="text-align:justify"><i class="fas fa-check"></i>
                     {{ __('message.charter_2') }}
                 </li>
-                <li><i class="fas fa-check"></i>
+                <li class="py-2 my-2 align-middle" style="text-align:justify"><i class="fas fa-check"></i>
                     {{ __('message.charter_3') }}
                 </li>
-                <li><i class="fas fa-check"></i>
+                <li class="py-2 my-2 align-middle" style="text-align:justify"><i class="fas fa-check"></i>
                     {{ __('message.charter_4') }}
                 </li>
-                <li><i class="fas fa-check"></i>
+                <li class="py-2 my-2 align-middle" style="text-align:justify"><i class="fas fa-check"></i>
                     {{ __('message.charter_5') }}
                 </li>
-                <li><i class="fas fa-check"></i>
+                <li class="py-2 my-2 align-middle" style="text-align:justify"><i class="fas fa-check"></i>
                     {{ __('message.charter_6') }}
                 </li>
-                <li><i class="fas fa-check"></i>
+                <li class="py-2 my-2 align-middle" style="text-align:justify"><i class="fas fa-check"></i>
                     {{ __('message.charter_7') }}
                 </li>
-                <li><i class="fas fa-check"></i>
+                <li class="py-2 my-2 align-middle" style="text-align:justify"><i class="fas fa-check"></i>
                     {{ __('message.charter_8') }}
                 </li>
-                <li><i class="fas fa-check"></i>
+                <li class="py-2 my-2 align-middle" style="text-align:justify"><i class="fas fa-check"></i>
                     {{ __('message.charter_9') }}
                 </li>
-                <li><i class="fas fa-check"></i>
+                <li class="py-2 my-2 align-middle" style="text-align:justify"><i class="fas fa-check"></i>
                     {{ __('message.charter_10') }}
                 </li>
-                <li><i class="fas fa-check"></i>
+                <li class="py-2 my-2 align-middle" style="text-align:justify"><i class="fas fa-check"></i>
                     {{ __('message.charter_11') }}
                 </li>
-                <li><i class="fas fa-check"></i>
+                <li class="py-2 my-2 align-middle" style="text-align:justify"><i class="fas fa-check"></i>
                     {{ __('message.charter_12') }}
                 </li>
-                <li><i class="fas fa-check"></i>
+                <li class="py-2 my-2 align-middle" style="text-align:justify"><i class="fas fa-check"></i>
                     {{ __('message.charter_13') }}
                 </li>
             </ul>

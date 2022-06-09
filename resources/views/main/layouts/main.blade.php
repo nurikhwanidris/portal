@@ -20,7 +20,7 @@
 </head>
 
 <body data-plugin-page-transition>
-    <div class="body">
+    <div class="body" id="divContent">
         <!-- Header - Logo + Icons 4 + Search - START -->
         @include('main.layouts.partials.header')
         <!-- Header - Logo + Icons 4 + Search - END -->

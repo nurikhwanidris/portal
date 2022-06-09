@@ -231,10 +231,10 @@ Route::group(['prefix' => '{language}'], function () {
     Route::get('/carian/pegawai', [MainController::class, 'carianPegawai'])->name('carian-pegawai');
 
     // Maklum Balas create route
-    Route::get('/maklum-balas', [MaklumBalasController::class, 'create']);
+    Route::get('/maklum-balas', [MaklumBalasController::class, 'create'])->name('maklum-balas-create');
 
     // Maklum Balas show route
-    Route::get('/maklum-balas/{id}', [MaklumBalasController::class, 'show'])->name('maklum-balas');
+    Route::get('/maklum-balas/{id}', [MaklumBalasController::class, 'show'])->name('maklum-balas-read');
 
     // Maklum Balas store route
     Route::post('/maklum-balas/store', [MaklumBalasController::class, 'store'])->name('maklum-balas-store');
