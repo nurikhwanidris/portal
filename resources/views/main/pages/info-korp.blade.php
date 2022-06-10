@@ -35,14 +35,13 @@
             @include('main.layouts.partials.switcher')
             <!-- Menu - END -->
 
-
             <div class="container" style="margin-bottom: 100px;">
-                <div class="row">
+                <div class="row mx-auto">
                     <!-- Icon Row - START -->
                     <div class="featured-boxes featured-boxes-style-3 featured-boxes-flat">
                         <div class="row">
-                            <div class="col-lg-3 col-sm-6"></div>
-                            <div class="col-lg-3 col-sm-6">
+                            <div class="col-md-2"></div>
+                            <div class="col-lg-4 col-sm-8">
                                 <div class="featured-box featured-box-quaternary  featured-box-effect-3">
                                     <div class="box-content box-content-border-0">
                                         <a href="{{ route('visi-misi', app()->getLocale()) }}"><i
@@ -53,7 +52,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-sm-6">
+                            <div class="col-lg-4 col-sm-8">
                                 <div class="featured-box featured-box-quaternary  featured-box-effect-3">
                                     <div class="box-content box-content-border-0">
                                         <a href="{{ route('tugas-peranan', app()->getLocale()) }}">
@@ -65,7 +64,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-sm-6"></div>
+                            <div class="col-md-2"></div>
                         </div>
                     </div>
                     <!-- Icon Row - END-->

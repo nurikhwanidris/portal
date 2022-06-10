@@ -45,7 +45,8 @@
                             <div class="col-lg-4 col-sm-6">
                                 <div class="featured-box featured-box-quaternary featured-box-effect-3">
                                     <div class="box-content box-content-border-0">
-                                        <a href="/info-korp"><i class="icon-featured far fa-file-alt"></i></a>
+                                        <a href="{{ route('info-korp', app()->getLocale()) }}"><i
+                                                class="icon-featured far fa-file-alt"></i></a>
                                         <h4 class="font-weight-normal text-5 mt-3">Mengenai <strong
                                                 class="font-weight-extra-bold">JUPEM</strong></h4>
                                         <p class="mb-2 mt-2 text-2">Maklumat JUPEM dan Info Korporat</p>

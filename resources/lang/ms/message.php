@@ -110,7 +110,7 @@ return [
     "Briefing" => "Taklimat",
     "Download" => "Muat Turun ",
     "Question" => "Soalan",
-    "intro_jupem" => "Pengenalan JUPEM",
+    "intro_jupem" => "Mengenai JUPEM",
     "info_korp_visi" => "Visi, Misi, Moto, Nilai dan Definisi Logo JUPEM",
     "info_korp_objectives" => "Tugas dan Peranan JUPEM",
     "info_korp_objectives2" => "Tugas, Peranan dan Punca Kuasa.",
