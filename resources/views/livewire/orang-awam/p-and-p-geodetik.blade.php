@@ -171,13 +171,13 @@
                                                     <p class="mb-0 para-align-title">Keterangan:</p>
                                                     <p class="mb-0 para-align">
                                                         Terdapat dua jenis tanda aras iaitu:
-                                                    <p class="mb-0 para-align"></p>
+                                                    </p><p class="mb-0 para-align">
                                                         Tanda Aras Piawai (Standard Benchmark SBM)
-                                                    <p class="mb-0 para-align"></p>
+                                                    </p><p class="mb-0 para-align">
                                                         Tanda aras piawai adalah sejenis monumen kekal yang di tanam di permukaan bumi. Monumen ini dibina pada sela jarak 10 - 15km atau di persimpangan jalan raya di sepanjang laluan utama di seluruh negara. Tanda aras piawai digunakan sebagai kawalan kepada pengukuran aras yang berkelas lebih rendah selain sebagai tanda rujukan bagi menentukan nilai aras terlaras bagi sesuatu tanda aras baharu. Nilai aras terlaras untuk tanda aras piawai ditentukan dengan menggunakan kaedah ukuran aras jitu. Kebiasaannya, Tanda aras piawai terletak di persimpangan jalan utama atau di kawasan yang selamat dan kukuh seperti balai polis, sekolah dan masjid.
-                                                    <p class="mb-0 para-align"></p>
+                                                    </p><p class="mb-0 para-align">
                                                         Tanda Aras (Benchmark BM)
-                                                    <p class="mb-0 para-align"></p>
+                                                    </p><p class="mb-0 para-align">
                                                         Tanda aras adalah monumen yang ditanam di atas permukaan bumi, dimana aras larasnya ditentukan dengan merujuk kepada tanda aras piawai. Tanda aras digunakan sebagai titik rujukan untuk mendapatkan nilai aras laras untuk titik-titik baharu. Secara umumnya, binaan tanda aras diletakkan pada sela jarak lebih kurang 500m - 1 km di laluan jalan raya yang telah ditentukan. Nilai aras terlaras untuk tanda aras ditentukan dengan menggunakan kaedah ukuran aras jitu atau ukuran aras kelas kedua. Tanda aras biasanya terletak di laluan jalan raya utama sama ada di tepi jalan, persimpangan jalan, di atas penanda kilometer atau di kawasan yang selamat seperti balai polis, sekolah dan masjid.
                                                     </p>
                                                     <div class="para-gap"></div>
