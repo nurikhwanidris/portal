@@ -215,7 +215,6 @@ Route::group(['prefix' => '{language}'], function () {
     Route::get('/penafian', [MainController::class, 'penafian'])->name('penafian');
 
     // Info Semasa Route
-
     Route::get('/info-semasa', [MainController::class, 'infoSemasa'])->name('info-semasa');
 
     // eKadaster Route
