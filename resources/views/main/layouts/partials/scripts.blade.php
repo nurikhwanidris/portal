@@ -13,6 +13,10 @@
 <script src="/main/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 <script src="/main/vendor/vide/jquery.vide.min.js"></script>
 <script src="/main/vendor/vivus/vivus.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+{{-- <script src="https://cdn.plot.ly/plotly-2.12.1.min.js"></script> --}}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 
 <!-- Theme Base, Components and Settings -->
 <script src="/main/js/theme.js"></script>
@@ -48,6 +52,8 @@
 
 <!-- Datatable -->
 <script src="/main/js/jquery.datatables.min.js"></script>
+
+{{-- Filter Data --}}
 <script type="text/javascript">
     $(document).ready(function() {
         // Tender Table
@@ -141,6 +147,8 @@
         }).change();
     });
 </script>
+
+{{-- Switcher --}}
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         document.querySelectorAll('.sidebar .nav-link').forEach(function(element) {
@@ -169,6 +177,8 @@
         }) // forEach
     });
 </script>
+
+{{-- W3C --}}
 <script>
     function changeWhite() {
         document.body.style.color = "gray";

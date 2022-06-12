@@ -169,7 +169,6 @@ class MainController extends Controller
         ]);
     }
 
-
     // Pengumuman Read Controller
     public function pengumumanRead($id)
     {

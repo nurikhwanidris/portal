@@ -193,7 +193,7 @@ return [
     // STAPS
     "staps" => "Sistem Tolok Air Pasang Surut",
     "senarai_stesyen" => "Senarai Stesen",
-    "jadual_stesyen" => "Waktu Air Pasang Surut bagi stesen :STESEN",
+    "jadual_stesyen" => "Waktu Air Pasang Surut bagi stesen <b>:STESEN</b>",
     "current" => "Semasa",
     "2_hari" => "2 Hari",
     "7_hari" => "7 Hari",
@@ -205,4 +205,6 @@ return [
     "ketinggian_air" => "Ketinggian Air",
     "air_surut" => "Air Surut",
     "air_pasang" => "Air Pasang",
+    "water_level" => "Ketinggian Air",
+    "water_level_live" => "Ketinggian Air Semasa",
 ];

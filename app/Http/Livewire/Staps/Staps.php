@@ -1,13 +1,12 @@
 <?php
 
-namespace App\Http\Livewire\Main;
+namespace App\Http\Livewire\Staps;
 
 use Illuminate\Support\Facades\DB;
 use Livewire\Component;
 
-class StapsTable extends Component
+class Staps extends Component
 {
-
     public $staps;
     public $staps1;
 
@@ -30,10 +29,5 @@ class StapsTable extends Component
             ->where('tbl_stap_data.STAP_TAHUN', '=', now()->format('Y'))
             ->get();
         $this->staps1 = $query1;
-    }
-
-    public function render()
-    {
-        return view('livewire.main.staps-table');
     }
 }

@@ -196,7 +196,7 @@ return [
     // STAPS
     "staps" => "Tidal Prediction System",
     "senarai_stesyen" => "List of Stations",
-    "jadual_stesyen" => "Tidal timing for :STESEN",
+    "jadual_stesyen" => "Tidal timing for <b>:STESEN</b>",
     "current" => "Current",
     "2_hari" => "2 Days",
     "7_hari" => "7 Days",
@@ -208,4 +208,6 @@ return [
     "ketinggian_air" => "Water Height",
     "air_surut" => "Low Tide",
     "air_pasang" => "High Tide",
+    "water_level" => "Water Level",
+    "water_level_live" => "Live Tide",
 ];
