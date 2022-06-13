@@ -34,11 +34,11 @@ class Staps extends Component
         $this->staps1 = $query1;
     }
 
-    public function updatedSelectedStesen($stesen)
+    public function updatedStation($station)
     {
-        if (!is_null($stesen)) {
+        if (!is_null($station)) {
             $query = DB::table('tbl_stap_data')
-                ->where('tbl_stap_data.STAP_STESEN', '=', $stesen)
+                ->where('tbl_stap_data.STAP_STESEN', '=', 1)
                 ->where('tbl_stap_data.STAP_TARIKH', '=', now()->format('d'))
                 ->where('tbl_stap_data.STAP_BULAN', '=', now()->format('m'))
                 ->where('tbl_stap_data.STAP_TAHUN', '=', now()->format('Y'))
@@ -55,15 +55,11 @@ class Staps extends Component
         }
     }
 
-    public function updatedStation($station)
-    {
-        if (!is_null($station)) {
-            $this->station = $station;
-        }
-    }
+    // public function updatedStation($station)
+    // {
+    //     if (!is_null($station)) {
+    //         $this->station = $station;
+    //     }
+    // }
 
-    public function render()
-    {
-        return view('livewire.staps.staps');
-    }
 }

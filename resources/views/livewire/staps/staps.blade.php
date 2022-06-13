@@ -12,7 +12,7 @@
         <!-- SUB TITLE - END-->
         <!-- Button - Stesen - START -->
         <div class="row">
-            {{-- <div class="col">
+            <div class="col">
                 <button wire:click='selectedStesen' value="1" class="btn btn-outline btn-quaternary mb-2 active">Pulau
                     Langkawi</button>
                 <button wire:click='selectedStesen' value="2" class="btn btn-outline btn-quaternary mb-2">Pulau
@@ -54,24 +54,15 @@
                     Datu</button>
                 <button wire:click='selectedStesen' value="21"
                     class="btn btn-outline btn-quaternary mb-2">Tawau</button>
-            </div> --}}
-            <select wire:model='updateStation' id="" class="form-control">
+            </div>
+            {{-- <select wire:model='updateStation' id="" class="form-control">
                 <option value="">Pilih Stesen</option>
                 <option value="1">Pulau Langkawi</option>
                 <option value="2">Pulau Pinang</option>
                 <option value="3">Lumut</option>
-            </select>
+            </select> --}}
         </div>
         <!-- Button - Stesen - END -->
-
-        <div class="row">
-            <div class="col-6">
-                <input type="text" class="form-control" wire:model='station'>
-            </div>
-            <div class="col-6">
-                {{ $station }}
-            </div>
-        </div>
 
         <!-- Button - Pilih hari - START -->
         <div class="row my-3">

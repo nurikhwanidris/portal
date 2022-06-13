@@ -42,9 +42,7 @@
 
     <!-- Vendor -->
     @include('main.layouts.partials.scripts')
-
-
-
+    @livewireScripts
 </body>
 
 </html>
