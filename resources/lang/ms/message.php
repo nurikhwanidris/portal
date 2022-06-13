@@ -88,6 +88,7 @@ return [
     "perolehan_berjaya" => "Perolehan Berjaya",
 
     // Info Korp
+    "choose" => "Pilih",
     "Corporate Information" => "Info Korp",
     "JUPEM Information" => "Info JUPEM",
     "structure" => "Struktur Organisasi",
