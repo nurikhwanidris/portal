@@ -226,3 +226,16 @@
         });
     });
 </script>
+
+{{-- STAPS --}}
+<script>
+    $(document).ready(function() {
+        $('#2Hari').click(function() {
+            $('#2-hari').toggle();
+        });
+
+        $('#7Hari').click(function() {
+            $('#7-hari').toggle();
+        });
+    });
+</script>

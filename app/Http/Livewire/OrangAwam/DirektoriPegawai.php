@@ -8,7 +8,6 @@ use Livewire\Component;
 
 class DirektoriPegawai extends Component
 {
-
     public $bahagian;
 
     public $selectedBahagian = null;

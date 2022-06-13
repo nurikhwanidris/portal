@@ -1,50 +1,4 @@
 <div>
-    <style>
-        body {
-            background: #1B213B;
-            color: #777;
-            font-family: Montserrat, Arial, sans-serif;
-        }
-
-        .body-bg {
-            background: #F3F4FA !important;
-        }
-
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6,
-        strong {
-            font-weight: 600;
-        }
-
-        .box .apexcharts-xaxistooltip {
-            background: #1B213B;
-            color: #fff;
-        }
-
-        .content-area {
-            max-width: 1280px;
-            margin: 0 auto;
-        }
-
-        .box {
-            background-color: #262D47;
-            padding: 25px 25px;
-            border-radius: 4px;
-        }
-
-        .columnbox {
-            padding-right: 15px;
-        }
-
-        .radialbox {
-            max-height: 333px;
-            margin-bottom: 60px;
-        }
-    </style>
     <div class="container" style="margin-bottom: 100px;">
         <!-- PAGE TITLE - START-->
         <div class="row">
@@ -58,7 +12,7 @@
         <!-- SUB TITLE - END-->
         <!-- Button - Stesen - START -->
         <div class="row">
-            <div class="col">
+            {{-- <div class="col">
                 <button wire:click='selectedStesen' value="1" class="btn btn-outline btn-quaternary mb-2 active">Pulau
                     Langkawi</button>
                 <button wire:click='selectedStesen' value="2" class="btn btn-outline btn-quaternary mb-2">Pulau
@@ -100,20 +54,34 @@
                     Datu</button>
                 <button wire:click='selectedStesen' value="21"
                     class="btn btn-outline btn-quaternary mb-2">Tawau</button>
-            </div>
+            </div> --}}
+            <select wire:model='updateStation' id="" class="form-control">
+                <option value="">Pilih Stesen</option>
+                <option value="1">Pulau Langkawi</option>
+                <option value="2">Pulau Pinang</option>
+                <option value="3">Lumut</option>
+            </select>
         </div>
         <!-- Button - Stesen - END -->
+
+        <div class="row">
+            <div class="col-6">
+                <input type="text" class="form-control" wire:model='station'>
+            </div>
+            <div class="col-6">
+                {{ $station }}
+            </div>
+        </div>
 
         <!-- Button - Pilih hari - START -->
         <div class="row my-3">
             <div class="col">
                 <div class="float-end">
-                    <a href="#" class="btn btn-success mb-2">{{ __('message.2_hari') }}</a>
-                    <a href="#" class="btn btn-success mb-2">{{ __('message.7_hari') }}</a>
+                    <a href="#" class="btn btn-success mb-2" id="2Hari">{{ __('message.2_hari') }}</a>
+                    <a href="#" class="btn btn-success mb-2" id="7Hari">{{ __('message.7_hari') }}</a>
                 </div>
             </div>
         </div>
-
         <section class="section section-default border-0">
             <div class="container">
                 <div class="row">
@@ -130,7 +98,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="row d-none" id="2-hari">
+                <div class="row" id="2-hari">
                     <!-- Table 1 -->
                     <div class="col-lg-6">
                         <table class="table table-striped table-hover">
@@ -149,7 +117,7 @@
                             <tbody>
                                 <tr>
                                     <td>
-                                        @if ($staps[0]->STAP_KETINGGIAN >= 150)
+                                        @if ($stesen[0]->STAP_KETINGGIAN >= 150)
                                             <span
                                                 class="badge badge-secondary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">
                                                 {{ __('message.air_pasang') }}
@@ -162,15 +130,15 @@
                                         @endif
                                     </td>
                                     <td class="align-center text-center">
-                                        {{ str_pad($staps[0]->STAP_JAM, 2, 0, STR_PAD_LEFT) . ':' . str_pad($staps[0]->STAP_MINIT, 2, 0, STR_PAD_LEFT) }}
+                                        {{ str_pad($stesen[0]->STAP_JAM, 2, 0, STR_PAD_LEFT) . ':' . str_pad($stesen[0]->STAP_MINIT, 2, 0, STR_PAD_LEFT) }}
                                     </td>
                                     <td class="align-center text-center">
-                                        {{ $staps[0]->STAP_KETINGGIAN }}cm
+                                        {{ $stesen[0]->STAP_KETINGGIAN }}cm
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        @if ($staps[1]->STAP_KETINGGIAN >= 150)
+                                        @if ($stesen[1]->STAP_KETINGGIAN >= 150)
                                             <span
                                                 class="badge badge-secondary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">
                                                 {{ __('message.air_pasang') }}
@@ -183,15 +151,15 @@
                                         @endif
                                     </td>
                                     <td class="align-center text-center">
-                                        {{ str_pad($staps[1]->STAP_JAM, 2, 0, STR_PAD_LEFT) . ':' . str_pad($staps[1]->STAP_MINIT, 2, 0, STR_PAD_LEFT) }}
+                                        {{ str_pad($stesen[1]->STAP_JAM, 2, 0, STR_PAD_LEFT) . ':' . str_pad($stesen[1]->STAP_MINIT, 2, 0, STR_PAD_LEFT) }}
                                     </td>
                                     <td class="align-center text-center">
-                                        {{ $staps[1]->STAP_KETINGGIAN }}cm
+                                        {{ $stesen[1]->STAP_KETINGGIAN }}cm
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        @if ($staps[2]->STAP_KETINGGIAN >= 150)
+                                        @if ($stesen[2]->STAP_KETINGGIAN >= 150)
                                             <span
                                                 class="badge badge-secondary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">
                                                 {{ __('message.air_pasang') }}
@@ -204,16 +172,16 @@
                                         @endif
                                     </td>
                                     <td class="align-center text-center">
-                                        {{ str_pad($staps[2]->STAP_JAM, 2, 0, STR_PAD_LEFT) . ':' . str_pad($staps[2]->STAP_MINIT, 2, 0, STR_PAD_LEFT) }}
+                                        {{ str_pad($stesen[2]->STAP_JAM, 2, 0, STR_PAD_LEFT) . ':' . str_pad($stesen[2]->STAP_MINIT, 2, 0, STR_PAD_LEFT) }}
                                     </td>
                                     <td class="align-center text-center">
-                                        {{ $staps[2]->STAP_KETINGGIAN }}cm
+                                        {{ $stesen[2]->STAP_KETINGGIAN }}cm
                                     </td>
                                 </tr>
-                                @if (count($staps) >= 4)
+                                @if (count($stesen) >= 4)
                                     <tr>
                                         <td>
-                                            @if ($staps[3]->STAP_KETINGGIAN >= 150)
+                                            @if ($stesen[3]->STAP_KETINGGIAN >= 150)
                                                 <span
                                                     class="badge badge-secondary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">
                                                     {{ __('message.air_pasang') }}
@@ -226,10 +194,10 @@
                                             @endif
                                         </td>
                                         <td class="align-center text-center">
-                                            {{ str_pad($staps[3]->STAP_JAM, 2, 0, STR_PAD_LEFT) . ':' . str_pad($staps[3]->STAP_MINIT, 2, 0, STR_PAD_LEFT) }}
+                                            {{ str_pad($stesen[3]->STAP_JAM, 2, 0, STR_PAD_LEFT) . ':' . str_pad($stesen[3]->STAP_MINIT, 2, 0, STR_PAD_LEFT) }}
                                         </td>
                                         <td class="align-center text-center">
-                                            {{ $staps[3]->STAP_KETINGGIAN }}cm
+                                            {{ $stesen[3]->STAP_KETINGGIAN }}cm
                                         </td>
                                     </tr>
                                 @endif
@@ -343,7 +311,7 @@
                         </table>
                     </div>
                 </div>
-                <div class="row" id="7-hari">
+                <div class="row" id="7-hari" style="display: none;">
                     <!-- Table 1 -->
                     <div class="col-lg-6">
                         <table class="table table-striped table-hover">
@@ -362,7 +330,7 @@
                             <tbody>
                                 <tr>
                                     <td>
-                                        @if ($staps[0]->STAP_KETINGGIAN >= 150)
+                                        @if ($stesen[0]->STAP_KETINGGIAN >= 150)
                                             <span
                                                 class="badge badge-secondary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">
                                                 {{ __('message.air_pasang') }}
@@ -375,15 +343,15 @@
                                         @endif
                                     </td>
                                     <td class="align-center text-center">
-                                        {{ str_pad($staps[0]->STAP_JAM, 2, 0, STR_PAD_LEFT) . ':' . str_pad($staps[0]->STAP_MINIT, 2, 0, STR_PAD_LEFT) }}
+                                        {{ str_pad($stesen[0]->STAP_JAM, 2, 0, STR_PAD_LEFT) . ':' . str_pad($stesen[0]->STAP_MINIT, 2, 0, STR_PAD_LEFT) }}
                                     </td>
                                     <td class="align-center text-center">
-                                        {{ $staps[0]->STAP_KETINGGIAN }}cm
+                                        {{ $stesen[0]->STAP_KETINGGIAN }}cm
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        @if ($staps[1]->STAP_KETINGGIAN >= 150)
+                                        @if ($stesen[1]->STAP_KETINGGIAN >= 150)
                                             <span
                                                 class="badge badge-secondary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">
                                                 {{ __('message.air_pasang') }}
@@ -396,15 +364,15 @@
                                         @endif
                                     </td>
                                     <td class="align-center text-center">
-                                        {{ str_pad($staps[1]->STAP_JAM, 2, 0, STR_PAD_LEFT) . ':' . str_pad($staps[1]->STAP_MINIT, 2, 0, STR_PAD_LEFT) }}
+                                        {{ str_pad($stesen[1]->STAP_JAM, 2, 0, STR_PAD_LEFT) . ':' . str_pad($stesen[1]->STAP_MINIT, 2, 0, STR_PAD_LEFT) }}
                                     </td>
                                     <td class="align-center text-center">
-                                        {{ $staps[1]->STAP_KETINGGIAN }}cm
+                                        {{ $stesen[1]->STAP_KETINGGIAN }}cm
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        @if ($staps[2]->STAP_KETINGGIAN >= 150)
+                                        @if ($stesen[2]->STAP_KETINGGIAN >= 150)
                                             <span
                                                 class="badge badge-secondary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">
                                                 {{ __('message.air_pasang') }}
@@ -417,16 +385,16 @@
                                         @endif
                                     </td>
                                     <td class="align-center text-center">
-                                        {{ str_pad($staps[2]->STAP_JAM, 2, 0, STR_PAD_LEFT) . ':' . str_pad($staps[2]->STAP_MINIT, 2, 0, STR_PAD_LEFT) }}
+                                        {{ str_pad($stesen[2]->STAP_JAM, 2, 0, STR_PAD_LEFT) . ':' . str_pad($stesen[2]->STAP_MINIT, 2, 0, STR_PAD_LEFT) }}
                                     </td>
                                     <td class="align-center text-center">
-                                        {{ $staps[2]->STAP_KETINGGIAN }}cm
+                                        {{ $stesen[2]->STAP_KETINGGIAN }}cm
                                     </td>
                                 </tr>
-                                @if (count($staps) >= 4)
+                                @if (count($stesen) >= 4)
                                     <tr>
                                         <td>
-                                            @if ($staps[3]->STAP_KETINGGIAN >= 150)
+                                            @if ($stesen[3]->STAP_KETINGGIAN >= 150)
                                                 <span
                                                     class="badge badge-secondary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">
                                                     {{ __('message.air_pasang') }}
@@ -439,10 +407,10 @@
                                             @endif
                                         </td>
                                         <td class="align-center text-center">
-                                            {{ str_pad($staps[3]->STAP_JAM, 2, 0, STR_PAD_LEFT) . ':' . str_pad($staps[3]->STAP_MINIT, 2, 0, STR_PAD_LEFT) }}
+                                            {{ str_pad($stesen[3]->STAP_JAM, 2, 0, STR_PAD_LEFT) . ':' . str_pad($stesen[3]->STAP_MINIT, 2, 0, STR_PAD_LEFT) }}
                                         </td>
                                         <td class="align-center text-center">
-                                            {{ $staps[3]->STAP_KETINGGIAN }}cm
+                                            {{ $stesen[3]->STAP_KETINGGIAN }}cm
                                         </td>
                                     </tr>
                                 @endif
