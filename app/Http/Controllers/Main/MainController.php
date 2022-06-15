@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Main;
 
 use App\Http\Controllers\Controller;
 use App\Models\BeritaTerkini;
+use App\Models\Pegawai;
 use App\Models\Pengumuman;
 use App\Models\Post;
 use App\Models\Quote;
@@ -11,18 +12,33 @@ use App\Models\SoalanLazim;
 use App\Models\Tender;
 use App\Models\Visitor;
 use Illuminate\Http\Request;
-use Illuminate\Http\Resources\MergeValue;
 use Illuminate\Support\Facades\DB;
-
 
 class MainController extends Controller
 {
+
+    // Visitor Counter
+    public function counter()
+    {
+        $counter = Visitor::whereMonth('date', '=', now()->format('m'))->get()->count();
+
+        return $counter;
+    }
+
+    // Last Activity
+    public function activity()
+    {
+        $activity = DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first();
+
+        return $activity;
+    }
+
     // Index controller
     public function index()
     {
         return view('main.index', [
-            'counter' => Visitor::whereMonth('date', '=', now()->format('m'))->get()->count(),
-            'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first()
+            'counter' =>  $this->counter(),
+            'activity' => $this->activity(),
         ]);
     }
 
@@ -30,8 +46,8 @@ class MainController extends Controller
     public function infoKorp()
     {
         return view('main.pages.info-korp', [
-            'counter' => Visitor::whereMonth('date', '=', now()->format('m'))->get()->count(),
-            'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first()
+            'counter' =>  $this->counter(),
+            'activity' => $this->activity(),
         ]);
     }
 
@@ -39,8 +55,8 @@ class MainController extends Controller
     public function orangAwam()
     {
         return view('main.pages.orang-awam', [
-            'counter' => Visitor::whereMonth('date', '=', now()->format('m'))->get()->count(),
-            'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first()
+            'counter' =>  $this->counter(),
+            'activity' => $this->activity(),
         ]);
     }
 
@@ -48,8 +64,8 @@ class MainController extends Controller
     public function pageElement()
     {
         return view('main.pages.page-element', [
-            'counter' => Visitor::whereMonth('date', '=', now()->format('m'))->get()->count(),
-            'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first()
+            'counter' =>  $this->counter(),
+            'activity' => $this->activity(),
         ]);
     }
 
@@ -57,8 +73,8 @@ class MainController extends Controller
     public function wargaJupem()
     {
         return view('main.pages.warga-jupem', [
-            'counter' => Visitor::whereMonth('date', '=', now()->format('m'))->get()->count(),
-            'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first()
+            'counter' =>  $this->counter(),
+            'activity' => $this->activity(),
         ]);
     }
 
@@ -67,8 +83,8 @@ class MainController extends Controller
     {
         return view('main.pages.faq', [
             'faq' => SoalanLazim::all(),
-            'counter' => Visitor::whereMonth('date', '=', now()->format('m'))->get()->count(),
-            'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first()
+            'counter' =>  $this->counter(),
+            'activity' => $this->activity(),
         ]);
     }
 
@@ -76,8 +92,8 @@ class MainController extends Controller
     public function sitemap()
     {
         return view('main.pages.sitemap', [
-            'counter' => Visitor::whereMonth('date', '=', now()->format('m'))->get()->count(),
-            'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first()
+            'counter' =>  $this->counter(),
+            'activity' => $this->activity(),
         ]);
     }
 
@@ -85,8 +101,8 @@ class MainController extends Controller
     public function dasarPrivasi()
     {
         return view('main.pages.dasar-privasi', [
-            'counter' => Visitor::whereMonth('date', '=', now()->format('m'))->get()->count(),
-            'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first(),
+            'counter' =>  $this->counter(),
+            'activity' => $this->activity(),
         ]);
     }
 
@@ -94,8 +110,8 @@ class MainController extends Controller
     public function dasarKeselamatan()
     {
         return view('main.pages.dasar-keselamatan', [
-            'counter' => Visitor::whereMonth('date', '=', now()->format('m'))->get()->count(),
-            'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first(),
+            'counter' =>  $this->counter(),
+            'activity' => $this->activity(),
         ]);
     }
 
@@ -103,8 +119,8 @@ class MainController extends Controller
     public function penafian()
     {
         return view('main.pages.penafian', [
-            'counter' => Visitor::whereMonth('date', '=', now()->format('m'))->get()->count(),
-            'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first(),
+            'counter' =>  $this->counter(),
+            'activity' => $this->activity(),
         ]);
     }
 
@@ -112,8 +128,8 @@ class MainController extends Controller
     public function infoSemasa()
     {
         return view('main.pages.info-semasa', [
-            'counter' => Visitor::whereMonth('date', '=', now()->format('m'))->get()->count(),
-            'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first(),
+            'counter' =>  $this->counter(),
+            'activity' => $this->activity(),
         ]);
     }
 
@@ -121,8 +137,8 @@ class MainController extends Controller
     public function eKadaster()
     {
         return view('main.pages.ekadaster', [
-            'counter' => Visitor::whereMonth('date', '=', now()->format('m'))->get()->count(),
-            'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first(),
+            'counter' =>  $this->counter(),
+            'activity' => $this->activity(),
         ]);
     }
 
@@ -130,8 +146,8 @@ class MainController extends Controller
     public function staps()
     {
         return view('main.pages.staps', [
-            'counter' => Visitor::whereMonth('date', '=', now()->format('m'))->get()->count(),
-            'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first(),
+            'counter' =>  $this->counter(),
+            'activity' => $this->activity(),
         ]);
     }
 
@@ -139,8 +155,8 @@ class MainController extends Controller
     public function visiMisi()
     {
         return view('main.pages.visi-misi', [
-            'counter' => Visitor::whereMonth('date', '=', now()->format('m'))->get()->count(),
-            'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first(),
+            'counter' =>  $this->counter(),
+            'activity' => $this->activity(),
         ]);
     }
 
@@ -148,11 +164,10 @@ class MainController extends Controller
     public function tugasPeranan()
     {
         return view('main.pages.tugas-peranan', [
-            'counter' => Visitor::whereMonth('date', '=', now()->format('m'))->get()->count(),
-            'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first(),
+            'counter' =>  $this->counter(),
+            'activity' => $this->activity(),
         ]);
     }
-
 
     // Pengumuman Read Controller
     public function pengumumanRead($id)
@@ -161,8 +176,32 @@ class MainController extends Controller
 
         return view('main.pages.pages', [
             'page' => $pengumuman,
-            'counter' => Visitor::whereMonth('date', '=', now()->format('m'))->get()->count(),
-            'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first(),
+            'counter' =>  $this->counter(),
+            'activity' => $this->activity(),
+        ]);
+    }
+
+    // Tender Read Controller
+    public function tenderRead($id)
+    {
+        $tender = Tender::findOrFail($id);
+
+        return view('main.pages.pages', [
+            'page' => $tender,
+            'counter' =>  $this->counter(),
+            'activity' => $this->activity(),
+        ]);
+    }
+
+    // Sebut Harga Read Controller
+    public function sebutHargaRead($id)
+    {
+        $sebutHarga = Quote::findOrFail($id);
+
+        return view('main.pages.pages', [
+            'page' => $sebutHarga,
+            'counter' =>  $this->counter(),
+            'activity' => $this->activity(),
         ]);
     }
 
@@ -173,21 +212,20 @@ class MainController extends Controller
 
         return view('main.pages.pages', [
             'page' => $beritaTerkini,
-            'counter' => Visitor::whereMonth('date', '=', now()->format('m'))->get()->count(),
-            'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first(),
+            'counter' =>  $this->counter(),
+            'activity' => $this->activity(),
         ]);
     }
 
     // Global Search
     public function carian(Request $request)
     {
-
         $search = $request->input('carian');
 
         return view('main.pages.carian', [
             'search' => $search,
-            'counter' => Visitor::whereMonth('date', '=', now()->format('m'))->get()->count(),
-            'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first(),
+            'counter' =>  $this->counter(),
+            'activity' => $this->activity(),
         ]);
     }
 
@@ -201,8 +239,8 @@ class MainController extends Controller
 
         return view('main.pages.carian-papar', [
             'post' => $post,
-            'counter' => Visitor::whereMonth('date', '=', now()->format('m'))->get()->count(),
-            'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first(),
+            'counter' =>  $this->counter(),
+            'activity' => $this->activity(),
         ]);
     }
 
@@ -216,8 +254,8 @@ class MainController extends Controller
 
         return view('main.pages.carian-papar', [
             'pengumuman' => $pengumuman,
-            'counter' => Visitor::whereMonth('date', '=', now()->format('m'))->get()->count(),
-            'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first(),
+            'counter' =>  $this->counter(),
+            'activity' => $this->activity(),
         ]);
     }
 
@@ -231,8 +269,26 @@ class MainController extends Controller
 
         return view('main.pages.carian-papar', [
             'beritaTerkini' => $beritaTerkini,
-            'counter' => Visitor::whereMonth('date', '=', now()->format('m'))->get()->count(),
-            'activity' => DB::table('logs')->select('log_date')->orderBy('log_date', 'desc')->first(),
+            'counter' =>  $this->counter(),
+            'activity' => $this->activity(),
+        ]);
+    }
+
+    // Carian Pegawai
+    public function carianPegawai(Request $request)
+    {
+        $search = $request->input('nama');
+
+        $pegawai = Pegawai::query()
+            ->where('name_my', 'like', '%' . $search . '%')
+            ->orderBy('sort_order', 'asc')
+            ->paginate(15);
+
+        return view('main.pages.carian-pegawai', [
+            'search' => $search,
+            'pegawais' => $pegawai,
+            'counter' =>  $this->counter(),
+            'activity' => $this->activity(),
         ]);
     }
 }

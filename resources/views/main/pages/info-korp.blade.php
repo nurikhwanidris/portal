@@ -35,37 +35,36 @@
             @include('main.layouts.partials.switcher')
             <!-- Menu - END -->
 
-
             <div class="container" style="margin-bottom: 100px;">
-                <div class="row">
+                <div class="row mx-auto">
                     <!-- Icon Row - START -->
                     <div class="featured-boxes featured-boxes-style-3 featured-boxes-flat">
                         <div class="row">
-                            <div class="col-lg-3 col-sm-6"></div>
-                            <div class="col-lg-3 col-sm-6">
+                            <div class="col-md-2"></div>
+                            <div class="col-lg-4 col-sm-8">
                                 <div class="featured-box featured-box-quaternary  featured-box-effect-3">
                                     <div class="box-content box-content-border-0">
-                                        <a href="/visi-misi"><i class="icon-featured far fa-file-alt"></i></a>
-                                        <h4 class="font-weight-normal text-5 mt-3">Pengenalan <strong
-                                                class="font-weight-extra-bold">JUPEM</strong></h4>
-                                        <p class="mb-2 mt-2 text-2">Visi, Misi, Moto, Dasar Kualiti, Kod Etika dan
-                                            Definisi Logo.</p>
+                                        <a href="{{ route('visi-misi', app()->getLocale()) }}"><i
+                                                class="icon-featured far fa-file-alt"></i></a>
+                                        <h4 class="font-weight-normal text-5 mt-3">{{ __('message.intro_jupem') }}
+                                        </h4>
+                                        <p class="mb-2 mt-2 text-2">{{ __('message.info_korp_visi') }}</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-sm-6">
+                            <div class="col-lg-4 col-sm-8">
                                 <div class="featured-box featured-box-quaternary  featured-box-effect-3">
                                     <div class="box-content box-content-border-0">
-                                        <a href="/tugas-peranan">
+                                        <a href="{{ route('tugas-peranan', app()->getLocale()) }}">
                                             <i class="icon-featured far fa-edit"></i>
                                         </a>
-                                        <h4 class="font-weight-normal text-5 mt-3">Tugas <strong
-                                                class="font-weight-extra-bold">dan Peranan</strong> </h4>
-                                        <p class="mb-2 mt-2 text-2">Tugas, Peranan dan Punca Kuasa.</p>
+                                        <h4 class="font-weight-normal text-5 mt-3">
+                                            {{ __('message.info_korp_objectives') }}</h4>
+                                        <p class="mb-2 mt-2 text-2">{{ __('message.info_korp_objectives2') }}</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-sm-6"></div>
+                            <div class="col-md-2"></div>
                         </div>
                     </div>
                     <!-- Icon Row - END-->
@@ -77,21 +76,21 @@
                             <div class="tabs tabs-vertical tabs-right tabs-navigation tabs-navigation-simple">
                                 <ul class="nav nav-tabs col-sm-3">
                                     <li class="nav-item">
-                                        <a class="nav-link active" href="#tab-1" data-bs-toggle="tab" id="tab1">Info
-                                            JUPEM</a>
+                                        <a class="nav-link active" href="#tab-1" data-bs-toggle="tab"
+                                            id="tab1">{{ __('message.JUPEM Information') }}</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#tab-2" data-bs-toggle="tab" id="tab2">Struktur
-                                            Organisasi</a>
+                                        <a class="nav-link" href="#tab-2" data-bs-toggle="tab"
+                                            id="tab2">{{ __('message.structure') }}</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#tab-3" data-bs-toggle="tab" id="tab3">Hubungi
-                                            Kami</a>
+                                        <a class="nav-link" href="#tab-3" data-bs-toggle="tab"
+                                            id="tab3">{{ __('message.Contact Us') }}</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#tab-4" data-bs-toggle="tab" id="tab4">Kepakaran
-                                            Bidang
-                                            Khusus</a>
+                                        <a class="nav-link" href="#tab-4" data-bs-toggle="tab"
+                                            id="tab4">{{ __('message.Subject Matter Expertise') }}
+                                        </a>
                                     </li>
                                 </ul>
                             </div>

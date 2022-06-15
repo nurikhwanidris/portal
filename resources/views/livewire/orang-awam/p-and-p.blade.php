@@ -6,7 +6,6 @@
         </div>
     </div>
     <!-- PAGE TITLE - END-->
-
     <!-- TAB STYLE 3 - START -->
     <div class="row">
         <div class="col">
@@ -65,7 +64,7 @@
                             <span class="featured-boxes featured-boxes-style-6 p-0 m-0">
                                 <span class="featured-box featured-box-primary featured-box-effect-6 p-0 m-0">
                                     <span class="box-content p-0 m-0">
-                                        <i class="	fas fa-laptop"></i>
+                                        <i class="  fas fa-laptop"></i>
                                     </span>
                                 </span>
                             </span>
@@ -114,9 +113,4 @@
         </div>
     </div>
     <!-- TAB STYLE 3 - END -->
-
-
-
-
-
 </div>

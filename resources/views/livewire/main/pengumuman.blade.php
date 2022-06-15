@@ -7,7 +7,8 @@
                         class="news-scroll">
                         <span class="dot-yellow-green"></span>
                         @foreach ($annoucements as $annoucement)
-                            <a href="#" style="color: #000 !important;" class="me-4">
+                            <a href="{{ route('pengumuman-read', [app()->getLocale(), 'id' => $annoucement->id]) }}"
+                                style="color: #000 !important;" class="me-4">
                                 {{-- <strong class="text-title-strong"> --}}
                                 <strong>
                                     {{ $annoucement->title_my }} :

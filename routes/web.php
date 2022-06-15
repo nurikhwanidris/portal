@@ -9,7 +9,6 @@ use App\Http\Controllers\Admin\LaporanMesyuaratController;
 use App\Http\Controllers\Admin\KeratanAkhbarController;
 use App\Http\Controllers\Admin\MediaController;
 use App\Http\Controllers\Admin\PengumumanController;
-use App\Http\Livewire\InfoSemasa\Pengumuman;
 use App\Http\Controllers\Admin\PopupController;
 use App\Http\Controllers\Admin\QuoteController;
 use App\Http\Controllers\Admin\TenderController;
@@ -24,6 +23,7 @@ use App\Http\Controllers\Admin\PiagamPelangganController;
 use App\Http\Controllers\Admin\TransaksiController;
 use App\Http\Controllers\Admin\SoalanLazimController;
 use App\Http\Controllers\Main\MainController;
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -36,7 +36,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/spsm', [HomeController::class, 'index'])->middleware('auth');
 
 // Admin route
-Route::get('/spsm/admin')->middleware('auth');
+// Route::get('/spsm/admin')->middleware('auth');
+Route::redirect('/spsm/admin', '/spsm');
 
 // Login Route
 Route::get('/spsm/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
@@ -128,15 +129,6 @@ Route::resource('/spsm/admin/pegawai', PegawaiController::class)->middleware('au
 // Maklum Balas list route
 Route::get('/spsm/admin/maklum_balas/list', [MaklumBalasController::class, 'list'])->middleware('auth');
 
-// Maklum Balas create route
-Route::get('/maklum-balas', [MaklumBalasController::class, 'create']);
-
-// Maklum Balas store route
-Route::post('/maklum-balas/store', [MaklumBalasController::class, 'store']);
-
-// Maklum Balas show route
-Route::get('/maklum-balas/{id}', [MaklumBalasController::class, 'show'])->name('maklum-balas');
-
 // Maklum Balas reply admin route
 Route::get('/spsm/admin/maklum-balas/{id}/reply', [MaklumBalasController::class, 'reply'])->middleware('auth');
 
@@ -178,81 +170,106 @@ Route::resource('/spsm/admin/soalan_lazim', SoalanLazimController::class)->middl
 // Soalan Lazim route
 Route::get('/spsm/admin/soalan_lazim/kategori', [SoalanLazimController::class, 'soalanLazimCategory'])->middleware('auth');
 
+// Post Route
+Route::resource('/spsm/admin/post', PostController::class)->middleware('auth');
+
 /*
 |--------------------------------------------------------------------------
 | Main Routes
 |--------------------------------------------------------------------------
 */
 
-// Index Route
-Route::get('/', [MainController::class, 'index'])->middleware('visitor');
+Route::redirect('/', 'ms');
 
-// Info Korp route
-Route::get('/info-korp', [MainController::class, 'infoKorp'])->name('info-korp');
+Route::group(['prefix' => '{language}'], function () {
 
-// Visi Misi route
-Route::get('/visi-misi', [MainController::class, 'visiMisi'])->name('visi-misi');
+    // Index Route
+    Route::get('/', [MainController::class, 'index'])->middleware('visitor')->name('index');
 
-// Tugas Peranan Route
-Route::get('/tugas-peranan', [MainController::class, 'tugasPeranan'])->name('tugas-peranan');
+    // Info Korp route
+    Route::get('/info-korp', [MainController::class, 'infoKorp'])->name('info-korp');
 
-// Orang Awam Route
-Route::get('/orang-awam', [MainController::class, 'orangAwam'])->name('orang-awam');
+    // Visi Misi route
+    Route::get('/visi-misi', [MainController::class, 'visiMisi'])->name('visi-misi');
 
-// Page Element Route
-Route::get('/page-element', [MainController::class, 'pageElement']);
+    // Tugas Peranan Route
+    Route::get('/tugas-peranan', [MainController::class, 'tugasPeranan'])->name('tugas-peranan');
 
-// Warga Jupem Route
-Route::get('/warga-jupem', [MainController::class, 'wargaJupem'])->name('warga-jupem');
+    // Orang Awam Route
+    Route::get('/orang-awam', [MainController::class, 'orangAwam'])->name('orang-awam');
 
-// FAQ Route
-Route::get('/faq', [MainController::class, 'faq'])->name('faq');
+    // Page Element Route
+    Route::get('/page-element', [MainController::class, 'pageElement']);
 
-// Sitemap Route
-Route::get('/sitemap', [MainController::class, 'sitemap'])->name('sitemap');
+    // Warga Jupem Route
+    Route::get('/warga-jupem', [MainController::class, 'wargaJupem'])->name('warga-jupem');
 
-// Dasar Privasi Route
-Route::get('/dasar-privasi', [MainController::class, 'dasarPrivasi'])->name('dasar-privasi');
+    // FAQ Route
+    Route::get('/faq', [MainController::class, 'faq'])->name('faq');
 
-// Dasar Keselamatan Route
-Route::get('/dasar-keselamatan', [MainController::class, 'dasarKeselamatan'])->name('dasar-keselamatan');
+    // Sitemap Route
+    Route::get('/peta-laman', [MainController::class, 'sitemap'])->name('sitemap');
 
-// Dasar Penafian Route
-Route::get('/penafian', [MainController::class, 'penafian'])->name('penafian');
+    // Dasar Privasi Route
+    Route::get('/dasar-privasi', [MainController::class, 'dasarPrivasi'])->name('dasar-privasi');
 
-// Info Semasa Route
+    // Dasar Keselamatan Route
+    Route::get('/dasar-keselamatan', [MainController::class, 'dasarKeselamatan'])->name('dasar-keselamatan');
 
-Route::get('/info-semasa', [MainController::class, 'infoSemasa'])->name('info-semasa');
+    // Dasar Penafian Route
+    Route::get('/penafian', [MainController::class, 'penafian'])->name('penafian');
 
-// eKadaster Route
-Route::get('/eKadaster', [MainController::class, 'eKadaster'])->name('eKadaster');
+    // Info Semasa Route
+    Route::get('/info-semasa', [MainController::class, 'infoSemasa'])->name('info-semasa');
 
-// staps Route
-Route::get('/staps', [MainController::class, 'staps'])->name('staps');
+    // eKadaster Route
+    Route::get('/eKadaster', [MainController::class, 'eKadaster'])->name('eKadaster');
 
-// Global Search Route
-Route::get('/carian/', [MainController::class, 'carian'])->name('carian');
+    // staps Route
+    Route::get('/staps', [MainController::class, 'staps'])->name('staps');
 
-/*
-|--------------------------------------------------------------------------
-| Read Routes
-|--------------------------------------------------------------------------
-*/
+    // Global Search Route
+    Route::get('/carian/', [MainController::class, 'carian'])->name('carian');
 
-// Pengumuman Read Route
-Route::get('/info-semasa/pengumuman/{id}', [MainController::class, 'pengumumanRead'])->name('pengumuman-read');
+    // Carian Pegawai Route
+    Route::get('/carian/pegawai', [MainController::class, 'carianPegawai'])->name('carian-pegawai');
 
-// Berita Terkini Read Route
-Route::get('/info-semasa/berita-terkini/{id}', [MainController::class, 'beritaTerkiniRead'])->name('berita-terkini-read');
+    // Maklum Balas create route
+    Route::get('/maklum-balas', [MaklumBalasController::class, 'create'])->name('maklum-balas-create');
 
-// Tender & Quotation Read Route
-Route::get('/perolehan/{id}', [MainController::class, 'tenderRead'])->name('tender-read');
+    // Maklum Balas show route
+    Route::get('/maklum-balas/{id}', [MaklumBalasController::class, 'show'])->name('maklum-balas-read');
 
-// Global Search Post Read Route
-Route::get('/carian/papar/post/{id}', [MainController::class, 'carianPost'])->name('carian-post');
+    // Maklum Balas store route
+    Route::post('/maklum-balas/store', [MaklumBalasController::class, 'store'])->name('maklum-balas-store');
 
-// Global Search Pengumuman Read Route
-Route::get('/carian/papar/pengumuman/{id}', [MainController::class, 'carianPengumuman'])->name('carian-pengumuman');
+    /*
+    |--------------------------------------------------------------------------
+    | Read Routes
+    |--------------------------------------------------------------------------
+    */
 
-// Global Search Berita Terkini Read Route
-Route::get('/carian/papar/berita-terkini/{id}', [MainController::class, 'carianBeritaTerkini'])->name('carian-berita-terkini');
+    // Pengumuman Read Route
+    Route::get('/info-semasa/pengumuman/{id}', [MainController::class, 'pengumumanRead'])->name('pengumuman-read');
+
+    // Berita Terkini Read Route
+    Route::get('/info-semasa/berita-terkini/{id}', [MainController::class, 'beritaTerkiniRead'])->name('berita-terkini-read');
+
+    // Tender Read Route
+    Route::get('/tender/{id}', [MainController::class, 'tenderRead'])->name('tender-read');
+
+    // Sebut Harga Read Route
+    Route::get('/sebut-harga/{id}', [MainController::class, 'sebutHargaRead'])->name('sebut-harga-read');
+
+    // Global Search Post Read Route
+    Route::get('/carian/papar/post/{id}', [MainController::class, 'carianPost'])->name('carian-post');
+
+    // Global Search Pengumuman Read Route
+    Route::get('/carian/papar/pengumuman/{id}', [MainController::class, 'carianPengumuman'])->name('carian-pengumuman');
+
+    // Pengumuman Read Route
+    Route::get('/pengumuman/{id}', [MainController::class, 'pengumumanRead'])->name('pengumuman-read');
+
+    // Global Search Berita Terkini Read Route
+    Route::get('/carian/papar/berita-terkini/{id}', [MainController::class, 'carianBeritaTerkini'])->name('carian-berita-terkini');
+});

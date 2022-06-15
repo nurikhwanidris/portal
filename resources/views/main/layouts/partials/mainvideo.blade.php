@@ -1,6 +1,6 @@
 <section class="section border-0 video overlay2 overlay-show overlay-op-8 m-0 element-bawah"
     data-video-path="/main/preview-video/landing-portal" data-plugin-video-background
-    data-plugin-options="{'posterType': 'jpg', 'position': '50% 50%'}" style="height: 100vh;">
+    data-plugin-options="{'posterType': 'jpg', 'position': '50% 50%'}" style="height: 100vh;" id="divContent">
     <div class="container position-relative z-index-3 h-100">
         <div class="row align-items-center h-100">
             <div class="col">

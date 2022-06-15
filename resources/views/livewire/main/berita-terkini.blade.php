@@ -39,8 +39,8 @@
                                                 {!! $news->excerptMy() !!}
                                             </div>
                                             <a href="blog-post.html"
-                                                class="read-more text-color-dark font-weight-bold text-2">MAKLUMAT
-                                                TERPERINCI <i class="fas fa-chevron-right"></i></a>
+                                                class="read-more text-color-dark font-weight-bold text-2">{{ __('message.Details') }}<i
+                                                    class="fas fa-chevron-right"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -52,7 +52,7 @@
         @else
             <div class="row">
                 <text class="info-semasa-paragraph overflow-tajuk">
-                    Tiada berita terkini.
+                    {{ __('message.No News') }}
                 </text>
             </div>
         @endif

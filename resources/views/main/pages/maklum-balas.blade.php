@@ -50,7 +50,7 @@
                 <!-- PAGE TITLE - END-->
                 <div role="main" class="main">
                     <div class="col-lg-12">
-                        <form action="/maklum-balas/store" method="post">
+                        <form action="{{ route('maklum-balas-store', app()->getLocale()) }}" method="post">
                             @csrf
                             <div class="row mb-3">
                                 <label for="">Kategori Aduan & Maklum Balas</label>

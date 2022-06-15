@@ -7,8 +7,8 @@
                 <div class="header-column">
                     <div class="header-row">
                         <div class="header-logo">
-                            <a href="/">
-                                <img alt="Jata Negara" src="/main/img/logo-default/logo-default-208x100.png"
+                            <a href="{{ route('index', app()->getLocale()) }}">
+                                <img alt="{{ __('message.National Coat of Arms') }}" src="/main/img/logo-default/logo-default-208x100.png"
                                     class="logo-size">
                             </a>
                         </div>
@@ -17,9 +17,15 @@
                 <!-- Logo - END -->
                 <!-- Nama Page - START -->
                 <div class="header-column" style="padding: 10px 20px 20px 20px;">
-                    <div class="header-row text-header-small">Laman Web Rasmi</div>
-                    <div class="header-row text-header-main">Jabatan Ukur Dan Pemetaan Malaysia</div>
-                    <div class="header-row text-header-kementerian">Kementerian Tenaga dan Sumber Asli</div>
+                    <div class="header-row text-header-small">
+                        {{ __('message.Official Website') }}
+                    </div>
+                    <div class="header-row text-header-main">
+                        {{ __('message.Department of Survey and Mapping Malaysia') }}
+                    </div>
+                    <div class="header-row text-header-kementerian">
+                        {{ __('message.Ministry of Energy and Natural Resources') }}
+                    </div>
                 </div>
                 <!-- Nama Page  - END -->
                 <!-- Buttons -START -->
@@ -33,42 +39,49 @@
                                 <nav class="collapse">
                                     <ul class="nav nav-pills" id="mainNav">
                                         <li class="dropdown">
-                                            <a class="dropdown-item dropdown-toggle active" href="faq">
+                                            <a class="dropdown-item dropdown-toggle active"
+                                                href="{{ route('faq', app()->getLocale()) }}">
                                                 <div class="center-icon">
                                                     <img alt="Soalan Lazim"
                                                         data-change-src="/main/img/shortcut-icon/faq-small.png"
                                                         src="/main/img/shortcut-icon/faq-small.png">
-                                                    <div class="text-header-icon">Soalan Lazim</div>
+                                                    <div class="text-header-icon">{{ __('message.FAQ') }}
+                                                    </div>
                                                 </div>
                                             </a>
                                         </li>
                                         <li class="dropdown dropdown-mega">
-                                            <a class="dropdown-item dropdown-toggle active" href="/info-korp#tab-3">
+                                            <a class="dropdown-item dropdown-toggle active"
+                                                href="{{ route('info-korp', app()->getLocale()) }}#tab-3">
                                                 <div class="center-icon">
                                                     <img alt="Soalan Lazim"
                                                         data-change-src="/main/img/shortcut-icon/faq-small.png"
                                                         src="/main/img/shortcut-icon/hubungi-small.png">
-                                                    <div class="text-header-icon">Hubungi Kami</div>
+                                                    <div class="text-header-icon">{{ __('message.Contact Us') }}
+                                                    </div>
                                                 </div>
                                             </a>
                                         </li>
                                         <li class="dropdown">
-                                            <a class="dropdown-item dropdown-toggle active" href="/maklum-balas">
+                                            <a class="dropdown-item dropdown-toggle active"
+                                                href="{{ route('maklum-balas-create', app()->getLocale()) }}">
                                                 <div class="center-icon">
                                                     <img alt="Soalan Lazim"
                                                         data-change-src="/main/img/shortcut-icon/faq-small.png"
                                                         src="/main/img/shortcut-icon/maklumbalas-small.png">
-                                                    <div class="text-header-icon">Aduan & Maklum Balas</div>
+                                                    <div class="text-header-icon">
+                                                        {{ __('message.Feedback & Complaint') }}</div>
                                                 </div>
                                             </a>
                                         </li>
                                         <li class="dropdown">
-                                            <a class="dropdown-item dropdown-toggle active" href="sitemap">
+                                            <a class="dropdown-item dropdown-toggle active"
+                                                href="{{ route('sitemap', app()->getLocale()) }}">
                                                 <div class="center-icon">
                                                     <img alt="Soalan Lazim"
                                                         data-change-src="/main/img/shortcut-icon/faq-small.png"
                                                         src="/main/img/shortcut-icon/peta-small.png">
-                                                    <div class="text-header-icon">Peta Laman</div>
+                                                    <div class="text-header-icon">{{ __('message.Site Map') }}</div>
                                                 </div>
                                             </a>
                                         </li>
@@ -90,10 +103,11 @@
                                 </a>
                                 <div class="header-nav-features-dropdown header-nav-features-dropdown-mobile-fixed"
                                     id="headerTopSearchDropdown" style="margin-right: -31px; top: 10px;">
-                                    <form role="search" action="{{ route('carian') }}" method="get">
+                                    <form role="search" action="{{ route('carian', app()->getLocale()) }}"
+                                        method="get">
                                         <div class="simple-search input-group">
                                             <input class="form-control text-1" id="headerSearch" name="carian"
-                                                type="search" value="" placeholder="Search...">
+                                                type="search" value="{{ old('carian') }}" placeholder="Search...">
                                             <button class="btn" type="submit">
                                                 <i class="fas fa-search header-nav-top-icon"
                                                     style="color:#222 !important;"></i>
@@ -119,11 +133,11 @@
                                     <ol class="mini-products-list">
                                         <li class="item">
                                             <div class="product-details">
-                                                <p class="qty-price">Bahasa </p>
+                                                <p class="qty-price">{{ __('message.Language') }} </p>
                                                 <p class="product-name">
-                                                    <a href="#"><img src="/main/img/shortcut-icon/my.svg" alt="BM"
+                                                    <a href="/ms"><img src="/main/img/shortcut-icon/my.svg" alt="BM"
                                                             class="header-nav-top-icon-img flag-w3c"> </a>
-                                                    <a href="#"><img src="/main/img/shortcut-icon/gb.svg" alt="ENG"
+                                                    <a href="/en"><img src="/main/img/shortcut-icon/gb.svg" alt="ENG"
                                                             class="header-nav-top-icon-img flag-w3c"> </a>
                                                 </p>
                                             </div>
@@ -132,14 +146,19 @@
                                     <ol class="mini-products-list">
                                         <li class="item">
                                             <div class="product-details">
-                                                <p class="qty-price">Warna Font </p>
+                                                <p class="qty-price">{{ __('message.Font Color') }}</p>
                                                 <p class="product-name">
                                                 <div>
-                                                    <span class="dot-w3c dot-w3c-1"></span>
-                                                    <span class="dot-w3c dot-w3c-2"></span>
-                                                    <span class="dot-w3c dot-w3c-3"></span>
-                                                    <span class="dot-w3c dot-w3c-4"></span>
-                                                    <span class="dot-w3c dot-w3c-5"></span>
+                                                    <button class="dot-w3c dot-w3c-1" id="fontColorWhite"
+                                                        onclick="changeWhite()"></button>
+                                                    <button class="dot-w3c dot-w3c-2" id="fontColorRed"
+                                                        onclick="changeRed()"></button>
+                                                    <button class="dot-w3c dot-w3c-3" id="fontColorGreen"
+                                                        onclick="changeGreen()"></button>
+                                                    <button class="dot-w3c dot-w3c-4" id="fontColorBlue"
+                                                        onclick="changeBlue()"></button>
+                                                    <button class="dot-w3c dot-w3c-5" id="fontColorYellow"
+                                                        onclick="changeYellow()"></button>
                                                 </div>
                                                 </p>
                                             </div>
@@ -148,11 +167,16 @@
                                     <ol class="mini-products-list">
                                         <li class="item">
                                             <div class="product-details">
-                                                <p class="qty-price">Saiz Font </p>
+                                                <p class="qty-price">
+                                                    {{ __('message.Font Size') }}
+                                                </p>
                                                 <p class="product-name">
-                                                    <a href="#" style="font-size: 10px;">A &nbsp;</a>
-                                                    <a href="#" style="font-size: 12px;">A &nbsp;</a>
-                                                    <a href="#" style="font-size: 14px;">A &nbsp;</a>
+                                                    <a href="#" class="text-decoration-none btn-link"
+                                                        onclick="change80()" style="font-size: 10px;">A &nbsp;</a>
+                                                    <a href="#" class="text-decoration-none btn-link"
+                                                        onclick="change100()" style="font-size: 12px;">A &nbsp;</a>
+                                                    <a href="#" class="text-decoration-none btn-link"
+                                                        onclick="change150()" style="font-size: 14px;">A &nbsp;</a>
                                                 </p>
                                             </div>
                                         </li>
@@ -160,7 +184,7 @@
                                     <ol class="mini-products-list">
                                         <li class="item">
                                             <div class="product-details">
-                                                <p class="qty-price">Bantuan </p>
+                                                <p class="qty-price">{{ __('message.Help') }}</p>
                                                 <p class="product-name">
                                                     <a href="#">
                                                         <img src="/main/img/shortcut-icon/manual-colour.svg"

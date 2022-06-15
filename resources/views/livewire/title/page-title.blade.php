@@ -5,11 +5,11 @@
                 <div class="col-md-6 align-self-center order-2 order-md-1 p-static">
                     <div class="row">
                         <div class="font-weight-normal text-title-small">
-                            @if (url()->current() == route('info-korp'))
+                            @if (url()->current() == route('info-korp', app()->getLocale()))
                                 Info Korporat
-                            @elseif (url()->current() == route('orang-awam'))
+                            @elseif (url()->current() == route('orang-awam', app()->getLocale()))
                                 Orang Awam
-                            @elseif (url()->current() == route('warga-jupem'))
+                            @elseif (url()->current() == route('warga-jupem', app()->getLocale()))
                                 Warga Jupem
                                 {{-- @elseif (url()->current() == route('faq'))
                                 Soalan Lazim --}}
@@ -17,13 +17,13 @@
                         </div>
                         <div class="font-weight-normal text-6">
                             <strong class="text-title-strong">
-                                @if (url()->current() == route('info-korp'))
+                                @if (url()->current() == route('info-korp', app()->getLocale()))
                                     Info Korporat
-                                @elseif (url()->current() == route('orang-awam'))
+                                @elseif (url()->current() == route('orang-awam', app()->getLocale()))
                                     Orang Awam
-                                @elseif (url()->current() == route('warga-jupem'))
+                                @elseif (url()->current() == route('warga-jupem', app()->getLocale()))
                                     Warga Jupem
-                                @elseif (url()->current() == route('faq'))
+                                @elseif (url()->current() == route('faq', app()->getLocale()))
                                     Soalan Lazim
                                 @endif
                             </strong>
@@ -38,13 +38,13 @@
                             <a href="#">Laman Utama</a>
                         </li>
                         <li class="">
-                            @if (url()->current() == route('info-korp'))
+                            @if (url()->current() == route('info-korp', app()->getLocale()))
                                 Info Korporat
-                            @elseif (url()->current() == route('orang-awam'))
+                            @elseif (url()->current() == route('orang-awam', app()->getLocale()))
                                 Orang Awam
-                            @elseif (url()->current() == route('warga-jupem'))
+                            @elseif (url()->current() == route('warga-jupem', app()->getLocale()))
                                 Warga Jupem
-                            @elseif (url()->current() == route('faq'))
+                            @elseif (url()->current() == route('faq', app()->getLocale()))
                                 Soalan Lazim
                             @endif
                         </li>

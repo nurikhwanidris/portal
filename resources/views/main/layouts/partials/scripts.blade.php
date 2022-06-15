@@ -13,6 +13,10 @@
 <script src="/main/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 <script src="/main/vendor/vide/jquery.vide.min.js"></script>
 <script src="/main/vendor/vivus/vivus.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+{{-- <script src="https://cdn.plot.ly/plotly-2.12.1.min.js"></script> --}}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 
 <!-- Theme Base, Components and Settings -->
 <script src="/main/js/theme.js"></script>
@@ -48,6 +52,8 @@
 
 <!-- Datatable -->
 <script src="/main/js/jquery.datatables.min.js"></script>
+
+{{-- Filter Data --}}
 <script type="text/javascript">
     $(document).ready(function() {
         // Tender Table
@@ -128,80 +134,21 @@
             beritaTerkiniTable.columns([2]).search($(this).val()).draw();
         })
 
-        // // Show/Hide Negeri on dropdown
-        // $('#contact-us').on('change', function() {
-        //     if (this.value == 1) {
-        //         $("#hq").hide();
-        //         $("#jupem-johor").show();
-        //         $("#jupem-kedah").hide();
-        //         $("#jupem-kelantan").hide();
-        //         $("#jupem-melaka").hide();
-        //         $("#jupem-kl").hide();
-        //         $("#jupem-n9").hide();
-        //         $("#jupem-pahang").hide();
-        //         $("#jupem-perak").hide();
-        //         $("#jupem-perlis").hide();
-        //         $("#jupem-pulau-pinang").hide();
-        //         $("#jupem-selangor").hide();
-        //         $("#jupem-terengganu").hide();
-        //         $("#jupem-labuan").hide();
-        //         $("#jupem-sarawak").hide();
-        //         $("#jupem-sabah").hide();
-        //     } else if (this.value == 2) {
-        //         $("#hq").hide();
-        //         $("#jupem-johor").hide();
-        //         $("#jupem-kedah").show();
-        //         $("#jupem-kelantan").hide();
-        //         $("#jupem-melaka").hide();
-        //         $("#jupem-kl").hide();
-        //         $("#jupem-n9").hide();
-        //         $("#jupem-pahang").hide();
-        //         $("#jupem-perak").hide();
-        //         $("#jupem-perlis").hide();
-        //         $("#jupem-pulau-pinang").hide();
-        //         $("#jupem-selangor").hide();
-        //         $("#jupem-terengganu").hide();
-        //         $("#jupem-labuan").hide();
-        //         $("#jupem-sarawak").hide();
-        //         $("#jupem-sabah").hide();
-        //     } else if (this.value == 3) {
-        //         $("#hq").hide();
-        //         $("#jupem-johor").hide();
-        //         $("#jupem-kedah").hide();
-        //         $("#jupem-kelantan").show();
-        //         $("#jupem-melaka").hide();
-        //         $("#jupem-kl").hide();
-        //         $("#jupem-n9").hide();
-        //         $("#jupem-pahang").hide();
-        //         $("#jupem-perak").hide();
-        //         $("#jupem-perlis").hide();
-        //         $("#jupem-pulau-pinang").hide();
-        //         $("#jupem-selangor").hide();
-        //         $("#jupem-terengganu").hide();
-        //         $("#jupem-labuan").hide();
-        //         $("#jupem-sarawak").hide();
-        //         $("#jupem-sabah").hide();
-        //     } else {
-        //         $("#hq").show();
-        //         $("#jupem-johor").hide();
-        //         $("#jupem-kedah").hide();
-        //         $("#jupem-kelantan").hide();
-        //         $("#jupem-melaka").hide();
-        //         $("#jupem-kl").hide();
-        //         $("#jupem-n9").hide();
-        //         $("#jupem-pahang").hide();
-        //         $("#jupem-perak").hide();
-        //         $("#jupem-perlis").hide();
-        //         $("#jupem-pulau-pinang").hide();
-        //         $("#jupem-selangor").hide();
-        //         $("#jupem-terengganu").hide();
-        //         $("#jupem-labuan").hide();
-        //         $("#jupem-sarawak").hide();
-        //         $("#jupem-sabah").hide();
-        //     }
-        // });
+        $("#contact-us").change(function() {
+            $(this).find("option:selected").each(function() {
+                var optionValue = $(this).attr("value");
+                if (optionValue) {
+                    $(".jupem").not("#" + optionValue).hide();
+                    $("#" + optionValue).show();
+                } else {
+                    $(".jupem").hide();
+                }
+            });
+        }).change();
     });
 </script>
+
+{{-- Switcher --}}
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         document.querySelectorAll('.sidebar .nav-link').forEach(function(element) {
@@ -228,5 +175,67 @@
                 }
             }); // addEventListener
         }) // forEach
+    });
+</script>
+
+{{-- W3C --}}
+<script>
+    function changeWhite() {
+        document.body.style.color = "gray";
+        return false;
+    }
+
+    function changeGreen() {
+        document.body.style.color = "green";
+        return false;
+    }
+
+    function changeRed() {
+        document.body.style.color = "red";
+        return false;
+    }
+
+    function changeBlue() {
+        document.body.style.color = "blue";
+        return false;
+    }
+
+    function changeYellow() {
+        document.body.style.color = "yellow";
+        return false;
+    }
+
+    function change80() {
+        document.body.style.fontSize = "80%";
+        return false;
+    }
+
+    function change100() {
+        document.body.style.fontSize = "100%";
+        return false;
+    }
+
+    function change150() {
+        document.body.style.fontSize = "150%";
+        return false;
+    }
+
+    $(document).ready(function() {
+        $("#tukarMerah").click(function() {
+            $("p:first").addClass("intro");
+        });
+    });
+</script>
+
+{{-- STAPS --}}
+<script>
+    $(document).ready(function() {
+        $('#2Hari').click(function() {
+            $('#2-hari').toggle();
+        });
+
+        $('#7Hari').click(function() {
+            $('#7-hari').toggle();
+        });
     });
 </script>

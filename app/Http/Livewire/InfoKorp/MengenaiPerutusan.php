@@ -2,15 +2,15 @@
 
 namespace App\Http\Livewire\InfoKorp;
 
-use Illuminate\Support\Facades\DB;
+use App\Models\Page;
 use Livewire\Component;
 
 class MengenaiPerutusan extends Component
 {
     public function render()
     {
-        return view('livewire.info-korp.mengenai-perutusan',[
-            'perutusan' => DB::table('posts')->where('id', '=', '10')->first('contents_my'),
+        return view('livewire.info-korp.mengenai-perutusan', [
+            'perutusan' => Page::where('id', '=', '1')->first(),
         ]);
     }
 }

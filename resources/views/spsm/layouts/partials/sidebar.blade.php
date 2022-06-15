@@ -68,6 +68,30 @@
                         </li>
                     </ul>
                 </li>
+                {{-- Halaman --}}
+                <li class="nav-item {{ request()->is('spsm/admin/post/*') ? 'menu-open' : '' }}">
+                    <a href="#" class="nav-link {{ request()->is('spsm/admin/post/*') ? 'active' : '' }}">
+                        <i class="fas fa-page-break"></i>
+                        <p>
+                            Post
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="/spsm/admin/post/create" class="nav-link">
+                                <i class="fas fa-plus nav-icon"></i>
+                                <p>Tambah Baru</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/spsm/admin/post/" class="nav-link">
+                                <i class="fas fa-list-alt nav-icon"></i>
+                                <p>Senarai Post</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
                 {{-- Media --}}
                 <li class="nav-item {{ request()->is('spsm/admin/media') ? 'menu-open' : '' }}">
                     <a href="/spsm/admin/media/"

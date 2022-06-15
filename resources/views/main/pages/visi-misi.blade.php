@@ -45,7 +45,8 @@
                             <div class="col-lg-4 col-sm-6">
                                 <div class="featured-box featured-box-quaternary featured-box-effect-3">
                                     <div class="box-content box-content-border-0">
-                                        <a href="/info-korp"><i class="icon-featured far fa-file-alt"></i></a>
+                                        <a href="{{ route('info-korp', app()->getLocale()) }}"><i
+                                                class="icon-featured far fa-file-alt"></i></a>
                                         <h4 class="font-weight-normal text-5 mt-3">Mengenai <strong
                                                 class="font-weight-extra-bold">JUPEM</strong></h4>
                                         <p class="mb-2 mt-2 text-2">Maklumat JUPEM dan Info Korporat</p>
@@ -133,7 +134,7 @@
 
                 <div class="row align-items-center pt-4 appear-animation" data-appear-animation="fadeInLeftShorter">
                     <div class="col-md-4 mb-4 mb-md-0">
-                        <img class="img-fluid scale-2 my-4" src="img/section-image/dasar-kualiti.jpg"
+                        <img class="img-fluid scale-2 my-4" src="/main/img/section-image/dasar-kualiti.jpg"
                             alt="style switcher" />
                     </div>
                     <div class="col-md-8 ps-md-5">
@@ -146,9 +147,7 @@
                         </p>
                     </div>
                 </div>
-
-                <hr class="solid my-5">
-                <div class="row">
+                <div class="row my-3">
                     <ul class="list list-icons list-icons-style-3 list-tertiary list-icons-sm">
                         <li>
                             <!-- 1 -->
@@ -223,35 +222,50 @@
                             infrastruktur ukur dan pemetaan bagi mendukung Dasar Pembangunan Negara.
                         </p>
                         <p>
-                        <ul class="list list-icons list-icons-style-3 list-tertiary list-icons-sm">
+                        <ul class="list list-icons list-icons-style-3 list-tertiary list-icons-sm"
+                            style="text-align: justify;">
                             <li><i class="fas fa-check"></i><!-- 1 -->
-                                Reka bentuk logo JUPEM terdiri daripada 3 bentuk asas iaitu titik-titik, bulatan gedang
-                                dan garisan orbit. Titik-titik ini terpisah dua oleh garisan orbit mencerminkan dua
-                                aktiviti utama JUPEM iaitu aktiviti pengukuran kadaster dan aktiviti pengukuran
-                                pemetaan.
+                                <span style="line-height: 150%">
+                                    Reka bentuk logo JUPEM terdiri daripada 3 bentuk asas iaitu titik-titik, bulatan
+                                    gedang
+                                    dan garisan orbit. Titik-titik ini terpisah dua oleh garisan orbit mencerminkan dua
+                                    aktiviti utama JUPEM iaitu aktiviti pengukuran kadaster dan aktiviti pengukuran
+                                    pemetaan.
+                                </span>
                             </li>
                             <li><i class="fas fa-check"></i><!-- 2 -->
-                                Warna oren melambangkan keceriaan, kegemilangan, kepekaan JUPEM kepada kehendak
-                                pelanggan dan menyatakan kewujudan dan kepentingan JUPEM kepada masyarakat dan negara.
+                                <span style="line-height: 150%">
+                                    Warna oren melambangkan keceriaan, kegemilangan, kepekaan JUPEM kepada kehendak
+                                    pelanggan dan menyatakan kewujudan dan kepentingan JUPEM kepada masyarakat dan
+                                    negara.
+                                </span>
                             </li>
                             <li><i class="fas fa-check"></i><!-- 3 -->
-                                Warna hijau adalah warna rasmi jabatan dan dipilih bagi menunjukkan bahawa JUPEM
-                                senantiasa prihatin dan memberi perhatian serius kepada aspek alam semula jadi dalam
-                                pemeliharaan persekitaran yang sihat.
+                                <span style="line-height: 150%">
+                                    Warna hijau adalah warna rasmi jabatan dan dipilih bagi menunjukkan bahawa JUPEM
+                                    senantiasa prihatin dan memberi perhatian serius kepada aspek alam semula jadi dalam
+                                    pemeliharaan persekitaran yang sihat.
+                                </span>
                             </li>
                             <li><i class="fas fa-check"></i><!-- 4 -->
-                                Penampilan titik-titik memberi petunjuk bahawa JUPEM menggunakan teknologi elektronik
-                                dan sistem jaring untuk memperkasakan maklumat ukur dan pemetaan.
+                                <span style="line-height: 150%">
+                                    Penampilan titik-titik memberi petunjuk bahawa JUPEM menggunakan teknologi
+                                    elektronik
+                                    dan sistem jaring untuk memperkasakan maklumat ukur dan pemetaan.
+                                </span>
                             </li>
                             <li><i class="fas fa-check"></i><!-- 5 -->
-                                Garisan orbit pula menitikberatkan betapa pentingnya komunikasi, penyebaran maklumat dan
-                                rangkaian.
+                                <span style="line-height: 150%">
+                                    Garisan orbit pula menitikberatkan betapa pentingnya komunikasi, penyebaran maklumat
+                                    dan
+                                    rangkaian.
+                                </span>
                             </li>
                         </ul>
                         </p>
                     </div>
                     <div class="col-md-4 px-5 px-md-3">
-                        <img class="img-fluid scale-2 my-4" src="img/logo-default/logo_JUPEM.svg"
+                        <img class="img-fluid scale-2 my-4" src="/main/img/logo-default/logo_JUPEM.svg"
                             alt="style switcher" />
                     </div>
                 </div>
