@@ -79,13 +79,16 @@
                                             <tr>
                                                 <td class="align-middle text-center">{{ $loop->iteration }}</td>
                                                 <td class="align-middle">
-                                                    @if (app()->getLocale() == 'en')
-                                                        {{ Str::limit($item->title_en, 30) }}
-                                                    @elseif ($item->title_en == null)
-                                                        {{ Str::limit($item->title_my, 30) }}
-                                                    @else
-                                                        {{ Str::limit($item->title_my, 30) }}
-                                                    @endif
+                                                    <a href="{{ route('tender-read', [app()->getLocale(), 'id' => $item->id]) }}"
+                                                        target="_blank" rel="noopener noreferrer">
+                                                        @if (app()->getLocale() == 'en')
+                                                            {{ Str::limit($item->title_en, 30) }}
+                                                        @elseif ($item->title_en == null)
+                                                            {{ Str::limit($item->title_my, 30) }}
+                                                        @else
+                                                            {{ Str::limit($item->title_my, 30) }}
+                                                        @endif
+                                                    </a>
                                                 </td>
                                                 <td class="text-center align-middle d-none">
                                                     {{ $item->created_at->format('Y') }}</td>
