@@ -270,6 +270,9 @@ Route::group(['prefix' => '{language}'], function () {
     // Pengumuman Read Route
     Route::get('/pengumuman/{id}', [MainController::class, 'pengumumanRead'])->name('pengumuman-read');
 
+    // Berita Terkini Read Route
+    Route::get('/berita-terkini/{id}', [MainController::class, 'carianBeritaTerkini'])->name('berita-terkini');
+
     // Global Search Berita Terkini Read Route
     Route::get('/carian/papar/berita-terkini/{id}', [MainController::class, 'carianBeritaTerkini'])->name('carian-berita-terkini');
 });

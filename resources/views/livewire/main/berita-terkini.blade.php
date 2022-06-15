@@ -29,8 +29,8 @@
                                 <div class="col ps-1">
                                     <div>
                                         <h4 class="line-height-3">
-                                            <a href="/berita-terkini/{{ $news->id }}"
-                                                class="text-decoration-none text-show-line-tajuk">
+                                            <a href="{{ route('berita-terkini', [app()->getLocale(), 'id' => $news->id]) }}"
+                                                target="_blank" class="text-decoration-none text-show-line-tajuk">
                                                 {{ $news->title_my }}
                                             </a>
                                         </h4>

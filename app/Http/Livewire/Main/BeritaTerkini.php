@@ -4,7 +4,6 @@ namespace App\Http\Livewire\Main;
 
 use Livewire\Component;
 use App\Models\BeritaTerkini as BeritaTerkiniModel;
-use Carbon\Carbon;
 
 class BeritaTerkini extends Component
 {
@@ -12,8 +11,8 @@ class BeritaTerkini extends Component
     {
         return view('livewire.main.berita-terkini',[
             'beritaTerkini' => BeritaTerkiniModel::where([
-                ['show', '<=', Carbon::now()],
-                ['hide', '>=', Carbon::now()],
+                ['show', '<=', now()],
+                ['hide', '>=', now()],
             ])
             ->orWhere('show', null)
             ->with('status')->get(),

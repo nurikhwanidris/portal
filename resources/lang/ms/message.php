@@ -20,7 +20,7 @@ return [
     "Staff Directory" => "Direktori Pegawai",
     "JUPEM Staff" => "Warga JUPEM",
     "Public" => "Orang Awam",
-    "Latest News" => "Sorotan Terkini",
+    "Latest News" => "Sorotan Peristiwa",
     "Procurement Offer" => "Tawaran Perolehan",
     "Announcement" => "Pengumuman",
     "Prayer Time" => "Waktu Solat",
