@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Post;
 
 class PostController extends Controller
 {
@@ -13,7 +14,14 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+        return view('spsm.admin.post.index', [
+            'link' => '',
+            'leadCrumbs' => '',
+            'title' => 'List of Posts',
+            // 'text' => 'This is just a test page for now',
+            // 'pages' => Page::with('user')->get(),
+            'posts' => Post::with('user')->latest()->paginate(10),
+        ]);
     }
 
     /**

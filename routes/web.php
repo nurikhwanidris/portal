@@ -23,6 +23,7 @@ use App\Http\Controllers\Admin\PiagamPelangganController;
 use App\Http\Controllers\Admin\TransaksiController;
 use App\Http\Controllers\Admin\SoalanLazimController;
 use App\Http\Controllers\Main\MainController;
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -35,7 +36,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/spsm', [HomeController::class, 'index'])->middleware('auth');
 
 // Admin route
-Route::get('/spsm/admin')->middleware('auth');
+// Route::get('/spsm/admin')->middleware('auth');
+Route::redirect('/spsm/admin', '/spsm');
 
 // Login Route
 Route::get('/spsm/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
@@ -167,6 +169,9 @@ Route::resource('/spsm/admin/soalan_lazim', SoalanLazimController::class)->middl
 
 // Soalan Lazim route
 Route::get('/spsm/admin/soalan_lazim/kategori', [SoalanLazimController::class, 'soalanLazimCategory'])->middleware('auth');
+
+// Post Route
+Route::resource('/spsm/admin/post', PostController::class)->middleware('auth');
 
 /*
 |--------------------------------------------------------------------------
