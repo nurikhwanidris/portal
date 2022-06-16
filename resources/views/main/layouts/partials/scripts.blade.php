@@ -14,7 +14,7 @@
 <script src="/main/vendor/vide/jquery.vide.min.js"></script>
 <script src="/main/vendor/vivus/vivus.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-{{-- <script src="https://cdn.plot.ly/plotly-2.12.1.min.js"></script> --}}
+<script src="https://pagination.js.org/dist/2.1.5/pagination.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 
@@ -237,5 +237,22 @@
         $('#7Hari').click(function() {
             $('#7-hari').toggle();
         });
+    });
+</script>
+
+{{-- Muat Turun Borang --}}
+<script>
+    $(document).ready(function() {
+        $("#borang").change(function() {
+            $(this).find("option:selected").each(function() {
+                var optionValue = $(this).attr("value");
+                if (optionValue) {
+                    $(".pe-md-5").not("." + optionValue).hide();
+                    $("#" + optionValue).show();
+                } else {
+                    $(".pe-md-5").hide();
+                }
+            });
+        }).change();
     });
 </script>

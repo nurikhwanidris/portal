@@ -59,7 +59,7 @@
                     </li>
                 </ul>
             </li>
-            <li class="nav-item has-submenu">
+            {{-- <li class="nav-item has-submenu">
                 <a class="nav-link dropdown-item dropdown-toggle" href="#">{{ __('message.JUPEM Staff') }}</a>
                 <ul class="submenu collapse">
                     <li>
@@ -154,7 +154,7 @@
                             href="{{ route('orang-awam', app()->getLocale()) }}#tab-10">{{ __('message.Government Open Data') }}</a>
                     </li>
                 </ul>
-            </li>
+            </li> --}}
             {{-- <li class="nav-item">
                 <a class="nav-link" href="#"> Something </a>
             </li>

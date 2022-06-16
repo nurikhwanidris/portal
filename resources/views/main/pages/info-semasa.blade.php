@@ -40,16 +40,20 @@
                             <div class="tabs tabs-vertical tabs-left tabs-navigation">
                                 <ul class="nav nav-tabs col-sm-3">
                                     <li class="nav-item">
-                                        <a class="nav-link active" href="#tab-1" data-bs-toggle="tab">{{__('message.Announcement')}}</a>
+                                        <a class="nav-link active" href="#tab-1"
+                                            data-bs-toggle="tab">{{ __('message.Announcement') }}</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#tab-2" data-bs-toggle="tab">{{__('message.Latest News')}}</a>
+                                        <a class="nav-link" href="#tab-2"
+                                            data-bs-toggle="tab">{{ __('message.Latest News') }}</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#tab-3" data-bs-toggle="tab">{{__('message.Procurement Offer')}}</a>
+                                        <a class="nav-link" href="#tab-3"
+                                            data-bs-toggle="tab">{{ __('message.Procurement Offer') }}</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#tab-4" data-bs-toggle="tab">{{__('message.Client Charter')}}</a>
+                                        <a class="nav-link" href="#tab-4"
+                                            data-bs-toggle="tab">{{ __('message.Client Charter') }}</a>
                                     </li>
                                 </ul>
                             </div>
@@ -83,5 +87,6 @@
     <!-- Vendor -->
     @include('main.layouts.partials.scripts')
 </body>
+@livewireScripts()
 
 </html>

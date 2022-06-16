@@ -25,7 +25,7 @@
                     <option value="2019">2019</option>
                     <option value="2018">2018</option>
                     <option value="2017">2017</option>
-                    <option value="2016">2016</option>
+                    {{-- <option value="2016">2016</option>
                     <option value="2015">2015</option>
                     <option value="2014">2014</option>
                     <option value="2013">2013</option>
@@ -34,7 +34,7 @@
                     <option value="2010">2010</option>
                     <option value="2009">2009</option>
                     <option value="2008">2008</option>
-                    <option value="2007">2007</option>
+                    <option value="2007">2007</option> --}}
                 </select>
             </div>
         </div>
@@ -47,8 +47,7 @@
                 <th class="table-title-jupem">#</th>
                 <th class="table-title-jupem">{{ __('message.Title') }}</th>
                 <th class="d-none">{{ __('message.Year') }}</th>
-                <th class="table-title-jupem">{{ __('message.Announcement') }}</th>
-                <th class="table-title-jupem">{{ __('message.Attachment') }}</th>
+                <th class="text-center align-middle table-title-jupem">{{ __('message.Date') }}</th>
             </tr>
         </thead>
         <tbody>
@@ -72,12 +71,8 @@
                     <td class="d-none">
                         {{ $item->created_at->format('Y') }}
                     </td>
-                    <td>
-                        {{ $item->created_at->toDatestring() }}
-                    </td>
-                    <td>
-                        <a href="/info-semasa/berita-terkini/{{ $item->id }}" target="_blank"
-                            rel="noopener noreferrer">{{ __('message.Attachment') }}</a>
+                    <td class="text-center align-middle">
+                        {{ $item->created_at->format('d m Y') }}
                     </td>
                 </tr>
             @endforeach

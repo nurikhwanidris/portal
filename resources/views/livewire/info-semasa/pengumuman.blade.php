@@ -22,7 +22,7 @@
                     <option value="2019">2019</option>
                     <option value="2018">2018</option>
                     <option value="2017">2017</option>
-                    <option value="2016">2016</option>
+                    {{-- <option value="2016">2016</option>
                     <option value="2015">2015</option>
                     <option value="2014">2014</option>
                     <option value="2013">2013</option>
@@ -31,7 +31,7 @@
                     <option value="2010">2010</option>
                     <option value="2009">2009</option>
                     <option value="2008">2008</option>
-                    <option value="2007">2007</option>
+                    <option value="2007">2007</option> --}}
                 </select>
             </div>
         </div>
@@ -42,14 +42,14 @@
                 <th class="table-title-jupem text-center">#</th>
                 <th class="table-title-jupem">{{ __('message.Title') }}</th>
                 <th class="table-title-jupem d-none">{{ __('message.Year') }}</th>
-                <th class="table-title-jupem">{{ __('message.Date') }}</th>
+                <th class="text-center table-title-jupem">{{ __('message.Date') }}</th>
             </tr>
         </thead>
         <tbody>
             @foreach ($pengumuman as $item)
                 <tr>
                     <td class="align-middle text-center">{{ $loop->iteration }}</td>
-                    <td class="align-middle">
+                    <td class="align-middle w-75">
                         {{-- <a href="/pengumuman/{{ $item->id }}" target="_blank" rel="noopener noreferrer">
                             {{ $item->title_my }}
                         </a> --}}
@@ -64,8 +64,8 @@
                         </a>
                     </td>
                     <td class="align-middle d-none">{{ $item->created_at->format('Y') }}</td>
-                    <td class="align-middle">
-                        {{ $item->created_at->toDatestring() }}
+                    <td class="text-center align-middle w-25">
+                        {{ $item->created_at->format('d-m-Y') }}
                     </td>
                 </tr>
             @endforeach

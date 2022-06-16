@@ -1,12 +1,12 @@
 <div>
     <style type="text/css">
         .nama-ahli {
-            font-size: 1em !important;
+            font-size: 1.2em !important;
             line-height: 1.2em;
         }
 
         .nama-jawatan {
-            font-size: 0.8em !important;
+            font-size: 1em !important;
             line-height: 1.4em;
             text-transform: uppercase;
             color: #0088cc !important;
