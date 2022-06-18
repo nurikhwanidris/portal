@@ -1,16 +1,16 @@
 <?php
 
-namespace App\Http\Livewire\InfoSemasa;
+namespace App\Http\Livewire\WargaJupem;
 
-use App\Models\Pengumuman as ModelsPengumuman;
+use Illuminate\Support\Facades\DB;
 use Livewire\Component;
 
-class Pengumuman extends Component
+class PertukaranPegawai extends Component
 {
     public function render()
     {
-        return view('livewire.info-semasa.pengumuman', [
-            'pengumuman' => ModelsPengumuman::orderBy('created_at', 'desc')->get()
+        return view('livewire.warga-jupem.pertukaran-pegawai', [
+            'pertukaran' => DB::table('pertukaran_pegawais')->orderBy('id', 'desc')->get(),
         ]);
     }
 }

@@ -74,66 +74,80 @@
         // BeritaTerkini Table
         var beritaTerkiniTable = $('#beritaTerkini-table').DataTable();
 
+        // Pertukaran Pegawai Table
+        var pertukaranPegawaiTable = $('#pertukaranPegawai-table').DataTable();
+
         // Piagam Filter by text
         $('#piagam-filter-text').keyup(function() {
             piagamTable.search($(this).val()).draw();
-        })
+        });
 
         // Piagam Filter by year
         $('#piagam-filter-year').change(function() {
             piagamTable.columns([2]).search($(this).val()).draw();
-        })
+        });
 
         // Pengumuman Filter by text
         $('#pengumuman-filter-text').keyup(function() {
             pengumumanTable.search($(this).val()).draw();
-        })
+        });
 
         // Pengumuman Filter by year
         $('#pengumuman-filter-year').change(function() {
             pengumumanTable.columns([2]).search($(this).val()).draw();
-        })
+        });
 
         // Tender Filter by text
         $('#tender-filter-text').keyup(function() {
             tenderTable.search($(this).val()).draw();
-        })
+        });
 
         // Tender Filter by year
         $('#tender-filter-year').change(function() {
             tenderTable.columns([2]).search($(this).val()).draw();
-        })
+        });
 
         // Sebut-harga Filter by text
         $('#sebut-harga-filter-text').keyup(function() {
             sebutHargaTable.search($(this).val()).draw();
-        })
+        });
 
         // SebutHarga Filter by year
         $('#sebut-harga-filter-year').change(function() {
             sebutHargaTable.columns([2]).search($(this).val()).draw();
-        })
+        });
 
         // Perolehan-berjaya Filter by text
         $('#perolehan-berjaya-filter-text').keyup(function() {
             perolehanTable.search($(this).val()).draw();
-        })
+        });
 
         // Perolehan-berjaya Filter by year
         $('#perolehan-berjaya-filter-year').change(function() {
             perolehanTable.columns([2]).search($(this).val()).draw();
-        })
+        });
 
         // BeritaTerkini Filter by text
         $('#beritaTerkini-filter-text').keyup(function() {
             beritaTerkiniTable.search($(this).val()).draw();
-        })
+        });
 
         // BeritaTerkini Filter by year
         $('#beritaTerkini-filter-year').change(function() {
             beritaTerkiniTable.columns([2]).search($(this).val()).draw();
-        })
+        });
 
+        // Pertukaran Pegawai Filter by selection
+        $('#pertukaran-pegawai-filter-selection').change(function() {
+            pertukaranPegawaiTable.columns([5]).search($(this).val()).draw();
+        });
+
+        // Pertukaran Pegawai Filter by text
+        $('#pertukaran-pegawai-filter-text').keyup(function() {
+            pertukaranPegawaiTable.search($(this).val()).draw();
+        });
+
+        // Contact us
         $("#contact-us").change(function() {
             $(this).find("option:selected").each(function() {
                 var optionValue = $(this).attr("value");
