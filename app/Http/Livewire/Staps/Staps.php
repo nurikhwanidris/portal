@@ -11,7 +11,7 @@ class Staps extends Component
 
     public $namaStesen = 'Pulau Langkawi';
 
-    public function selectedStesen($id)
+    public function selectedStesen($id, $stesen)
     {
         $query = DB::table('tbl_stap_data')
             ->where('tbl_stap_data.STAP_STESEN', '=', $id)
@@ -77,70 +77,70 @@ class Staps extends Component
             ->get();
         $this->stesen7 = $query7;
 
-        if ($this->selectedStesen == 1) {
+        if ($stesen == 'pulau-langkawi') {
             $this->namaStesen = 'Pulau Langkawi';
         }
-        if ($this->selectedStesen == 2) {
+        if ($stesen == 'pulau-pinang') {
             $this->namaStesen = 'Pulau Pinang';
         }
-        if ($this->selectedStesen == 3) {
+        if ($stesen == 'lumut') {
             $this->namaStesen = 'Lumut';
         }
-        if ($this->selectedStesen == 4) {
+        if ($stesen == 'perlabuhan-klang') {
             $this->namaStesen = 'Perlabuhan Klang';
         }
-        if ($this->selectedStesen == 5) {
+        if ($stesen == 'tanjung-keling') {
             $this->namaStesen = 'Tanjung Keling';
         }
-        if ($this->selectedStesen == 6) {
+        if ($stesen == 'kukup') {
             $this->namaStesen = 'Kukup';
         }
-        if ($this->selectedStesen == 7) {
+        if ($stesen == 'johor-bahru') {
             $this->namaStesen = 'Johor Bahru';
         }
-        if ($this->selectedStesen == 8) {
+        if ($stesen == 'tajung-sedili' ) {
             $this->namaStesen = 'Tanjung Sedili';
         }
-        if ($this->selectedStesen == 9) {
+        if ($stesen == 'pulau-tioman' ) {
             $this->namaStesen = 'Pulau Tioman';
         }
-        if ($this->selectedStesen == 10) {
+        if ($stesen == 'tanjung-gelang') {
             $this->namaStesen = 'Tanjung Gelang';
         }
-        if ($this->selectedStesen == 11) {
+        if ($stesen == 'cendering') {
             $this->namaStesen = 'Cendering';
         }
-        if ($this->selectedStesen == 12) {
+        if ($stesen == 'geting') {
             $this->namaStesen = 'Geting';
         }
-        if ($this->selectedStesen == 13) {
+        if ($stesen == 'pulau-lekai') {
             $this->namaStesen = 'Pulau Lekai';
         }
-        if ($this->selectedStesen == 14) {
+        if ($stesen == 'sejingkat') {
             $this->namaStesen = 'Sejingkat';
         }
-        if ($this->selectedStesen == 15) {
+        if ($stesen == 'bintulu') {
             $this->namaStesen = 'Bintulu';
         }
-        if ($this->selectedStesen == 16) {
+        if ($stesen == 'miri') {
             $this->namaStesen = 'Miri';
         }
-        if ($this->selectedStesen == 17) {
+        if ($stesen == 'kota-kinabalu') {
             $this->namaStesen = 'Kota Kinabalu';
         }
-        if ($this->selectedStesen == 18) {
+        if ($stesen == 'kudat') {
             $this->namaStesen = 'Kudat';
         }
-        if ($this->selectedStesen == 19) {
+        if ($stesen == 'sandakan') {
             $this->namaStesen = 'Sandakan';
         }
-        if ($this->selectedStesen == 20) {
+        if ($stesen == 'lahad-datu') {
             $this->namaStesen = 'Lahad Datu';
         }
-        if ($this->selectedStesen == 21) {
+        if ($stesen == 'tawau') {
             $this->namaStesen = 'Tawau';
         }
-        if ($this->selectedStesen == 22) {
+        if ($stesen == 'labuan') {
             $this->namaStesen = 'Labuan';
         }
     }
