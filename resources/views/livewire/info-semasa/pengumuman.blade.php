@@ -53,7 +53,7 @@
                         {{-- <a href="/pengumuman/{{ $item->id }}" target="_blank" rel="noopener noreferrer">
                             {{ $item->title_my }}
                         </a> --}}
-                        <a href="/info-semasa/pengumuman/{{ $item->id }}" target="_blank">
+                        <a href="{{ route('pengumuman-read', [app()->getLocale(), 'id' => $item->id]) }}" target="_blank">
                             @if (app()->getLocale() == 'ms')
                                 {{ $item->title_my }}
                             @elseif ($item->title_en == null)

@@ -25,6 +25,10 @@
                                     Warga Jupem
                                 @elseif (url()->current() == route('faq', app()->getLocale()))
                                     Soalan Lazim
+                                @elseif (url()->current() == route('info-semasa', app()->getLocale()))
+                                    Info Semasa
+                                @elseif (url()->current() == route('maklum-balas-create', app()->getLocale()))
+                                    Maklum Balas
                                 @endif
                             </strong>
                         </div>

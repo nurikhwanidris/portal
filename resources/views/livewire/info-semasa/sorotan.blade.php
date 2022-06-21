@@ -57,8 +57,8 @@
                         {{ $loop->iteration }}
                     </td>
                     <td>
-                        <a href="/info-semasa/berita-terkini/{{ $item->id }}" target="_blank"
-                            rel="noopener noreferrer">
+                        <a href="{{ route('berita-terkini-read', [app()->getLocale(), 'id' => $item->id]) }}"
+                            target="_blank" rel="noopener noreferrer">
                             @if (app()->getLocale() == 'en')
                                 {{ $item->title_en }}
                             @elseif ($item->title_en == null)
@@ -72,7 +72,7 @@
                         {{ $item->created_at->format('Y') }}
                     </td>
                     <td class="text-center align-middle">
-                        {{ $item->created_at->format('d m Y') }}
+                        {{ $item->created_at->format('d-m-Y') }}
                     </td>
                 </tr>
             @endforeach

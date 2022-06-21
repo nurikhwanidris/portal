@@ -85,7 +85,8 @@
                                         <!-- Sama page Orang Awam > Muat Turun Borang Pemetaan -->
                                     </li> --}}
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#tab-12" data-bs-toggle="tab">Sistem Dalaman</a>
+                                        <a class="nav-link" target="_blank" href="https://app.jupem.gov.my">Sistem
+                                            Dalaman</a>
                                     </li>
                                 </ul>
                             </div>
@@ -124,6 +125,9 @@
                             {{-- @livewire('warga-jupem.dokumen-jabatan') --}}
                             {{-- sama dengan orang awam > muat-turun --}}
                             @livewire('orang-awam.muat-turun')
+                        </div>
+                        <div class="tab-pane tab-pane-navigation" id="tab-12">
+                            @livewire('warga-jupem.sistem-dalaman')
                         </div>
                     </div>
                 </div>
