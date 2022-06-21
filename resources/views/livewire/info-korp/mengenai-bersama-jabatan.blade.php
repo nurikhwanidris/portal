@@ -1,4 +1,10 @@
 <div>
+    <div class="row">
+        <div class="col">
+            <div class="text-left text-title-semasa-11" style="padding-top: 40px;padding-bottom: 20px;">Majlis
+                Bersama Jabatan</div>
+        </div>
+    </div>
     <!-- ======================== -->
     {{-- <div class="container">
         <div class="row">

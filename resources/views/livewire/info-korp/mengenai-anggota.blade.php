@@ -29,11 +29,12 @@
                 <div class="row team-list sort-destination" data-sort-id="team">
                     <!-- Mantan ============ -->
                     <!-- Person Mantan - 1 -->
-                    <div class="col-12 col-sm-6 col-lg-4 isotope-item mantan" style="height:300px;">
+                    <div class="col-12 col-sm-6 col-lg-4 isotope-item mantan" style="height:400px;">
                         <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
                             <span class="thumb-info-wrapper">
                                 <a href="#">
-                                    <img src="main/img/anggota/mantan/mantan-1.jpg" class="img-fluid" alt="">
+                                    <img src="{{ asset('main/img/anggota/mantan/mantan-1.jpg') }}" class="img-fluid"
+                                        alt="">
                                 </a>
                             </span>
                             <span class="thumb-info-caption">
@@ -56,11 +57,11 @@
                     </div>
                     <!-- -------- -->
                     <!-- Person  Mantan - 2 -->
-                    <div class="col-12 col-sm-6 col-lg-4 isotope-item mantan" style="height:300px;">
+                    <div class="col-12 col-sm-6 col-lg-4 isotope-item mantan" style="height:400px;">
                         <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
                             <span class="thumb-info-wrapper">
                                 <a href="#">
-                                    <img src="main/img/anggota/mantan/mantan-2.jpg" class="img-fluid" alt="">
+                                    <img src="{{ asset('main/img/anggota/mantan/mantan-2.jpg') }}" class="img-fluid" alt="">
                                 </a>
                             </span>
                             <span class="thumb-info-caption">
@@ -83,11 +84,11 @@
                     </div>
                     <!-- -------- -->
                     <!-- Person  Mantan - 3 -->
-                    <div class="col-12 col-sm-6 col-lg-4 isotope-item mantan" style="height:300px;">
+                    <div class="col-12 col-sm-6 col-lg-4 isotope-item mantan" style="height:400px;">
                         <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
                             <span class="thumb-info-wrapper">
                                 <a href="#">
-                                    <img src="main/img/anggota/default.jpg" class="img-fluid" alt="">
+                                    <img src="asset('main/img/anggota/default.jpg')" class="img-fluid" alt="">
                                 </a>
                             </span>
                             <span class="thumb-info-caption">
@@ -110,11 +111,11 @@
                     </div>
                     <!-- -------- -->
                     <!-- Person  Mantan - 4 -->
-                    <div class="col-12 col-sm-6 col-lg-4 isotope-item mantan" style="height:300px;">
+                    <div class="col-12 col-sm-6 col-lg-4 isotope-item mantan" style="height:400px;">
                         <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
                             <span class="thumb-info-wrapper">
                                 <a href="#">
-                                    <img src="main/img/anggota/mantan/mantan-4.jpg" class="img-fluid" alt="">
+                                    <img src="{{ asset('main/img/anggota/mantan/mantan-4.jpg') }}" class="img-fluid" alt="">
                                 </a>
                             </span>
                             <span class="thumb-info-caption">
@@ -137,11 +138,11 @@
                     </div>
                     <!-- -------- -->
                     <!-- Person  Mantan - 5 -->
-                    <div class="col-12 col-sm-6 col-lg-4 isotope-item mantan" style="height:300px;">
+                    <div class="col-12 col-sm-6 col-lg-4 isotope-item mantan" style="height:400px;">
                         <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
                             <span class="thumb-info-wrapper">
                                 <a href="#">
-                                    <img src="main/img/anggota/mantan/mantan-5.jpg" class="img-fluid" alt="">
+                                    <img src="{{ asset('main/img/anggota/mantan/mantan-5.jpg') }}" class="img-fluid" alt="">
                                 </a>
                             </span>
                             <span class="thumb-info-caption">
@@ -164,11 +165,11 @@
                     </div>
                     <!-- -------- -->
                     <!-- Person  Mantan - 6 -->
-                    <div class="col-12 col-sm-6 col-lg-4 isotope-item mantan" style="height:300px;">
+                    <div class="col-12 col-sm-6 col-lg-4 isotope-item mantan" style="height:400px;">
                         <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
                             <span class="thumb-info-wrapper">
                                 <a href="#">
-                                    <img src="main/img/anggota/mantan/mantan-6.jpg" class="img-fluid" alt="">
+                                    <img src="{{ asset('main/img/anggota/mantan/mantan-6.jpg') }}" class="img-fluid" alt="">
                                 </a>
                             </span>
                             <span class="thumb-info-caption">
@@ -191,11 +192,11 @@
                     </div>
                     <!-- -------- -->
                     <!-- Person  Mantan - 7 -->
-                    <div class="col-12 col-sm-6 col-lg-4 isotope-item mantan" style="height:300px;">
+                    <div class="col-12 col-sm-6 col-lg-4 isotope-item mantan" style="height:400px;">
                         <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
                             <span class="thumb-info-wrapper">
                                 <a href="#">
-                                    <img src="main/img/anggota/mantan/mantan-7.jpg" class="img-fluid" alt="">
+                                    <img src="{{ asset('main/img/anggota/mantan/mantan-7.jpg') }}" class="img-fluid" alt="">
                                 </a>
                             </span>
                             <span class="thumb-info-caption">
@@ -218,11 +219,11 @@
                     </div>
                     <!-- -------- -->
                     <!-- Person  Mantan - 8 -->
-                    <div class="col-12 col-sm-6 col-lg-4 isotope-item mantan" style="height:300px;">
+                    <div class="col-12 col-sm-6 col-lg-4 isotope-item mantan" style="height:400px;">
                         <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
                             <span class="thumb-info-wrapper">
                                 <a href="#">
-                                    <img src="main/img/anggota/mantan/mantan-8.jpg" class="img-fluid" alt="">
+                                    <img src="{{ asset('main/img/anggota/mantan/mantan-8.jpg') }}" class="img-fluid" alt="">
                                 </a>
                             </span>
                             <span class="thumb-info-caption">
@@ -245,11 +246,11 @@
                     </div>
                     <!-- -------- -->
                     <!-- Person  Mantan - 9 -->
-                    <div class="col-12 col-sm-6 col-lg-4 isotope-item mantan" style="height:300px;">
+                    <div class="col-12 col-sm-6 col-lg-4 isotope-item mantan" style="height:400px;">
                         <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
                             <span class="thumb-info-wrapper">
                                 <a href="#">
-                                    <img src="main/img/anggota/mantan/mantan-9.jpg" class="img-fluid" alt="">
+                                    <img src="{{ asset('main/img/anggota/mantan/mantan-9.jpg') }}" class="img-fluid" alt="">
                                 </a>
                             </span>
                             <span class="thumb-info-caption">
@@ -272,11 +273,12 @@
                     </div>
                     <!-- -------- -->
                     <!-- Person  Mantan - 10 -->
-                    <div class="col-12 col-sm-6 col-lg-4 isotope-item mantan" style="height:300px;">
+                    <div class="col-12 col-sm-6 col-lg-4 isotope-item mantan" style="height:400px;">
                         <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
                             <span class="thumb-info-wrapper">
                                 <a href="#">
-                                    <img src="main/img/anggota/mantan/mantan-10.jpg" class="img-fluid" alt="">
+                                    <img src="{{ asset('main/img/anggota/mantan/mantan-10.jpg') }}" class="img-fluid"
+                                        alt="">
                                 </a>
                             </span>
                             <span class="thumb-info-caption">
@@ -299,11 +301,12 @@
                     </div>
                     <!-- -------- -->
                     <!-- Person  Mantan - 11 -->
-                    <div class="col-12 col-sm-6 col-lg-4 isotope-item mantan" style="height:300px;">
+                    <div class="col-12 col-sm-6 col-lg-4 isotope-item mantan" style="height:400px;">
                         <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
                             <span class="thumb-info-wrapper">
                                 <a href="#">
-                                    <img src="main/img/anggota/mantan/mantan-11.jpg" class="img-fluid" alt="">
+                                    <img src="{{ asset('main/img/anggota/mantan/mantan-11.jpg') }}" class="img-fluid"
+                                        alt="">
                                 </a>
                             </span>
                             <span class="thumb-info-caption">
@@ -328,11 +331,12 @@
 
                     <!-- KP ============ -->
                     <!-- Person KP - 1 -->
-                    <div class="col-12 col-sm-6 col-lg-4 isotope-item kp" style="height:300px;">
+                    <div class="col-12 col-sm-6 col-lg-4 isotope-item kp" style="height:400px;">
                         <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
                             <span class="thumb-info-wrapper">
                                 <a href="#">
-                                    <img src="main/img/anggota/mantan/mantan-kp-1.jpg" class="img-fluid" alt="">
+                                    <img src="{{ asset('main/img/anggota/mantan/mantan-kp-1.jpg') }}" class="img-fluid"
+                                        alt="">
                                 </a>
                             </span>
                             <span class="thumb-info-caption">
@@ -356,11 +360,12 @@
                     </div>
                     <!-- -------- -->
                     <!-- Person  KP - 2 -->
-                    <div class="col-12 col-sm-6 col-lg-4 isotope-item kp" style="height:300px;">
+                    <div class="col-12 col-sm-6 col-lg-4 isotope-item kp" style="height:400px;">
                         <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
                             <span class="thumb-info-wrapper">
                                 <a href="#">
-                                    <img src="main/img/anggota/mantan/mantan-kp-2.jpg" class="img-fluid" alt="">
+                                    <img src="{{ asset('main/img/anggota/mantan/mantan-kp-2.jpg') }}" class="img-fluid"
+                                        alt="">
                                 </a>
                             </span>
                             <span class="thumb-info-caption">
@@ -384,11 +389,12 @@
                     </div>
                     <!-- -------- -->
                     <!-- Person  KP - 3 -->
-                    <div class="col-12 col-sm-6 col-lg-4 isotope-item kp" style="height:300px;">
+                    <div class="col-12 col-sm-6 col-lg-4 isotope-item kp" style="height:400px;">
                         <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
                             <span class="thumb-info-wrapper">
                                 <a href="#">
-                                    <img src="main/img/anggota/mantan/mantan-kp-3.jpg" class="img-fluid" alt="">
+                                    <img src="{{ asset('main/img/anggota/mantan/mantan-kp-3.jpg') }}" class="img-fluid"
+                                        alt="">
                                 </a>
                             </span>
                             <span class="thumb-info-caption">
@@ -412,11 +418,12 @@
                     </div>
                     <!-- -------- -->
                     <!-- Person  KP - 4 -->
-                    <div class="col-12 col-sm-6 col-lg-4 isotope-item kp" style="height:300px;">
+                    <div class="col-12 col-sm-6 col-lg-4 isotope-item kp" style="height:400px;">
                         <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
                             <span class="thumb-info-wrapper">
                                 <a href="#">
-                                    <img src="main/img/anggota/mantan/mantan-kp-4.jpg" class="img-fluid" alt="">
+                                    <img src="{{ asset('main/img/anggota/mantan/mantan-kp-4.jpg') }}" class="img-fluid"
+                                        alt="">
                                 </a>
                             </span>
                             <span class="thumb-info-caption">
@@ -440,11 +447,12 @@
                     </div>
                     <!-- -------- -->
                     <!-- Person  KP - 5 -->
-                    <div class="col-12 col-sm-6 col-lg-4 isotope-item kp" style="height:300px;">
+                    <div class="col-12 col-sm-6 col-lg-4 isotope-item kp" style="height:400px;">
                         <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
                             <span class="thumb-info-wrapper">
                                 <a href="#">
-                                    <img src="main/img/anggota/mantan/mantan-kp-5.jpg" class="img-fluid" alt="">
+                                    <img src="{{ asset('main/img/anggota/mantan/mantan-kp-5.jpg') }}" class="img-fluid"
+                                        alt="">
                                 </a>
                             </span>
                             <span class="thumb-info-caption">
@@ -468,11 +476,12 @@
                     </div>
                     <!-- -------- -->
                     <!-- Person  KP - 6 -->
-                    <div class="col-12 col-sm-6 col-lg-4 isotope-item kp" style="height:300px;">
+                    <div class="col-12 col-sm-6 col-lg-4 isotope-item kp" style="height:400px;">
                         <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
                             <span class="thumb-info-wrapper">
                                 <a href="#">
-                                    <img src="main/img/anggota/mantan/mantan-kp-6.jpg" class="img-fluid" alt="">
+                                    <img src="{{ asset('main/img/anggota/mantan/mantan-kp-6.jpg') }}" class="img-fluid"
+                                        alt="">
                                 </a>
                             </span>
                             <span class="thumb-info-caption">
@@ -496,11 +505,12 @@
                     </div>
                     <!-- -------- -->
                     <!-- Person  KP - 7 -->
-                    <div class="col-12 col-sm-6 col-lg-4 isotope-item kp" style="height:300px;">
+                    <div class="col-12 col-sm-6 col-lg-4 isotope-item kp" style="height:400px;">
                         <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
                             <span class="thumb-info-wrapper">
                                 <a href="#">
-                                    <img src="main/img/anggota/mantan/mantan-kp-7.jpg" class="img-fluid" alt="">
+                                    <img src="{{ asset('main/img/anggota/mantan/mantan-kp-7.jpg') }}" class="img-fluid"
+                                        alt="">
                                 </a>
                             </span>
                             <span class="thumb-info-caption">
@@ -524,11 +534,12 @@
                     </div>
                     <!-- -------- -->
                     <!-- Person  KP - 8 -->
-                    <div class="col-12 col-sm-6 col-lg-4 isotope-item kp" style="height:300px;">
+                    <div class="col-12 col-sm-6 col-lg-4 isotope-item kp" style="height:400px;">
                         <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
                             <span class="thumb-info-wrapper">
                                 <a href="#">
-                                    <img src="main/img/anggota/mantan/mantan-kp-8.jpg" class="img-fluid" alt="">
+                                    <img src="{{ asset('main/img/anggota/mantan/mantan-kp-8.jpg') }}" class="img-fluid"
+                                        alt="">
                                 </a>
                             </span>
                             <span class="thumb-info-caption">
@@ -552,11 +563,12 @@
                     </div>
                     <!-- -------- -->
                     <!-- Person  KP - 9 -->
-                    <div class="col-12 col-sm-6 col-lg-4 isotope-item kp" style="height:300px;">
+                    <div class="col-12 col-sm-6 col-lg-4 isotope-item kp" style="height:400px;">
                         <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
                             <span class="thumb-info-wrapper">
                                 <a href="#">
-                                    <img src="main/img/anggota/mantan/mantan-kp-9.jpg" class="img-fluid" alt="">
+                                    <img src="{{ asset('main/img/anggota/mantan/mantan-kp-9.jpg') }}" class="img-fluid"
+                                        alt="">
                                 </a>
                             </span>
                             <span class="thumb-info-caption">
@@ -580,11 +592,12 @@
                     </div>
                     <!-- -------- -->
                     <!-- Person  KP - 10 -->
-                    <div class="col-12 col-sm-6 col-lg-4 isotope-item kp" style="height:300px;">
+                    <div class="col-12 col-sm-6 col-lg-4 isotope-item kp" style="height:400px;">
                         <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
                             <span class="thumb-info-wrapper">
                                 <a href="#">
-                                    <img src="main/img/anggota/mantan/mantan-kp-10.jpg" class="img-fluid" alt="">
+                                    <img src="{{ asset('main/img/anggota/mantan/mantan-kp-10.jpg') }}" class="img-fluid"
+                                        alt="">
                                 </a>
                             </span>
                             <span class="thumb-info-caption">
@@ -608,11 +621,12 @@
                     </div>
                     <!-- -------- -->
                     <!-- Person  KP - 11 -->
-                    <div class="col-12 col-sm-6 col-lg-4 isotope-item kp" style="height:300px;">
+                    <div class="col-12 col-sm-6 col-lg-4 isotope-item kp" style="height:400px;">
                         <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
                             <span class="thumb-info-wrapper">
                                 <a href="#">
-                                    <img src="main/img/anggota/mantan/mantan-kp-11.jpg" class="img-fluid" alt="">
+                                    <img src="{{ asset('main/img/anggota/mantan/mantan-kp-11.jpg') }}" class="img-fluid"
+                                        alt="">
                                 </a>
                             </span>
                             <span class="thumb-info-caption">
@@ -636,11 +650,12 @@
                     </div>
                     <!-- -------- -->
                     <!-- Person  KP - 12 -->
-                    <div class="col-12 col-sm-6 col-lg-4 isotope-item kp" style="height:300px;">
+                    <div class="col-12 col-sm-6 col-lg-4 isotope-item kp" style="height:400px;">
                         <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
                             <span class="thumb-info-wrapper">
                                 <a href="#">
-                                    <img src="main/img/anggota/mantan/mantan-kp-12.jpg" class="img-fluid" alt="">
+                                    <img src="{{ asset('main/img/anggota/mantan/mantan-kp-12.jpg') }}" class="img-fluid"
+                                        alt="">
                                 </a>
                             </span>
                             <span class="thumb-info-caption">

@@ -79,11 +79,10 @@
                                         <a class="nav-link" href="#tab-10" data-bs-toggle="tab">Dokumen
                                             Jabatan</a>
                                     </li>
-                                    {{-- <li class="nav-item">
-                                        <a class="nav-link" href="#tab-11" data-bs-toggle="tab">Muat Turun Borang
-                                            JUPEM</a>
-                                        <!-- Sama page Orang Awam > Muat Turun Borang Pemetaan -->
-                                    </li> --}}
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#tab-11" data-bs-toggle="tab">Majlis Bersama
+                                            Jabatan</a>
+                                    </li>
                                     <li class="nav-item">
                                         <a class="nav-link" target="_blank" href="https://app.jupem.gov.my">Sistem
                                             Dalaman</a>
@@ -122,9 +121,10 @@
                             @livewire('warga-jupem.dasar-pekeliling')
                         </div>
                         <div class="tab-pane tab-pane-navigation" id="tab-10">
-                            {{-- @livewire('warga-jupem.dokumen-jabatan') --}}
-                            {{-- sama dengan orang awam > muat-turun --}}
                             @livewire('orang-awam.muat-turun')
+                        </div>
+                        <div class="tab-pane tab-pane-navigation" id="tab-11">
+                            @livewire('info-korp.mengenai-bersama-jabatan')
                         </div>
                         <div class="tab-pane tab-pane-navigation" id="tab-12">
                             @livewire('warga-jupem.sistem-dalaman')

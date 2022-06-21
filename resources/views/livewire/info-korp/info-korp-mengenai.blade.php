@@ -76,7 +76,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- 5 -->
+                    {{-- <!-- 5 -->
                     <div class="card card-default">
                         <div class="card-header" id="collapse200HeadingFour">
                             <h4 class="card-title m-0">
@@ -93,7 +93,7 @@
                                 @livewire('info-korp.mengenai-bersama-jabatan')
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                     <!-- 6 -->
                     <div class="card card-default">
                         <div class="card-header" id="collapse200HeadingFive">

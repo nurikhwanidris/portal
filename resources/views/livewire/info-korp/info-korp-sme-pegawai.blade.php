@@ -6,18 +6,21 @@
             </div>
         </div>
         <!-- Maklumat Pegawai - START -->
-        <div class="row pb-0 pt-3 mb-5 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="200">
+        <div class="row pb-0 pt-3 mb-5 appear-animation" data-appear-animation="fadeInUpShorter"
+            data-appear-animation-delay="200">
             <div class="col-sm-6 col-lg-4 mb-4 mb-lg-0">
                 <span class="thumb-info thumb-info-hide-wrapper-bg thumb-info-no-zoom">
                     <span class="thumb-info-wrapper">
-                        <a href="about-me.html">
-                            <img src="img/anggota/default-potrait.jpg" class="img-fluid" alt="">
+                        <a href="#">
+                            <img src="{{ asset('storage/upload/img/pegawai/dafb5-sr-hazri-g.jpg') }}" class="img-fluid"
+                                alt="">
                         </a>
                     </span>
                     <span class="thumb-info-caption">
-                        <ul class="list list-icons list-icons-style-2 list-icons-sm mt-2 appear-animation ul-kite" data-appear-animation="maskUp" data-appear-animation-delay="300">
+                        <ul class="list list-icons list-icons-style-2 list-icons-sm mt-2 appear-animation ul-kite"
+                            data-appear-animation="maskUp" data-appear-animation-delay="300">
                             <h4 class="font-weight-bold mb-2 size-text-standard">Sr HAZRI BIN HASSAN</h4>
-                            <h2 class="font-weight-bold mb-0 pt-0 mt-0 size-text-standard-2" >
+                            <h2 class="font-weight-bold mb-0 pt-0 mt-0 size-text-standard-2">
                                 Timbalan Pengarah Ukur Bahagian Dasar dan Penyelarasan Pemetaan
                             </h2>
                             <li class="li-kite">
@@ -28,7 +31,8 @@
                             <li class="li-kite">
                                 <i class="fas fa-envelope top-6"></i>
                                 <strong>Bidang Kepakaran:</strong><br>
-                                SME Pemetaan (Pemetaan Light Detection and Ranging (LiDAR)/ Synthetic Aperture Radar (SAR))
+                                SME Pemetaan (Pemetaan Light Detection and Ranging (LiDAR)/ Synthetic Aperture Radar
+                                (SAR))
                             </li>
                             <li class="li-kite">
                                 <i class="fas fa-envelope top-6"></i>
