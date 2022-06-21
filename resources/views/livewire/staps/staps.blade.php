@@ -13,9 +13,11 @@
         <!-- Button - Stesen - START -->
         <div class="row">
             <div class="col">
-                <button wire:click='selectedStesen(1, "pulau-langkawi")' value="1" class="btn btn-outline btn-quaternary mb-2">Pulau
+                <button wire:click='selectedStesen(1, "pulau-langkawi")' value="1"
+                    class="btn btn-outline btn-quaternary mb-2">Pulau
                     Langkawi</button>
-                <button wire:click='selectedStesen(2, "pulau-pinang")' value="2" class="btn btn-outline btn-quaternary mb-2">Pulau
+                <button wire:click='selectedStesen(2, "pulau-pinang")' value="2"
+                    class="btn btn-outline btn-quaternary mb-2">Pulau
                     Pinang</button>
                 <button wire:click='selectedStesen(3, "lumut")' value="3"
                     class="btn btn-outline btn-quaternary mb-2">Lumut</button>
@@ -27,12 +29,14 @@
                     Keling</button>
                 <button wire:click='selectedStesen(6,"kukup")' value="6"
                     class="btn btn-outline btn-quaternary mb-2">Kukup</button>
-                <button wire:click='selectedStesen(7,"johor-bahru")' value="7" class="btn btn-outline btn-quaternary mb-2">Johor
+                <button wire:click='selectedStesen(7,"johor-bahru")' value="7"
+                    class="btn btn-outline btn-quaternary mb-2">Johor
                     Bahru</button>
                 <button wire:click='selectedStesen(8,"tanjung-sedili")' value="8"
                     class="btn btn-outline btn-quaternary mb-2">Tanjung
                     Sedili</button>
-                <button wire:click='selectedStesen(9,"pulau-tioman")' value="9" class="btn btn-outline btn-quaternary mb-2">Pulau
+                <button wire:click='selectedStesen(9,"pulau-tioman")' value="9"
+                    class="btn btn-outline btn-quaternary mb-2">Pulau
                     Tioman</button>
                 <button wire:click='selectedStesen(10,"tanjung-gelang")' value="10"
                     class="btn btn-outline btn-quaternary mb-2">Tanjung
@@ -41,7 +45,8 @@
                     class="btn btn-outline btn-quaternary mb-2">Cendering</button>
                 <button wire:click='selectedStesen(12,"geting")' value="12"
                     class="btn btn-outline btn-quaternary mb-2">Geting</button>
-                <button wire:click='selectedStesen(13,"pulau-lekai")' value="13" class="btn btn-outline btn-quaternary mb-2">Pulau
+                <button wire:click='selectedStesen(13,"pulau-lekai")' value="13"
+                    class="btn btn-outline btn-quaternary mb-2">Pulau
                     Lekai</button>
                 <button wire:click='selectedStesen(14,"sejingkat")' value="14"
                     class="btn btn-outline btn-quaternary mb-2">Sejingkat</button>
@@ -51,29 +56,21 @@
                     class="btn btn-outline btn-quaternary mb-2">Miri</button>
                 <button wire:click='selectedStesen(22,"labuan")' value="22"
                     class="btn btn-outline btn-quaternary mb-2">Labuan</button>
-                <button wire:click='selectedStesen(17,"kota-kinabalu")' value="17" class="btn btn-outline btn-quaternary mb-2">Kota
+                <button wire:click='selectedStesen(17,"kota-kinabalu")' value="17"
+                    class="btn btn-outline btn-quaternary mb-2">Kota
                     Kinabalu</button>
                 <button wire:click='selectedStesen(18,"kudat")' value="18"
                     class="btn btn-outline btn-quaternary mb-2">Kudat</button>
                 <button wire:click='selectedStesen(19,"sandakan")' value="19"
                     class="btn btn-outline btn-quaternary mb-2">Sandakan</button>
-                <button wire:click='selectedStesen(20,"lahad-datu")' value="20" class="btn btn-outline btn-quaternary mb-2">Lahad
+                <button wire:click='selectedStesen(20,"lahad-datu")' value="20"
+                    class="btn btn-outline btn-quaternary mb-2">Lahad
                     Datu</button>
                 <button wire:click='selectedStesen(21,"tawau")' value="21"
                     class="btn btn-outline btn-quaternary mb-2">Tawau</button>
             </div>
         </div>
         <!-- Button - Stesen - END -->
-
-        {{-- Test --}}
-        {{-- <div class="row">
-            <div class="col">
-                <select wire:model='selectedStesen' name="" id="" class="form-control">
-                    <option value="1">Pulau Langkawi</option>
-                    <option value="2">Pulau Pinang</option>
-                </select>
-            </div>
-        </div> --}}
 
         <!-- Button - Pilih hari - START -->
         <div class="row my-3">
