@@ -138,48 +138,52 @@
                                         {{ $stesen[0]->STAP_KETINGGIAN }}cm
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td>
-                                        @if ($stesen[1]->STAP_KETINGGIAN >= 150)
-                                            <span
-                                                class="badge badge-secondary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">
-                                                {{ __('message.air_pasang') }}
-                                            </span>
-                                        @else
-                                            <span
-                                                class="badge badge-tertiary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">
-                                                {{ __('message.air_surut') }}
-                                            </span>
-                                        @endif
-                                    </td>
-                                    <td class="align-center text-center">
-                                        {{ str_pad($stesen[1]->STAP_JAM, 2, 0, STR_PAD_LEFT) . ':' . str_pad($stesen[1]->STAP_MINIT, 2, 0, STR_PAD_LEFT) }}
-                                    </td>
-                                    <td class="align-center text-center">
-                                        {{ $stesen[1]->STAP_KETINGGIAN }}cm
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        @if ($stesen[2]->STAP_KETINGGIAN >= 150)
-                                            <span
-                                                class="badge badge-secondary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">
-                                                {{ __('message.air_pasang') }}
-                                            </span>
-                                        @else
-                                            <span
-                                                class="badge badge-tertiary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">
-                                                {{ __('message.air_surut') }}
-                                            </span>
-                                        @endif
-                                    </td>
-                                    <td class="align-center text-center">
-                                        {{ str_pad($stesen[2]->STAP_JAM, 2, 0, STR_PAD_LEFT) . ':' . str_pad($stesen[2]->STAP_MINIT, 2, 0, STR_PAD_LEFT) }}
-                                    </td>
-                                    <td class="align-center text-center">
-                                        {{ $stesen[2]->STAP_KETINGGIAN }}cm
-                                    </td>
-                                </tr>
+                                @if (count($stesen) >= 2)
+                                    <tr>
+                                        <td>
+                                            @if ($stesen[1]->STAP_KETINGGIAN >= 150)
+                                                <span
+                                                    class="badge badge-secondary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">
+                                                    {{ __('message.air_pasang') }}
+                                                </span>
+                                            @else
+                                                <span
+                                                    class="badge badge-tertiary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">
+                                                    {{ __('message.air_surut') }}
+                                                </span>
+                                            @endif
+                                        </td>
+                                        <td class="align-center text-center">
+                                            {{ str_pad($stesen[1]->STAP_JAM, 2, 0, STR_PAD_LEFT) . ':' . str_pad($stesen[1]->STAP_MINIT, 2, 0, STR_PAD_LEFT) }}
+                                        </td>
+                                        <td class="align-center text-center">
+                                            {{ $stesen[1]->STAP_KETINGGIAN }}cm
+                                        </td>
+                                    </tr>
+                                @endif
+                                @if (count($stesen) >= 3)
+                                    <tr>
+                                        <td>
+                                            @if ($stesen[2]->STAP_KETINGGIAN >= 150)
+                                                <span
+                                                    class="badge badge-secondary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">
+                                                    {{ __('message.air_pasang') }}
+                                                </span>
+                                            @else
+                                                <span
+                                                    class="badge badge-tertiary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">
+                                                    {{ __('message.air_surut') }}
+                                                </span>
+                                            @endif
+                                        </td>
+                                        <td class="align-center text-center">
+                                            {{ str_pad($stesen[2]->STAP_JAM, 2, 0, STR_PAD_LEFT) . ':' . str_pad($stesen[2]->STAP_MINIT, 2, 0, STR_PAD_LEFT) }}
+                                        </td>
+                                        <td class="align-center text-center">
+                                            {{ $stesen[2]->STAP_KETINGGIAN }}cm
+                                        </td>
+                                    </tr>
+                                @endif
                                 @if (count($stesen) >= 4)
                                     <tr>
                                         <td>
@@ -244,48 +248,52 @@
                                         {{ $stesen1[0]->STAP_KETINGGIAN }}cm
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td>
-                                        @if ($stesen1[1]->STAP_KETINGGIAN >= 150)
-                                            <span
-                                                class="badge badge-secondary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">
-                                                {{ __('message.air_pasang') }}
-                                            </span>
-                                        @else
-                                            <span
-                                                class="badge badge-tertiary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">
-                                                {{ __('message.air_surut') }}
-                                            </span>
-                                        @endif
-                                    </td>
-                                    <td class="align-center text-center">
-                                        {{ str_pad($stesen1[1]->STAP_JAM, 2, 0, STR_PAD_LEFT) . ':' . str_pad($stesen1[1]->STAP_MINIT, 2, 0, STR_PAD_LEFT) }}
-                                    </td>
-                                    <td class="align-center text-center">
-                                        {{ $stesen1[1]->STAP_KETINGGIAN }}cm
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        @if ($stesen1[2]->STAP_KETINGGIAN >= 150)
-                                            <span
-                                                class="badge badge-secondary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">
-                                                {{ __('message.air_pasang') }}
-                                            </span>
-                                        @else
-                                            <span
-                                                class="badge badge-tertiary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">
-                                                {{ __('message.air_surut') }}
-                                            </span>
-                                        @endif
-                                    </td>
-                                    <td class="align-center text-center">
-                                        {{ str_pad($stesen1[2]->STAP_JAM, 2, 0, STR_PAD_LEFT) . ':' . str_pad($stesen1[2]->STAP_MINIT, 2, 0, STR_PAD_LEFT) }}
-                                    </td>
-                                    <td class="align-center text-center">
-                                        {{ $stesen1[2]->STAP_KETINGGIAN }}cm
-                                    </td>
-                                </tr>
+                                @if (count($stesen1) >= 2)
+                                    <tr>
+                                        <td>
+                                            @if ($stesen1[1]->STAP_KETINGGIAN >= 150)
+                                                <span
+                                                    class="badge badge-secondary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">
+                                                    {{ __('message.air_pasang') }}
+                                                </span>
+                                            @else
+                                                <span
+                                                    class="badge badge-tertiary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">
+                                                    {{ __('message.air_surut') }}
+                                                </span>
+                                            @endif
+                                        </td>
+                                        <td class="align-center text-center">
+                                            {{ str_pad($stesen1[1]->STAP_JAM, 2, 0, STR_PAD_LEFT) . ':' . str_pad($stesen1[1]->STAP_MINIT, 2, 0, STR_PAD_LEFT) }}
+                                        </td>
+                                        <td class="align-center text-center">
+                                            {{ $stesen1[1]->STAP_KETINGGIAN }}cm
+                                        </td>
+                                    </tr>
+                                @endif
+                                @if (count($stesen1) >= 3)
+                                    <tr>
+                                        <td>
+                                            @if ($stesen1[2]->STAP_KETINGGIAN >= 150)
+                                                <span
+                                                    class="badge badge-secondary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">
+                                                    {{ __('message.air_pasang') }}
+                                                </span>
+                                            @else
+                                                <span
+                                                    class="badge badge-tertiary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">
+                                                    {{ __('message.air_surut') }}
+                                                </span>
+                                            @endif
+                                        </td>
+                                        <td class="align-center text-center">
+                                            {{ str_pad($stesen1[2]->STAP_JAM, 2, 0, STR_PAD_LEFT) . ':' . str_pad($stesen1[2]->STAP_MINIT, 2, 0, STR_PAD_LEFT) }}
+                                        </td>
+                                        <td class="align-center text-center">
+                                            {{ $stesen1[2]->STAP_KETINGGIAN }}cm
+                                        </td>
+                                    </tr>
+                                @endif
                                 @if (count($stesen1) >= 4)
                                     <tr>
                                         <td>
@@ -351,48 +359,52 @@
                                         {{ $stesen[0]->STAP_KETINGGIAN }}cm
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td>
-                                        @if ($stesen[1]->STAP_KETINGGIAN >= 150)
-                                            <span
-                                                class="badge badge-secondary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">
-                                                {{ __('message.air_pasang') }}
-                                            </span>
-                                        @else
-                                            <span
-                                                class="badge badge-tertiary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">
-                                                {{ __('message.air_surut') }}
-                                            </span>
-                                        @endif
-                                    </td>
-                                    <td class="align-center text-center">
-                                        {{ str_pad($stesen[1]->STAP_JAM, 2, 0, STR_PAD_LEFT) . ':' . str_pad($stesen[1]->STAP_MINIT, 2, 0, STR_PAD_LEFT) }}
-                                    </td>
-                                    <td class="align-center text-center">
-                                        {{ $stesen[1]->STAP_KETINGGIAN }}cm
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        @if ($stesen[2]->STAP_KETINGGIAN >= 150)
-                                            <span
-                                                class="badge badge-secondary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">
-                                                {{ __('message.air_pasang') }}
-                                            </span>
-                                        @else
-                                            <span
-                                                class="badge badge-tertiary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">
-                                                {{ __('message.air_surut') }}
-                                            </span>
-                                        @endif
-                                    </td>
-                                    <td class="align-center text-center">
-                                        {{ str_pad($stesen[2]->STAP_JAM, 2, 0, STR_PAD_LEFT) . ':' . str_pad($stesen[2]->STAP_MINIT, 2, 0, STR_PAD_LEFT) }}
-                                    </td>
-                                    <td class="align-center text-center">
-                                        {{ $stesen[2]->STAP_KETINGGIAN }}cm
-                                    </td>
-                                </tr>
+                                @if (count($stesen) >= 2)
+                                    <tr>
+                                        <td>
+                                            @if ($stesen[1]->STAP_KETINGGIAN >= 150)
+                                                <span
+                                                    class="badge badge-secondary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">
+                                                    {{ __('message.air_pasang') }}
+                                                </span>
+                                            @else
+                                                <span
+                                                    class="badge badge-tertiary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">
+                                                    {{ __('message.air_surut') }}
+                                                </span>
+                                            @endif
+                                        </td>
+                                        <td class="align-center text-center">
+                                            {{ str_pad($stesen[1]->STAP_JAM, 2, 0, STR_PAD_LEFT) . ':' . str_pad($stesen[1]->STAP_MINIT, 2, 0, STR_PAD_LEFT) }}
+                                        </td>
+                                        <td class="align-center text-center">
+                                            {{ $stesen[1]->STAP_KETINGGIAN }}cm
+                                        </td>
+                                    </tr>
+                                @endif
+                                @if (count($stesen) >= 3)
+                                    <tr>
+                                        <td>
+                                            @if ($stesen[2]->STAP_KETINGGIAN >= 150)
+                                                <span
+                                                    class="badge badge-secondary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">
+                                                    {{ __('message.air_pasang') }}
+                                                </span>
+                                            @else
+                                                <span
+                                                    class="badge badge-tertiary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">
+                                                    {{ __('message.air_surut') }}
+                                                </span>
+                                            @endif
+                                        </td>
+                                        <td class="align-center text-center">
+                                            {{ str_pad($stesen[2]->STAP_JAM, 2, 0, STR_PAD_LEFT) . ':' . str_pad($stesen[2]->STAP_MINIT, 2, 0, STR_PAD_LEFT) }}
+                                        </td>
+                                        <td class="align-center text-center">
+                                            {{ $stesen[2]->STAP_KETINGGIAN }}cm
+                                        </td>
+                                    </tr>
+                                @endif
                                 @if (count($stesen) >= 4)
                                     <tr>
                                         <td>
@@ -456,48 +468,52 @@
                                         {{ $stesen2[0]->STAP_KETINGGIAN }}cm
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td>
-                                        @if ($stesen2[1]->STAP_KETINGGIAN >= 150)
-                                            <span
-                                                class="badge badge-secondary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">
-                                                {{ __('message.air_pasang') }}
-                                            </span>
-                                        @else
-                                            <span
-                                                class="badge badge-tertiary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">
-                                                {{ __('message.air_surut') }}
-                                            </span>
-                                        @endif
-                                    </td>
-                                    <td class="align-center text-center">
-                                        {{ str_pad($stesen2[1]->STAP_JAM, 2, 0, STR_PAD_LEFT) . ':' . str_pad($stesen2[1]->STAP_MINIT, 2, 0, STR_PAD_LEFT) }}
-                                    </td>
-                                    <td class="align-center text-center">
-                                        {{ $stesen2[1]->STAP_KETINGGIAN }}cm
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        @if ($stesen2[2]->STAP_KETINGGIAN >= 150)
-                                            <span
-                                                class="badge badge-secondary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">
-                                                {{ __('message.air_pasang') }}
-                                            </span>
-                                        @else
-                                            <span
-                                                class="badge badge-tertiary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">
-                                                {{ __('message.air_surut') }}
-                                            </span>
-                                        @endif
-                                    </td>
-                                    <td class="align-center text-center">
-                                        {{ str_pad($stesen2[2]->STAP_JAM, 2, 0, STR_PAD_LEFT) . ':' . str_pad($stesen2[2]->STAP_MINIT, 2, 0, STR_PAD_LEFT) }}
-                                    </td>
-                                    <td class="align-center text-center">
-                                        {{ $stesen2[2]->STAP_KETINGGIAN }}cm
-                                    </td>
-                                </tr>
+                                @if (count($stesen2) >= 2)
+                                    <tr>
+                                        <td>
+                                            @if ($stesen2[1]->STAP_KETINGGIAN >= 150)
+                                                <span
+                                                    class="badge badge-secondary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">
+                                                    {{ __('message.air_pasang') }}
+                                                </span>
+                                            @else
+                                                <span
+                                                    class="badge badge-tertiary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">
+                                                    {{ __('message.air_surut') }}
+                                                </span>
+                                            @endif
+                                        </td>
+                                        <td class="align-center text-center">
+                                            {{ str_pad($stesen2[1]->STAP_JAM, 2, 0, STR_PAD_LEFT) . ':' . str_pad($stesen2[1]->STAP_MINIT, 2, 0, STR_PAD_LEFT) }}
+                                        </td>
+                                        <td class="align-center text-center">
+                                            {{ $stesen2[1]->STAP_KETINGGIAN }}cm
+                                        </td>
+                                    </tr>
+                                @endif
+                                @if (count($stesen2) >= 3)
+                                    <tr>
+                                        <td>
+                                            @if ($stesen2[2]->STAP_KETINGGIAN >= 150)
+                                                <span
+                                                    class="badge badge-secondary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">
+                                                    {{ __('message.air_pasang') }}
+                                                </span>
+                                            @else
+                                                <span
+                                                    class="badge badge-tertiary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">
+                                                    {{ __('message.air_surut') }}
+                                                </span>
+                                            @endif
+                                        </td>
+                                        <td class="align-center text-center">
+                                            {{ str_pad($stesen2[2]->STAP_JAM, 2, 0, STR_PAD_LEFT) . ':' . str_pad($stesen2[2]->STAP_MINIT, 2, 0, STR_PAD_LEFT) }}
+                                        </td>
+                                        <td class="align-center text-center">
+                                            {{ $stesen2[2]->STAP_KETINGGIAN }}cm
+                                        </td>
+                                    </tr>
+                                @endif
                                 @if (count($stesen2) >= 4)
                                     <tr>
                                         <td>
@@ -561,48 +577,52 @@
                                         {{ $stesen3[0]->STAP_KETINGGIAN }}cm
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td>
-                                        @if ($stesen3[1]->STAP_KETINGGIAN >= 150)
-                                            <span
-                                                class="badge badge-secondary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">
-                                                {{ __('message.air_pasang') }}
-                                            </span>
-                                        @else
-                                            <span
-                                                class="badge badge-tertiary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">
-                                                {{ __('message.air_surut') }}
-                                            </span>
-                                        @endif
-                                    </td>
-                                    <td class="align-center text-center">
-                                        {{ str_pad($stesen3[1]->STAP_JAM, 2, 0, STR_PAD_LEFT) . ':' . str_pad($stesen3[1]->STAP_MINIT, 2, 0, STR_PAD_LEFT) }}
-                                    </td>
-                                    <td class="align-center text-center">
-                                        {{ $stesen3[1]->STAP_KETINGGIAN }}cm
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        @if ($stesen3[2]->STAP_KETINGGIAN >= 150)
-                                            <span
-                                                class="badge badge-secondary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">
-                                                {{ __('message.air_pasang') }}
-                                            </span>
-                                        @else
-                                            <span
-                                                class="badge badge-tertiary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">
-                                                {{ __('message.air_surut') }}
-                                            </span>
-                                        @endif
-                                    </td>
-                                    <td class="align-center text-center">
-                                        {{ str_pad($stesen3[2]->STAP_JAM, 2, 0, STR_PAD_LEFT) . ':' . str_pad($stesen3[2]->STAP_MINIT, 2, 0, STR_PAD_LEFT) }}
-                                    </td>
-                                    <td class="align-center text-center">
-                                        {{ $stesen3[2]->STAP_KETINGGIAN }}cm
-                                    </td>
-                                </tr>
+                                @if (count($stesen3) >= 2)
+                                    <tr>
+                                        <td>
+                                            @if ($stesen3[1]->STAP_KETINGGIAN >= 150)
+                                                <span
+                                                    class="badge badge-secondary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">
+                                                    {{ __('message.air_pasang') }}
+                                                </span>
+                                            @else
+                                                <span
+                                                    class="badge badge-tertiary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">
+                                                    {{ __('message.air_surut') }}
+                                                </span>
+                                            @endif
+                                        </td>
+                                        <td class="align-center text-center">
+                                            {{ str_pad($stesen3[1]->STAP_JAM, 2, 0, STR_PAD_LEFT) . ':' . str_pad($stesen3[1]->STAP_MINIT, 2, 0, STR_PAD_LEFT) }}
+                                        </td>
+                                        <td class="align-center text-center">
+                                            {{ $stesen3[1]->STAP_KETINGGIAN }}cm
+                                        </td>
+                                    </tr>
+                                @endif
+                                @if (count($stesen3) >= 3)
+                                    <tr>
+                                        <td>
+                                            @if ($stesen3[2]->STAP_KETINGGIAN >= 150)
+                                                <span
+                                                    class="badge badge-secondary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">
+                                                    {{ __('message.air_pasang') }}
+                                                </span>
+                                            @else
+                                                <span
+                                                    class="badge badge-tertiary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">
+                                                    {{ __('message.air_surut') }}
+                                                </span>
+                                            @endif
+                                        </td>
+                                        <td class="align-center text-center">
+                                            {{ str_pad($stesen3[2]->STAP_JAM, 2, 0, STR_PAD_LEFT) . ':' . str_pad($stesen3[2]->STAP_MINIT, 2, 0, STR_PAD_LEFT) }}
+                                        </td>
+                                        <td class="align-center text-center">
+                                            {{ $stesen3[2]->STAP_KETINGGIAN }}cm
+                                        </td>
+                                    </tr>
+                                @endif
                                 @if (count($stesen3) >= 4)
                                     <tr>
                                         <td>
@@ -666,48 +686,52 @@
                                         {{ $stesen4[0]->STAP_KETINGGIAN }}cm
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td>
-                                        @if ($stesen4[1]->STAP_KETINGGIAN >= 150)
-                                            <span
-                                                class="badge badge-secondary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">
-                                                {{ __('message.air_pasang') }}
-                                            </span>
-                                        @else
-                                            <span
-                                                class="badge badge-tertiary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">
-                                                {{ __('message.air_surut') }}
-                                            </span>
-                                        @endif
-                                    </td>
-                                    <td class="align-center text-center">
-                                        {{ str_pad($stesen4[1]->STAP_JAM, 2, 0, STR_PAD_LEFT) . ':' . str_pad($stesen4[1]->STAP_MINIT, 2, 0, STR_PAD_LEFT) }}
-                                    </td>
-                                    <td class="align-center text-center">
-                                        {{ $stesen4[1]->STAP_KETINGGIAN }}cm
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        @if ($stesen4[2]->STAP_KETINGGIAN >= 150)
-                                            <span
-                                                class="badge badge-secondary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">
-                                                {{ __('message.air_pasang') }}
-                                            </span>
-                                        @else
-                                            <span
-                                                class="badge badge-tertiary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">
-                                                {{ __('message.air_surut') }}
-                                            </span>
-                                        @endif
-                                    </td>
-                                    <td class="align-center text-center">
-                                        {{ str_pad($stesen4[2]->STAP_JAM, 2, 0, STR_PAD_LEFT) . ':' . str_pad($stesen4[2]->STAP_MINIT, 2, 0, STR_PAD_LEFT) }}
-                                    </td>
-                                    <td class="align-center text-center">
-                                        {{ $stesen4[2]->STAP_KETINGGIAN }}cm
-                                    </td>
-                                </tr>
+                                @if (count($stesen4) >= 2)
+                                    <tr>
+                                        <td>
+                                            @if ($stesen4[1]->STAP_KETINGGIAN >= 150)
+                                                <span
+                                                    class="badge badge-secondary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">
+                                                    {{ __('message.air_pasang') }}
+                                                </span>
+                                            @else
+                                                <span
+                                                    class="badge badge-tertiary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">
+                                                    {{ __('message.air_surut') }}
+                                                </span>
+                                            @endif
+                                        </td>
+                                        <td class="align-center text-center">
+                                            {{ str_pad($stesen4[1]->STAP_JAM, 2, 0, STR_PAD_LEFT) . ':' . str_pad($stesen4[1]->STAP_MINIT, 2, 0, STR_PAD_LEFT) }}
+                                        </td>
+                                        <td class="align-center text-center">
+                                            {{ $stesen4[1]->STAP_KETINGGIAN }}cm
+                                        </td>
+                                    </tr>
+                                @endif
+                                @if (count($stesen4) >= 3)
+                                    <tr>
+                                        <td>
+                                            @if ($stesen4[2]->STAP_KETINGGIAN >= 150)
+                                                <span
+                                                    class="badge badge-secondary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">
+                                                    {{ __('message.air_pasang') }}
+                                                </span>
+                                            @else
+                                                <span
+                                                    class="badge badge-tertiary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">
+                                                    {{ __('message.air_surut') }}
+                                                </span>
+                                            @endif
+                                        </td>
+                                        <td class="align-center text-center">
+                                            {{ str_pad($stesen4[2]->STAP_JAM, 2, 0, STR_PAD_LEFT) . ':' . str_pad($stesen4[2]->STAP_MINIT, 2, 0, STR_PAD_LEFT) }}
+                                        </td>
+                                        <td class="align-center text-center">
+                                            {{ $stesen4[2]->STAP_KETINGGIAN }}cm
+                                        </td>
+                                    </tr>
+                                @endif
                                 @if (count($stesen4) >= 4)
                                     <tr>
                                         <td>
@@ -771,48 +795,52 @@
                                         {{ $stesen5[0]->STAP_KETINGGIAN }}cm
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td>
-                                        @if ($stesen5[1]->STAP_KETINGGIAN >= 150)
-                                            <span
-                                                class="badge badge-secondary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">
-                                                {{ __('message.air_pasang') }}
-                                            </span>
-                                        @else
-                                            <span
-                                                class="badge badge-tertiary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">
-                                                {{ __('message.air_surut') }}
-                                            </span>
-                                        @endif
-                                    </td>
-                                    <td class="align-center text-center">
-                                        {{ str_pad($stesen5[1]->STAP_JAM, 2, 0, STR_PAD_LEFT) . ':' . str_pad($stesen5[1]->STAP_MINIT, 2, 0, STR_PAD_LEFT) }}
-                                    </td>
-                                    <td class="align-center text-center">
-                                        {{ $stesen5[1]->STAP_KETINGGIAN }}cm
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        @if ($stesen5[2]->STAP_KETINGGIAN >= 150)
-                                            <span
-                                                class="badge badge-secondary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">
-                                                {{ __('message.air_pasang') }}
-                                            </span>
-                                        @else
-                                            <span
-                                                class="badge badge-tertiary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">
-                                                {{ __('message.air_surut') }}
-                                            </span>
-                                        @endif
-                                    </td>
-                                    <td class="align-center text-center">
-                                        {{ str_pad($stesen5[2]->STAP_JAM, 2, 0, STR_PAD_LEFT) . ':' . str_pad($stesen5[2]->STAP_MINIT, 2, 0, STR_PAD_LEFT) }}
-                                    </td>
-                                    <td class="align-center text-center">
-                                        {{ $stesen5[2]->STAP_KETINGGIAN }}cm
-                                    </td>
-                                </tr>
+                                @if (count($stesen5) >= 2)
+                                    <tr>
+                                        <td>
+                                            @if ($stesen5[1]->STAP_KETINGGIAN >= 150)
+                                                <span
+                                                    class="badge badge-secondary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">
+                                                    {{ __('message.air_pasang') }}
+                                                </span>
+                                            @else
+                                                <span
+                                                    class="badge badge-tertiary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">
+                                                    {{ __('message.air_surut') }}
+                                                </span>
+                                            @endif
+                                        </td>
+                                        <td class="align-center text-center">
+                                            {{ str_pad($stesen5[1]->STAP_JAM, 2, 0, STR_PAD_LEFT) . ':' . str_pad($stesen5[1]->STAP_MINIT, 2, 0, STR_PAD_LEFT) }}
+                                        </td>
+                                        <td class="align-center text-center">
+                                            {{ $stesen5[1]->STAP_KETINGGIAN }}cm
+                                        </td>
+                                    </tr>
+                                @endif
+                                @if (count($stesen5) >= 3)
+                                    <tr>
+                                        <td>
+                                            @if ($stesen5[2]->STAP_KETINGGIAN >= 150)
+                                                <span
+                                                    class="badge badge-secondary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">
+                                                    {{ __('message.air_pasang') }}
+                                                </span>
+                                            @else
+                                                <span
+                                                    class="badge badge-tertiary badge-sm rounded-pill text-uppercase px-2 py-1 me-1">
+                                                    {{ __('message.air_surut') }}
+                                                </span>
+                                            @endif
+                                        </td>
+                                        <td class="align-center text-center">
+                                            {{ str_pad($stesen5[2]->STAP_JAM, 2, 0, STR_PAD_LEFT) . ':' . str_pad($stesen5[2]->STAP_MINIT, 2, 0, STR_PAD_LEFT) }}
+                                        </td>
+                                        <td class="align-center text-center">
+                                            {{ $stesen5[2]->STAP_KETINGGIAN }}cm
+                                        </td>
+                                    </tr>
+                                @endif
                                 @if (count($stesen5) >= 4)
                                     <tr>
                                         <td>

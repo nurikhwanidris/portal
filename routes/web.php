@@ -22,6 +22,7 @@ use App\Http\Controllers\Admin\PekelilingController;
 use App\Http\Controllers\Admin\PiagamPelangganController;
 use App\Http\Controllers\Admin\TransaksiController;
 use App\Http\Controllers\Admin\SoalanLazimController;
+use App\Http\Controllers\Api\StapsController;
 use App\Http\Controllers\Main\MainController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
@@ -276,3 +277,6 @@ Route::group(['prefix' => '{language}'], function () {
     // Global Search Berita Terkini Read Route
     Route::get('/carian/papar/berita-terkini/{id}', [MainController::class, 'carianBeritaTerkini'])->name('carian-berita-terkini');
 });
+
+
+// Route::get('/staps/api/{id}', [StapsController::class, 'index'])->name('api.staps');

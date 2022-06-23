@@ -20,4 +20,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 // STAPS API
-Route::get('/staps', [StapsController::class, 'index'])->name('api.staps');
+Route::get('/staps/{id}', [StapsController::class, 'index'])->name('api.staps');
