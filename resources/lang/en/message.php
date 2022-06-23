@@ -114,6 +114,7 @@ return [
     "Briefing" => "Briefing",
     "Question" => "Question",
     "Download" => "Download ",
+    "Download_attachment" => "Download attachment",
     "intro_jupem" => "About JUPEM",
     "info_korp_visi" => "Vision, Mission, Motto, Values, and Definitions of Logo",
     "info_korp_objectives" => "Objectives and Values",

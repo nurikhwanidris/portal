@@ -110,6 +110,7 @@ return [
     "Time" => "Masa",
     "Briefing" => "Taklimat",
     "Download" => "Muat Turun ",
+    "Download_attachment" => "Muat turun lampiran",
     "Question" => "Soalan",
     "intro_jupem" => "Visi - Misi JUPEM",
     "info_korp_visi" => "Visi, Misi, Moto, Nilai dan Definisi Logo JUPEM",

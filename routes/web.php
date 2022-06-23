@@ -278,5 +278,3 @@ Route::group(['prefix' => '{language}'], function () {
     Route::get('/carian/papar/berita-terkini/{id}', [MainController::class, 'carianBeritaTerkini'])->name('carian-berita-terkini');
 });
 
-
-// Route::get('/staps/api/{id}', [StapsController::class, 'index'])->name('api.staps');

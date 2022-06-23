@@ -9,7 +9,7 @@
         </div>
     @endif
 
-    <form action="/spsm/admin/pengumuman" method="post">
+    <form action="/spsm/admin/pengumuman" method="post" enctype="multipart/form-data">
         <div class="card">
             <div class="card-body">
                 <div class="row">
@@ -20,7 +20,8 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="row mb-3">
-                                    <label for="" class="col-sm-2 col-form-label col-form-label-sm">Tajuk Pengumuman</label>
+                                    <label for="" class="col-sm-2 col-form-label col-form-label-sm">Tajuk
+                                        Pengumuman</label>
                                     <span class="col-sm-1">:</span>
                                     <div class="col-sm-9">
                                         <input type="text" name="title_my" id=""
@@ -49,7 +50,21 @@
                                     </div>
                                 </div>
                                 <div class="row mb-3">
-                                    <label for="" class="col-sm-2 col-form-label col-form-label-sm">Isi Pengumuman</label>
+                                    <label for="" class="col-sm-2 col-form-label col-form-label-sm">Lampiran</label>
+                                    <span class="col-sm-1">:</span>
+                                    <div class="col-sm-9">
+                                        <input type="file" name="filename_my" id=""
+                                            class="form-control form-control-sm @error('filename_my') is-invalid @enderror">
+                                        @error('filename_my')
+                                            <div class="invalid-feedback">
+                                                {{ $message }}
+                                            </div>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label for="" class="col-sm-2 col-form-label col-form-label-sm">Isi
+                                        Pengumuman</label>
                                     <span class="col-sm-1">:</span>
                                     <div class="col-sm-9">
                                         <textarea name="content_my" id="content_my" cols="30" rows="5"
@@ -76,17 +91,21 @@
                                     </div>
                                 </div>
                                 <div class="row mb-3">
-                                    <label for="" class="col-sm-2 col-form-label col-form-label-sm">Mula Paparan</label>
+                                    <label for="" class="col-sm-2 col-form-label col-form-label-sm">Mula
+                                        Paparan</label>
                                     <span class="col-sm-1">:</span>
                                     <div class="col-sm-2">
-                                        <input type="datetime-local" name="show" id="" class="form-control form-control-sm">
+                                        <input type="datetime-local" name="show" id=""
+                                            class="form-control form-control-sm">
                                     </div>
                                 </div>
                                 <div class="row mb-3">
-                                    <label for="" class="col-sm-2 col-form-label col-form-label-sm">Tamat Paparan</label>
+                                    <label for="" class="col-sm-2 col-form-label col-form-label-sm">Tamat
+                                        Paparan</label>
                                     <span class="col-sm-1">:</span>
                                     <div class="col-sm-2">
-                                        <input type="datetime-local" name="hide" id="" class="form-control form-control-sm">
+                                        <input type="datetime-local" name="hide" id=""
+                                            class="form-control form-control-sm">
                                     </div>
                                 </div>
                                 <div class="row mb-3">

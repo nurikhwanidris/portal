@@ -20,7 +20,7 @@ class PengumumanController extends Controller
             'title' => 'Senarai Pengumuman',
             'leadCrumbs' => 'Pengumuman',
             'link' => '/spsm/admin/pengumuman',
-            'annoucements' => Pengumuman::with('status')->get(),
+            'annoucements' => Pengumuman::with('status')->orderBy('created_at', 'desc')->get(),
         ]);
     }
 
@@ -53,7 +53,25 @@ class PengumumanController extends Controller
             'status_id' => 'required',
         ]);
 
+        // Get filename with extension
+        $fileWithExtension = $request->file('filename_my')->getClientOriginalName();
+
+        // Filter out the extension
+        $filename = pathinfo($fileWithExtension, PATHINFO_FILENAME);
+
+        // Filter out the filename
+        $fileExtension = $request->file('filename_my')->getClientOriginalExtension();
+
+        // Remove all white spaces
+        $fileName = str_replace(' ', '-', $filename) . '-' . time() . '.' . $fileExtension;
+
+        // Store with filename
+        $request->file('filename_my')->storeAs('public/upload/pengumuman/', $fileName);
+        
         $validateData['user_id'] = auth()->user()->id;
+        $validateData['title_en'] = $request->title_en;
+        $validateData['content_en'] = $request->content_en;
+        $validateData['filaname_my'] = $fileName;
         $validateData['show'] = $request->show;
         $validateData['hide'] = $request->hide;
 

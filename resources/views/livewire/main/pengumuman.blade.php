@@ -13,10 +13,21 @@
                                 <strong>
                                     {{ $annoucement->title_my }} :
                                 </strong>
-                                <span>
-                                    {{ strip_tags($annoucement->excerptMy()) }}
-                                </span>
                             </a>
+                            @if ($annoucement->filename_my != null)
+                                <a href="{{ asset('/upload/pengumuman/' . $annoucement->filename_my) }}"
+                                    target="_blank" rel="noopener noreferrer" style="color: #000 !important;"
+                                    class="me-4">
+                                    {{ __('message.Download_attachment') }}
+                                </a>
+                            @else
+                                <a href="{{ route('pengumuman-read', ['id' => $annoucement->id, app()->getLocale()]) }}"
+                                    target="_blank" rel="noopener noreferrer">
+                                    <span style="color: #000 !important;" class="me-4">
+                                        {{ strip_tags($annoucement->excerptMy()) }}
+                                    </span>
+                                </a>
+                            @endif
                         @endforeach
                     </marquee>
                 </div>

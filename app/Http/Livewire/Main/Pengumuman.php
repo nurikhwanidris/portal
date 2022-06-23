@@ -10,13 +10,13 @@ class Pengumuman extends Component
 {
     public function render()
     {
-        return view('livewire.main.pengumuman',[
+        return view('livewire.main.pengumuman', [
             'annoucements' => PengumumanModel::where([
                 ['show', '<=', Carbon::now()],
                 ['hide', '>=', Carbon::now()],
             ])
-            ->orWhere('show', null)
-            ->with('status')->get(),
+                ->orWhere('show', null)
+                ->with('status')->get(),
         ]);
     }
 }
