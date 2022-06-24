@@ -8,7 +8,7 @@
         <div class="form-group col-lg-6">
             <label class="form-label mb-1 text-2">{{ __('message.Search') }}</label>
             <input class="form-control border-color-quaernary filter-text" type="text" id="pengumuman-filter-text"
-                placeholder="Tajuk/Code Tender & Sebutharga" aria-label="default color input example">
+                aria-label="default color input example">
         </div>
         <div class="form-group col-lg-6">
             <label class="form-label mb-1 text-2">{{ __('message.Select Year') }}</label>
@@ -53,7 +53,8 @@
                         {{-- <a href="/pengumuman/{{ $item->id }}" target="_blank" rel="noopener noreferrer">
                             {{ $item->title_my }}
                         </a> --}}
-                        <a href="{{ route('pengumuman-read', [app()->getLocale(), 'id' => $item->id]) }}" target="_blank">
+                        <a href="{{ route('pengumuman-read', [app()->getLocale(), 'id' => $item->id]) }}"
+                            target="_blank">
                             @if (app()->getLocale() == 'ms')
                                 {{ $item->title_my }}
                             @elseif ($item->title_en == null)
@@ -63,9 +64,11 @@
                             @endif
                         </a>
                     </td>
-                    <td class="align-middle d-none">{{ $item->created_at->format('Y') }}</td>
+                    <td class="align-middle d-none">
+                        {{ Carbon\Carbon::parse($item->show)->format('Y') }}
+                    </td>
                     <td class="text-center align-middle w-25">
-                        {{ $item->created_at->format('d-m-Y') }}
+                        {{ Carbon\Carbon::parse($item->show)->format('d-m-Y') }}
                     </td>
                 </tr>
             @endforeach

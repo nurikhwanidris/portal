@@ -6,7 +6,6 @@
         padding-left: 1rem;
         padding-right: 1rem;
     }
-
 </style>
 
 <div id="mySidenav" class="sidenav">
@@ -14,28 +13,6 @@
         <ul class="nav flex-column" id="nav_accordion">
             <li class="nav-item">
                 <a class="nav-link" href="/"> {{ __('message.Main Menu') }} </a>
-            </li>
-            <li class="nav-item has-submenu">
-                <a class="nav-link dropdown-item dropdown-toggle" href="#"> {{ __('message.Current Information') }}</a>
-                <ul class="submenu collapse">
-                    <li>
-                        <a class="nav-link link-no-deco"
-                            href="{{ route('info-semasa', app()->getLocale()) }}#tab-1">{{ __('message.Announcement') }}
-                        </a>
-                    </li>
-                    <li>
-                        <a class="nav-link link-no-deco"
-                            href="{{ route('info-semasa', app()->getLocale()) }}#tab-2">{{ __('message.Latest News') }}</a>
-                    </li>
-                    <li>
-                        <a class="nav-link link-no-deco"
-                            href="{{ route('info-semasa', app()->getLocale()) }}#tab-3">{{ __('message.Procurement Offer') }}</a>
-                    </li>
-                    <li>
-                        <a class="nav-link link-no-deco"
-                            href="{{ route('info-semasa', app()->getLocale()) }}#tab-4">{{ __('message.Client Charter') }}</a>
-                    </li>
-                </ul>
             </li>
             <li class="nav-item has-submenu">
                 <a class="nav-link dropdown-item dropdown-toggle"
@@ -59,6 +36,30 @@
                     </li>
                 </ul>
             </li>
+            <li class="nav-item has-submenu">
+                <a class="nav-link dropdown-item dropdown-toggle" href="#">
+                    {{ __('message.Current Information') }}</a>
+                <ul class="submenu collapse">
+                    <li>
+                        <a class="nav-link link-no-deco"
+                            href="{{ route('info-semasa', app()->getLocale()) }}#tab-1">{{ __('message.Announcement') }}
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link link-no-deco"
+                            href="{{ route('info-semasa', app()->getLocale()) }}#tab-2">{{ __('message.Latest News') }}</a>
+                    </li>
+                    <li>
+                        <a class="nav-link link-no-deco"
+                            href="{{ route('info-semasa', app()->getLocale()) }}#tab-3">{{ __('message.Procurement Offer') }}</a>
+                    </li>
+                    <li>
+                        <a class="nav-link link-no-deco"
+                            href="{{ route('info-semasa', app()->getLocale()) }}#tab-4">{{ __('message.Client Charter') }}</a>
+                    </li>
+                </ul>
+            </li>
+
             {{-- <li class="nav-item has-submenu">
                 <a class="nav-link dropdown-item dropdown-toggle" href="#">{{ __('message.JUPEM Staff') }}</a>
                 <ul class="submenu collapse">
@@ -167,24 +168,25 @@
 
 <legend class="butang-tepi">
     <div id="myDIV">
-        <a id="satu" class="tepi-menu-utama gerak-khas satu" href="#" data-bs-toggle="tooltip" data-bs-animation="false"
-            data-bs-placement="right" title="" onclick="myFunction();openNav();">
+        <a id="satu" class="tepi-menu-utama gerak-khas satu" href="#" data-bs-toggle="tooltip"
+            data-bs-animation="false" data-bs-placement="right" title="" onclick="myFunction();openNav();">
             <i class="fas fa-bars img-fluid icon-menu-tepi"></i>
             <div class="text-menu-tepi">{{ __('message.Main Menu') }}</div>
         </a>
     </div>
 
     <div id="myDIV2" style="display:none" onclick="myFunction();closeNav();">
-        <a id="satu-2" class="tepi-menu-utama-2 gerak-khas satu hamburguer-btn" href="#" data-bs-toggle="tooltip"
-            data-bs-animation="false" data-bs-placement="right" title="">
+        <a id="satu-2" class="tepi-menu-utama-2 gerak-khas satu hamburguer-btn" href="#"
+            data-bs-toggle="tooltip" data-bs-animation="false" data-bs-placement="right" title="">
             <i class="fas fa-bars img-fluid icon-menu-tepi"></i>
             <div class="text-menu-tepi">{{ __('message.Main Menu') }}</div>
         </a>
     </div>
 
     <div id="myDIV3">
-        <a id="dua" class="tepi-menu-direktori gerak-khas" href="{{ route('orang-awam', app()->getLocale()) }}#tab-4"
-            data-bs-toggle="tooltip" data-bs-animation="false" data-bs-placement="right" title="">
+        <a id="dua" class="tepi-menu-direktori gerak-khas"
+            href="{{ route('orang-awam', app()->getLocale()) }}#tab-4" data-bs-toggle="tooltip"
+            data-bs-animation="false" data-bs-placement="right" title="">
             <i class="fas fa-user-tie img-fluid icon-menu-tepi"></i>
             <div class="text-menu-tepi">{{ __('message.Staff Directory') }}</div>
         </a>
