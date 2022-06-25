@@ -30,7 +30,7 @@
                                         <label class="form-label mb-1 text-2">{{ __('message.Search') }}</label>
                                         <input wire:model='searchTender'
                                             class="form-control border-color-quaernary filter-text" type="text"
-                                            placeholder="Tajuk/Code Tender & Sebutharga" id="tender-filter-text"
+                                             id="tender-filter-text"
                                             aria-label="default color input example">
                                     </div>
                                     <div class="form-group col-lg-6">
@@ -150,7 +150,7 @@
                                     <div class="form-group col-lg-6">
                                         <label class="form-label mb-1 text-2">{{ __('message.Search') }}</label>
                                         <input class="form-control border-color-quaernary filter-text" type="text"
-                                            wire:model='searchQuote' placeholder="Tajuk/Code Tender & Sebutharga"
+                                            wire:model='searchQuote' 
                                             id="sebut-harga-filter-text" aria-label="default color input example">
                                     </div>
                                     <div class="form-group col-lg-6">
@@ -273,7 +273,7 @@
                                         <label class="form-label mb-1 text-2">{{ __('message.Search') }}</label>
                                         <input class="form-control border-color-quaernary" type="text"
                                             wire:model='perolehanFilterText'
-                                            placeholder="Tajuk/Code Tender & Sebutharga"
+                                            
                                             aria-label="default color input example"
                                             id="perolehan-berjaya-filter-text">
                                     </div>

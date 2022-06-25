@@ -216,4 +216,7 @@ return [
     "air_pasang" => "High Tide",
     "water_level" => "Water Level",
     "water_level_live" => "Live Tide",
+
+    // Read Page
+    "date_published" => "Date Published : ",
 ];

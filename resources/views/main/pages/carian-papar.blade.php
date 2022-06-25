@@ -86,7 +86,7 @@
                                     <div class="col">
                                         <h3>
                                             <strong>
-                                                Pengumuman
+                                                {{ __('message.Announcement') }}
                                             </strong>
                                         </h3>
                                     </div>

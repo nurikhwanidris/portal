@@ -214,4 +214,7 @@ return [
     "air_pasang" => "Air Pasang",
     "water_level" => "Ketinggian Air",
     "water_level_live" => "Ketinggian Air Semasa",
+
+    // Read Page
+    "date_published" => "Tarikh diterbitkan : ",
 ];

@@ -11,7 +11,7 @@
         <div class="form-group col-lg-6">
             <label class="form-label mb-1 text-2">{{ __('message.keyword') }}</label>
             <input class="form-control border-color-quaernary" id="beritaTerkini-filter-text" type="text"
-                placeholder="Title/Code" aria-label="default color input example">
+                aria-label="default color input example">
         </div>
         <div class="form-group col-lg-6">
             <label class="form-label mb-1 text-2">{{ __('message.Select Year') }}</label>

@@ -67,11 +67,11 @@ class PengumumanController extends Controller
 
         // Store with filename
         $request->file('filename_my')->storeAs('public/upload/pengumuman/', $fileName);
-        
+
         $validateData['user_id'] = auth()->user()->id;
         $validateData['title_en'] = $request->title_en;
         $validateData['content_en'] = $request->content_en;
-        $validateData['filaname_my'] = $fileName;
+        $validateData['filename_my'] = $fileName;
         $validateData['show'] = $request->show;
         $validateData['hide'] = $request->hide;
 

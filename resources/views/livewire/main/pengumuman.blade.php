@@ -7,25 +7,39 @@
                         class="news-scroll">
                         <span class="dot-yellow-green"></span>
                         @foreach ($annoucements as $annoucement)
-                            <a href="{{ route('pengumuman-read', [app()->getLocale(), 'id' => $annoucement->id]) }}"
-                                style="color: #000 !important;" class="me-4" target="_blank">
-                                {{-- <strong class="text-title-strong"> --}}
-                                <strong>
-                                    {{ $annoucement->title_my }} :
-                                </strong>
-                            </a>
-                            @if ($annoucement->filename_my != null)
-                                <a href="{{ asset('/upload/pengumuman/' . $annoucement->filename_my) }}"
-                                    target="_blank" rel="noopener noreferrer" style="color: #000 !important;"
-                                    class="me-4">
-                                    {{ __('message.Download_attachment') }}
+                            @if ($annoucement->filename_my != '')
+                                <a href="{{ route('pengumuman-read', [app()->getLocale(), 'id' => $annoucement->id]) }}"
+                                    style="color: #000 !important;" class="me-4" target="_blank">
+                                    {{-- <strong class="text-title-strong"> --}}
+                                    @if (app()->getLocale() == 'en')
+                                        <strong>
+                                            {{ $annoucement->title_en }}
+                                        </strong>
+                                    @else
+                                        <strong>
+                                            {{ $annoucement->title_my }}
+                                        </strong>
+                                    @endif
                                 </a>
                             @else
-                                <a href="{{ route('pengumuman-read', ['id' => $annoucement->id, app()->getLocale()]) }}"
-                                    target="_blank" rel="noopener noreferrer">
-                                    <span style="color: #000 !important;" class="me-4">
-                                        {{ strip_tags($annoucement->excerptMy()) }}
-                                    </span>
+                                <a href="{{ route('pengumuman-read', [app()->getLocale(), 'id' => $annoucement->id]) }}"
+                                    style="color: #000 !important;" class="me-4" target="_blank">
+                                    {{-- <strong class="text-title-strong"> --}}
+                                    @if (app()->getLocale() == 'en')
+                                        <strong>
+                                            {{ $annoucement->title_en }} :
+                                        </strong>
+                                        <span style="color: #000 !important;" class="me-4">
+                                            {!! strip_tags($annoucement->excerptEn()) !!}
+                                        </span>
+                                    @else
+                                        <strong>
+                                            {{ $annoucement->title_my }} :
+                                        </strong>
+                                        <span style="color: #000 !important;" class="me-4">
+                                            {!! strip_tags($annoucement->excerptMy()) !!}
+                                        </span>
+                                    @endif
                                 </a>
                             @endif
                         @endforeach

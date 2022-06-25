@@ -31,6 +31,11 @@
             {{-- I died a little inside lah --}}
             <div class="container" style="margin-bottom: 100px;">
                 <div class="row">
+                    <span class="" style="font-size: .8em;">
+                        {{ __('message.date_published') . $page->created_at->format('d M Y') }}
+                    </span>
+                </div>
+                <div class="row">
                     <!-- SUB TITLE - START-->
                     <h2 class="font-weight-normal text-6 mb-3">
                         @if (app()->getLocale() == 'en')
@@ -40,6 +45,8 @@
                         @endif
                     </h2>
                     <!-- SUB TITLE - END-->
+
+                    <!-- CONTENT - START -->
 
                     <!-- IMAGE - Start-->
                     @if ($page->gambarHadapan)
@@ -61,6 +68,21 @@
                         @endif
                     </p>
                     <!-- PARAGRAPH - END -->
+
+                    <!-- ATTACHMENT - START -->
+                    @if (request()->segment(2) == 'pengumuman')
+                        @if ($page->filename_my != '')
+                            <div class="col-md-12">
+                                <div class="text-center">
+                                    <a href="{{ asset('storage/upload/pengumuman/' . $page->filename_my) }}"
+                                        target="_blank" class="btn btn-primary btn-sm">
+                                        <i class="fa fa-download"></i>
+                                        {{ __('message.Download') }}
+                                    </a>
+                                </div>
+                            </div>
+                        @endif
+                    @endif
 
                     @if (!empty($page->kod))
                         <div class="col border p-4">
@@ -130,6 +152,7 @@
                             </div>
                         </div>
                     @endif
+                    <!-- CONTENT - END -->
                 </div>
             </div>
         </div>
