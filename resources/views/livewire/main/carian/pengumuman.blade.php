@@ -1,26 +1,26 @@
 <div>
-    @if (count($pengumuman) > 0)
+    @if (!empty($pengumuman))
         <hr>
-        <h3>Pengumuman</h3>
+        <h3>{{ __('message.Announcement') }}</h3>
         <ul class="simple-post-list m-0">
             @foreach ($pengumuman as $item)
                 <li>
                     <div class="post-info">
                         <a
-                            href="/{{ app()->getLocale() }}/carian/papar/pengumuman/{{ $item->id }}">{{ $item->title_my }}</a>
+                            href="{{ route('carian-pengumuman', ['id' => $item['id'], app()->getLocale()]) }}">{{ $item['tajuk'] }}</a>
                         <div class="post-meta">
-                            @if ($item->type == 'post')
-                                <span class="text-dark text-uppercase font-weight-semibold">Post</span>
-                            @else
-                                <span class="text-dark text-uppercase font-weight-semibold">Page</span>
-                            @endif
+                            <span
+                                class="text-dark text-uppercase font-weight-semibold">{{ __('message.Announcement') }}</span>
                             |
-                            {{ $item->created_at->diffForHumans() }}
+                            {{ $item['created_at']->diffForHumans() }}
+                            <p>
+                                {!! $item['content_my'] !!}
+                            </p>
                         </div>
                     </div>
                 </li>
             @endforeach
         </ul>
-        {!! $pengumuman->appends(request()->query())->links() !!}
+        {!! $data->appends(request()->query())->links() !!}
     @endif
 </div>

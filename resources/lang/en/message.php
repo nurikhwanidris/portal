@@ -219,4 +219,8 @@ return [
 
     // Read Page
     "date_published" => "Date Published : ",
+    "current_news" => "Current News",
+    "post" => "Post",
+    "writing" => "Writing",
+    "page" => "Page",
 ];

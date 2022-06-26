@@ -6,16 +6,18 @@
                 <li>
                     <div class="post-info">
                         <a
-                            href="/{{ app()->getLocale() }}/carian/papar/post/{{ $item['id'] }}">{{ $item['tajuk'] }}</a>
+                            href="{{ route('carian-post', ['id' => $item['id'], app()->getLocale()]) }}">{{ $item['tajuk'] }}</a>
                         <div class="post-meta">
                             @if ($item['type'] == 'post')
-                                <span class="text-dark text-uppercase font-weight-semibold">Post</span>
+                                <span
+                                    class="text-dark text-uppercase font-weight-semibold">{{ __('message.writing') }}</span>
                             @else
-                                <span class="text-dark text-uppercase font-weight-semibold">Page</span>
+                                <span
+                                    class="text-dark text-uppercase font-weight-semibold">{{ __('message.page') }}</span>
                             @endif
-                            | {{ $item['created_at'] }}
+                            | {{ $item['created_at']->diffForHumans() }}
                             <p>
-                                <?= $item['contents_my'] ?>
+                                {!! $item['contents_my'] !!}
                             </p>
                         </div>
                     </div>

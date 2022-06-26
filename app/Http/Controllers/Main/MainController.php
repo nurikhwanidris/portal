@@ -217,6 +217,17 @@ class MainController extends Controller
         ]);
     }
 
+    // Create keyword highlighter
+    public function highlight(Request $request)
+    {
+        $keyword = $request->keyword;
+        $text = $request->text;
+
+        $text = str_replace($keyword, '<span class="highlight">' . $keyword . '</span>', $text);
+
+        return $text;
+    }
+
     // Global Search
     public function carian(Request $request)
     {

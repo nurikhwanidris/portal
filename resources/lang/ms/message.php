@@ -217,4 +217,8 @@ return [
 
     // Read Page
     "date_published" => "Tarikh diterbitkan : ",
+    'current_news' => 'Berita Terkini',
+    "post" => "Hebahan",
+    "writing" => "Penulisan",
+    "page" => "Halaman",
 ];
