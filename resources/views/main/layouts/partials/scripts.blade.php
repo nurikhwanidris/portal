@@ -257,6 +257,8 @@
 {{-- Muat Turun Borang --}}
 <script>
     $(document).ready(function() {
+
+        // Muat Turun Borang
         $("#borang").change(function() {
             $(this).find("option:selected").each(function() {
                 var optionValue = $(this).attr("value");
@@ -265,6 +267,19 @@
                     $("#" + optionValue).show();
                 } else {
                     $(".pe-md-5").hide();
+                }
+            });
+        }).change();
+
+        // Struktur Negeri
+        $("#strukturNegeri").change(function() {
+            $(this).find("option:selected").each(function() {
+                var optionValue = $(this).attr("value");
+                if (optionValue) {
+                    $(".show-hide").not("." + optionValue).hide();
+                    $("#" + optionValue).show();
+                } else {
+                    $(".show-hide").hide();
                 }
             });
         }).change();

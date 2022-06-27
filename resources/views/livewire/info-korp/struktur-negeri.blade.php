@@ -5,8 +5,7 @@
             <div class="row">
                 <div>
                     {{ __('message.choose_state') }}
-                    <select id="contact-us" class="form-select form-select-sm" aria-label=".form-select-sm example">
-                        <option value="hq">Ibu Pejabat JUPEM</option>
+                    <select id="strukturNegeri" class="form-select form-select-sm" aria-label=".form-select-sm example">
                         <option value="johor">JUPEM Johor</option>
                         <option value="kedah">JUPEM Kedah</option>
                         <option value="kelantan">JUPEM Kelantan</option>
@@ -27,176 +26,136 @@
             </div>
         </div>
         <!-- FILTERING - END -->
-
         <div class="toggle toggle-primary toggle-simple" data-plugin-toggle>
-            <div class="row align-items-center" style="padding-top: 30px;" id="johor">
-            <!-- JUPEM Johor -->
-            <section class="toggle">
+            <div class="row align-items-center show-hide" style="padding-top: 30px; display: none;" id="johor">
+                <!-- JUPEM Johor -->
+                <section class="toggle">
                     <div class="text-center text-title-semasa-11">JUPEM Johor</div>
                     <!-- Sejarah Penubuhan - START -->
                     <div class="container pt-4">
                         {!! $johor->contents_my !!}
                     </div>
-            </section>
+                </section>
             </div>
             <!-- JUPEM Kedah -->
-            <div class="row align-items-center" style="padding-top: 30px;" id="kedah">
-            <section class="toggle">
-                {{-- <span class="toggle-title text-4">
-                    <div class="accordion-jupem-negeri">JUPEM Kedah</div>
-                </span>
-                <div class="toggle-content"> --}}
+            <div class="row align-items-center show-hide" style="padding-top: 30px; display: none;" id="kedah">
+                <section class="toggle">
+
                     <div class="text-center text-title-semasa-11">JUPEM Kedah</div>
                     <div class="container pt-4">
                         {!! $kedah->contents_my !!}
                     </div>
-                {{-- </div> --}}
-            </section>
+                </section>
             </div>
             <!-- JUPEM Kelantan -->
-            <section class="toggle">
-                {{-- <span class="toggle-title text-4">
-                    <div class="accordion-jupem-negeri">JUPEM Kelantan</div>
-                </span>
-                <div class="toggle-content"> --}}
+            <div class="row align-items-center show-hide" style="padding-top: 30px; display: none;" id="kelantan">
+                <section class="toggle">
                     <div class="text-center text-title-semasa-11">JUPEM Kelantan</div>
                     <div class="container pt-4">
                         {!! $kelantan->contents_my !!}
                     </div>
-                {{-- </div> --}}
-            </section>
+                </section>
+            </div>
             <!-- JUPEM Melaka -->
-            <section class="toggle">
-                {{-- <span class="toggle-title text-4">
-                    <div class="accordion-jupem-negeri">JUPEM Melaka</div>
-                </span>
-                <div class="toggle-content"> --}}
+            <div class="row align-items-center show-hide" style="padding-top: 30px; display: none;" id="melaka">
+                <section class="toggle">
                     <div class="text-center text-title-semasa-11">JUPEM Melaka</div>
                     <div class="container pt-4">
                         {!! $melaka->contents_my !!}
                     </div>
-                {{-- </div> --}}
-            </section>
+                </section>
+            </div>
             <!-- JUPEM Negeri Sembilan -->
-            <section class="toggle">
-                {{-- <span class="toggle-title text-4">
-                    <div class="accordion-jupem-negeri">JUPEM Negeri Sembilan</div>
-                </span>
-                <div class="toggle-content"> --}}
+            <div class="row align-items-center show-hide" style="padding-top: 30px; display: none;"
+                id="negeri-sembilan">
+                <section class="toggle">
                     <div class="text-center text-title-semasa-11">JUPEM Negeri Sembilan</div>
                     <div class="container pt-4">
                         {!! $n9->contents_my !!}
                     </div>
-                {{-- </div> --}}
-            </section>
+                </section>
+            </div>
             <!-- JUPEM Pahang -->
-            <section class="toggle">
-                {{-- <span class="toggle-title text-4">
-                    <div class="accordion-jupem-negeri">JUPEM Pahang</div>
-                </span>
-                <div class="toggle-content"> --}}
+            <div class="row align-items-center show-hide" style="padding-top: 30px; display: none;" id="pahang">
+                <section class="toggle">
                     <div class="text-center text-title-semasa-11">JUPEM Pahang</div>
                     <div class="container pt-4">
                         {!! $pahang->contents_my !!}
                     </div>
-                {{-- </div> --}}
-            </section>
+                </section>
+            </div>
             <!-- JUPEM Perak -->
-            <section class="toggle">
-                {{-- <span class="toggle-title text-4">
-                    <div class="accordion-jupem-negeri">JUPEM Perak</div>
-                </span>
-                <div class="toggle-content"> --}}
+            <div class="row align-items-center show-hide" style="padding-top: 30px; display: none;" id="perak">
+                <section class="toggle">
                     <div class="text-center text-title-semasa-11">JUPEM Perak</div>
                     <div class="container pt-4">
                         {!! $perak->contents_my !!}
                     </div>
-                {{-- </div> --}}
-            </section>
+                </section>
+            </div>
             <!-- JUPEM Perlis -->
-            <section class="toggle">
-                {{-- <span class="toggle-title text-4">
-                    <div class="accordion-jupem-negeri">JUPEM Perlis</div>
-                </span>
-                <div class="toggle-content"> --}}
+            <div class="row align-items-center show-hide" style="padding-top: 30px; display: none;" id="perlis">
+                <section class="toggle">
                     <div class="text-center text-title-semasa-11">JUPEM Perlis</div>
                     <div class="container pt-4">
                         {!! $perlis->contents_my !!}
                     </div>
-                {{-- </div> --}}
-            </section>
+                </section>
+            </div>
             <!-- JUPEM Selangor -->
-            <section class="toggle">
-                {{-- <span class="toggle-title text-4">
-                    <div class="accordion-jupem-negeri">JUPEM Selangor</div>
-                </span>
-                <div class="toggle-content"> --}}
+            <div class="row align-items-center show-hide" style="padding-top: 30px; display: none;" id="selangor">
+                <section class="toggle">
                     <div class="text-center text-title-semasa-11">JUPEM Selangor</div>
                     <div class="container pt-4">
                         {!! $selangor->contents_my !!}
                     </div>
-                {{-- </div> --}}
-            </section>
+                </section>
+            </div>
             <!-- JUPEM Terengganu -->
-            <section class="toggle">
-                {{-- <span class="toggle-title text-4">
-                    <div class="accordion-jupem-negeri">JUPEM Terengganu</div>
-                </span>
-                <div class="toggle-content"> --}}
+            <div class="row align-items-center show-hide" style="padding-top: 30px; display: none;" id="terengganu">
+                <section class="toggle">
                     <div class="text-center text-title-semasa-11">JUPEM Terengganu</div>
                     <div class="container pt-4">
                         {!! $terengganu->contents_my !!}
                     </div>
-                {{-- </div> --}}
-            </section>
+                </section>
+            </div>
             <!-- JUPEM JUPEM W.P. Kuala Lumpur & Putrajaya -->
-            <section class="toggle">
-                {{-- <span class="toggle-title text-4">
-                    <div class="accordion-jupem-negeri">JUPEM W.P. Kuala Lumpur & Putrajaya</div>
-                </span>
-                <div class="toggle-content"> --}}
-                    <div class="text-center text-title-semasa-11">JUPEM JUPEM W.P. Kuala Lumpur & Putrajaya</div>
+            <div class="row align-items-center show-hide" style="padding-top: 30px; display: none;" id="wpkl">
+                <section class="toggle">
+                    <div class="text-center text-title-semasa-11">JUPEM W.P. Kuala Lumpur & Putrajaya</div>
                     <div class="container pt-4">
                         {!! $kl->contents_my !!}
                     </div>
-                {{-- </div> --}}
-            </section>
+                </section>
+            </div>
             <!-- JUPEM W.P. Labuan -->
-            <section class="toggle">
-                {{-- <span class="toggle-title text-4">
-                    <div class="accordion-jupem-negeri">JUPEM W.P. Labuan</div>
-                </span>
-                <div class="toggle-content"> --}}
-                    <div class="text-center text-title-semasa-11">JUPEM JUPEM W.P. Labuan</div>
+            <div class="row align-items-center show-hide" style="padding-top: 30px; display: none;" id="labuan">
+                <section class="toggle">
+                    <div class="text-center text-title-semasa-11">JUPEM W.P. Labuan</div>
                     <div class="container pt-4">
                         {!! $labuan->contents_my !!}
                     </div>
-                {{-- </div> --}}
-            </section>
+                </section>
+            </div>
             <!-- JUPEM Sabah -->
-            <section class="toggle">
-                {{-- <span class="toggle-title text-4">
-                    <div class="accordion-jupem-negeri">Topografi Sabah</div>
-                </span>
-                <div class="toggle-content"> --}}
-                    <div class="text-center text-title-semasa-11">Topografi Sabah</div>
+            <div class="row align-items-center show-hide" style="padding-top: 30px; display: none;" id="sabah">
+                <section class="toggle">
+                    <div class="text-center text-title-semasa-11">JUPEM Sabah</div>
                     <div class="container pt-4">
                         {!! $sabah->contents_my !!}
                     </div>
-                {{-- </div> --}}
-            </section>
+                </section>
+            </div>
             <!-- JUPEM Sarawak -->
-            <section class="toggle">
-                {{-- <span class="toggle-title text-4">
-                    <div class="accordion-jupem-negeri">Topografi Sarawak</div>
-                </span>
-                <div class="toggle-content"> --}}
-                    <div class="text-center text-title-semasa-11">Topografi Sarawak</div>
+            <div class="row align-items-center show-hide" style="padding-top: 30px; display: none;" id="sarawak">
+                <section class="toggle">
+                    <div class="text-center text-title-semasa-11">JUPEM Sarawak</div>
                     <div class="container pt-4">
                         {!! $sarawak->contents_my !!}
                     </div>
-                {{-- </div> --}}
-            </section>
+                </section>
+            </div>
         </div>
     </div>
 </div>
