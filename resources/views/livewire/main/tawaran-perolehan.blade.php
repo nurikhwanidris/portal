@@ -37,7 +37,8 @@
             </div>
         @endif
         <div class="row child">
-            <a href="/perolehan" class="read-more text-color-dark font-weight-bold text-2">
+            <a href="{{ app()->getLocale() }}/info-semasa#tab-3"
+                class="read-more text-color-dark font-weight-bold text-2">
                 {{ __('message.Details') }}
                 <i class="fas fa-chevron-right"></i>
             </a>

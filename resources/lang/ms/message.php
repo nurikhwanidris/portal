@@ -45,7 +45,7 @@ return [
     "privacy_policy" => "Privacy Policy",
     "security_policy" => "Security Policy",
     "Disclaimer" => "Disclaimer",
-    "Recognition" => "Recognition",
+    "Recognition" => "Pengiktirafan",
     "copyright" => "Hak Cipta Terpelihara " . date('Y') . " © Jabatan Ukur dan Pemetaan Malaysia",
     "best_view" => "Paparan terbaik menggunakan Google Chrome, Internet Explorer 10 ke atas dan Mozilla Firefox 3.5 dengan resolusi melebihi 1024 x 768 pixels",
     "Details" => "Maklumat Terperinci",

@@ -152,8 +152,8 @@
             $(this).find("option:selected").each(function() {
                 var optionValue = $(this).attr("value");
                 if (optionValue) {
-                    $(".jupem").not("#" + optionValue).hide();
-                    $("#" + optionValue).show();
+                    $(".jupem").not("." + optionValue).hide();
+                    $("." + optionValue).show();
                 } else {
                     $(".jupem").hide();
                 }

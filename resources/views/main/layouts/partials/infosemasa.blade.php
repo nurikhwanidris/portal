@@ -14,7 +14,7 @@
 
         <!-- Waktu Solat -->
         <div class="col-sm-10 col-md-7 col-lg-4">
-        @livewire('main.waktu-solat')
+            @livewire('main.waktu-solat')
         </div>
     </div>
 </div>

@@ -23,7 +23,7 @@
             </a>
         </div>
         <div class="container-pp col-lg-2 featured-box-full featured-box-full-primary">
-            <a href="/eKadaster" target="_self">
+            <a href="{{ route('eKadaster', [app()->getLocale()]) }}" target="_self">
                 <img src="/main/img/logo-default/icon-produk-perkhidmatan/ekadaster.png" width="100px"
                     class="image-pp">
                 <div class="overlay-pp">
@@ -37,8 +37,7 @@
         </div>
         <div class="container-pp col-lg-2 featured-box-full featured-box-full-primary">
             <a href="{{ route('staps', app()->getLocale()) }}" target="_self">
-                <img src="/main/img/logo-default/icon-produk-perkhidmatan/staps.png" width="100px"
-                    class="image-pp">
+                <img src="/main/img/logo-default/icon-produk-perkhidmatan/staps.png" width="100px" class="image-pp">
                 <div class="overlay-pp">
                     <div class="text-pp font-weight-normal text-app mt-3">
                         <strong>
@@ -50,8 +49,7 @@
         </div>
         <div class="container-pp col-lg-2 featured-box-full featured-box-full-primary">
             <a href="https://www.myrtknet.gov.my/sbc" target="_blank">
-                <img src="/main/img/logo-default/icon-produk-perkhidmatan/myrtknet.png" width="100px"
-                    class="image-pp">
+                <img src="/main/img/logo-default/icon-produk-perkhidmatan/myrtknet.png" width="100px" class="image-pp">
                 <div class="overlay-pp">
                     <div class="text-pp font-weight-normal text-app mt-3">
                         <strong>
@@ -75,7 +73,7 @@
             </a>
         </div>
         <div class="container-pp col-lg-2 featured-box-full featured-box-full-primary">
-            <a href="/info-korp#tab-4" target="_self">
+            <a href="{{ app()->getLocale() }}/info-korp#tab-4" target="_self">
                 <img src="/main/img/logo-default/icon-produk-perkhidmatan/sme.png" width="100px" class="image-pp">
                 <div class="overlay-pp">
                     <div class="text-pp font-weight-normal text-app mt-3">

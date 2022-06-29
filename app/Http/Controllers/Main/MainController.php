@@ -302,4 +302,5 @@ class MainController extends Controller
             'activity' => $this->activity(),
         ]);
     }
+
 }

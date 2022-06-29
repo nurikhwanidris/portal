@@ -39,7 +39,7 @@
             <!-- Icon Row - END-->
         </div>
         {{-- JUPEM HQ --}}
-        <div class="row jupem" id="hq" style="display: block">
+        <div class="row jupem hq" id="" style="display: block">
             <div class="container" style="padding-top:20px;">
                 <div class="row align-items-center">
                     <!-- Google Map START -->
@@ -111,7 +111,7 @@
             </div>
         </div>
         {{-- JUPEM Johor --}}
-        <div class="row jupem" id="johor" style="display: none">
+        <div class="row jupem johor" id="" style="display: none">
             <div class="container" style="padding-top:20px;">
                 <div class="row align-items-center">
                     <!-- Google Map START -->
@@ -164,7 +164,7 @@
             </div>
         </div>
         {{-- JUPEM Kedah --}}
-        <div class="row jupem" id="kedah" style="display: none;">
+        <div class="row jupem kedah" id="" style="display: none;">
             <div class="container" style="padding-top:20px;">
                 <div class="row align-items-center">
                     <!-- Google Map START -->
@@ -215,7 +215,7 @@
                 </div>
             </div>
         </div>
-        <div class="row jupem" id="kelantan" style="display: none;">
+        <div class="row jupem kelantan" id="" style="display: none;">
             <div class="container" style="padding-top:20px;">
                 <div class="row align-items-center">
                     <!-- Google Map START -->
@@ -264,7 +264,7 @@
                 </div>
             </div>
         </div>
-        <div class="row jupem" id="melaka" style="display: none;">
+        <div class="row jupem melaka" id="" style="display: none;">
             <div class="container" style="padding-top:20px;">
                 <div class="row align-items-center">
                     <!-- Google Map START -->
@@ -313,7 +313,7 @@
                 </div>
             </div>
         </div>
-        <div class="row jupem" id="negeri-sembilan" style="display: none;">
+        <div class="row jupem negeri-sembilan" id="" style="display: none;">
             <div class="container" style="padding-top:20px;">
                 <div class="row align-items-center">
                     <!-- Google Map START -->
@@ -363,7 +363,7 @@
                 </div>
             </div>
         </div>
-        <div class="row jupem" id="pahang" style="display: none;">
+        <div class="row jupem pahang" id="" style="display: none;">
             <div class="container" style="padding-top:20px;">
                 <div class="row align-items-center">
                     <!-- Google Map START -->
@@ -412,7 +412,7 @@
                 </div>
             </div>
         </div>
-        <div class="row jupem" id="perak" style="display: none;">
+        <div class="row jupem perak" id="" style="display: none;">
             <div class="container" style="padding-top:20px;">
                 <div class="row align-items-center">
                     <!-- Google Map START -->
@@ -463,7 +463,7 @@
                 </div>
             </div>
         </div>
-        <div class="row jupem" id="perlis" style="display: none;">
+        <div class="row jupem perlis" id="" style="display: none;">
             <div class="container" style="padding-top:20px;">
                 <div class="row align-items-center">
                     <!-- Google Map START -->
@@ -512,7 +512,7 @@
                 </div>
             </div>
         </div>
-        <div class="row jupem" id="pulau-pinang" style="display: none;">
+        <div class="row jupem pulau-pinang" id="" style="display: none;">
             <div class="container" style="padding-top:20px;">
                 <div class="row align-items-center">
                     <!-- Google Map START -->
@@ -561,7 +561,7 @@
                 </div>
             </div>
         </div>
-        <div class="row jupem" id="selangor" style="display: none;">
+        <div class="row jupem selangor" id="" style="display: none;">
             <div class="container" style="padding-top:20px;">
                 <div class="row align-items-center">
                     <!-- Google Map START -->
@@ -611,7 +611,7 @@
                 </div>
             </div>
         </div>
-        <div class="row jupem" id="terengganu" style="display: none;">
+        <div class="row jupem terengganu" id="" style="display: none;">
             <div class="container" style="padding-top:20px;">
                 <div class="row align-items-center">
                     <!-- Google Map START -->
@@ -661,7 +661,7 @@
                 </div>
             </div>
         </div>
-        <div class="row jupem" id="wpkl" style="display: none;">
+        <div class="row jupem wpkl" id="" style="display: none;">
             <div class="container" style="padding-top:20px;">
                 <div class="row align-items-center">
                     <!-- Google Map START -->
@@ -711,7 +711,7 @@
                 </div>
             </div>
         </div>
-        <div class="row jupem" id="sarawak" style="display: none;">
+        <div class="row jupem sarawak" id="" style="display: none;">
             <div class="container" style="padding-top:20px;">
                 <div class="row align-items-center">
                     <!-- Google Map START -->
@@ -760,7 +760,7 @@
                 </div>
             </div>
         </div>
-        <div class="row jupem" id="labuan" style="display: none;">
+        <div class="row jupem labuan" id="" style="display: none;">
             <div class="container" style="padding-top:20px;">
                 <div class="row align-items-center">
                     <!-- Google Map START -->
@@ -809,7 +809,7 @@
                 </div>
             </div>
         </div>
-        <div class="row jupem" id="sabah" style="display: none;">
+        <div class="row jupem sabah" id="" style="display: none;">
             <div class="container" style="padding-top:20px;">
                 <div class="row align-items-center">
                     <!-- Google Map START -->
