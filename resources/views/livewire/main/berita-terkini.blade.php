@@ -6,7 +6,7 @@
                 <div>
                     <div class="row my-3">
                         <div class="col" style="width: 180px;">
-                            <img src="{{ asset('storage/upload/img/' . $news->gambarHadapan) }}"
+                            <img src="{{ asset('storage/upload/img/' . $news->gambar) }}"
                                 style="height: 190px; width: auto;">
                         </div>
                         {{-- <div class="col" style="width: 180px;">

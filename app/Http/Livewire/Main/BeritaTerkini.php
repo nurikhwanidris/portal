@@ -9,13 +9,14 @@ class BeritaTerkini extends Component
 {
     public function render()
     {
-        return view('livewire.main.berita-terkini',[
+        return view('livewire.main.berita-terkini', [
             'beritaTerkini' => BeritaTerkiniModel::where([
-                ['show', '<=', now()],
-                ['hide', '>=', now()],
+                ['status_id', '=', '1'],
             ])
-            ->orWhere('show', null)
-            ->with('status')->get(),
+                ->with('status')
+                ->orderBy('created_at', 'desc')
+                ->limit(5)
+                ->get(),
         ]);
     }
 }

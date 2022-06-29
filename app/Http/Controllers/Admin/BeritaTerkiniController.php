@@ -20,7 +20,9 @@ class BeritaTerkiniController extends Controller
             'title' => 'Senarai Berita Terkini',
             'leadCrumbs' => 'Berita Terkini',
             'link' => '/spsm/admin/berita_terkini',
-            'currentNews' => BeritaTerkini::with('status')->get()
+            'currentNews' => BeritaTerkini::with('status')
+                ->orderBy('created_at', 'desc')
+                ->get()
         ]);
     }
 
@@ -59,11 +61,11 @@ class BeritaTerkiniController extends Controller
         // Filter out the extension
         $gambar = pathinfo($gambarWithExtension, PATHINFO_FILENAME);
 
-         // Filter out the filename
+        // Filter out the filename
         $gambarExtension = $request->file('gambarHadapan')->getClientOriginalExtension();
 
         // Remove all white spaces
-        $gambarName = str_replace(' ', '-', $gambar) . '-' . time() . '.' .$gambarExtension;
+        $gambarName = str_replace(' ', '-', $gambar) . '-' . time() . '.' . $gambarExtension;
 
         // Store the filename
         $request->file('gambarHadapan')->storeAs('public/upload/img/', $gambarName);
@@ -73,7 +75,7 @@ class BeritaTerkiniController extends Controller
         $validateData['hide'] = $request->hide;
         $validateData['title_en'] = $request['title_en'];
         $validateData['content_en'] = $request['content_en'];
-        $validateData['gambarHadapan'] = $gambarName;
+        $validateData['gambar'] = $gambarName;
 
         BeritaTerkini::create($validateData);
 
@@ -100,7 +102,7 @@ class BeritaTerkiniController extends Controller
      */
     public function edit(BeritaTerkini $beritaTerkini)
     {
-        return view('spsm.admin.berita_terkini.edit',[
+        return view('spsm.admin.berita_terkini.edit', [
             'title' => 'Ubah Berita Terkini',
             'leadCrumbs' => 'Ubah Berita Terkini',
             'link' => '/spsm/admin/berita_terkini',

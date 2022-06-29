@@ -50,7 +50,8 @@
                                     </td>
                                     <td class="align-middle">{{ $news->show }}</td>
                                     <td class="align-middle">{{ $news->hide }}</td>
-                                    <td class="align-middle">13 Jam</td>
+                                    <td class="align-middle">
+                                        {{ now()->diffInDays($news->show) }}
                                     <td class="align-middle text-center">
                                         @if ($news->status->id == 1)
                                             <span class="badge badge-success">Published</span>

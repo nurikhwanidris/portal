@@ -15,7 +15,7 @@
                         <option value="pahang">JUPEM Pahang</option>
                         <option value="perak">JUPEM Perak</option>
                         <option value="perlis">JUPEM Perlis</option>
-                        <option value="pulau-pinang">JUPEM Pulau Pinang</option>
+                        <option value="penang">JUPEM Pulau Pinang</option>
                         <option value="selangor">JUPEM Selangor</option>
                         <option value="terengganu">JUPEM Terengganu</option>
                         <option value="labuan">JUPEM W.P Labuan</option>
@@ -44,6 +44,16 @@
                     <div class="text-center text-title-semasa-11">JUPEM Kedah</div>
                     <div class="container pt-4">
                         {!! $kedah->contents_my !!}
+                    </div>
+                </section>
+            </div>
+            <!-- JUPEM Penang -->
+            <div class="row align-items-center show-hide" style="padding-top: 30px; display: none;" id="penang">
+                <section class="toggle">
+
+                    <div class="text-center text-title-semasa-11">JUPEM Pulau Pinang</div>
+                    <div class="container pt-4">
+                        {!! $penang->contents_my !!}
                     </div>
                 </section>
             </div>
