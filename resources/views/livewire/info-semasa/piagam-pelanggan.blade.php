@@ -96,7 +96,7 @@
             <table id="piagam-table" class="table table-striped table-filter table-hover" style="width:100%">
                 <thead>
                     <tr>
-                        <th class="table-title-jupem align-middle text-center">#</th>
+                        {{-- <th class="table-title-jupem align-middle text-center">#</th> --}}
                         <th class="table-title-jupem">{{ __('message.Title') }}</th>
                         <th class="align-middle text-center d-none">Tahun</th>
                         <th class="table-title-jupem text-center">{{ __('message.Attachment') }}</th>
@@ -105,9 +105,9 @@
                 <tbody>
                     @foreach ($piagam as $item)
                         <tr>
-                            <td class=" align-middle text-center">
+                            {{-- <td class=" align-middle text-center">
                                 {{ $loop->iteration }}
-                            </td>
+                            </td> --}}
                             <td class="align-middle">
                                 {{ $item->title_my }}
                             </td>

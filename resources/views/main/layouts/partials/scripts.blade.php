@@ -84,7 +84,7 @@
 
         // Piagam Filter by year
         $('#piagam-filter-year').change(function() {
-            piagamTable.columns([2]).search($(this).val()).draw();
+            piagamTable.columns([1]).search($(this).val()).draw();
         });
 
         // Pengumuman Filter by text
