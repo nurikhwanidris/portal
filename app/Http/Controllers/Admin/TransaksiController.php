@@ -21,7 +21,7 @@ class TransaksiController extends Controller
             'title' => 'Senarai Transaksi',
             'leadCrumbs' => 'Transaksi',
             'link' => '/spsm/admin/transaksi',
-            'transaksis' => Transaksi::with('status')->get()
+            'transaksis' => Transaksi::with('status')->orderBy('created_at', 'desc')->get()
         ]);
     }
 
