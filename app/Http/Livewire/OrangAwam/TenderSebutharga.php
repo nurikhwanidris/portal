@@ -28,10 +28,11 @@ class TenderSebutharga extends Component
     {
         // Tender
         if ($this->searchTender != '' || $this->selectTenderYear != '') {
-            if ($this->searchTender != '')
+            if ($this->searchTender != '') {
                 $queryTenders = Tender::where('title_my', 'like', '%' . $this->searchTender . '%')->orderBy('created_at', 'desc')->paginate(5);
-            else if ($this->selectTenderYear != '')
+            } else if ($this->selectTenderYear != '') {
                 $queryTenders = Tender::whereYear('created_at', $this->selectTenderYear)->orderBy('created_at', 'desc')->paginate(5);
+            }
         } else
             $queryTenders = Tender::orderBy('created_at', 'desc')->paginate(5);
 

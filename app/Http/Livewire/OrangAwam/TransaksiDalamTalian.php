@@ -7,9 +7,10 @@ use Livewire\Component;
 
 class TransaksiDalamTalian extends Component
 {
+
     public function render()
     {
-        return view('livewire.orang-awam.transaksi-dalam-talian',[
+        return view('livewire.orang-awam.transaksi-dalam-talian', [
             'transaksiTotal' => Transaksi::where([
                 ['year', date('Y')],
             ])->sum(now()->subMonth()->format('F')),

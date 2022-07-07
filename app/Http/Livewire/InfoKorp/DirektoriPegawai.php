@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Livewire\OrangAwam;
+namespace App\Http\Livewire\InfoKorp;
 
-use Illuminate\Support\Facades\DB;
 use Livewire\Component;
-
+use Illuminate\Support\Facades\DB;
 
 class DirektoriPegawai extends Component
 {
+
     public $bahagian;
 
     public $selectedBahagian = null;
@@ -27,7 +27,7 @@ class DirektoriPegawai extends Component
             $this->bahagian = $query;
         }
     }
-
+    
     public function render()
     {
         return view('livewire.info-korp.direktori-pegawai');

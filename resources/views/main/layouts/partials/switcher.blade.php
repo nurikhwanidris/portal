@@ -28,11 +28,19 @@
                     </li>
                     <li>
                         <a class="nav-link link-no-deco"
-                            href="{{ route('info-korp', app()->getLocale()) }}#tab-3">{{ __('message.Contact Us') }}</a>
+                            href="{{ route('info-korp', app()->getLocale()) }}#tab-2">{{ __('message.Staff Directory') }}</a>
                     </li>
                     <li>
                         <a class="nav-link link-no-deco"
-                            href="{{ route('info-korp', app()->getLocale()) }}#tab-4">{{ __('message.Subject Matter Expertise') }}</a>
+                        href="{{ route('info-korp', app()->getLocale()) }}#tab-3">{{ __('message.Contact Us') }}</a>
+                    </li>
+                    <li>
+                        <a class="nav-link link-no-deco"
+                        href="{{ route('info-korp', app()->getLocale()) }}#tab-4">{{ __('message.Subject Matter Expertise') }}</a>
+                    </li>
+                    <li>
+                        <a class="nav-link link-no-deco"
+                            href="{{ route('info-korp', app()->getLocale()) }}#tab-5">{{ __('message.Staff Directory') }}</a>
                     </li>
                 </ul>
             </li>

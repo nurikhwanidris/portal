@@ -16,10 +16,10 @@ class BeritaTerkini extends Component
         $search = $request->input('carian');
 
         $beritaTerkini = ModelsBeritaTerkini::query()
-                ->where('title_my', 'LIKE', "%{$search}%")
-                ->orWhere('content_my', 'LIKE', "%{$search}%")
-                ->orderBy('created_at', 'desc')
-                ->paginate(10);
+            ->where('title_my', 'LIKE', "%{$search}%")
+            ->orWhere('content_my', 'LIKE', "%{$search}%")
+            ->orderBy('created_at', 'desc')
+            ->paginate(10);
 
         foreach ($beritaTerkini as $res_halaman) {
             $text = strip_tags($res_halaman['content_my']);
@@ -33,13 +33,17 @@ class BeritaTerkini extends Component
                 $text = '... ' . preg_replace('/\s+?(\S+)?$/', '', substr($highlight, stripos($text, $search), 300)) . ' ...';
             }
 
-            $res_halaman_summary[$res_halaman['id']] = array(
-                'id' => $res_halaman['id'],
-                'tajuk' => $res_halaman['title_my'],
-                'content_my' => $text,
-                'type' => $res_halaman['type'],
-                'created_at' => $res_halaman['created_at'],
-            );
+            if ($beritaTerkini->count() > 0) {
+                $res_halaman_summary[$res_halaman['id']] = array(
+                    'id' => $res_halaman['id'],
+                    'tajuk' => $res_halaman['title_my'],
+                    'content_my' => $text,
+                    'type' => $res_halaman['type'],
+                    'created_at' => $res_halaman['created_at'],
+                );
+            } else {
+                $res_halaman_summary = 'Nothing found';
+            }
         }
 
         return view('livewire.main.carian.berita-terkini', [

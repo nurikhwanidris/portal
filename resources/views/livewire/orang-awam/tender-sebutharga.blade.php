@@ -30,8 +30,7 @@
                                         <label class="form-label mb-1 text-2">{{ __('message.Search') }}</label>
                                         <input wire:model='searchTender'
                                             class="form-control border-color-quaernary filter-text" type="text"
-                                             id="tender-filter-text"
-                                            aria-label="default color input example">
+                                            id="tender-filter-text" aria-label="default color input example">
                                     </div>
                                     <div class="form-group col-lg-6">
                                         <label class="form-label mb-1 text-2">{{ __('message.Select Year') }}</label>
@@ -69,58 +68,49 @@
                                                     style="font-size: 0.85em; font-weight: bold;">
                                                     {{ $loop->iteration }}
                                                 </span>
-                                                <span class="col-9"
-                                                    style="font-size: 0.85em; color: #237bfd; font-weight: bold;">
-                                                    @if (app()->getLocale() == 'en')
-                                                        {{ $tender->title_en }}
-                                                    @else
-                                                        {{ $tender->title_my }}
-                                                    @endif
-                                                </span>
-                                            </div>
-                                            <div class="row p-0 my-2">
-                                                <span class="col-2 align-middle"
-                                                    style="font-size: 0.85em; font-weight: bold;">
-                                                    {{ __('message.Code') }}
-                                                </span>
-                                                <span class="col-1">:</span>
-                                                <span class="col-9" style="font-size: 0.85em; font-weight: bold;">
-                                                    {{ $tender->kod }}
-                                                </span>
-                                            </div>
-                                            <div class="row p-0 my-2">
-                                                <span class="col-2 align-middle"
-                                                    style="font-size: 0.85em; font-weight: bold;">
-                                                    {{ __('message.Time') }}
-                                                </span>
-                                                <span class="col-1">:</span>
-                                                <span class="col-9" style="font-size: 0.85em; font-weight: bold;">
-                                                    {{ $tender->masa }}
-                                                </span>
-                                            </div>
-                                            <div class="row p-0 my-2">
-                                                <span class="col-2 align-middle"
-                                                    style="font-size: 0.85em; font-weight: bold;">
-                                                    {{ __('message.Briefing') }}
-                                                </span>
-                                                <span class="col-1">:</span>
-                                                <span class="col-9" style="font-size: 0.85em; font-weight: bold;">
-                                                    {{ $tender->taklimat }}
-                                                </span>
-                                            </div>
-                                            <div class="row p-0 my-2">
-                                                <span class="col-2 align-middle"
-                                                    style="font-size: 0.85em; font-weight: bold;">
-                                                    {{ __('message.Attachment') }}
-                                                </span>
-                                                <span class="col-1">:</span>
-                                                <span class="col-9" style="font-size: 0.85em; font-weight: bold;">
-                                                    <a href="{{ asset('storage/upload/tender/' . $tender->filename) }}"
-                                                        target="_blank"
-                                                        rel="noopener noreferrer">{{ __('message.Download') }}
-                                                        <i class="fas fa-file-download"></i>
-                                                    </a>
-                                                </span>
+                                                <div class="col-9">
+                                                    <span style="font-size: 0.85em; color: #237bfd; font-weight: bold;">
+                                                        @if (app()->getLocale() == 'en')
+                                                            {{ $tender->title_en }}
+                                                        @else
+                                                            {{ $tender->title_my }}
+                                                        @endif
+                                                    </span>
+                                                    <div class="row">
+                                                        <span class="col-2 align-middle"
+                                                            style="font-size: 0.85em; font-weight: bold;">
+                                                            {{ __('message.Code') }}
+                                                        </span>
+                                                        <span class="col-10"
+                                                            style="font-size: 0.85em; font-weight: bold;">
+                                                            {{ $tender->kod }}
+                                                        </span>
+                                                    </div>
+                                                    <div class="row">
+                                                        <span class="col-2 align-middle"
+                                                            style="font-size: 0.85em; font-weight: bold;">
+                                                            {{ __('message.Briefing') }}
+                                                        </span>
+                                                        <span class="col-10"
+                                                            style="font-size: 0.85em; font-weight: bold;">
+                                                            {{ $tender->taklimat }}
+                                                        </span>
+                                                    </div>
+                                                    <div class="row">
+                                                        <span class="col-2 align-middle"
+                                                            style="font-size: 0.85em; font-weight: bold;">
+                                                            {{ __('message.Attachment') }}
+                                                        </span>
+                                                        <span class="col-10"
+                                                            style="font-size: 0.85em; font-weight: bold;">
+                                                            <a href="{{ asset('storage/upload/tender/' . $tender->filename) }}"
+                                                                target="_blank"
+                                                                rel="noopener noreferrer">{{ __('message.Download') }}
+                                                                <i class="fas fa-file-download"></i>
+                                                            </a>
+                                                        </span>
+                                                    </div>
+                                                </div>
                                             </div>
                                             <hr>
                                         @endforeach
@@ -150,12 +140,11 @@
                                     <div class="form-group col-lg-6">
                                         <label class="form-label mb-1 text-2">{{ __('message.Search') }}</label>
                                         <input class="form-control border-color-quaernary filter-text" type="text"
-                                            wire:model='searchQuote' 
-                                            id="sebut-harga-filter-text" aria-label="default color input example">
+                                            wire:model='searchQuote' id="sebut-harga-filter-text"
+                                            aria-label="default color input example">
                                     </div>
                                     <div class="form-group col-lg-6">
-                                        <label
-                                            class="form-label mb-1 text-2">{{ __('message.Select Year') }}</label>
+                                        <label class="form-label mb-1 text-2">{{ __('message.Select Year') }}</label>
                                         <div class="custom-select-1">
                                             <select
                                                 class="form-select form-control  border-color-quaernary h-auto filter-year"
@@ -191,58 +180,59 @@
                                                     style="font-size: 0.85em; font-weight: bold;">
                                                     {{ $loop->iteration }}
                                                 </span>
-                                                <span class="col-9"
-                                                    style="font-size: 0.85em; color: #237bfd; font-weight: bold;">
-                                                    @if (app()->getLocale() == 'en')
-                                                        {{ $quote->title_en }}
-                                                    @else
-                                                        {{ $quote->title_my }}
-                                                    @endif
-                                                </span>
+                                                <div class="col-9">
+                                                    <span
+                                                        style="font-size: 0.85em; color: #237bfd; font-weight: bold;">
+                                                        @if (app()->getLocale() == 'en')
+                                                            {{ $quote->title_en }}
+                                                        @else
+                                                            {{ $quote->title_my }}
+                                                        @endif
+                                                    </span>
+                                                    <div class="row">
+                                                        <span class="col-2 align-middle"
+                                                            style="font-size: 0.85em; font-weight: bold;">
+                                                            {{ __('message.Code') }}
+                                                        </span>
+                                                        <span class="col-10"
+                                                            style="font-size: 0.85em; font-weight: bold;">
+                                                            {{ $quote->kod }}
+                                                        </span>
+                                                    </div>
+                                                    <div class="row">
+                                                        <span class="col-2 align-middle"
+                                                            style="font-size: 0.85em; font-weight: bold;">
+                                                            {{ __('message.Briefing') }}
+                                                        </span>
+                                                        <span class="col-10"
+                                                            style="font-size: 0.85em; font-weight: bold;">
+                                                            {{ $quote->taklimat }}
+                                                        </span>
+                                                    </div>
+                                                    <div class="row">
+                                                        <span class="col-2 align-middle"
+                                                            style="font-size: 0.85em; font-weight: bold;">
+                                                            {{ __('message.Attachment') }}
+                                                        </span>
+                                                        <span class="col-10"
+                                                            style="font-size: 0.85em; font-weight: bold;">
+                                                            <a href="{{ asset('storage/upload/sebutharga/' . $quote->filename) }}"
+                                                                target="_blank"
+                                                                rel="noopener noreferrer">{{ __('message.Download') }}
+                                                                <i class="fas fa-file-download"></i>
+                                                            </a>
+                                                        </span>
+                                                    </div>
+                                                </div>
                                             </div>
                                             <div class="row p-0 my-2">
-                                                <span class="col-2 align-middle"
-                                                    style="font-size: 0.85em; font-weight: bold;">
-                                                    {{ __('message.Code') }}
-                                                </span>
-                                                <span class="col-1">:</span>
-                                                <span class="col-9" style="font-size: 0.85em; font-weight: bold;">
-                                                    {{ $quote->kod }}
-                                                </span>
+
                                             </div>
                                             <div class="row p-0 my-2">
-                                                <span class="col-2 align-middle"
-                                                    style="font-size: 0.85em; font-weight: bold;">
-                                                    {{ __('message.Time') }}
-                                                </span>
-                                                <span class="col-1">:</span>
-                                                <span class="col-9" style="font-size: 0.85em; font-weight: bold;">
-                                                    {{ $quote->masa }}
-                                                </span>
+
                                             </div>
                                             <div class="row p-0 my-2">
-                                                <span class="col-2 align-middle"
-                                                    style="font-size: 0.85em; font-weight: bold;">
-                                                    {{ __('message.Briefing') }}
-                                                </span>
-                                                <span class="col-1">:</span>
-                                                <span class="col-9" style="font-size: 0.85em; font-weight: bold;">
-                                                    {{ $quote->taklimat }}
-                                                </span>
-                                            </div>
-                                            <div class="row p-0 my-2">
-                                                <span class="col-2 align-middle"
-                                                    style="font-size: 0.85em; font-weight: bold;">
-                                                    {{ __('message.Attachment') }}
-                                                </span>
-                                                <span class="col-1">:</span>
-                                                <span class="col-9" style="font-size: 0.85em; font-weight: bold;">
-                                                    <a href="{{ asset('storage/upload/sebutharga/' . $quote->filename) }}"
-                                                        target="_blank"
-                                                        rel="noopener noreferrer">{{ __('message.Download') }}
-                                                        <i class="fas fa-file-download"></i>
-                                                    </a>
-                                                </span>
+
                                             </div>
                                             <hr>
                                         @endforeach
@@ -272,9 +262,7 @@
                                     <div class="form-group col-lg-6">
                                         <label class="form-label mb-1 text-2">{{ __('message.Search') }}</label>
                                         <input class="form-control border-color-quaernary" type="text"
-                                            wire:model='perolehanFilterText'
-                                            
-                                            aria-label="default color input example"
+                                            wire:model='perolehanFilterText' aria-label="default color input example"
                                             id="perolehan-berjaya-filter-text">
                                     </div>
                                     <div class="form-group col-lg-6">

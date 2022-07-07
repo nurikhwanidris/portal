@@ -1,7 +1,7 @@
-<div class="container-fluid" style="margin-bottom: -100px;">
+<div class="container-fluid" style="margin-bottom: -80px;">
     <div class="row" style="padding: 10px 40px;">
         <!-- Berita Terkini 1 -->
-        <div class="col-lg-4" style="padding: 20px 30px 20px 30px;">
+        <div class="col-sm-10 col-md-7 col-lg-4" style="padding: 20px 30px 20px 30px;">
             <span class="row text-title-semasa-1 mb-2">{{ __('message.Latest News') }}</span>
             @livewire('main.berita-terkini')
         </div>
@@ -13,7 +13,7 @@
         </div>
 
         <!-- Waktu Solat -->
-        <div class="col-sm-10 col-md-7 col-lg-4">
+        <div class="col-sm-10 col-md-7 col-lg-4" style="padding:20px 30px 20px 30px;">
             @livewire('main.waktu-solat')
         </div>
     </div>

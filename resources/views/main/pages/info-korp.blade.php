@@ -92,6 +92,11 @@
                                             id="tab4">{{ __('message.Subject Matter Expertise') }}
                                         </a>
                                     </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#tab-5" data-bs-toggle="tab"
+                                            id="tab5">{{ __('message.Staff Directory') }}
+                                        </a>
+                                    </li>
                                 </ul>
                             </div>
                             <!-- Tab Sub - END -->
@@ -109,6 +114,9 @@
                         </div>
                         <div class="tab-pane tab-pane-navigation" id="tab-4">
                             @livewire('info-korp.info-korp-sme')
+                        </div>
+                        <div class="tab-pane tab-pane-navigation" id="tab-5">
+                            @livewire('info-korp.direktori-pegawai')
                         </div>
                     </div>
                 </div>

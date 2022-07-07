@@ -6,38 +6,52 @@
                 <div class="col" style="padding-top: 20px;">
                     <span class="row text-title-semasa-1 mb-2">{{ __('message.Prayer Time') }}</span>
                 </div>
-                <text class="date-text-small">
+                <text class="date-text-small" style="font-size: 14px !important;">
                     {{ date('d F Y') }} Miladi | {{ $tarikhHijrah }} Hijriah
                 </text>
-                <text class="tempat-text-small">
+                <text class="tempat-text-small" style="font-size: 12px !important">
                     {{ $waktuSolat->ZONE_NAME }}
                 </text>
             </div>
             <div class="row" style="padding: 0 25px;">
                 <table>
                     <tr class="tinggi">
-                        <td class="waktu-solat-small">{{ __('message.Subuh') }}</td>
-                        <td class="masa-solat-small">{{ $waktuSolat->SUBUH }}</td>
+                        <td class="waktu-solat-small" style="font-size: 12px !important;">{{ __('message.Subuh') }}
+                        </td>
+                        <td class="masa-solat-small" style="font-size: 12px !important; font-weight: bold;">
+                            {{ $waktuSolat->SUBUH }}</td>
                     </tr>
                     <tr class="tinggi">
-                        <td class="waktu-solat-small">{{ __('message.Syuruk') }}</td>
-                        <td class="masa-solat-small">{{ $waktuSolat->SYURUK }}</td>
+                        <td class="waktu-solat-small" style="font-size: 12px !important;">{{ __('message.Syuruk') }}
+                        </td>
+                        <td class="masa-solat-small" style="font-size: 12px !important; font-weight: bold;">
+                            {{ $waktuSolat->SYURUK }}
+                        </td>
                     </tr>
                     <tr class="tinggi">
-                        <td class="waktu-solat-small">{{ __('message.Zohor') }}</td>
-                        <td class="masa-solat-small">{{ $waktuSolat->ZUHUR }}</td>
+                        <td class="waktu-solat-small" style="font-size: 12px !important;">{{ __('message.Zohor') }}
+                        </td>
+                        <td class="masa-solat-small" style="font-size: 12px !important; font-weight: bold;">
+                            {{ $waktuSolat->ZUHUR }}</td>
                     </tr>
                     <tr class="tinggi">
-                        <td class="waktu-solat-small">{{ __('message.Asar') }}</td>
-                        <td class="masa-solat-small">{{ $waktuSolat->ASAR }}</td>
+                        <td class="waktu-solat-small" style="font-size: 12px !important;">{{ __('message.Asar') }}
+                        </td>
+                        <td class="masa-solat-small" style="font-size: 12px !important; font-weight: bold;">
+                            {{ $waktuSolat->ASAR }}</td>
                     </tr>
                     <tr class="tinggi">
-                        <td class="waktu-solat-small">{{ __('message.Maghrib') }}</td>
-                        <td class="masa-solat-small">{{ $waktuSolat->MAGHRIB }}</td>
+                        <td class="waktu-solat-small" style="font-size: 12px !important;">{{ __('message.Maghrib') }}
+                        </td>
+                        <td class="masa-solat-small" style="font-size: 12px !important; font-weight: bold;">
+                            {{ $waktuSolat->MAGHRIB }}
+                        </td>
                     </tr>
                     <tr class="tinggi">
-                        <td class="waktu-solat-small">{{ __('message.Isyak') }}</td>
-                        <td class="masa-solat-small">{{ $waktuSolat->ISYA }}</td>
+                        <td class="waktu-solat-small" style="font-size: 12px !important;">{{ __('message.Isyak') }}
+                        </td>
+                        <td class="masa-solat-small" style="font-size: 12px !important; font-weight: bold;">
+                            {{ $waktuSolat->ISYA }}</td>
                     </tr>
                 </table>
                 <select wire:model='zone' class="form-select form-select-sm">
@@ -81,7 +95,8 @@
                         <option value="10">Ipoh, Batu Gajah, Kampar, Sg.Siput, Kuala Kangsar</option>
                         <option value="11">Pengkalan Hulu, Grik, Lenggong</option>
                         <option value="12">Temengor, Belum</option>
-                        <option value="13">Teluk Intan, Bagan Datoh, Kg.Gajah,Sri Iskandar, Beruas,Parit,Lumut,Setiawan
+                        <option value="13">Teluk Intan, Bagan Datoh, Kg.Gajah,Sri Iskandar,
+                            Beruas,Parit,Lumut,Setiawan
                             dan Pulau Pangkor</option>
                         <option value="14">Selama, Taiping, Bagan Serai dan Parit Buntar</option>
                         <option value="15">Bukit Larut</option>
@@ -93,15 +108,18 @@
                         <option value="8">Seluruh Negeri Pulau Pinang</option>
                     </optgroup>
                     <optgroup label="Sabah">
-                        <option value="39">Zon 1 - Sandakan, Bdr. Bkt. Garam, Semawang, Temanggong, Tambisan</option>
+                        <option value="39">Zon 1 - Sandakan, Bdr. Bkt. Garam, Semawang, Temanggong, Tambisan
+                        </option>
                         <option value="40">Zon 2 - Pinangah, Terusan, Beluran, Kuamut, Telupit</option>
                         <option value="41">Zon 3 - Lahad Datu, Kunak, Silabukan, Tungku, Sahabat, Semporna</option>
                         <option value="42">Zon 4 - Tawau, Balong, Merotai, Kalabakan</option>
                         <option value="43">Zon 5 - Kudat, Kota Marudu, Pitas, Pulau Banggi</option>
                         <option value="44">Zon 6 - Gunung Kinabalu</option>
-                        <option value="45">Zon 7 - Papar, Ranau, Kota Belud, Tuaran, Penampang, Kota Kinabalu</option>
+                        <option value="45">Zon 7 - Papar, Ranau, Kota Belud, Tuaran, Penampang, Kota Kinabalu
+                        </option>
                         <option value="46">Zon 8 - Pensiangan, Keningau, Tambunan, Nabawan</option>
-                        <option value="47">Zon 9 - Sipitang, Membakut, Beaufort, Kuala Penyu, Weston, Tenom, Long Pa Sia
+                        <option value="47">Zon 9 - Sipitang, Membakut, Beaufort, Kuala Penyu, Weston, Tenom, Long Pa
+                            Sia
                         </option>
                     </optgroup>
                     <optgroup label="Sarawak">
