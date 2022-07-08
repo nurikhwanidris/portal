@@ -9,7 +9,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-9">
+            <div class="col-lg-12">
                 <div class="row">
                     <div class="featured-boxes featured-boxes-style-3 featured-boxes-flat">
                         <div class="col">
@@ -224,7 +224,7 @@
                     @foreach ($bahagian as $key => $pegawai)
                         @if ($key > 0)
                             @if ($pegawai->name_my == 'KOSONG')
-                                <div class="col-sm-6 col-lg-4 mb-4 mb-lg-0">
+                                <div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
                                     <span class="thumb-info thumb-info-hide-wrapper-bg thumb-info-no-zoom">
                                         <span class="thumb-info-wrapper">
                                             <img src="{{ asset('storage/upload/img/default-potrait-1648800867.jpg') }}"
@@ -260,7 +260,7 @@
                                     </span>
                                 </div>
                             @else
-                                <div class="col-sm-6 col-lg-4 mb-4 mb-lg-0">
+                                <div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
                                     <span class="thumb-info thumb-info-hide-wrapper-bg thumb-info-no-zoom">
                                         <span class="thumb-info-wrapper">
                                             <img src="{{ asset('storage/upload/img/pegawai/' . $pegawai->photo) }}"

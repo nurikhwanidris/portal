@@ -15,9 +15,9 @@
                 <a class="nav-link" href="/"> {{ __('message.Main Menu') }} </a>
             </li>
             <li class="nav-item has-submenu">
-                <a class="nav-link dropdown-item dropdown-toggle"
-                    href="#">{{ __('message.Corporate Information') }}</a>
-                <ul class="submenu collapse">
+                <a class="nav-link dropdown-item"
+                    href="{{ route('info-korp', app()->getLocale()) }}">{{ __('message.Corporate Information') }}</a>
+                {{-- <ul class="submenu collapse">
                     <li>
                         <a class="nav-link link-no-deco"
                             href="{{ route('info-korp', app()->getLocale()) }}#tab-1">{{ __('message.JUPEM Information') }}</a>
@@ -32,22 +32,22 @@
                     </li>
                     <li>
                         <a class="nav-link link-no-deco"
-                        href="{{ route('info-korp', app()->getLocale()) }}#tab-3">{{ __('message.Contact Us') }}</a>
+                            href="{{ route('info-korp', app()->getLocale()) }}#tab-3">{{ __('message.Contact Us') }}</a>
                     </li>
                     <li>
                         <a class="nav-link link-no-deco"
-                        href="{{ route('info-korp', app()->getLocale()) }}#tab-4">{{ __('message.Subject Matter Expertise') }}</a>
+                            href="{{ route('info-korp', app()->getLocale()) }}#tab-4">{{ __('message.Subject Matter Expertise') }}</a>
                     </li>
                     <li>
                         <a class="nav-link link-no-deco"
                             href="{{ route('info-korp', app()->getLocale()) }}#tab-5">{{ __('message.Staff Directory') }}</a>
                     </li>
-                </ul>
+                </ul> --}}
             </li>
             <li class="nav-item has-submenu">
-                <a class="nav-link dropdown-item dropdown-toggle" href="#">
+                <a class="nav-link dropdown-item" href="{{ route('info-semasa', app()->getLocale()) }}">
                     {{ __('message.Current Information') }}</a>
-                <ul class="submenu collapse">
+                {{-- <ul class="submenu collapse">
                     <li>
                         <a class="nav-link link-no-deco"
                             href="{{ route('info-semasa', app()->getLocale()) }}#tab-1">{{ __('message.Announcement') }}
@@ -65,7 +65,7 @@
                         <a class="nav-link link-no-deco"
                             href="{{ route('info-semasa', app()->getLocale()) }}#tab-4">{{ __('message.Client Charter') }}</a>
                     </li>
-                </ul>
+                </ul> --}}
             </li>
 
             {{-- <li class="nav-item has-submenu">

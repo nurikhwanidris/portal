@@ -18,7 +18,7 @@
                                     <a class="accordion-toggle text-color-dark font-weight-bold collapsed"
                                         data-bs-toggle="collapse" data-bs-target="#collapse200One" aria-expanded="false"
                                         aria-controls="collapse200One">
-                                        Mengenai SME
+                                        SME & Punca Kuasa
                                     </a>
                                 </h4>
                             </div>
@@ -47,7 +47,7 @@
                             </div>
                         </div>
                         <!-- 2 -->
-                        <div class="card card-default">
+                        {{-- <div class="card card-default">
                             <div class="card-header" id="collapse200HeadingTwoA">
                                 <h4 class="card-title m-0">
                                     <a class="accordion-toggle text-color-dark font-weight-bold collapsed"
@@ -63,9 +63,9 @@
                                     @livewire('info-korp.info-korp-sme-permohonan-hubungi-kami')
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                         <!-- 3 -->
-                        <div class="card card-default">
+                        {{-- <div class="card card-default">
                             <div class="card-header" id="collapse200HeadingTwo">
                                 <h4 class="card-title m-0">
                                     <a class="accordion-toggle text-color-dark font-weight-bold collapsed"
@@ -81,9 +81,9 @@
                                     @livewire('info-korp.info-korp-sme-punca-kuasa')
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                         <!-- 4 -->
-                        <div class="card card-default">
+                        {{-- <div class="card card-default">
                             <div class="card-header" id="collapse200HeadingThree">
                                 <h4 class="card-title m-0">
                                     <a class="accordion-toggle text-color-dark font-weight-bold collapsed"
@@ -99,7 +99,7 @@
                                     @livewire('info-korp.info-korp-sme-aktiviti')
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                         <!-- 5 -->
                         <div class="card card-default">
                             <div class="card-header" id="collapse200HeadingFour">
@@ -107,7 +107,7 @@
                                     <a class="accordion-toggle text-color-dark font-weight-bold collapsed"
                                         data-bs-toggle="collapse" data-bs-target="#collapse200Four"
                                         aria-expanded="false" aria-controls="collapse200Four">
-                                        Senarai dan Profil Pegawai SME
+                                        Senarai Pegawai SME
                                     </a>
                                 </h4>
                             </div>
@@ -119,23 +119,23 @@
                             </div>
                         </div>
                         <!-- 6 -->
-                        {{-- <div class="card card-default">
-                        <div class="card-header" id="collapse200HeadingFive">
-                            <h4 class="card-title m-0">
-                                <a class="accordion-toggle text-color-dark font-weight-bold collapsed"
-                                    data-bs-toggle="collapse" data-bs-target="#collapse200Five" aria-expanded="false"
-                                    aria-controls="collapse200Five">
-                                    Sumbangan SME
-                                </a>
-                            </h4>
-                        </div>
-                        <div id="collapse200Five" class="collapse" aria-labelledby="collapse200HeadingFive"
-                            data-bs-parent="#accordion200">
-                            <div class="card-body pt-0">
-                                @livewire('info-korp.info-korp-sme-sumbangan')
+                        <div class="card card-default">
+                            <div class="card-header" id="collapse200HeadingFive">
+                                <h4 class="card-title m-0">
+                                    <a class="accordion-toggle text-color-dark font-weight-bold collapsed"
+                                        data-bs-toggle="collapse" data-bs-target="#collapse200Five"
+                                        aria-expanded="false" aria-controls="collapse200Five">
+                                        Pengiktirafan & Sumbangan SME
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapse200Five" class="collapse" aria-labelledby="collapse200HeadingFive"
+                                data-bs-parent="#accordion200">
+                                <div class="card-body pt-0">
+                                    @livewire('info-korp.info-korp-sme-sumbangan')
+                                </div>
                             </div>
                         </div>
-                    </div> --}}
                     </div>
                 </div>
             </div>
