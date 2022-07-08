@@ -93,7 +93,7 @@ return [
     "Organization_structure_jupem" => "JUPEM Organizational Structure",
     "Organization_structure_ministry" => "Ministry Organizational Structure",
     "structure" => "Organization Structure",
-    "Subject Matter Expertise" => "Subject Matter Expertise",
+    "Subject Matter Expertise" => "Subject Matter Expert",
     "pengarah_jupem" => "JUPEM's Director General",
     "pengurusan_tertinggi" => "Higher Management",
     "cio" => "Chief Information Officer",

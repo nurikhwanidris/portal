@@ -46,24 +46,6 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- 2 -->
-                        {{-- <div class="card card-default">
-                            <div class="card-header" id="collapse200HeadingTwoA">
-                                <h4 class="card-title m-0">
-                                    <a class="accordion-toggle text-color-dark font-weight-bold collapsed"
-                                        data-bs-toggle="collapse" data-bs-target="#collapse200TwoA"
-                                        aria-expanded="false" aria-controls="collapse200Two">
-                                        Permohonan SME & Hubungi Kami
-                                    </a>
-                                </h4>
-                            </div>
-                            <div id="collapse200TwoA" class="collapse" aria-labelledby="collapse200HeadingTwoA"
-                                data-bs-parent="#accordion200">
-                                <div class="card-body pt-0">
-                                    @livewire('info-korp.info-korp-sme-permohonan-hubungi-kami')
-                                </div>
-                            </div>
-                        </div> --}}
                         <!-- 3 -->
                         {{-- <div class="card card-default">
                             <div class="card-header" id="collapse200HeadingTwo">
@@ -133,6 +115,24 @@
                                 data-bs-parent="#accordion200">
                                 <div class="card-body pt-0">
                                     @livewire('info-korp.info-korp-sme-sumbangan')
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 2 -->
+                        <div class="card card-default">
+                            <div class="card-header" id="collapse200HeadingTwoA">
+                                <h4 class="card-title m-0">
+                                    <a class="accordion-toggle text-color-dark font-weight-bold collapsed"
+                                        data-bs-toggle="collapse" data-bs-target="#collapse200TwoA"
+                                        aria-expanded="false" aria-controls="collapse200Two">
+                                        Permohonan SME
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapse200TwoA" class="collapse" aria-labelledby="collapse200HeadingTwoA"
+                                data-bs-parent="#accordion200">
+                                <div class="card-body pt-0">
+                                    @livewire('info-korp.info-korp-sme-permohonan-hubungi-kami')
                                 </div>
                             </div>
                         </div>

@@ -42,9 +42,9 @@ return [
     "Pengiktirafan" => "Pengiktirafan",
     "Find Us on" => "Temui Kami",
     "Quick Links" => "Pautan Mudah Alih",
-    "privacy_policy" => "Privacy Policy",
-    "security_policy" => "Security Policy",
-    "Disclaimer" => "Disclaimer",
+    "privacy_policy" => "Dasar Privasi",
+    "security_policy" => "Polisi Keselamatan",
+    "Disclaimer" => "Penafian",
     "Recognition" => "Pengiktirafan",
     "copyright" => "Hak Cipta Terpelihara " . date('Y') . " © Jabatan Ukur dan Pemetaan Malaysia",
     "best_view" => "Paparan terbaik menggunakan Google Chrome, Internet Explorer 10 ke atas dan Mozilla Firefox 3.5 dengan resolusi melebihi 1024 x 768 pixels",
@@ -94,7 +94,7 @@ return [
     "structure" => "Struktur Organisasi",
     "Organization_structure_jupem" => "Carta Organisasi JUPEM",
     "Organization_structure_ministry" => "Carta Organisasi Kementerian",
-    "Subject Matter Expertise" => "Pakar Bidang Berkaitan",
+    "Subject Matter Expertise" => "Bidang Kepakaran",
     "cio" => "Ketua Pegawai Maklumat (CIO)",
 
     // Page Info Korp

@@ -65,24 +65,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- 4 -->
-                        <div class="card card-default">
-                            <div class="card-header" id="collapse200HeadingThree">
-                                <h4 class="card-title m-0">
-                                    <a class="accordion-toggle text-color-dark font-weight-bold collapsed"
-                                        data-bs-toggle="collapse" data-bs-target="#collapse200Three"
-                                        aria-expanded="false" aria-controls="collapse200Three">
-                                        {{ __('message.anggota_pentadbir') }}
-                                    </a>
-                                </h4>
-                            </div>
-                            <div id="collapse200Three" class="collapse" aria-labelledby="collapse200HeadingThree"
-                                data-bs-parent="#accordion200">
-                                <div class="card-body pt-0">
-                                    @livewire('info-korp.mengenai-anggota')
-                                </div>
-                            </div>
-                        </div>
+
                         {{-- <!-- 5 -->
                     <div class="card card-default">
                         <div class="card-header" id="collapse200HeadingFour">
@@ -116,6 +99,24 @@
                                 data-bs-parent="#accordion200">
                                 <div class="card-body pt-0">
                                     @livewire('info-korp.mengenai-anugerah')
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 4 -->
+                        <div class="card card-default">
+                            <div class="card-header" id="collapse200HeadingThree">
+                                <h4 class="card-title m-0">
+                                    <a class="accordion-toggle text-color-dark font-weight-bold collapsed"
+                                        data-bs-toggle="collapse" data-bs-target="#collapse200Three"
+                                        aria-expanded="false" aria-controls="collapse200Three">
+                                        {{ __('message.anggota_pentadbir') }}
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapse200Three" class="collapse" aria-labelledby="collapse200HeadingThree"
+                                data-bs-parent="#accordion200">
+                                <div class="card-body pt-0">
+                                    @livewire('info-korp.mengenai-anggota')
                                 </div>
                             </div>
                         </div>

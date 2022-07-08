@@ -59,8 +59,8 @@
                                     <div class="box-content box-content-border-0">
                                         <a href="{{ route('visi-misi', app()->getLocale()) }}"><i
                                                 class="icon-featured far fa-file-alt"></i></a>
-                                        <h4 class="font-weight-normal text-5 mt-3">Info <strong
-                                                class="font-weight-extra-bold">JUPEM</strong></h4>
+                                        <h4 class="font-weight-normal text-5 mt-3">Visi - Misi <strong>JUPEM</strong>
+                                        </h4>
                                         <p class="mb-2 mt-2 text-2">Visi, Misi, Moto, Dasar Kualiti, Kod Etika dan
                                             Definisi Logo.</p>
                                     </div>
@@ -76,6 +76,12 @@
 
             <!-- ======================== -->
             <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="text-center" style="padding-top: 40px;padding-bottom: 20px; font-size: 22px;">
+                            Tugas & Peranan JUPEM</div>
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col">
                         <div class="text-center text-title-semasa-11" style="padding-top: 40px;padding-bottom: 20px;">
