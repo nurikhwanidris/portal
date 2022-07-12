@@ -84,8 +84,9 @@
                                             id="tab2">{{ __('message.structure') }}</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#tab-3" data-bs-toggle="tab"
-                                            id="tab3">{{ __('message.Contact Us') }}</a>
+                                        <a class="nav-link" href="#tab-5" data-bs-toggle="tab"
+                                            id="tab5">{{ __('message.Staff Directory') }}
+                                        </a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="#tab-4" data-bs-toggle="tab"
@@ -93,9 +94,8 @@
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#tab-5" data-bs-toggle="tab"
-                                            id="tab5">{{ __('message.Staff Directory') }}
-                                        </a>
+                                        <a class="nav-link" href="#tab-3" data-bs-toggle="tab"
+                                            id="tab3">{{ __('message.Contact Us') }}</a>
                                     </li>
                                 </ul>
                             </div>
