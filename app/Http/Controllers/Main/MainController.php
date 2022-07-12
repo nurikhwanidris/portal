@@ -303,4 +303,13 @@ class MainController extends Controller
         ]);
     }
 
+    // Direktori Pegawai
+    public function direktoriPegawai()
+    {
+        return view('main.pages.direktori-pegawai', [
+            'counter' =>  $this->counter(),
+            'activity' => $this->activity(),
+        ]);
+    }
+
 }

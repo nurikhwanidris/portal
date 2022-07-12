@@ -101,7 +101,6 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="feature-box feature-box-primary col-sm-9" style="padding-top: 90px;">
-                            <a href="#" class="btn btn-modern btn-tertiary mb-2">Peta Wisma JUPEM</a>&nbsp;
                             <a href="{{ route('orang-awam', app()->getLocale()) }}#tab-4"
                                 class="btn btn-modern btn-secondary mb-2">Direktori
                                 Pegawai</a>
@@ -154,8 +153,7 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="feature-box feature-box-primary col-sm-9" style="padding-top: 90px;">
-                            <a href="#" class="btn btn-modern btn-tertiary mb-2">Peta Wisma JUPEM</a>&nbsp;
-                            <a href="{{ route('orang-awam', app()->getLocale()) }}#tab-4"
+                            <a href="{{ route('direktori-pegawai', ['search' => 80, 'negeri' => 'Negeri Johor', app()->getLocale()]) }}"
                                 class="btn btn-modern btn-secondary mb-2">Direktori
                                 Pegawai</a>
                         </div>
@@ -172,7 +170,8 @@
                         style="height: 350px;box-shadow: 0px 0px 10px #ccc;">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.3365119493374!2d100.54982641744384!3d5.365533999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304acbeaace6e037%3A0x4f14fdfa69390bf9!2sJabatan%20Ukur%20Dan%20Pemetaan%20Kedah!5e0!3m2!1sen!2smy!4v1654763424737!5m2!1sen!2smy"
-                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            width="100%" height="100%" style="border:0;" allowfullscreen=""
+                            loading="lazy"></iframe>
                     </div>
                     <!-- Google Map END -->
                 </div>
@@ -206,8 +205,7 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="feature-box feature-box-primary col-sm-9" style="padding-top: 90px;">
-                            <a href="#" class="btn btn-modern btn-tertiary mb-2">Peta Wisma JUPEM</a>&nbsp;
-                            <a href="{{ route('orang-awam', app()->getLocale()) }}#tab-4"
+                            <a href="{{ route('direktori-pegawai', ['search' => 83, 'negeri' => 'Negeri Kedah', app()->getLocale()]) }}"
                                 class="btn btn-modern btn-secondary mb-2">Direktori
                                 Pegawai</a>
                         </div>
@@ -223,7 +221,8 @@
                         style="height: 350px;box-shadow: 0px 0px 10px #ccc;">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3967.042023108349!2d102.23862121531641!3d6.125047329364954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31b6afc4fb81ba0d%3A0xcc494592464f5837!2sDepartment%20of%20Survey%20and%20Mapping!5e0!3m2!1sen!2smy!4v1654763894343!5m2!1sen!2smy"
-                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            width="100%" height="100%" style="border:0;" allowfullscreen=""
+                            loading="lazy"></iframe>
                     </div>
                     <!-- Google Map END -->
                 </div>
@@ -255,8 +254,7 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="feature-box feature-box-primary col-sm-9" style="padding-top: 90px;">
-                            <a href="#" class="btn btn-modern btn-tertiary mb-2">Peta Wisma JUPEM</a>&nbsp;
-                            <a href="{{ route('orang-awam', app()->getLocale()) }}#tab-4"
+                            <a href="{{ route('direktori-pegawai', ['search' => 82, 'negeri' => 'Negeri Kelantan', app()->getLocale()]) }}"
                                 class="btn btn-modern btn-secondary mb-2">Direktori
                                 Pegawai</a>
                         </div>
@@ -272,7 +270,8 @@
                         style="height: 350px;box-shadow: 0px 0px 10px #ccc;">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3986.8458741074273!2d102.2535733153198!3d2.211795858814538!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d1efd54b97dd7d%3A0xc5d49d3156fc9828!2sJabatan%20Ukur%20Dan%20Pemetaan%20Melaka!5e0!3m2!1sen!2smy!4v1654764573068!5m2!1sen!2smy"
-                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            width="100%" height="100%" style="border:0;" allowfullscreen=""
+                            loading="lazy"></iframe>
                     </div>
                     <!-- Google Map END -->
                 </div>
@@ -304,8 +303,7 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="feature-box feature-box-primary col-sm-9" style="padding-top: 90px;">
-                            <a href="#" class="btn btn-modern btn-tertiary mb-2">Peta Wisma JUPEM</a>&nbsp;
-                            <a href="{{ route('orang-awam', app()->getLocale()) }}#tab-4"
+                            <a href="{{ route('direktori-pegawai', ['search' => 89, 'negeri' => 'Negeri Melaka', app()->getLocale()]) }}"
                                 class="btn btn-modern btn-secondary mb-2">Direktori
                                 Pegawai</a>
                         </div>
@@ -321,7 +319,8 @@
                         style="height: 350px;box-shadow: 0px 0px 10px #ccc;">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15941.224065347928!2d101.9422512!3d2.7252176!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x86d7d7b8adfb0506!2sJabatan%20Ukur%20Dan%20Pemetaan%20Malaysia%2C%20Negeri%20Sembilan!5e0!3m2!1sen!2smy!4v1654813458087!5m2!1sen!2smy"
-                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            width="100%" height="100%" style="border:0;" allowfullscreen=""
+                            loading="lazy"></iframe>
                     </div>
                     <!-- Google Map END -->
                 </div>
@@ -354,8 +353,7 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="feature-box feature-box-primary col-sm-9" style="padding-top: 90px;">
-                            <a href="#" class="btn btn-modern btn-tertiary mb-2">Peta Wisma JUPEM</a>&nbsp;
-                            <a href="{{ route('orang-awam', app()->getLocale()) }}#tab-4"
+                            <a href="{{ route('direktori-pegawai', ['search' => 86, 'negeri' => 'Negeri Sembilan', app()->getLocale()]) }}"
                                 class="btn btn-modern btn-secondary mb-2">Direktori
                                 Pegawai</a>
                         </div>
@@ -371,7 +369,8 @@
                         style="height: 350px;box-shadow: 0px 0px 10px #ccc;">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3980.8862313348263!2d103.34828951531725!3d3.8345874496244154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31c8bad11872b13d%3A0x1744cea6ebfbfe35!2sJabatan%20Ukur%20dan%20Pemetaan%20Pahang%20(Department%20of%20Survey%20and%20Mapping%20Pahang)!5e0!3m2!1sen!2smy!4v1654813608116!5m2!1sen!2smy"
-                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            width="100%" height="100%" style="border:0;" allowfullscreen=""
+                            loading="lazy"></iframe>
                     </div>
                     <!-- Google Map END -->
                 </div>
@@ -403,8 +402,7 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="feature-box feature-box-primary col-sm-9" style="padding-top: 90px;">
-                            <a href="#" class="btn btn-modern btn-tertiary mb-2">Peta Wisma JUPEM</a>&nbsp;
-                            <a href="{{ route('orang-awam', app()->getLocale()) }}#tab-4"
+                            <a href="{{ route('direktori-pegawai', ['search' => 79, 'negeri' => 'Negeri Pahang', app()->getLocale()]) }}"
                                 class="btn btn-modern btn-secondary mb-2">Direktori
                                 Pegawai</a>
                         </div>
@@ -420,7 +418,8 @@
                         style="height: 350px;box-shadow: 0px 0px 10px #ccc;">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.965092281783!2d101.08817101531648!3d4.6002754437997275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31caec8a66430afd%3A0x6bc4f67da702c908!2sJabatan%20Ukur%20Dan%20Pemetaan%20Perak%2C%2031350%20Ipoh%2C%20Perak!5e0!3m2!1sen!2smy!4v1654813774788!5m2!1sen!2smy"
-                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            width="100%" height="100%" style="border:0;" allowfullscreen=""
+                            loading="lazy"></iframe>
                     </div>
                     <!-- Google Map END -->
                 </div>
@@ -454,8 +453,7 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="feature-box feature-box-primary col-sm-9" style="padding-top: 90px;">
-                            <a href="#" class="btn btn-modern btn-tertiary mb-2">Peta Wisma JUPEM</a>&nbsp;
-                            <a href="{{ route('orang-awam', app()->getLocale()) }}#tab-4"
+                            <a href="{{ route('direktori-pegawai', ['search' => 78, 'negeri' => 'Negeri Perak', app()->getLocale()]) }}"
                                 class="btn btn-modern btn-secondary mb-2">Direktori
                                 Pegawai</a>
                         </div>
@@ -471,7 +469,8 @@
                         style="height: 350px;box-shadow: 0px 0px 10px #ccc;">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31716.93320175832!2d100.16884117910156!3d6.443244300000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304c99a556155555%3A0x5b1e71eeff9b3fd9!2sPerlis%20Survey%20and%20Mapping%20Department!5e0!3m2!1sen!2smy!4v1654813883136!5m2!1sen!2smy"
-                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            width="100%" height="100%" style="border:0;" allowfullscreen=""
+                            loading="lazy"></iframe>
                     </div>
                     <!-- Google Map END -->
                 </div>
@@ -503,8 +502,7 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="feature-box feature-box-primary col-sm-9" style="padding-top: 90px;">
-                            <a href="#" class="btn btn-modern btn-tertiary mb-2">Peta Wisma JUPEM</a>&nbsp;
-                            <a href="{{ route('orang-awam', app()->getLocale()) }}#tab-4"
+                            <a href="{{ route('direktori-pegawai', ['search' => 88, 'negeri' => 'Negeri Perlis', app()->getLocale()]) }}"
                                 class="btn btn-modern btn-secondary mb-2">Direktori
                                 Pegawai</a>
                         </div>
@@ -520,7 +518,8 @@
                         style="height: 350px;box-shadow: 0px 0px 10px #ccc;">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.016193125623!2d100.32765231531631!3d5.414503436560794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304ac395d1e6b0fd%3A0xa9b31564f25de6aa!2sJabatan%20Ukur%20dan%20Pemetaan%20Pulau%20Pinang!5e0!3m2!1sen!2smy!4v1654813990754!5m2!1sen!2smy"
-                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            width="100%" height="100%" style="border:0;" allowfullscreen=""
+                            loading="lazy"></iframe>
                     </div>
                     <!-- Google Map END -->
                 </div>
@@ -552,8 +551,7 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="feature-box feature-box-primary col-sm-9" style="padding-top: 90px;">
-                            <a href="#" class="btn btn-modern btn-tertiary mb-2">Peta Wisma JUPEM</a>&nbsp;
-                            <a href="{{ route('orang-awam', app()->getLocale()) }}#tab-4"
+                            <a href="{{ route('direktori-pegawai', ['search' => 90, 'negeri' => 'Negeri Pulau Pinang', app()->getLocale()]) }}"
                                 class="btn btn-modern btn-secondary mb-2">Direktori
                                 Pegawai</a>
                         </div>
@@ -569,7 +567,8 @@
                         style="height: 350px;box-shadow: 0px 0px 10px #ccc;">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.036292369334!2d101.51907772831291!3d3.08498904723379!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc5277f25d61e5%3A0xb29d2e7c5cfa08e9!2sJUPEM%20Selangor!5e0!3m2!1sen!2smy!4v1654814064275!5m2!1sen!2smy"
-                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            width="100%" height="100%" style="border:0;" allowfullscreen=""
+                            loading="lazy"></iframe>
                     </div>
                     <!-- Google Map END -->
                 </div>
@@ -602,8 +601,7 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="feature-box feature-box-primary col-sm-9" style="padding-top: 90px;">
-                            <a href="#" class="btn btn-modern btn-tertiary mb-2">Peta Wisma JUPEM</a>&nbsp;
-                            <a href="{{ route('orang-awam', app()->getLocale()) }}#tab-4"
+                            <a href="{{ route('direktori-pegawai', ['search' => 81, 'negeri' => 'Negeri Selangor', app()->getLocale()]) }}"
                                 class="btn btn-modern btn-secondary mb-2">Direktori
                                 Pegawai</a>
                         </div>
@@ -619,7 +617,8 @@
                         style="height: 350px;box-shadow: 0px 0px 10px #ccc;">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31782.18480223136!2d103.1342398531538!3d5.298062936347359!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31b7be7a0b9c383f%3A0x420f6296992c2e53!2sJabatan%20Ukur%20dan%20Pemetaan%20Terengganu!5e0!3m2!1sen!2smy!4v1654814168356!5m2!1sen!2smy"
-                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            width="100%" height="100%" style="border:0;" allowfullscreen=""
+                            loading="lazy"></iframe>
                     </div>
                     <!-- Google Map END -->
                 </div>
@@ -652,8 +651,7 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="feature-box feature-box-primary col-sm-9" style="padding-top: 90px;">
-                            <a href="#" class="btn btn-modern btn-tertiary mb-2">Peta Wisma JUPEM</a>&nbsp;
-                            <a href="{{ route('orang-awam', app()->getLocale()) }}#tab-4"
+                            <a href="{{ route('direktori-pegawai', ['search' => 87, 'negeri' => 'Negeri Terengganu', app()->getLocale()]) }}"
                                 class="btn btn-modern btn-secondary mb-2">Direktori
                                 Pegawai</a>
                         </div>
@@ -669,7 +667,8 @@
                         style="height: 350px;box-shadow: 0px 0px 10px #ccc;">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.7099385756637!2d101.71378472831383!3d3.170878346533459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc37dd51fff901%3A0x4a80677198e75bfd!2sDepartment%20of%20Survey%20and%20Mapping%20Malaysia%20(JUPEM)!5e0!3m2!1sen!2smy!4v1654814264767!5m2!1sen!2smy"
-                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            width="100%" height="100%" style="border:0;" allowfullscreen=""
+                            loading="lazy"></iframe>
                     </div>
                     <!-- Google Map END -->
                 </div>
@@ -702,7 +701,6 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="feature-box feature-box-primary col-sm-9" style="padding-top: 90px;">
-                            <a href="#" class="btn btn-modern btn-tertiary mb-2">Peta Wisma JUPEM</a>&nbsp;
                             <a href="{{ route('orang-awam', app()->getLocale()) }}#tab-4"
                                 class="btn btn-modern btn-secondary mb-2">Direktori
                                 Pegawai</a>
@@ -719,7 +717,8 @@
                         style="height: 350px;box-shadow: 0px 0px 10px #ccc;">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3986.572993632177!2d111.81629012830709!3d2.311105253004515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31f77fc4fb1464f9%3A0xec8ff8976d5f37b1!2sJabatan%20Ukur%20Dan%20Pemetaan%20(JUPEM)!5e0!3m2!1sen!2smy!4v1654814425989!5m2!1sen!2smy"
-                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            width="100%" height="100%" style="border:0;" allowfullscreen=""
+                            loading="lazy"></iframe>
                     </div>
                     <!-- Google Map END -->
                 </div>
@@ -751,8 +750,7 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="feature-box feature-box-primary col-sm-9" style="padding-top: 90px;">
-                            <a href="#" class="btn btn-modern btn-tertiary mb-2">Peta Wisma JUPEM</a>&nbsp;
-                            <a href="{{ route('orang-awam', app()->getLocale()) }}#tab-4"
+                            <a href="{{ route('direktori-pegawai', ['search' => 68, 'negeri' => 'Negeri Sarawak', app()->getLocale()]) }}"
                                 class="btn btn-modern btn-secondary mb-2">Direktori
                                 Pegawai</a>
                         </div>
@@ -768,7 +766,8 @@
                         style="height: 350px;box-shadow: 0px 0px 10px #ccc;">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.7099385756637!2d101.71378472831383!3d3.170878346533459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc37dd51fff901%3A0x4a80677198e75bfd!2sDepartment%20of%20Survey%20and%20Mapping%20Malaysia%20(JUPEM)!5e0!3m2!1sen!2smy!4v1654814264767!5m2!1sen!2smy"
-                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            width="100%" height="100%" style="border:0;" allowfullscreen=""
+                            loading="lazy"></iframe>
                     </div>
                     <!-- Google Map END -->
                 </div>
@@ -800,8 +799,7 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="feature-box feature-box-primary col-sm-9" style="padding-top: 90px;">
-                            <a href="#" class="btn btn-modern btn-tertiary mb-2">Peta Wisma JUPEM</a>&nbsp;
-                            <a href="{{ route('orang-awam', app()->getLocale()) }}#tab-4"
+                            <a href="{{ route('direktori-pegawai', ['search' => 84, 'negeri' => 'Wilayah Persekutuan Labuan', app()->getLocale()]) }}"
                                 class="btn btn-modern btn-secondary mb-2">Direktori
                                 Pegawai</a>
                         </div>
@@ -817,7 +815,8 @@
                         style="height: 350px;box-shadow: 0px 0px 10px #ccc;">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1015856.6029087919!2d114.95241443124998!3d5.9685702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x323b69bc3572792b%3A0xd0e7c1b944f300a9!2sJabatan%20Ukur%20dan%20Pemetaan%20Malaysia!5e0!3m2!1sen!2smy!4v1654814975116!5m2!1sen!2smy"
-                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            width="100%" height="100%" style="border:0;" allowfullscreen=""
+                            loading="lazy"></iframe>
                     </div>
                     <!-- Google Map END -->
                 </div>
@@ -850,8 +849,7 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="feature-box feature-box-primary col-sm-9" style="padding-top: 90px;">
-                            <a href="#" class="btn btn-modern btn-tertiary mb-2">Peta Wisma JUPEM</a>&nbsp;
-                            <a href="{{ route('orang-awam', app()->getLocale()) }}#tab-4"
+                            <a href="{{ route('direktori-pegawai', ['search' => 61, 'negeri' => 'Negeri Sabah', app()->getLocale()]) }}"
                                 class="btn btn-modern btn-secondary mb-2">Direktori
                                 Pegawai</a>
                         </div>

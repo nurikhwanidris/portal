@@ -40,25 +40,27 @@
     {
         /*visibility: hidden;*/
         font-size: 10px !important;
-        padding-left: 8px;
-        line-height: 1.2em;
-        text-align: center !important;
+        padding-left: 8px !important;
+        line-height: 10px !important;
+        text-align: left !important;
     }
+
     .text-header-main
     {
-        /*visibility: hidden;*/
+        /*visibility: hidden !important;*/
         font-size: 14px !important;
-        padding-left: 8px;
-        line-height: 1.2em;
-        text-align: center !important;
+        padding-left: 8px !important;
+        line-height: 10px !important;
+        text-align: left !important;
     }
+
     .text-header-kementerian
     {
-        /*visibility: hidden;*/
+        /*visibility: hidden !important;*/
         font-size: 10px !important;
-        padding-left: 8px;
-        line-height: 1.2em;
-        text-align: center !important;
+        padding-left: 8px !important;
+        line-height: 10px !important;
+        text-align: left !important;
     }
 
     .header-logo{
@@ -71,7 +73,78 @@
 
     .tinggi-kotak
     {
-        height: auto !important;
+        height: auto;
+    }
+
+    .slider-row {
+        padding: 10px 0 !important;
+        /* border: #000 solid 1px !important; */
+    }
+
+    .slider-image {
+        width: 450px !important;
+    }
+
+    .slider {
+        padding: 0 50px !important;
+        /* border: #000 solid 1px !important; */
+    }
+
+}
+
+@media only screen and (max-width: 1400px) {
+
+  .text-header-small
+    {
+        /*visibility: hidden;*/
+        font-size: 14px;
+        padding-left: 7px;
+        line-height: 1.2em;
+        text-align: left;
+    }
+
+    .text-header-main
+    {
+        /*visibility: hidden;*/
+        font-size: 18px;
+        padding-left: 8px;
+        line-height: 1.2em;
+        text-align: left;
+    }
+
+    .text-header-kementerian
+    {
+        /*visibility: hidden;*/
+        font-size: 14px;
+        padding-left: 8px;
+        line-height: 1.2em;
+        text-align: left;
+    }
+
+    .header-logo {
+        width: 60px;
+    }
+
+    .logo-size {
+        width: 120px;
+    }
+
+    .tinggi-kotak
+    {
+        height: auto;
+    }
+
+    .center-icon {
+        width: 40px;
+    }
+
+    .center-icon > img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .text-header-icon{
+        font-size: 12px;
     }
 }
 
@@ -243,6 +316,15 @@
     filter: grayscale(100%);
 }
 
+.slider-row {
+    padding: 30px 0;
+}
+
+.slider {
+    padding: 0 150px !important;
+    /* border: #000 solid 1px !important; */
+}
+
 /*VIDEO*/
 /*------------------------------------------------------------------------------------------------------------*/
 .text-top-video{
@@ -284,9 +366,6 @@
 {
     height: 400px;
 }
-
-
-
 
 /*FOOTER*/
 /*------------------------------------------------------------------------------------------------------------*/

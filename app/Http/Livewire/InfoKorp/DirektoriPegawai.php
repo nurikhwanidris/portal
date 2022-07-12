@@ -12,6 +12,8 @@ class DirektoriPegawai extends Component
 
     public $selectedBahagian = null;
 
+    public $hubungiKamiSearch;
+
     public function mount()
     {
         $query = DB::table('pegawais')->join('dp_departments', 'pegawais.dept_id', '=', 'dp_departments.id')->select('pegawais.*', 'dp_departments.name_my as deptName')->where('pegawais.dept_id', 1)->get();
@@ -27,7 +29,7 @@ class DirektoriPegawai extends Component
             $this->bahagian = $query;
         }
     }
-    
+
     public function render()
     {
         return view('livewire.info-korp.direktori-pegawai');

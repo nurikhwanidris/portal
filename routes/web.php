@@ -243,6 +243,9 @@ Route::group(['prefix' => '{language}'], function () {
     // Maklum Balas store route
     Route::post('/maklum-balas/store', [MaklumBalasController::class, 'store'])->name('maklum-balas-store');
 
+    // Direktori Pegawai Route
+    Route::get('/direktori-pegawai', [MainController::class, 'direktoriPegawai'])->name('direktori-pegawai');
+
     /*
     |--------------------------------------------------------------------------
     | Read Routes
