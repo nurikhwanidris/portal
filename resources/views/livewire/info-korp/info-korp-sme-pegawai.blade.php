@@ -1,4 +1,9 @@
 <div>
+    <style>
+        .img-fluid {
+            width: 200px !important;
+        }
+    </style>
     <div class="container">
         <div class="row">
             <div class="col">
@@ -58,7 +63,8 @@
                     <span class="thumb-info-wrapper">
                         <a href="#">
                             <img src="{{ asset('storage/upload/img/pegawai/8f047-sr-looi-kam-seng.jpg') }}"
-                                class="img-fluid" alt="" style="width: 400px !important">
+                                class="img-fluid" alt=""
+                                style="width: 200px !important; height: 257px !important;">
                         </a>
                     </span>
                     <span class="thumb-info-caption">
@@ -102,7 +108,8 @@
                     <span class="thumb-info-wrapper">
                         <a href="#">
                             <img src="{{ asset('storage/upload/img/pegawai/54c8c-3.-sr-mohd-azua-bin-mohd-zain.jpg') }}"
-                                class="img-fluid" alt="" style="width: 400px !important">
+                                class="img-fluid" alt=""
+                                style="width: 200px !important; height: 257px !important;">
                         </a>
                     </span>
                     <span class="thumb-info-caption">
@@ -146,7 +153,8 @@
                     <span class="thumb-info-wrapper">
                         <a href="#">
                             <img src="{{ asset('storage/upload/img/pegawai/3a258-3.-sr-jasmari-bin-jamaludin.jpg') }}"
-                                class="img-fluid" alt="" style="width: 400px !important">
+                                class="img-fluid" alt=""
+                                style="width: 200px !important; height: 257px !important;">
                         </a>
                     </span>
                     <span class="thumb-info-caption">
@@ -190,7 +198,8 @@
                     <span class="thumb-info-wrapper">
                         <a href="#">
                             <img src="{{ asset('storage/upload/img/pegawai/d6125-sr-nur-zurairah-binti-abdul-halim.jpg') }}"
-                                class="img-fluid" alt="" style="width: 400px !important">
+                                class="img-fluid" alt=""
+                                style="width: 200px !important; height: 257px !important;">
                         </a>
                     </span>
                     <span class="thumb-info-caption">
@@ -234,7 +243,8 @@
                     <span class="thumb-info-wrapper">
                         <a href="#">
                             <img src="{{ asset('storage/upload/img/pegawai/5390c-yaep-wei-chien.jpg') }}"
-                                class="img-fluid" alt="" style="width: 400px !important">
+                                class="img-fluid" alt=""
+                                style="width: 200px !important; height: 257px !important;">
                         </a>
                     </span>
                     <span class="thumb-info-caption">
@@ -279,7 +289,8 @@
                     <span class="thumb-info-wrapper">
                         <a href="#">
                             <img src="{{ asset('storage/upload/img/pegawai/4b502-encik-fuad.jpg') }}"
-                                class="img-fluid" alt="" style="width: 400px !important">
+                                class="img-fluid" alt=""
+                                style="width: 200px !important; height: 257px !important;">
                         </a>
                     </span>
                     <span class="thumb-info-caption">
@@ -324,7 +335,8 @@
                     <span class="thumb-info-wrapper">
                         <a href="#">
                             <img src="{{ asset('storage/upload/img/pegawai/57dde-sr-muhammad-asyran-bin-che-amat-.jpg') }}"
-                                class="img-fluid" alt="" style="width: 400px !important">
+                                class="img-fluid" alt=""
+                                style="width: 200px !important; height: 257px !important;">
                         </a>
                     </span>
                     <span class="thumb-info-caption">

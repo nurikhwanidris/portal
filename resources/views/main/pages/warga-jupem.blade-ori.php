@@ -39,24 +39,53 @@
                             <!-- <div class="tabs tabs-vertical tabs-right tabs-navigation tabs-navigation-simple"> -->
                             <div class="tabs tabs-vertical tabs-left tabs-navigation">
                                 <ul class="nav nav-tabs col-sm-3">
+                                    {{-- <li class="nav-item">
+                                        <a class="nav-link active" href="#tab-1" data-bs-toggle="tab">Kertas Kerja</a>
+                                    </li> --}}
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#tab-2" data-bs-toggle="tab">Maklumat Kakitangan</a>
+                                        <a class="nav-link" href="#tab-2" data-bs-toggle="tab">Pertukaran
+                                            Pegawai</a>
+                                    </li>
+                                    {{-- <li class="nav-item">
+                                        <a class="nav-link" href="#tab-3" data-bs-toggle="tab">Laporan
+                                            Mesyuarat</a>
+                                    </li> --}}
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#tab-4" data-bs-toggle="tab">Inovasi Sektor
+                                            Awam</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#tab-4" data-bs-toggle="tab">Dasar & Garis
-                                            Panduan</a>
+                                        <a class="nav-link" href="#tab-5" data-bs-toggle="tab">Kertas
+                                            Pembentangan</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#tab-5" data-bs-toggle="tab">Aktiviti Jabatan</a>
+                                        <a class="nav-link" href="#tab-6" data-bs-toggle="tab">Arkib Polisi,
+                                            Belanjawan
+                                            dan Dokumen Sah</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#tab-6" data-bs-toggle="tab">Sistem Dalaman</a>
+                                        <a class="nav-link" href="#tab-7" data-bs-toggle="tab">Dokumen Persijilan
+                                            & Pengiktirafan</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#tab-7" data-bs-toggle="tab">Borang Rasmi</a>
+                                        <a class="nav-link" href="#tab-8" data-bs-toggle="tab">Garis Panduan
+                                            Umum</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#tab-8" data-bs-toggle="tab">Anugerah Pencapaian</a>
+                                        <a class="nav-link" href="#tab-9" data-bs-toggle="tab">Dasar dan
+                                            Pekeliling</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#tab-10" data-bs-toggle="tab">Dokumen
+                                            Jabatan</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#tab-11" data-bs-toggle="tab">Majlis Bersama
+                                            Jabatan</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" target="_blank" href="https://app.jupem.gov.my">Sistem
+                                            Dalaman</a>
                                     </li>
                                 </ul>
                             </div>
