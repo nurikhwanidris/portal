@@ -193,7 +193,7 @@
 
     <div id="myDIV3">
         <a id="dua" class="tepi-menu-direktori gerak-khas"
-            href="{{ route('orang-awam', app()->getLocale()) }}#tab-4" data-bs-toggle="tooltip"
+            href="{{ route('info-korp', app()->getLocale()) }}#tab-5" data-bs-toggle="tooltip"
             data-bs-animation="false" data-bs-placement="right" title="">
             <i class="fas fa-user-tie img-fluid icon-menu-tepi"></i>
             <div class="text-menu-tepi">{{ __('message.Staff Directory') }}</div>

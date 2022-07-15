@@ -40,23 +40,24 @@
                             <div class="tabs tabs-vertical tabs-left tabs-navigation">
                                 <ul class="nav nav-tabs col-sm-3">
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#tab-2" data-bs-toggle="tab">Maklumat Kakitangan</a>
+                                        <a class="nav-link active" href="#tab-1" data-bs-toggle="tab">Maklumat
+                                            Kakitangan</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#tab-4" data-bs-toggle="tab">Dasar & Garis
+                                        <a class="nav-link" href="#tab-2" data-bs-toggle="tab">Dasar & Garis
                                             Panduan</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#tab-5" data-bs-toggle="tab">Aktiviti Jabatan</a>
+                                        <a class="nav-link" href="#tab-3" data-bs-toggle="tab">Aktiviti Jabatan</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#tab-6" data-bs-toggle="tab">Sistem Dalaman</a>
+                                        <a class="nav-link" href="#tab-4" data-bs-toggle="tab">Sistem Dalaman</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#tab-7" data-bs-toggle="tab">Borang Rasmi</a>
+                                        <a class="nav-link" href="#tab-5" data-bs-toggle="tab">Borang Rasmi</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#tab-8" data-bs-toggle="tab">Anugerah Pencapaian</a>
+                                        <a class="nav-link" href="#tab-6" data-bs-toggle="tab">Anugerah Pencapaian</a>
                                     </li>
                                 </ul>
                             </div>
@@ -64,41 +65,23 @@
                         </aside>
                     </div>
                     <div class="col-lg-9">
-                        <div class="tab-pane tab-pane-navigation" id="tab-1">
-                            @livewire('warga-jupem.kertas-kerja')
+                        <div class="tab-pane tab-pane-navigation active" id="tab-1">
+                            @livewire('warga-jupem.maklumat-kakitangan')
                         </div>
-                        <div class="tab-pane tab-pane-navigation active" id="tab-2">
-                            @livewire('warga-jupem.pertukaran-pegawai')
+                        <div class="tab-pane tab-pane-navigation" id="tab-2">
+                            @livewire('warga-jupem.dasar-garis-panduan')
                         </div>
                         <div class="tab-pane tab-pane-navigation" id="tab-3">
-                            @livewire('warga-jupem.laporan-mesyuarat')
+                            @livewire('warga-jupem.aktiviti-jabatan')
                         </div>
                         <div class="tab-pane tab-pane-navigation" id="tab-4">
-                            @livewire('warga-jupem.inovasi')
+                            @livewire('warga-jupem.sistem-dalaman')
                         </div>
                         <div class="tab-pane tab-pane-navigation" id="tab-5">
-                            @livewire('warga-jupem.kertas-pembentangan')
-                        </div>
-                        <div class="tab-pane tab-pane-navigation" id="tab-6">
-                            @livewire('warga-jupem.dokumen-sah')
-                        </div>
-                        <div class="tab-pane tab-pane-navigation" id="tab-7">
-                            @livewire('warga-jupem.pensijilan')
-                        </div>
-                        <div class="tab-pane tab-pane-navigation" id="tab-8">
-                            @livewire('warga-jupem.garis-panduan')
-                        </div>
-                        <div class="tab-pane tab-pane-navigation" id="tab-9">
-                            @livewire('warga-jupem.dasar-pekeliling')
-                        </div>
-                        <div class="tab-pane tab-pane-navigation" id="tab-10">
                             @livewire('orang-awam.muat-turun')
                         </div>
-                        <div class="tab-pane tab-pane-navigation" id="tab-11">
-                            @livewire('info-korp.mengenai-bersama-jabatan')
-                        </div>
-                        <div class="tab-pane tab-pane-navigation" id="tab-12">
-                            @livewire('warga-jupem.sistem-dalaman')
+                        <div class="tab-pane tab-pane-navigation" id="tab-6">
+                            @livewire('info-korp.mengenai-anugerah')
                         </div>
                     </div>
                 </div>

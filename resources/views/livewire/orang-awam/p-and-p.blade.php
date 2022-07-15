@@ -59,7 +59,7 @@
                             <p class="mb-0 pb-0" style="font-size: 10px;">PERKHIDMATAN GEODETIK</p>
                         </a>
                     </li>
-                    <li class="nav-item">
+                    {{-- <li class="nav-item">
                         <a class="nav-link" href="#tabsNavigationSimpleIcons5" data-bs-toggle="tab">
                             <span class="featured-boxes featured-boxes-style-6 p-0 m-0">
                                 <span class="featured-box featured-box-primary featured-box-effect-6 p-0 m-0">
@@ -70,7 +70,7 @@
                             </span>
                             <p class="mb-0 pb-0" style="font-size: 10px;">PERMOHONAN DALAM TALIAN</p>
                         </a>
-                    </li>
+                    </li> --}}
                 </ul>
                 <div class="tab-content">
                     <div class="tab-pane active" id="tabsNavigationSimpleIcons1">

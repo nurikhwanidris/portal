@@ -119,7 +119,7 @@
                         <!-- ACCORDION 1 - END -->
 
                         <!-- ============== -->
-                        <br>
+                        <br>    
                         <hr class="solid">
 
                         <h4 class="text-light bg-color-primary">ACCORDION 2</h4>
