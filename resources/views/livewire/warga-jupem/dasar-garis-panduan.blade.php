@@ -1,123 +1,105 @@
 <div>
     <div class="row pb-4">
-        <div class="featured-boxes featured-boxes-style-3 featured-boxes-flat">
-            <div class="col mb-4 mb-lg-0">
-                <div class="accordion accordion-modern-status accordion-modern-status-borders accordion-modern-status-arrow"
-                    id="accordion200">
-                    <!-- 1 -->
-                    <div class="card card-default">
-                        <div class="card-header" id="collapse200HeadingOne">
-                            <h4 class="card-title m-0">
-                                <a class="accordion-toggle text-color-dark font-weight-bold collapsed"
-                                    data-bs-toggle="collapse" data-bs-target="#collapse200One" aria-expanded="false"
-                                    aria-controls="collapse200One">
-                                    Pekeliling
-                                </a>
-                            </h4>
-                        </div>
-                        <div id="collapse200One" class="collapse" aria-labelledby="collapse200HeadingOne"
-                            data-bs-parent="#accordion200">
-                            <div class="card-body pt-0">
-                                <div class="toggle toggle-primary toggle-simple" data-plugin-toggle>
-                                    <!-- 1 -->
-                                    <section class="toggle">
-                                        <span class="toggle-title text-4">
-                                            <div class="accordion-jupem-negeri">JUPEM</div>
-                                        </span>
-                                        <div class="toggle-content margin-content-2">
-                                            JUPEM
-                                        </div>
-                                    </section>
-                                    <section class="toggle">
-                                        <span class="toggle-title text-4">
-                                            <div class="accordion-jupem-negeri">AM</div>
-                                        </span>
-                                        <div class="toggle-content margin-content-2">
-                                            AM
-                                        </div>
-                                    </section>
+        <div class="tabs tabs-bottom tabs-center tabs-simple">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a href="#pekeliling" class="nav-link active" data-bs-toggle="tab">
+                        <span class="featured-boxes featured-boxes-style-6 p-0 m-0 col">
+                            <span class="featured-box featured-box-primary featured-box-effect-6 p-0 m-0">
+                                <i class="icon-book-open icons"></i>
+                            </span>
+                        </span>
+                        <p class="mb-0 pb-0">Pekeliling</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#dasar-polisi" class="nav-link" data-bs-toggle="tab">
+                        <span class="featured-boxes featured-boxes-style-6 p-0 m-0 col">
+                            <span class="featured-box featured-box-primary featured-box-effect-6 p-0 m-0">
+                                <i class="icon-book-open icons"></i>
+                            </span>
+                        </span>
+                        <p class="mb-0 pb-0">Dasar & Polisi</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#garis-panduan" class="nav-link" data-bs-toggle="tab">
+                        <span class="featured-boxes featured-boxes-style-6 p-0 m-0 col">
+                            <span class="featured-box featured-box-primary featured-box-effect-6 p-0 m-0">
+                                <i class="icon-book-open icons"></i>
+                            </span>
+                        </span>
+                        <p class="mb-0 pb-0">Garis Panduan</p>
+                    </a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="pekeliling">
+                    <div class="card-body pt-0">
+                        <div class="toggle toggle-primary toggle-simple" data-plugin-toggle>
+                            <!-- 1 -->
+                            <section class="toggle">
+                                <span class="toggle-title text-4">
+                                    <div class="accordion-jupem-negeri">JUPEM1</div>
+                                </span>
+                                <div class="toggle-content margin-content-2">
+                                    JUPEM
                                 </div>
-                            </div>
+                            </section>
+                            <section class="toggle">
+                                <span class="toggle-title text-4">
+                                    <div class="accordion-jupem-negeri">AM</div>
+                                </span>
+                                <div class="toggle-content margin-content-2">
+                                    AM
+                                </div>
+                            </section>
                         </div>
                     </div>
-                    <!-- 2 -->
-                    <div class="card card-default">
-                        <div class="card-header" id="collapse200HeadingTwoA">
-                            <h4 class="card-title m-0">
-                                <a class="accordion-toggle text-color-dark font-weight-bold collapsed"
-                                    data-bs-toggle="collapse" data-bs-target="#collapse200TwoA" aria-expanded="false"
-                                    aria-controls="collapse200Two">
-                                    Dasar & Polisi
-                                </a>
-                            </h4>
-                        </div>
-                        <div id="collapse200TwoA" class="collapse" aria-labelledby="collapse200HeadingTwoA"
-                            data-bs-parent="#accordion200">
-                            <div class="card-body pt-0">
-                                <div class="toggle toggle-primary toggle-simple" data-plugin-toggle>
-                                    <!-- 1 -->
-                                    <section class="toggle">
-                                        <span class="toggle-title text-4">
-                                            <div class="accordion-jupem-negeri">JUPEM</div>
-                                        </span>
-                                        <div class="toggle-content margin-content-2">
-                                            JUPEM
-                                        </div>
-                                    </section>
-                                    <section class="toggle">
-                                        <span class="toggle-title text-4">
-                                            <div class="accordion-jupem-negeri">AM</div>
-                                        </span>
-                                        <div class="toggle-content margin-content-2">
-                                            AM
-                                        </div>
-                                    </section>
+                </div>
+                <div class="tab-pane" id="dasar-polisi">
+                    <div class="card-body pt-0">
+                        <div class="toggle toggle-primary toggle-simple" data-plugin-toggle>
+                            <!-- 1 -->
+                            <section class="toggle">
+                                <span class="toggle-title text-4">
+                                    <div class="accordion-jupem-negeri">JUPEM2</div>
+                                </span>
+                                <div class="toggle-content margin-content-2">
+                                    Dasar
                                 </div>
-                            </div>
+                            </section>
+                            <section class="toggle">
+                                <span class="toggle-title text-4">
+                                    <div class="accordion-jupem-negeri">AM</div>
+                                </span>
+                                <div class="toggle-content margin-content-2">
+                                    AM
+                                </div>
+                            </section>
                         </div>
                     </div>
-                    <!-- 2 -->
-                    <div class="card card-default">
-                        <div class="card-header" id="collapse200HeadingThreeA">
-                            <h4 class="card-title m-0">
-                                <a class="accordion-toggle text-color-dark font-weight-bold collapsed"
-                                    data-bs-toggle="collapse" data-bs-target="#collapse200ThreeA" aria-expanded="false"
-                                    aria-controls="collapse200Two">
-                                    Garis Panduan
-                                </a>
-                            </h4>
-                        </div>
-                        <div id="collapse200ThreeA" class="collapse" aria-labelledby="collapse200HeadingThreeA"
-                            data-bs-parent="#accordion200">
-                            <div class="card-body pt-0">
-                                <div class="toggle toggle-primary toggle-simple" data-plugin-toggle>
-                                    <!-- 1 -->
-                                    <section class="toggle">
-                                        <span class="toggle-title text-4">
-                                            <div class="accordion-jupem-negeri">ISO</div>
-                                        </span>
-                                        <div class="toggle-content margin-content-2">
-                                            ISO
-                                        </div>
-                                    </section>
-                                    <section class="toggle">
-                                        <span class="toggle-title text-4">
-                                            <div class="accordion-jupem-negeri">Persekitaran Berkualiti (QE)</div>
-                                        </span>
-                                        <div class="toggle-content margin-content-2">
-                                            Persekitaran Berkualiti (QE)
-                                        </div>
-                                    </section>
-                                    <section class="toggle">
-                                        <span class="toggle-title text-4">
-                                            <div class="accordion-jupem-negeri">Pelan Strategik</div>
-                                        </span>
-                                        <div class="toggle-content margin-content-2">
-                                            Pelan Strategik
-                                        </div>
-                                    </section>
+                </div>
+                <div class="tab-pane" id="garis-panduan">
+                    <div class="card-body pt-0">
+                        <div class="toggle toggle-primary toggle-simple" data-plugin-toggle>
+                            <!-- 1 -->
+                            <section class="toggle">
+                                <span class="toggle-title text-4">
+                                    <div class="accordion-jupem-negeri">JUPEM3</div>
+                                </span>
+                                <div class="toggle-content margin-content-2">
+                                    Dasar
                                 </div>
-                            </div>
+                            </section>
+                            <section class="toggle">
+                                <span class="toggle-title text-4">
+                                    <div class="accordion-jupem-negeri">AM</div>
+                                </span>
+                                <div class="toggle-content margin-content-2">
+                                    AM
+                                </div>
+                            </section>
                         </div>
                     </div>
                 </div>

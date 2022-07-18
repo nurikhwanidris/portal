@@ -54,7 +54,7 @@
                                         <a class="nav-link" href="#tab-4" data-bs-toggle="tab">Sistem Dalaman</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#tab-5" data-bs-toggle="tab">Borang Rasmi</a>
+                                        <a class="nav-link" href="#tab-5" data-bs-toggle="tab">Repositori Dokumen</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="#tab-6" data-bs-toggle="tab">Anugerah Pencapaian</a>
@@ -78,7 +78,7 @@
                             @livewire('warga-jupem.sistem-dalaman')
                         </div>
                         <div class="tab-pane tab-pane-navigation" id="tab-5">
-                            @livewire('orang-awam.muat-turun')
+                            @livewire('warga-jupem.repositori-dokumen')
                         </div>
                         <div class="tab-pane tab-pane-navigation" id="tab-6">
                             @livewire('info-korp.mengenai-anugerah')

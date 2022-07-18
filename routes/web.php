@@ -229,7 +229,7 @@ Route::group(['prefix' => '{language}'], function () {
     Route::get('/staps', [MainController::class, 'staps'])->name('staps');
 
     // Global Search Route
-    Route::get('/carian/', [MainController::class, 'carian'])->name('carian');
+    Route::get('/carian', [MainController::class, 'carian'])->name('carian');
 
     // Carian Pegawai Route
     Route::get('/carian/pegawai', [MainController::class, 'carianPegawai'])->name('carian-pegawai');
