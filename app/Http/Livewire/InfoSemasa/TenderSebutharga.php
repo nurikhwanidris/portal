@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire\OrangAwam;
+namespace App\Http\Livewire\InfoSemasa;
 
 use App\Models\Quote;
 use App\Models\Tender;
@@ -45,7 +45,7 @@ class TenderSebutharga extends Component
         } else
             $queryQuote = Quote::orderBy('created_at', 'desc')->paginate(5);
 
-        return view('livewire.orang-awam.tender-sebutharga', [
+        return view('livewire.info-semasa.tender-sebutharga', [
             'tenders' => $queryTenders,
             'quotes' => $queryQuote,
         ]);

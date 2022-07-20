@@ -40,6 +40,24 @@
                             </div>
                         </div>
                     </div>
+                    <!-- 5 -->
+                    <div class="card card-default">
+                        <div class="card-header" id="accordian5">
+                            <h4 class="card-title m-0">
+                                <a class="accordion-toggle text-color-dark font-weight-bold collapsed"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false"
+                                    aria-controls="collapse200Two">
+                                    AKRAB
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse5" class="collapse" aria-labelledby="accordian5"
+                            data-bs-parent="#accordion200">
+                            <div class="card-body pt-0">
+                                @livewire('warga-jupem.aktiviti-jabatan.akrab')
+                            </div>
+                        </div>
+                    </div>
                     <!-- 3 -->
                     <div class="card card-default">
                         <div class="card-header" id="accordian3">
@@ -74,24 +92,6 @@
                             data-bs-parent="#accordion200">
                             <div class="card-body pt-0">
                                 @livewire('warga-jupem.aktiviti-jabatan.jtpggk')
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 5 -->
-                    <div class="card card-default">
-                        <div class="card-header" id="accordian5">
-                            <h4 class="card-title m-0">
-                                <a class="accordion-toggle text-color-dark font-weight-bold collapsed"
-                                    data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false"
-                                    aria-controls="collapse200Two">
-                                    AKRAB
-                                </a>
-                            </h4>
-                        </div>
-                        <div id="collapse5" class="collapse" aria-labelledby="accordian5"
-                            data-bs-parent="#accordion200">
-                            <div class="card-body pt-0">
-                                @livewire('warga-jupem.aktiviti-jabatan.akrab')
                             </div>
                         </div>
                     </div>

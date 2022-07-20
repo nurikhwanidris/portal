@@ -78,7 +78,7 @@
                             @livewire('orang-awam.multimedia')
                         </div>
                         <div class="tab-pane tab-pane-navigation" id="tab-5">
-                            @livewire('orang-awam.transaksi-dalam-talian')
+                            @livewire('orang-awam.transaksi')
                         </div>
                         <div class="tab-pane tab-pane-navigation" id="tab-6">
                             @livewire('orang-awam.data-terbuka-kerajaan')

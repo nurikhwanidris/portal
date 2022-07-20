@@ -76,35 +76,35 @@
                     <div class="tab-pane active" id="tabsNavigationSimpleIcons1">
                         <div>
                             <!-- Pemetaan - START -->
-                            @livewire('orang-awam.p-and-p-pemetaan')
+                            @livewire('orang-awam.p-p.pemetaan')
                             <!-- Pemetaan - END -->
                         </div>
                     </div>
                     <div class="tab-pane" id="tabsNavigationSimpleIcons2">
                         <div>
                             <!-- kadaster - START -->
-                            @livewire('orang-awam.p-and-p-kadaster')
+                            @livewire('orang-awam.p-p.kadaster')
                             <!-- kadaster - END -->
                         </div>
                     </div>
                     <div class="tab-pane" id="tabsNavigationSimpleIcons3">
                         <div>
                             <!-- geodetik - START -->
-                            @livewire('orang-awam.p-and-p-geodetik')
+                            @livewire('orang-awam.p-p.geodetik')
                             <!-- geodetik - END -->
                         </div>
                     </div>
                     <div class="tab-pane" id="tabsNavigationSimpleIcons4">
                         <div>
                             <!-- geoservice - START -->
-                            @livewire('orang-awam.p-and-p-geoservice')
+                            @livewire('orang-awam.p-p.geoservice')
                             <!-- geoservice - END -->
                         </div>
                     </div>
                     <div class="tab-pane" id="tabsNavigationSimpleIcons5">
                         <div>
                             <!-- online - START -->
-                            @livewire('orang-awam.p-and-p-online')
+                            @livewire('orang-awam.p-p.online')
                             <!-- online - END -->
                         </div>
                     </div>

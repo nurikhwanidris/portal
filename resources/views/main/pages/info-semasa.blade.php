@@ -68,7 +68,7 @@
                             @livewire('info-semasa.sorotan')
                         </div>
                         <div class="tab-pane tab-pane-navigation" id="tab-3">
-                            @livewire('orang-awam.tender-sebutharga')
+                            @livewire('info-semasa.tender-sebutharga')
                         </div>
                         <div class="tab-pane tab-pane-navigation" id="tab-4">
                             @livewire('info-semasa.piagam-pelanggan')

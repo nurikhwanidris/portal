@@ -77,6 +77,7 @@ return [
     "choose_states" => "Choose States",
     "jupem_states" => "JUPEM States",
     "hq" => "Ibu Pejabat JUPEM",
+    'for_the_year' => 'for the year ',
 
     // ----- Main Menu ----- //
 

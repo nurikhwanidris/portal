@@ -72,13 +72,14 @@ return [
     "geodesi" => "Geodesi",
     "license" => "Permohonan Lesen Digital",
     "rtk_subscription" => "Langganan RTK",
-    "geo_service" => "Perkhidmatan Geodesi",
+    "geo_service" => "Perkhidmatan Geodetik",
     "limited_data_application" => "Permohonan Perkhidmatan Data Terhad",
     "permit_application" => "Permohonan Permit",
     "states" => "Negeri",
     "choose_state" => "Pilih Negeri",
     "jupem_states" => "JUPEM Negeri",
     "hq" => "JUPEM Headquarter",
+    'for_the_year' => 'untuk tahun ',
 
     // Info semasa
     "Current Information" => "Info Semasa",
