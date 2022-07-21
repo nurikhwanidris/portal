@@ -1,5 +1,11 @@
 <div>
-    <h3>{{ __('message.Online Transactions') }} {{ __('message.for_the_year') . $tahun }}</h3>
+    <div class="row">
+        <div class="col">
+            <div class="text-title-semasa-11" style="padding-bottom: 20px;">
+                {{ __('message.online_transaction') . $tahun }}
+            </div>
+        </div>
+    </div>
     <div class="row kotak-filter">
         <div class="col-lg-12">
             <div class="col-sm-3">
@@ -23,19 +29,45 @@
                 <thead>
                     <tr>
                         <th>Produk</th>
-                        <th class="text-center align-middle">Januari</th>
-                        <th class="text-center align-middle">Februari</th>
-                        <th class="text-center align-middle">Mac</th>
-                        <th class="text-center align-middle">April</th>
-                        <th class="text-center align-middle">Mei</th>
-                        <th class="text-center align-middle">Jun</th>
-                        <th class="text-center align-middle">Julai</th>
-                        <th class="text-center align-middle">Ogos</th>
-                        <th class="text-center align-middle">September</th>
-                        <th class="text-center align-middle">Oktober</th>
-                        <th class="text-center align-middle">November</th>
-                        <th class="text-center align-middle">Disember</th>
-                        <th class="text-center align-middle">Jumlah</th>
+                        <th class="text-center align-middle">
+                            {{ __('message.january') }}
+                        </th>
+                        <th class="text-center align-middle">
+                            {{ __('message.february') }}
+                        </th>
+                        <th class="text-center align-middle">
+                            {{ __('message.march') }}
+                        </th>
+                        <th class="text-center align-middle">
+                            {{ __('message.april') }}
+                        </th>
+                        <th class="text-center align-middle">
+                            {{ __('message.may') }}
+                        </th>
+                        <th class="text-center align-middle">
+                            {{ __('message.june') }}
+                        </th>
+                        <th class="text-center align-middle">
+                            {{ __('message.july') }}
+                        </th>
+                        <th class="text-center align-middle">
+                            {{ __('message.august') }}
+                        </th>
+                        <th class="text-center align-middle">
+                            {{ __('message.september') }}
+                        </th>
+                        <th class="text-center align-middle">
+                            {{ __('message.october') }}
+                        </th>
+                        <th class="text-center align-middle">
+                            {{ __('message.november') }}
+                        </th>
+                        <th class="text-center align-middle">
+                            {{ __('message.december') }}
+                        </th>
+                        <th class="text-center align-middle">
+                            {{ __('message.total') }}
+                        </th>
                     </tr>
                 </thead>
                 <tbody>
@@ -381,7 +413,7 @@
                 <tfoot>
                     <tr>
                         <td class="align-middle">
-                            Jumlah Keseluruhan
+                            {{ __('message.monthly_total') }}
                         </td>
                         <td class="text-center align-middle">
                             {{ $totalJanuary = $kadaster->january + $rtk->january + $geodetik->january + $dataTerhad->january + $permit->january }}

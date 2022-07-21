@@ -24,7 +24,7 @@ return [
     "Announcement" => "Announcement",
     "Prayer Time" => "Prayer Time",
     "product_and_service" => "Products & Services",
-    "Online Transactions" => "Online Transactions",
+    "Online Transactions" => "Online Transactions for the year ",
     "Government Official Websites" => "Government Official Websites",
     "Operating Hours" => "Operating Hours",
     "Monday - Thursday" => "Monday - Thursday",
@@ -77,7 +77,7 @@ return [
     "choose_states" => "Choose States",
     "jupem_states" => "JUPEM States",
     "hq" => "Ibu Pejabat JUPEM",
-    'for_the_year' => 'for the year ',
+    "online_transaction" => "Online Transactions for the year ",
 
     // ----- Main Menu ----- //
 
@@ -224,4 +224,20 @@ return [
     "post" => "Post",
     "writing" => "Writing",
     "page" => "Page",
+
+    // Month
+    "january" => "January",
+    "february" => "February",
+    "march" => "March",
+    "april" => "April",
+    "may" => "May",
+    "june" => "June",
+    "july" => "July",
+    "august" => "August",
+    "september" => "September",
+    "october" => "October",
+    "november" => "November",
+    "december" => "December",
+    "total" => "Total",
+    "monthly_total" => "Monthly Total",
 ];

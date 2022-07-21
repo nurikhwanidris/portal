@@ -79,7 +79,7 @@ return [
     "choose_state" => "Pilih Negeri",
     "jupem_states" => "JUPEM Negeri",
     "hq" => "JUPEM Headquarter",
-    'for_the_year' => 'untuk tahun ',
+    "online_transaction" => "Transaksi Online bagi tahun ",
 
     // Info semasa
     "Current Information" => "Info Semasa",
@@ -222,4 +222,20 @@ return [
     "post" => "Hebahan",
     "writing" => "Penulisan",
     "page" => "Halaman",
+
+    // Month
+    "january" => "Januari",
+    "february" => "Februari",
+    "march" => "Mac",
+    "april" => "April",
+    "may" => "Mei",
+    "june" => "Jun",
+    "july" => "Julai",
+    "august" => "Ogos",
+    "september" => "September",
+    "october" => "Oktober",
+    "november" => "November",
+    "december" => "Disember",
+    "total" => "Jumlah",
+    "monthly_total" => "Jumlah Bulanan",
 ];
