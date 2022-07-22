@@ -45,17 +45,17 @@
                                             Perkhidmatan</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#tab-2" data-bs-toggle="tab">Penerbitan JUPEM</a>
+                                        <a class="nav-link" href="#tab-5" data-bs-toggle="tab">Transaksi Dalam
+                                            Talian</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="#tab-3" data-bs-toggle="tab">Tawaran Perolehan</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#tab-4" data-bs-toggle="tab">Multimedia</a>
+                                        <a class="nav-link" href="#tab-2" data-bs-toggle="tab">Penerbitan JUPEM</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#tab-5" data-bs-toggle="tab">Transaksi Dalam
-                                            Talian</a>
+                                        <a class="nav-link" href="#tab-4" data-bs-toggle="tab">Multimedia</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="#tab-6" data-bs-toggle="tab">Data Terbuka</a>

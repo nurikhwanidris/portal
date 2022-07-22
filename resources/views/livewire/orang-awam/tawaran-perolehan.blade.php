@@ -2,7 +2,7 @@
     <div class="tabs tabs-bottom tabs-center tabs-simple">
         <ul class="nav nav-tabs">
             <li class="nav-item">
-                <a class="nav-link active" href="#perolehan-semasa" data-bs-toggle="tab">
+                <a class="nav-link active" href="#tender" data-bs-toggle="tab">
                     <span class="featured-boxes featured-boxes-style-6 p-0 m-0 col">
                         <span class="featured-box featured-box-primary featured-box-effect-6 p-0 m-0">
                             <span class="box-content p-0 m-0">
@@ -10,7 +10,19 @@
                             </span>
                         </span>
                     </span>
-                    <p class="mb-0 pb-0" style="font-size: 10px;"> Perolehan Semasa</p>
+                    <p class="mb-0 pb-0" style="font-size: 10px;"> Tender</p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#sebut-harga" data-bs-toggle="tab">
+                    <span class="featured-boxes featured-boxes-style-6 p-0 m-0 col">
+                        <span class="featured-box featured-box-primary featured-box-effect-6 p-0 m-0">
+                            <span class="box-content p-0 m-0">
+                                <i class="fas fa-sticky-note"></i>
+                            </span>
+                        </span>
+                    </span>
+                    <p class="mb-0 pb-0" style="font-size: 10px;"> Sebut Harga</p>
                 </a>
             </li>
             <li class="nav-item">
@@ -27,11 +39,18 @@
             </li>
         </ul>
         <div class="tab-content">
-            <div class="tab-pane active" id="perolehan-semasa">
+            <div class="tab-pane active" id="tender">
                 <div>
-                    <!-- Perolehan semasa - START -->
-                    @livewire('orang-awam.tawaran-perolehan.perolehan-semasa')
-                    <!-- Perolehan semasa - END -->
+                    <!-- Tender - START -->
+                    @livewire('orang-awam.tawaran-perolehan.tender')
+                    <!-- Tender - END -->
+                </div>
+            </div>
+            <div class="tab-pane active" id="sebut-harga">
+                <div>
+                    <!-- Tender - START -->
+                    @livewire('orang-awam.tawaran-perolehan.sebut-harga')
+                    <!-- Tender - END -->
                 </div>
             </div>
             <div class="tab-pane" id="perolehan-berjaya">

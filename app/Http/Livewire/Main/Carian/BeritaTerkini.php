@@ -21,30 +21,35 @@ class BeritaTerkini extends Component
             ->orderBy('created_at', 'desc')
             ->paginate(10);
 
-        foreach ($beritaTerkini as $res_halaman) {
-            $text = strip_tags($res_halaman['content_my']);
-            $text = trim(str_replace(array("\r", "\n"), ' ', $text));
-            $text = preg_replace('!\s+!', ' ', $text);
-            $highlight = preg_replace('/(' . $search . ')/i', '<span style="background-color: #FFFF00; color: black;">$1</span>', $text);
+        if ($beritaTerkini->count() == 0) {
+            $res_halaman_summary = 'Tiada rekod ditemui';
+        } else {
+            foreach ($beritaTerkini as $res_halaman) {
+                $text = strip_tags($res_halaman['content_my']);
+                $text = trim(str_replace(array("\r", "\n"), ' ', $text));
+                $text = preg_replace('!\s+!', ' ', $text);
+                $highlight = preg_replace('/(' . $search . ')/i', '<span style="background-color: #FFFF00; color: black;">$1</span>', $text);
 
-            if (stripos($text, $search) < 151) {
-                $text = Str::words($highlight, 30, '...');
-            } else {
-                $text = '... ' . preg_replace('/\s+?(\S+)?$/', '', substr($highlight, stripos($text, $search), 300)) . ' ...';
-            }
+                if (stripos($text, $search) < 151) {
+                    $text = Str::words($highlight, 30, '...');
+                } else {
+                    $text = '... ' . preg_replace('/\s+?(\S+)?$/', '', substr($highlight, stripos($text, $search), 300)) . ' ...';
+                }
 
-            if ($beritaTerkini->count() > 0) {
-                $res_halaman_summary[$res_halaman['id']] = array(
-                    'id' => $res_halaman['id'],
-                    'tajuk' => $res_halaman['title_my'],
-                    'content_my' => $text,
-                    'type' => $res_halaman['type'],
-                    'created_at' => $res_halaman['created_at'],
-                );
-            } else {
-                $res_halaman_summary = 'Nothing found';
+                if ($beritaTerkini->count() > 0) {
+                    $res_halaman_summary[$res_halaman['id']] = array(
+                        'id' => $res_halaman['id'],
+                        'tajuk' => $res_halaman['title_my'],
+                        'content_my' => $text,
+                        'type' => $res_halaman['type'],
+                        'created_at' => $res_halaman['created_at'],
+                    );
+                } else {
+                    $res_halaman_summary = 'Nothing found';
+                }
             }
         }
+
 
         return view('livewire.main.carian.berita-terkini', [
             'search' => $search,
