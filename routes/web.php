@@ -24,6 +24,7 @@ use App\Http\Controllers\Admin\TransaksiController;
 use App\Http\Controllers\Admin\SoalanLazimController;
 use App\Http\Controllers\Main\MainController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\Admin\PerolehanBerjaya;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -172,6 +173,9 @@ Route::get('/spsm/admin/soalan_lazim/kategori', [SoalanLazimController::class, '
 
 // Post Route
 Route::resource('/spsm/admin/post', PostController::class)->middleware('auth');
+
+// Perolehan Berjaya Route
+Route::resource('/spsm/admin/perolehan_berjaya', PerolehanBerjaya::class)->middleware('auth');
 
 /*
 |--------------------------------------------------------------------------

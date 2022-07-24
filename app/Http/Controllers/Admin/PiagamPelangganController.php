@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\PiagamPelanggan;
-use App\Models\User;
 use App\Models\Status;
 use Illuminate\Http\Request;
 

@@ -46,58 +46,28 @@
                                 <!-- Tender - START -->
                                 <div class="row">
                                     <div class="col">
-                                        @foreach ($tenders as $tender)
-                                            <div class="row p-0 my-2">
-                                                <span class="col-1 align-middle"
-                                                    style="font-size: 0.85em; font-weight: bold;">
-                                                    {{ $loop->iteration }}
-                                                </span>
-                                                <div class="col-11">
-                                                    <span style="font-size: 0.85em; color: #237bfd; font-weight: bold;">
-                                                        @if (app()->getLocale() == 'en')
-                                                            {{ $tender->title_en }}
-                                                        @else
-                                                            {{ $tender->title_my }}
-                                                        @endif
-                                                    </span>
-                                                    <div class="row">
-                                                        <span class="col-2 align-middle"
-                                                            style="font-size: 0.85em; font-weight: bold;">
-                                                            {{ __('message.Code') }}
-                                                        </span>
-                                                        <span class="col-10"
-                                                            style="font-size: 0.85em; font-weight: bold;">
-                                                            {{ $tender->kod }}
-                                                        </span>
-                                                    </div>
-                                                    <div class="row">
-                                                        <span class="col-2 align-middle"
-                                                            style="font-size: 0.85em; font-weight: bold;">
-                                                            {{ __('message.Briefing') }}
-                                                        </span>
-                                                        <span class="col-10"
-                                                            style="font-size: 0.85em; font-weight: bold;">
-                                                            {{ $tender->taklimat }}
-                                                        </span>
-                                                    </div>
-                                                    <div class="row">
-                                                        <span class="col-2 align-middle"
-                                                            style="font-size: 0.85em; font-weight: bold;">
-                                                            {{ __('message.Attachment') }}
-                                                        </span>
-                                                        <span class="col-10"
-                                                            style="font-size: 0.85em; font-weight: bold;">
-                                                            <a href="{{ asset('storage/upload/tender/' . $tender->filename) }}"
-                                                                target="_blank"
-                                                                rel="noopener noreferrer">{{ __('message.Download') }}
-                                                                <i class="fas fa-file-download"></i>
-                                                            </a>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <hr>
-                                        @endforeach
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered table-hover table-nowrap">
+                                                <thead>
+                                                    <tr>
+                                                        <th>No. Siri Perolehan</th>
+                                                        <th>Tajuk Perolehan</th>
+                                                        <th>Syarikat</th>
+                                                        <th>Nilai</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    @foreach ($tenders as $tender)
+                                                        <tr>
+                                                            <td>{{ $tender->siri_perolehan }}</td>
+                                                            <td>{{ $tender->tajuk_perolehan }}</td>
+                                                            <td>{{ $tender->nama_syarikat }}</td>
+                                                            <td>RM {{ number_format($tender->nilai_perolehan, 2, '.', ',') }}</td>
+                                                        </tr>
+                                                    @endforeach
+                                                </tbody>
+                                            </table>
+                                        </div>
                                     </div>
                                     {!! $tenders->links() !!}
                                 </div>
@@ -148,68 +118,28 @@
                                 <!-- Sebut Harga - START -->
                                 <div class="row">
                                     <div class="col">
-                                        @foreach ($quotes as $quote)
-                                            <div class="row p-0 my-2">
-                                                <span class="col-1 align-middle"
-                                                    style="font-size: 0.85em; font-weight: bold;">
-                                                    {{ $loop->iteration }}
-                                                </span>
-                                                <div class="col-11">
-                                                    <span
-                                                        style="font-size: 0.85em; color: #237bfd; font-weight: bold;">
-                                                        @if (app()->getLocale() == 'en')
-                                                            {{ $quote->title_en }}
-                                                        @else
-                                                            {{ $quote->title_my }}
-                                                        @endif
-                                                    </span>
-                                                    <div class="row">
-                                                        <span class="col-2 align-middle"
-                                                            style="font-size: 0.85em; font-weight: bold;">
-                                                            {{ __('message.Code') }}
-                                                        </span>
-                                                        <span class="col-10"
-                                                            style="font-size: 0.85em; font-weight: bold;">
-                                                            {{ $quote->kod }}
-                                                        </span>
-                                                    </div>
-                                                    <div class="row">
-                                                        <span class="col-2 align-middle"
-                                                            style="font-size: 0.85em; font-weight: bold;">
-                                                            {{ __('message.Briefing') }}
-                                                        </span>
-                                                        <span class="col-10"
-                                                            style="font-size: 0.85em; font-weight: bold;">
-                                                            {{ $quote->taklimat }}
-                                                        </span>
-                                                    </div>
-                                                    <div class="row">
-                                                        <span class="col-2 align-middle"
-                                                            style="font-size: 0.85em; font-weight: bold;">
-                                                            {{ __('message.Attachment') }}
-                                                        </span>
-                                                        <span class="col-10"
-                                                            style="font-size: 0.85em; font-weight: bold;">
-                                                            <a href="{{ asset('storage/upload/sebutharga/' . $quote->filename) }}"
-                                                                target="_blank"
-                                                                rel="noopener noreferrer">{{ __('message.Download') }}
-                                                                <i class="fas fa-file-download"></i>
-                                                            </a>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row p-0 my-2">
-
-                                            </div>
-                                            <div class="row p-0 my-2">
-
-                                            </div>
-                                            <div class="row p-0 my-2">
-
-                                            </div>
-                                            <hr>
-                                        @endforeach
+<div class="table-responsive">
+                                            <table class="table table-bordered table-hover table-nowrap">
+                                                <thead>
+                                                    <tr>
+                                                        <th>No. Siri Perolehan</th>
+                                                        <th>Tajuk Perolehan</th>
+                                                        <th>Syarikat</th>
+                                                        <th>Nilai</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    @foreach ($quotes as $quote)
+                                                        <tr>
+                                                            <td>{{ $quote->siri_perolehan }}</td>
+                                                            <td>{{ $quote->tajuk_perolehan }}</td>
+                                                            <td>{{ $quote->nama_syarikat }}</td>
+                                                            <td>RM {{ number_format($quote->nilai_perolehan, 2, '.', ',') }}</td>
+                                                        </tr>
+                                                    @endforeach
+                                                </tbody>
+                                            </table>
+                                        </div>
                                     </div>
                                     {!! $quotes->links() !!}
                                 </div>

@@ -68,15 +68,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="row p-0 my-2">
-
-                </div>
-                <div class="row p-0 my-2">
-
-                </div>
-                <div class="row p-0 my-2">
-
-                </div>
                 <hr>
             @endforeach
         </div>
